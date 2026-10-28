@@ -1,0 +1,8 @@
+Heuremen LLC
+Source: https://heuremen.org
+
+Free to read and cite with attribution (Heuremen LLC, with a link to the page it came from).
+The physics uploads are open to all uses with attribution, including text and data mining and AI training: the paper (a-readout-is-not-an-idle.pdf), the run data and code files under /experiments/, and the Zenodo release (doi 10.5281/zenodo.23662284, CC BY 4.0).
+Everything else on this site, including its pages and text, is reserved: text and data mining and use as AI training data are not permitted.
+Policy: https://indahl.ai/terms#ai-training
+Reference HLC-29D9BE52
