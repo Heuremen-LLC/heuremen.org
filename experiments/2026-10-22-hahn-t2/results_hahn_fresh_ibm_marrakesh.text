@@ -1,0 +1,7 @@
+=== ibm_marrakesh job dbdri2npc3tc739kmgag; IBM record 2026-10-23 15:17:54-04:00; KNOWN-GOOD median P(1) at tau 0 = 0.980 (must be >= 0.90): MET
+  delivered / stated T2, median over 153 qubits: 1.015 [0.937, 1.130] vs 1 -> CONSISTENT   (copy gap +0.000 [-0.008, +0.012]; qubits below stated 73 of 153)
+ibm_marrakesh 1 run(s) pooled by qubit, FIXED 1/2   : median 1.015 [0.937, 1.130] over 153 qubits -> CONSISTENT  (below stated 73)
+ibm_marrakesh 1 run(s) pooled by qubit, FREE asymptote: median 0.958 [0.902, 1.016] over 150 qubits -> CONSISTENT  (below stated 83)
+=== POOLED run1 run2 fresh
+ibm_marrakesh 3 run(s) pooled by qubit, FIXED 1/2   : median 0.972 [0.929, 1.022] over 153 qubits -> CONSISTENT  (below stated 83)
+ibm_marrakesh 3 run(s) pooled by qubit, FREE asymptote: median 0.889 [0.845, 0.936] over 153 qubits -> BELOW  (below stated 103)

@@ -1,0 +1,32 @@
+====================================================================================================
+excitation ibm_fez job dbcndrgc77vs7386kfig
+  RJ.1 kick, measured qubits in 0 (M0 - D0)                  -1.522 [-1.988, -0.9774] deg/step n=117 -> BELOW   (copy gap +0.007508 [-0.06662, +0.1151])
+  RJ.2 kick, measured qubits in 1 (M1 - D1)                  -1.472 [-1.794, -1.071] deg/step n=117 -> BELOW   (copy gap -0.01418 [-0.1593, +0.1179])
+  RJ.3 G = kick in 1 minus kick in 0                         +0.178 [+0.02467, +0.2611] deg/step n=117 -> ABOVE   (copy gap -0.02749 [-0.2308, +0.1498])
+  RJ.4 measured qubits in 1, no readout (D1 - D0)            -2.531 [-3.228, -2.12] deg/step n=117 -> BELOW   (copy gap +0.04129 [-0.1093, +0.2197])
+====================================================================================================
+excitation ibm_kingston job dbcnds424mrc73ck0450
+  RJ.1 kick, measured qubits in 0 (M0 - D0)                  copies shifted -0.0988 [-0.178, -0.03025] | copy0 -3.269 copy1 -2.852 -> CANNOT TELL
+  RJ.2 kick, measured qubits in 1 (M1 - D1)                  -3.003 [-3.759, -2.073] deg/step n=117 -> BELOW   (copy gap -0.04517 [-0.1232, +0.01812])
+  RJ.3 G = kick in 1 minus kick in 0                         +0.06599 [-0.005397, +0.229] deg/step n=117 -> CONSISTENT   (copy gap +0.09185 [-0.03219, +0.2053])
+  RJ.4 measured qubits in 1, no readout (D1 - D0)            -3.241 [-3.479, -3.086] deg/step n=117 -> BELOW   (copy gap +0.05414 [-0.06589, +0.1143])
+====================================================================================================
+excitation ibm_marrakesh job dbcndupgv2cc738gjjug
+  RJ.1 kick, measured qubits in 0 (M0 - D0)                  -2.967 [-4.165, -2.195] deg/step n=117 -> BELOW   (copy gap +0.1044 [-0.005946, +0.2123])
+  RJ.2 kick, measured qubits in 1 (M1 - D1)                  -1.819 [-2.555, -1.391] deg/step n=117 -> BELOW   (copy gap -0.06102 [-0.3289, +0.05626])
+  RJ.3 G = kick in 1 minus kick in 0                         +0.9226 [+0.5332, +1.195] deg/step n=117 -> ABOVE   (copy gap -0.03231 [-0.3341, +0.1016])
+  RJ.4 measured qubits in 1, no readout (D1 - D0)            -3.362 [-3.552, -3.036] deg/step n=117 -> BELOW   (copy gap +0.062 [-0.08809, +0.1963])
+====================================================================================================
+ACROSS CHIPS (values and widths; a chip whose copies shifted is listed and left out of the combination)
+  RJ.1 kick, measured qubits in 0 (M0 - D0)
+      fez -1.522 [-1.988, -0.9774] | kingston copies shifted | marrakesh -2.967 [-4.165, -2.195]
+      combined -1.823 [-2.273, -1.374] -> BELOW | chip-to-chip spread chi2/dof 6.55 (dof 1)
+  RJ.2 kick, measured qubits in 1 (M1 - D1)
+      fez -1.472 [-1.794, -1.071] | kingston -3.003 [-3.759, -2.073] | marrakesh -1.819 [-2.555, -1.391]
+      combined -1.736 [-2.025, -1.448] -> BELOW | chip-to-chip spread chi2/dof 5.41 (dof 2)
+  RJ.3 G = kick in 1 minus kick in 0
+      fez +0.178 [+0.02467, +0.2611] | kingston +0.06599 [-0.005397, +0.229] | marrakesh +0.9226 [+0.5332, +1.195]
+      combined +0.1691 [+0.08841, +0.2498] -> ABOVE | chip-to-chip spread chi2/dof 11.45 (dof 2)
+  RJ.4 measured qubits in 1, no readout (D1 - D0)
+      fez -2.531 [-3.228, -2.12] | kingston -3.241 [-3.479, -3.086] | marrakesh -3.362 [-3.552, -3.036]
+      combined -3.23 [-3.38, -3.08] -> BELOW | chip-to-chip spread chi2/dof 3.57 (dof 2)

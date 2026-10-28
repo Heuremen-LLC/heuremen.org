@@ -1,0 +1,14 @@
+
+=== ibm_fez  job dbd4pu0c77vs7387cihg  L1 1.660 us  L2 1.340 us  L2/L1 0.807  shots 5000
+  R1 kick N=4 L1: -1.571 [-1.873, -1.200] deg/readout  n=116  copy gap [-0.103, +0.062] -> BELOW
+  R1 kick N=4 L2: -1.330 [-2.108, -1.006] deg/readout  n=116  copy gap [-0.118, +0.170] -> BELOW
+  R2 ratio k(L2)/k(L1) N=4: 0.847 [0.713, 1.222]  (per readout 1, proportional 0.807) -> CANNOT_TELL (both 1 and L2/L1 inside)
+  R3 split N=4: per-readout part a -0.320 [-3.356, +0.804] deg, per-us part b -0.754 [-1.371, +1.058] deg/us
+  R1 kick N=8 L1: -1.557 [-1.907, -1.111] deg/readout  n=116  copy gap [-0.117, +0.021] -> BELOW
+  R1 kick N=8 L2: -1.306 [-1.966, -0.883] deg/readout  n=116  copy gap [-0.038, +0.090] -> BELOW
+  R2 ratio k(L2)/k(L1) N=8: 0.839 [0.729, 1.147]  (per readout 1, proportional 0.807) -> CANNOT_TELL (both 1 and L2/L1 inside)
+  R3 split N=8: per-readout part a -0.254 [-2.250, +0.727] deg, per-us part b -0.785 [-1.332, +0.409] deg/us
+  R4 measured qubit, P(1) idle minus readout, N=4 L1: +0.0218 [+0.0121, +0.0249] n=39 (idle 0.918, readout 0.895) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=4 L2: +0.0180 [+0.0107, +0.0213] n=39 (idle 0.928, readout 0.911) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=8 L1: +0.0380 [+0.0317, +0.0522] n=39 (idle 0.863, readout 0.822) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=8 L2: +0.0313 [+0.0239, +0.0384] n=39 (idle 0.883, readout 0.854) -> ABOVE

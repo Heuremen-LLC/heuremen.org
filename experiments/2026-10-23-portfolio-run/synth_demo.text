@@ -1,0 +1,4 @@
+picks: IBM (5, 4, 3, 16, 23, 24, 25, 26, 27, 17) OURS (126, 125, 117, 105, 106, 107, 108, 109, 118, 129)
+ibm_true: true success IBM pick 0.7944, OURS pick 0.7900 -> R1 (np.float64(0.9918482520771281), np.float64(0.9762352429470443), np.float64(1.0069221172155887), 'CONSISTENT')
+ours_true: true success IBM pick 0.7268, OURS pick 0.7616 -> R1 (np.float64(1.0548158395296559), np.float64(1.0347894641606326), np.float64(1.0735897691697318), 'ABOVE')
+equal world, 200 draws: {'ABOVE': 5, 'BELOW': 3, 'CONSISTENT': 192}

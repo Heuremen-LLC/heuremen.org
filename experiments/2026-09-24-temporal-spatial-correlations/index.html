@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Temporal and Spatial Correlations</title>
+<link rel="canonical" href="https://heuremen.org/experiments/2026-09-24-temporal-spatial-correlations/">
+<meta name="tdm-reservation" content="1">
+<meta name="tdm-policy" content="https://indahl.ai/terms#ai-training">
+<meta name="description" content="24 September 2026, IBM ibm_marrakesh, replicated on ibm_kingston and ibm_fez (48 jobs that day: fez 3, kingston 4, marrakesh 41; 17 in the run log).">
+<meta property="og:site_name" content="Heuremen LLC">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Temporal and Spatial Correlations">
+<meta property="og:description" content="24 September 2026, IBM ibm_marrakesh, replicated on ibm_kingston and ibm_fez (48 jobs that day: fez 3, kingston 4, marrakesh 41; 17 in the run log).">
+<meta property="og:url" content="https://heuremen.org/experiments/2026-09-24-temporal-spatial-correlations/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://heuremen.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://heuremen.org/og.png">
+
+<style>body{font-family:Georgia,serif;background:#f7f0e0;color:#2a1f0e;max-width:760px;margin:0 auto;padding:30px 20px;line-height:1.6}a{color:#2a5a8a}code{background:#ede0c4;padding:1px 4px}</style></head><body>
+<p><a href="/">← What&rsquo;s Lost with a Look</a> · <a href="../../correlations.html">the results page</a></p>
+<h1>Temporal and spatial correlations, and a three-box weak measurement &mdash; code and data</h1>
+<p>24 September 2026, IBM ibm_marrakesh, replicated on ibm_kingston and ibm_fez (48 jobs that day: fez 3, kingston 4, marrakesh 41; 17 in the run log). These runs have no equal-idle arm on untouched qubits and are not used for the readout claims of the paper. Two-qubit (spatial) and one-qubit sequential (temporal) correlations against a rotation angle, and a three-box weak measurement (third-box weak value &minus;0.506 &plusmn; 0.057). The temporal and spatial curves follow the same cos&thinsp;&theta;, as standard quantum mechanics predicts.</p>
+<p>Everything behind the page. Python 3.12 with <code>qiskit</code>, <code>qiskit-ibm-runtime</code>, <code>qiskit-aer</code>. Put your own IBM Quantum API key in a file and point the scripts at it. Every script has a free <code>sim</code> mode: rehearse there first, then write your prediction down, then spend real minutes.</p>
+<h2>The page's four panels</h2>
+<ul>
+<li><a href="space_time_same.py">space_time_same.py</a>: panel 1 (space vs time) and panel 3 (one qubit of an entangled pair, read alone)</li>
+<li><a href="arrow_panel.py">arrow_panel.py</a>: panel 2 (the arrow)</li>
+<li><a href="three_box.py">three_box.py</a>: panel 4 (the three-box paradox)</li>
+<li><a href="three_box_11.py">three_box_11.py</a>: panel 4, the version with the post-selection on the 11 outcome</li>
+<li><a href="partner_twist.py">partner_twist.py</a>: the one-qubit time curve used in panel 1 (and the space/time link tests)</li>
+</ul>
+<h2>Entangled pair against an unentangled control</h2>
+<ul>
+<li><a href="entanglement_cost.py">entanglement_cost.py</a>, <a href="entanglement_cost_v2.py">entanglement_cost_v2.py</a>: entangled pair against an unentangled control, and the circuit-order artifact</li>
+</ul>
+<h2>The record</h2>
+<ul>
+<li><a href="data/">data/</a>: every real-hardware result file (JSON)</li>
+<li><a href="verify_september.py">verify_september.py</a>: recomputes every number on the results page from data/ (<a href="verify_september_output.text">output</a>)</li>
+</ul>
+
+<p>Data tables and recounts: <a href="https://indahl.ai/qia">QIA</a> &middot; <a href="https://indahl.ai/iris">IRIS</a></p>
+<p class="foot">Bones &middot; Wayfinder &middot; Sage &middot; Shuttle &middot; Nova<br><a href="https://indahl.ai">Heuremen LLC</a><br>&ldquo;We found it.&rdquo;</p>
+</body></html>

@@ -1,0 +1,4 @@
+=== ibm_fez: median fit rms 0.051 rad; edges with rms > 0.5 rad or no fit: (103,104,rms 1.34) (103,96,rms 1.19)
+  without them, 61 edges: slope 0.942 [0.864, 1.030]; median |df|/stated 1.034 [1.011, 1.069]; rank 0.937 [0.872, 0.977]
+=== ibm_phoenix: median fit rms 0.077 rad; edges with rms > 0.5 rad or no fit: (41,31,rms 1.64) (41,42,rms 1.27)
+  without them, 35 edges: slope 0.192 [0.041, 0.370]; median |df|/stated 0.484 [0.452, 0.520]; rank 0.418 [0.082, 0.683]

@@ -1,0 +1,6 @@
+qiskit_runtime_service._discover_account:WARNING:2026-10-22 13:17:18,157: Loading account with the given token. A saved account will not be used.
+qiskit_runtime_service.__init__:WARNING:2026-10-22 13:17:22,947: Instance was not set at service instantiation. Free and trial plan instances will be prioritized. Based on the following filters: (tags: None, region: us-east, eu-de), and available plans: (open, pay-as-you-go), the available account instances are: open-instance, Quaker Instance, Darkwave Disco. If you need a specific instance set it explicitly either by using a saved account with a saved default instance or passing it in directly to QiskitRuntimeService(). Alternatively, pass instance='auto' or save it to your account for auto-selection without warning.
+qiskit_runtime_service._discover_account:WARNING:2026-10-22 13:17:22,947: Loading account with the given token. A saved account will not be used.
+ibm_marrakesh: layout s0,s1,probe = [6, 7, 8]; 144 circuits (72 x 2 copies); shots/circuit 6000; circuit 4.5-4.5 us; ESTIMATED 254 s; 2q gates per circuit 16-16; queue 0; remaining s 271
+submitted dbd4aa424mrc73cknef0
+IBM noise-model prediction saved before reading results; job status RUNNING

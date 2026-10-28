@@ -1,0 +1,2 @@
+ibm_marrakesh: L1 671 dt (2.684 us), L2 471 dt (1.884 us); 48 circuits, E 39, S 117; 10.3-24.2 us; ESTIMATED 74 s; remaining 357; queue 5; ops ['barrier', 'delay', 'measure', 'measure_2', 'rz', 'sx', 'x']
+SUBMITTED ibm_marrakesh dbd4pqvi0auc7394mpn0

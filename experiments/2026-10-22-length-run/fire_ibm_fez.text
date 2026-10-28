@@ -1,0 +1,2 @@
+ibm_fez: L1 415 dt (1.660 us), L2 335 dt (1.340 us); 48 circuits, E 39, S 117; 7.1-15.0 us; ESTIMATED 72 s; remaining 357; queue 49; ops ['barrier', 'delay', 'measure', 'measure_2', 'rz', 'sx', 'x']
+SUBMITTED ibm_fez dbd4pu0c77vs7387cihg

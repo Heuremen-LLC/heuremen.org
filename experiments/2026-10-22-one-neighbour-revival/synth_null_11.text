@@ -1,0 +1,15 @@
+====================================================================================================
+zz ibm_phoenix job SYNTH-0.0-11 | triples 21
+  props ZZ (kHz) B1 edge: median 28.68, range 11.32-49.24 | revival inside grid for 5 triples, dip for 12
+  R1 fitted scale s (P1, B1 alone in +)                                          +0.1 [+0.1, +0.1] n=21 -> ABOVE   (copy gap +0 [+0, +0])
+  R1 fitted scale s (P2, B2 alone in +)                                          +0.1 [+0.1, +0.1] n=21 -> ABOVE   (copy gap +0 [+0, +0])
+  R1 fitted scale s minus 1.0 (P1)                                               -0.9 [-0.9, -0.9] n=21 -> BELOW   (copy gap +0 [+0, +0])
+  R1 fitted scale s minus 0.5 (P1)                                               -0.4 [-0.4, -0.4] n=21 -> BELOW   (copy gap +0 [+0, +0])
+  R2 return height at revival / Z, minus ZZ+T1 prediction (1+exp(-t*/T1_B1))/2   +0.03168 [+0.01381, +0.05052] n=5 -> ABOVE   (copy gap +0.00716 [-0.02928, +0.03133])
+  R2 return height at revival / Z (as measured)                                  +1 [+0.9652, +1.007] n=5 -> ABOVE   (copy gap +0.00716 [-0.02928, +0.03133])
+  R3a unconditional coherence at the dip / Z                                     copies shifted +0.04782 [+0.01532, +0.2464] | copy0 +1.04 copy1 +0.967 -> CANNOT TELL
+  R3b coherence split by B1 final bit at the dip / same statistic on Z           copies shifted +0.04321 [+0.01089, +0.2799] | copy0 +1.015 copy1 +0.9781 -> CANNOT TELL
+  R3c R3b - R3a (coherence held in the correlation with B1)                      -0.003551 [-0.01123, +0.02339] n=12 -> CONSISTENT   (copy gap -0.002764 [-0.01574, +0.04975])
+  R4 echo: EP1/EZ - 1 at the dip (static ZZ predicts 0)                          +0.001064 [-0.01524, +0.0341] n=12 -> CONSISTENT   (copy gap -0.0007878 [-0.02899, +0.127])
+  R5 SSE(product) - SSE(sum) for both in + (BELOW -> product)                    +0.00528 [-0.004227, +0.07773] n=21 -> CONSISTENT   (copy gap -0.03771 [-0.261, +0.01154])
+  R6 B1 in 1: mean C(O1)/C(Z) over live taus (reference)                         +1.01 [+0.9894, +1.014] n=21 -> ABOVE   (copy gap +0.003068 [-0.0138, +0.0237])

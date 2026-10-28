@@ -1,0 +1,16 @@
+====================================================================================================
+excitation ibm_kingston job dbcvq18c77vs73874hm0
+  RJ.1 kick, measured qubits in 0 (M0 - D0)                  -3.17 [-4.021, -2.27] deg/step n=117 -> BELOW   (copy gap -0.04635 [-0.086, +0.02025])
+  RJ.2 kick, measured qubits in 1 (M1 - D1)                  -3.268 [-4.104, -2.079] deg/step n=117 -> BELOW   (copy gap -0.0118 [-0.05375, +0.04603])
+  RJ.3 G = kick in 1 minus kick in 0                         +0.04866 [-0.09823, +0.1322] deg/step n=117 -> CONSISTENT   (copy gap +0.00162 [-0.1302, +0.05804])
+  RJ.4 measured qubits in 1, no readout (D1 - D0)            -3.23 [-3.373, -3.046] deg/step n=117 -> BELOW   (copy gap +0.04524 [-0.08341, +0.1229])
+====================================================================================================
+ACROSS CHIPS (values and widths; a chip whose copies shifted is listed and left out of the combination)
+  RJ.1 kick, measured qubits in 0 (M0 - D0)
+      kingston -3.17 [-4.021, -2.27]
+  RJ.2 kick, measured qubits in 1 (M1 - D1)
+      kingston -3.268 [-4.104, -2.079]
+  RJ.3 G = kick in 1 minus kick in 0
+      kingston +0.04866 [-0.09823, +0.1322]
+  RJ.4 measured qubits in 1, no readout (D1 - D0)
+      kingston -3.23 [-3.373, -3.046]

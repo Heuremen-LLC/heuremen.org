@@ -1,0 +1,34 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Raw Readout Run</title>
+<link rel="canonical" href="https://heuremen.org/experiments/2026-10-21-iq-run/">
+<meta name="tdm-reservation" content="1">
+<meta name="tdm-policy" content="https://indahl.ai/terms#ai-training">
+<meta name="description" content="Does the superposition (T2) cost of untouched qubits survive when every measured neighbour is verified, from its raw readout signal, to sit in its own.">
+<meta property="og:site_name" content="Heuremen LLC">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Raw Readout Run">
+<meta property="og:description" content="Does the superposition (T2) cost of untouched qubits survive when every measured neighbour is verified, from its raw readout signal, to sit in its own.">
+<meta property="og:url" content="https://heuremen.org/experiments/2026-10-21-iq-run/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://heuremen.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://heuremen.org/og.png">
+
+<style>body{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;color:#18202B;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.5}a{color:#0F7173}</style></head><body>
+<p><a href="/">&larr; What&rsquo;s Lost with a Look</a></p>
+<h1>Raw-readout run, 21 October 2026</h1>
+<p>Does the superposition (T2) cost of untouched qubits survive when every measured neighbour is verified, from its raw readout signal, to sit in its own 0 cluster? Plan, circuits and analysis committed and pushed before submission. Results, read by the committed analysis, are below.</p>
+<p><a href="PREREG_IQ.md.text">plan</a> &middot; <a href="run_iq.py">run_iq.py</a> (uses <a href="run.py">run.py</a>) &middot; <a href="analyze_iq.py">analyze_iq.py</a> &middot; <a href="PREREG_IQ.sha256.text">SHA-256</a></p>
+<h2>Results, read by the committed analysis (<a href="results_iq.text">full output</a>)</h2>
+<p>Order of events, from the two servers&rsquo; own records: GitHub received the plan, circuits and analysis at 01:08:57 UTC (22 Oct); IBM created the jobs at 01:09:14 (marrakesh, dbcm4e9gv2cc73eakl5g), 01:11:07 (kingston, dbcm5aoc77vs7386ibag) and 01:14:03 (fez, dbcm6moc77vs7386ideg), charging 20, 19 and 19 seconds.</p>
+<ul>
+<li><b>ibm_kingston:</b> with every measured neighbour verified in its 0 cluster on every readout, untouched qubits still lose coherence: +0.0056 after 4 readouts, +0.0062 after 8 (both copies agree; at 4 readouts neither copy alone resolves it). Shots with a neighbour read as 1 are removed and the loss survives; a neighbour excited but read as 0, or leaked to a level that reads as 0, is not excluded (see the flip checks).</li>
+<li><b>ibm_marrakesh:</b> +0.0087 after 4, +0.0205 after 8 (both copies agree). Shots with a neighbour read as 1 are removed likewise; a neighbour leaked to a level that reads as 0 is not excluded (see the flip checks).</li>
+<li><b>ibm_fez:</b> +0.0042 after 2 readouts, +0.0057 after 4 (pooled copies; consistent with 0 after 8). After readout assignment correction the reading at 4 is +0.0037 [&minus;0.0001, +0.0100], consistent with zero (outside referee, defined after the data: <a href="../readout-mitigation-check/README.text">readout-mitigation check</a>). Shots with a neighbour read as 1 are removed likewise; a neighbour leaked to a level that reads as 0 is not excluded (see the flip checks).</li>
+<li>Where the committed analysis printed &ldquo;copies disagree&rdquo; (fez N = 2, 4; kingston N = 2; marrakesh N = 2), the copy-to-copy difference itself contains 0 in every case: one copy is wider, not shifted. <a href="/experiments/2026-10-21-pairs-run/CHECK_G_COPY_GAP.md.text">rule</a> &middot; <a href="/experiments/2026-10-21-pairs-run/check_g_copy_gap.py">script</a> &middot; <a href="/experiments/2026-10-21-pairs-run/results_check_g.text">output</a></li>
+<li>Shots kept by the selection: 97&ndash;99&thinsp;%. Mid-circuit readouts outside both the 0 and 1 clusters: 0.2&ndash;0.4&thinsp;% (fez, kingston), 1.8&thinsp;% (marrakesh).</li>
+</ul>
+<p>Job records: <a href="iqjob_ibm_kingston.json">kingston</a> &middot; <a href="iqjob_ibm_marrakesh.json">marrakesh</a> &middot; <a href="iqjob_ibm_fez.json">fez</a>; IBM calibration at firing: <a href="iq_backend_properties_ibm_kingston.json">kingston</a> &middot; <a href="iq_backend_properties_ibm_marrakesh.json">marrakesh</a> &middot; <a href="iq_backend_properties_ibm_fez.json">fez</a>. Raw IQ files (about 90 MB per processor) on request.</p>
+<p>Data tables and recounts: <a href="https://indahl.ai/qia">QIA</a> &middot; <a href="https://indahl.ai/iris">IRIS</a></p>
+<p class="foot">Bones &middot; Wayfinder &middot; Sage &middot; Shuttle &middot; Nova<br><a href="https://indahl.ai">Heuremen LLC</a><br>&ldquo;We found it.&rdquo;</p>
+</body></html>

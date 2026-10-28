@@ -1,0 +1,145 @@
+User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+User-agent: GPTBot
+Disallow: /
+Allow: /a-readout-is-not-an-idle.pdf
+Allow: /experiments/*.json
+Allow: /experiments/*.text
+Allow: /experiments/*.npz
+Allow: /experiments/*.gz
+Allow: /experiments/*.py
+Allow: /experiments/*.sha256
+
+User-agent: ClaudeBot
+Disallow: /
+Allow: /a-readout-is-not-an-idle.pdf
+Allow: /experiments/*.json
+Allow: /experiments/*.text
+Allow: /experiments/*.npz
+Allow: /experiments/*.gz
+Allow: /experiments/*.py
+Allow: /experiments/*.sha256
+
+User-agent: anthropic-ai
+Disallow: /
+Allow: /a-readout-is-not-an-idle.pdf
+Allow: /experiments/*.json
+Allow: /experiments/*.text
+Allow: /experiments/*.npz
+Allow: /experiments/*.gz
+Allow: /experiments/*.py
+Allow: /experiments/*.sha256
+
+User-agent: CCBot
+Disallow: /
+Allow: /a-readout-is-not-an-idle.pdf
+Allow: /experiments/*.json
+Allow: /experiments/*.text
+Allow: /experiments/*.npz
+Allow: /experiments/*.gz
+Allow: /experiments/*.py
+Allow: /experiments/*.sha256
+
+User-agent: Google-Extended
+Disallow: /
+Allow: /a-readout-is-not-an-idle.pdf
+Allow: /experiments/*.json
+Allow: /experiments/*.text
+Allow: /experiments/*.npz
+Allow: /experiments/*.gz
+Allow: /experiments/*.py
+Allow: /experiments/*.sha256
+
+User-agent: Applebot-Extended
+Disallow: /
+Allow: /a-readout-is-not-an-idle.pdf
+Allow: /experiments/*.json
+Allow: /experiments/*.text
+Allow: /experiments/*.npz
+Allow: /experiments/*.gz
+Allow: /experiments/*.py
+Allow: /experiments/*.sha256
+
+User-agent: Bytespider
+Disallow: /
+Allow: /a-readout-is-not-an-idle.pdf
+Allow: /experiments/*.json
+Allow: /experiments/*.text
+Allow: /experiments/*.npz
+Allow: /experiments/*.gz
+Allow: /experiments/*.py
+Allow: /experiments/*.sha256
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+Allow: /a-readout-is-not-an-idle.pdf
+Allow: /experiments/*.json
+Allow: /experiments/*.text
+Allow: /experiments/*.npz
+Allow: /experiments/*.gz
+Allow: /experiments/*.py
+Allow: /experiments/*.sha256
+
+User-agent: FacebookBot
+Disallow: /
+Allow: /a-readout-is-not-an-idle.pdf
+Allow: /experiments/*.json
+Allow: /experiments/*.text
+Allow: /experiments/*.npz
+Allow: /experiments/*.gz
+Allow: /experiments/*.py
+Allow: /experiments/*.sha256
+
+User-agent: Amazonbot
+Disallow: /
+Allow: /a-readout-is-not-an-idle.pdf
+Allow: /experiments/*.json
+Allow: /experiments/*.text
+Allow: /experiments/*.npz
+Allow: /experiments/*.gz
+Allow: /experiments/*.py
+Allow: /experiments/*.sha256
+
+User-agent: cohere-ai
+Disallow: /
+Allow: /a-readout-is-not-an-idle.pdf
+Allow: /experiments/*.json
+Allow: /experiments/*.text
+Allow: /experiments/*.npz
+Allow: /experiments/*.gz
+Allow: /experiments/*.py
+Allow: /experiments/*.sha256
+
+User-agent: Diffbot
+Disallow: /
+Allow: /a-readout-is-not-an-idle.pdf
+Allow: /experiments/*.json
+Allow: /experiments/*.text
+Allow: /experiments/*.npz
+Allow: /experiments/*.gz
+Allow: /experiments/*.py
+Allow: /experiments/*.sha256
+
+User-agent: Omgilibot
+Disallow: /
+Allow: /a-readout-is-not-an-idle.pdf
+Allow: /experiments/*.json
+Allow: /experiments/*.text
+Allow: /experiments/*.npz
+Allow: /experiments/*.gz
+Allow: /experiments/*.py
+Allow: /experiments/*.sha256
+
+User-agent: ImagesiftBot
+Disallow: /
+Allow: /a-readout-is-not-an-idle.pdf
+Allow: /experiments/*.json
+Allow: /experiments/*.text
+Allow: /experiments/*.npz
+Allow: /experiments/*.gz
+Allow: /experiments/*.py
+Allow: /experiments/*.sha256
+
+Sitemap: https://heuremen.org/sitemap.xml

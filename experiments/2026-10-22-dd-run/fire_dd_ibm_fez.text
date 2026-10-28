@@ -1,0 +1,15 @@
+ibm_fez timing: dt 4e-09 s, L 415 dt, X 6 dt, granularity 1, pulse_alignment 1, acquire_alignment 1 -> echo d1 100, X, d2 203, X, d3 100 dt
+VERIFIED: X per spectator = 2N (DD on) / 0 (DD off), none on measured qubits; every step exactly L = 415 dt; step block (N x L) and total scheduled duration identical DD on vs off for every (mode, N, setting, copy)
+  DD off N= 0 circuit durations (us): [np.float64(1.708)]
+  DD off N= 2 circuit durations (us): [np.float64(5.028)]
+  DD off N= 4 circuit durations (us): [np.float64(8.348)]
+  DD off N= 8 circuit durations (us): [np.float64(14.988)]
+  DD off N=16 circuit durations (us): [np.float64(28.268)]
+  DD on  N= 0 circuit durations (us): [np.float64(1.708)]
+  DD on  N= 2 circuit durations (us): [np.float64(5.028)]
+  DD on  N= 4 circuit durations (us): [np.float64(8.348)]
+  DD on  N= 8 circuit durations (us): [np.float64(14.988)]
+  DD on  N=16 circuit durations (us): [np.float64(28.268)]
+dd ibm_fez: 72 pubs, 4000 shots each, E 39, S 117, circuits 1.7-28.3 us, total shots 288000, ESTIMATED 87 s, remaining 1431, queue 50
+SUBMITTED dd ibm_fez dbcus97i0auc7394ddkg
+DONE dd ibm_fez: remaining now 1351

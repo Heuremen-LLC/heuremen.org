@@ -1,0 +1,1118 @@
+############################## SCENARIO a seed 20261220
+====================================================================================================
+ibm_kingston  job SYNTH-a-20261220
+  CAL 0X flip-rule failure per measured qubit: median 3.22%, max 13.53%; flip-unreadable (> 20%): []; wired spectators 86, used for L1/L2/L3 86
+  KNOWN-GOOD 0X: flip success (verified-0 shots), median over measured qubits 96.78% (flip-readable 96.78%) -> PASS | unheralded (all shots) 96.00%, thermal+readout excess 0.95%
+  F1 N=0 idle    copy 0  fail 5.2863% (inside 0 5.0752%, outside both 0.2111%) | with CAL1 cluster 5.3030%
+  F1 N=0 idle    copy 1  fail 5.1808% (inside 0 4.9684%, outside both 0.2124%) | with CAL1 cluster 5.1979%
+  F1 N=0 idle    pooled  fail 5.2335% (inside 0 5.0218%, outside both 0.2118%) | with CAL1 cluster 5.2504%
+  F1 N=4 idle    copy 0  fail 5.2060% (inside 0 5.0013%, outside both 0.2047%) | with CAL1 cluster 5.2256%
+  F1 N=4 idle    copy 1  fail 5.1269% (inside 0 4.9171%, outside both 0.2098%) | with CAL1 cluster 5.1397%
+  F1 N=4 idle    pooled  fail 5.1665% (inside 0 4.9592%, outside both 0.2073%) | with CAL1 cluster 5.1827%
+  F1 N=4 readout copy 0  fail 5.6530% (inside 0 5.4432%, outside both 0.2098%) | with CAL1 cluster 5.6744% | among shots verified 0 on every mid read 4.2207%
+  F1 N=4 readout copy 1  fail 5.6415% (inside 0 5.4308%, outside both 0.2107%) | with CAL1 cluster 5.6573% | among shots verified 0 on every mid read 4.1909%
+  F1 N=4 readout pooled  fail 5.6472% (inside 0 5.4370%, outside both 0.2103%) | with CAL1 cluster 5.6658% | among shots verified 0 on every mid read 4.2059%
+  F1 N=8 idle    copy 0  fail 5.1573% (inside 0 4.9585%, outside both 0.1987%) | with CAL1 cluster 5.1803%
+  F1 N=8 idle    copy 1  fail 5.1739% (inside 0 4.9714%, outside both 0.2026%) | with CAL1 cluster 5.1927%
+  F1 N=8 idle    pooled  fail 5.1656% (inside 0 4.9650%, outside both 0.2006%) | with CAL1 cluster 5.1865%
+  F1 N=8 readout copy 0  fail 5.6312% (inside 0 5.4179%, outside both 0.2132%) | with CAL1 cluster 5.6427% | among shots verified 0 on every mid read 4.2517%
+  F1 N=8 readout copy 1  fail 5.7491% (inside 0 5.5376%, outside both 0.2115%) | with CAL1 cluster 5.7701% | among shots verified 0 on every mid read 4.3254%
+  F1 N=8 readout pooled  fail 5.6902% (inside 0 5.4778%, outside both 0.2124%) | with CAL1 cluster 5.7064% | among shots verified 0 on every mid read 4.2885%
+  KNOWN-GOOD idle N=0: unheralded idle flip failure minus unheralded CAL 0X floor +0.0092% [-0.1083, +0.1161] -> CONSISTENT -> PASS
+  KNOWN-GOOD idle N=4: unheralded idle flip failure minus unheralded CAL 0X floor -0.0579% [-0.2054, +0.0844] -> CONSISTENT -> PASS
+  KNOWN-GOOD idle N=8: unheralded idle flip failure minus unheralded CAL 0X floor -0.0588% [-0.1688, +0.0470] -> CONSISTENT -> PASS
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +0.4470% [+0.2983, +0.5855] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +0.5145% [+0.3876, +0.6308] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +0.4808% [+0.3752, +0.5902] n=39 -> ABOVE
+  N=4 F2   FINAL -> ABOVE
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -0.9853% [-1.1186, -0.8375] n=39 -> BELOW
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  -0.9360% [-1.0380, -0.8304] n=39 -> BELOW
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  -0.9606% [-1.0623, -0.8642] n=39 -> BELOW
+  N=4 F2h  FINAL -> BELOW
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  -0.0564% [-0.2005, +0.0878] n=39 -> CONSISTENT
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  -0.0071% [-0.1305, +0.1074] n=39 -> CONSISTENT
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  -0.0317% [-0.1471, +0.0748] n=39 -> CONSISTENT
+  N=4 F2c  FINAL -> CONSISTENT
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  +0.0096  [+0.0067, +0.0125] n=86 -> ABOVE
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  +0.0089  [+0.0045, +0.0112] n=86 -> ABOVE
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  +0.0078  [+0.0055, +0.0119] n=86 -> ABOVE
+  N=4 L1w  FINAL -> ABOVE
+  N=4 L1   loss, mid-verified-0 selection                   copy 0  +0.0096  [+0.0061, +0.0125] n=86 -> ABOVE
+  N=4 L1   loss, mid-verified-0 selection                   copy 1  +0.0089  [+0.0045, +0.0109] n=86 -> ABOVE
+  N=4 L1   loss, mid-verified-0 selection                   pooled  +0.0078  [+0.0056, +0.0119] n=86 -> ABOVE
+  N=4 L1   FINAL -> ABOVE
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 0  +0.0087  [+0.0062, +0.0130] n=86 -> ABOVE
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 1  +0.0081  [+0.0040, +0.0122] n=86 -> ABOVE
+  N=4 L2   loss, mid-verified-0 AND flipped                 pooled  +0.0088  [+0.0062, +0.0120] n=86 -> ABOVE
+  N=4 L2   FINAL -> ABOVE
+  N=4 L3   L2 - L1                                          copy 0  +0.0001  [-0.0007, +0.0008] n=86 -> CONSISTENT
+  N=4 L3   L2 - L1                                          copy 1  +0.0001  [-0.0005, +0.0008] n=86 -> CONSISTENT
+  N=4 L3   L2 - L1                                          pooled  +0.0002  [-0.0003, +0.0008] n=86 -> CONSISTENT
+  N=4 L3   FINAL -> CONSISTENT
+  KNOWN-GOOD N=4: L1w +0.0078 vs 21 Oct clean-shot loss +0.0056 [+0.0013, +0.0105] -> PASS
+  N=4 shots kept (median over wired spectators, pooled): L1 readout 97.5%, L2 readout 94.5%, L2 idle 96.0%
+  N=4 DECISION -> L2 ABOVE: a neighbour stuck in a level that reads as 0 is EXCLUDED as the cause (to the extent the X-flip catches it) | L3 CONSISTENT, F2 ABOVE, F2c CONSISTENT
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +0.4739% [+0.3320, +0.6210] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +0.5752% [+0.4521, +0.6957] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +0.5246% [+0.4451, +0.6069] n=39 -> ABOVE
+  N=8 F2   FINAL -> ABOVE
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -0.9056% [-1.0371, -0.7729] n=39 -> BELOW
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  -0.8485% [-0.9532, -0.7412] n=39 -> BELOW
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  -0.8771% [-0.9513, -0.8021] n=39 -> BELOW
+  N=8 F2h  FINAL -> BELOW
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  +0.0233% [-0.1040, +0.1595] n=39 -> CONSISTENT
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  +0.0803% [-0.0267, +0.1861] n=39 -> CONSISTENT
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  +0.0517% [-0.0258, +0.1337] n=39 -> CONSISTENT
+  N=8 F2c  FINAL -> CONSISTENT
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  +0.0059  [+0.0027, +0.0120] n=86 -> ABOVE
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  +0.0059  [-0.0001, +0.0113] n=86 -> CONSISTENT
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  +0.0061  [+0.0020, +0.0093] n=86 -> ABOVE
+  N=8 L1w  FINAL -> CANNOT_TELL (copies disagree)
+  N=8 L1   loss, mid-verified-0 selection                   copy 0  +0.0059  [+0.0027, +0.0120] n=86 -> ABOVE
+  N=8 L1   loss, mid-verified-0 selection                   copy 1  +0.0059  [+0.0006, +0.0114] n=86 -> ABOVE
+  N=8 L1   loss, mid-verified-0 selection                   pooled  +0.0061  [+0.0020, +0.0094] n=86 -> ABOVE
+  N=8 L1   FINAL -> ABOVE
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 0  +0.0054  [+0.0030, +0.0129] n=86 -> ABOVE
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 1  +0.0043  [+0.0014, +0.0101] n=86 -> ABOVE
+  N=8 L2   loss, mid-verified-0 AND flipped                 pooled  +0.0066  [+0.0029, +0.0089] n=86 -> ABOVE
+  N=8 L2   FINAL -> ABOVE
+  N=8 L3   L2 - L1                                          copy 0  +0.0003  [-0.0003, +0.0010] n=86 -> CONSISTENT
+  N=8 L3   L2 - L1                                          copy 1  +0.0003  [-0.0008, +0.0010] n=86 -> CONSISTENT
+  N=8 L3   L2 - L1                                          pooled  +0.0001  [-0.0005, +0.0006] n=86 -> CONSISTENT
+  N=8 L3   FINAL -> CONSISTENT
+  KNOWN-GOOD N=8: L1w +0.0061 vs 21 Oct clean-shot loss +0.0062 [+0.0013, +0.0155] -> PASS
+  N=8 shots kept (median over wired spectators, pooled): L1 readout 96.7%, L2 readout 93.6%, L2 idle 96.2%
+  N=8 DECISION -> L2 ABOVE: a neighbour stuck in a level that reads as 0 is EXCLUDED as the cause (to the extent the X-flip catches it) | L3 CONSISTENT, F2 ABOVE, F2c CONSISTENT
+
+############################## SCENARIO b seed 20261221
+====================================================================================================
+ibm_kingston  job SYNTH-b-20261221
+  CAL 0X flip-rule failure per measured qubit: median 2.87%, max 12.46%; flip-unreadable (> 20%): []; wired spectators 86, used for L1/L2/L3 86
+  KNOWN-GOOD 0X: flip success (verified-0 shots), median over measured qubits 97.13% (flip-readable 97.13%) -> PASS | unheralded (all shots) 96.20%, thermal+readout excess 0.94%
+  F1 N=0 idle    copy 0  fail 5.1274% (inside 0 4.9368%, outside both 0.1906%) | with CAL1 cluster 5.1393%
+  F1 N=0 idle    copy 1  fail 5.1632% (inside 0 4.9513%, outside both 0.2120%) | with CAL1 cluster 5.1833%
+  F1 N=0 idle    pooled  fail 5.1453% (inside 0 4.9440%, outside both 0.2013%) | with CAL1 cluster 5.1613%
+  F1 N=4 idle    copy 0  fail 5.1162% (inside 0 4.9167%, outside both 0.1996%) | with CAL1 cluster 5.1350%
+  F1 N=4 idle    copy 1  fail 5.1530% (inside 0 4.9462%, outside both 0.2068%) | with CAL1 cluster 5.1679%
+  F1 N=4 idle    pooled  fail 5.1346% (inside 0 4.9314%, outside both 0.2032%) | with CAL1 cluster 5.1515%
+  F1 N=4 readout copy 0  fail 6.5731% (inside 0 6.3752%, outside both 0.1979%) | with CAL1 cluster 6.5949% | among shots verified 0 on every mid read 5.1143%
+  F1 N=4 readout copy 1  fail 6.5812% (inside 0 6.3889%, outside both 0.1923%) | with CAL1 cluster 6.6030% | among shots verified 0 on every mid read 5.0964%
+  F1 N=4 readout pooled  fail 6.5771% (inside 0 6.3821%, outside both 0.1951%) | with CAL1 cluster 6.5989% | among shots verified 0 on every mid read 5.1054%
+  F1 N=8 idle    copy 0  fail 5.2090% (inside 0 5.0060%, outside both 0.2030%) | with CAL1 cluster 5.2282%
+  F1 N=8 idle    copy 1  fail 5.2615% (inside 0 5.0402%, outside both 0.2214%) | with CAL1 cluster 5.2850%
+  F1 N=8 idle    pooled  fail 5.2353% (inside 0 5.0231%, outside both 0.2122%) | with CAL1 cluster 5.2566%
+  F1 N=8 readout copy 0  fail 6.5701% (inside 0 6.3679%, outside both 0.2021%) | with CAL1 cluster 6.5868% | among shots verified 0 on every mid read 5.0929%
+  F1 N=8 readout copy 1  fail 6.6453% (inside 0 6.4427%, outside both 0.2026%) | with CAL1 cluster 6.6645% | among shots verified 0 on every mid read 5.1405%
+  F1 N=8 readout pooled  fail 6.6077% (inside 0 6.4053%, outside both 0.2024%) | with CAL1 cluster 6.6256% | among shots verified 0 on every mid read 5.1168%
+  KNOWN-GOOD idle N=0: unheralded idle flip failure minus unheralded CAL 0X floor +0.0393% [-0.0763, +0.1530] -> CONSISTENT -> PASS
+  KNOWN-GOOD idle N=4: unheralded idle flip failure minus unheralded CAL 0X floor +0.0286% [-0.0746, +0.1361] -> CONSISTENT -> PASS
+  KNOWN-GOOD idle N=8: unheralded idle flip failure minus unheralded CAL 0X floor +0.1293% [+0.0342, +0.2259] -> CANNOT_TELL (copies disagree) -> PASS
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +1.4568% [+1.3307, +1.5859] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +1.4282% [+1.2761, +1.5769] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +1.4425% [+1.3363, +1.5500] n=39 -> ABOVE
+  N=4 F2   FINAL -> ABOVE
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -0.0019% [-0.1101, +0.1160] n=39 -> CONSISTENT
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  -0.0566% [-0.1961, +0.0834] n=39 -> CONSISTENT
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  -0.0292% [-0.1245, +0.0646] n=39 -> CONSISTENT
+  N=4 F2h  FINAL -> CONSISTENT
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  +0.9394% [+0.8191, +1.0542] n=39 -> ABOVE
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  +0.8847% [+0.7383, +1.0335] n=39 -> ABOVE
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  +0.9121% [+0.8149, +1.0088] n=39 -> ABOVE
+  N=4 F2c  FINAL -> ABOVE
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  +0.0102  [+0.0061, +0.0165] n=86 -> ABOVE
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  +0.0089  [+0.0045, +0.0140] n=86 -> ABOVE
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  +0.0124  [+0.0076, +0.0150] n=86 -> ABOVE
+  N=4 L1w  FINAL -> ABOVE
+  N=4 L1   loss, mid-verified-0 selection                   copy 0  +0.0102  [+0.0060, +0.0166] n=86 -> ABOVE
+  N=4 L1   loss, mid-verified-0 selection                   copy 1  +0.0089  [+0.0045, +0.0140] n=86 -> ABOVE
+  N=4 L1   loss, mid-verified-0 selection                   pooled  +0.0124  [+0.0076, +0.0150] n=86 -> ABOVE
+  N=4 L1   FINAL -> ABOVE
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 0  +0.0029  [-0.0008, +0.0084] n=86 -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 1  +0.0002  [-0.0042, +0.0049] n=86 -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 pooled  +0.0038  [-0.0007, +0.0062] n=86 -> CONSISTENT
+  N=4 L2   FINAL -> CONSISTENT
+  N=4 L3   L2 - L1                                          copy 0  -0.0083  [-0.0088, -0.0074] n=86 -> BELOW
+  N=4 L3   L2 - L1                                          copy 1  -0.0083  [-0.0093, -0.0074] n=86 -> BELOW
+  N=4 L3   L2 - L1                                          pooled  -0.0081  [-0.0084, -0.0075] n=86 -> BELOW
+  N=4 L3   FINAL -> BELOW
+  KNOWN-GOOD N=4: L1w +0.0124 vs 21 Oct clean-shot loss +0.0056 [+0.0013, +0.0105] -> FAIL
+  N=4 shots kept (median over wired spectators, pooled): L1 readout 97.5%, L2 readout 93.8%, L2 idle 96.2%
+  N=4 DECISION -> L2 CONSISTENT while L1 ABOVE: the loss MAY come from neighbours stuck in a level that reads as 0 | L3 BELOW, F2 ABOVE, F2c ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +1.3611% [+1.1987, +1.5124] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +1.3838% [+1.2406, +1.5227] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +1.3724% [+1.2724, +1.4695] n=39 -> ABOVE
+  N=8 F2   FINAL -> ABOVE
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -0.1161% [-0.2715, +0.0291] n=39 -> CONSISTENT
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  -0.1211% [-0.2496, +0.0109] n=39 -> CONSISTENT
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  -0.1185% [-0.2174, -0.0290] n=39 -> BELOW
+  N=8 F2h  FINAL -> BELOW
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  +0.8253% [+0.6584, +0.9822] n=39 -> ABOVE
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  +0.8203% [+0.6806, +0.9598] n=39 -> ABOVE
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  +0.8228% [+0.7113, +0.9316] n=39 -> ABOVE
+  N=8 F2c  FINAL -> ABOVE
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  +0.0066  [+0.0035, +0.0107] n=86 -> ABOVE
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  +0.0045  [+0.0001, +0.0123] n=86 -> ABOVE
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  +0.0064  [+0.0024, +0.0112] n=86 -> ABOVE
+  N=8 L1w  FINAL -> ABOVE
+  N=8 L1   loss, mid-verified-0 selection                   copy 0  +0.0066  [+0.0037, +0.0107] n=86 -> ABOVE
+  N=8 L1   loss, mid-verified-0 selection                   copy 1  +0.0045  [+0.0001, +0.0121] n=86 -> ABOVE
+  N=8 L1   loss, mid-verified-0 selection                   pooled  +0.0064  [+0.0024, +0.0112] n=86 -> ABOVE
+  N=8 L1   FINAL -> ABOVE
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 0  +0.0018  [-0.0027, +0.0054] n=86 -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 1  -0.0009  [-0.0075, +0.0030] n=86 -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 pooled  -0.0017  [-0.0052, +0.0027] n=86 -> CONSISTENT
+  N=8 L2   FINAL -> CONSISTENT
+  N=8 L3   L2 - L1                                          copy 0  -0.0067  [-0.0072, -0.0054] n=86 -> BELOW
+  N=8 L3   L2 - L1                                          copy 1  -0.0073  [-0.0084, -0.0059] n=86 -> BELOW
+  N=8 L3   L2 - L1                                          pooled  -0.0070  [-0.0078, -0.0057] n=86 -> BELOW
+  N=8 L3   FINAL -> BELOW
+  KNOWN-GOOD N=8: L1w +0.0064 vs 21 Oct clean-shot loss +0.0062 [+0.0013, +0.0155] -> PASS
+  N=8 shots kept (median over wired spectators, pooled): L1 readout 96.5%, L2 readout 92.7%, L2 idle 95.9%
+  N=8 DECISION -> L2 CONSISTENT while L1 ABOVE: the loss MAY come from neighbours stuck in a level that reads as 0 | L3 BELOW, F2 ABOVE, F2c ABOVE
+
+############################## SCENARIO b1 seed 20262221
+====================================================================================================
+ibm_kingston  job SYNTH-b-20262221
+  CAL 0X flip-rule failure per measured qubit: median 3.09%, max 12.10%; flip-unreadable (> 20%): []; wired spectators 86, used for L1/L2/L3 86
+  KNOWN-GOOD 0X: flip success (verified-0 shots), median over measured qubits 96.91% (flip-readable 96.91%) -> PASS | unheralded (all shots) 95.97%, thermal+readout excess 0.92%
+  F1 N=0 idle    copy 0  fail 5.2350% (inside 0 5.0209%, outside both 0.2141%) | with CAL1 cluster 5.2479%
+  F1 N=0 idle    copy 1  fail 5.2158% (inside 0 5.0158%, outside both 0.2000%) | with CAL1 cluster 5.2252%
+  F1 N=0 idle    pooled  fail 5.2254% (inside 0 5.0184%, outside both 0.2071%) | with CAL1 cluster 5.2365%
+  F1 N=4 idle    copy 0  fail 5.2385% (inside 0 5.0393%, outside both 0.1991%) | with CAL1 cluster 5.2504%
+  F1 N=4 idle    copy 1  fail 5.1274% (inside 0 4.9184%, outside both 0.2090%) | with CAL1 cluster 5.1397%
+  F1 N=4 idle    pooled  fail 5.1829% (inside 0 4.9788%, outside both 0.2041%) | with CAL1 cluster 5.1951%
+  F1 N=4 readout copy 0  fail 6.6333% (inside 0 6.4162%, outside both 0.2171%) | with CAL1 cluster 6.6457% | among shots verified 0 on every mid read 5.1944%
+  F1 N=4 readout copy 1  fail 6.7590% (inside 0 6.5321%, outside both 0.2269%) | with CAL1 cluster 6.7782% | among shots verified 0 on every mid read 5.2782%
+  F1 N=4 readout pooled  fail 6.6962% (inside 0 6.4741%, outside both 0.2220%) | with CAL1 cluster 6.7120% | among shots verified 0 on every mid read 5.2363%
+  F1 N=8 idle    copy 0  fail 5.2628% (inside 0 5.0598%, outside both 0.2030%) | with CAL1 cluster 5.2752%
+  F1 N=8 idle    copy 1  fail 5.3167% (inside 0 5.1043%, outside both 0.2124%) | with CAL1 cluster 5.3333%
+  F1 N=8 idle    pooled  fail 5.2897% (inside 0 5.0821%, outside both 0.2077%) | with CAL1 cluster 5.3043%
+  F1 N=8 readout copy 0  fail 6.7077% (inside 0 6.5034%, outside both 0.2043%) | with CAL1 cluster 6.7231% | among shots verified 0 on every mid read 5.2245%
+  F1 N=8 readout copy 1  fail 6.6752% (inside 0 6.4765%, outside both 0.1987%) | with CAL1 cluster 6.6923% | among shots verified 0 on every mid read 5.1516%
+  F1 N=8 readout pooled  fail 6.6915% (inside 0 6.4900%, outside both 0.2015%) | with CAL1 cluster 6.7077% | among shots verified 0 on every mid read 5.1882%
+  KNOWN-GOOD idle N=0: unheralded idle flip failure minus unheralded CAL 0X floor -0.0152% [-0.1173, +0.0891] -> CONSISTENT -> PASS
+  KNOWN-GOOD idle N=4: unheralded idle flip failure minus unheralded CAL 0X floor -0.0577% [-0.1744, +0.0412] -> CONSISTENT -> PASS
+  KNOWN-GOOD idle N=8: unheralded idle flip failure minus unheralded CAL 0X floor +0.0491% [-0.0355, +0.1349] -> CONSISTENT -> PASS
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +1.3949% [+1.2654, +1.5176] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +1.6316% [+1.5226, +1.7359] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +1.5132% [+1.4361, +1.5897] n=39 -> ABOVE
+  N=4 F2   FINAL -> ABOVE
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -0.0441% [-0.1578, +0.0844] n=39 -> CONSISTENT
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  +0.1508% [+0.0498, +0.2531] n=39 -> ABOVE
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  +0.0534% [-0.0187, +0.1304] n=39 -> CONSISTENT
+  N=4 F2h  FINAL -> CANNOT_TELL (copies disagree)
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  +0.8922% [+0.7791, +1.0091] n=39 -> ABOVE
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  +1.0871% [+0.9853, +1.1870] n=39 -> ABOVE
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  +0.9897% [+0.9176, +1.0610] n=39 -> ABOVE
+  N=4 F2c  FINAL -> ABOVE
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  +0.0073  [+0.0019, +0.0102] n=86 -> ABOVE
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  +0.0071  [+0.0031, +0.0117] n=86 -> ABOVE
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  +0.0064  [+0.0027, +0.0095] n=86 -> ABOVE
+  N=4 L1w  FINAL -> ABOVE
+  N=4 L1   loss, mid-verified-0 selection                   copy 0  +0.0073  [+0.0019, +0.0102] n=86 -> ABOVE
+  N=4 L1   loss, mid-verified-0 selection                   copy 1  +0.0071  [+0.0031, +0.0119] n=86 -> ABOVE
+  N=4 L1   loss, mid-verified-0 selection                   pooled  +0.0064  [+0.0023, +0.0098] n=86 -> ABOVE
+  N=4 L1   FINAL -> ABOVE
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 0  -0.0001  [-0.0051, +0.0020] n=86 -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 1  -0.0010  [-0.0044, +0.0037] n=86 -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 pooled  -0.0008  [-0.0045, +0.0020] n=86 -> CONSISTENT
+  N=4 L2   FINAL -> CONSISTENT
+  N=4 L3   L2 - L1                                          copy 0  -0.0071  [-0.0078, -0.0061] n=86 -> BELOW
+  N=4 L3   L2 - L1                                          copy 1  -0.0082  [-0.0094, -0.0072] n=86 -> BELOW
+  N=4 L3   L2 - L1                                          pooled  -0.0076  [-0.0083, -0.0071] n=86 -> BELOW
+  N=4 L3   FINAL -> BELOW
+  KNOWN-GOOD N=4: L1w +0.0064 vs 21 Oct clean-shot loss +0.0056 [+0.0013, +0.0105] -> PASS
+  N=4 shots kept (median over wired spectators, pooled): L1 readout 97.5%, L2 readout 93.9%, L2 idle 95.9%
+  N=4 DECISION -> L2 CONSISTENT while L1 ABOVE: the loss MAY come from neighbours stuck in a level that reads as 0 | L3 BELOW, F2 ABOVE, F2c ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +1.4449% [+1.3299, +1.5564] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +1.3585% [+1.2038, +1.4991] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +1.4017% [+1.3120, +1.4857] n=39 -> ABOVE
+  N=8 F2   FINAL -> ABOVE
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -0.0383% [-0.1673, +0.0800] n=39 -> CONSISTENT
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  -0.1651% [-0.3131, -0.0225] n=39 -> BELOW
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  -0.1016% [-0.1865, -0.0236] n=39 -> BELOW
+  N=8 F2h  FINAL -> CANNOT_TELL (copies disagree)
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  +0.8980% [+0.7743, +1.0151] n=39 -> ABOVE
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  +0.7712% [+0.6129, +0.9158] n=39 -> ABOVE
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  +0.8347% [+0.7425, +0.9159] n=39 -> ABOVE
+  N=8 F2c  FINAL -> ABOVE
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  +0.0080  [+0.0052, +0.0103] n=86 -> ABOVE
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  +0.0058  [+0.0038, +0.0133] n=86 -> ABOVE
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  +0.0075  [+0.0046, +0.0111] n=86 -> ABOVE
+  N=8 L1w  FINAL -> ABOVE
+  N=8 L1   loss, mid-verified-0 selection                   copy 0  +0.0080  [+0.0051, +0.0103] n=86 -> ABOVE
+  N=8 L1   loss, mid-verified-0 selection                   copy 1  +0.0058  [+0.0038, +0.0132] n=86 -> ABOVE
+  N=8 L1   loss, mid-verified-0 selection                   pooled  +0.0075  [+0.0042, +0.0109] n=86 -> ABOVE
+  N=8 L1   FINAL -> ABOVE
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 0  -0.0003  [-0.0046, +0.0052] n=86 -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 1  +0.0009  [-0.0022, +0.0059] n=86 -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 pooled  +0.0000  [-0.0045, +0.0038] n=86 -> CONSISTENT
+  N=8 L2   FINAL -> CONSISTENT
+  N=8 L3   L2 - L1                                          copy 0  -0.0084  [-0.0093, -0.0070] n=86 -> BELOW
+  N=8 L3   L2 - L1                                          copy 1  -0.0074  [-0.0086, -0.0065] n=86 -> BELOW
+  N=8 L3   L2 - L1                                          pooled  -0.0078  [-0.0082, -0.0067] n=86 -> BELOW
+  N=8 L3   FINAL -> BELOW
+  KNOWN-GOOD N=8: L1w +0.0075 vs 21 Oct clean-shot loss +0.0062 [+0.0013, +0.0155] -> PASS
+  N=8 shots kept (median over wired spectators, pooled): L1 readout 96.6%, L2 readout 92.8%, L2 idle 95.9%
+  N=8 DECISION -> L2 CONSISTENT while L1 ABOVE: the loss MAY come from neighbours stuck in a level that reads as 0 | L3 BELOW, F2 ABOVE, F2c ABOVE
+
+############################## SCENARIO b2 seed 20263221
+====================================================================================================
+ibm_kingston  job SYNTH-b-20263221
+  CAL 0X flip-rule failure per measured qubit: median 3.12%, max 11.82%; flip-unreadable (> 20%): []; wired spectators 86, used for L1/L2/L3 86
+  KNOWN-GOOD 0X: flip success (verified-0 shots), median over measured qubits 96.88% (flip-readable 96.88%) -> PASS | unheralded (all shots) 96.02%, thermal+readout excess 0.94%
+  F1 N=0 idle    copy 0  fail 5.1944% (inside 0 4.9842%, outside both 0.2103%) | with CAL1 cluster 5.2175%
+  F1 N=0 idle    copy 1  fail 5.1278% (inside 0 4.9389%, outside both 0.1889%) | with CAL1 cluster 5.1504%
+  F1 N=0 idle    pooled  fail 5.1611% (inside 0 4.9615%, outside both 0.1996%) | with CAL1 cluster 5.1840%
+  F1 N=4 idle    copy 0  fail 5.1868% (inside 0 4.9726%, outside both 0.2141%) | with CAL1 cluster 5.2094%
+  F1 N=4 idle    copy 1  fail 5.1769% (inside 0 4.9679%, outside both 0.2090%) | with CAL1 cluster 5.1974%
+  F1 N=4 idle    pooled  fail 5.1818% (inside 0 4.9703%, outside both 0.2115%) | with CAL1 cluster 5.2034%
+  F1 N=4 readout copy 0  fail 6.5744% (inside 0 6.3598%, outside both 0.2145%) | with CAL1 cluster 6.5910% | among shots verified 0 on every mid read 5.1784%
+  F1 N=4 readout copy 1  fail 6.4944% (inside 0 6.2833%, outside both 0.2111%) | with CAL1 cluster 6.5090% | among shots verified 0 on every mid read 5.0537%
+  F1 N=4 readout pooled  fail 6.5344% (inside 0 6.3216%, outside both 0.2128%) | with CAL1 cluster 6.5500% | among shots verified 0 on every mid read 5.1161%
+  F1 N=8 idle    copy 0  fail 5.1521% (inside 0 4.9530%, outside both 0.1991%) | with CAL1 cluster 5.1697%
+  F1 N=8 idle    copy 1  fail 5.1692% (inside 0 4.9650%, outside both 0.2043%) | with CAL1 cluster 5.1850%
+  F1 N=8 idle    pooled  fail 5.1607% (inside 0 4.9590%, outside both 0.2017%) | with CAL1 cluster 5.1774%
+  F1 N=8 readout copy 0  fail 6.6013% (inside 0 6.4051%, outside both 0.1962%) | with CAL1 cluster 6.6175% | among shots verified 0 on every mid read 5.1052%
+  F1 N=8 readout copy 1  fail 6.5038% (inside 0 6.2825%, outside both 0.2214%) | with CAL1 cluster 6.5150% | among shots verified 0 on every mid read 5.0892%
+  F1 N=8 readout pooled  fail 6.5526% (inside 0 6.3438%, outside both 0.2088%) | with CAL1 cluster 6.5662% | among shots verified 0 on every mid read 5.0972%
+  KNOWN-GOOD idle N=0: unheralded idle flip failure minus unheralded CAL 0X floor -0.0342% [-0.1504, +0.0740] -> CONSISTENT -> PASS
+  KNOWN-GOOD idle N=4: unheralded idle flip failure minus unheralded CAL 0X floor -0.0135% [-0.1220, +0.1015] -> CONSISTENT -> PASS
+  KNOWN-GOOD idle N=8: unheralded idle flip failure minus unheralded CAL 0X floor -0.0346% [-0.1368, +0.0761] -> CONSISTENT -> PASS
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +1.3876% [+1.2551, +1.5128] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +1.3175% [+1.1765, +1.4594] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +1.3526% [+1.2498, +1.4600] n=39 -> ABOVE
+  N=4 F2   FINAL -> ABOVE
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -0.0084% [-0.1349, +0.1145] n=39 -> CONSISTENT
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  -0.1233% [-0.2634, +0.0030] n=39 -> CONSISTENT
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  -0.0657% [-0.1651, +0.0260] n=39 -> CONSISTENT
+  N=4 F2h  FINAL -> CONSISTENT
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  +0.9257% [+0.8044, +1.0456] n=39 -> ABOVE
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  +0.8108% [+0.6774, +0.9497] n=39 -> ABOVE
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  +0.8683% [+0.7687, +0.9636] n=39 -> ABOVE
+  N=4 F2c  FINAL -> ABOVE
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  +0.0102  [+0.0059, +0.0131] n=86 -> ABOVE
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  +0.0064  [+0.0006, +0.0107] n=86 -> ABOVE
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  +0.0084  [+0.0042, +0.0125] n=86 -> ABOVE
+  N=4 L1w  FINAL -> ABOVE
+  N=4 L1   loss, mid-verified-0 selection                   copy 0  +0.0102  [+0.0060, +0.0131] n=86 -> ABOVE
+  N=4 L1   loss, mid-verified-0 selection                   copy 1  +0.0064  [+0.0004, +0.0107] n=86 -> ABOVE
+  N=4 L1   loss, mid-verified-0 selection                   pooled  +0.0084  [+0.0042, +0.0125] n=86 -> ABOVE
+  N=4 L1   FINAL -> ABOVE
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 0  +0.0030  [+0.0007, +0.0056] n=86 -> ABOVE
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 1  -0.0002  [-0.0061, +0.0028] n=86 -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 pooled  +0.0009  [-0.0019, +0.0037] n=86 -> CONSISTENT
+  N=4 L2   FINAL -> CANNOT_TELL (copies disagree)
+  N=4 L3   L2 - L1                                          copy 0  -0.0081  [-0.0091, -0.0069] n=86 -> BELOW
+  N=4 L3   L2 - L1                                          copy 1  -0.0077  [-0.0082, -0.0068] n=86 -> BELOW
+  N=4 L3   L2 - L1                                          pooled  -0.0079  [-0.0086, -0.0072] n=86 -> BELOW
+  N=4 L3   FINAL -> BELOW
+  KNOWN-GOOD N=4: L1w +0.0084 vs 21 Oct clean-shot loss +0.0056 [+0.0013, +0.0105] -> PASS
+  N=4 shots kept (median over wired spectators, pooled): L1 readout 97.6%, L2 readout 93.6%, L2 idle 96.0%
+  N=4 DECISION -> L1 ABOVE, L2 CANNOT_TELL (copies disagree): neither branch of the rule; reported as is | L3 BELOW, F2 ABOVE, F2c ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +1.4491% [+1.3316, +1.5744] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +1.3346% [+1.2226, +1.4423] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +1.3919% [+1.3109, +1.4741] n=39 -> ABOVE
+  N=8 F2   FINAL -> ABOVE
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -0.0469% [-0.1427, +0.0536] n=39 -> CONSISTENT
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  -0.0800% [-0.1861, +0.0310] n=39 -> CONSISTENT
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  -0.0635% [-0.1348, +0.0137] n=39 -> CONSISTENT
+  N=8 F2h  FINAL -> CONSISTENT
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  +0.8871% [+0.7815, +0.9910] n=39 -> ABOVE
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  +0.8540% [+0.7292, +0.9712] n=39 -> ABOVE
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  +0.8706% [+0.7835, +0.9518] n=39 -> ABOVE
+  N=8 F2c  FINAL -> ABOVE
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  +0.0067  [+0.0039, +0.0119] n=86 -> ABOVE
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  +0.0065  [+0.0022, +0.0099] n=86 -> ABOVE
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  +0.0071  [+0.0050, +0.0097] n=86 -> ABOVE
+  N=8 L1w  FINAL -> ABOVE
+  N=8 L1   loss, mid-verified-0 selection                   copy 0  +0.0067  [+0.0039, +0.0117] n=86 -> ABOVE
+  N=8 L1   loss, mid-verified-0 selection                   copy 1  +0.0065  [+0.0021, +0.0100] n=86 -> ABOVE
+  N=8 L1   loss, mid-verified-0 selection                   pooled  +0.0071  [+0.0049, +0.0100] n=86 -> ABOVE
+  N=8 L1   FINAL -> ABOVE
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 0  +0.0006  [-0.0032, +0.0042] n=86 -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 1  -0.0020  [-0.0048, +0.0019] n=86 -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 pooled  +0.0001  [-0.0018, +0.0023] n=86 -> CONSISTENT
+  N=8 L2   FINAL -> CONSISTENT
+  N=8 L3   L2 - L1                                          copy 0  -0.0076  [-0.0084, -0.0059] n=86 -> BELOW
+  N=8 L3   L2 - L1                                          copy 1  -0.0078  [-0.0091, -0.0070] n=86 -> BELOW
+  N=8 L3   L2 - L1                                          pooled  -0.0076  [-0.0082, -0.0071] n=86 -> BELOW
+  N=8 L3   FINAL -> BELOW
+  KNOWN-GOOD N=8: L1w +0.0071 vs 21 Oct clean-shot loss +0.0062 [+0.0013, +0.0155] -> PASS
+  N=8 shots kept (median over wired spectators, pooled): L1 readout 96.6%, L2 readout 93.0%, L2 idle 96.2%
+  N=8 DECISION -> L2 CONSISTENT while L1 ABOVE: the loss MAY come from neighbours stuck in a level that reads as 0 | L3 BELOW, F2 ABOVE, F2c ABOVE
+
+############################## SCENARIO b3 seed 20264221
+====================================================================================================
+ibm_kingston  job SYNTH-b-20264221
+  CAL 0X flip-rule failure per measured qubit: median 3.08%, max 11.54%; flip-unreadable (> 20%): []; wired spectators 86, used for L1/L2/L3 86
+  KNOWN-GOOD 0X: flip success (verified-0 shots), median over measured qubits 96.92% (flip-readable 96.92%) -> PASS | unheralded (all shots) 96.00%, thermal+readout excess 0.90%
+  F1 N=0 idle    copy 0  fail 5.1291% (inside 0 4.9205%, outside both 0.2085%) | with CAL1 cluster 5.1470%
+  F1 N=0 idle    copy 1  fail 5.2222% (inside 0 5.0077%, outside both 0.2145%) | with CAL1 cluster 5.2376%
+  F1 N=0 idle    pooled  fail 5.1756% (inside 0 4.9641%, outside both 0.2115%) | with CAL1 cluster 5.1923%
+  F1 N=4 idle    copy 0  fail 5.2333% (inside 0 5.0256%, outside both 0.2077%) | with CAL1 cluster 5.2487%
+  F1 N=4 idle    copy 1  fail 5.1594% (inside 0 4.9560%, outside both 0.2034%) | with CAL1 cluster 5.1812%
+  F1 N=4 idle    pooled  fail 5.1964% (inside 0 4.9908%, outside both 0.2056%) | with CAL1 cluster 5.2150%
+  F1 N=4 readout copy 0  fail 6.5577% (inside 0 6.3538%, outside both 0.2038%) | with CAL1 cluster 6.5731% | among shots verified 0 on every mid read 5.1246%
+  F1 N=4 readout copy 1  fail 6.6923% (inside 0 6.4774%, outside both 0.2150%) | with CAL1 cluster 6.6987% | among shots verified 0 on every mid read 5.2084%
+  F1 N=4 readout pooled  fail 6.6250% (inside 0 6.4156%, outside both 0.2094%) | with CAL1 cluster 6.6359% | among shots verified 0 on every mid read 5.1665%
+  F1 N=8 idle    copy 0  fail 5.2286% (inside 0 5.0282%, outside both 0.2004%) | with CAL1 cluster 5.2436%
+  F1 N=8 idle    copy 1  fail 5.0962% (inside 0 4.8803%, outside both 0.2158%) | with CAL1 cluster 5.1137%
+  F1 N=8 idle    pooled  fail 5.1624% (inside 0 4.9543%, outside both 0.2081%) | with CAL1 cluster 5.1786%
+  F1 N=8 readout copy 0  fail 6.5457% (inside 0 6.3252%, outside both 0.2205%) | with CAL1 cluster 6.5692% | among shots verified 0 on every mid read 5.0601%
+  F1 N=8 readout copy 1  fail 6.5402% (inside 0 6.3513%, outside both 0.1889%) | with CAL1 cluster 6.5598% | among shots verified 0 on every mid read 5.0769%
+  F1 N=8 readout pooled  fail 6.5429% (inside 0 6.3382%, outside both 0.2047%) | with CAL1 cluster 6.5645% | among shots verified 0 on every mid read 5.0686%
+  KNOWN-GOOD idle N=0: unheralded idle flip failure minus unheralded CAL 0X floor +0.0560% [-0.0823, +0.1872] -> CONSISTENT -> PASS
+  KNOWN-GOOD idle N=4: unheralded idle flip failure minus unheralded CAL 0X floor +0.0767% [-0.0370, +0.1940] -> CONSISTENT -> PASS
+  KNOWN-GOOD idle N=8: unheralded idle flip failure minus unheralded CAL 0X floor +0.0427% [-0.0611, +0.1436] -> CONSISTENT -> PASS
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +1.3244% [+1.1658, +1.4624] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +1.5329% [+1.3995, +1.6693] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +1.4286% [+1.3337, +1.5186] n=39 -> ABOVE
+  N=4 F2   FINAL -> ABOVE
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -0.1087% [-0.2484, +0.0256] n=39 -> CONSISTENT
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  +0.0490% [-0.0700, +0.1771] n=39 -> CONSISTENT
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  -0.0298% [-0.1138, +0.0539] n=39 -> CONSISTENT
+  N=4 F2h  FINAL -> CONSISTENT
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  +0.7982% [+0.6489, +0.9340] n=39 -> ABOVE
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  +0.9560% [+0.8312, +1.0738] n=39 -> ABOVE
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  +0.8771% [+0.7945, +0.9584] n=39 -> ABOVE
+  N=4 F2c  FINAL -> ABOVE
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  +0.0058  [+0.0013, +0.0085] n=86 -> ABOVE
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  +0.0061  [+0.0024, +0.0108] n=86 -> ABOVE
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  +0.0061  [+0.0034, +0.0098] n=86 -> ABOVE
+  N=4 L1w  FINAL -> ABOVE
+  N=4 L1   loss, mid-verified-0 selection                   copy 0  +0.0058  [+0.0015, +0.0087] n=86 -> ABOVE
+  N=4 L1   loss, mid-verified-0 selection                   copy 1  +0.0061  [+0.0024, +0.0109] n=86 -> ABOVE
+  N=4 L1   loss, mid-verified-0 selection                   pooled  +0.0061  [+0.0035, +0.0098] n=86 -> ABOVE
+  N=4 L1   FINAL -> ABOVE
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 0  -0.0028  [-0.0075, +0.0020] n=86 -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 1  -0.0010  [-0.0043, +0.0038] n=86 -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 pooled  -0.0018  [-0.0045, +0.0007] n=86 -> CONSISTENT
+  N=4 L2   FINAL -> CONSISTENT
+  N=4 L3   L2 - L1                                          copy 0  -0.0072  [-0.0088, -0.0064] n=86 -> BELOW
+  N=4 L3   L2 - L1                                          copy 1  -0.0070  [-0.0080, -0.0061] n=86 -> BELOW
+  N=4 L3   L2 - L1                                          pooled  -0.0072  [-0.0081, -0.0063] n=86 -> BELOW
+  N=4 L3   FINAL -> BELOW
+  KNOWN-GOOD N=4: L1w +0.0061 vs 21 Oct clean-shot loss +0.0056 [+0.0013, +0.0105] -> PASS
+  N=4 shots kept (median over wired spectators, pooled): L1 readout 97.5%, L2 readout 93.7%, L2 idle 95.8%
+  N=4 DECISION -> L2 CONSISTENT while L1 ABOVE: the loss MAY come from neighbours stuck in a level that reads as 0 | L3 BELOW, F2 ABOVE, F2c ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +1.3171% [+1.1619, +1.4671] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +1.4440% [+1.3276, +1.5611] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +1.3806% [+1.2754, +1.4791] n=39 -> ABOVE
+  N=8 F2   FINAL -> ABOVE
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -0.1686% [-0.3036, -0.0406] n=39 -> BELOW
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  -0.0192% [-0.1363, +0.0974] n=39 -> CONSISTENT
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  -0.0938% [-0.1750, -0.0131] n=39 -> BELOW
+  N=8 F2h  FINAL -> CANNOT_TELL (copies disagree)
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  +0.7384% [+0.6080, +0.8600] n=39 -> ABOVE
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  +0.8877% [+0.7721, +1.0077] n=39 -> ABOVE
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  +0.8131% [+0.7301, +0.8950] n=39 -> ABOVE
+  N=8 F2c  FINAL -> ABOVE
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  +0.0088  [+0.0054, +0.0131] n=86 -> ABOVE
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  +0.0077  [+0.0016, +0.0107] n=86 -> ABOVE
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  +0.0075  [+0.0058, +0.0106] n=86 -> ABOVE
+  N=8 L1w  FINAL -> ABOVE
+  N=8 L1   loss, mid-verified-0 selection                   copy 0  +0.0088  [+0.0054, +0.0128] n=86 -> ABOVE
+  N=8 L1   loss, mid-verified-0 selection                   copy 1  +0.0077  [+0.0017, +0.0107] n=86 -> ABOVE
+  N=8 L1   loss, mid-verified-0 selection                   pooled  +0.0075  [+0.0059, +0.0111] n=86 -> ABOVE
+  N=8 L1   FINAL -> ABOVE
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 0  -0.0003  [-0.0036, +0.0046] n=86 -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 1  +0.0007  [-0.0059, +0.0023] n=86 -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 pooled  -0.0015  [-0.0029, +0.0020] n=86 -> CONSISTENT
+  N=8 L2   FINAL -> CONSISTENT
+  N=8 L3   L2 - L1                                          copy 0  -0.0081  [-0.0090, -0.0074] n=86 -> BELOW
+  N=8 L3   L2 - L1                                          copy 1  -0.0075  [-0.0082, -0.0070] n=86 -> BELOW
+  N=8 L3   L2 - L1                                          pooled  -0.0080  [-0.0088, -0.0076] n=86 -> BELOW
+  N=8 L3   FINAL -> BELOW
+  KNOWN-GOOD N=8: L1w +0.0075 vs 21 Oct clean-shot loss +0.0062 [+0.0013, +0.0155] -> PASS
+  N=8 shots kept (median over wired spectators, pooled): L1 readout 96.5%, L2 readout 93.0%, L2 idle 95.9%
+  N=8 DECISION -> L2 CONSISTENT while L1 ABOVE: the loss MAY come from neighbours stuck in a level that reads as 0 | L3 BELOW, F2 ABOVE, F2c ABOVE
+
+############################## SCENARIO b4 seed 20265221
+====================================================================================================
+ibm_kingston  job SYNTH-b-20265221
+  CAL 0X flip-rule failure per measured qubit: median 2.98%, max 11.54%; flip-unreadable (> 20%): []; wired spectators 86, used for L1/L2/L3 86
+  KNOWN-GOOD 0X: flip success (verified-0 shots), median over measured qubits 97.02% (flip-readable 97.02%) -> PASS | unheralded (all shots) 95.85%, thermal+readout excess 0.96%
+  F1 N=0 idle    copy 0  fail 5.1927% (inside 0 4.9915%, outside both 0.2013%) | with CAL1 cluster 5.2098%
+  F1 N=0 idle    copy 1  fail 5.2286% (inside 0 5.0201%, outside both 0.2085%) | with CAL1 cluster 5.2397%
+  F1 N=0 idle    pooled  fail 5.2107% (inside 0 5.0058%, outside both 0.2049%) | with CAL1 cluster 5.2248%
+  F1 N=4 idle    copy 0  fail 5.2393% (inside 0 5.0500%, outside both 0.1893%) | with CAL1 cluster 5.2551%
+  F1 N=4 idle    copy 1  fail 5.1487% (inside 0 4.9509%, outside both 0.1979%) | with CAL1 cluster 5.1718%
+  F1 N=4 idle    pooled  fail 5.1940% (inside 0 5.0004%, outside both 0.1936%) | with CAL1 cluster 5.2135%
+  F1 N=4 readout copy 0  fail 6.6021% (inside 0 6.4030%, outside both 0.1991%) | with CAL1 cluster 6.6137% | among shots verified 0 on every mid read 5.1190%
+  F1 N=4 readout copy 1  fail 6.6197% (inside 0 6.4303%, outside both 0.1893%) | with CAL1 cluster 6.6402% | among shots verified 0 on every mid read 5.2033%
+  F1 N=4 readout pooled  fail 6.6109% (inside 0 6.4167%, outside both 0.1942%) | with CAL1 cluster 6.6269% | among shots verified 0 on every mid read 5.1611%
+  F1 N=8 idle    copy 0  fail 5.1833% (inside 0 4.9748%, outside both 0.2085%) | with CAL1 cluster 5.1991%
+  F1 N=8 idle    copy 1  fail 5.1966% (inside 0 5.0026%, outside both 0.1940%) | with CAL1 cluster 5.2141%
+  F1 N=8 idle    pooled  fail 5.1900% (inside 0 4.9887%, outside both 0.2013%) | with CAL1 cluster 5.2066%
+  F1 N=8 readout copy 0  fail 6.6808% (inside 0 6.4675%, outside both 0.2132%) | with CAL1 cluster 6.6953% | among shots verified 0 on every mid read 5.1836%
+  F1 N=8 readout copy 1  fail 6.6825% (inside 0 6.4799%, outside both 0.2026%) | with CAL1 cluster 6.7034% | among shots verified 0 on every mid read 5.2238%
+  F1 N=8 readout pooled  fail 6.6816% (inside 0 6.4737%, outside both 0.2079%) | with CAL1 cluster 6.6994% | among shots verified 0 on every mid read 5.2037%
+  KNOWN-GOOD idle N=0: unheralded idle flip failure minus unheralded CAL 0X floor -0.0389% [-0.1340, +0.0596] -> CONSISTENT -> PASS
+  KNOWN-GOOD idle N=4: unheralded idle flip failure minus unheralded CAL 0X floor -0.0556% [-0.1568, +0.0466] -> CONSISTENT -> PASS
+  KNOWN-GOOD idle N=8: unheralded idle flip failure minus unheralded CAL 0X floor -0.0596% [-0.1688, +0.0556] -> CONSISTENT -> PASS
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +1.3628% [+1.2350, +1.4898] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +1.4709% [+1.3376, +1.6081] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +1.4169% [+1.3152, +1.5152] n=39 -> ABOVE
+  N=4 F2   FINAL -> ABOVE
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -0.1203% [-0.2386, -0.0006] n=39 -> BELOW
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  +0.0546% [-0.0585, +0.1670] n=39 -> CONSISTENT
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  -0.0329% [-0.1165, +0.0583] n=39 -> CONSISTENT
+  N=4 F2h  FINAL -> CANNOT_TELL (copies disagree)
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  +0.8369% [+0.7170, +0.9578] n=39 -> ABOVE
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  +1.0119% [+0.8889, +1.1352] n=39 -> ABOVE
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  +0.9244% [+0.8375, +1.0099] n=39 -> ABOVE
+  N=4 F2c  FINAL -> ABOVE
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  +0.0109  [+0.0071, +0.0140] n=86 -> ABOVE
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  +0.0114  [+0.0093, +0.0143] n=86 -> ABOVE
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  +0.0099  [+0.0079, +0.0109] n=86 -> ABOVE
+  N=4 L1w  FINAL -> ABOVE
+  N=4 L1   loss, mid-verified-0 selection                   copy 0  +0.0109  [+0.0072, +0.0140] n=86 -> ABOVE
+  N=4 L1   loss, mid-verified-0 selection                   copy 1  +0.0114  [+0.0093, +0.0143] n=86 -> ABOVE
+  N=4 L1   loss, mid-verified-0 selection                   pooled  +0.0099  [+0.0079, +0.0109] n=86 -> ABOVE
+  N=4 L1   FINAL -> ABOVE
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 0  +0.0024  [+0.0004, +0.0060] n=86 -> ABOVE
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 1  +0.0040  [+0.0001, +0.0062] n=86 -> ABOVE
+  N=4 L2   loss, mid-verified-0 AND flipped                 pooled  +0.0016  [-0.0007, +0.0044] n=86 -> CONSISTENT
+  N=4 L2   FINAL -> CONSISTENT
+  N=4 L3   L2 - L1                                          copy 0  -0.0070  [-0.0075, -0.0059] n=86 -> BELOW
+  N=4 L3   L2 - L1                                          copy 1  -0.0078  [-0.0090, -0.0071] n=86 -> BELOW
+  N=4 L3   L2 - L1                                          pooled  -0.0075  [-0.0081, -0.0069] n=86 -> BELOW
+  N=4 L3   FINAL -> BELOW
+  KNOWN-GOOD N=4: L1w +0.0099 vs 21 Oct clean-shot loss +0.0056 [+0.0013, +0.0105] -> PASS
+  N=4 shots kept (median over wired spectators, pooled): L1 readout 97.5%, L2 readout 93.6%, L2 idle 96.0%
+  N=4 DECISION -> L2 CONSISTENT while L1 ABOVE: the loss MAY come from neighbours stuck in a level that reads as 0 | L3 BELOW, F2 ABOVE, F2c ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +1.4974% [+1.3735, +1.6223] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +1.4859% [+1.3188, +1.6410] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +1.4917% [+1.3750, +1.6098] n=39 -> ABOVE
+  N=8 F2   FINAL -> ABOVE
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  +0.0003% [-0.1107, +0.1084] n=39 -> CONSISTENT
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  +0.0272% [-0.1374, +0.1783] n=39 -> CONSISTENT
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  +0.0137% [-0.0914, +0.1125] n=39 -> CONSISTENT
+  N=8 F2h  FINAL -> CONSISTENT
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  +0.9575% [+0.8366, +1.0743] n=39 -> ABOVE
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  +0.9845% [+0.8184, +1.1392] n=39 -> ABOVE
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  +0.9710% [+0.8598, +1.0752] n=39 -> ABOVE
+  N=8 F2c  FINAL -> ABOVE
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  +0.0096  [+0.0054, +0.0155] n=86 -> ABOVE
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  +0.0058  [-0.0002, +0.0111] n=86 -> CONSISTENT
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  +0.0073  [+0.0042, +0.0102] n=86 -> ABOVE
+  N=8 L1w  FINAL -> CANNOT_TELL (copies disagree)
+  N=8 L1   loss, mid-verified-0 selection                   copy 0  +0.0096  [+0.0054, +0.0153] n=86 -> ABOVE
+  N=8 L1   loss, mid-verified-0 selection                   copy 1  +0.0058  [-0.0001, +0.0110] n=86 -> CONSISTENT
+  N=8 L1   loss, mid-verified-0 selection                   pooled  +0.0073  [+0.0042, +0.0102] n=86 -> ABOVE
+  N=8 L1   FINAL -> CANNOT_TELL (copies disagree)
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 0  +0.0027  [-0.0015, +0.0082] n=86 -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 1  -0.0024  [-0.0061, +0.0026] n=86 -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 pooled  +0.0009  [-0.0014, +0.0045] n=86 -> CONSISTENT
+  N=8 L2   FINAL -> CONSISTENT
+  N=8 L3   L2 - L1                                          copy 0  -0.0069  [-0.0080, -0.0057] n=86 -> BELOW
+  N=8 L3   L2 - L1                                          copy 1  -0.0066  [-0.0076, -0.0063] n=86 -> BELOW
+  N=8 L3   L2 - L1                                          pooled  -0.0069  [-0.0074, -0.0062] n=86 -> BELOW
+  N=8 L3   FINAL -> BELOW
+  KNOWN-GOOD N=8: L1w +0.0073 vs 21 Oct clean-shot loss +0.0062 [+0.0013, +0.0155] -> PASS
+  N=8 shots kept (median over wired spectators, pooled): L1 readout 96.6%, L2 readout 92.8%, L2 idle 96.5%
+  N=8 DECISION -> L1 CANNOT_TELL (copies disagree), L2 CONSISTENT: neither branch of the rule; reported as is | L3 BELOW, F2 ABOVE, F2c ABOVE
+
+############################## SCENARIO b5 seed 20266221
+====================================================================================================
+ibm_kingston  job SYNTH-b-20266221
+  CAL 0X flip-rule failure per measured qubit: median 2.93%, max 12.67%; flip-unreadable (> 20%): []; wired spectators 86, used for L1/L2/L3 86
+  KNOWN-GOOD 0X: flip success (verified-0 shots), median over measured qubits 97.07% (flip-readable 97.07%) -> PASS | unheralded (all shots) 96.15%, thermal+readout excess 0.96%
+  F1 N=0 idle    copy 0  fail 5.1560% (inside 0 4.9509%, outside both 0.2051%) | with CAL1 cluster 5.1761%
+  F1 N=0 idle    copy 1  fail 5.1650% (inside 0 4.9641%, outside both 0.2009%) | with CAL1 cluster 5.1872%
+  F1 N=0 idle    pooled  fail 5.1605% (inside 0 4.9575%, outside both 0.2030%) | with CAL1 cluster 5.1816%
+  F1 N=4 idle    copy 0  fail 5.1799% (inside 0 4.9850%, outside both 0.1949%) | with CAL1 cluster 5.1996%
+  F1 N=4 idle    copy 1  fail 5.2111% (inside 0 4.9944%, outside both 0.2167%) | with CAL1 cluster 5.2325%
+  F1 N=4 idle    pooled  fail 5.1955% (inside 0 4.9897%, outside both 0.2058%) | with CAL1 cluster 5.2160%
+  F1 N=4 readout copy 0  fail 6.5791% (inside 0 6.3808%, outside both 0.1983%) | with CAL1 cluster 6.5936% | among shots verified 0 on every mid read 5.1320%
+  F1 N=4 readout copy 1  fail 6.5504% (inside 0 6.3466%, outside both 0.2038%) | with CAL1 cluster 6.5718% | among shots verified 0 on every mid read 5.1092%
+  F1 N=4 readout pooled  fail 6.5647% (inside 0 6.3637%, outside both 0.2011%) | with CAL1 cluster 6.5827% | among shots verified 0 on every mid read 5.1206%
+  F1 N=8 idle    copy 0  fail 5.2333% (inside 0 5.0145%, outside both 0.2188%) | with CAL1 cluster 5.2530%
+  F1 N=8 idle    copy 1  fail 5.2124% (inside 0 5.0171%, outside both 0.1953%) | with CAL1 cluster 5.2350%
+  F1 N=8 idle    pooled  fail 5.2229% (inside 0 5.0158%, outside both 0.2071%) | with CAL1 cluster 5.2440%
+  F1 N=8 readout copy 0  fail 6.6415% (inside 0 6.4261%, outside both 0.2154%) | with CAL1 cluster 6.6551% | among shots verified 0 on every mid read 5.1774%
+  F1 N=8 readout copy 1  fail 6.5423% (inside 0 6.3256%, outside both 0.2167%) | with CAL1 cluster 6.5692% | among shots verified 0 on every mid read 5.0714%
+  F1 N=8 readout pooled  fail 6.5919% (inside 0 6.3759%, outside both 0.2160%) | with CAL1 cluster 6.6122% | among shots verified 0 on every mid read 5.1244%
+  KNOWN-GOOD idle N=0: unheralded idle flip failure minus unheralded CAL 0X floor -0.1553% [-0.2699, -0.0502] -> BELOW -> PASS
+  KNOWN-GOOD idle N=4: unheralded idle flip failure minus unheralded CAL 0X floor -0.1203% [-0.2064, -0.0316] -> BELOW -> PASS
+  KNOWN-GOOD idle N=8: unheralded idle flip failure minus unheralded CAL 0X floor -0.0929% [-0.1987, +0.0126] -> CONSISTENT -> PASS
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +1.3991% [+1.2538, +1.5402] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +1.3393% [+1.2089, +1.4594] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +1.3692% [+1.2675, +1.4652] n=39 -> ABOVE
+  N=4 F2   FINAL -> ABOVE
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -0.0479% [-0.1684, +0.0659] n=39 -> CONSISTENT
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  -0.1019% [-0.2227, +0.0183] n=39 -> CONSISTENT
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  -0.0749% [-0.1652, +0.0111] n=39 -> CONSISTENT
+  N=4 F2h  FINAL -> CONSISTENT
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  +0.9105% [+0.7779, +1.0396] n=39 -> ABOVE
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  +0.8566% [+0.7226, +0.9969] n=39 -> ABOVE
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  +0.8835% [+0.7820, +0.9820] n=39 -> ABOVE
+  N=4 F2c  FINAL -> ABOVE
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  +0.0083  [+0.0026, +0.0116] n=86 -> ABOVE
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  +0.0079  [+0.0037, +0.0101] n=86 -> ABOVE
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  +0.0069  [+0.0047, +0.0092] n=86 -> ABOVE
+  N=4 L1w  FINAL -> ABOVE
+  N=4 L1   loss, mid-verified-0 selection                   copy 0  +0.0083  [+0.0028, +0.0115] n=86 -> ABOVE
+  N=4 L1   loss, mid-verified-0 selection                   copy 1  +0.0079  [+0.0037, +0.0102] n=86 -> ABOVE
+  N=4 L1   loss, mid-verified-0 selection                   pooled  +0.0069  [+0.0047, +0.0092] n=86 -> ABOVE
+  N=4 L1   FINAL -> ABOVE
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 0  -0.0012  [-0.0042, +0.0040] n=86 -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 1  +0.0008  [-0.0049, +0.0045] n=86 -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 pooled  -0.0001  [-0.0028, +0.0026] n=86 -> CONSISTENT
+  N=4 L2   FINAL -> CONSISTENT
+  N=4 L3   L2 - L1                                          copy 0  -0.0075  [-0.0083, -0.0067] n=86 -> BELOW
+  N=4 L3   L2 - L1                                          copy 1  -0.0075  [-0.0080, -0.0061] n=86 -> BELOW
+  N=4 L3   L2 - L1                                          pooled  -0.0075  [-0.0081, -0.0065] n=86 -> BELOW
+  N=4 L3   FINAL -> BELOW
+  KNOWN-GOOD N=4: L1w +0.0069 vs 21 Oct clean-shot loss +0.0056 [+0.0013, +0.0105] -> PASS
+  N=4 shots kept (median over wired spectators, pooled): L1 readout 97.6%, L2 readout 93.7%, L2 idle 96.0%
+  N=4 DECISION -> L2 CONSISTENT while L1 ABOVE: the loss MAY come from neighbours stuck in a level that reads as 0 | L3 BELOW, F2 ABOVE, F2c ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +1.4081% [+1.2312, +1.5744] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +1.3299% [+1.1709, +1.4945] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +1.3690% [+1.2547, +1.4812] n=39 -> ABOVE
+  N=8 F2   FINAL -> ABOVE
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -0.0559% [-0.2075, +0.1013] n=39 -> CONSISTENT
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  -0.1409% [-0.2787, +0.0057] n=39 -> CONSISTENT
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  -0.0985% [-0.1950, -0.0073] n=39 -> BELOW
+  N=8 F2h  FINAL -> BELOW
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  +0.9025% [+0.7503, +1.0633] n=39 -> ABOVE
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  +0.8175% [+0.6680, +0.9638] n=39 -> ABOVE
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  +0.8600% [+0.7528, +0.9643] n=39 -> ABOVE
+  N=8 F2c  FINAL -> ABOVE
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  +0.0078  [+0.0015, +0.0130] n=86 -> ABOVE
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  +0.0050  [+0.0007, +0.0093] n=86 -> ABOVE
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  +0.0063  [+0.0035, +0.0100] n=86 -> ABOVE
+  N=8 L1w  FINAL -> ABOVE
+  N=8 L1   loss, mid-verified-0 selection                   copy 0  +0.0078  [+0.0015, +0.0124] n=86 -> ABOVE
+  N=8 L1   loss, mid-verified-0 selection                   copy 1  +0.0050  [+0.0007, +0.0095] n=86 -> ABOVE
+  N=8 L1   loss, mid-verified-0 selection                   pooled  +0.0063  [+0.0036, +0.0099] n=86 -> ABOVE
+  N=8 L1   FINAL -> ABOVE
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 0  +0.0001  [-0.0062, +0.0053] n=86 -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 1  -0.0017  [-0.0047, +0.0031] n=86 -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 pooled  -0.0014  [-0.0036, +0.0006] n=86 -> CONSISTENT
+  N=8 L2   FINAL -> CONSISTENT
+  N=8 L3   L2 - L1                                          copy 0  -0.0072  [-0.0083, -0.0062] n=86 -> BELOW
+  N=8 L3   L2 - L1                                          copy 1  -0.0068  [-0.0083, -0.0062] n=86 -> BELOW
+  N=8 L3   L2 - L1                                          pooled  -0.0070  [-0.0083, -0.0062] n=86 -> BELOW
+  N=8 L3   FINAL -> BELOW
+  KNOWN-GOOD N=8: L1w +0.0063 vs 21 Oct clean-shot loss +0.0062 [+0.0013, +0.0155] -> PASS
+  N=8 shots kept (median over wired spectators, pooled): L1 readout 96.7%, L2 readout 92.9%, L2 idle 96.1%
+  N=8 DECISION -> L2 CONSISTENT while L1 ABOVE: the loss MAY come from neighbours stuck in a level that reads as 0 | L3 BELOW, F2 ABOVE, F2c ABOVE
+
+############################## SCENARIO null0 seed 20261123
+====================================================================================================
+ibm_kingston  job SYNTH-null-20261123
+  CAL 0X flip-rule failure per measured qubit: median 3.01%, max 12.54%; flip-unreadable (> 20%): []; wired spectators 86, used for L1/L2/L3 86
+  KNOWN-GOOD 0X: flip success (verified-0 shots), median over measured qubits 96.99% (flip-readable 96.99%) -> PASS | unheralded (all shots) 96.00%, thermal+readout excess 0.92%
+  F1 N=0 idle    copy 0  fail 5.2047% (inside 0 5.0098%, outside both 0.1949%) | with CAL1 cluster 5.2308%
+  F1 N=0 idle    copy 1  fail 5.2842% (inside 0 5.0654%, outside both 0.2188%) | with CAL1 cluster 5.3021%
+  F1 N=0 idle    pooled  fail 5.2444% (inside 0 5.0376%, outside both 0.2068%) | with CAL1 cluster 5.2665%
+  F1 N=4 idle    copy 0  fail 5.1838% (inside 0 4.9637%, outside both 0.2201%) | with CAL1 cluster 5.2038%
+  F1 N=4 idle    copy 1  fail 5.2397% (inside 0 5.0342%, outside both 0.2056%) | with CAL1 cluster 5.2573%
+  F1 N=4 idle    pooled  fail 5.2118% (inside 0 4.9989%, outside both 0.2128%) | with CAL1 cluster 5.2306%
+  F1 N=4 readout copy 0  fail 5.6876% (inside 0 5.4876%, outside both 0.2000%) | with CAL1 cluster 5.7179% | among shots verified 0 on every mid read 4.2420%
+  F1 N=4 readout copy 1  fail 5.7316% (inside 0 5.5316%, outside both 0.2000%) | with CAL1 cluster 5.7585% | among shots verified 0 on every mid read 4.3075%
+  F1 N=4 readout pooled  fail 5.7096% (inside 0 5.5096%, outside both 0.2000%) | with CAL1 cluster 5.7382% | among shots verified 0 on every mid read 4.2748%
+  F1 N=8 idle    copy 0  fail 5.1846% (inside 0 4.9812%, outside both 0.2034%) | with CAL1 cluster 5.1991%
+  F1 N=8 idle    copy 1  fail 5.1436% (inside 0 4.9466%, outside both 0.1970%) | with CAL1 cluster 5.1654%
+  F1 N=8 idle    pooled  fail 5.1641% (inside 0 4.9639%, outside both 0.2002%) | with CAL1 cluster 5.1823%
+  F1 N=8 readout copy 0  fail 5.6338% (inside 0 5.4299%, outside both 0.2038%) | with CAL1 cluster 5.6556% | among shots verified 0 on every mid read 4.2084%
+  F1 N=8 readout copy 1  fail 5.6286% (inside 0 5.4397%, outside both 0.1889%) | with CAL1 cluster 5.6547% | among shots verified 0 on every mid read 4.2271%
+  F1 N=8 readout pooled  fail 5.6312% (inside 0 5.4348%, outside both 0.1964%) | with CAL1 cluster 5.6551% | among shots verified 0 on every mid read 4.2178%
+  KNOWN-GOOD idle N=0: unheralded idle flip failure minus unheralded CAL 0X floor +0.1342% [+0.0333, +0.2355] -> CANNOT_TELL (copies disagree) -> PASS
+  KNOWN-GOOD idle N=4: unheralded idle flip failure minus unheralded CAL 0X floor +0.1015% [+0.0019, +0.2071] -> ABOVE -> FAIL (idle above the calibration floor)
+  KNOWN-GOOD idle N=8: unheralded idle flip failure minus unheralded CAL 0X floor +0.0538% [-0.0295, +0.1389] -> CONSISTENT -> PASS
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +0.5038% [+0.3974, +0.6184] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +0.4919% [+0.3816, +0.6021] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +0.4979% [+0.4167, +0.5853] n=39 -> ABOVE
+  N=4 F2   FINAL -> ABOVE
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -0.9418% [-1.0440, -0.8253] n=39 -> BELOW
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  -0.9323% [-1.0432, -0.8083] n=39 -> BELOW
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  -0.9370% [-1.0270, -0.8450] n=39 -> BELOW
+  N=4 F2h  FINAL -> BELOW
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  -0.0298% [-0.1447, +0.0929] n=39 -> CONSISTENT
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  -0.0203% [-0.1452, +0.1109] n=39 -> CONSISTENT
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  -0.0250% [-0.1296, +0.0837] n=39 -> CONSISTENT
+  N=4 F2c  FINAL -> CONSISTENT
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  +0.0002  [-0.0037, +0.0046] n=86 -> CONSISTENT
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  -0.0010  [-0.0045, +0.0049] n=86 -> CONSISTENT
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  -0.0003  [-0.0031, +0.0020] n=86 -> CONSISTENT
+  N=4 L1w  FINAL -> CONSISTENT
+  N=4 L1   loss, mid-verified-0 selection                   copy 0  +0.0002  [-0.0041, +0.0047] n=86 -> CONSISTENT
+  N=4 L1   loss, mid-verified-0 selection                   copy 1  -0.0010  [-0.0046, +0.0059] n=86 -> CONSISTENT
+  N=4 L1   loss, mid-verified-0 selection                   pooled  -0.0003  [-0.0030, +0.0019] n=86 -> CONSISTENT
+  N=4 L1   FINAL -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 0  -0.0005  [-0.0040, +0.0033] n=86 -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 1  -0.0009  [-0.0046, +0.0051] n=86 -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 pooled  -0.0001  [-0.0041, +0.0024] n=86 -> CONSISTENT
+  N=4 L2   FINAL -> CONSISTENT
+  N=4 L3   L2 - L1                                          copy 0  -0.0004  [-0.0008, +0.0006] n=86 -> CONSISTENT
+  N=4 L3   L2 - L1                                          copy 1  -0.0004  [-0.0009, +0.0006] n=86 -> CONSISTENT
+  N=4 L3   L2 - L1                                          pooled  -0.0004  [-0.0008, +0.0002] n=86 -> CONSISTENT
+  N=4 L3   FINAL -> CONSISTENT
+  KNOWN-GOOD N=4: L1w -0.0003 vs 21 Oct clean-shot loss +0.0056 [+0.0013, +0.0105] -> FAIL
+  N=4 shots kept (median over wired spectators, pooled): L1 readout 97.6%, L2 readout 94.4%, L2 idle 95.9%
+  N=4 DECISION -> KNOWN-GOOD FAILED on this processor: F2 and L2 reported CANNOT_TELL (readings above printed for the record) | was: L1 CONSISTENT, L2 CONSISTENT: neither branch of the rule; reported as is | L3 CONSISTENT, F2 ABOVE, F2c CONSISTENT
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +0.4491% [+0.3230, +0.5684] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +0.4850% [+0.3611, +0.6094] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +0.4671% [+0.3697, +0.5643] n=39 -> ABOVE
+  N=8 F2   FINAL -> ABOVE
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -0.9762% [-1.0974, -0.8538] n=39 -> BELOW
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  -0.9165% [-1.0320, -0.8022] n=39 -> BELOW
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  -0.9463% [-1.0335, -0.8587] n=39 -> BELOW
+  N=8 F2h  FINAL -> BELOW
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  -0.0642% [-0.2026, +0.0860] n=39 -> CONSISTENT
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  -0.0045% [-0.1279, +0.1126] n=39 -> CONSISTENT
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  -0.0343% [-0.1448, +0.0721] n=39 -> CONSISTENT
+  N=8 F2c  FINAL -> CONSISTENT
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  +0.0002  [-0.0032, +0.0022] n=86 -> CONSISTENT
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  -0.0006  [-0.0050, +0.0019] n=86 -> CONSISTENT
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  -0.0012  [-0.0037, +0.0022] n=86 -> CONSISTENT
+  N=8 L1w  FINAL -> CONSISTENT
+  N=8 L1   loss, mid-verified-0 selection                   copy 0  +0.0002  [-0.0032, +0.0021] n=86 -> CONSISTENT
+  N=8 L1   loss, mid-verified-0 selection                   copy 1  -0.0006  [-0.0051, +0.0021] n=86 -> CONSISTENT
+  N=8 L1   loss, mid-verified-0 selection                   pooled  -0.0012  [-0.0037, +0.0023] n=86 -> CONSISTENT
+  N=8 L1   FINAL -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 0  -0.0017  [-0.0036, +0.0021] n=86 -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 1  -0.0000  [-0.0064, +0.0034] n=86 -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 pooled  -0.0020  [-0.0042, +0.0015] n=86 -> CONSISTENT
+  N=8 L2   FINAL -> CONSISTENT
+  N=8 L3   L2 - L1                                          copy 0  +0.0003  [-0.0008, +0.0010] n=86 -> CONSISTENT
+  N=8 L3   L2 - L1                                          copy 1  +0.0005  [-0.0005, +0.0012] n=86 -> CONSISTENT
+  N=8 L3   L2 - L1                                          pooled  +0.0003  [-0.0006, +0.0006] n=86 -> CONSISTENT
+  N=8 L3   FINAL -> CONSISTENT
+  KNOWN-GOOD N=8: L1w -0.0012 vs 21 Oct clean-shot loss +0.0062 [+0.0013, +0.0155] -> FAIL
+  N=8 shots kept (median over wired spectators, pooled): L1 readout 96.7%, L2 readout 93.7%, L2 idle 95.9%
+  N=8 DECISION -> KNOWN-GOOD FAILED on this processor: F2 and L2 reported CANNOT_TELL (readings above printed for the record) | was: L1 CONSISTENT, L2 CONSISTENT: neither branch of the rule; reported as is | L3 CONSISTENT, F2 ABOVE, F2c CONSISTENT
+
+############################## SCENARIO null1 seed 20261124
+====================================================================================================
+ibm_kingston  job SYNTH-null-20261124
+  CAL 0X flip-rule failure per measured qubit: median 3.21%, max 12.30%; flip-unreadable (> 20%): []; wired spectators 86, used for L1/L2/L3 86
+  KNOWN-GOOD 0X: flip success (verified-0 shots), median over measured qubits 96.79% (flip-readable 96.79%) -> PASS | unheralded (all shots) 95.93%, thermal+readout excess 0.96%
+  F1 N=0 idle    copy 0  fail 5.2799% (inside 0 5.0782%, outside both 0.2017%) | with CAL1 cluster 5.2876%
+  F1 N=0 idle    copy 1  fail 5.2397% (inside 0 5.0231%, outside both 0.2167%) | with CAL1 cluster 5.2521%
+  F1 N=0 idle    pooled  fail 5.2598% (inside 0 5.0506%, outside both 0.2092%) | with CAL1 cluster 5.2699%
+  F1 N=4 idle    copy 0  fail 5.1821% (inside 0 4.9701%, outside both 0.2120%) | with CAL1 cluster 5.1966%
+  F1 N=4 idle    copy 1  fail 5.3021% (inside 0 5.0893%, outside both 0.2128%) | with CAL1 cluster 5.3107%
+  F1 N=4 idle    pooled  fail 5.2421% (inside 0 5.0297%, outside both 0.2124%) | with CAL1 cluster 5.2536%
+  F1 N=4 readout copy 0  fail 5.7111% (inside 0 5.5226%, outside both 0.1885%) | with CAL1 cluster 5.7235% | among shots verified 0 on every mid read 4.2800%
+  F1 N=4 readout copy 1  fail 5.6761% (inside 0 5.4791%, outside both 0.1970%) | with CAL1 cluster 5.6885% | among shots verified 0 on every mid read 4.2746%
+  F1 N=4 readout pooled  fail 5.6936% (inside 0 5.5009%, outside both 0.1927%) | with CAL1 cluster 5.7060% | among shots verified 0 on every mid read 4.2773%
+  F1 N=8 idle    copy 0  fail 5.1842% (inside 0 4.9688%, outside both 0.2154%) | with CAL1 cluster 5.1957%
+  F1 N=8 idle    copy 1  fail 5.1466% (inside 0 4.9299%, outside both 0.2167%) | with CAL1 cluster 5.1620%
+  F1 N=8 idle    pooled  fail 5.1654% (inside 0 4.9494%, outside both 0.2160%) | with CAL1 cluster 5.1788%
+  F1 N=8 readout copy 0  fail 5.6158% (inside 0 5.4188%, outside both 0.1970%) | with CAL1 cluster 5.6197% | among shots verified 0 on every mid read 4.1809%
+  F1 N=8 readout copy 1  fail 5.6919% (inside 0 5.4863%, outside both 0.2056%) | with CAL1 cluster 5.7043% | among shots verified 0 on every mid read 4.2697%
+  F1 N=8 readout pooled  fail 5.6538% (inside 0 5.4526%, outside both 0.2013%) | with CAL1 cluster 5.6620% | among shots verified 0 on every mid read 4.2253%
+  KNOWN-GOOD idle N=0: unheralded idle flip failure minus unheralded CAL 0X floor -0.0615% [-0.1511, +0.0334] -> CONSISTENT -> PASS
+  KNOWN-GOOD idle N=4: unheralded idle flip failure minus unheralded CAL 0X floor -0.0793% [-0.1868, +0.0256] -> CONSISTENT -> PASS
+  KNOWN-GOOD idle N=8: unheralded idle flip failure minus unheralded CAL 0X floor -0.1560% [-0.2629, -0.0532] -> BELOW -> PASS
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +0.5291% [+0.4013, +0.6705] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +0.3739% [+0.2590, +0.4927] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +0.4515% [+0.3694, +0.5280] n=39 -> ABOVE
+  N=4 F2   FINAL -> ABOVE
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -0.9021% [-1.0205, -0.7750] n=39 -> BELOW
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  -1.0275% [-1.1503, -0.9111] n=39 -> BELOW
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  -0.9648% [-1.0413, -0.8832] n=39 -> BELOW
+  N=4 F2h  FINAL -> BELOW
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  +0.0293% [-0.0815, +0.1479] n=39 -> CONSISTENT
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  -0.0962% [-0.2182, +0.0185] n=39 -> CONSISTENT
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  -0.0334% [-0.1129, +0.0447] n=39 -> CONSISTENT
+  N=4 F2c  FINAL -> CONSISTENT
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  -0.0001  [-0.0044, +0.0021] n=86 -> CONSISTENT
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  +0.0012  [-0.0025, +0.0071] n=86 -> CONSISTENT
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  +0.0007  [-0.0017, +0.0048] n=86 -> CONSISTENT
+  N=4 L1w  FINAL -> CONSISTENT
+  N=4 L1   loss, mid-verified-0 selection                   copy 0  -0.0001  [-0.0044, +0.0020] n=86 -> CONSISTENT
+  N=4 L1   loss, mid-verified-0 selection                   copy 1  +0.0012  [-0.0025, +0.0072] n=86 -> CONSISTENT
+  N=4 L1   loss, mid-verified-0 selection                   pooled  +0.0007  [-0.0017, +0.0049] n=86 -> CONSISTENT
+  N=4 L1   FINAL -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 0  -0.0003  [-0.0034, +0.0014] n=86 -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 1  +0.0020  [-0.0022, +0.0062] n=86 -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 pooled  +0.0009  [-0.0019, +0.0046] n=86 -> CONSISTENT
+  N=4 L2   FINAL -> CONSISTENT
+  N=4 L3   L2 - L1                                          copy 0  -0.0007  [-0.0012, -0.0002] n=86 -> BELOW
+  N=4 L3   L2 - L1                                          copy 1  -0.0002  [-0.0007, +0.0006] n=86 -> CONSISTENT
+  N=4 L3   L2 - L1                                          pooled  -0.0003  [-0.0009, +0.0003] n=86 -> CONSISTENT
+  N=4 L3   FINAL -> CANNOT_TELL (copies disagree)
+  KNOWN-GOOD N=4: L1w +0.0007 vs 21 Oct clean-shot loss +0.0056 [+0.0013, +0.0105] -> FAIL
+  N=4 shots kept (median over wired spectators, pooled): L1 readout 97.6%, L2 readout 94.4%, L2 idle 95.9%
+  N=4 DECISION -> L1 CONSISTENT, L2 CONSISTENT: neither branch of the rule; reported as is | L3 CANNOT_TELL (copies disagree), F2 ABOVE, F2c CONSISTENT
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +0.4316% [+0.2914, +0.5594] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +0.5453% [+0.4265, +0.6534] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +0.4885% [+0.4179, +0.5596] n=39 -> ABOVE
+  N=8 F2   FINAL -> ABOVE
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -1.0033% [-1.1294, -0.8831] n=39 -> BELOW
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  -0.8769% [-0.9920, -0.7627] n=39 -> BELOW
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  -0.9401% [-1.0080, -0.8663] n=39 -> BELOW
+  N=8 F2h  FINAL -> BELOW
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  -0.0719% [-0.2223, +0.0714] n=39 -> CONSISTENT
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  +0.0545% [-0.0601, +0.1745] n=39 -> CONSISTENT
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  -0.0088% [-0.0991, +0.0833] n=39 -> CONSISTENT
+  N=8 F2c  FINAL -> CONSISTENT
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  -0.0015  [-0.0054, +0.0031] n=86 -> CONSISTENT
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  +0.0032  [-0.0009, +0.0066] n=86 -> CONSISTENT
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  +0.0010  [-0.0015, +0.0042] n=86 -> CONSISTENT
+  N=8 L1w  FINAL -> CONSISTENT
+  N=8 L1   loss, mid-verified-0 selection                   copy 0  -0.0015  [-0.0053, +0.0029] n=86 -> CONSISTENT
+  N=8 L1   loss, mid-verified-0 selection                   copy 1  +0.0032  [-0.0010, +0.0066] n=86 -> CONSISTENT
+  N=8 L1   loss, mid-verified-0 selection                   pooled  +0.0010  [-0.0015, +0.0041] n=86 -> CONSISTENT
+  N=8 L1   FINAL -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 0  -0.0007  [-0.0043, +0.0017] n=86 -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 1  +0.0020  [-0.0013, +0.0073] n=86 -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 pooled  +0.0008  [-0.0022, +0.0037] n=86 -> CONSISTENT
+  N=8 L2   FINAL -> CONSISTENT
+  N=8 L3   L2 - L1                                          copy 0  +0.0005  [-0.0002, +0.0011] n=86 -> CONSISTENT
+  N=8 L3   L2 - L1                                          copy 1  -0.0004  [-0.0011, +0.0011] n=86 -> CONSISTENT
+  N=8 L3   L2 - L1                                          pooled  -0.0000  [-0.0005, +0.0006] n=86 -> CONSISTENT
+  N=8 L3   FINAL -> CONSISTENT
+  KNOWN-GOOD N=8: L1w +0.0010 vs 21 Oct clean-shot loss +0.0062 [+0.0013, +0.0155] -> FAIL
+  N=8 shots kept (median over wired spectators, pooled): L1 readout 96.6%, L2 readout 94.0%, L2 idle 96.2%
+  N=8 DECISION -> L1 CONSISTENT, L2 CONSISTENT: neither branch of the rule; reported as is | L3 CONSISTENT, F2 ABOVE, F2c CONSISTENT
+
+############################## SCENARIO null2 seed 20261125
+====================================================================================================
+ibm_kingston  job SYNTH-null-20261125
+  CAL 0X flip-rule failure per measured qubit: median 3.12%, max 12.21%; flip-unreadable (> 20%): []; wired spectators 86, used for L1/L2/L3 86
+  KNOWN-GOOD 0X: flip success (verified-0 shots), median over measured qubits 96.88% (flip-readable 96.88%) -> PASS | unheralded (all shots) 95.90%, thermal+readout excess 0.94%
+  F1 N=0 idle    copy 0  fail 5.2774% (inside 0 5.0731%, outside both 0.2043%) | with CAL1 cluster 5.2906%
+  F1 N=0 idle    copy 1  fail 5.2239% (inside 0 5.0205%, outside both 0.2034%) | with CAL1 cluster 5.2432%
+  F1 N=0 idle    pooled  fail 5.2506% (inside 0 5.0468%, outside both 0.2038%) | with CAL1 cluster 5.2669%
+  F1 N=4 idle    copy 0  fail 5.1094% (inside 0 4.8974%, outside both 0.2120%) | with CAL1 cluster 5.1175%
+  F1 N=4 idle    copy 1  fail 5.2560% (inside 0 5.0491%, outside both 0.2068%) | with CAL1 cluster 5.2705%
+  F1 N=4 idle    pooled  fail 5.1827% (inside 0 4.9733%, outside both 0.2094%) | with CAL1 cluster 5.1940%
+  F1 N=4 readout copy 0  fail 5.7944% (inside 0 5.5808%, outside both 0.2137%) | with CAL1 cluster 5.8021% | among shots verified 0 on every mid read 4.3542%
+  F1 N=4 readout copy 1  fail 5.6226% (inside 0 5.4192%, outside both 0.2034%) | with CAL1 cluster 5.6316% | among shots verified 0 on every mid read 4.1997%
+  F1 N=4 readout pooled  fail 5.7085% (inside 0 5.5000%, outside both 0.2085%) | with CAL1 cluster 5.7169% | among shots verified 0 on every mid read 4.2770%
+  F1 N=8 idle    copy 0  fail 5.2107% (inside 0 5.0026%, outside both 0.2081%) | with CAL1 cluster 5.2239%
+  F1 N=8 idle    copy 1  fail 5.2774% (inside 0 5.0598%, outside both 0.2175%) | with CAL1 cluster 5.2944%
+  F1 N=8 idle    pooled  fail 5.2440% (inside 0 5.0312%, outside both 0.2128%) | with CAL1 cluster 5.2592%
+  F1 N=8 readout copy 0  fail 5.6974% (inside 0 5.4808%, outside both 0.2167%) | with CAL1 cluster 5.7115% | among shots verified 0 on every mid read 4.2354%
+  F1 N=8 readout copy 1  fail 5.6509% (inside 0 5.4671%, outside both 0.1838%) | with CAL1 cluster 5.6658% | among shots verified 0 on every mid read 4.1946%
+  F1 N=8 readout pooled  fail 5.6741% (inside 0 5.4739%, outside both 0.2002%) | with CAL1 cluster 5.6887% | among shots verified 0 on every mid read 4.2150%
+  KNOWN-GOOD idle N=0: unheralded idle flip failure minus unheralded CAL 0X floor +0.0314% [-0.0778, +0.1346] -> CONSISTENT -> PASS
+  KNOWN-GOOD idle N=4: unheralded idle flip failure minus unheralded CAL 0X floor -0.0365% [-0.1560, +0.0784] -> CONSISTENT -> PASS
+  KNOWN-GOOD idle N=8: unheralded idle flip failure minus unheralded CAL 0X floor +0.0248% [-0.0938, +0.1445] -> CONSISTENT -> PASS
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +0.6850% [+0.5508, +0.8094] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +0.3667% [+0.2303, +0.5082] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +0.5259% [+0.4378, +0.6190] n=39 -> ABOVE
+  N=4 F2   FINAL -> ABOVE
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -0.7552% [-0.8800, -0.6296] n=39 -> BELOW
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  -1.0562% [-1.1854, -0.9249] n=39 -> BELOW
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  -0.9057% [-0.9866, -0.8223] n=39 -> BELOW
+  N=4 F2h  FINAL -> BELOW
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  +0.1829% [+0.0606, +0.3108] n=39 -> ABOVE
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  -0.1181% [-0.2555, +0.0148] n=39 -> CONSISTENT
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  +0.0324% [-0.0538, +0.1273] n=39 -> CONSISTENT
+  N=4 F2c  FINAL -> CANNOT_TELL (copies disagree)
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  -0.0019  [-0.0052, +0.0017] n=86 -> CONSISTENT
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  +0.0023  [-0.0017, +0.0060] n=86 -> CONSISTENT
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  +0.0004  [-0.0011, +0.0029] n=86 -> CONSISTENT
+  N=4 L1w  FINAL -> CONSISTENT
+  N=4 L1   loss, mid-verified-0 selection                   copy 0  -0.0019  [-0.0052, +0.0015] n=86 -> CONSISTENT
+  N=4 L1   loss, mid-verified-0 selection                   copy 1  +0.0023  [-0.0017, +0.0060] n=86 -> CONSISTENT
+  N=4 L1   loss, mid-verified-0 selection                   pooled  +0.0004  [-0.0010, +0.0030] n=86 -> CONSISTENT
+  N=4 L1   FINAL -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 0  -0.0008  [-0.0062, +0.0026] n=86 -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 1  +0.0020  [-0.0008, +0.0052] n=86 -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 pooled  -0.0001  [-0.0024, +0.0034] n=86 -> CONSISTENT
+  N=4 L2   FINAL -> CONSISTENT
+  N=4 L3   L2 - L1                                          copy 0  -0.0003  [-0.0008, +0.0007] n=86 -> CONSISTENT
+  N=4 L3   L2 - L1                                          copy 1  -0.0001  [-0.0010, +0.0006] n=86 -> CONSISTENT
+  N=4 L3   L2 - L1                                          pooled  -0.0003  [-0.0009, +0.0004] n=86 -> CONSISTENT
+  N=4 L3   FINAL -> CONSISTENT
+  KNOWN-GOOD N=4: L1w +0.0004 vs 21 Oct clean-shot loss +0.0056 [+0.0013, +0.0105] -> FAIL
+  N=4 shots kept (median over wired spectators, pooled): L1 readout 97.5%, L2 readout 94.3%, L2 idle 95.8%
+  N=4 DECISION -> L1 CONSISTENT, L2 CONSISTENT: neither branch of the rule; reported as is | L3 CONSISTENT, F2 ABOVE, F2c CANNOT_TELL (copies disagree)
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +0.4868% [+0.3500, +0.6163] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +0.3735% [+0.2342, +0.4996] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +0.4301% [+0.3453, +0.5171] n=39 -> ABOVE
+  N=8 F2   FINAL -> ABOVE
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -0.9753% [-1.0967, -0.8633] n=39 -> BELOW
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  -1.0828% [-1.2227, -0.9465] n=39 -> BELOW
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  -1.0290% [-1.1185, -0.9418] n=39 -> BELOW
+  N=8 F2h  FINAL -> BELOW
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  -0.0372% [-0.1723, +0.0763] n=39 -> CONSISTENT
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  -0.1447% [-0.2937, -0.0000] n=39 -> BELOW
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  -0.0909% [-0.1919, +0.0056] n=39 -> CONSISTENT
+  N=8 F2c  FINAL -> CANNOT_TELL (copies disagree)
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  +0.0013  [-0.0026, +0.0065] n=86 -> CONSISTENT
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  -0.0011  [-0.0035, +0.0026] n=86 -> CONSISTENT
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  +0.0012  [-0.0016, +0.0036] n=86 -> CONSISTENT
+  N=8 L1w  FINAL -> CONSISTENT
+  N=8 L1   loss, mid-verified-0 selection                   copy 0  +0.0013  [-0.0026, +0.0065] n=86 -> CONSISTENT
+  N=8 L1   loss, mid-verified-0 selection                   copy 1  -0.0011  [-0.0034, +0.0027] n=86 -> CONSISTENT
+  N=8 L1   loss, mid-verified-0 selection                   pooled  +0.0012  [-0.0015, +0.0039] n=86 -> CONSISTENT
+  N=8 L1   FINAL -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 0  +0.0019  [-0.0026, +0.0071] n=86 -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 1  +0.0000  [-0.0044, +0.0035] n=86 -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 pooled  +0.0017  [-0.0023, +0.0035] n=86 -> CONSISTENT
+  N=8 L2   FINAL -> CONSISTENT
+  N=8 L3   L2 - L1                                          copy 0  -0.0000  [-0.0005, +0.0009] n=86 -> CONSISTENT
+  N=8 L3   L2 - L1                                          copy 1  -0.0003  [-0.0012, +0.0009] n=86 -> CONSISTENT
+  N=8 L3   L2 - L1                                          pooled  -0.0002  [-0.0008, +0.0005] n=86 -> CONSISTENT
+  N=8 L3   FINAL -> CONSISTENT
+  KNOWN-GOOD N=8: L1w +0.0012 vs 21 Oct clean-shot loss +0.0062 [+0.0013, +0.0155] -> FAIL
+  N=8 shots kept (median over wired spectators, pooled): L1 readout 96.6%, L2 readout 93.5%, L2 idle 95.8%
+  N=8 DECISION -> L1 CONSISTENT, L2 CONSISTENT: neither branch of the rule; reported as is | L3 CONSISTENT, F2 ABOVE, F2c CANNOT_TELL (copies disagree)
+
+############################## SCENARIO null3 seed 20261126
+====================================================================================================
+ibm_kingston  job SYNTH-null-20261126
+  CAL 0X flip-rule failure per measured qubit: median 3.22%, max 13.16%; flip-unreadable (> 20%): []; wired spectators 86, used for L1/L2/L3 86
+  KNOWN-GOOD 0X: flip success (verified-0 shots), median over measured qubits 96.78% (flip-readable 96.78%) -> PASS | unheralded (all shots) 95.85%, thermal+readout excess 0.94%
+  F1 N=0 idle    copy 0  fail 5.1714% (inside 0 4.9538%, outside both 0.2175%) | with CAL1 cluster 5.1795%
+  F1 N=0 idle    copy 1  fail 5.2355% (inside 0 5.0359%, outside both 0.1996%) | with CAL1 cluster 5.2509%
+  F1 N=0 idle    pooled  fail 5.2034% (inside 0 4.9949%, outside both 0.2085%) | with CAL1 cluster 5.2152%
+  F1 N=4 idle    copy 0  fail 5.2632% (inside 0 5.0697%, outside both 0.1936%) | with CAL1 cluster 5.2833%
+  F1 N=4 idle    copy 1  fail 5.1983% (inside 0 4.9842%, outside both 0.2141%) | with CAL1 cluster 5.2205%
+  F1 N=4 idle    pooled  fail 5.2308% (inside 0 5.0269%, outside both 0.2038%) | with CAL1 cluster 5.2519%
+  F1 N=4 readout copy 0  fail 5.6329% (inside 0 5.4209%, outside both 0.2120%) | with CAL1 cluster 5.6513% | among shots verified 0 on every mid read 4.2183%
+  F1 N=4 readout copy 1  fail 5.6987% (inside 0 5.4876%, outside both 0.2111%) | with CAL1 cluster 5.7141% | among shots verified 0 on every mid read 4.2653%
+  F1 N=4 readout pooled  fail 5.6658% (inside 0 5.4543%, outside both 0.2115%) | with CAL1 cluster 5.6827% | among shots verified 0 on every mid read 4.2418%
+  F1 N=8 idle    copy 0  fail 5.2316% (inside 0 5.0261%, outside both 0.2056%) | with CAL1 cluster 5.2491%
+  F1 N=8 idle    copy 1  fail 5.1897% (inside 0 4.9889%, outside both 0.2009%) | with CAL1 cluster 5.2073%
+  F1 N=8 idle    pooled  fail 5.2107% (inside 0 5.0075%, outside both 0.2032%) | with CAL1 cluster 5.2282%
+  F1 N=8 readout copy 0  fail 5.5714% (inside 0 5.3697%, outside both 0.2017%) | with CAL1 cluster 5.5859% | among shots verified 0 on every mid read 4.1317%
+  F1 N=8 readout copy 1  fail 5.7483% (inside 0 5.5363%, outside both 0.2120%) | with CAL1 cluster 5.7671% | among shots verified 0 on every mid read 4.2774%
+  F1 N=8 readout pooled  fail 5.6598% (inside 0 5.4530%, outside both 0.2068%) | with CAL1 cluster 5.6765% | among shots verified 0 on every mid read 4.2045%
+  KNOWN-GOOD idle N=0: unheralded idle flip failure minus unheralded CAL 0X floor -0.0432% [-0.1680, +0.0622] -> CONSISTENT -> PASS
+  KNOWN-GOOD idle N=4: unheralded idle flip failure minus unheralded CAL 0X floor -0.0158% [-0.1239, +0.0829] -> CONSISTENT -> PASS
+  KNOWN-GOOD idle N=8: unheralded idle flip failure minus unheralded CAL 0X floor -0.0359% [-0.1568, +0.0780] -> CONSISTENT -> PASS
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +0.3697% [+0.2534, +0.4705] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +0.5004% [+0.3731, +0.6282] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +0.4350% [+0.3592, +0.5111] n=39 -> ABOVE
+  N=4 F2   FINAL -> ABOVE
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -1.0449% [-1.1456, -0.9449] n=39 -> BELOW
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  -0.9330% [-1.0508, -0.8197] n=39 -> BELOW
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  -0.9890% [-1.0599, -0.9187] n=39 -> BELOW
+  N=4 F2h  FINAL -> BELOW
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  -0.1117% [-0.2228, -0.0038] n=39 -> BELOW
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  +0.0002% [-0.1190, +0.1173] n=39 -> CONSISTENT
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  -0.0558% [-0.1388, +0.0267] n=39 -> CONSISTENT
+  N=4 F2c  FINAL -> CANNOT_TELL (copies disagree)
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  +0.0003  [-0.0024, +0.0036] n=86 -> CONSISTENT
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  -0.0002  [-0.0042, +0.0039] n=86 -> CONSISTENT
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  -0.0007  [-0.0033, +0.0020] n=86 -> CONSISTENT
+  N=4 L1w  FINAL -> CONSISTENT
+  N=4 L1   loss, mid-verified-0 selection                   copy 0  +0.0003  [-0.0024, +0.0039] n=86 -> CONSISTENT
+  N=4 L1   loss, mid-verified-0 selection                   copy 1  -0.0002  [-0.0046, +0.0039] n=86 -> CONSISTENT
+  N=4 L1   loss, mid-verified-0 selection                   pooled  -0.0007  [-0.0033, +0.0020] n=86 -> CONSISTENT
+  N=4 L1   FINAL -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 0  +0.0004  [-0.0037, +0.0036] n=86 -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 1  -0.0000  [-0.0071, +0.0042] n=86 -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 pooled  -0.0014  [-0.0033, +0.0019] n=86 -> CONSISTENT
+  N=4 L2   FINAL -> CONSISTENT
+  N=4 L3   L2 - L1                                          copy 0  -0.0003  [-0.0012, +0.0004] n=86 -> CONSISTENT
+  N=4 L3   L2 - L1                                          copy 1  -0.0003  [-0.0011, +0.0003] n=86 -> CONSISTENT
+  N=4 L3   L2 - L1                                          pooled  -0.0002  [-0.0008, +0.0004] n=86 -> CONSISTENT
+  N=4 L3   FINAL -> CONSISTENT
+  KNOWN-GOOD N=4: L1w -0.0007 vs 21 Oct clean-shot loss +0.0056 [+0.0013, +0.0105] -> FAIL
+  N=4 shots kept (median over wired spectators, pooled): L1 readout 97.6%, L2 readout 94.5%, L2 idle 96.1%
+  N=4 DECISION -> L1 CONSISTENT, L2 CONSISTENT: neither branch of the rule; reported as is | L3 CONSISTENT, F2 ABOVE, F2c CANNOT_TELL (copies disagree)
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +0.3397% [+0.2192, +0.4632] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +0.5585% [+0.4307, +0.6880] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +0.4491% [+0.3457, +0.5577] n=39 -> ABOVE
+  N=8 F2   FINAL -> ABOVE
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -1.0999% [-1.2029, -0.9912] n=39 -> BELOW
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  -0.9124% [-1.0290, -0.7997] n=39 -> BELOW
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  -1.0062% [-1.0961, -0.9180] n=39 -> BELOW
+  N=8 F2h  FINAL -> BELOW
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  -0.1667% [-0.2887, -0.0483] n=39 -> BELOW
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  +0.0209% [-0.1070, +0.1424] n=39 -> CONSISTENT
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  -0.0729% [-0.1679, +0.0229] n=39 -> CONSISTENT
+  N=8 F2c  FINAL -> CANNOT_TELL (copies disagree)
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  +0.0019  [-0.0042, +0.0087] n=86 -> CONSISTENT
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  -0.0003  [-0.0041, +0.0062] n=86 -> CONSISTENT
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  -0.0006  [-0.0038, +0.0036] n=86 -> CONSISTENT
+  N=8 L1w  FINAL -> CONSISTENT
+  N=8 L1   loss, mid-verified-0 selection                   copy 0  +0.0019  [-0.0047, +0.0087] n=86 -> CONSISTENT
+  N=8 L1   loss, mid-verified-0 selection                   copy 1  -0.0003  [-0.0038, +0.0057] n=86 -> CONSISTENT
+  N=8 L1   loss, mid-verified-0 selection                   pooled  -0.0006  [-0.0038, +0.0036] n=86 -> CONSISTENT
+  N=8 L1   FINAL -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 0  +0.0014  [-0.0031, +0.0082] n=86 -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 1  -0.0016  [-0.0048, +0.0034] n=86 -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 pooled  -0.0000  [-0.0034, +0.0041] n=86 -> CONSISTENT
+  N=8 L2   FINAL -> CONSISTENT
+  N=8 L3   L2 - L1                                          copy 0  +0.0011  [+0.0002, +0.0016] n=86 -> ABOVE
+  N=8 L3   L2 - L1                                          copy 1  -0.0003  [-0.0008, +0.0005] n=86 -> CONSISTENT
+  N=8 L3   L2 - L1                                          pooled  -0.0002  [-0.0006, +0.0006] n=86 -> CONSISTENT
+  N=8 L3   FINAL -> CANNOT_TELL (copies disagree)
+  KNOWN-GOOD N=8: L1w -0.0006 vs 21 Oct clean-shot loss +0.0062 [+0.0013, +0.0155] -> FAIL
+  N=8 shots kept (median over wired spectators, pooled): L1 readout 96.6%, L2 readout 93.8%, L2 idle 95.9%
+  N=8 DECISION -> L1 CONSISTENT, L2 CONSISTENT: neither branch of the rule; reported as is | L3 CANNOT_TELL (copies disagree), F2 ABOVE, F2c CANNOT_TELL (copies disagree)
+
+############################## SCENARIO null4 seed 20261127
+====================================================================================================
+ibm_kingston  job SYNTH-null-20261127
+  CAL 0X flip-rule failure per measured qubit: median 3.36%, max 12.25%; flip-unreadable (> 20%): []; wired spectators 86, used for L1/L2/L3 86
+  KNOWN-GOOD 0X: flip success (verified-0 shots), median over measured qubits 96.64% (flip-readable 96.64%) -> PASS | unheralded (all shots) 95.80%, thermal+readout excess 0.89%
+  F1 N=0 idle    copy 0  fail 5.1632% (inside 0 4.9406%, outside both 0.2226%) | with CAL1 cluster 5.1778%
+  F1 N=0 idle    copy 1  fail 5.1286% (inside 0 4.9308%, outside both 0.1979%) | with CAL1 cluster 5.1427%
+  F1 N=0 idle    pooled  fail 5.1459% (inside 0 4.9357%, outside both 0.2103%) | with CAL1 cluster 5.1603%
+  F1 N=4 idle    copy 0  fail 5.2167% (inside 0 4.9979%, outside both 0.2188%) | with CAL1 cluster 5.2291%
+  F1 N=4 idle    copy 1  fail 5.1983% (inside 0 4.9932%, outside both 0.2051%) | with CAL1 cluster 5.2158%
+  F1 N=4 idle    pooled  fail 5.2075% (inside 0 4.9955%, outside both 0.2120%) | with CAL1 cluster 5.2224%
+  F1 N=4 readout copy 0  fail 5.6816% (inside 0 5.4709%, outside both 0.2107%) | with CAL1 cluster 5.7013% | among shots verified 0 on every mid read 4.2819%
+  F1 N=4 readout copy 1  fail 5.6628% (inside 0 5.4393%, outside both 0.2235%) | with CAL1 cluster 5.6778% | among shots verified 0 on every mid read 4.2527%
+  F1 N=4 readout pooled  fail 5.6722% (inside 0 5.4551%, outside both 0.2171%) | with CAL1 cluster 5.6895% | among shots verified 0 on every mid read 4.2674%
+  F1 N=8 idle    copy 0  fail 5.1380% (inside 0 4.9278%, outside both 0.2103%) | with CAL1 cluster 5.1585%
+  F1 N=8 idle    copy 1  fail 5.2547% (inside 0 5.0299%, outside both 0.2248%) | with CAL1 cluster 5.2705%
+  F1 N=8 idle    pooled  fail 5.1964% (inside 0 4.9788%, outside both 0.2175%) | with CAL1 cluster 5.2145%
+  F1 N=8 readout copy 0  fail 5.7962% (inside 0 5.5718%, outside both 0.2244%) | with CAL1 cluster 5.8150% | among shots verified 0 on every mid read 4.3703%
+  F1 N=8 readout copy 1  fail 5.5944% (inside 0 5.3833%, outside both 0.2111%) | with CAL1 cluster 5.6047% | among shots verified 0 on every mid read 4.2105%
+  F1 N=8 readout pooled  fail 5.6953% (inside 0 5.4776%, outside both 0.2177%) | with CAL1 cluster 5.7098% | among shots verified 0 on every mid read 4.2904%
+  KNOWN-GOOD idle N=0: unheralded idle flip failure minus unheralded CAL 0X floor -0.0588% [-0.1656, +0.0577] -> CONSISTENT -> PASS
+  KNOWN-GOOD idle N=4: unheralded idle flip failure minus unheralded CAL 0X floor +0.0028% [-0.0951, +0.1071] -> CONSISTENT -> PASS
+  KNOWN-GOOD idle N=8: unheralded idle flip failure minus unheralded CAL 0X floor -0.0083% [-0.1229, +0.1021] -> CONSISTENT -> PASS
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +0.4650% [+0.3230, +0.6000] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +0.4645% [+0.3581, +0.5765] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +0.4647% [+0.3846, +0.5444] n=39 -> ABOVE
+  N=4 F2   FINAL -> ABOVE
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -0.9348% [-1.0652, -0.8141] n=39 -> BELOW
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  -0.9456% [-1.0522, -0.8405] n=39 -> BELOW
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  -0.9401% [-1.0214, -0.8615] n=39 -> BELOW
+  N=4 F2h  FINAL -> BELOW
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  -0.0162% [-0.1658, +0.1180] n=39 -> CONSISTENT
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  -0.0270% [-0.1508, +0.0857] n=39 -> CONSISTENT
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  -0.0215% [-0.1201, +0.0667] n=39 -> CONSISTENT
+  N=4 F2c  FINAL -> CONSISTENT
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  -0.0011  [-0.0038, +0.0028] n=86 -> CONSISTENT
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  +0.0033  [-0.0013, +0.0071] n=86 -> CONSISTENT
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  +0.0016  [-0.0013, +0.0048] n=86 -> CONSISTENT
+  N=4 L1w  FINAL -> CONSISTENT
+  N=4 L1   loss, mid-verified-0 selection                   copy 0  -0.0011  [-0.0039, +0.0028] n=86 -> CONSISTENT
+  N=4 L1   loss, mid-verified-0 selection                   copy 1  +0.0033  [-0.0007, +0.0070] n=86 -> CONSISTENT
+  N=4 L1   loss, mid-verified-0 selection                   pooled  +0.0016  [-0.0011, +0.0048] n=86 -> CONSISTENT
+  N=4 L1   FINAL -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 0  -0.0007  [-0.0039, +0.0037] n=86 -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 1  +0.0040  [-0.0013, +0.0076] n=86 -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 pooled  +0.0007  [-0.0017, +0.0045] n=86 -> CONSISTENT
+  N=4 L2   FINAL -> CONSISTENT
+  N=4 L3   L2 - L1                                          copy 0  -0.0001  [-0.0006, +0.0006] n=86 -> CONSISTENT
+  N=4 L3   L2 - L1                                          copy 1  -0.0003  [-0.0007, +0.0004] n=86 -> CONSISTENT
+  N=4 L3   L2 - L1                                          pooled  +0.0000  [-0.0004, +0.0006] n=86 -> CONSISTENT
+  N=4 L3   FINAL -> CONSISTENT
+  KNOWN-GOOD N=4: L1w +0.0016 vs 21 Oct clean-shot loss +0.0056 [+0.0013, +0.0105] -> PASS
+  N=4 shots kept (median over wired spectators, pooled): L1 readout 97.6%, L2 readout 94.6%, L2 idle 96.1%
+  N=4 DECISION -> L1 CONSISTENT, L2 CONSISTENT: neither branch of the rule; reported as is | L3 CONSISTENT, F2 ABOVE, F2c CONSISTENT
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +0.6581% [+0.5414, +0.7782] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +0.3397% [+0.2179, +0.4684] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +0.4989% [+0.4150, +0.5829] n=39 -> ABOVE
+  N=8 F2   FINAL -> ABOVE
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -0.7677% [-0.8762, -0.6550] n=39 -> BELOW
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  -1.0442% [-1.1460, -0.9406] n=39 -> BELOW
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  -0.9060% [-0.9788, -0.8356] n=39 -> BELOW
+  N=8 F2h  FINAL -> BELOW
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  +0.1509% [+0.0276, +0.2761] n=39 -> ABOVE
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  -0.1256% [-0.2575, +0.0109] n=39 -> CONSISTENT
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  +0.0126% [-0.0893, +0.1120] n=39 -> CONSISTENT
+  N=8 F2c  FINAL -> CANNOT_TELL (copies disagree)
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  +0.0018  [-0.0030, +0.0069] n=86 -> CONSISTENT
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  +0.0010  [-0.0023, +0.0060] n=86 -> CONSISTENT
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  -0.0002  [-0.0025, +0.0033] n=86 -> CONSISTENT
+  N=8 L1w  FINAL -> CONSISTENT
+  N=8 L1   loss, mid-verified-0 selection                   copy 0  +0.0018  [-0.0028, +0.0069] n=86 -> CONSISTENT
+  N=8 L1   loss, mid-verified-0 selection                   copy 1  +0.0010  [-0.0022, +0.0059] n=86 -> CONSISTENT
+  N=8 L1   loss, mid-verified-0 selection                   pooled  -0.0002  [-0.0027, +0.0032] n=86 -> CONSISTENT
+  N=8 L1   FINAL -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 0  +0.0013  [-0.0046, +0.0050] n=86 -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 1  +0.0013  [-0.0023, +0.0057] n=86 -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 pooled  -0.0007  [-0.0034, +0.0025] n=86 -> CONSISTENT
+  N=8 L2   FINAL -> CONSISTENT
+  N=8 L3   L2 - L1                                          copy 0  -0.0005  [-0.0009, +0.0005] n=86 -> CONSISTENT
+  N=8 L3   L2 - L1                                          copy 1  -0.0004  [-0.0018, +0.0005] n=86 -> CONSISTENT
+  N=8 L3   L2 - L1                                          pooled  -0.0005  [-0.0013, +0.0003] n=86 -> CONSISTENT
+  N=8 L3   FINAL -> CONSISTENT
+  KNOWN-GOOD N=8: L1w -0.0002 vs 21 Oct clean-shot loss +0.0062 [+0.0013, +0.0155] -> FAIL
+  N=8 shots kept (median over wired spectators, pooled): L1 readout 96.6%, L2 readout 93.7%, L2 idle 96.0%
+  N=8 DECISION -> L1 CONSISTENT, L2 CONSISTENT: neither branch of the rule; reported as is | L3 CONSISTENT, F2 ABOVE, F2c CANNOT_TELL (copies disagree)
+
+############################## SCENARIO null5 seed 20261128
+====================================================================================================
+ibm_kingston  job SYNTH-null-20261128
+  CAL 0X flip-rule failure per measured qubit: median 2.98%, max 12.23%; flip-unreadable (> 20%): []; wired spectators 86, used for L1/L2/L3 86
+  KNOWN-GOOD 0X: flip success (verified-0 shots), median over measured qubits 97.02% (flip-readable 97.02%) -> PASS | unheralded (all shots) 95.92%, thermal+readout excess 0.92%
+  F1 N=0 idle    copy 0  fail 5.2397% (inside 0 5.0333%, outside both 0.2064%) | with CAL1 cluster 5.2547%
+  F1 N=0 idle    copy 1  fail 5.2551% (inside 0 5.0491%, outside both 0.2060%) | with CAL1 cluster 5.2701%
+  F1 N=0 idle    pooled  fail 5.2474% (inside 0 5.0412%, outside both 0.2062%) | with CAL1 cluster 5.2624%
+  F1 N=4 idle    copy 0  fail 5.1974% (inside 0 4.9842%, outside both 0.2132%) | with CAL1 cluster 5.2115%
+  F1 N=4 idle    copy 1  fail 5.2179% (inside 0 5.0192%, outside both 0.1987%) | with CAL1 cluster 5.2376%
+  F1 N=4 idle    pooled  fail 5.2077% (inside 0 5.0017%, outside both 0.2060%) | with CAL1 cluster 5.2246%
+  F1 N=4 readout copy 0  fail 5.7009% (inside 0 5.4949%, outside both 0.2060%) | with CAL1 cluster 5.7235% | among shots verified 0 on every mid read 4.2797%
+  F1 N=4 readout copy 1  fail 5.6949% (inside 0 5.4795%, outside both 0.2154%) | with CAL1 cluster 5.7141% | among shots verified 0 on every mid read 4.2506%
+  F1 N=4 readout pooled  fail 5.6979% (inside 0 5.4872%, outside both 0.2107%) | with CAL1 cluster 5.7188% | among shots verified 0 on every mid read 4.2652%
+  F1 N=8 idle    copy 0  fail 5.2231% (inside 0 5.0218%, outside both 0.2013%) | with CAL1 cluster 5.2470%
+  F1 N=8 idle    copy 1  fail 5.3150% (inside 0 5.1090%, outside both 0.2060%) | with CAL1 cluster 5.3423%
+  F1 N=8 idle    pooled  fail 5.2690% (inside 0 5.0654%, outside both 0.2036%) | with CAL1 cluster 5.2947%
+  F1 N=8 readout copy 0  fail 5.7923% (inside 0 5.5932%, outside both 0.1991%) | with CAL1 cluster 5.8197% | among shots verified 0 on every mid read 4.3487%
+  F1 N=8 readout copy 1  fail 5.6880% (inside 0 5.4850%, outside both 0.2030%) | with CAL1 cluster 5.7051% | among shots verified 0 on every mid read 4.2573%
+  F1 N=8 readout pooled  fail 5.7402% (inside 0 5.5391%, outside both 0.2011%) | with CAL1 cluster 5.7624% | among shots verified 0 on every mid read 4.3030%
+  KNOWN-GOOD idle N=0: unheralded idle flip failure minus unheralded CAL 0X floor +0.0226% [-0.0868, +0.1381] -> CONSISTENT -> PASS
+  KNOWN-GOOD idle N=4: unheralded idle flip failure minus unheralded CAL 0X floor -0.0171% [-0.1265, +0.0913] -> CONSISTENT -> PASS
+  KNOWN-GOOD idle N=8: unheralded idle flip failure minus unheralded CAL 0X floor +0.0442% [-0.0769, +0.1801] -> CONSISTENT -> PASS
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +0.5034% [+0.3752, +0.6338] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +0.4769% [+0.3265, +0.6239] n=39 -> ABOVE
+  N=4 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +0.4902% [+0.3908, +0.5883] n=39 -> ABOVE
+  N=4 F2   FINAL -> ABOVE
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -0.9177% [-1.0292, -0.8041] n=39 -> BELOW
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  -0.9673% [-1.1176, -0.8377] n=39 -> BELOW
+  N=4 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  -0.9425% [-1.0337, -0.8381] n=39 -> BELOW
+  N=4 F2h  FINAL -> BELOW
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  +0.0107% [-0.1183, +0.1394] n=39 -> CONSISTENT
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  -0.0388% [-0.1897, +0.1091] n=39 -> CONSISTENT
+  N=4 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  -0.0140% [-0.1233, +0.0915] n=39 -> CONSISTENT
+  N=4 F2c  FINAL -> CONSISTENT
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  -0.0016  [-0.0064, +0.0018] n=86 -> CONSISTENT
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  -0.0037  [-0.0078, +0.0005] n=86 -> CONSISTENT
+  N=4 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  -0.0018  [-0.0058, +0.0008] n=86 -> CONSISTENT
+  N=4 L1w  FINAL -> CONSISTENT
+  N=4 L1   loss, mid-verified-0 selection                   copy 0  -0.0016  [-0.0064, +0.0018] n=86 -> CONSISTENT
+  N=4 L1   loss, mid-verified-0 selection                   copy 1  -0.0037  [-0.0079, +0.0000] n=86 -> CONSISTENT
+  N=4 L1   loss, mid-verified-0 selection                   pooled  -0.0018  [-0.0058, +0.0008] n=86 -> CONSISTENT
+  N=4 L1   FINAL -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 0  -0.0033  [-0.0066, +0.0021] n=86 -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 copy 1  -0.0054  [-0.0085, +0.0000] n=86 -> CONSISTENT
+  N=4 L2   loss, mid-verified-0 AND flipped                 pooled  -0.0016  [-0.0051, +0.0003] n=86 -> CONSISTENT
+  N=4 L2   FINAL -> CONSISTENT
+  N=4 L3   L2 - L1                                          copy 0  -0.0007  [-0.0014, +0.0001] n=86 -> CONSISTENT
+  N=4 L3   L2 - L1                                          copy 1  -0.0005  [-0.0015, +0.0001] n=86 -> CONSISTENT
+  N=4 L3   L2 - L1                                          pooled  -0.0007  [-0.0011, -0.0000] n=86 -> BELOW
+  N=4 L3   FINAL -> BELOW
+  KNOWN-GOOD N=4: L1w -0.0018 vs 21 Oct clean-shot loss +0.0056 [+0.0013, +0.0105] -> FAIL
+  N=4 shots kept (median over wired spectators, pooled): L1 readout 97.5%, L2 readout 94.4%, L2 idle 96.0%
+  N=4 DECISION -> L1 CONSISTENT, L2 CONSISTENT: neither branch of the rule; reported as is | L3 BELOW, F2 ABOVE, F2c CONSISTENT
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 0  +0.5692% [+0.4188, +0.7214] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) copy 1  +0.3731% [+0.2325, +0.5077] n=39 -> ABOVE
+  N=8 F2   flip failure, readout - idle, ALL shots both (decision) pooled  +0.4712% [+0.3707, +0.5769] n=39 -> ABOVE
+  N=8 F2   FINAL -> ABOVE
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 0  -0.8743% [-1.0148, -0.7268] n=39 -> BELOW
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle copy 1  -1.0577% [-1.1950, -0.9251] n=39 -> BELOW
+  N=8 F2h  companion, ASYMMETRIC: heralded readout - all idle pooled  -0.9660% [-1.0735, -0.8625] n=39 -> BELOW
+  N=8 F2h  FINAL -> BELOW
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 0  +0.0541% [-0.0980, +0.2120] n=39 -> CONSISTENT
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) copy 1  -0.1292% [-0.2783, +0.0033] n=39 -> CONSISTENT
+  N=8 F2c  companion, hidden part: heralded readout - (idle - 0X herald excess) pooled  -0.0375% [-0.1556, +0.0687] n=39 -> CONSISTENT
+  N=8 F2c  FINAL -> CONSISTENT
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 0  +0.0007  [-0.0051, +0.0056] n=86 -> CONSISTENT
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) copy 1  +0.0002  [-0.0038, +0.0052] n=86 -> CONSISTENT
+  N=8 L1w  loss, mid-verified-0, ALL wired (run_iq R1 repeat) pooled  -0.0008  [-0.0025, +0.0017] n=86 -> CONSISTENT
+  N=8 L1w  FINAL -> CONSISTENT
+  N=8 L1   loss, mid-verified-0 selection                   copy 0  +0.0007  [-0.0050, +0.0056] n=86 -> CONSISTENT
+  N=8 L1   loss, mid-verified-0 selection                   copy 1  +0.0002  [-0.0043, +0.0054] n=86 -> CONSISTENT
+  N=8 L1   loss, mid-verified-0 selection                   pooled  -0.0008  [-0.0026, +0.0016] n=86 -> CONSISTENT
+  N=8 L1   FINAL -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 0  +0.0022  [-0.0070, +0.0057] n=86 -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 copy 1  +0.0008  [-0.0049, +0.0063] n=86 -> CONSISTENT
+  N=8 L2   loss, mid-verified-0 AND flipped                 pooled  -0.0012  [-0.0028, +0.0016] n=86 -> CONSISTENT
+  N=8 L2   FINAL -> CONSISTENT
+  N=8 L3   L2 - L1                                          copy 0  +0.0003  [-0.0006, +0.0009] n=86 -> CONSISTENT
+  N=8 L3   L2 - L1                                          copy 1  -0.0001  [-0.0008, +0.0009] n=86 -> CONSISTENT
+  N=8 L3   L2 - L1                                          pooled  +0.0000  [-0.0004, +0.0005] n=86 -> CONSISTENT
+  N=8 L3   FINAL -> CONSISTENT
+  KNOWN-GOOD N=8: L1w -0.0008 vs 21 Oct clean-shot loss +0.0062 [+0.0013, +0.0155] -> FAIL
+  N=8 shots kept (median over wired spectators, pooled): L1 readout 96.6%, L2 readout 93.8%, L2 idle 95.8%
+  N=8 DECISION -> L1 CONSISTENT, L2 CONSISTENT: neither branch of the rule; reported as is | L3 CONSISTENT, F2 ABOVE, F2c CONSISTENT
+

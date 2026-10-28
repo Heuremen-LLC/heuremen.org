@@ -1,0 +1,1 @@
+{"chip": "ibm_fez", "job_id": "dbdahgoc77vs7387nt70", "submitted_utc": "2026-10-23T00:22:28Z", "qubits": [5, 115], "meta": [{"state": 1, "copy": 0}, {"state": 0, "copy": 1}, {"state": 1, "copy": 1}, {"state": 0, "copy": 0}], "shots": 10000}

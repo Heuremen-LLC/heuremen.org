@@ -1,0 +1,4 @@
+=== ibm_pittsburgh job dbd9ft424mrc73cl1l1g; IBM record 2026-10-22 17:30:21-04:00; KNOWN-GOOD median P(1) at tau 0 = 0.992 (must be >= 0.90): MET
+  delivered / stated T2, median over 156 qubits: 1.146 [1.095, 1.191] vs 1 -> ABOVE   (copy gap +0.008 [-0.007, +0.013]; qubits below stated 49 of 156)
+ibm_pittsburgh 1 run(s) pooled by qubit, FIXED 1/2   : median 1.146 [1.095, 1.191] over 156 qubits -> ABOVE  (below stated 49)
+ibm_pittsburgh 1 run(s) pooled by qubit, FREE asymptote: median 1.040 [0.987, 1.068] over 156 qubits -> CONSISTENT  (below stated 68)

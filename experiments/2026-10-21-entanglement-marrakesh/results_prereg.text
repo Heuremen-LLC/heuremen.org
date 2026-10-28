@@ -1,0 +1,7 @@
+ibm_marrakesh  L=2.684 us  pairs 48  shots 1200
+   median C: D0 0.794  D8 0.079  D16 0.000  M8 0.065  M16 0.000
+   [declared cut C0>=0.5, k_D>=0.002/step] Q_endpoint = 1.000  68% [1.000, 1.000]  95% [1.000, 1.001]  n=38  -> CONSISTENT vs 1, BELOW vs 1.2
+   [declared cut C0>=0.5, k_D>=0.002/step] Q_slope = 1.000  68% [1.000, 1.000]  95% [1.000, 1.001]  n=38  -> CONSISTENT vs 1, BELOW vs 1.2
+   [no cut (k_D>0 for ratio)] Q_endpoint = 1.000  68% [1.000, 1.000]  95% [1.000, 1.000]  n=45  -> CONSISTENT vs 1, BELOW vs 1.2
+   [no cut (k_D>0 for ratio)] Q_slope = 1.000  68% [1.000, 1.000]  95% [1.000, 1.000]  n=45  -> CONSISTENT vs 1, BELOW vs 1.2
+   C_M0(16) - C_D(16) = +0.0000  95% [+0.0000, +0.0000]  -> CONSISTENT vs 0

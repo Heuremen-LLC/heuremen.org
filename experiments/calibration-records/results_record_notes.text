@@ -1,0 +1,192 @@
+PER RECORD: parameter: present / absent; values over 24 h and over 7 days old against the record stamp; oldest (h)
+ibm_fez record 2026-09-26 19:07:03-04:00  (calibration-records/ibm_fez/2026-09-26.json.gz)
+   T1             156 / 0   >24h   9  >7d   2  oldest    332.9
+   T2             155 / 1   >24h   1  >7d   0  oldest     27.0
+   init_error     116 / 40  >24h  17  >7d  12  oldest   1299.9
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      2.7
+ibm_fez record 2026-09-27 18:46:24-04:00  (calibration-records/ibm_fez/2026-09-27.json.gz)
+   T1             156 / 0   >24h   5  >7d   2  oldest    356.5
+   T2             155 / 1   >24h   1  >7d   0  oldest     25.3
+   init_error     116 / 40  >24h  16  >7d  11  oldest   1323.5
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      2.3
+ibm_fez record 2026-09-28 19:26:25-04:00  (calibration-records/ibm_fez/2026-09-28.json.gz)
+   T1             156 / 0   >24h   9  >7d   2  oldest    381.2
+   T2             155 / 1   >24h   1  >7d   0  oldest     24.8
+   init_error     116 / 40  >24h  17  >7d  11  oldest   1348.2
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      2.7
+ibm_fez record 2026-09-29 11:06:47-04:00  (calibration-records/ibm_fez/2026-09-29.json.gz)
+   T1             156 / 0   >24h   9  >7d   2  oldest    396.9
+   T2             155 / 1   >24h   1  >7d   0  oldest     40.5
+   init_error     116 / 40  >24h  18  >7d  11  oldest   1363.9
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      3.7
+ibm_fez record 2026-10-21 18:41:29-04:00  (2026-10-21-control-run/backend_properties_ibm_fez.json)
+   T1             156 / 0   >24h   7  >7d   1  oldest    236.8
+   T2             155 / 1   >24h   1  >7d   0  oldest     25.5
+   init_error     116 / 40  >24h  23  >7d  18  oldest   1899.5
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      2.0
+ibm_fez record 2026-10-21 20:50:56-04:00  (2026-10-21-iq-run/iq_backend_properties_ibm_fez.json)
+   T1             156 / 0   >24h   7  >7d   1  oldest    239.0
+   T2             155 / 1   >24h   1  >7d   0  oldest     27.7
+   init_error     116 / 40  >24h  23  >7d  18  oldest   1901.6
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      4.2
+ibm_fez record 2026-10-21 21:37:45-04:00  (2026-10-22-deciding-runs/props_count_ibm_fez.json)
+   T1             156 / 0   >24h   7  >7d   1  oldest    239.7
+   T2             155 / 1   >24h   1  >7d   0  oldest     28.4
+   init_error     116 / 40  >24h  23  >7d  18  oldest   1902.4
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      4.9
+ibm_fez record 2026-10-21 22:36:53-04:00  (2026-10-22-deciding-runs/props_freshclock_ibm_fez.json)
+   T1             156 / 0   >24h   7  >7d   1  oldest    240.7
+   T2             155 / 1   >24h   1  >7d   0  oldest     29.4
+   init_error     116 / 40  >24h  23  >7d  18  oldest   1903.4
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      5.9
+ibm_fez record 2026-10-22 06:20:28-04:00  (2026-10-22-one-neighbour-revival/props_zz_ibm_fez.json)
+   T1             156 / 0   >24h   7  >7d   1  oldest    248.4
+   T2             155 / 1   >24h   1  >7d   0  oldest     37.2
+   init_error     116 / 40  >24h  23  >7d  18  oldest   1911.1
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      0.2
+ibm_fez record 2026-10-22 09:17:43-04:00  (2026-10-22-flip-check-run2/flip_backend_properties_ibm_fez.json)
+   T1             156 / 0   >24h   7  >7d   1  oldest    251.4
+   T2             155 / 1   >24h   1  >7d   0  oldest     40.1
+   init_error     116 / 40  >24h  23  >7d  18  oldest   1914.1
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      3.1
+ibm_fez record 2026-10-22 12:54:22-04:00  (2026-10-22-length-run/backend_properties_ibm_fez.json)
+   T1             156 / 0   >24h   7  >7d   1  oldest    255.0
+   T2             155 / 1   >24h   1  >7d   0  oldest     43.7
+   init_error     116 / 40  >24h  23  >7d  18  oldest   1917.7
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      6.8
+ibm_kingston record 2026-09-26 17:55:50-04:00  (calibration-records/ibm_kingston/2026-09-26.json.gz)
+   T1             155 / 1   >24h   5  >7d   0  oldest     46.9
+   T2             155 / 1   >24h   1  >7d   1  oldest   2282.5
+   init_error     125 / 31  >24h  18  >7d   9  oldest   1309.7
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      6.3
+ibm_kingston record 2026-09-27 19:34:34-04:00  (calibration-records/ibm_kingston/2026-09-27.json.gz)
+   T1             155 / 1   >24h   6  >7d   0  oldest     46.3
+   T2             155 / 1   >24h   1  >7d   1  oldest   2308.1
+   init_error     125 / 31  >24h  19  >7d  13  oldest   1335.4
+   readout_error  156 / 0   >24h   0  >7d   0  oldest     11.0
+ibm_kingston record 2026-09-28 19:07:13-04:00  (calibration-records/ibm_kingston/2026-09-28.json.gz)
+   T1             155 / 1   >24h   4  >7d   0  oldest     43.0
+   T2             155 / 1   >24h   1  >7d   1  oldest   2331.7
+   init_error     125 / 31  >24h  16  >7d  13  oldest   1358.9
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      6.3
+ibm_kingston record 2026-10-21 15:04:52-04:00  (2026-10-21-control-run/backend_properties_ibm_kingston.json)
+   T1             155 / 1   >24h   7  >7d   0  oldest     56.7
+   T2             154 / 2   >24h   1  >7d   0  oldest     32.4
+   init_error     125 / 31  >24h  32  >7d  17  oldest   1906.9
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      8.0
+ibm_kingston record 2026-10-21 20:55:39-04:00  (2026-10-21-iq-run/iq_backend_properties_ibm_kingston.json)
+   T1             155 / 1   >24h   7  >7d   0  oldest     62.6
+   T2             154 / 2   >24h   1  >7d   0  oldest     38.3
+   init_error     125 / 31  >24h  32  >7d  17  oldest   1912.7
+   readout_error  156 / 0   >24h   0  >7d   0  oldest     13.8
+ibm_kingston record 2026-10-21 22:06:30-04:00  (2026-10-22-deciding-runs/props_neighbour_ibm_kingston.json)
+   T1             155 / 1   >24h   7  >7d   0  oldest     63.8
+   T2             154 / 2   >24h   1  >7d   0  oldest     39.4
+   init_error     125 / 31  >24h  29  >7d  17  oldest   1913.9
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      0.4
+ibm_kingston record 2026-10-21 22:16:01-04:00  (2026-10-22-deciding-runs/props_freshclock_ibm_kingston.json)
+   T1             155 / 1   >24h   7  >7d   0  oldest     63.9
+   T2             154 / 2   >24h   1  >7d   0  oldest     39.6
+   init_error     125 / 31  >24h  29  >7d  17  oldest   1914.1
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      0.6
+ibm_kingston record 2026-10-22 06:25:09-04:00  (2026-10-22-dd-run/props_dd_ibm_kingston.json)
+   T1             155 / 1   >24h   5  >7d   0  oldest     47.7
+   T2             154 / 2   >24h   1  >7d   0  oldest     27.5
+   init_error     125 / 31  >24h  29  >7d  17  oldest   1922.2
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      4.1
+ibm_kingston record 2026-10-22 09:09:11-04:00  (2026-10-22-flip-check-run2/flip_backend_properties_ibm_kingston.json)
+   T1             155 / 1   >24h   5  >7d   0  oldest     50.5
+   T2             154 / 2   >24h   1  >7d   0  oldest     30.2
+   init_error     125 / 31  >24h  29  >7d  17  oldest   1924.9
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      0.2
+ibm_kingston record 2026-10-22 13:17:41-04:00  (2026-10-22-length-run/backend_properties_ibm_kingston.json)
+   T1             155 / 1   >24h   5  >7d   0  oldest     54.6
+   T2             154 / 2   >24h   1  >7d   0  oldest     34.4
+   init_error     125 / 31  >24h  28  >7d  17  oldest   1929.1
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      4.4
+ibm_marrakesh record 2026-09-26 19:23:56-04:00  (calibration-records/ibm_marrakesh/2026-09-26.json.gz)
+   T1             154 / 2   >24h   9  >7d   1  oldest    292.5
+   T2             153 / 3   >24h   5  >7d   1  oldest    686.1
+   init_error     147 / 9   >24h  20  >7d  11  oldest   1410.1
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      2.6
+ibm_marrakesh record 2026-09-27 18:31:26-04:00  (calibration-records/ibm_marrakesh/2026-09-27.json.gz)
+   T1             154 / 2   >24h   9  >7d   1  oldest    315.6
+   T2             153 / 3   >24h   5  >7d   1  oldest    709.2
+   init_error     147 / 9   >24h  23  >7d  13  oldest   1433.2
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      0.9
+ibm_marrakesh record 2026-09-28 19:19:52-04:00  (calibration-records/ibm_marrakesh/2026-09-28.json.gz)
+   T1             154 / 2   >24h  10  >7d   1  oldest    340.4
+   T2             153 / 3   >24h   3  >7d   1  oldest    734.1
+   init_error     147 / 9   >24h  25  >7d  13  oldest   1458.1
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      4.8
+ibm_marrakesh record 2026-10-21 18:44:03-04:00  (2026-10-21-control-run/backend_properties_ibm_marrakesh.json)
+   T1             154 / 2   >24h  16  >7d   1  oldest    891.8
+   T2             152 / 4   >24h   7  >7d   0  oldest    106.0
+   init_error     147 / 9   >24h  32  >7d  18  oldest   1997.5
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      2.9
+ibm_marrakesh record 2026-10-21 20:49:57-04:00  (2026-10-21-iq-run/iq_backend_properties_ibm_marrakesh.json)
+   T1             154 / 2   >24h  16  >7d   1  oldest    893.9
+   T2             152 / 4   >24h   7  >7d   0  oldest    108.1
+   init_error     147 / 9   >24h  31  >7d  19  oldest   1999.6
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      1.5
+ibm_marrakesh record 2026-10-21 21:08:00-04:00  (2026-10-21-pairs-run/pairs_backend_properties_ibm_marrakesh.json)
+   T1             154 / 2   >24h  16  >7d   1  oldest    894.2
+   T2             152 / 4   >24h   7  >7d   0  oldest    108.4
+   init_error     147 / 9   >24h  31  >7d  19  oldest   1999.9
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      0.0
+ibm_marrakesh record 2026-10-21 21:24:09-04:00  (2026-10-22-deciding-runs/props_distance_ibm_marrakesh.json)
+   T1             154 / 2   >24h  16  >7d   1  oldest    894.5
+   T2             152 / 4   >24h   7  >7d   0  oldest    108.7
+   init_error     147 / 9   >24h  31  >7d  19  oldest   2000.2
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      0.3
+ibm_marrakesh record 2026-10-21 22:11:22-04:00  (2026-10-22-deciding-runs/props_excitation_ibm_marrakesh.json)
+   T1             154 / 2   >24h  14  >7d   1  oldest    895.3
+   T2             152 / 4   >24h   1  >7d   0  oldest    109.5
+   init_error     147 / 9   >24h  31  >7d  19  oldest   2001.0
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      1.1
+ibm_marrakesh record 2026-10-22 06:21:14-04:00  (2026-10-22-dd-run/props_dd_ibm_marrakesh.json)
+   T1             154 / 2   >24h  14  >7d   1  oldest    903.5
+   T2             152 / 4   >24h   1  >7d   0  oldest    117.7
+   init_error     147 / 9   >24h  30  >7d  19  oldest   2009.1
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      1.1
+ibm_marrakesh record 2026-10-22 09:39:22-04:00  (2026-10-22-flip-check-run2/flip_backend_properties_ibm_marrakesh.json)
+   T1             154 / 2   >24h  14  >7d   1  oldest    906.8
+   T2             152 / 4   >24h   1  >7d   0  oldest    121.0
+   init_error     147 / 9   >24h  30  >7d  18  oldest   2012.4
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      4.4
+ibm_marrakesh record 2026-10-22 11:46:49-04:00  (2026-10-22-length-run/backend_properties_ibm_marrakesh.json)
+   T1             154 / 2   >24h  14  >7d   1  oldest    908.9
+   T2             152 / 4   >24h   1  >7d   0  oldest    123.1
+   init_error     147 / 9   >24h  30  >7d  18  oldest   2014.6
+   readout_error  156 / 0   >24h   0  >7d   0  oldest      6.5
+ibm_phoenix record 2026-10-21 21:50:19-04:00  (2026-10-22-deciding-runs/props_revival_ibm_phoenix.json)
+   T1             119 / 1   >24h   0  >7d   0  oldest      0.0
+   T2             119 / 1   >24h   1  >7d   0  oldest     67.3
+   init_error     116 / 4   >24h  42  >7d  40  oldest   1378.4
+   readout_error  120 / 0   >24h   0  >7d   0  oldest      0.6
+ibm_phoenix record 2026-10-22 06:28:49-04:00  (2026-10-22-one-neighbour-revival/props_zz_ibm_phoenix.json)
+   T1             119 / 1   >24h   0  >7d   0  oldest      8.6
+   T2             119 / 1   >24h   1  >7d   0  oldest     75.9
+   init_error     116 / 4   >24h  42  >7d  40  oldest   1387.1
+   readout_error  120 / 0   >24h   0  >7d   0  oldest      0.6
+
+READOUT ERROR BETWEEN CONSECUTIVE RECORDS (by readout_error date): per-qubit median |new/old - 1|
+ibm_fez 2026-09-26 16:24 -> 2026-09-27 16:30    24.1 h apart  median change  26.9 %
+ibm_fez 2026-09-27 16:30 -> 2026-09-28 19:16    26.8 h apart  median change  24.4 %
+ibm_fez 2026-09-28 19:16 -> 2026-09-29 07:26    12.2 h apart  median change  23.5 %
+ibm_fez 2026-09-29 07:26 -> 2026-10-21 16:41   537.3 h apart  median change  31.3 %
+ibm_fez 2026-10-21 16:41 -> 2026-10-22 06:09    13.5 h apart  median change  20.4 %
+ibm_kingston 2026-09-26 11:37 -> 2026-09-27 08:34    21.0 h apart  median change  25.5 %
+ibm_kingston 2026-09-27 08:34 -> 2026-09-28 12:47    28.2 h apart  median change  26.8 %
+ibm_kingston 2026-09-28 12:47 -> 2026-10-21 07:07   546.3 h apart  median change  36.5 %
+ibm_kingston 2026-10-21 07:07 -> 2026-10-21 21:40    14.5 h apart  median change  30.5 %
+ibm_kingston 2026-10-21 21:40 -> 2026-10-22 02:16     4.6 h apart  median change  18.7 %
+ibm_kingston 2026-10-22 02:16 -> 2026-10-22 08:55     6.6 h apart  median change  15.6 %
+ibm_marrakesh 2026-09-26 16:47 -> 2026-09-27 17:35    24.8 h apart  median change  36.4 %
+ibm_marrakesh 2026-09-27 17:35 -> 2026-09-28 14:29    20.9 h apart  median change  34.6 %
+ibm_marrakesh 2026-09-28 14:29 -> 2026-10-21 15:48   553.3 h apart  median change  60.4 %
+ibm_marrakesh 2026-10-21 15:48 -> 2026-10-21 19:17     3.5 h apart  median change  62.2 %
+ibm_marrakesh 2026-10-21 19:17 -> 2026-10-21 21:07     1.8 h apart  median change  49.3 %
+ibm_marrakesh 2026-10-21 21:07 -> 2026-10-22 05:18     8.2 h apart  median change  44.5 %
+ibm_marrakesh 2026-10-22 05:18 -> 2026-10-22 10:44     5.4 h apart  median change  29.2 %
+ibm_phoenix 2026-10-21 21:14 -> 2026-10-22 05:54     8.7 h apart  median change  19.6 %

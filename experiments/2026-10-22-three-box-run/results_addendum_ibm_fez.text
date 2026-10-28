@@ -1,0 +1,7 @@
+FOUR-STATE READING (addendum)
+  ibm_fez: c0 +0.884 [+0.828, +0.940] ABOVE | a SIGN -0.071 [-0.152, +0.016] CONSISTENT | b CORNER +0.043 [-0.055, +0.137] CONSISTENT | c |00> -0.018 [-0.104, +0.070] CONSISTENT
+  ibm_fez STATE: NEITHER  copy gaps: sign [-0.251, +0.079], corner [-0.136, +0.267]
+R4 common probe offset: mean <Xp> on kept shots of the unused box over all eps, hardware vs model
+  ibm_fez V11 unused 10: hardware +0.0232 +- 0.0095 (n 11003), model +0.0076, difference +0.0155 [-0.0031, +0.0342]
+  ibm_fez V10 unused 11: hardware +0.0641 +- 0.0095 (n 11046), model +0.0076, difference +0.0565 [+0.0379, +0.0751]
+  ibm_fez VA unused 10: hardware +0.0457 +- 0.0098 (n 10313), model +0.0066, difference +0.0391 [+0.0198, +0.0584]

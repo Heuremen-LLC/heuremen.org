@@ -1,0 +1,36 @@
+kingston_run1  (152 qubits)
+   FIXED top-bottom -0.012 [-0.165, +0.087] (top q 0.903, bottom q 0.916; n 39/39) null -0.002 [-0.014, +0.013] -> CONSISTENT
+   FREE  top-bottom -0.070 [-0.222, +0.054] (top q 0.856, bottom q 0.926; n 38/38) null +0.050 [-0.008, +0.083] -> CONSISTENT
+kingston_run2  (152 qubits)
+   FIXED top-bottom -0.155 [-0.302, +0.005] (top q 0.839, bottom q 0.993; n 39/39) null -0.001 [-0.012, +0.009] -> CONSISTENT
+   FREE  top-bottom -0.159 [-0.374, +0.065] (top q 0.839, bottom q 0.998; n 38/38) null +0.039 [-0.016, +0.076] -> CONSISTENT
+kingston_fresh  (153 qubits)
+   FIXED top-bottom -0.125 [-0.257, -0.009] (top q 0.863, bottom q 0.989; n 39/39) null +0.001 [-0.010, +0.011] -> CONSISTENT
+   FREE  top-bottom -0.077 [-0.249, +0.051] (top q 0.918, bottom q 0.995; n 39/39) null +0.047 [-0.026, +0.118] -> CONSISTENT
+marrakesh_run1  (153 qubits)
+   FIXED top-bottom -0.317 [-0.785, -0.095] (top q 0.794, bottom q 1.111; n 39/39) null +0.000 [-0.016, +0.012] -> BELOW
+   FREE  top-bottom -0.372 [-0.828, -0.227] (top q 0.661, bottom q 1.033; n 39/39) null -0.001 [-0.023, +0.023] -> BELOW
+marrakesh_run2  (152 qubits)
+   FIXED top-bottom -0.383 [-0.755, -0.079] (top q 0.924, bottom q 1.308; n 39/39) null -0.003 [-0.015, +0.014] -> BELOW
+   FREE  top-bottom -0.431 [-0.758, -0.197] (top q 0.753, bottom q 1.184; n 38/38) null +0.003 [-0.030, +0.026] -> BELOW
+fez_run1  (154 qubits)
+   FIXED top-bottom -0.017 [-0.134, +0.113] (top q 0.953, bottom q 0.970; n 39/39) null +0.001 [-0.009, +0.014] -> CONSISTENT
+   FREE  top-bottom -0.053 [-0.183, +0.025] (top q 0.903, bottom q 0.956; n 39/39) null -0.003 [-0.031, +0.020] -> CONSISTENT
+fez_run2  (153 qubits)
+   FIXED top-bottom -0.011 [-0.143, +0.085] (top q 0.951, bottom q 0.962; n 39/39) null -0.002 [-0.013, +0.010] -> CONSISTENT
+   FREE  top-bottom -0.118 [-0.243, +0.062] (top q 0.862, bottom q 0.980; n 39/39) null -0.002 [-0.027, +0.019] -> CONSISTENT
+fez_clock1  (154 qubits)
+   FIXED top-bottom -0.008 [-0.113, +0.045] (top q 0.942, bottom q 0.949; n 39/39) null -0.001 [-0.012, +0.012] -> CONSISTENT
+   FREE  top-bottom -0.092 [-0.218, +0.004] (top q 0.873, bottom q 0.965; n 39/39) null +0.001 [-0.017, +0.029] -> CONSISTENT
+fez_clock2  (153 qubits)
+   FIXED top-bottom -0.057 [-0.165, +0.070] (top q 0.907, bottom q 0.963; n 39/39) null +0.001 [-0.010, +0.014] -> CONSISTENT
+   FREE  top-bottom -0.031 [-0.225, +0.050] (top q 0.915, bottom q 0.946; n 39/39) null -0.001 [-0.028, +0.034] -> CONSISTENT
+pittsburgh  (156 qubits)
+   FIXED top-bottom -0.456 [-0.983, -0.185] (top q 0.941, bottom q 1.398; n 39/39) null +0.002 [-0.008, +0.010] -> BELOW
+   FREE  top-bottom -0.414 [-0.993, -0.184] (top q 0.889, bottom q 1.303; n 39/39) null +0.024 [-0.037, +0.114] -> BELOW
+phoenix  (119 qubits)
+   FIXED top-bottom -0.089 [-0.177, -0.023] (top q 0.853, bottom q 0.941; n 30/30) null +0.003 [-0.014, +0.013] -> BELOW
+   FREE  top-bottom -0.051 [-0.122, +0.025] (top q 0.947, bottom q 0.998; n 30/30) null +0.056 [+0.023, +0.092] -> CONSISTENT
+boston  (155 qubits)
+   FIXED top-bottom -0.392 [-0.676, -0.155] (top q 0.923, bottom q 1.315; n 39/39) null -0.001 [-0.014, +0.012] -> BELOW
+   FREE  top-bottom -0.376 [-0.716, -0.192] (top q 0.790, bottom q 1.167; n 39/39) null +0.035 [-0.039, +0.094] -> BELOW

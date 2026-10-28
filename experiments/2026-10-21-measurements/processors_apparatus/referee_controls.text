@@ -1,0 +1,41 @@
+26
+aache 871 146 idle300 0.40 se 0.14 | idle600 0.39 diff -0.01 | n>0 60%
+aache 872 145 idle300 0.13 se 0.10 | idle600 0.51 diff 0.38 | n>0 55%
+aache 878 146 idle300 0.58 se 0.13 | idle600 0.42 diff -0.15 | n>0 62%
+bosto 461 153 idle300 0.58 se 0.10 | idle600 0.65 diff 0.07 | n>0 68%
+bosto 462 152 idle300 0.31 se 0.11 | idle600 0.38 diff 0.07 | n>0 61%
+bosto 463 153 idle300 0.58 se 0.11 | idle600 0.69 diff 0.12 | n>0 67%
+bosto 471 153 idle300 0.47 se 0.11 | idle600 0.42 diff -0.05 | n>0 65%
+bosto 472 153 idle300 0.30 se 0.10 | idle600 0.39 diff 0.09 | n>0 56%
+bosto 473 153 idle300 0.35 se 0.11 | idle600 0.40 diff 0.05 | n>0 58%
+bosto 481 153 idle300 0.25 se 0.09 | idle600 0.33 diff 0.08 | n>0 56%
+bosto 482 153 idle300 0.48 se 0.11 | idle600 0.48 diff -0.00 | n>0 60%
+bosto 483 153 idle300 0.44 se 0.12 | idle600 0.36 diff -0.08 | n>0 65%
+bosto 484 153 idle300 0.61 se 0.10 | idle600 0.40 diff -0.21 | n>0 67%
+bosto 485 153 idle300 0.71 se 0.11 | idle600 0.51 diff -0.19 | n>0 67%
+fez 401 134 idle300 0.25 se 0.15 | idle600 0.24 diff -0.01 | n>0 56%
+fez 402 136 idle300 0.12 se 0.12 | idle600 -0.01 diff -0.12 | n>0 54%
+fez 403 134 idle300 0.41 se 0.14 | idle600 0.34 diff -0.07 | n>0 60%
+kings 301 142 idle300 0.63 se 0.17 | idle600 0.34 diff -0.29 | n>0 66%
+kings 302 146 idle300 0.37 se 0.15 | idle600 0.32 diff -0.05 | n>0 59%
+kings 303 147 idle300 0.46 se 0.16 | idle600 0.23 diff -0.23 | n>0 61%
+marra 301 136 idle300 0.80 se 0.18 | idle600 -0.20 diff -1.00 | n>0 68%
+marra 302 138 idle300 0.57 se 0.18 | idle600 0.09 diff -0.48 | n>0 64%
+marra 303 137 idle300 0.66 se 0.17 | idle600 -0.05 diff -0.71 | n>0 69%
+pitts 361 149 idle300 0.04 se 0.13 | idle600 0.12 diff 0.08 | n>0 50%
+pitts 362 149 idle300 0.22 se 0.11 | idle600 0.28 diff 0.05 | n>0 66%
+pitts 363 148 idle300 0.32 se 0.13 | idle600 0.11 diff -0.22 | n>0 58%
+pos 26 600>300 9
+marra 301 136 meds [168.4 172.6 178.8] range 10.4 | within-qubit level sd 0.0228; sim median-sd 2.90, sim range of 3 mean 4.7 (p95 8.9) mean L300 0.201
+marra 302 138 meds [177.9 182.2 180.2] range 4.3 | within-qubit level sd 0.0269; sim median-sd 3.59, sim range of 3 mean 5.7 (p95 11.5) mean L300 0.201
+marra 303 137 meds [175.7 177.2 183.1] range 7.5 | within-qubit level sd 0.0251; sim median-sd 3.29, sim range of 3 mean 5.3 (p95 10.9) mean L300 0.201
+kings 301 142 meds [267.4 260.4 261. ] range 6.9 | within-qubit level sd 0.0284; sim median-sd 3.99, sim range of 3 mean 6.7 (p95 13.0) mean L300 0.304
+kings 302 146 meds [265.7 260.5 269.8] range 9.3 | within-qubit level sd 0.0282; sim median-sd 4.19, sim range of 3 mean 6.8 (p95 13.2) mean L300 0.307
+kings 303 147 meds [263.8 260.1 260.9] range 3.7 | within-qubit level sd 0.0276; sim median-sd 4.19, sim range of 3 mean 7.5 (p95 15.0) mean L300 0.302
+pitts 361 149 meds [297.1 294.2 293.8] range 3.3 | within-qubit level sd 0.0284; sim median-sd 3.93, sim range of 3 mean 6.9 (p95 13.0) mean L300 0.338
+pitts 362 149 meds [299.4 301.9 302.8] range 3.4 | within-qubit level sd 0.0272; sim median-sd 4.12, sim range of 3 mean 6.9 (p95 13.9) mean L300 0.349
+pitts 363 148 meds [305.5 304.  293.9] range 11.5 | within-qubit level sd 0.0278; sim median-sd 4.09, sim range of 3 mean 6.9 (p95 13.4) mean L300 0.349
+z [2.9 1.3 4.5 5.8 2.9 5.4 4.3 2.8 3.3 2.7 4.6 3.8 5.9 6.2 1.6 1.  2.9 3.8
+ 2.5 2.9 4.4 3.1 3.8 0.3 1.9 2.5] n z<2 5 <3 13
+mean 600-300 -0.11
+{'ibm_aachen': 0.07, 'ibm_boston': -0.01, 'ibm_fez': -0.07, 'ibm_kingston': -0.19, 'ibm_marrakesh': -0.73, 'ibm_pittsburgh': -0.03}

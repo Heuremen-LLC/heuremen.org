@@ -1,0 +1,3 @@
+ibm_fez: sampling alone, two 4096-shot measurements of the same qubits, median per-qubit change 8.8 %
+ibm_kingston: sampling alone, two 4096-shot measurements of the same qubits, median per-qubit change 9.8 %
+ibm_marrakesh: sampling alone, two 4096-shot measurements of the same qubits, median per-qubit change 7.6 %

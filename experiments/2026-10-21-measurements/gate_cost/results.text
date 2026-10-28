@@ -1,0 +1,48 @@
+GATE COST: slope of the residual excited population per X gate (own-interval estimator unless stated)
+1. Slopes per gate. Widths are first-order shot noise on the levels only; they do not resample the reference readouts.
+  kingston day 1 (run 392)                     -0.00198 (shot-noise width 0.00027)
+  kingston day 2, mean of runs 721-723         -0.00136 (shot-noise width 0.00016)
+  fez (run 371)                                -0.00182 (shot-noise width 0.00028)
+  boston read 1 (day 2) (run 711)              -0.00154 (shot-noise width 0.00025)
+  boston read 2 (day 2) (run 712)              -0.00080 (shot-noise width 0.00026)
+  boston read 3 (day 2) (run 713)              -0.00063 (shot-noise width 0.00026)
+  phoenix day 2, 3-read mean, own interval     -0.00002
+  phoenix day 2, 3-read mean, 90 us ruler      -0.00010
+  pittsburgh 2 Oct (run 121)                   -0.00107 (shot-noise width 0.00051)
+
+2. Further slopes
+        ibm_boston    day 1 run 441 own interval  -0.00139 +- 0.00026  (5.4 sigma)
+        ibm_phoenix   day 1 run 531 own interval  -0.00058 +- 0.00029  (2.0 sigma)
+        ibm_phoenix   run 531  own -0.00058   90us -0.00091   one-exponential -0.00155
+        ibm_phoenix   run 751  own -0.00032   90us -0.00019   one-exponential -0.00104
+        ibm_phoenix   run 752  own +0.00011   90us +0.00007   one-exponential -0.00049
+        ibm_phoenix   run 753  own +0.00015   90us -0.00017   one-exponential -0.00070
+        ibm_kingston  run 392  own -0.00198   90us -0.00178   one-exponential -0.00104
+        ibm_boston    run 441  own -0.00139   90us -0.00148   one-exponential -0.00139
+        phoenix day-2 3-read mean on the one-exponential ruler: -0.00074
+
+3. Sign of the slope across estimators, reads and heavy-hex chips
+  fez, kingston, boston: 9 of 9 runs negative on all 3 rulers; 9 of 9 also negative on mean, median and 20%-trim over qubits
+  fez, kingston, boston and aachen (3 reads): 11 of 12 runs negative on all 3 rulers; 11 of 12 also negative on mean, median and 20%-trim over qubits
+        not negative: ibm_aachen 842 on ['r300']
+     single reads below 2 sigma on the own-interval ruler (shot-noise width): aachen 842 (1.7 sigma)
+
+4. Share of individual qubits with a negative own slope
+        ibm_fez       run  371  133 qubits   70% negative  (sign-test p = 0.000)
+        ibm_kingston  run  392  144 qubits   69% negative  (sign-test p = 0.000)
+        ibm_kingston  run  721  147 qubits   62% negative  (sign-test p = 0.005)
+        ibm_kingston  run  722  148 qubits   62% negative  (sign-test p = 0.004)
+        ibm_kingston  run  723  146 qubits   60% negative  (sign-test p = 0.016)
+        ibm_boston    run  441  153 qubits   63% negative  (sign-test p = 0.001)
+        ibm_boston    run  711  152 qubits   68% negative  (sign-test p = 0.000)
+        ibm_boston    run  712  152 qubits   58% negative  (sign-test p = 0.062)
+        ibm_boston    run  713  152 qubits   59% negative  (sign-test p = 0.028)
+        ibm_aachen    run  841  146 qubits   62% negative  (sign-test p = 0.004)
+        ibm_aachen    run  842  147 qubits   54% negative  (sign-test p = 0.410)
+        ibm_aachen    run  843  147 qubits   62% negative  (sign-test p = 0.005)
+        ibm_phoenix   run  531  116 qubits   54% negative  (sign-test p = 0.403)
+        ibm_phoenix   run  751  116 qubits   57% negative  (sign-test p = 0.163)
+        ibm_phoenix   run  752  116 qubits   51% negative  (sign-test p = 0.926)
+        ibm_phoenix   run  753  116 qubits   46% negative  (sign-test p = 0.403)
+  range over fez, kingston, boston: 58-70 %; over all heavy-hex runs incl. aachen: 54-70 %
+     phoenix runs fall at 46-57 %

@@ -1,0 +1,12 @@
+ibm_fez        a_hi +0.0368  L 1.660 us  dt_max 0.0611 us per readout  median T2 97 us  (qubits without a T2: 1)
+   N=2  median loss +0.0031  median extra-time bound nan  loss-bound +0.0018 [-0.0056,+0.0051] n=116 -> NOT EXCLUDED
+   N=4  median loss +0.0005  median extra-time bound nan  loss-bound -0.0020 [-0.0079,+0.0067] n=116 -> NOT EXCLUDED
+   N=8  median loss +0.0061  median extra-time bound nan  loss-bound +0.0039 [-0.0024,+0.0101] n=116 -> NOT EXCLUDED
+ibm_kingston   a_hi +0.0082  L 2.180 us  dt_max 0.0179 us per readout  median T2 169 us  (qubits without a T2: 2)
+   N=2  median loss +0.0094  median extra-time bound nan  loss-bound +0.0093 [+0.0044,+0.0117] n=115 -> EXCLUDED
+   N=4  median loss +0.0066  median extra-time bound nan  loss-bound +0.0060 [+0.0006,+0.0098] n=115 -> EXCLUDED
+   N=8  median loss +0.0067  median extra-time bound nan  loss-bound +0.0049 [-0.0036,+0.0134] n=115 -> NOT EXCLUDED
+ibm_marrakesh  a_hi +0.1141  L 2.684 us  dt_max 0.3062 us per readout  median T2 81 us  (qubits without a T2: 3)
+   N=2  median loss +0.0108  median extra-time bound nan  loss-bound +0.0040 [-0.0015,+0.0075] n=114 -> NOT EXCLUDED
+   N=4  median loss +0.0107  median extra-time bound nan  loss-bound -0.0014 [-0.0098,+0.0063] n=114 -> NOT EXCLUDED
+   N=8  median loss +0.0164  median extra-time bound nan  loss-bound -0.0021 [-0.0088,+0.0016] n=114 -> NOT EXCLUDED

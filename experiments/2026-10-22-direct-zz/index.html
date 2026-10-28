@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Direct Per-Edge zz</title>
+<link rel="canonical" href="https://heuremen.org/experiments/2026-10-22-direct-zz/">
+<meta name="tdm-reservation" content="1">
+<meta name="tdm-policy" content="https://indahl.ai/terms#ai-training">
+<meta name="description" content="Does IBM’s stated zz predict the frequency shift an untouched qubit feels when one neighbour goes from 0 to 1? On ibm_phoenix a run with fit and.">
+<meta property="og:site_name" content="Heuremen LLC">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Direct Per-Edge zz">
+<meta property="og:description" content="Does IBM’s stated zz predict the frequency shift an untouched qubit feels when one neighbour goes from 0 to 1? On ibm_phoenix a run with fit and.">
+<meta property="og:url" content="https://heuremen.org/experiments/2026-10-22-direct-zz/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://heuremen.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://heuremen.org/og.png">
+
+<style>body{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;color:#18202B;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.5}a{color:#0F7173}</style></head><body>
+<p><a href="/">&larr; What&rsquo;s Lost with a Look</a></p>
+<h1>Direct per-edge zz, 22 and 23 October 2026</h1>
+<p>Does IBM&rsquo;s stated zz predict the frequency shift an untouched qubit feels when one neighbour goes from 0 to 1? On ibm_phoenix a run with fit and analysis fixed before the job found the beat beside a superposed neighbour does not scale with the stated values (log-log slope 0.19; ibm_fez 1.00). This run removes the beat fit: the shift between neighbour-in-0 and neighbour-in-1 is the zz itself. Same phoenix pairs, ibm_fez as the control. Plan, circuits, analysis and synthetic test were pushed before any job.</p>
+<p><a href="PLAN_DIRECT.md.text">plan</a> &middot; <a href="direct.py">direct.py</a> &middot; <a href="analyze_direct.py">analyze_direct.py</a> &middot; <a href="synth_direct.py">synth_direct.py</a> &middot; <a href="synth_direct_results.text">synthetic results</a> &middot; hashes: <a href="PLAN_DIRECT.sha256.text">plan</a>, <a href="CODE_DIRECT.sha256.text">code</a></p>
+<p>The fez job dbd5gl7i0auc7394o30g (<a href="job_direct_ibm_fez.json">job record</a>), submitted 22 October 18:39 UTC, was read the same night by the committed analysis, unchanged (<a href="results_direct.text">output</a>; <a href="fetch_direct.py">fetch_direct.py</a> saves the raw bits and IBM&rsquo;s calibration in force at submission, pulled from IBM&rsquo;s properties history afterwards because it was not saved at firing).</p>
+<ul><li><b>Known-good met on ibm_fez</b> (66 edges, all fitted): the shift tracks IBM&rsquo;s stated zz, log-log slope 0.923 [0.832, 1.018] (contains 0.99), median shift over stated 1.037 [1.016, 1.078] (inside 0.4 to 2.5); rank correlation 0.885 [0.755, 0.969]. The method reads IBM&rsquo;s zz directly where IBM&rsquo;s figure is right.</li>
+<li><b>Edges IBM states as zz = 0.00 on ibm_fez:</b> 13&ndash;14 shifts by 8.3&nbsp;kHz and 39&ndash;53 by 2.8&nbsp;kHz (106&ndash;107, stated 0.8&nbsp;kHz, shifts 1.6). Copies agree (8.33 and 8.25; 2.64 and 3.05; <a href="zero_edges_copies.py">script</a>, <a href="results_zero_edges.text">output</a>), and IBM&rsquo;s own records of 26 to 29 September gave these two edges 7.45 and 2.89&nbsp;kHz (<a href="/experiments/calibration-records/results_zz_history.text">record history</a>).</li>
+<li><b>ibm_phoenix, job dbd9789gv2cc738hl070</b> (<a href="job_direct_ibm_phoenix.json">job record</a>), submitted 22 October 22:52 UTC, ran 23 October 05:33 UTC, read by the committed analysis, unchanged (<a href="results_direct_phoenix.text">output</a>; IBM&rsquo;s record saved at firing, <a href="props_direct_ibm_phoenix.json">props</a>, and the next record, <a href="props_direct_ibm_phoenix_atrun.json">props</a>, carry the same 218 zz values). Same 20 triples as the flat-beat run; 37 edges with stated zz above 1&nbsp;kHz (11.6 to 58.8&nbsp;kHz, median 28.3). <b>The shift does not track the stated zz:</b> log-log slope &minus;0.061 [&minus;0.629, 0.315] (below 1), median shift over stated 0.486 [0.452, 0.528] (below 1), rank correlation 0.245 [&minus;0.170, 0.630]. Copies agree. A single convention factor would leave the slope near 1 (the plan&rsquo;s synthetic factor-2 world reads 0.996).</li>
+<li><b>Fit quality, defined after the data</b> (outside referee): the two edges of phoenix qubit 41 have phase-fit residuals of 1.64 and 1.27&nbsp;rad, a slipped unwrap (median 0.077). The same rule, residual above 0.5&nbsp;rad, removes two edges of fez qubit 103 (1.34 and 1.19&nbsp;rad). Without them: phoenix slope 0.192 [0.041, 0.370], median ratio 0.484 [0.452, 0.520], rank correlation 0.418 [0.082, 0.683]; fez slope 0.942 [0.864, 1.030], median ratio 1.034 (<a href="fit_quality.py">script</a>, <a href="results_fit_quality.text">output</a>). The slope stays below 1 either way and matches the flat-beat run&rsquo;s 0.19 [0.01, 0.38]; the rank correlation depends on the two edges.</li>
+<li><b>Edges IBM states as zz = 0.00 on ibm_phoenix:</b> 100&ndash;101 shifts by 14.2&nbsp;kHz, 70&ndash;80 by 15.4, 86&ndash;96 by 10.2; copies agree (14.03 and 14.40; 15.09 and 15.63; 10.09 and 10.39; <a href="zero_edges_copies_phoenix.py">script</a>, <a href="results_zero_edges_phoenix.text">output</a>). The beat fit applied to them after the flat-beat data gave 13.9, 15.2 and 10.1.</li>
+<li>What this run cannot separate: the neighbour&rsquo;s state from the gate that sets it (the phase grows linearly from zero, as a state-dependent shift does); next-nearest neighbours were not controlled. One job per chip, one day.</li></ul>
+<p>Data tables and recounts: <a href="https://indahl.ai/qia">QIA</a> &middot; <a href="https://indahl.ai/iris">IRIS</a></p>
+<p class="foot">Bones &middot; Wayfinder &middot; Sage &middot; Shuttle &middot; Nova<br><a href="https://indahl.ai">Heuremen LLC</a><br>&ldquo;We found it.&rdquo;</p>
+</body></html>

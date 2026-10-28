@@ -1,0 +1,33 @@
+NULL FLOOR, 6 seeds (11-16), two chips each (FakeMarrakesh, FakeFez), every reading truth 0, all/wired/unwired counted separately
+seed 11: TALLY readings 88: ABOVE 4, BELOW 1, CONSISTENT 76, CANNOT TELL 7
+seed 12: TALLY readings 88: ABOVE 1, BELOW 2, CONSISTENT 79, CANNOT TELL 6
+seed 13: TALLY readings 88: ABOVE 4, BELOW 3, CONSISTENT 73, CANNOT TELL 8
+seed 14: TALLY readings 88: ABOVE 4, BELOW 0, CONSISTENT 80, CANNOT TELL 4
+seed 15: TALLY readings 88: ABOVE 1, BELOW 3, CONSISTENT 71, CANNOT TELL 13
+seed 16: TALLY readings 88: ABOVE 3, BELOW 6, CONSISTENT 75, CANNOT TELL 4
+TOTAL readings 528: ABOVE 17, BELOW 15 -> resolved 32 (6.1 %); CONSISTENT 454; CANNOT TELL 42
+DECISIONS (truth: no cost -> CANNOT TELL):
+seed 11: DECISION ibm_fez N=8: CANNOT TELL (no cost resolved: R4 CONSISTENT)
+seed 11: DECISION ibm_marrakesh N=8: CANNOT TELL (copies shifted on R4, R5 or R6)
+seed 11: DECISION COMBINED (inverse variance, 2 chips) N=8: CANNOT TELL (copies shifted on R4, R5 or R6)
+seed 11: HEADLINE N=8: CANNOT TELL (no chip decided)
+seed 12: DECISION ibm_fez N=8: CANNOT TELL (R6 half-width exceeds R4: too wide for a cost this small)
+seed 12: DECISION ibm_marrakesh N=8: CANNOT TELL (no cost resolved: R4 CONSISTENT)
+seed 12: DECISION COMBINED (inverse variance, 2 chips) N=8: CANNOT TELL (no cost resolved: R4 CONSISTENT)
+seed 12: HEADLINE N=8: CANNOT TELL (no chip decided)
+seed 13: DECISION ibm_fez N=8: CANNOT TELL (no cost resolved: R4 CONSISTENT)
+seed 13: DECISION ibm_marrakesh N=8: CANNOT TELL (no cost resolved: R4 BELOW)
+seed 13: DECISION COMBINED (inverse variance, 2 chips) N=8: CANNOT TELL (no cost resolved: R4 CONSISTENT)
+seed 13: HEADLINE N=8: CANNOT TELL (no chip decided)
+seed 14: DECISION ibm_fez N=8: CANNOT TELL (no cost resolved: R4 CONSISTENT)
+seed 14: DECISION ibm_marrakesh N=8: CANNOT TELL (copies shifted on R4, R5 or R6)
+seed 14: DECISION COMBINED (inverse variance, 2 chips) N=8: CANNOT TELL (copies shifted on R4, R5 or R6)
+seed 14: HEADLINE N=8: CANNOT TELL (no chip decided)
+seed 15: DECISION ibm_fez N=8: CANNOT TELL (copies shifted on R4, R5 or R6)
+seed 15: DECISION ibm_marrakesh N=8: CANNOT TELL (copies shifted on R4, R5 or R6)
+seed 15: DECISION COMBINED (inverse variance, 2 chips) N=8: CANNOT TELL (copies shifted on R4, R5 or R6)
+seed 15: HEADLINE N=8: CANNOT TELL (no chip decided)
+seed 16: DECISION ibm_fez N=8: CANNOT TELL (R6 half-width exceeds R4: too wide for a cost this small)
+seed 16: DECISION ibm_marrakesh N=8: CANNOT TELL (no cost resolved: R4 CONSISTENT)
+seed 16: DECISION COMBINED (inverse variance, 2 chips) N=8: CANNOT TELL (R6 half-width exceeds R4: too wide for a cost this small)
+seed 16: HEADLINE N=8: CANNOT TELL (no chip decided)

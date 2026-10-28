@@ -1,0 +1,127 @@
+MEASURED DATA (9 runs: ibm_fez 371, ibm_kingston 392/721/722/723, ibm_boston 441/711/712/713; mean of runs):
+   own -0.00136  r90 -0.00138  r300 -0.00101 | below-extrap share 0.79  mean R30 0.846 R90 0.644
+   run 371 ibm_fez own -0.00182 r90 -0.00231 r300 -0.00247
+   run 392 ibm_kingston own -0.00198 r90 -0.00178 r300 -0.00104
+   run 441 ibm_boston own -0.00139 r90 -0.00148 r300 -0.00139
+   run 711 ibm_boston own -0.00154 r90 -0.00127 r300 -0.00120
+   run 712 ibm_boston own -0.00080 r90 -0.00074 r300 -0.00056
+   run 713 ibm_boston own -0.00063 r90 -0.00048 r300 -0.00024
+   run 721 ibm_kingston own -0.00114 r90 -0.00125 r300 -0.00059
+   run 722 ibm_kingston own -0.00134 r90 -0.00158 r300 -0.00082
+   run 723 ibm_kingston own -0.00161 r90 -0.00152 r300 -0.00077
+   (note: mean over runs of single-run slopes)
+
+SYNTHETIC: PERFECT X gates (zero cost). 300 noise seeds per row; noise = real per-qubit shot errors; anchor = each qubit's R300.
+Slope is mean over the 9 runs; "seed sd" is the sd of that 9-run mean over seeds.
+
+(a) single exponential
+exp                                                  own +0.00018 (seed sd 0.00009)  r90 +0.00005  r300 +0.00002 | below-extrap share 0.50  mean R30 0.874 R90 0.673
+(b) T1 mixture: rate varies shot-to-shot (lognormal sigma), persists through a whole circuit
+mixture sigma=0.3                                    own -0.00081 (seed sd 0.00009)  r90 -0.00084  r300 -0.00055 | below-extrap share 0.66  mean R30 0.866 R90 0.662
+mixture sigma=0.6                                    own -0.00347 (seed sd 0.00009)  r90 -0.00333  r300 -0.00227 | below-extrap share 0.93  mean R30 0.843 R90 0.630
+mixture sigma=0.9                                    own -0.00679 (seed sd 0.00009)  r90 -0.00673  r300 -0.00486 | below-extrap share 1.00  mean R30 0.805 R90 0.590
+mixture sigma=1.2                                    own -0.00956 (seed sd 0.00008)  r90 -0.01018  r300 -0.00777 | below-extrap share 1.00  mean R30 0.760 R90 0.551
+mixture sigma=1.5                                    own -0.01127 (seed sd 0.00008)  r90 -0.01319  r300 -0.01054 | below-extrap share 1.00  mean R30 0.713 R90 0.517
+mixture sigma=2.0                                    own -0.01224 (seed sd 0.00009)  r90 -0.01705  r300 -0.01438 | below-extrap share 1.00  mean R30 0.643 R90 0.474
+(b2) T1 drifts circuit-to-circuit (every circuit has its own T1), exponential otherwise
+drift per circuit sigma=0.1                          own +0.00018 (seed sd 0.00012)  r90 +0.00005  r300 +0.00001 | below-extrap share 0.50  mean R30 0.874 R90 0.674
+drift per circuit sigma=0.3                          own +0.00018 (seed sd 0.00026)  r90 +0.00004  r300 -0.00004 | below-extrap share 0.50  mean R30 0.875 R90 0.678
+drift per circuit sigma=0.6                          own +0.00019 (seed sd 0.00049)  r90 +0.00002  r300 -0.00021 | below-extrap share 0.50  mean R30 0.878 R90 0.694
+(c) stretched exponential, hazard keyed to time since circuit start (abs0) / since first X (abs30) / restarted at each X (renew)
+stretch beta=0.8 clock=abs0                          own -0.00749 (seed sd 0.00008)  r90 -0.00649  r300 -0.00435 | below-extrap share 1.00  mean R30 0.809 R90 0.607
+stretch beta=0.9 clock=abs0                          own -0.00411 (seed sd 0.00009)  r90 -0.00330  r300 -0.00214 | below-extrap share 0.97  mean R30 0.844 R90 0.641
+stretch beta=1.0 clock=abs0                          own +0.00018 (seed sd 0.00009)  r90 +0.00005  r300 +0.00002 | below-extrap share 0.50  mean R30 0.874 R90 0.673
+stretch beta=1.2 clock=abs0                          own +0.01019 (seed sd 0.00011)  r90 +0.00700  r300 +0.00407 | below-extrap share 0.00  mean R30 0.918 R90 0.731
+stretch beta=1.4 clock=abs0                          own +0.02032 (seed sd 0.00013)  r90 +0.01392  r300 +0.00770 | below-extrap share 0.00  mean R30 0.947 R90 0.781
+stretch beta=0.8 clock=abs30                         own -0.01049 (seed sd 0.00008)  r90 -0.00949  r300 -0.00735 | below-extrap share 1.00  mean R30 0.809 R90 0.607
+stretch beta=0.9 clock=abs30                         own -0.00534 (seed sd 0.00009)  r90 -0.00454  r300 -0.00337 | below-extrap share 0.97  mean R30 0.844 R90 0.641
+stretch beta=1.0 clock=abs30                         own +0.00018 (seed sd 0.00009)  r90 +0.00005  r300 +0.00002 | below-extrap share 0.50  mean R30 0.874 R90 0.673
+stretch beta=1.2 clock=abs30                         own +0.01137 (seed sd 0.00011)  r90 +0.00818  r300 +0.00525 | below-extrap share 0.00  mean R30 0.918 R90 0.731
+stretch beta=1.4 clock=abs30                         own +0.02147 (seed sd 0.00013)  r90 +0.01507  r300 +0.00885 | below-extrap share 0.00  mean R30 0.947 R90 0.781
+stretch beta=0.8 clock=renew                         own +0.00010 (seed sd 0.00008)  r90 +0.00111  r300 +0.00324 | below-extrap share 1.00  mean R30 0.809 R90 0.607
+stretch beta=0.9 clock=renew                         own +0.00014 (seed sd 0.00009)  r90 +0.00095  r300 +0.00211 | below-extrap share 0.97  mean R30 0.844 R90 0.641
+stretch beta=1.0 clock=renew                         own +0.00018 (seed sd 0.00009)  r90 +0.00005  r300 +0.00002 | below-extrap share 0.50  mean R30 0.874 R90 0.673
+stretch beta=1.2 clock=renew                         own +0.00025 (seed sd 0.00011)  r90 -0.00294  r300 -0.00587 | below-extrap share 0.00  mean R30 0.918 R90 0.731
+stretch beta=1.4 clock=renew                         own +0.00032 (seed sd 0.00013)  r90 -0.00608  r300 -0.01230 | below-extrap share 0.00  mean R30 0.947 R90 0.781
+(c2) stretched with each qubit's OWN measured beta (3-point fit of ln(-ln R) vs ln t, clipped 0.8-1.4)
+stretch per-qubit beta clock=abs0                    own -0.00201 (seed sd 0.00009)  r90 -0.00191  r300 -0.00148 | below-extrap share 0.75  mean R30 0.852 R90 0.652
+stretch per-qubit beta clock=abs30                   own -0.00314 (seed sd 0.00009)  r90 -0.00304  r300 -0.00261 | below-extrap share 0.75  mean R30 0.852 R90 0.652
+stretch per-qubit beta clock=renew                   own +0.00015 (seed sd 0.00009)  r90 +0.00025  r300 +0.00068 | below-extrap share 0.75  mean R30 0.852 R90 0.652
+(d) timing: finite X-gate duration (each excited segment is 30+g us, reference waits are 30), exponential and mixture decay
+exp, gate g=0.035 us                                 own +0.00019 (seed sd 0.00009)  r90 +0.00006  r300 +0.00003 | below-extrap share 0.50  mean R30 0.874 R90 0.673
+exp, gate g=0.100 us                                 own +0.00021 (seed sd 0.00009)  r90 +0.00009  r300 +0.00005 | below-extrap share 0.50  mean R30 0.874 R90 0.673
+exp, gate g=0.500 us                                 own +0.00035 (seed sd 0.00009)  r90 +0.00023  r300 +0.00019 | below-extrap share 0.50  mean R30 0.874 R90 0.673
+exp, gate g=1.000 us                                 own +0.00052 (seed sd 0.00009)  r90 +0.00040  r300 +0.00036 | below-extrap share 0.50  mean R30 0.874 R90 0.673
+mixture sigma=1.2, gate g=0.035 us                   own -0.00956 (seed sd 0.00008)  r90 -0.01018  r300 -0.00777 | below-extrap share 1.00  mean R30 0.760 R90 0.551
+mixture sigma=1.2, gate g=0.100 us                   own -0.00956 (seed sd 0.00008)  r90 -0.01017  r300 -0.00777 | below-extrap share 1.00  mean R30 0.760 R90 0.551
+
+NOISE-FREE (infinite shots, exact expectations; slope of the estimator on the true curves; exp baseline must be 0):
+exp                                                  own +0.00000  r90 +0.00000  r300 -0.00000
+mixture sigma=0.4                                    own -0.00171  r90 -0.00157  r300 -0.00102
+mixture sigma=0.5                                    own -0.00260  r90 -0.00241  r300 -0.00159
+mixture sigma=1.2                                    own -0.00964  r90 -0.01022  r300 -0.00779
+CONTROL mixture re-drawn every wait sigma=0.5        own +0.00000  r90 +0.00020  r300 +0.00101
+CONTROL mixture re-drawn every wait sigma=1.2        own +0.00000  r90 -0.00059  r300 +0.00185
+stretch beta=0.9 renew                               own +0.00000  r90 +0.00090  r300 +0.00209
+stretch beta=0.9 abs0                                own -0.00424  r90 -0.00335  r300 -0.00215
+exp gate g=0.035                                     own +0.00001  r90 +0.00001  r300 +0.00001
+exp gate g=0.1                                       own +0.00004  r90 +0.00004  r300 +0.00004
+
+PER-QUBIT own-interval slope, binned by non-exponentiality d = R300^(1/10) - R30 (9 runs pooled). cells: n qubits, mean slope
+   bins of d: [-inf,-0.03)  [-0.03,0.00)  [0.00,0.03)  [0.03,0.06)  [0.06,0.10)  [0.10,inf)
+   MEASURED                      6:+0.0067  279:+0.0015  666:-0.0013  226:-0.0028  80:-0.0040  70:-0.0062
+   synthetic exp (perfect X)     1390:+0.0029  25289:+0.0012  25091:-0.0009  1293:-0.0013  17:+0.0011  0:+nan
+   synthetic mixture sigma=0.43  92:+0.0036  11041:+0.0001  32454:-0.0023  7564:-0.0029  1691:-0.0008  238:+0.0004
+
+MIXTURE (T1 varies shot to shot, sigma = lognormal width of the rate) -- parameter matched PER RUN so the synthetic share below the 300-us extrapolation equals that run's real share:
+   run  chip        param | real share | real slope own/r90/r300            | model slope own/r90/r300         | mean N2,N6,N10 real vs model
+   371  ibm_fez     0.428 |   0.92     | -0.00182 -0.00231 -0.00247 | -0.00203 -0.00221 -0.00227 | real 0.2354 0.4307 0.5024  model 0.2156 0.4078 0.4840
+   392  ibm_kingston 0.502 |   0.85     | -0.00198 -0.00178 -0.00104 | -0.00251 -0.00235 -0.00147 | real 0.1612 0.3249 0.4073  model 0.1426 0.3014 0.3851
+   441  ibm_boston  0.383 |   0.74     | -0.00139 -0.00148 -0.00139 | -0.00137 -0.00131 -0.00081 | real 0.1501 0.3019 0.3889  model 0.1305 0.2864 0.3738
+   711  ibm_boston  0.389 |   0.74     | -0.00154 -0.00127 -0.00120 | -0.00145 -0.00139 -0.00084 | real 0.1471 0.2989 0.3883  model 0.1304 0.2867 0.3744
+   712  ibm_boston  0.333 |   0.68     | -0.00080 -0.00074 -0.00056 | -0.00101 -0.00101 -0.00059 | real 0.1370 0.2904 0.3803  model 0.1224 0.2761 0.3656
+   713  ibm_boston  0.404 |   0.76     | -0.00063 -0.00048 -0.00024 | -0.00155 -0.00149 -0.00087 | real 0.1388 0.2932 0.3860  model 0.1283 0.2829 0.3704
+   721  ibm_kingston 0.421 |   0.77     | -0.00114 -0.00125 -0.00059 | -0.00175 -0.00166 -0.00100 | real 0.1487 0.3102 0.3947  model 0.1316 0.2880 0.3745
+   722  ibm_kingston 0.457 |   0.80     | -0.00134 -0.00158 -0.00082 | -0.00201 -0.00192 -0.00115 | real 0.1539 0.3140 0.3994  model 0.1362 0.2937 0.3787
+   723  ibm_kingston 0.486 |   0.83     | -0.00161 -0.00152 -0.00077 | -0.00226 -0.00216 -0.00135 | real 0.1534 0.3137 0.3974  model 0.1381 0.2935 0.3773
+   MEAN of 9 runs: real own -0.00136 r90 -0.00138 r300 -0.00101   model own -0.00177 r90 -0.00172 r300 -0.00115   (model/real own = 1.30)
+
+STRETCHED, clock since circuit start (beta<1 side only) -- parameter matched PER RUN so the synthetic share below the 300-us extrapolation equals that run's real share:
+   run  chip        param | real share | real slope own/r90/r300            | model slope own/r90/r300         | mean N2,N6,N10 real vs model
+   371  ibm_fez     0.933 |   0.92     | -0.00182 -0.00231 -0.00247 | -0.00195 -0.00202 -0.00189 | real 0.2354 0.4307 0.5024  model 0.1955 0.3855 0.4670
+   392  ibm_kingston 0.939 |   0.85     | -0.00198 -0.00178 -0.00104 | -0.00255 -0.00203 -0.00126 | real 0.1612 0.3249 0.4073  model 0.1289 0.2849 0.3732
+   441  ibm_boston  0.965 |   0.74     | -0.00139 -0.00148 -0.00139 | -0.00148 -0.00115 -0.00070 | real 0.1501 0.3019 0.3889  model 0.1229 0.2770 0.3671
+   711  ibm_boston  0.965 |   0.74     | -0.00154 -0.00127 -0.00120 | -0.00153 -0.00120 -0.00074 | real 0.1471 0.2989 0.3883  model 0.1226 0.2771 0.3676
+   712  ibm_boston  0.974 |   0.68     | -0.00080 -0.00074 -0.00056 | -0.00103 -0.00079 -0.00046 | real 0.1370 0.2904 0.3803  model 0.1172 0.2695 0.3610
+   713  ibm_boston  0.962 |   0.76     | -0.00063 -0.00048 -0.00024 | -0.00161 -0.00124 -0.00073 | real 0.1388 0.2932 0.3860  model 0.1203 0.2729 0.3633
+   721  ibm_kingston 0.958 |   0.77     | -0.00114 -0.00125 -0.00059 | -0.00177 -0.00137 -0.00084 | real 0.1487 0.3102 0.3947  model 0.1227 0.2769 0.3666
+   722  ibm_kingston 0.949 |   0.80     | -0.00134 -0.00158 -0.00082 | -0.00212 -0.00166 -0.00102 | real 0.1539 0.3140 0.3994  model 0.1254 0.2803 0.3692
+   723  ibm_kingston 0.945 |   0.83     | -0.00161 -0.00152 -0.00077 | -0.00234 -0.00183 -0.00113 | real 0.1534 0.3137 0.3974  model 0.1255 0.2784 0.3665
+   MEAN of 9 runs: real own -0.00136 r90 -0.00138 r300 -0.00101   model own -0.00182 r90 -0.00148 r300 -0.00098   (model/real own = 1.34)
+
+STRETCHED, clock restarted at each X (physically: each flip re-excites) -- parameter matched PER RUN so the synthetic share below the 300-us extrapolation equals that run's real share:
+   run  chip        param | real share | real slope own/r90/r300            | model slope own/r90/r300         | mean N2,N6,N10 real vs model
+   371  ibm_fez     0.933 |   0.92     | -0.00182 -0.00231 -0.00247 | +0.00009 +0.00002 +0.00015 | real 0.2354 0.4307 0.5024  model 0.2127 0.4201 0.5006
+   392  ibm_kingston 0.939 |   0.85     | -0.00198 -0.00178 -0.00104 | +0.00016 +0.00068 +0.00144 | real 0.1612 0.3249 0.4073  model 0.1396 0.3121 0.4055
+   441  ibm_boston  0.965 |   0.74     | -0.00139 -0.00148 -0.00139 | +0.00014 +0.00046 +0.00091 | real 0.1501 0.3019 0.3889  model 0.1286 0.2921 0.3857
+   711  ibm_boston  0.965 |   0.74     | -0.00154 -0.00127 -0.00120 | +0.00012 +0.00045 +0.00091 | real 0.1471 0.2989 0.3883  model 0.1284 0.2925 0.3866
+   712  ibm_boston  0.974 |   0.68     | -0.00080 -0.00074 -0.00056 | +0.00018 +0.00042 +0.00075 | real 0.1370 0.2904 0.3803  model 0.1212 0.2803 0.3746
+   713  ibm_boston  0.962 |   0.76     | -0.00063 -0.00048 -0.00024 | +0.00015 +0.00053 +0.00104 | real 0.1388 0.2932 0.3860  model 0.1263 0.2891 0.3835
+   721  ibm_kingston 0.958 |   0.77     | -0.00114 -0.00125 -0.00059 | +0.00017 +0.00057 +0.00110 | real 0.1487 0.3102 0.3947  model 0.1297 0.2953 0.3891
+   722  ibm_kingston 0.949 |   0.80     | -0.00134 -0.00158 -0.00082 | +0.00016 +0.00062 +0.00126 | real 0.1539 0.3140 0.3994  model 0.1340 0.3026 0.3960
+   723  ibm_kingston 0.945 |   0.83     | -0.00161 -0.00152 -0.00077 | +0.00016 +0.00066 +0.00136 | real 0.1534 0.3137 0.3974  model 0.1348 0.3026 0.3957
+   MEAN of 9 runs: real own -0.00136 r90 -0.00138 r300 -0.00101   model own +0.00015 r90 +0.00049 r300 +0.00099   (model/real own = -0.11)
+
+CONTROL: mixture re-drawn at every wait -- parameter matched PER RUN so the synthetic share below the 300-us extrapolation equals that run's real share:
+   run  chip        param | real share | real slope own/r90/r300            | model slope own/r90/r300         | mean N2,N6,N10 real vs model
+   371  ibm_fez     0.428 |   0.92     | -0.00182 -0.00231 -0.00247 | +0.00011 -0.00007 -0.00013 | real 0.2354 0.4307 0.5024  model 0.2156 0.4217 0.5011
+   392  ibm_kingston 0.502 |   0.85     | -0.00198 -0.00178 -0.00104 | +0.00015 +0.00031 +0.00119 | real 0.1612 0.3249 0.4073  model 0.1426 0.3145 0.4063
+   441  ibm_boston  0.383 |   0.74     | -0.00139 -0.00148 -0.00139 | +0.00017 +0.00023 +0.00073 | real 0.1501 0.3019 0.3889  model 0.1305 0.2934 0.3861
+   711  ibm_boston  0.389 |   0.74     | -0.00154 -0.00127 -0.00120 | +0.00015 +0.00021 +0.00076 | real 0.1471 0.2989 0.3883  model 0.1304 0.2939 0.3872
+   712  ibm_boston  0.333 |   0.68     | -0.00080 -0.00074 -0.00056 | +0.00014 +0.00015 +0.00057 | real 0.1370 0.2904 0.3803  model 0.1224 0.2811 0.3748
+   713  ibm_boston  0.404 |   0.76     | -0.00063 -0.00048 -0.00024 | +0.00015 +0.00021 +0.00083 | real 0.1388 0.2932 0.3860  model 0.1283 0.2905 0.3840
+   721  ibm_kingston 0.421 |   0.77     | -0.00114 -0.00125 -0.00059 | +0.00013 +0.00022 +0.00088 | real 0.1487 0.3102 0.3947  model 0.1316 0.2967 0.3895
+   722  ibm_kingston 0.457 |   0.80     | -0.00134 -0.00158 -0.00082 | +0.00020 +0.00029 +0.00106 | real 0.1539 0.3140 0.3994  model 0.1362 0.3043 0.3964
+   723  ibm_kingston 0.486 |   0.83     | -0.00161 -0.00152 -0.00077 | +0.00017 +0.00027 +0.00108 | real 0.1534 0.3137 0.3974  model 0.1381 0.3051 0.3967
+   MEAN of 9 runs: real own -0.00136 r90 -0.00138 r300 -0.00101   model own +0.00015 r90 +0.00020 r300 +0.00077   (model/real own = -0.11)
+

@@ -1,0 +1,18 @@
+remaining seconds: 555
+ibm_kingston: 32 pubs per copy, pairs 48, singles 21, K1 [0], L=545 dt, total shots per copy 124000, ESTIMATED 37 s per copy, 74 s per processor (two copies)
+SUBMITTED ibm_kingston copy 0 dbd06gk24mrc73ckgv50
+DONE ibm_kingston copy 0: remaining now 520
+SUBMITTED ibm_kingston copy 1 dbd07ss24mrc73ckh180
+DONE ibm_kingston copy 1: remaining now 485
+remaining seconds: 485
+ibm_marrakesh: 32 pubs per copy, pairs 48, singles 21, K1 [0], L=671 dt, total shots per copy 124000, ESTIMATED 37 s per copy, 74 s per processor (two copies)
+SUBMITTED ibm_marrakesh copy 0 dbd097s24mrc73ckh370
+DONE ibm_marrakesh copy 0: remaining now 448
+SUBMITTED ibm_marrakesh copy 1 dbd0afvi0auc7394ffqg
+DONE ibm_marrakesh copy 1: remaining now 411
+remaining seconds: 411
+ibm_fez: 32 pubs per copy, pairs 48, singles 21, K1 [0], L=415 dt, total shots per copy 124000, ESTIMATED 37 s per copy, 73 s per processor (two copies)
+SUBMITTED ibm_fez copy 0 dbd0bsk24mrc73ckh8ag
+DONE ibm_fez copy 0: remaining now 376
+SUBMITTED ibm_fez copy 1 dbd0froc77vs73875nu0
+DONE ibm_fez copy 1: remaining now 341

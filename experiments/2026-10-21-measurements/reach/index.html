@@ -1,0 +1,29 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reach Data</title>
+<link rel="canonical" href="https://heuremen.org/experiments/2026-10-21-measurements/reach/">
+<meta name="tdm-reservation" content="1">
+<meta name="tdm-policy" content="https://indahl.ai/terms#ai-training">
+<meta name="description" content="These are exploratory readings of 4 to 7 October data. The reach of the kick is read in the 22 October reach run : resolved at 4 couplings with the.">
+<meta property="og:site_name" content="Heuremen LLC">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Reach Data">
+<meta property="og:description" content="These are exploratory readings of 4 to 7 October data. The reach of the kick is read in the 22 October reach run : resolved at 4 couplings with the.">
+<meta property="og:url" content="https://heuremen.org/experiments/2026-10-21-measurements/reach/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://heuremen.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://heuremen.org/og.png">
+<style>body{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;color:#18202B;background:#FFF;font-size:15px;line-height:1.55;max-width:820px;margin:40px auto;padding:0 16px}h1{font-size:24px;color:#0E4A4D;border-bottom:2px solid #0F7173;padding-bottom:6px}h2{font-size:16px;color:#0F7173;margin-top:24px}a{color:#0F7173}code{font-family:Menlo,monospace;font-size:13px;background:#EFF3F1;padding:1px 4px}.foot{color:#6B7480;font-size:13px;margin-top:28px}li{margin:4px 0}</style></head><body>
+<p><a href="/">&larr; What&rsquo;s Lost with a Look</a> &middot; <a href="../">all measurements</a></p>
+<h1>Does distance to the measured qubits matter?</h1>
+<p>These are exploratory readings of 4 to 7 October data. The reach of the kick is read in the 22 October <a href="/experiments/2026-10-22-reach-run/">reach run</a>: resolved at 4 couplings with the three processors combined, about a tenth of the kick next to a measured qubit.</p>
+<p><b>Runs.</b> Six IBM processors with one random layout of measured qubits (4&ndash;6 October 2026), a second layout on ibm_pittsburgh and ibm_marrakesh, a four-cluster layout on ibm_fez, and a distance-band layout on ibm_pittsburgh (7 October). Job IDs in the data files.</p>
+<h2>What holds</h2><ul>
+<li>Rank correlation of an untouched qubit&rsquo;s excess with &Sigma;1/r&sup2; over the measured qubits: +0.157; with the number of measured qubits within two spacings: +0.120; with distance to the nearest: &minus;0.085 (1283 untouched-qubit readings, five processors). Weak.</li>
+<li>Binned by measured qubits within two spacings (six processors): 1.039 / 1.045 / 1.083 / 1.181 for 0 / 1 / 2 / &ge;3.</li>
+<li>Second layout: rose on ibm_pittsburgh (1.032 &rarr; 1.176); fell on ibm_marrakesh.</li>
+<li>Four-cluster centres on ibm_fez, all readable reads: &minus;0.42 to 3.25; the open field reads 0.983 on the same estimator.</li></ul>
+<h2>Run it</h2><p>Download the script and the files in <code>data/</code> into one folder (data in <code>data/</code>), then <code>python3 verify_reach.py</code>. Standard library only; it prints each figure beside the recomputed value. The compact data were cut from the raw results; the raw files and the reduction scripts are available on request.</p>
+<p>Files: <a href="verify_reach.py">verify_reach.py</a> &middot; <a href="data/clusters.json">data/clusters.json</a> &middot; <a href="data/floor.json">data/floor.json</a> &middot; <a href="data/layout_A_pool.json">data/layout_A_pool.json</a> &middot; <a href="data/layout_B.json">data/layout_B.json</a></p>
+<p>Data tables and recounts: <a href="https://indahl.ai/qia">QIA</a> &middot; <a href="https://indahl.ai/iris">IRIS</a></p>
+<p class="foot">Bones &middot; Wayfinder &middot; Sage &middot; Shuttle &middot; Nova<br><a href="https://indahl.ai">Heuremen LLC</a><br>&ldquo;We found it.&rdquo;</p></body></html>

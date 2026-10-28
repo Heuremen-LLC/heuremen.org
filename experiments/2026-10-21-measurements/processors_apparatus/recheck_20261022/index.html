@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Decay Baseline Re-check</title>
+<link rel="canonical" href="https://heuremen.org/experiments/2026-10-21-measurements/processors_apparatus/recheck_20261022/">
+<meta name="tdm-reservation" content="1">
+<meta name="tdm-policy" content="https://indahl.ai/terms#ai-training">
+<meta name="description" content="Question: was the 48 to 52 % baseline for “below the line at 30 µs” built like for like? On classified 0/1 bits, readout error alone would push a pure.">
+<meta property="og:site_name" content="Heuremen LLC">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Decay Baseline Re-check">
+<meta property="og:description" content="Question: was the 48 to 52 % baseline for “below the line at 30 µs” built like for like? On classified 0/1 bits, readout error alone would push a pure.">
+<meta property="og:url" content="https://heuremen.org/experiments/2026-10-21-measurements/processors_apparatus/recheck_20261022/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://heuremen.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://heuremen.org/og.png">
+
+<style>body{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;color:#18202B;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.5}a{color:#0F7173}</style></head><body>
+<p><a href="/">&larr; What&rsquo;s Lost with a Look</a></p>
+<h1>Re-check of the decay baseline, 22 October 2026</h1>
+<p>Question: was the 48 to 52&thinsp;% baseline for &ldquo;below the line at 30&nbsp;&micro;s&rdquo; built like for like? On classified 0/1 bits, readout error alone would push a pure exponential to 77 to 97&thinsp;% below the line. These runs did not use classified bits: their levels are raw readout signal normalised with each job&rsquo;s own off and on references, which is linear in population and divides readout error out.</p>
+<p>Re-built baseline: a pure single exponential per qubit (its own fitted decay time), passed through a simulated measurement chain with shot noise, cloud overlap, relaxation during readout, imperfect preparation of 1, the idle floor and the same normalisation, at the same shots and copies. It gives 49.2 to 53.6&thinsp;% (48.6 to 54.2&thinsp;% across nine variants). The published procedure applied to the simulated data returns 48.6 to 50.2&thinsp;%, so it was unbiased.</p>
+<p>Observed against the re-built baseline, all 26 jobs are ABOVE under all nine variants; the smallest lower end of the 95&thinsp;% interval over qubits is +6.1 points. Median points above, by processor: aachen +14.4, boston +17.2, fez +32.8, kingston +23.8, marrakesh +29.0, pittsburgh +12.2. The claim stands; its baseline range is now stated as 49 to 54&thinsp;%.</p>
+<p>Limits: the compact data hold no raw clouds, so the cloud separation was swept (4 to 9 noise widths) and shots were set from the copy-to-copy scatter. A per-qubit effect shared by all three copies is not excluded by this data.</p>
+<p><a href="REPORT.text">report</a> &middot; <a href="table.text">per-job table</a> &middot; <a href="results.text">results</a> &middot; <a href="sim.py">sim.py</a> &middot; <a href="run.py">run.py</a> &middot; <a href="bits.py">bits.py</a></p>
+<p>Data tables and recounts: <a href="https://indahl.ai/qia">QIA</a> &middot; <a href="https://indahl.ai/iris">IRIS</a></p>
+<p class="foot">Bones &middot; Wayfinder &middot; Sage &middot; Shuttle &middot; Nova<br><a href="https://indahl.ai">Heuremen LLC</a><br>&ldquo;We found it.&rdquo;</p>
+</body></html>

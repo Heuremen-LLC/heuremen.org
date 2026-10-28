@@ -1,0 +1,8 @@
+remaining seconds: 43
+ibm_kingston: 24 pubs, E 39, S 117, L=545 dt, circuits 2.2-19.7 us, shots 1500 (total 36000), queue 0
+SUBMITTED ibm_kingston dbcivnpgv2cc73eaf210
+DONE ibm_kingston: remaining now 31
+remaining seconds: 31
+ibm_marrakesh: 24 pubs, E 39, S 117, L=671 dt, circuits 2.8-24.2 us, shots 1500 (total 36000), queue 1
+SUBMITTED ibm_marrakesh dbcivv424mrc73cjo4m0
+DONE ibm_marrakesh: remaining now 19

@@ -1,0 +1,15 @@
+remaining seconds at start: 86
+ibm_fez: 30 pubs, emitters 39, spectators 117, L=415 dt, longest circuit 28.3 us
+SUBMITTED ibm_fez dbcgkcs24mrc73cjk29g
+DONE ibm_fez: quantum_seconds None, remaining now 68
+ibm_marrakesh: 30 pubs, emitters 39, spectators 117, L=671 dt, longest circuit 45.7 us
+SUBMITTED ibm_marrakesh dbcgkmk24mrc73cjk2o0
+DONE ibm_marrakesh: quantum_seconds None, remaining now 49
+ibm_kingston: 30 pubs, emitters 39, spectators 117, L=545 dt, longest circuit 37.1 us
+SUBMITTED ibm_kingston dbcgkufi0auc73duu9rg
+DONE ibm_kingston: quantum_seconds None, remaining now 30
+remaining seconds at start: 30
+ibm_pittsburgh: 30 pubs, emitters 39, spectators 117, L=545 dt, longest circuit 37.1 us
+SUBMITTED ibm_pittsburgh dbcgmls24mrc73cjk5j0
+DONE ibm_pittsburgh: quantum_seconds None, remaining now 11
+ibm_boston: 30 pubs, emitters 39, spectators 117, L=545 dt, longest circuit 37.1 us

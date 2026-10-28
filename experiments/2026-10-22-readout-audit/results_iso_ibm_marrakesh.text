@@ -1,0 +1,18 @@
+=== ibm_marrakesh job dbdaheni0auc73952f70; qubits stated P(1|0)=0 at firing: [8, 15, 18, 25, 29, 30, 45, 47, 93, 95, 98, 105, 134, 139]; 20000 isolated shots vs 20000 all-qubit shots (run 1)
+    q8: isolated 0.0068  all-qubit 0.0059
+    q15: isolated 0.0072  all-qubit 0.0120
+    q18: isolated 0.0044  all-qubit 0.0102
+    q25: isolated 0.0007  all-qubit 0.0087
+    q29: isolated 0.0067  all-qubit 0.0042
+    q30: isolated 0.0098  all-qubit 0.0037
+    q45: isolated 0.0003  all-qubit 0.0261
+    q47: isolated 0.0121  all-qubit 0.0239
+    q93: isolated 0.0043  all-qubit 0.0024
+    q95: isolated 0.0009  all-qubit 0.0055
+    q98: isolated 0.0029  all-qubit 0.0021
+    q105: isolated 0.0199  all-qubit 0.0180
+    q134: isolated 0.0091  all-qubit 0.0015
+    q139: isolated 0.0024  all-qubit 0.0109
+  KNOWN-GOOD mean P(1 | |1>) over listed qubits 0.9858 (must be >= 0.80): MET
+  R1 isolated - simultaneous P(1|0), median over 14 qubits: -0.0019 [-0.0080, +0.0020] -> CONSISTENT
+  R3 isolated: stated-zero qubits with delivered P(1|0) 95 % lower bound above 0.00073: 11 of 14; delivered median 0.0056

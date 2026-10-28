@@ -1,0 +1,8 @@
+# flipcheck_run2/run_flip.py dry-runs, 22 Oct 2026 (nothing submitted). Instance: Darkwave Disco. Remaining at dry-run: 482 s.
+# run_flip.py is byte-identical to run 1's (same circuits, shuffle seed, shots, N, chips).
+ibm_kingston:  flip check in transpiled circuits: OK (one x per measured qubit, right before its final readout)
+ibm_kingston:  26 pubs, E 39, S 117, L=545 dt, circuits 2.2-19.7 us, shots/circuit 3000, total shots 78000, ESTIMATED 23.4 s, raw IQ ~132 MB, queue 5
+ibm_marrakesh: flip check in transpiled circuits: OK
+ibm_marrakesh: 26 pubs, E 39, S 117, L=671 dt, circuits 2.7-24.3 us, shots/circuit 3000, total shots 78000, ESTIMATED 23.6 s, raw IQ ~132 MB, queue 0
+ibm_fez:       flip check in transpiled circuits: OK
+ibm_fez:       26 pubs, E 39, S 117, L=415 dt, circuits 1.7-15.0 us, shots/circuit 3000, total shots 78000, ESTIMATED 23.2 s, raw IQ ~132 MB, queue 7

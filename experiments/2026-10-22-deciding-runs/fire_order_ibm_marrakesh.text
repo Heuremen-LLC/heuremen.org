@@ -1,0 +1,3 @@
+order ibm_marrakesh: 32 pubs, 3000 shots each, circuits 8.1-8.1 us, total shots 96000, ESTIMATED 29 s, remaining 2293, queue 1
+SUBMITTED order ibm_marrakesh dbcn7cvi0auc7393tv5g
+DONE order ibm_marrakesh: remaining now 2138

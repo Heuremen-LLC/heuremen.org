@@ -1,0 +1,6 @@
+ibm_kingston: measured-qubit excitation rate 0.0306
+   next to a measured qubit  n= 86  excess +0.0041 [-0.0033,+0.0141]  random-excitation prediction +0.0005  difference +0.0029 [-0.0049,+0.0136]
+   no measured neighbour     n= 31  excess +0.0088 [-0.0063,+0.0181]  random-excitation prediction +0.0000  difference +0.0088 [-0.0063,+0.0180]
+ibm_marrakesh: measured-qubit excitation rate 0.0478
+   next to a measured qubit  n= 86  excess +0.0247 [+0.0119,+0.0361]  random-excitation prediction +0.0008  difference +0.0231 [+0.0080,+0.0313]
+   no measured neighbour     n= 31  excess +0.0096 [+0.0002,+0.0186]  random-excitation prediction +0.0000  difference +0.0096 [+0.0002,+0.0186]

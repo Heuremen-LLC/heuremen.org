@@ -1,0 +1,29 @@
+ibm_marrakesh q8: delivered P(1|0) 0.0059 (118/20000); IBM stated P(1|0) in 12 distinct measurements: zero in 2; nonzero values [0.0002, 0.0002, 0.0002, 0.0005, 0.002, 0.0044]
+ibm_marrakesh q15: delivered P(1|0) 0.0120 (240/20000); IBM stated P(1|0) in 12 distinct measurements: zero in 2; nonzero values [0.0002, 0.0027, 0.0039, 0.0044, 0.0056, 0.0098]
+ibm_marrakesh q18: delivered P(1|0) 0.0102 (204/20000); IBM stated P(1|0) in 12 distinct measurements: zero in 1; nonzero values [0.0007, 0.0007, 0.0012, 0.0015, 0.0017, 0.0024]
+ibm_marrakesh q25: delivered P(1|0) 0.0087 (174/20000); IBM stated P(1|0) in 12 distinct measurements: zero in 1; nonzero values [0.0007, 0.0015, 0.002, 0.0095, 0.0107, 0.0117]
+ibm_marrakesh q29: delivered P(1|0) 0.0042 (83/20000); IBM stated P(1|0) in 12 distinct measurements: zero in 1; nonzero values [0.0002, 0.0007, 0.0015, 0.0024, 0.0029, 0.0095]
+ibm_marrakesh q30: delivered P(1|0) 0.0037 (75/20000); IBM stated P(1|0) in 12 distinct measurements: zero in 1; nonzero values [0.0005, 0.0007, 0.001, 0.001, 0.0012, 0.0017]
+ibm_marrakesh q45: delivered P(1|0) 0.0261 (521/20000); IBM stated P(1|0) in 12 distinct measurements: zero in 1; nonzero values [0.0002, 0.001, 0.0015, 0.0015, 0.0027, 0.0039]
+ibm_marrakesh q47: delivered P(1|0) 0.0239 (479/20000); IBM stated P(1|0) in 12 distinct measurements: zero in 2; nonzero values [0.001, 0.0015, 0.0024, 0.0029, 0.0044, 0.0049]
+ibm_marrakesh q93: delivered P(1|0) 0.0024 (48/20000); IBM stated P(1|0) in 12 distinct measurements: zero in 1; nonzero values [0.0002, 0.0015, 0.0029, 0.0039, 0.0056, 0.0083]
+ibm_marrakesh q95: delivered P(1|0) 0.0055 (110/20000); IBM stated P(1|0) in 12 distinct measurements: zero in 1; nonzero values [0.0005, 0.0005, 0.0012, 0.0015, 0.0024, 0.0024]
+ibm_marrakesh q98: delivered P(1|0) 0.0021 (41/20000); IBM stated P(1|0) in 12 distinct measurements: zero in 4; nonzero values [0.0002, 0.0005, 0.0005, 0.001, 0.001, 0.002]
+ibm_marrakesh q105: delivered P(1|0) 0.0180 (359/20000); IBM stated P(1|0) in 12 distinct measurements: zero in 3; nonzero values [0.0005, 0.0005, 0.0012, 0.0015, 0.0024, 0.0051]
+ibm_marrakesh q134: delivered P(1|0) 0.0015 (30/20000); IBM stated P(1|0) in 11 distinct measurements: zero in 1; nonzero values [0.0015, 0.002, 0.002, 0.0034, 0.0046, 0.0054]
+ibm_marrakesh q139: delivered P(1|0) 0.0109 (217/20000); IBM stated P(1|0) in 11 distinct measurements: zero in 2; nonzero values [0.0002, 0.0002, 0.001, 0.0015, 0.002, 0.002]
+ibm_fez q5: delivered P(1|0) 0.0008 (15/20000); IBM stated P(1|0) in 8 distinct measurements: zero in 1; nonzero values [0.002, 0.0034, 0.0049, 0.0059, 0.0061, 0.0063]
+ibm_fez q115: delivered P(1|0) 0.0037 (73/20000); IBM stated P(1|0) in 8 distinct measurements: zero in 1; nonzero values [0.0007, 0.002, 0.0063, 0.0068, 0.0129, 0.0195]
+ibm_kingston q11: delivered P(1|0) 0.0026 (52/20000); IBM stated P(1|0) in 10 distinct measurements: zero in 1; nonzero values [0.0005, 0.0007, 0.0012, 0.0015, 0.0015, 0.0015]
+
+AGE of each stated zero at our job, and the chance of 0 of 4096 at the delivered rate:
+  ibm_marrakesh zeros measured q8 3.9 h, q15 3.9 h, q18 3.9 h, q25 3.9 h, q29 3.9 h, q30 3.9 h, q45 3.9 h, q47 3.9 h, q93 3.9 h, q95 3.9 h, q98 3.9 h, q105 3.9 h, q134 3.9 h, q139 3.9 h before our job
+  ibm_fez zeros measured q5 3.2 h, q115 3.2 h before our job
+  ibm_kingston zeros measured q11 0.9 h before our job
+  P(0 of 4096 | true rate 0.0015) = 2.14e-03
+  P(0 of 4096 | true rate 0.0021) = 1.82e-04
+  P(0 of 4096 | true rate 0.0037) = 2.55e-07
+  P(0 of 4096 | true rate 0.0059) = 2.98e-11
+  P(0 of 4096 | true rate 0.0073) = 9.26e-14
+  P(0 of 4096 | true rate 0.012) = 3.35e-22
+  P(0 of 4096 | true rate 0.0261) = 9.01e-48

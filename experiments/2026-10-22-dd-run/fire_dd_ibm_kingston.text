@@ -1,0 +1,15 @@
+ibm_kingston timing: dt 4e-09 s, L 545 dt, X 8 dt, granularity 1, pulse_alignment 1, acquire_alignment 1 -> echo d1 132, X, d2 265, X, d3 132 dt
+VERIFIED: X per spectator = 2N (DD on) / 0 (DD off), none on measured qubits; every step exactly L = 545 dt; step block (N x L) and total scheduled duration identical DD on vs off for every (mode, N, setting, copy)
+  DD off N= 0 circuit durations (us): [np.float64(2.244)]
+  DD off N= 2 circuit durations (us): [np.float64(6.604)]
+  DD off N= 4 circuit durations (us): [np.float64(10.964)]
+  DD off N= 8 circuit durations (us): [np.float64(19.684)]
+  DD off N=16 circuit durations (us): [np.float64(37.124)]
+  DD on  N= 0 circuit durations (us): [np.float64(2.244)]
+  DD on  N= 2 circuit durations (us): [np.float64(6.604)]
+  DD on  N= 4 circuit durations (us): [np.float64(10.964)]
+  DD on  N= 8 circuit durations (us): [np.float64(19.684)]
+  DD on  N=16 circuit durations (us): [np.float64(37.124)]
+dd ibm_kingston: 72 pubs, 4000 shots each, E 39, S 117, circuits 2.2-37.1 us, total shots 288000, ESTIMATED 88 s, remaining 1681, queue 1
+SUBMITTED dd ibm_kingston dbcuqa0c77vs738739g0
+DONE dd ibm_kingston: remaining now 1516

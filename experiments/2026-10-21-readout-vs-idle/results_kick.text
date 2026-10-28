@@ -1,0 +1,21 @@
+ibm_boston NOTHING_RETURNED
+ibm_fez        L=1.660 us  n=117
+   excess = a*s_D + c :  a = -0.005 [-0.072, +0.049]   c = +2.18 [+1.52, +2.91] deg/readout
+   median kick per readout, measured qubits in 0: +1.73 [+1.29, +2.21] deg;  in 1: +4.13 [+3.48, +4.91] deg
+   spectators precessing backwards (n=29): median excess +1.49 deg/readout
+   R0 with |rate| >= 4 deg/us (n=50): 1.087
+ibm_kingston   L=2.180 us  n=117
+   excess = a*s_D + c :  a = -0.109 [-0.257, +0.015]   c = +4.29 [+3.32, +5.27] deg/readout
+   median kick per readout, measured qubits in 0: +2.41 [+1.96, +3.58] deg;  in 1: +4.65 [+4.16, +5.56] deg
+   spectators precessing backwards (n=30): median excess +3.28 deg/readout
+   R0 with |rate| >= 4 deg/us (n=32): 1.095
+ibm_marrakesh  L=2.684 us  n=117
+   excess = a*s_D + c :  a = -0.240 [-0.410, -0.075]   c = +3.26 [+2.06, +4.54] deg/readout
+   median kick per readout, measured qubits in 0: +2.13 [+1.44, +2.79] deg;  in 1: +4.29 [+3.53, +4.73] deg
+   spectators precessing backwards (n=35): median excess +3.01 deg/readout
+   R0 with |rate| >= 4 deg/us (n=32): 0.947
+ibm_pittsburgh L=2.180 us  n=117
+   excess = a*s_D + c :  a = -0.200 [-0.385, -0.048]   c = +4.30 [+3.20, +5.64] deg/readout
+   median kick per readout, measured qubits in 0: +1.79 [+1.16, +2.66] deg;  in 1: +4.25 [+3.86, +5.03] deg
+   spectators precessing backwards (n=24): median excess +2.75 deg/readout
+   R0 with |rate| >= 4 deg/us (n=33): 1.100

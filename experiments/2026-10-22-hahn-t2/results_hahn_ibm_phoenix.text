@@ -1,0 +1,4 @@
+=== ibm_phoenix job dbd9g20c77vs7387ljg0; IBM record 2026-10-22 18:59:39-04:00; KNOWN-GOOD median P(1) at tau 0 = 0.988 (must be >= 0.90): MET
+  delivered / stated T2, median over 119 qubits: 0.911 [0.888, 0.923] vs 1 -> BELOW   (copy gap +0.007 [-0.005, +0.020]; qubits below stated 92 of 119)
+ibm_phoenix 1 run(s) pooled by qubit, FIXED 1/2   : median 0.911 [0.888, 0.923] over 119 qubits -> BELOW  (below stated 92)
+ibm_phoenix 1 run(s) pooled by qubit, FREE asymptote: median 0.989 [0.948, 1.023] over 119 qubits -> CONSISTENT  (below stated 63)

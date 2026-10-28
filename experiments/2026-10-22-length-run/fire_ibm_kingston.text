@@ -1,0 +1,2 @@
+ibm_kingston: L1 545 dt (2.180 us), L2 345 dt (1.380 us); 48 circuits, E 39, S 117; 7.8-19.7 us; ESTIMATED 73 s; remaining 357; queue 1; ops ['barrier', 'delay', 'measure', 'measure_2', 'rz', 'sx', 'x']
+SUBMITTED ibm_kingston dbd4po1gv2cc738hc370

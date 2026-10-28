@@ -1,0 +1,21 @@
+=== ibm_marrakesh: isolated (dbdaheni0auc73952f70) vs all-qubit repeat (dbdahc8c77vs7387nsqg), fired in the same minute
+    q8: isolated 0.0068  all-qubit repeat 0.0067
+    q15: isolated 0.0072  all-qubit repeat 0.0046
+    q18: isolated 0.0044  all-qubit repeat 0.0065
+    q25: isolated 0.0007  all-qubit repeat 0.0056
+    q29: isolated 0.0067  all-qubit repeat 0.0126
+    q30: isolated 0.0098  all-qubit repeat 0.0126
+    q45: isolated 0.0003  all-qubit repeat 0.0003
+    q47: isolated 0.0121  all-qubit repeat 0.0185
+    q93: isolated 0.0043  all-qubit repeat 0.0080
+    q95: isolated 0.0009  all-qubit repeat 0.0014
+    q98: isolated 0.0029  all-qubit repeat 0.0047
+    q105: isolated 0.0199  all-qubit repeat 0.0285
+    q134: isolated 0.0091  all-qubit repeat 0.0122
+    q139: isolated 0.0024  all-qubit repeat 0.0016
+  vs repeat R1 isolated - simultaneous P(1|0), median over 14 qubits: -0.0024 [-0.0048, +0.0001] -> CONSISTENT
+  vs repeat R3 isolated: stated-zero qubits with delivered P(1|0) 95 % lower bound above 0.00073: 11 of 14; delivered median 0.0056
+props_ro_ibm_marrakesh_run1.json 2026-10-22 19:23:28-04:00 zeros 14 dates ['2026-10-22 16:25']
+props_ro_ibm_marrakesh.json 2026-10-22 19:23:28-04:00 zeros 14 dates ['2026-10-22 16:25']
+props_iso_ibm_marrakesh.json 2026-10-22 20:14:52-04:00 zeros 14 dates ['2026-10-22 16:25']
+marrakesh 14 stated-zero qubits: count reading at or below 3/4096 = 0.00073 in each of our reads: {'run1': 0, 'repeat': 1, 'isolated': 2} | IBM session: 14 of 14 at 0

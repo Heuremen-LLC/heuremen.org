@@ -1,0 +1,8 @@
+=== ibm_marrakesh job dbdafboc77vs7387no5g; IBM record 2026-10-22 19:23:28-04:00; 20000 shots per state per qubit
+  KNOWN-GOOD median P(0 | |0>) = 0.9853 (must be >= 0.90): MET
+  R1 delivered / stated readout_error, median over 156 qubits: 1.067 [0.953, 1.380] vs 1 -> CONSISTENT  (above stated: 83)
+     P(1|0): delivered / stated median 1.065 [0.772, 1.338] -> CONSISTENT
+     P(0|1): delivered / stated median 0.990 [0.909, 1.223] -> CONSISTENT
+  R2 no qubit in this record has readout_error differing from the mean of its components by > 0.001
+  R3 qubits stated prob_meas1_prep0 = 0: 14; delivered P(1|0) with 95 % lower bound above 0.00073 (0 of 4096): 14; their delivered P(1|0) median 0.0073
+  copy gap in readout error (median per qubit, copy 0 - copy 1): +0.0001 [-0.0003, +0.0003] -> copies agree

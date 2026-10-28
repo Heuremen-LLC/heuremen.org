@@ -1,0 +1,39 @@
+====================================================================================================
+ibm_fez
+    kick below 0 in every group in both runs: True
+    kick per readout, N=8              run gap +0.0076 [-0.1259, +0.1627] -> none resolved | POOLED -1.5765 [-2.1268, -1.1123] deg n=117 -> BELOW
+    H1 size(d=1) - size(d=2), pooled     -0.612 deg [-2.793, +0.455] (n 86 / 31) -> CONSISTENT: neither resolved
+       size d=1 pooled 1.515 deg [0.808, 1.870] n=86
+       size d=2 pooled 2.127 deg [1.121, 4.046] n=31
+    H2 kick(8) - kick(2)               run gap -0.0130 [-0.2056, +0.2124] -> none resolved | POOLED +0.0355 [-0.1417, +0.2271] deg n=117 -> CONSISTENT
+       bound: |change| <= 0.227 deg = 14 % of the kick size 1.577 deg
+    H2 slope                           run gap +0.1007 [-0.1363, +0.2834] -> none resolved | POOLED -1.4752 [-2.0906, -1.0945] deg/readout n=117 -> BELOW
+    H2 intercept                       run gap -0.0448 [-0.9622, +0.4546] -> none resolved | POOLED -0.0852 [-0.7875, +0.2150] deg n=117 -> CONSISTENT
+    H3 loss(8)-loss(2) all shots       run gap +0.0001 [-0.0042, +0.0166] -> none resolved | POOLED +0.0043 [+0.0026, +0.0085]  n=117 -> ABOVE
+    H3 run 2 clean shots, wired (beside, not mixed)  +0.0007 [-0.0033, +0.0111] n=86 -> CONSISTENT
+====================================================================================================
+ibm_kingston
+    kick below 0 in every group in both runs: True
+    kick per readout, N=8              run gap -0.0042 [-0.1252, +0.0834] -> none resolved | POOLED -2.7986 [-3.6930, -2.0598] deg n=117 -> BELOW
+    H1 size(d=1) - size(d=2), pooled     -1.599 deg [-3.731, +0.098] (n 86 / 31) -> CONSISTENT: neither resolved
+       size d=1 pooled 2.189 deg [1.661, 3.294] n=86
+       size d=2 pooled 3.787 deg [2.388, 5.817] n=31
+    H2 kick(8) - kick(2)               run gap -0.1774 [-0.4846, +0.0746] -> none resolved | POOLED -0.0078 [-0.1664, +0.0892] deg n=117 -> CONSISTENT
+       bound: |change| <= 0.166 deg = 6 % of the kick size 2.799 deg
+    H2 slope                           run gap -0.1124 [-0.1981, +0.0445] -> none resolved | POOLED -2.8351 [-3.6946, -2.0806] deg/readout n=117 -> BELOW
+    H2 intercept                       run gap +0.4063 [-0.4257, +1.1535] -> none resolved | POOLED +0.2060 [-0.3899, +0.4467] deg n=117 -> CONSISTENT
+    H3 loss(8)-loss(2) all shots       run gap -0.0026 [-0.0130, +0.0048] -> none resolved | POOLED +0.0047 [-0.0014, +0.0101]  n=117 -> CONSISTENT
+    H3 run 2 clean shots, wired (beside, not mixed)  +0.0072 [-0.0032, +0.0147] n=86 -> CONSISTENT
+====================================================================================================
+ibm_marrakesh
+    kick below 0 in every group in both runs: True
+    kick per readout, N=8              run gap -0.0167 [-0.1463, +0.1210] -> none resolved | POOLED -2.0716 [-3.0095, -1.5241] deg n=117 -> BELOW
+    H1 size(d=1) - size(d=2), pooled     +0.332 deg [-1.901, +1.411] (n 86 / 31) -> CONSISTENT: neither resolved
+       size d=1 pooled 2.131 deg [1.558, 2.999] n=86
+       size d=2 pooled 1.798 deg [1.374, 3.491] n=31
+    H2 kick(8) - kick(2)               run gap -0.0858 [-0.3759, +0.1694] -> none resolved | POOLED +0.2939 [-0.0392, +0.4926] deg n=117 -> CONSISTENT
+       bound: |change| <= 0.493 deg = 24 % of the kick size 2.072 deg
+    H2 slope                           run gap +0.0715 [-0.1376, +0.2838] -> none resolved | POOLED -2.0234 [-2.6026, -1.3787] deg/readout n=117 -> BELOW
+    H2 intercept                       run gap +0.0432 [-0.8513, +0.5943] -> none resolved | POOLED -0.7685 [-1.3025, -0.1795] deg n=117 -> BELOW
+    H3 loss(8)-loss(2) all shots       run gap -0.0065 [-0.0178, +0.0078] -> none resolved | POOLED +0.0120 [+0.0050, +0.0188]  n=117 -> ABOVE
+    H3 run 2 clean shots, wired (beside, not mixed)  +0.0145 [+0.0072, +0.0266] n=86 -> ABOVE

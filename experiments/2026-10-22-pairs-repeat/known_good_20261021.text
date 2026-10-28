@@ -1,0 +1,7 @@
+KNOWN-GOOD (N = 0 idle concurrence on wired pairs), source /Users/heuremen/bones-forge/arxiv_one_readout/control_run
+  ibm_fez        copy 0: wired pairs 46, N=0 idle concurrence median 0.879 (min 0.000, max 0.959), above 0: 98% -> PASS
+  ibm_fez        copy 1: wired pairs 46, N=0 idle concurrence median 0.861 (min 0.000, max 0.947), above 0: 98% -> PASS
+  ibm_kingston   copy 0: wired pairs 46, N=0 idle concurrence median 0.904 (min 0.000, max 0.964), above 0: 98% -> PASS
+  ibm_kingston   copy 1: wired pairs 46, N=0 idle concurrence median 0.910 (min 0.000, max 0.960), above 0: 98% -> PASS
+  ibm_marrakesh  copy 0: wired pairs 46, N=0 idle concurrence median 0.866 (min 0.000, max 0.952), above 0: 96% -> PASS
+  ibm_marrakesh  copy 1: wired pairs 46, N=0 idle concurrence median 0.862 (min 0.000, max 0.947), above 0: 96% -> PASS

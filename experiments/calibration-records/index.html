@@ -1,0 +1,29 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Calibration Records</title>
+<link rel="canonical" href="https://heuremen.org/experiments/calibration-records/">
+<meta name="tdm-reservation" content="1">
+<meta name="tdm-policy" content="https://indahl.ai/terms#ai-training">
+<meta name="description" content="IBM’s own calibration records as we pulled them, behind the record notes of the Quantum Idle Audit QIA-2026-001 (the record notes). The October records.">
+<meta property="og:site_name" content="Heuremen LLC">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calibration Records">
+<meta property="og:description" content="IBM’s own calibration records as we pulled them, behind the record notes of the Quantum Idle Audit QIA-2026-001 (the record notes). The October records.">
+<meta property="og:url" content="https://heuremen.org/experiments/calibration-records/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://heuremen.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://heuremen.org/og.png">
+
+<style>body{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;color:#18202B;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.5}a{color:#0F7173}</style></head><body>
+<p><a href="/">&larr; What&rsquo;s Lost with a Look</a></p>
+<h1>IBM calibration records, September 2026</h1>
+<p>IBM&rsquo;s own calibration records as we pulled them, behind the record notes of the Quantum Idle Audit QIA-2026-001 (the record notes). The October records the other rows use are saved beside each run, in that run&rsquo;s folder.</p>
+<ul>
+<li>Rows 3 and 4 (T1 and T2 dates, kingston and marrakesh, records stamped 26 to 28 September): <a href="ibm_kingston/">ibm_kingston</a>, <a href="ibm_marrakesh/">ibm_marrakesh</a>; ibm_fez records of the same days: <a href="ibm_fez/">ibm_fez</a>. One gzipped JSON per day, as returned by IBM.</li>
+<li>Row 5 (T1 and T2 under a new record stamp): the <a href="daily_medians_2026-09-15_to_10-06.jsonl">daily medians</a> of six processors, 15 September to 6 October, flagged 8 day pairs (a ninth, phoenix 6 Oct 12:25, was pulled after) whose record stamp changed while the T1/T2 medians did not. The <a href="restamp_check/">per-qubit check</a> pulls both records of each pair from IBM&rsquo;s properties history (no job) and compares every qubit: all 2,655 T1 and T2 entries (9 record pairs, including a third phoenix record of 6 October) keep the same value and the same measurement date under the new stamp (<a href="restamp_check/compare_restamp.py">script</a>, <a href="restamp_check/results_restamp.text">output</a>).</li>
+<li>Row 6 (zz on five live edges): <a href="zz_history.py">zz_history.py</a> reads every published record (<a href="results_zz_history.text">output</a>): fez 13&ndash;14 and 39&ndash;53 at 7.45 and 2.89&nbsp;kHz on 26 to 29 September, phoenix 100&ndash;101, 70&ndash;80, 86&ndash;96 at 17.46, 14.13 and 13.68&nbsp;kHz on 5 and 6 October, all 0.00 in the records of 21 and 22 October.</li>
+<li>Record notes 2 to 4, 7 and 8: <a href="record_notes.py">record_notes.py</a> (<a href="results_record_notes.text">output</a>).</li>
+</ul>
+<p>Data tables and recounts: <a href="https://indahl.ai/qia">QIA</a> &middot; <a href="https://indahl.ai/iris">IRIS</a></p>
+<p class="foot">Bones &middot; Wayfinder &middot; Sage &middot; Shuttle &middot; Nova<br><a href="https://indahl.ai">Heuremen LLC</a><br>&ldquo;We found it.&rdquo;</p>
+</body></html>

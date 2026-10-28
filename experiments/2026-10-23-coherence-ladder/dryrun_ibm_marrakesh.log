@@ -1,0 +1,2 @@
+ibm_marrakesh: set sizes [92], 96 circuits, shots 1200, pulse-count failures 0, ESTIMATED 54 s, remaining 138 (Darkwave Disco)
+   ops in one CPMG16 circuit: {'rz': 1656, 'x': 1472, 'delay': 1216, 'sx': 184, 'measure': 92, 'barrier': 35}

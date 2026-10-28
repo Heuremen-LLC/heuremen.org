@@ -1,0 +1,63 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Superposition and Entanglement</title>
+<link rel="canonical" href="https://heuremen.org/experiments/2026-10-21-superposition-entanglement/">
+<meta name="tdm-reservation" content="1">
+<meta name="tdm-policy" content="https://indahl.ai/terms#ai-training">
+<meta name="description" content="Does measuring some qubits mid-circuit cost the untouched qubits around them more superposition and more entanglement than an idle of exactly the same.">
+<meta property="og:site_name" content="Heuremen LLC">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Superposition and Entanglement">
+<meta property="og:description" content="Does measuring some qubits mid-circuit cost the untouched qubits around them more superposition and more entanglement than an idle of exactly the same.">
+<meta property="og:url" content="https://heuremen.org/experiments/2026-10-21-superposition-entanglement/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://heuremen.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://heuremen.org/og.png">
+<style>
+body{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;color:#18202B;background:#FFF;font-size:15px;line-height:1.5;max-width:760px;margin:40px auto;padding:0 20px}
+h1{font-size:26px;color:#0E4A4D;border-bottom:2px solid #0F7173;padding-bottom:6px}
+h2{font-size:16px;color:#0F7173;margin-top:28px;text-transform:uppercase;letter-spacing:.04em}
+a{color:#0F7173}code{font-family:Menlo,monospace;font-size:13px;background:#EFF3F1;padding:1px 4px}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:14px}
+th{text-align:left;color:#0E4A4D;border-bottom:1.5px solid #0F7173;padding:5px 6px}
+td{border-bottom:1px solid #E4E9E6;padding:6px;vertical-align:top}td.n{text-align:right;font-variant-numeric:tabular-nums}
+td.f{white-space:nowrap;font-family:Menlo,monospace;font-size:12.5px}
+.warn{background:#FBF4E6;border-left:4px solid #8A5E0E;padding:10px 14px;margin:14px 0}
+.foot{color:#6B7480;font-size:13px;margin-top:28px}
+</style></head><body>
+<p><a href="/">&larr; What&rsquo;s Lost with a Look</a></p>
+<h1>Superposition and entanglement of untouched qubits during readouts</h1>
+<p>Does measuring some qubits mid-circuit cost the untouched qubits around them more superposition and more entanglement than an idle of exactly the same length? IBM 156-qubit processors ibm_fez, ibm_kingston, ibm_marrakesh, 21 October 2026.</p>
+
+<h2>Design</h2>
+<p>Per chip: 39 measured qubits. Among the 117 untouched qubits, 48 Bell pairs (entanglement) and 21 single qubits in superposition. Then 0, 8, 16 or 32 steps of either <b>idle</b> (measured qubits wait exactly the published readout length) or <b>readout</b> (measured qubits read out, held in 0). Entanglement read as concurrence from five two-qubit settings; superposition as coherence |&lang;X&rang; + i&lang;Y&rang;|. Both are blind to a plain frequency shift or a fixed phase kick; a loss of coherence or a kick that varies from shot to shot moves them. 2000 shots per setting, one job per chip.</p>
+<p>Plan and analysis hashed before submission: <a href="PREREG.md.text">PREREG.md</a>, SHA-256 <code>17ecdc61f533&hellip;</code> (<a href="PREREG.sha256">full hash</a>).</p>
+
+<h2>Planned result (plan hashed locally)</h2>
+<p>Loss after N readouts divided by loss after N equal idles; median over units, 95&thinsp;% bootstrap interval. The plan named 32 readouts as the primary reading and stated the headline would hold only if at least two of three chips read above 1 for each quantity.</p>
+<table><tr><th>reading</th><th class="n">ibm_fez</th><th class="n">ibm_kingston</th><th class="n">ibm_marrakesh</th></tr>
+<tr><td><b>coherence, 32 (primary)</b></td><td class="n">1.011 [0.994, 1.036]</td><td class="n">1.009 [0.984, 1.041]</td><td class="n">1.018 [0.999, 1.026]</td></tr>
+<tr><td><b>concurrence, 32 (primary)</b></td><td class="n">1.000</td><td class="n">1.000</td><td class="n">1.000</td></tr>
+<tr><td>coherence, 16</td><td class="n">0.995 [0.966, 1.016]</td><td class="n">1.004 [0.989, 1.065]</td><td class="n">1.017 [0.994, 1.030]</td></tr>
+<tr><td>coherence, 8</td><td class="n">1.053 [1.018, 1.127]</td><td class="n">1.018 [1.005, 1.075]</td><td class="n">1.028 [1.011, 1.101]</td></tr>
+<tr><td>concurrence, 16</td><td class="n">1.000</td><td class="n">1.035 [1.016, 1.055]</td><td class="n">1.000</td></tr>
+<tr><td>concurrence, 8</td><td class="n">1.014 [0.988, 1.030]</td><td class="n">1.052 [1.018, 1.086]</td><td class="n">1.018 [1.000, 1.075]</td></tr></table>
+<p><b>The primary reading (a loss ratio at 32 steps) came out consistent with 1 on all three chips for both quantities. That is a statement about the ruler: a ratio shrinks a fixed deficit toward 1 once the idle loss is large.</b> For concurrence the primary reading cannot tell: by 32 steps the Bell pairs have lost their entanglement in both arms, and a ratio of two complete losses is 1 by construction (we chose that step count without checking the pairs would survive it). For coherence only 0.09&ndash;0.25 remains at 32 steps in the idle arm, and the plain difference below shows the deficit is still there. The secondary readings declared in the same plan show a small early excess: after 8 readouts coherence loss is above the idle on all three chips, concurrence loss above it on kingston (8 and 16). <a href="results_prereg.text">declared analysis output, all cuts</a></p>
+<p>Exploratory (after the data): converting each unit&rsquo;s loss into idle-equivalent time gives 1.03&ndash;1.07 for coherence and 1.03&ndash;1.08 for concurrence at 8 readouts, 1.19 for marrakesh concurrence at 16 (an unclipped witness, 37 of 48 pairs), and slightly below 1 for every cell at 32. <a href="exploratory_idle_equivalent.py">script</a> &middot; <a href="results_exploratory.text">output</a></p>
+<h2>What it says</h2>
+<p>A loss ratio shrinks toward 1 as the idle loss grows, so it hides a fixed deficit. In plain coherence (readout arm minus idle arm, median per qubit; <a href="coherence_difference.py">coherence_difference.py</a>, <a href="results_coherence_difference.text">output</a>) the deficit is &minus;0.011 fez, &minus;0.005 kingston, &minus;0.013 marrakesh at 8 readouts (95&thinsp;% intervals below 0) and about the same at 32 (&minus;0.010, &minus;0.006, &minus;0.014; intervals reaching 0): readouts cost the untouched qubits a small amount of coherence at 8 readouts and about the same at 32; whether the cost compounds past 8 readouts cannot be read with these qubits (at 32 the intervals reach 0). Plain concurrence difference per Bell pair (<a href="concurrence_difference.py">concurrence_difference.py</a>, <a href="results_concurrence_difference.text">output</a>, after the data): &minus;0.014 [&minus;0.027, &minus;0.004] on kingston at 8 readouts and &minus;0.015 at 16; fez &minus;0.006 [&minus;0.015, +0.005], cannot tell; marrakesh cannot tell (its pairs have nearly lost their entanglement by 8 readouts in the idle arm). A fixed phase kick cannot reduce coherence; a kick that varies from shot to shot could, and these runs do not separate the two. A <a href="/experiments/2026-10-21-excitation-test/">follow-up run</a> examined whether measured qubits accidentally left in 1 could cause it: on ibm_marrakesh the excess is far above what random excitation gives (see that page); on ibm_kingston the excess is +0.004 [&minus;0.003, 0.014], an interval that contains both 0 and the raw-readout run&rsquo;s kingston cost. An earlier Bell-pair run on marrakesh (plan hashed locally) saturated: <a href="/experiments/2026-10-21-entanglement-marrakesh/">published here</a>. The plan&rsquo;s hash was computed locally and not externally timestamped; its declared exploratory split (units next to a measured qubit vs not) is in the excitation test.</p>
+<p>Job records: <a href="job_ibm_fez.json">fez</a> &middot; <a href="job_ibm_kingston.json">kingston</a> &middot; <a href="job_ibm_marrakesh.json">marrakesh</a></p>
+
+<h2>Files</h2>
+<table>
+<tr><td class="f"><a href="PREREG.md.text">PREREG.md</a></td><td>design and declared analysis, hashed before submission</td></tr>
+<tr><td class="f"><a href="run.py">run.py</a></td><td>builds and submits the circuits</td></tr>
+<tr><td class="f"><a href="analyze.py">analyze.py</a> &middot; <a href="results_prereg.text">output</a></td><td>the declared analysis</td></tr>
+<tr><td class="f"><a href="exploratory_idle_equivalent.py">exploratory_idle_equivalent.py</a> &middot; <a href="results_exploratory.text">output</a></td><td>idle-equivalent reading (after the data)</td></tr>
+<tr><td class="f">raw_&lt;chip&gt;.npz</td><td><a href="raw_ibm_fez.npz">fez</a> &middot; <a href="raw_ibm_kingston.npz">kingston</a> &middot; <a href="raw_ibm_marrakesh.npz">marrakesh</a></td></tr>
+<tr><td class="f">job_&lt;chip&gt;.json</td><td>IBM job IDs, qubit roles, pairs</td></tr>
+<tr><td class="f"><a href="fire.log.text">fire.log</a></td><td>submission log</td></tr>
+</table>
+<p>Data tables and recounts: <a href="https://indahl.ai/qia">QIA</a> &middot; <a href="https://indahl.ai/iris">IRIS</a></p>
+<p class="foot">Bones &middot; Wayfinder &middot; Sage &middot; Shuttle &middot; Nova<br><a href="https://indahl.ai">Heuremen LLC</a><br>&ldquo;We found it.&rdquo;</p>
+</body></html>

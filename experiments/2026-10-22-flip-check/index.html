@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Flip Check</title>
+<link rel="canonical" href="https://heuremen.org/experiments/2026-10-22-flip-check/">
+<meta name="tdm-reservation" content="1">
+<meta name="tdm-policy" content="https://indahl.ai/terms#ai-training">
+<meta name="description" content="Claim 6 (readouts cost untouched qubits coherence) survived keeping only shots in which every measured neighbour sat in its 0 cluster. Left open: a.">
+<meta property="og:site_name" content="Heuremen LLC">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Flip Check">
+<meta property="og:description" content="Claim 6 (readouts cost untouched qubits coherence) survived keeping only shots in which every measured neighbour sat in its 0 cluster. Left open: a.">
+<meta property="og:url" content="https://heuremen.org/experiments/2026-10-22-flip-check/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://heuremen.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://heuremen.org/og.png">
+
+<style>body{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;color:#18202B;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.5}a{color:#0F7173}</style></head><body>
+<p><a href="/">&larr; What&rsquo;s Lost with a Look</a></p>
+<h1>X-flip check, 22 October 2026</h1>
+<p>Claim 6 (readouts cost untouched qubits coherence) survived keeping only shots in which every measured neighbour sat in its 0 cluster. Left open: a neighbour leaked to a level whose readout sits inside the 0 cluster. Here every measured qubit gets an X after the last step: a real 0 moves to the 1 cluster, a leaked state does not. The loss is then re-read keeping only shots in which every wired neighbour flipped. Plan, circuits and analysis pushed before any job; results are read below by the committed analysis.</p>
+<p><a href="PLAN_FLIP.md.text">plan</a> &middot; <a href="run_flip.py">run_flip.py</a> &middot; <a href="analyze_flip.py">analyze_flip.py</a> &middot; <a href="synth_flip.py">synth_flip.py</a> &middot; synthetic: <a href="synth_results_full.text">full</a>, <a href="synth_results_marrakesh_side.text">marrakesh side reading</a> &middot; flip-failure rates on 21 Oct, two rules side by side: <a href="derive_flip_guard.py">script</a>, <a href="derive_flip_guard.text">output</a> &middot; <a href="PLAN_FLIP.sha256.text">plan SHA-256</a> &middot; <a href="CODE_FLIP.sha256.text">code SHA-256</a></p>
+<h2>Results of run 1: the known-good check failed on all three processors</h2>
+<p>Read by the committed analysis (<a href="results_flip.text">full output</a>). Jobs: fez dbd00jhgv2cc738h49ng, kingston dbcvu6s24mrc73ckgfcg, marrakesh dbcvvcpgv2cc738h4770 (<a href="fire_flip.text">fire log</a>; job records flipjob_ibm_*.json in this folder).</p>
+<ul>
+<li><b>Known-good: FAILED on ibm_fez, ibm_kingston and ibm_marrakesh.</b> The flip failure of an idle qubit should sit at the calibration floor; it sat above it at every one of N = 0, 4 and 8: fez +0.61, +0.53, +0.62 percentage points, kingston +0.50, +0.48, +0.48, marrakesh +0.97, +1.01, +1.02 (every interval above zero; full output). The calibration step itself passed on all three (flip success 97.05, 97.44, 97.60&thinsp;%).</li>
+<li><b>Cause, found in the committed plan for run 2:</b> the floor was built from heralded shots (first read verified 0) while the idle arm used all shots, so thermal population sat in one and not the other. The readout arm of the decision reading had the same asymmetry.</li>
+<li><b>Decisions: void.</b> The analysis printed decision lines anyway (the printed output reads &ldquo;excluded&rdquo; for kingston at 8 readouts, and is not used); under the plan&rsquo;s own rule a failed known-good makes those readings cannot tell, and run 1&rsquo;s decisions are void. Where it printed them, the loss with every wired neighbour verified 0 and flipped is above zero on fez at 4 readouts (+0.0039 [+0.0002, +0.0097]) with the copies disagreeing, and consistent with zero at 8 readouts on fez.</li>
+</ul>
+<p>So run 1 neither confirms nor excludes a neighbour hidden in a level that reads as 0. <a href="/experiments/2026-10-22-flip-check-run2/PLAN_FLIP.md.text">Run 2</a> builds the floor like for like (unheralded in both arms); its plan, code and synthetic tests were committed before its job, and it was fired on ibm_kingston on 22 October at 09:58 (job dbd1cqfi0auc7394gq30). Its result is on the <a href="/experiments/2026-10-22-flip-check-run2/">run 2 page</a>. Measured neighbours stuck in 1 (0.4 to 1.1&thinsp;% of shots) are a separate cause that this test does not address and that is not excluded.</p>
+
+<p>Data tables and recounts: <a href="https://indahl.ai/qia">QIA</a> &middot; <a href="https://indahl.ai/iris">IRIS</a></p>
+<p class="foot">Bones &middot; Wayfinder &middot; Sage &middot; Shuttle &middot; Nova<br><a href="https://indahl.ai">Heuremen LLC</a><br>&ldquo;We found it.&rdquo;</p>
+</body></html>

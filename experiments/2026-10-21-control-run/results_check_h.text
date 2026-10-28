@@ -1,0 +1,63 @@
+====================================================================================================
+ibm_fez
+  run 1  spectators at distance 1/2/3+: 86/31/0
+    H1 kick N=8 d=1   -1.440 deg [-1.954, -1.000] n=86 -> BELOW
+    H1 kick N=8 d=2   -2.085 deg [-4.083, -1.262] n=31 -> BELOW
+    H1 kick N=8 d>=3  +nan deg [+nan, +nan] n=0 -> CANNOT TELL
+    H1 kick(d=1) - kick(d>=2)      +0.645 deg [-0.413, +2.786] -> CONSISTENT
+    H2 kick(N=8) - kick(N=2)       +0.048 deg [-0.179, +0.320] n=117 -> CONSISTENT
+    H2 slope (deg per readout)      -1.566 [-2.109, -1.040] n=117 -> BELOW
+    H2 intercept (deg)              -0.436 [-0.962, +0.190] n=117 -> CONSISTENT
+    H3 loss(8) - loss(2) [all spectators, all shots] +0.0055 [-0.0025, +0.0176] n=117 -> CONSISTENT
+  run 2  spectators at distance 1/2/3+: 86/31/0
+    H1 kick N=8 d=1   -1.362 deg [-1.777, -0.881] n=86 -> BELOW
+    H1 kick N=8 d=2   -1.988 deg [-3.980, -1.183] n=31 -> BELOW
+    H1 kick N=8 d>=3  +nan deg [+nan, +nan] n=0 -> CANNOT TELL
+    H1 kick(d=1) - kick(d>=2)      +0.626 deg [-0.256, +2.707] -> CONSISTENT
+    H2 kick(N=8) - kick(N=2)       -0.010 deg [-0.171, +0.143] n=117 -> CONSISTENT
+    H2 slope (deg per readout)      -1.604 [-2.010, -1.136] n=117 -> BELOW
+    H2 intercept (deg)              -0.088 [-0.288, +0.392] n=117 -> CONSISTENT
+    H3 loss(8) - loss(2) [wired spectators, clean shots] +0.0007 [-0.0036, +0.0099] n=86 -> CONSISTENT
+  REPORTED (run 1 and run 2 agree): {'H1': 'CONSISTENT', 'H2': 'CONSISTENT', 'H2i': 'CONSISTENT', 'H3': 'CONSISTENT'}
+====================================================================================================
+ibm_kingston
+  run 1  spectators at distance 1/2/3+: 86/31/0
+    H1 kick N=8 d=1   -2.333 deg [-3.179, -1.622] n=86 -> BELOW
+    H1 kick N=8 d=2   -4.341 deg [-5.917, -2.681] n=31 -> BELOW
+    H1 kick N=8 d>=3  +nan deg [+nan, +nan] n=0 -> CANNOT TELL
+    H1 kick(d=1) - kick(d>=2)      +2.009 deg [+0.052, +4.066] -> ABOVE
+    H2 kick(N=8) - kick(N=2)       -0.041 deg [-0.374, +0.076] n=117 -> CONSISTENT
+    H2 slope (deg per readout)      -2.984 [-3.569, -2.289] n=117 -> BELOW
+    H2 intercept (deg)              +0.363 [-0.349, +0.926] n=117 -> CONSISTENT
+    H3 loss(8) - loss(2) [all spectators, all shots] +0.0028 [-0.0074, +0.0094] n=117 -> CONSISTENT
+  run 2  spectators at distance 1/2/3+: 86/31/0
+    H1 kick N=8 d=1   -2.258 deg [-3.537, -1.705] n=86 -> BELOW
+    H1 kick N=8 d=2   -3.717 deg [-5.482, -2.096] n=31 -> BELOW
+    H1 kick N=8 d>=3  +nan deg [+nan, +nan] n=0 -> CANNOT TELL
+    H1 kick(d=1) - kick(d>=2)      +1.459 deg [-0.324, +3.511] -> CONSISTENT
+    H2 kick(N=8) - kick(N=2)       -0.032 deg [-0.153, +0.231] n=117 -> CONSISTENT
+    H2 slope (deg per readout)      -2.798 [-3.770, -1.901] n=117 -> BELOW
+    H2 intercept (deg)              -0.204 [-0.652, +0.135] n=117 -> CONSISTENT
+    H3 loss(8) - loss(2) [wired spectators, clean shots] +0.0072 [-0.0032, +0.0166] n=86 -> CONSISTENT
+  REPORTED (run 1 and run 2 agree): {'H1': 'CANNOT TELL (runs differ: ABOVE / CONSISTENT)', 'H2': 'CONSISTENT', 'H2i': 'CONSISTENT', 'H3': 'CONSISTENT'}
+====================================================================================================
+ibm_marrakesh
+  run 1  spectators at distance 1/2/3+: 86/31/0
+    H1 kick N=8 d=1   -2.436 deg [-3.520, -1.692] n=86 -> BELOW
+    H1 kick N=8 d=2   -2.138 deg [-3.701, -1.200] n=31 -> BELOW
+    H1 kick N=8 d>=3  +nan deg [+nan, +nan] n=0 -> CANNOT TELL
+    H1 kick(d=1) - kick(d>=2)      -0.298 deg [-1.962, +1.294] -> CONSISTENT
+    H2 kick(N=8) - kick(N=2)       +0.093 deg [-0.295, +0.439] n=117 -> CONSISTENT
+    H2 slope (deg per readout)      -2.244 [-3.332, -1.606] n=117 -> BELOW
+    H2 intercept (deg)              -0.725 [-1.304, +0.752] n=117 -> CONSISTENT
+    H3 loss(8) - loss(2) [all spectators, all shots] +0.0065 [-0.0002, +0.0219] n=117 -> CONSISTENT
+  run 2  spectators at distance 1/2/3+: 86/31/0
+    H1 kick N=8 d=1   -2.345 deg [-3.054, -1.734] n=86 -> BELOW
+    H1 kick N=8 d=2   -1.648 deg [-4.538, -1.370] n=31 -> BELOW
+    H1 kick N=8 d>=3  +nan deg [+nan, +nan] n=0 -> CANNOT TELL
+    H1 kick(d=1) - kick(d>=2)      -0.697 deg [-1.400, +2.242] -> CONSISTENT
+    H2 kick(N=8) - kick(N=2)       +0.191 deg [-0.048, +0.316] n=117 -> CONSISTENT
+    H2 slope (deg per readout)      -2.357 [-2.835, -1.627] n=117 -> BELOW
+    H2 intercept (deg)              -0.428 [-0.868, +0.126] n=117 -> CONSISTENT
+    H3 loss(8) - loss(2) [wired spectators, clean shots] +0.0145 [+0.0072, +0.0267] n=86 -> ABOVE
+  REPORTED (run 1 and run 2 agree): {'H1': 'CONSISTENT', 'H2': 'CONSISTENT', 'H2i': 'CONSISTENT', 'H3': 'CANNOT TELL (runs differ: CONSISTENT / ABOVE)'}

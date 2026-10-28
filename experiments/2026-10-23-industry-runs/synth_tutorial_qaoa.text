@@ -1,0 +1,2 @@
+SYNTH hardware (local testing mode): most likely 10110 -> cut 5 (optimum 5) | P(optimal cut) 0.359 | mean cut 4.042
+forecast: most likely 01001 -> cut 5 (optimum 5) | P(optimal cut) 0.358 | mean cut 4.035

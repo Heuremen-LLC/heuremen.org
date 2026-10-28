@@ -1,0 +1,10 @@
+Portfolio Run, verdict under ADDENDUM_DEMO_HEADLINE.md (rule pushed 17:42:37 before the repeat; both runs read by the committed demo.py)
+HEADLINE B -- HOLDS on every placement in both runs (12 of 12): delivered success below the success IBM's published figures predict,
+  delivered/predicted 0.709 to 0.890 (kingston r1 0.876 0.857 0.709; fez r1 0.875 0.878 0.856; kingston r2 0.867 0.890 0.747;
+  fez r2 0.764 0.755 0.876), each delivered 95 % interval below its prediction. Delivered was 11 to 29 % below IBM's forecast.
+HEADLINE A -- NARROWED to ibm_kingston: Qiskit's default placement lost 20.7 % [18.7, 22.6] (run 1) and 15.5 % [13.6, 17.6] (repeat) of
+  the success of the best line by IBM's own figures. ibm_fez: run 1 R3 1.074 ABOVE (Qiskit lost 7 %), repeat R3 0.916 BELOW (Qiskit's pick
+  won by 8 %) -- the fez line chosen from IBM's figures fell from 0.665 to 0.582 in about 6 minutes on the same record.
+R1 (OURS/IBM): kingston 0.973 BELOW, then 1.021 CONSISTENT; fez same placement 1.004, 0.988 CONSISTENT -- our hour-old figures pick no better.
+DEFINED AFTER THE DATA (not part of the rule): fez, same 10 qubits, same circuit, same IBM record: 0.6654 -> 0.5815 success between jobs
+  submitted 17:37 and 17:43 EDT; readout-only on the same qubits 0.9487 -> 0.9514 (unchanged).

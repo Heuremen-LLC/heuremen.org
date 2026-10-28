@@ -1,0 +1,8 @@
+ibm_kingston   readout kick, measured qubits in 0 (M0-D0)   +3.02 deg/step [+2.08, +3.76]
+ibm_kingston   readout kick, measured qubits in 1 (M1-D1)   +2.86 deg/step [+2.30, +3.67]
+ibm_kingston   measured qubits in 1, no readout (D1-D0)     +3.10 deg/step [+2.81, +3.39]
+ibm_kingston   M1-D0 (mixes the two)                        +5.96 deg/step [+4.73, +6.99]
+ibm_marrakesh  readout kick, measured qubits in 0 (M0-D0)   +2.32 deg/step [+1.82, +3.26]
+ibm_marrakesh  readout kick, measured qubits in 1 (M1-D1)   +1.49 deg/step [+1.16, +1.95]
+ibm_marrakesh  measured qubits in 1, no readout (D1-D0)     +3.12 deg/step [+2.78, +3.38]
+ibm_marrakesh  M1-D0 (mixes the two)                        +4.30 deg/step [+3.81, +5.12]

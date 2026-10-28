@@ -1,0 +1,59 @@
+ibm_fez  L=1.660 us  pairs 48  singles 21  shots 2000
+  ENTANGLEMENT (concurrence)  median: D0 0.879 | D8 0.347 D16 0.030 D32 0.000 | M8 0.300 M16 0.002 M32 0.000
+    N= 8 [declared] Q = 1.014  68% [0.997, 1.027]  95% [0.988, 1.030]  n=47 -> CONSISTENT vs 1
+    N= 8 [no cut  ] Q = 1.014  68% [0.997, 1.023]  95% [0.988, 1.038]  n=47 -> CONSISTENT vs 1
+    N=16 [declared] Q = 1.000  68% [1.000, 1.000]  95% [1.000, 1.002]  n=47 -> CONSISTENT vs 1
+    N=16 [no cut  ] Q = 1.000  68% [1.000, 1.000]  95% [1.000, 1.000]  n=47 -> CONSISTENT vs 1
+    N=32 [declared] Q = 1.000  68% [1.000, 1.000]  95% [1.000, 1.000]  n=47 -> CONSISTENT vs 1  <- PRIMARY
+    N=32 [no cut  ] Q = 1.000  68% [1.000, 1.000]  95% [1.000, 1.000]  n=47 -> CONSISTENT vs 1
+    value_M(32) - value_D(32) = +0.0000  95% [+0.0000, +0.0000] -> CONSISTENT vs 0
+  SUPERPOSITION (coherence)  median: D0 0.974 | D8 0.746 D16 0.562 D32 0.249 | M8 0.735 M16 0.499 M32 0.223
+    N= 8 [declared] Q = 1.053  68% [1.036, 1.068]  95% [1.018, 1.127]  n=20 -> ABOVE vs 1
+    N= 8 [no cut  ] Q = 1.047  68% [1.035, 1.061]  95% [1.009, 1.122]  n=21 -> ABOVE vs 1
+    N=16 [declared] Q = 0.995  68% [0.977, 1.009]  95% [0.966, 1.016]  n=20 -> CONSISTENT vs 1
+    N=16 [no cut  ] Q = 0.987  68% [0.974, 1.007]  95% [0.965, 1.014]  n=21 -> CONSISTENT vs 1
+    N=32 [declared] Q = 1.011  68% [1.004, 1.022]  95% [0.994, 1.036]  n=20 -> CONSISTENT vs 1  <- PRIMARY
+    N=32 [no cut  ] Q = 1.015  68% [1.005, 1.026]  95% [0.997, 1.040]  n=21 -> CONSISTENT vs 1
+    value_M(32) - value_D(32) = -0.0099  95% [-0.0208, +0.0022] -> CONSISTENT vs 0
+ibm_kingston  L=2.180 us  pairs 48  singles 21  shots 2000
+  ENTANGLEMENT (concurrence)  median: D0 0.905 | D8 0.511 D16 0.204 D32 0.000 | M8 0.448 M16 0.160 M32 0.000
+    N= 8 [declared] Q = 1.052  68% [1.025, 1.079]  95% [1.018, 1.086]  n=44 -> ABOVE vs 1
+    N= 8 [no cut  ] Q = 1.041  68% [1.023, 1.071]  95% [1.015, 1.082]  n=46 -> ABOVE vs 1
+    N=16 [declared] Q = 1.035  68% [1.019, 1.043]  95% [1.016, 1.055]  n=44 -> ABOVE vs 1
+    N=16 [no cut  ] Q = 1.032  68% [1.018, 1.039]  95% [1.008, 1.050]  n=46 -> ABOVE vs 1
+    N=32 [declared] Q = 1.000  68% [1.000, 1.000]  95% [1.000, 1.000]  n=44 -> CONSISTENT vs 1  <- PRIMARY
+    N=32 [no cut  ] Q = 1.000  68% [1.000, 1.000]  95% [1.000, 1.000]  n=46 -> CONSISTENT vs 1
+    value_M(32) - value_D(32) = +0.0000  95% [+0.0000, +0.0000] -> CONSISTENT vs 0
+  SUPERPOSITION (coherence)  median: D0 0.979 | D8 0.730 D16 0.525 D32 0.195 | M8 0.722 M16 0.521 M32 0.185
+    N= 8 [declared] Q = 1.018  68% [1.007, 1.061]  95% [1.005, 1.075]  n=21 -> ABOVE vs 1
+    N= 8 [no cut  ] Q = 1.018  68% [1.007, 1.061]  95% [1.005, 1.075]  n=21 -> ABOVE vs 1
+    N=16 [declared] Q = 1.004  68% [1.002, 1.036]  95% [0.989, 1.065]  n=21 -> CONSISTENT vs 1
+    N=16 [no cut  ] Q = 1.004  68% [1.002, 1.036]  95% [0.989, 1.065]  n=21 -> CONSISTENT vs 1
+    N=32 [declared] Q = 1.009  68% [0.991, 1.025]  95% [0.984, 1.041]  n=21 -> CONSISTENT vs 1  <- PRIMARY
+    N=32 [no cut  ] Q = 1.009  68% [0.991, 1.025]  95% [0.984, 1.041]  n=21 -> CONSISTENT vs 1
+    value_M(32) - value_D(32) = -0.0060  95% [-0.0326, +0.0090] -> CONSISTENT vs 0
+ibm_marrakesh  L=2.684 us  pairs 48  singles 21  shots 2000
+  ENTANGLEMENT (concurrence)  median: D0 0.814 | D8 0.157 D16 0.000 D32 0.000 | M8 0.112 M16 0.000 M32 0.000
+    N= 8 [declared] Q = 1.018  68% [1.008, 1.049]  95% [1.000, 1.075]  n=40 -> CONSISTENT vs 1
+    N= 8 [no cut  ] Q = 1.008  68% [1.000, 1.020]  95% [1.000, 1.056]  n=46 -> CONSISTENT vs 1
+    N=16 [declared] Q = 1.000  68% [1.000, 1.000]  95% [1.000, 1.000]  n=40 -> CONSISTENT vs 1
+    N=16 [no cut  ] Q = 1.000  68% [1.000, 1.000]  95% [1.000, 1.000]  n=46 -> CONSISTENT vs 1
+    N=32 [declared] Q = 1.000  68% [1.000, 1.000]  95% [1.000, 1.000]  n=40 -> CONSISTENT vs 1  <- PRIMARY
+    N=32 [no cut  ] Q = 1.000  68% [1.000, 1.000]  95% [1.000, 1.000]  n=46 -> CONSISTENT vs 1
+    value_M(32) - value_D(32) = +0.0000  95% [+0.0000, +0.0000] -> CONSISTENT vs 0
+  SUPERPOSITION (coherence)  median: D0 0.973 | D8 0.529 D16 0.319 D32 0.094 | M8 0.511 M16 0.317 M32 0.086
+    N= 8 [declared] Q = 1.028  68% [1.025, 1.040]  95% [1.011, 1.101]  n=21 -> ABOVE vs 1
+    N= 8 [no cut  ] Q = 1.028  68% [1.025, 1.040]  95% [1.011, 1.101]  n=21 -> ABOVE vs 1
+    N=16 [declared] Q = 1.017  68% [1.006, 1.029]  95% [0.994, 1.030]  n=21 -> CONSISTENT vs 1
+    N=16 [no cut  ] Q = 1.017  68% [1.006, 1.029]  95% [0.994, 1.030]  n=21 -> CONSISTENT vs 1
+    N=32 [declared] Q = 1.018  68% [1.009, 1.022]  95% [0.999, 1.026]  n=21 -> CONSISTENT vs 1  <- PRIMARY
+    N=32 [no cut  ] Q = 1.018  68% [1.009, 1.022]  95% [0.999, 1.026]  n=21 -> CONSISTENT vs 1
+    value_M(32) - value_D(32) = -0.0135  95% [-0.0204, +0.0012] -> CONSISTENT vs 0
+
+PRIMARY (N=32, declared cut):
+  ibm_fez        ENTANGLEMENT   Q=1.000 95% [1.000, 1.000] CONSISTENT
+  ibm_fez        SUPERPOSITION  Q=1.011 95% [0.994, 1.036] CONSISTENT
+  ibm_kingston   ENTANGLEMENT   Q=1.000 95% [1.000, 1.000] CONSISTENT
+  ibm_kingston   SUPERPOSITION  Q=1.009 95% [0.984, 1.041] CONSISTENT
+  ibm_marrakesh  ENTANGLEMENT   Q=1.000 95% [1.000, 1.000] CONSISTENT
+  ibm_marrakesh  SUPERPOSITION  Q=1.018 95% [0.999, 1.026] CONSISTENT

@@ -1,0 +1,187 @@
+====================================================================================================
+RESULT A -- ten X gates in a row on 7 well-separated qubits, read 1 more often when the 22 neighbours
+             were held half-way (equator) around the train. Rigetti Cepheus-1-108Q, 2026-10-04.
+====================================================================================================
+tasks: 42 (3 rounds x [8 calibration + 6 experiment]); sent 2026-10-04T17:15:00Z .. 2026-10-04T17:21:23Z; 900 shots per experiment task
+  round 1: 2026-10-04T17:15:00Z .. 2026-10-04T17:15:06Z
+  round 2: 2026-10-04T17:18:07Z .. 2026-10-04T17:18:14Z
+  round 3: 2026-10-04T17:21:16Z .. 2026-10-04T17:21:23Z
+emitters (the qubits that are pushed 10x): [7, 22, 27, 57, 62, 72, 104]; neighbours (22): [6, 13, 16, 18, 21, 23, 28, 31, 36, 48, 53, 56, 58, 61, 63, 66, 71, 73, 81, 95, 103, 105]
+neighbours of each emitter: {7: [6, 16], 22: [13, 21, 23, 31], 27: [18, 28, 36], 57: [48, 56, 58, 66], 62: [53, 61, 71], 72: [63, 73, 81], 104: [95, 103, 105]}
+experiment task ids (state|readout|round -> Braket task id, region us-west-1; readout e = plain readout, ba = swap-then-flip readout):
+    clock|ba|1     36ebf6a7-623e-430d-bd0b-91f843488e0f
+    clock|ba|2     b4c72e82-e0a1-40c7-a298-be136aaa0223
+    clock|ba|3     38c2626a-7970-460f-9528-9a1af17305df
+    clock|e|1      35b921b5-fcf3-4c4c-b75a-1705af49d096
+    clock|e|2      3a3cadff-0351-44d7-b251-fe5c4cbec06f
+    clock|e|3      44db24fb-1358-4ac3-9191-6d1222d06382
+    pushed|ba|1    3cea5eec-7b01-4669-8944-952f5d39fe11
+    pushed|ba|2    6df602d3-890a-44ba-b6d7-a63d56c46c20
+    pushed|ba|3    0aa8cdfb-61cb-4ea9-839c-8f3eecf4ba07
+    pushed|e|1     279a8324-848f-49dc-9b82-2cab7a591641
+    pushed|e|2     a764b9db-2739-4019-bd4e-163dd2826f86
+    pushed|e|3     92496561-6347-4283-90d8-55bcd2f466d1
+    rest|ba|1      b67de414-b185-4b0b-b232-4b02d23a3015
+    rest|ba|2      f3214ad4-accd-48f0-b00c-fe55ec2dbe0a
+    rest|ba|3      8fd2eb50-0363-4d25-a753-f65828f7fa9f
+    rest|e|1       71384e57-2199-4014-880f-6e613baab6fe
+    rest|e|2       5d2a000f-fbce-4490-9c50-3b7d2178c6c2
+    rest|e|3       c249f361-8ce6-4ea1-8c9a-fed9048bf9f0
+
+A1. read-1 fraction of the pushed qubits, mean over the 7 (per-qubit values below):
+  round 1 mean over the 7: rest 0.064286 / pushed 0.064603 / clock 0.11016
+  round 2 mean over the 7: rest 0.064127 / pushed 0.065556 / clock 0.10095
+  round 3 mean over the 7: rest 0.058413 / pushed 0.056032 / clock 0.10381
+
+  per-qubit read-1 fractions (columns q7 q22 q27 q57 q62 q72 q104):
+    round 1 rest  : 0.057 0.049 0.083 0.080 0.060 0.092 0.029   mean 0.0643
+    round 1 pushed: 0.074 0.043 0.119 0.081 0.059 0.034 0.041   mean 0.0646
+    round 1 clock : 0.098 0.151 0.216 0.083 0.082 0.078 0.063   mean 0.1102
+    round 2 rest  : 0.060 0.064 0.063 0.081 0.051 0.081 0.048   mean 0.0641
+    round 2 pushed: 0.074 0.041 0.129 0.073 0.074 0.037 0.030   mean 0.0656
+    round 2 clock : 0.091 0.151 0.184 0.093 0.069 0.061 0.057   mean 0.1010
+    round 3 rest  : 0.073 0.048 0.061 0.076 0.042 0.083 0.026   mean 0.0584
+    round 3 pushed: 0.057 0.041 0.118 0.056 0.068 0.031 0.022   mean 0.0560
+    round 3 clock : 0.136 0.090 0.204 0.079 0.082 0.089 0.047   mean 0.1038
+
+A2. widths. Two kinds, both reported:
+    shot noise on the 7-qubit mean = sqrt(sum p(1-p)/N)/7  (binomial, per round);
+    qubit-to-qubit spread = standard deviation of the 7 per-qubit values / sqrt(7).
+    round 1 rest  : 0.0643  shot +-0.0031  spread +-0.0084
+    round 1 pushed: 0.0646  shot +-0.0031  spread +-0.0112
+    round 1 clock : 0.1102  shot +-0.0039  spread +-0.0205
+    round 2 rest  : 0.0641  shot +-0.0031  spread +-0.0050
+    round 2 pushed: 0.0656  shot +-0.0031  spread +-0.0128
+    round 2 clock : 0.1010  shot +-0.0038  spread +-0.0184
+    round 3 rest  : 0.0584  shot +-0.0029  spread +-0.0079
+    round 3 pushed: 0.0560  shot +-0.0029  spread +-0.0119
+    round 3 clock : 0.1038  shot +-0.0038  spread +-0.0195
+
+A3. the effect, per qubit, pooled over the 3 rounds (2700 shots per qubit per state):
+    equator minus rest: per-qubit difference q7 +0.045 q22 +0.077 q27 +0.132 q57 +0.006 q62 +0.027 q72 -0.010 q104 +0.021
+      mean +0.0427  +- 0.0182 (spread across 7 qubits, 6 d.o.f.; t = 2.34)   shot-noise-only width of the mean +-0.0028   qubits positive: 6 of 7
+    pushed minus rest: per-qubit difference q7 +0.005 q22 -0.012 q27 +0.053 q57 -0.009 q62 +0.016 q72 -0.051 q104 -0.003
+      mean -0.0002  +- 0.0119 (spread across 7 qubits, 6 d.o.f.; t = -0.02)   shot-noise-only width of the mean +-0.0025   qubits positive: 3 of 7
+    equator minus pushed: per-qubit difference q7 +0.040 q22 +0.089 q27 +0.080 q57 +0.015 q62 +0.011 q72 +0.042 q104 +0.024
+      mean +0.0429  +- 0.0116 (spread across 7 qubits, 6 d.o.f.; t = 3.71)   shot-noise-only width of the mean +-0.0028   qubits positive: 7 of 7
+    ratio equator/rest of the 7-qubit mean: 1.69 +- 0.32 (delete-one-qubit jackknife, so it carries the qubit-to-qubit spread); range when one qubit is dropped: 1.45 .. 1.88
+    ratio per round: round 1 1.71, round 2 1.57, round 3 1.78
+    pushed/rest ratio: 0.997
+    ratio equator/rest, round 1: 1.7136; all 3 rounds pooled: 1.6856
+    (the ratio differs from round to round; it is not a per-round constant)
+    significance across qubits: mean paired rise / its spread-based width gives t = 2.34 on 6 d.o.f.; the 95 % two-sided critical value is 2.447, so on qubit-to-qubit spread alone the pooled rise is NOT past it.
+    Every single qubit except q57 and q72 is far past its own shot noise (A6); it is the unevenness between qubits that keeps the pooled test marginal.
+    pushed minus rest, pooled mean difference: -0.00021164
+
+A4. WHAT STATE ARE THE NEIGHBOURS IN WHEN THE PUSHED QUBITS ARE READ?  (read-1 fraction of the 22 neighbours)
+    round 1: rest 0.036 / pushed 0.094 / clock 0.939
+    round 2: rest 0.031 / pushed 0.099 / clock 0.937
+    round 3: rest 0.032 / pushed 0.095 / clock 0.938
+    -> in the "equator" arm the neighbours end in |1> (about 94 % read 1): their two half-turns (rx(pi/2) before the train, rx(pi/2) after)
+       make one full turn. They sit on the equator only DURING the train, and are excited when the readout happens. In the other two arms
+       they are in |0> at the readout (rest, pushed 10x: the pushed arm shows ~9 % reading 1 from gate error).
+
+A5. shot-level check (same shots, no model): pushed-qubit read-1 rate versus how many of ITS OWN neighbours read 1 in the same shot.
+    rate (shots) by number of own neighbours that read 1; pooled over the 3 rounds and, for each qubit, over its neighbours.
+    rest  : all neighbours read 0: 0.048 (17069 shots)   all neighbours read 1: 0.357 (14 shots)   some read 1: 0.192 (1817 shots)
+    pushed: all neighbours read 0: 0.040 (14056 shots)   all neighbours read 1: 0.449 (78 shots)   some read 1: 0.120 (4766 shots)
+    clock : all neighbours read 0: 0.059 (17 shots)   all neighbours read 1: 0.099 (15460 shots)   some read 1: 0.130 (3423 shots)
+    reading: even in the REST arm a qubit reads 1 about four times more often in shots where one of its neighbours also reads 1. The readouts are correlated
+    between neighbours (read-out crosstalk or a shared real excitation; this data cannot tell which). Only the equator arm has neighbours in |1> at the readout,
+    so "neighbours on the equator during the train" and "neighbours in |1> at the readout" are confounded in this design. A simple crosstalk-by-neighbour-reading
+    rule fitted on the rest arm would predict more than the 0.099 seen in the equator arm, so crosstalk alone is not a quantitative match either.
+
+A6. per qubit, equator minus rest (pooled): the excess is not uniform. Qubits with a rise > 2 pooled-shot widths:
+    q7    rest 0.063 equator 0.108 diff +0.045 +-0.008  (+5.9 widths)
+    q22   rest 0.054 equator 0.131 diff +0.077 +-0.008  (+9.9 widths)
+    q27   rest 0.069 equator 0.201 diff +0.132 +-0.009  (+14.5 widths)
+    q57   rest 0.079 equator 0.085 diff +0.006 +-0.007  (+0.8 widths)
+    q62   rest 0.051 equator 0.078 diff +0.027 +-0.007  (+4.0 widths)
+    q72   rest 0.086 equator 0.076 diff -0.010 +-0.007  (-1.3 widths)
+    q104  rest 0.034 equator 0.056 diff +0.021 +-0.006  (+3.8 widths)
+
+====================================================================================================
+RESULT B -- a neighbour (q0) prepared in |2> shifts the precession rate of a spectator (q9).
+====================================================================================================
+B0. sign bookkeeping (simulated from each day's circuit): d angle(H) / d(clock phase) = -1 on 28 Sep, +1 on 4 Oct.
+    The two days used different final rotations, so the SAME physical shift reads with REVERSED sign in angle(H). Below, "rate" = clock phase per microsecond
+    in a common convention (positive = |1> gains phase relative to |0> at that rate, i.e. an rz(+) ), obtained as angle(H) rate / the number above.
+    This assumes rx/rz mean the same rotations on both days (same compiler and gate set). The sign agreement across days does not depend on that assumption.
+
+B1. 28 SEPTEMBER (UTC 2026-09-29T00:58:59Z .. 2026-09-29T00:59:09Z = 20:58-20:59 EDT on 28 Sep): emitter q0 at rest (E0) or in |2> (E2: rx(pi), then a tuned 1<->2 pulse),
+    clock q9 (next door; all other qubits idle), waits 0.5 1 2 3 4.5 6 us, hands X and Y, 1000 shots (E0) / 2500 shots (E2). 24 tasks, ids in the json.
+    window  wrapped angle   unwrapped   +-width   rate (deg/us, common convention)   amplitude ratio |H(E2)|/|H(E0)|
+      0.5      +27.92      +27.92    2.88     -55.85 +- 5.76                      1.05
+      1.0      +57.59      +57.59    2.82     -57.59 +- 2.82                      1.04
+      2.0     +108.27     +108.27    2.97     -54.13 +- 1.49                      0.95
+      3.0     -179.87     +180.13    3.22     -60.04 +- 1.07                      0.87
+      4.5      -79.93     +280.07    3.64     -62.24 +- 0.81                      0.64
+      6.0      +24.62     +384.62    3.48     -64.10 +- 0.58                      0.75
+    straight line through the origin, all 6 windows: slope -62.10 deg/us  +- 0.41 (shot noise only)  chi2 = 48.1 for 5 d.o.f.  -> width scaled by sqrt(chi2/dof): +- 1.27
+    28 Sep slope magnitude: 62.104 deg/us;  shot-noise width: 0.40905 deg/us
+    NOTE the per-window rates are NOT constant: -55.8, -57.6, -54.1, ... -64.1. The straight line fits poorly (chi2/dof = 9.6).
+    They rise with window length although the emitter is decaying out of |2> (its lifetime is not computed here), which would make them fall by ~20 % by 6 us.
+
+B2. 4 OCTOBER, run "triA" (tasks sent 2026-10-04T17:13:24Z .. 2026-10-04T17:13:40Z, 13:13 EDT): emitter q0 at rest / |1> / |2>, EVERY other qubit (106) a clock, windows 0.5 1 2 4 6 us, 900 shots.
+    (q0 -> |2>: rx(pi) then the 1<->2 pulse, amplitude re-tuned on 4 Oct, not the 28 Sep amplitude.)  Hand Y of this run also applies the swap-then-flip readout to q0 at the end.
+    q9 with q0 in |2>, minus q0 at rest (same window): angle (deg), +-width, rate = angle/window (deg/us)
+       0.5 us    -18.05   2.70    -36.09 +- 5.40   amplitude ratio |H(|2>)|/|H(rest)| 1.02
+       1.0 us    -34.64   2.77    -34.64 +- 2.77   amplitude ratio |H(|2>)|/|H(rest)| 0.99
+       2.0 us    -82.86   4.28    -41.43 +- 2.14   amplitude ratio |H(|2>)|/|H(rest)| 0.54
+       4.0 us    +64.94   4.17    +16.23 +- 1.04   amplitude ratio |H(|2>)|/|H(rest)| 0.76
+       6.0 us     -9.61   5.94     -1.60 +- 0.99   amplitude ratio |H(|2>)|/|H(rest)| 0.64
+    4 Oct q9, q0 in |2>, 0.5 us window: -36.091 deg/us
+    4 Oct q9, q0 in |2>, 1 us window: -34.644 deg/us
+    4 Oct q9, q0 in |2>, 2 us window: -41.432 deg/us
+    The 4 us and 6 us windows (+16.2, -1.6) do not continue the trend: at a steady -36 deg/us the angle would be about -145 deg at 4 us and -215 (= +145 wrapped) at 6 us.
+    They are shown above as read; the first three windows are the only stretch where a steady shift is visible.
+    At 2 us the clock keeps only ~0.54 of the rest amplitude (q0_last, B3: 0.56) while at 0.5 and 1 us it keeps 1.0: not explained here (a shot-to-shot spread of the shift would do it).
+    inverse-variance mean of 0.5/1/2 us: -38.64 +- 1.62 deg/us (windows are not independent of q0 decay; shot noise only)
+    for comparison, q0 in |1>:  0.5 us +0.5  1 us +5.9  2 us +1.7  4 us -2.5  6 us +1.2   (small: |1> hardly moves q9, |2> moves it a lot)
+    q1 (other next-door qubit), q0 in |2>:  0.5 us -27.5  1 us -19.4  2 us -21.0  4 us -19.5  6 us -13.9
+    101 clocks 3+ links from q0, q0 in |2>, 1 us window: median +1.06 deg/us, quartiles -1.9 .. +2.9  (the shift is local)
+
+B3. 4 OCTOBER, run "q0_last" (sent 2026-10-04T16:52:19Z .. 2026-10-04T16:52:24Z, 20 minutes BEFORE triA; same pair, one 2 us window, q0 gets no end-of-circuit readout pulses):
+    q9, q0 in |2> minus rest: angle -69.88 +- 4.28 over 2 us = -34.94 +- 2.14 deg/us (hand 0.56); triA at 2 us gave -41.43 +- 2.14
+    4 Oct q0_last q9: -34.942 deg/us;  width: 2.138 deg/us
+
+B4. SAME SPECTATOR / NEIGHBOUR PAIR BOTH DAYS?
+    28 Sep: emitter q0, clock q9.   4 Oct (triA, q0_last): emitter q0, clock q9.   Are q0 and q9 coupled on the chip graph? True.
+    -> YES, the same pair. The comparison is valid as a comparison of one pair, with the differences listed in B5.
+    like-for-like (windows 0.5, 1, 2 us, inverse-variance mean of per-window rates): 28 Sep -54.93 +- 1.28   4 Oct -38.64 +- 1.62
+    ratio 4 Oct / 28 Sep = 0.70;   difference +16.3 +- 2.1 deg/us (8 widths, shot noise only)
+    the through-origin slope (the "-62.1") vs the 4 Oct 0.5-2 us mean: -62.1 vs -38.6
+B5. things that differ between the two days and are NOT controlled (so a change between the days cannot be assigned to the coupling alone):
+    - the 1<->2 pulse amplitude was re-tuned on 4 Oct, so how completely q0 reached |2> may differ. The |2> population of q0 needs a readout-error model and is NOT COMPUTED here.
+      The 28 Sep run has no calibration for q0, so its |2> population is unknown here.
+    - 28 Sep: q9 the only clock. 4 Oct: 106 clocks driven at once (the effect of the number of simultaneous clocks on the shift is not measured here).
+    - the window ladder and the fit: 28 Sep is a straight-line slope over 0.5-6 us; 4 Oct per-window values over 0.5-2 us, then the later windows break the trend.
+    - Cepheus is recalibrated between the days (device parameters drift; both days' qubit frequencies were not logged side by side).
+
+B6. CONTEXT, run "triF" (4 Oct 17:37-17:44 UTC, 3 rounds): 7 other emitter/neighbour pairs, emitters all held at rest or in |2>. q0/q9 are not in this run.
+    rate = angle of (neighbour with emitter in |2> relative to emitter at rest) / window, deg/us; mean over 3 rounds; each neighbour paired with its own emitter.
+    emitter neighbour     0.25 us     0.5 us       1 us       2 us     (mean over 3 rounds; +- = spread of the 3 rounds at 1 us)
+    q57    q66            -71.4    -69.8    -72.8    -78.9     +-3.4
+    q27    q36            -66.0    -56.5    -60.0    -58.8     +-3.4
+    q72    q73            -46.5    -54.8    -31.0    -38.3     +-4.6
+    q22    q23             -3.5    -20.2    -22.4    -21.8     +-1.1
+    q27    q28            -32.6    -28.6    -20.3    -16.2     +-1.4
+    q27    q18            -11.4    -19.4    -17.8    -13.9     +-2.6
+    q7     q16            -20.0    -18.1    -17.2    -12.8     +-2.1
+    q57    q58            -19.3    -20.8    -16.9    -19.1     +-3.1
+    q62    q71            -55.2    -28.4    -16.4    -38.4     +-21.7
+    q62    q53             -1.2    -15.2    -12.7    -12.8     +-5.1
+    q57    q56             -3.0     -3.4    -10.3     -7.9     +-5.6
+    q72    q81             -2.6    -12.8     -6.4     -3.2     +-1.3
+    q104   q103            -6.2     +2.1     -3.8     -2.9     +-2.9
+    q104   q105           -18.3     -5.9     -2.6     -4.9     +-2.3
+    q57    q48             -2.5     +0.4     -0.5     -7.0     +-5.6
+    q7     q6              +9.0     -8.5     -0.4     -0.2     +-3.1
+    q22    q21            +32.1     -2.9     -0.1     -9.3     +-9.6
+    q62    q61             +7.7     +0.9     +3.5     -2.3     +-11.3
+    q22    q31            +20.4    +17.8    +13.7     +8.4     +-1.1
+    q22    q13            +50.4    +24.8    +18.1    +11.1     +-8.2
+    q72    q63            +76.3    +26.6    +22.2    +23.5     +-6.1
+    q104   q95            +26.1    +22.4    +30.9    +30.0     +-2.8
+    1 us window over the 22 pairs: median -6.4, most negative -72.8, most positive +30.9; pairs below -20 deg/us: 5.  (q0-q9: -34.6; 2 of the 22 pairs are stronger in magnitude, 5 have the reverse sign.)
+    Shifts of 30-70 deg/us from an emitter in |2> therefore appear on other pairs too, and the sign is not always negative: sign and size are properties of the pair.

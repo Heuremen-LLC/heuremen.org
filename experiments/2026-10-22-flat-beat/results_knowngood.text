@@ -1,0 +1,12 @@
+==========================================================================================
+KNOWN-GOOD SEAT ibm_fez (22 Oct one-neighbour data, 60 of 66 pairs fitted)
+  slope of log fitted beat on log calibrated zz    +1.004 [+0.8918, +1.142] n=60 -> ABOVE
+  slope minus 1                                    +0.00395 [-0.09384, +0.1362] n=60 -> CONSISTENT
+  rank correlation                                 +0.8537 [+0.7249, +0.934] n=60 -> ABOVE
+  median fitted beat (kHz)                         +5.6 [+4.8, +7.4] n=60 -> ABOVE
+==========================================================================================
+KNOWN-GOOD SEAT ibm_phoenix (22 Oct one-neighbour data, 39 of 42 pairs fitted)
+  slope of log fitted beat on log calibrated zz    +0.1105 [-0.0328, +0.234] n=39 -> CONSISTENT
+  slope minus 1                                    -0.8895 [-1.038, -0.761] n=39 -> BELOW
+  rank correlation                                 +0.1953 [-0.1363, +0.4962] n=39 -> CONSISTENT
+  median fitted beat (kHz)                         +12.65 [+11.45, +14.15] n=39 -> ABOVE

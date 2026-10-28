@@ -1,0 +1,48 @@
+chip            stated O  estimator  qubit / stated (mean +- sd of 3 reads)
+ibm_kingston      2.180u  3-and-9      1.661 +- 0.086
+ibm_kingston      2.180u  1-9 fit      1.677 +- 0.078
+ibm_marrakesh     2.684u  3-and-9      1.516 +- 0.070
+ibm_marrakesh     2.684u  1-9 fit      1.509 +- 0.024
+ibm_fez           1.660u  3-and-9      1.540 +- 0.224
+ibm_fez           1.660u  1-9 fit      1.600 +- 0.186
+ibm_pittsburgh    2.180u  3-and-9      1.340 +- 0.063
+ibm_pittsburgh    2.180u  1-9 fit      1.360 +- 0.087
+ibm_boston        2.180u  3-and-9      1.348 +- 0.136
+ibm_boston        2.180u  1-9 fit      1.333 +- 0.124
+ibm_phoenix       1.940u  3-and-9      1.351 +- 0.124
+ibm_phoenix       1.940u  1-9 fit      1.323 +- 0.056
+ibm_aachen        2.180u  3-and-9      1.371 +- 0.115
+ibm_aachen        2.180u  1-9 fit      1.351 +- 0.057
+
+qubit / spectators (mean +- sd of 3 reads):
+ibm_kingston    3-and-9 1.547 +- 0.142   1-9 fit 1.573 +- 0.068   (last read: 31 qubits, 77 spectator clocks)
+ibm_marrakesh   3-and-9 1.521 +- 0.053   1-9 fit 1.445 +- 0.032   (last read: 28 qubits, 73 spectator clocks)
+ibm_fez         3-and-9 1.509 +- 0.260   1-9 fit 1.565 +- 0.194   (last read: 30 qubits, 79 spectator clocks)
+ibm_pittsburgh  3-and-9 1.286 +- 0.068   1-9 fit 1.316 +- 0.069   (last read: 30 qubits, 83 spectator clocks)
+ibm_boston      3-and-9 1.250 +- 0.096   1-9 fit 1.227 +- 0.104   (last read: 31 qubits, 81 spectator clocks)
+ibm_phoenix     3-and-9 1.345 +- 0.162   1-9 fit 1.280 +- 0.061   (last read: 28 qubits, 70 spectator clocks)
+ibm_aachen      3-and-9 1.262 +- 0.133   1-9 fit 1.206 +- 0.024   (last read: 30 qubits, 74 spectator clocks)
+
+per-read qubit / stated (3-and-9 | 1-9 fit):
+ibm_kingston   run 331: 1.6144 | 1.7377  run 332: 1.6079 | 1.5898  run 333: 1.7600 | 1.7041
+ibm_marrakesh  run 311: 1.5366 | 1.4947  run 312: 1.5733 | 1.5369  run 313: 1.4375 | 1.4954
+ibm_fez        run 411: 1.3955 | 1.5501  run 412: 1.7983 | 1.8064  run 413: 1.4276 | 1.4440
+ibm_pittsburgh run 351: 1.3905 | 1.4049  run 352: 1.3614 | 1.4147  run 353: 1.2694 | 1.2590
+ibm_boston     run 431: 1.3362 | 1.2840  run 432: 1.4901 | 1.4747  run 433: 1.2185 | 1.2412
+ibm_phoenix    run 541: 1.4941 | 1.3823  run 542: 1.2735 | 1.2712  run 543: 1.2859 | 1.3161
+ibm_aachen     run 801: 1.2874 | 1.3876  run 802: 1.5019 | 1.3793  run 803: 1.3251 | 1.2857
+
+single-exponential check (ruler copies a,b,c per kept qubit): share of qubit-copies whose survival at 30 us sits BELOW S300^(30/300)
+  ibm_marrakesh   run 301: 343/408 = 84.1 %  job db15r4bid5ic73eqmhs0
+  ibm_marrakesh   run 302: 332/414 = 80.2 %  job db15s4pb694s73drrg10
+  ibm_marrakesh   run 303: 341/411 = 83.0 %  job db15skrid5ic73eqmkvg
+  ibm_kingston    run 301: 332/426 = 77.9 %  job db15t52vog1s73fhmo3g
+  ibm_kingston    run 302: 317/438 = 72.4 %  job db15u31b694s73drrjvg
+  ibm_kingston    run 303: 330/441 = 74.8 %  job db161j6egvvc73bh6u50
+  ibm_pittsburgh  run 361: 279/447 = 62.4 %  job db16p5hb694s73drsna0
+  ibm_pittsburgh  run 362: 289/447 = 64.7 %  job db1ak0qvog1s73fhspdg
+  ibm_pittsburgh  run 363: 280/444 = 63.1 %  job db1akdeegvvc73bhcoh0
+  ibm_fez         run 401: 340/402 = 84.6 %  job db1cs81b694s73ds4fs0
+  ibm_fez         run 402: 348/408 = 85.3 %  job db1csj3id5ic73eqvl20
+  ibm_fez         run 403: 336/402 = 83.6 %  job db1cstmegvvc73bhfing
+  range over these 12 reads: 62.4 - 85.3 %

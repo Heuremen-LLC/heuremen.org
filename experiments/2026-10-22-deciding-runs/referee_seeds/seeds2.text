@@ -1,0 +1,6 @@
+('R3.1 P(1) read at slot 2 after others, minus read alone at slot 2', 'ibm_marrakesh') {'CONSISTENT': 38, 'CANNOT TELL(shift)': 2}
+('R4.2 cost per extra X gate (slope; 20% trimmed mean)', 'ibm_kingston') {'CONSISTENT': 34, 'ABOVE': 6}
+('R4.3 cost per extra X gate minus IBM stated X error (20% trimmed mean)', 'ibm_fez') {'CONSISTENT': 34, 'BELOW': 6}
+('R5.2 neighbours in 1 minus in 0 (static neighbour state)', 'ibm_fez') {'BELOW': 31, 'CONSISTENT': 9}
+('R5.3 neighbours in + minus in 0 (the original comparison)', 'ibm_marrakesh') {'CANNOT TELL(shift)': 24, 'CONSISTENT': 16}
+done

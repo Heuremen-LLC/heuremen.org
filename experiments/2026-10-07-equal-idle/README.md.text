@@ -1,0 +1,18 @@
+7 October 2026 equal-idle runs: recomputation with the paper's estimators
+
+What: 32 IBM jobs on 7 October 2026 (kingston 18, pittsburgh 9, fez 3, aachen 2) compared a readout arm with an idle arm of equal scheduled
+length on the same untouched qubits, with 1 to 25 measured qubits and up to 9 readouts. They pass the inclusion rule (INCLUSION_RULE.md.text,
+sha256 92ee0717..., written before the earlier runs were inventoried) and are recomputed here with the paper's estimators. This
+recomputation is defined after the data and is not pre-registered.
+
+Files: analyze_oct07.py (reads the saved IQ data, projects each readout on the job's all-0 to all-1 axis, thresholds at 0.5, and computes
+per-qubit kick and coherence slopes against N, medians over qubits with 95% bootstrap intervals, four outcomes, distance bins by
+breadth-first search over the saved coupling edges); est.py (shared estimators); sign_check.py (gate-algebra check that the sign convention
+matches the paper: negative is the direction of the 21-22 October kick; the 21 October control-run kingston kick recomputed through the same
+code gives -2.8638 deg per readout, agreeing with the committed value); summarize.py; results_oct07.text (full output); summary_table.text
+(the table behind the paper's Table II); results_oct07.json.
+
+Copies: here the two copies are separate jobs minutes to an hour apart (copy 0 = first job, copy 1 = the others pooled), a harsher test
+than two copies inside one job. Untouched qubits are kept if their IQ clouds are separated by more than three widths in every job, they
+pass the dead-qubit guard (coherence at least five times the shot noise), and their coherence is at most 1.25. Pooled per-processor lines
+count repeated measures of the same qubits; the per-family readings are the readings of record.

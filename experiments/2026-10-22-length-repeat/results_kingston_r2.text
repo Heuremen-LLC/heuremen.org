@@ -1,0 +1,14 @@
+
+=== ibm_kingston  job dbdc41ni0auc73cqr2c0  L1 2.180 us  L2 1.380 us  L2/L1 0.633  shots 2000
+  R1 kick N=4 L1: -3.286 [-4.220, -2.557] deg/readout  n=115  copy gap [-0.359, +0.007] -> BELOW
+  R1 kick N=4 L2: -3.108 [-3.727, -2.488] deg/readout  n=115  copy gap [-0.025, +0.245] -> BELOW
+  R2 ratio k(L2)/k(L1) N=4: 0.946 [0.750, 1.171]  (per readout 1, proportional 0.633) -> PER-READOUT
+  R3 split N=4: per-readout part a -2.802 [-4.902, -0.559] deg, per-us part b -0.222 [-1.178, +0.624] deg/us
+  R1 kick N=8 L1: -2.812 [-3.790, -2.093] deg/readout  n=111  copy gap [-0.126, +0.109] -> BELOW
+  R1 kick N=8 L2: -2.759 [-3.095, -2.193] deg/readout  n=111  copy gap [-0.070, +0.117] -> BELOW
+  R2 ratio k(L2)/k(L1) N=8: 0.981 [0.773, 1.284]  (per readout 1, proportional 0.633) -> PER-READOUT
+  R3 split N=8: per-readout part a -2.668 [-4.508, -0.728] deg, per-us part b -0.066 [-0.945, +0.747] deg/us
+  R4 measured qubit, P(1) idle minus readout, N=4 L1: +0.0240 [+0.0182, +0.0285] n=39 (idle 0.945, readout 0.919) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=4 L2: +0.0168 [+0.0122, +0.0240] n=39 (idle 0.961, readout 0.942) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=8 L1: +0.0457 [+0.0383, +0.0585] n=39 (idle 0.909, readout 0.865) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=8 L2: +0.0335 [+0.0243, +0.0422] n=39 (idle 0.936, readout 0.904) -> ABOVE

@@ -1,0 +1,19 @@
+IBM jobs 546 {'DONE': 539, 'ERROR': 5, 'CANCELLED': 1, 'QUEUED': 1}
+  2026-09-24 US Eastern 48 {'ibm_fez': 3, 'ibm_kingston': 4, 'ibm_marrakesh': 41}
+  2026-09-28 US Eastern 65 {'ibm_fez': 37, 'ibm_kingston': 5, 'ibm_marrakesh': 23}
+  2026-10-01 US Eastern 3 {'ibm_kingston': 1, 'ibm_phoenix': 1, 'ibm_pittsburgh': 1}
+  2026-10-02 US Eastern 72 {'ibm_boston': 3, 'ibm_kingston': 5, 'ibm_marrakesh': 26, 'ibm_phoenix': 2, 'ibm_pittsburgh': 36}
+  2026-10-04 US Eastern 43 {'ibm_boston': 4, 'ibm_fez': 10, 'ibm_kingston': 11, 'ibm_marrakesh': 9, 'ibm_pittsburgh': 9}
+  2026-10-05 US Eastern 26 {'ibm_boston': 14, 'ibm_phoenix': 11, 'ibm_pittsburgh': 1}
+  2026-10-06 US Eastern 48 {'ibm_aachen': 15, 'ibm_boston': 1, 'ibm_fez': 1, 'ibm_kingston': 7, 'ibm_marrakesh': 7, 'ibm_phoenix': 9, 'ibm_pittsburgh': 8}
+  2026-10-07 US Eastern 125 {'ibm_aachen': 10, 'ibm_boston': 5, 'ibm_fez': 9, 'ibm_kingston': 54, 'ibm_marrakesh': 13, 'ibm_pittsburgh': 34}
+  2026-10-11 US Eastern 14 {'ibm_fez': 14}
+  2026-10-21 US Eastern 48 {'ibm_boston': 1, 'ibm_fez': 14, 'ibm_kingston': 15, 'ibm_marrakesh': 15, 'ibm_phoenix': 2, 'ibm_pittsburgh': 1}
+  2026-10-22 US Eastern 54 {'ibm_boston': 1, 'ibm_fez': 20, 'ibm_kingston': 14, 'ibm_marrakesh': 14, 'ibm_phoenix': 4, 'ibm_pittsburgh': 1}
+Rigetti tasks 3035 {'COMPLETED': 2899, 'CANCELLED': 116, 'FAILED': 20}
+  2026-09-25 US Eastern 154 {'COMPLETED': 154}
+  2026-09-26 US Eastern 71 {'COMPLETED': 51, 'FAILED': 20}
+  2026-09-28 US Eastern 338 {'COMPLETED': 338}
+  2026-10-04 US Eastern 1162 {'COMPLETED': 1046, 'CANCELLED': 116}
+  2026-10-05 US Eastern 1310 {'COMPLETED': 1310}
+Rigetti 4 October, 16 to 17 UTC (used in the paper): 680

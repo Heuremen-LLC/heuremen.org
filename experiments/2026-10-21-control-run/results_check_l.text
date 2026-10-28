@@ -1,0 +1,12 @@
+====================================================================================================
+ibm_fez
+  control run      forward (n=22) -1.177 [-1.998, -0.643] -> BELOW | backward (n=89) -1.640 [-2.336, -1.241] -> BELOW | backward - forward -0.464 [-1.408, +0.446] | backward same sign as forward: RESOLVED
+  raw-readout run  forward (n=21) -0.960 [-1.815, -0.586] -> BELOW | backward (n=87) -1.827 [-2.474, -1.206] -> BELOW | backward - forward -0.867 [-1.716, +0.341] | backward same sign as forward: RESOLVED
+====================================================================================================
+ibm_kingston
+  control run      forward (n=26) -3.032 [-4.424, -2.286] -> BELOW | backward (n=84) -3.361 [-4.861, -2.457] -> BELOW | backward - forward -0.328 [-1.924, +1.196] | backward same sign as forward: RESOLVED
+  raw-readout run  forward (n=23) -2.798 [-4.359, -1.860] -> BELOW | backward (n=88) -3.340 [-4.795, -2.269] -> BELOW | backward - forward -0.542 [-2.317, +1.452] | backward same sign as forward: RESOLVED
+====================================================================================================
+ibm_marrakesh
+  control run      forward (n=36) -3.367 [-5.200, -1.643] -> BELOW | backward (n=70) -2.278 [-3.686, -1.593] -> BELOW | backward - forward +1.089 [-0.856, +3.058] | backward same sign as forward: RESOLVED
+  raw-readout run  forward (n=34) -1.523 [-3.559, -0.881] -> BELOW | backward (n=77) -2.537 [-3.339, -1.941] -> BELOW | backward - forward -1.014 [-1.941, +1.390] | backward same sign as forward: RESOLVED

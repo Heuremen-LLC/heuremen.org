@@ -1,0 +1,20 @@
+====================================================================================================
+count ibm_fez
+  RK.1 kick per readout, readouts 1 -> 9 (offset-free)       -1.559 [-2.081, -1.037] deg n=117 -> BELOW   (copy gap -0.1167 [-0.3372, +0.1342])
+  RK.2 kick per readout, readouts 27 -> 81 (offset-free)     -0.6338 [-1.079, -0.3961] deg n=117 -> BELOW   (copy gap -0.09623 [-0.2749, +0.05824])
+====================================================================================================
+count ibm_kingston
+  RK.1 kick per readout, readouts 1 -> 9 (offset-free)       -2.819 [-4.098, -2.229] deg n=117 -> BELOW   (copy gap -0.04844 [-0.2404, +0.1013])
+  RK.2 kick per readout, readouts 27 -> 81 (offset-free)     -0.7258 [-1.113, -0.1045] deg n=117 -> BELOW   (copy gap +0.0372 [-0.107, +0.2551])
+====================================================================================================
+count ibm_marrakesh
+  RK.1 kick per readout, readouts 1 -> 9 (offset-free)       -2.844 [-3.708, -2.11] deg n=117 -> BELOW   (copy gap +0.01487 [-0.1463, +0.363])
+  RK.2 kick per readout, readouts 27 -> 81 (offset-free)     -0.4261 [-1.207, -0.1332] deg n=117 -> BELOW   (copy gap +0.1268 [-0.2489, +0.4931])
+====================================================================================================
+ACROSS CHIPS (values and widths; a chip whose copies shifted is listed and left out of the combination)
+  RK.1 kick per readout, readouts 1 -> 9 (offset-free)
+      fez -1.559 [-2.081, -1.037] | kingston -2.819 [-4.098, -2.229] | marrakesh -2.844 [-3.708, -2.11]
+      combined -2.1 [-2.496, -1.704] -> BELOW | chip-to-chip spread chi2/dof 4.87 (dof 2)
+  RK.2 kick per readout, readouts 27 -> 81 (offset-free)
+      fez -0.6338 [-1.079, -0.3961] | kingston -0.7258 [-1.113, -0.1045] | marrakesh -0.4261 [-1.207, -0.1332]
+      combined -0.6113 [-0.8615, -0.3611] -> BELOW | chip-to-chip spread chi2/dof 0.34 (dof 2)

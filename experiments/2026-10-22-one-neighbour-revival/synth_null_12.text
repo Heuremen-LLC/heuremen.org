@@ -1,0 +1,15 @@
+====================================================================================================
+zz ibm_phoenix job SYNTH-0.0-12 | triples 21
+  props ZZ (kHz) B1 edge: median 26.32, range 10.11-46.91 | revival inside grid for 4 triples, dip for 11
+  R1 fitted scale s (P1, B1 alone in +)                                          +0.1 [+0.1, +0.1] n=21 -> ABOVE   (copy gap +0 [+0, +0])
+  R1 fitted scale s (P2, B2 alone in +)                                          +0.1 [+0.1, +0.1] n=21 -> ABOVE   (copy gap +0 [+0, +0])
+  R1 fitted scale s minus 1.0 (P1)                                               -0.9 [-0.9, -0.9] n=21 -> BELOW   (copy gap +0 [+0, +0])
+  R1 fitted scale s minus 0.5 (P1)                                               -0.4 [-0.4, -0.4] n=21 -> BELOW   (copy gap +0 [+0, +0])
+  R2 return height at revival / Z, minus ZZ+T1 prediction (1+exp(-t*/T1_B1))/2   +nan [+nan, +nan] n=4 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  R2 return height at revival / Z (as measured)                                  +nan [+nan, +nan] n=4 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  R3a unconditional coherence at the dip / Z                                     +1.008 [+0.9867, +1.074] n=11 -> ABOVE   (copy gap -0.05061 [-0.1973, +0.02372])
+  R3b coherence split by B1 final bit at the dip / same statistic on Z           +1.002 [+0.9473, +1.038] n=11 -> ABOVE   (copy gap -0.03003 [-0.1339, +0.174])
+  R3c R3b - R3a (coherence held in the correlation with B1)                      -0.01381 [-0.04426, +0.0008553] n=11 -> CONSISTENT   (copy gap +0.02275 [-0.0004124, +0.06345])
+  R4 echo: EP1/EZ - 1 at the dip (static ZZ predicts 0)                          -0.01044 [-0.04547, +0.07776] n=11 -> CONSISTENT   (copy gap +0.01894 [-0.08636, +0.1586])
+  R5 SSE(product) - SSE(sum) for both in + (BELOW -> product)                    +0.02604 [-0.01013, +0.065] n=21 -> CONSISTENT   (copy gap -0.1185 [-0.2729, +0.03037])
+  R6 B1 in 1: mean C(O1)/C(Z) over live taus (reference)                         +1.005 [+0.9926, +1.01] n=21 -> ABOVE   (copy gap -0.004231 [-0.01424, +0.01077])

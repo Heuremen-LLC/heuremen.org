@@ -1,0 +1,77 @@
+# Referee report: ibm_phoenix flat-beat run (zz_flat)  -- VERDICT: NARROW
+
+Scripts (all in this folder): common.py, r1.py..r6.py, sim.py. Nothing submitted, no keys touched.
+
+## 1. Recompute
+Re-running the committed analysis from the raw npz reproduces Q1-Q4 exactly: slope 0.1931, rho 0.390, median 12.9 kHz, median ratio 0.463, 37 of 40 pairs.
+All 37 pairs have >=10 live taus (floor 0.063); 35 have >=20. The P/Z ratio curves show clean |cos| nulls and full revivals (e.g. A=37/B=27, stated 49.6 kHz: ratio 0.99, 0.91, 0.81 at 2, 6, 10 us; null 0.08 at 30 us; back to 0.96 at 58 us), so the beat is real and sits near 15-17 kHz, not 50 kHz.
+
+## 2. Fit artefact: NO (the instrument can see the calibrated beat)
+Simulation: exact taus, each pair's stated zz, smoothed measured C_Z decay, 4000-shot binomial noise on both arms with random phase, B's phoenix T1 included via the exact "B in + decays" model (60 repeats, same fit, same floor):
+| truth | slope | median kHz | rho | median fit/stated |
+| track (no T1) | 1.001 (sd 0.009) | 28.6 | 0.999 | 1.00 |
+| track (with B T1) | 1.023 (sd 0.010) | 28.4 | 0.993 | 0.99 |
+| flat 12.5 kHz | -0.005 | 12.1 | 0.08 | 0.41 |
+| flat 15 kHz | -0.009 | 14.6 | 0.01 | 0.50 |
+| half-track (0.5 x stated) | 1.05 | 13.9 | 0.96 | 0.49 |
+| track + extra P-arm damping, Tx = 30 us | 0.66 | 27.8 | | |
+| same, Tx = 60 / 120 us | 0.98 / 0.99 | 28.7 / 28.6 | | |
+Observed (0.19, 12.9, 0.39, 0.46) is reproduced by none. The instrument does not flatten a calibrated beat, and does not alias 10-58 kHz down to ~12 kHz. A constant factor (e.g. ZZ/2) would give slope 1, median ratio 0.5 (row "half-track") and is excluded as the explanation of the slope.
+Model-free check (no fit): ratio P/Z at the tau of IBM's predicted first null 1/(2 zz): median 0.73 (should be ~0 if tracking; only 14 % of pairs < 0.3). Observed first-dip tau median 38 us vs predicted 17.6 us; f from first dip: median 13.2 kHz, log-log slope vs stated 0.16, Spearman 0.37 (p 0.03). Independent of the cosine fit and the 1-100 kHz grid.
+
+## 3. Known-good grid
+Fez known-good (fit works, slope 1.00, median fit/stated 0.96) is on a 3-303 us grid and stated zz median 6 kHz, i.e. it never tests 30-60 kHz. It validates the fit code, not the phoenix grid or the high-zz regime. The planted-track simulation above on the exact phoenix grid fills that gap (slope 1.00-1.02 at stated 11-59 kHz). Cite that, not fez, for the phoenix grid.
+
+## 4. T1 / leakage / convention
+B's relaxation only lowers the fit slightly (about -0.4 kHz at 12.5; track stays 1.02). Phoenix B T1 median 187 us (one outlier 17 us). Leakage/double-excitation are not modelled; nothing in the data (full-contrast revivals, minima ~0.05-0.1) points to them. IBM stores zz as general entries "zz_<ab>", unit GHz, one name scheme for all 218 entries, all >= 0, 8 exactly 0; nothing indicates a per-edge convention. Per-edge convention variation cannot be excluded from the record, but it would need to compress 11-59 kHz onto 4-23 kHz, which is not a convention factor. Tell the bill the reading uses |zz| x 1e9 Hz as beat frequency (f = xi), the same mapping that gave 1.00 on fez.
+Binned fitted beat: stated 0-15 kHz: 11.7 (n=5); 15-25: 11.0 (7); 25-32: 13.7 (16); 32-60: 15.4 (9). Ratio is ~1 at the low end and ~0.3-0.5 at the high end, so "median 0.46" summarises a sub-proportional relation, not a constant factor.
+
+## 5. Dependence (block bootstrap over 20 triples, 4000)
+slope 0.19 [-0.0001, 0.37]; rho 0.39 [0.03, 0.67]; median 12.9 [11.7, 14.25]. The lower slope bound touches 0. Within-A fixed-effects slope 0.17 [-0.15, 0.57]; within-A concordance 10 of 17. Restricting to pairs with >=30 live taus: slope 0.095 (n=31); >=40: 0.097 (n=27). So "above 0" is not robust; "far below 1" is (upper bounds 0.37-0.57 in every variant).
+
+## 6. The three zz = 0.00 pairs
+Fitting them anyway gives 13.9, 15.2, 10.1 kHz (A = 101/100, 70/80, 96/86): same beat as everyone else on edges IBM states as zero. They cannot enter a log-log fit, the exclusion is on the x variable, not the outcome, and including them (as a flat reading) would push toward 0, so exclusion does not bias toward "flat"; it makes the stated slope slightly larger. Report them as an extra line. (IBM zz = 0 likely means uncalibrated; rzz7_17 gate_error = 1 shows such edges exist.)
+
+## Verdict: NARROW
+Not DROP: the instrument reproduces tracking and flat cleanly, and a model-free check agrees. Not KEEP as written: (a) the plan's FLAT prediction (slope consistent with 0) was not met, and the result is not shown above 0 under the triple bootstrap or the within-A or >=30-tau variants; (b) "follows IBM's stated zz" over-reads a slope of 0.1-0.2; (c) median 0.46 hides a ratio that runs from ~1 to ~0.3.
+Exact wording:
+"ibm_phoenix zz: on 37 fresh pairs (fit and analysis fixed before the job), the beat an untouched qubit shows beside one superposed neighbour does not scale with IBM's stated zz: log-log slope 0.19 [0.01, 0.38] by pair, [0.00, 0.37] by triple, against 1 for any proportional relation or convention factor (ibm_fez, same fit, 1.00). Fitted beats run 4-23 kHz (median 12.9) for stated values of 11-59 kHz (median 28), and three edges IBM states as 0.00 show 10-15 kHz. The pre-registered flat prediction (slope 0) was not met either: the slope is 0.1-0.2, not distinguishable from 0 by triple bootstrap."
+Do not write "pre-registered" for the result itself, only for the analysis; do not use "median 0.46 of stated" without the bin trend; cite the phoenix-grid planted-track simulation (slope 1.00-1.02) as the grid check.
+
+## Cheapest additional run
+One short phoenix job on these same 20 triples (same qubits): direct Ramsey on A with B1 (then B2) in |0> vs |1> (not |+>), tau 1-40 us in 1 us steps (no refit of an envelope; the frequency difference of A between B=0 and B=1 is the ZZ itself, read from the x,y phase, Nyquist 500 kHz), 2 copies, ~1000 shots, plus a re-read of IBM's properties at firing. About 3 arms x 40 taus x 2 settings x 2 copies, circuits < 50 us: roughly 1-2 minutes of QPU. Outcome meanings: phase-ZZ ~ stated -> the |+> envelope mapping is what fails (neighbour not in the assumed state/ dynamics), calibration fine; phase-ZZ ~ 13 kHz flat -> the calibration is what is off. Either way it removes the envelope-model assumption. (CORRECTION, see Part II: my first attempt to do this from the 22 Oct O1 arm failed because of a bug in my own periodogram (abs taken inside the sum); the coordinator's O1 phase reading does exactly this, and I redid it correctly below.)
+
+
+# PART II: direct O1 phase shift (analyze_o1_shift.py), judged with the flat beat
+Scripts: o1.py o3.py o4.py o5.py. Readings recomputed from the committed script: both result files reproduce exactly (unheralded differs only by the header line; heralded identical).
+
+## (a) Recompute
+Reproduced. Phoenix heralded: 19 of 21 triples, S2 0.486 [0.412, 0.599], S3 0.100 [0.006, 0.220], rho 0.486. Phoenix unheralded S3 -0.04 [-1.85, 1.97] is uninformative: two triples return 0.2 and 0.1 kHz (unwrap slips in the low-coherence tail, estimator is unweighted polyfit over all live taus), which the heralded run fixes (13.1 and 13.0). Do not quote the unheralded phoenix slope.
+Third, alias-free estimator (mine, post hoc, supporting only): weighted periodogram of exp(i(phi_O1 - phi_Z)) over +-100 kHz (full Nyquist for 5 us steps), 25 Hz grid. Heralded phoenix: every one of 20 triples peaks at -9 to -18 kHz (peak coherence 0.93-1.00), median |f| 13.2, log-log slope vs stated 0.20, rho 0.75, including the edge stated 0.00 (15.3 kHz) and the 49.6 and 56.9 kHz edges (16.8, 14.8 kHz). Sign is negative on all 20. Unheralded periodogram: median 12.8, slope -0.06, 19 of 20 within 0.3 kHz of heralded.
+
+## (b) Unwrapping aliasing: NO
+A 57 kHz shift is 1.79 rad per 5 us step, below pi; aliasing needs > 100 kHz, and a 13 kHz reading would need a true 187 or 213 kHz, far above any stated zz (max 59 kHz). Simulation (actual triples, measured Z amplitudes, A detuning random +-30 kHz common to both arms, binomial noise, the committed unwrap-polyfit estimator with the committed floor), truth = stated zz: heralded median |df|/stated 0.998, slope 0.95; unheralded with B1 T1 decay 0.997 (slope noisy, 1.7, because of tail unwrap slips). Truth = flat 13 kHz: ratio 0.50, slope 0.00 (heralded). Observed 0.486 / 0.10 matches flat, not track. T1 decay of B1 does not explain the 0.5 ratio.
+
+## (c) Heralding bias: negligible
+Readout misassignment of 2 % (and 5 %) of B1 mixes in unshifted shots; it moves ratio by <0.001 and slope by <0.01 in simulation. Survivorship on B1=1 at the end selects shots where B1 stayed 1 for the whole time (decay-and-re-excite is second order), so it removes the T1 dilution rather than adding bias. The heralded fez ratio 1.075 on the same code shows the herald does not create a 0.5. Caveat from the file itself: heralded was defined after seeing unheralded; on fez it passes the ratio but its slope 0.644 [0.31, 0.87] misses 1 (outliers: edge stated 9.7 gives 17.6; stated 6.6 gives 0.5 and 0.7), so the known-good rule is only met for the unheralded variant, and unheralded is the one that fails on phoenix for estimator reasons. IBM will say exactly this. The answer is not the slope but the ratio-and-level: fitted shifts are within 1-2 kHz of one another across a 6x range of stated.
+
+## (d) A detuning / drift: cancels
+Arms are interleaved and shuffled in one job; copy 0 and copy 1 give the same per-triple shift (median absolute copy difference 0.24 kHz of 13). A's own detuning (phase slope in arm Z) is triple-specific, -26 to +22 kHz, uncorrelated with the 13 kHz shift; the simulation with random common detuning leaves the estimate unchanged. Extra mechanism test from the same job: with a Hahn echo on A (EP1 vs EZ), the beat goes away (fitted beat 1.3-3.7 kHz, one 7 kHz, versus 13 kHz in P1/Z), i.e. the effect is a static, refocusable shift as ZZ should be, not noise or B1 dynamics.
+
+## Combined reading
+Two different observables on different qubit states (B in |+>, envelope beat, 37 fresh pairs, pre-registered fit) and (B in |1> vs |0>, A's phase, 19 triples, post hoc, direct), two different estimators, two different jobs, fresh vs earlier As, agree: on ibm_phoenix the frequency shift of an untouched qubit when one neighbour changes state is about 13 kHz (range 9-17), nearly independent of the edge, for stated zz of 0 to 59 kHz. Same code on ibm_fez gives ratio 0.85 unheralded and 1.075 heralded and shifts that follow the stated values (rho 0.71-0.73). The flat-beat prediction's literal slope 0 is not met in either reading (0.1-0.2); the honest description is "compressed to a narrow band, weakly monotone".
+
+## IBM's best rebuttals, and what answers them
+1. "Stale or different-time calibration." Static ZZ does not move 4x across all edges; props timestamp 06:28 vs firing ~08:00; the edge stated 0.00 reads 15 kHz, and fez, same procedure, matches. Unanswered by the record: whether phoenix's zz_ entries come from a different protocol (e.g. coupler-on idle vs the circuit's actual idle). Ask IBM which.
+2. "Factor-2 convention." Gives ratio 0.5 and slope 1 (simulated: half-track slope 1.05); observed slope 0.1-0.2 and fitted values constant. Fails.
+3. "Post hoc, small n, heralded variant fails fez slope." True, and it must be disclosed: the direct shift is exploratory (defined after the job, heralding after seeing unheralded). It carries weight only because it agrees with the pre-registered reading and the alias-free periodogram agrees with both.
+4. "Aliasing / unwrap." Excluded by simulation (b) and by the periodogram.
+5. "A is detuned / drifting." Cancels (d).
+6. "Low n." 19 + 37 pairs, but they share chip, day and calibration; this is one chip. Nothing here says anything about other chips; claim phoenix only.
+
+## Bill line (replaces the Part I wording)
+"ibm_phoenix zz: IBM's calibration lists zz of 11-59 kHz (median 28 kHz) for the edges tested. Two independent readings of the same chip give the shift of an idle qubit when one neighbour changes state as 9-17 kHz, median 13 kHz, about 0.5 of the stated value and nearly independent of the stated value: (1) pre-registered, 37 fresh pairs, beat of an untouched qubit beside one superposed neighbour, log-log slope on stated zz 0.19 [0.01, 0.38] (block bootstrap over triples [0.00, 0.37]); (2) exploratory, defined after the data, 19 triples, direct phase shift with the neighbour in |1> (heralded), median 12.8 kHz, ratio to stated 0.49 [0.41, 0.60], slope 0.10 [0.01, 0.22]. Three edges IBM states as 0.00 show 10-15 kHz. The same analyses on ibm_fez return the stated values (ratio 0.85-1.08)."
+Disclose beside it: (2) is post hoc and its heralded variant fails its own fez slope rule (0.64); the pre-registered flat prediction (slope 0) was not met either; one chip, one day.
+
+## VERDICT (combined): NARROW, stronger than Part I
+Keep the magnitude claim (about 13 kHz against stated 11-59 kHz, edge-independent to within a narrow band, confirmed by two observables); do not claim "flat" or slope 0; say "weakly monotone, slope 0.1-0.2"; label (2) exploratory. Cheapest bulletproofing run is still the one in Part I but now narrower: a fresh phoenix job on new A qubits with B in |0> vs |1> only (heralded by a final B read), taus 1-60 us in 1-2 us steps (no alias possible, short circuits), plus the same job on one fez edge set as the known-good, plan hashed first: it turns (2) from post hoc into pre-registered with ~1-2 minutes of QPU.

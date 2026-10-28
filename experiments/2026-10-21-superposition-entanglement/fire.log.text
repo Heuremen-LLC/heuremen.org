@@ -1,0 +1,12 @@
+account disco remaining seconds: 112
+ibm_fez: 35 pubs, emitters 39, spectators 117, pairs 48, L=415 dt, circuits 1.8-54.9 us, shots 2000, total shots 70000, queue 1
+SUBMITTED ibm_fez dbchsbni0auc73dv0gt0
+DONE ibm_fez: remaining now 90
+account disco remaining seconds: 90
+ibm_kingston: 35 pubs, emitters 39, spectators 117, pairs 48, L=545 dt, circuits 2.4-72.1 us, shots 2000, total shots 70000, queue 0
+SUBMITTED ibm_kingston dbcht9s24mrc73cjma50
+DONE ibm_kingston: remaining now 67
+account disco remaining seconds: 67
+ibm_marrakesh: 35 pubs, emitters 39, spectators 117, pairs 48, L=671 dt, circuits 2.8-88.8 us, shots 2000, total shots 70000, queue 17
+SUBMITTED ibm_marrakesh dbchtlpgv2cc73ead6bg
+DONE ibm_marrakesh: remaining now 43

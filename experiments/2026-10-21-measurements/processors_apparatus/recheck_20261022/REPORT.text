@@ -1,0 +1,50 @@
+# Claim 10 check: was the "pure exponential" null like-for-like?
+
+Files: sim.py (measurement-chain simulator), run.py (26 jobs, 9 variants), bits.py (classified-bit contrast), results.json, table.md. All in
+recheck_20261022/
+
+## 1. What was actually used
+- Data: /Users/heuremen/bones-forge/heuremen.org/experiments/2026-10-21-measurements/processors_apparatus/data/time_runs_ruler_copies.json. Per qubit, three copies (a, b, c), each with levels at 30, 100, 300, 600 us. First row dumped: `[0, 0.90585, 0.65234, 0.25362, 0.07788, ...]`.
+- The levels are NOT classified bits. They are continuous (negative values occur, e.g. -0.037; no grid of 1/shots). Each is the mean of the raw readout signal projected on the line between the two clouds, scaled so OFF cloud = 0 and ON cloud = 1 from the same job.
+- Test: a copy counts as "below the line" if its 30 us level < (its own 300 us level)^(30/300).
+- Published null (null_check.py): per qubit, take the mean 300 us level of the 3 copies, draw the 300 us level and the 30 us level around the exact exponential line with each qubit's own copy-to-copy scatter, 20 draws per qubit, same test. Result 47.8-51.5 % per job. I re-ran it: 47.2-51.7 % with a different random seed, same thing.
+- Its noise is the real, empirical scatter of the data, so shot noise and normalisation noise are in it. What it has no model for is the readout signal itself (cloud separation, relaxation during readout, imperfect "1" preparation).
+
+## 2. The right null, and why the classified-bit concern does not carry over
+The mean of the raw signal is linear in the excited-state population, so readout error (misassignment, relaxation during readout, cloud overlap) is divided out by the OFF = 0 / ON = 1 normalisation. The classified-bit problem comes from counting bits with a fixed threshold, where the 0/1 error is not divided out. I tested both through the same simulator:
+
+| job | classified raw bits, cloud separation 4 / 6 / 9 widths | raw-signal levels (what the data are) |
+|---|---|---|
+| aachen 871 | 96.2 / 82.8 / 80.9 % | 48.8 / 49.0 / 48.6 % |
+| fez 401 | 95.8 / 78.9 / 77.1 % | 50.2 / 49.8 / 49.2 % |
+| marrakesh 301 | 96.2 / 81.4 / 79.5 % | 50.1 / 49.9 / 49.5 % |
+| pittsburgh 361 | 97.3 / 85.5 / 84.4 % | 49.7 / 50.0 / 49.8 % |
+
+So today's 83-93 % concern is real for classified bits (reproduced), and does not apply to these levels.
+
+Like-for-like simulation, per job: each qubit gets a pure single exponential with its own fitted T1 (least squares over the four times, amplitude 1). Single shots are drawn through the chain: a prepared state with prep error, a decaying population, Gaussian cloud noise per shot, a fraction relaxing mid-readout and landing between the clouds, an idle-in-0 floor equal to the job's own measured mean (about 0.1-0.8 %), OFF and ON reference clouds drawn from the same shots in the same job, then normalised exactly as the data. 300 replicates per job, same three copies, same qubits and same 30/300 test. Shot count (300-400) is calibrated so the copy-to-copy scatter at all four times matches the data; it agrees with the 330 shots recorded in the Pittsburgh park jobs.
+
+Limits: the compact data file does not hold the raw clouds, per-job shots or IBM calibration, and I did not find the raw files on disk. So the cloud separation and readout relaxation are not derived from the jobs; I used a central guess (6 widths, 3 % relaxation, 1 % prep error) and ran 8 sensitivity variants (separation 4 and 9, relaxation 0 and 10 %, prep error 5 %, references not shared across copies, no idle floor, and a combined worst case of separation 4, relaxation 10 %, prep error 5 %). IBM's published readout error is not needed for the answer because it divides out; the separation sweep (4 widths = about 2 % misassignment) covers it.
+
+Calibration check: the published null procedure, run on my simulated pure-exponential data, returns 48.6-50.2 %, matching the true simulated share. So the published null was unbiased for this chain. The like-for-like null is 48.6-54.2 % across all jobs and variants (main variant 49.2-53.6 %). The upper end is fez and marrakesh (lower levels, so the idle-in-0 floor matters slightly) and is still far from the observed values.
+
+## 3. Observed vs like-for-like null, per job (outcome = ABOVE if the 95 % bootstrap interval over qubits of observed minus null is wholly positive; BELOW if wholly negative; CONSISTENT if it contains 0; CANNOT_TELL if the outcome differs between null variants)
+Medians over jobs (range): 
+| chip | jobs | observed % | like-for-like null % | observed minus null |
+|---|---|---|---|---|
+| aachen | 3 | 64.9 (63.7-65.1) | 49.8 (49.2-50.5) | +14.4 |
+| boston | 11 | 67.8 (62.6-70.8) | 50.5 (50.3-51.5) | +17.2 |
+| fez | 3 | 84.2 (83.2-84.8) | 51.3 (50.4-53.4) | +32.8 |
+| kingston | 3 | 74.5 (72.2-77.9) | 50.8 (50.7-51.0) | +23.8 |
+| marrakesh | 3 | 82.5 (80.3-83.6) | 53.5 (52.2-53.6) | +29.0 |
+| pittsburgh | 3 | 62.3 (61.5-64.1) | 50.1 (49.4-50.2) | +12.2 |
+
+All 26 jobs: ABOVE, in all 9 null variants (counts: ABOVE 26, BELOW 0, CONSISTENT 0, CANNOT_TELL 0). The smallest lower interval bound of any job in any variant is +6.1 points (pittsburgh/boston); every sign is positive. Per-job table with intervals: table.md in the same folder.
+
+## 4. Verdict: STANDS, with the null range updated
+The measurement is not false and the null was like-for-like in the way that matters (it is on the same raw-signal levels, and the normalisation divides readout error out). The published null range (48-52 %) is slightly too tight against a full chain simulation (49-54 %); the claim's observed range is unchanged. Not excluded by this data: a per-qubit systematic that is common to all three copies (for example a timing or structure difference between the reference circuit that defines the ON cloud and the idle circuit). The claim says only that the decay is not a single exponential, which that would also produce; it does not say why.
+
+Proposed sentence (replaces the null range; the rest is as published):
+"Idle qubits do not decay along a simple exponential: on six IBM processors (26 jobs), 62 to 85 % of qubits prepared in 1 read below the line from their own 300 us level at 30 us (levels are raw readout signal normalised with the job's own OFF and ON clouds), where a pure exponential passed through the same normalisation, with the same shots and noise, gives 49 to 54 %."
+
+Optional one-line add to the data page: "Counting classified bits instead would give 77-97 % for a pure exponential, so this test must be run on the normalised signal, as it is."

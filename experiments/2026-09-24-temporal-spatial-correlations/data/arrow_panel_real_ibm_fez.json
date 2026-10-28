@@ -1,0 +1,259 @@
+{
+ "backend": "ibm_fez",
+ "job": "daqp5ndb46qs73a1imvg",
+ "shots": 2048,
+ "rows": [
+  {
+   "qubit": 1,
+   "kind": "BASE",
+   "theta": null,
+   "value": 0.9560546875
+  },
+  {
+   "qubit": 1,
+   "kind": "REV",
+   "theta": 0.7853981633974483,
+   "value": 0.966796875
+  },
+  {
+   "qubit": 1,
+   "kind": "REV",
+   "theta": 1.5707963267948966,
+   "value": 0.951171875
+  },
+  {
+   "qubit": 1,
+   "kind": "REV",
+   "theta": 2.356194490192345,
+   "value": 0.9521484375
+  },
+  {
+   "qubit": 1,
+   "kind": "REV",
+   "theta": 3.141592653589793,
+   "value": 0.9609375
+  },
+  {
+   "qubit": 1,
+   "kind": "LOOK",
+   "theta": null,
+   "value": 0.0224609375
+  },
+  {
+   "qubit": 1,
+   "kind": "LINK+",
+   "theta": 0.7853981633974483,
+   "value": 0.580078125
+  },
+  {
+   "qubit": 1,
+   "kind": "LINK+",
+   "theta": 1.5707963267948966,
+   "value": 0.001953125
+  },
+  {
+   "qubit": 1,
+   "kind": "LINK+",
+   "theta": 2.356194490192345,
+   "value": -0.5986328125
+  },
+  {
+   "qubit": 1,
+   "kind": "LINK+",
+   "theta": 3.141592653589793,
+   "value": -0.8427734375
+  },
+  {
+   "qubit": 1,
+   "kind": "LINK-",
+   "theta": 0.7853981633974483,
+   "value": 0.583984375
+  },
+  {
+   "qubit": 1,
+   "kind": "LINK-",
+   "theta": 1.5707963267948966,
+   "value": 0.0185546875
+  },
+  {
+   "qubit": 1,
+   "kind": "LINK-",
+   "theta": 2.356194490192345,
+   "value": -0.5595703125
+  },
+  {
+   "qubit": 1,
+   "kind": "LINK-",
+   "theta": 3.141592653589793,
+   "value": -0.8173828125
+  },
+  {
+   "qubit": 2,
+   "kind": "BASE",
+   "theta": null,
+   "value": 0.9931640625
+  },
+  {
+   "qubit": 2,
+   "kind": "REV",
+   "theta": 0.7853981633974483,
+   "value": 0.990234375
+  },
+  {
+   "qubit": 2,
+   "kind": "REV",
+   "theta": 1.5707963267948966,
+   "value": 0.98828125
+  },
+  {
+   "qubit": 2,
+   "kind": "REV",
+   "theta": 2.356194490192345,
+   "value": 0.9912109375
+  },
+  {
+   "qubit": 2,
+   "kind": "REV",
+   "theta": 3.141592653589793,
+   "value": 0.990234375
+  },
+  {
+   "qubit": 2,
+   "kind": "LOOK",
+   "theta": null,
+   "value": -0.0361328125
+  },
+  {
+   "qubit": 2,
+   "kind": "LINK+",
+   "theta": 0.7853981633974483,
+   "value": 0.6806640625
+  },
+  {
+   "qubit": 2,
+   "kind": "LINK+",
+   "theta": 1.5707963267948966,
+   "value": 0.0
+  },
+  {
+   "qubit": 2,
+   "kind": "LINK+",
+   "theta": 2.356194490192345,
+   "value": -0.693359375
+  },
+  {
+   "qubit": 2,
+   "kind": "LINK+",
+   "theta": 3.141592653589793,
+   "value": -0.96875
+  },
+  {
+   "qubit": 2,
+   "kind": "LINK-",
+   "theta": 0.7853981633974483,
+   "value": 0.6708984375
+  },
+  {
+   "qubit": 2,
+   "kind": "LINK-",
+   "theta": 1.5707963267948966,
+   "value": 0.0107421875
+  },
+  {
+   "qubit": 2,
+   "kind": "LINK-",
+   "theta": 2.356194490192345,
+   "value": -0.7294921875
+  },
+  {
+   "qubit": 2,
+   "kind": "LINK-",
+   "theta": 3.141592653589793,
+   "value": -0.974609375
+  },
+  {
+   "qubit": 133,
+   "kind": "BASE",
+   "theta": null,
+   "value": 0.9814453125
+  },
+  {
+   "qubit": 133,
+   "kind": "REV",
+   "theta": 0.7853981633974483,
+   "value": 0.9716796875
+  },
+  {
+   "qubit": 133,
+   "kind": "REV",
+   "theta": 1.5707963267948966,
+   "value": 0.974609375
+  },
+  {
+   "qubit": 133,
+   "kind": "REV",
+   "theta": 2.356194490192345,
+   "value": 0.9794921875
+  },
+  {
+   "qubit": 133,
+   "kind": "REV",
+   "theta": 3.141592653589793,
+   "value": 0.9775390625
+  },
+  {
+   "qubit": 133,
+   "kind": "LOOK",
+   "theta": null,
+   "value": -0.029296875
+  },
+  {
+   "qubit": 133,
+   "kind": "LINK+",
+   "theta": 0.7853981633974483,
+   "value": 0.7021484375
+  },
+  {
+   "qubit": 133,
+   "kind": "LINK+",
+   "theta": 1.5707963267948966,
+   "value": 0.001953125
+  },
+  {
+   "qubit": 133,
+   "kind": "LINK+",
+   "theta": 2.356194490192345,
+   "value": -0.666015625
+  },
+  {
+   "qubit": 133,
+   "kind": "LINK+",
+   "theta": 3.141592653589793,
+   "value": -0.96484375
+  },
+  {
+   "qubit": 133,
+   "kind": "LINK-",
+   "theta": 0.7853981633974483,
+   "value": 0.689453125
+  },
+  {
+   "qubit": 133,
+   "kind": "LINK-",
+   "theta": 1.5707963267948966,
+   "value": -0.0029296875
+  },
+  {
+   "qubit": 133,
+   "kind": "LINK-",
+   "theta": 2.356194490192345,
+   "value": -0.6865234375
+  },
+  {
+   "qubit": 133,
+   "kind": "LINK-",
+   "theta": 3.141592653589793,
+   "value": -0.9638671875
+  }
+ ]
+}

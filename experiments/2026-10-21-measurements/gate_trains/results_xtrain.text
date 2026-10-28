@@ -1,0 +1,121 @@
+verify_xtrain.py -- Sec. sec:xtrain numbers recomputed from raw IBM job results (data/). Bootstrap NB=200, seed 20261022.
+
+JOBS USED (chip run job_id submitted):
+  ibm_pittsburgh  run 91   davuanc92g1c7399i8kg  2026-10-02T13:09:49-04:00
+  ibm_pittsburgh  run 92   davveh04oijs73e88tsg  2026-10-02T14:26:12-04:00
+  ibm_pittsburgh  run 93   davvf7c92g1c7399k1h0  2026-10-02T14:27:41-04:00
+  ibm_pittsburgh  run 121  db00t8k92g1c7399m6hg  2026-10-02T16:05:54-04:00
+  ibm_pittsburgh  run 361  db16p5hb694s73drsna0  2026-10-04T11:11:18-04:00
+  ibm_marrakesh   run 141  db023m492g1c7399o9vg  2026-10-02T17:27:52-04:00
+  ibm_marrakesh   run 301  db15r4bid5ic73eqmhs0  2026-10-04T10:07:13-04:00
+  ibm_marrakesh   run 302  db15s4pb694s73drrg10  2026-10-04T10:09:24-04:00
+  ibm_marrakesh   run 303  db15skrid5ic73eqmkvg  2026-10-04T10:10:28-04:00
+  ibm_kingston    run 141  db023hal7guc73cfnvl0  2026-10-02T17:27:33-04:00
+  ibm_kingston    run 301  db15t52vog1s73fhmo3g  2026-10-04T10:11:32-04:00
+  ibm_kingston    run 302  db15u31b694s73drrjvg  2026-10-04T10:13:32-04:00
+  ibm_kingston    run 303  db161j6egvvc73bh6u50  2026-10-04T10:21:00-04:00
+
+
+4 October readable qubits per job: marrakesh [136, 138, 137]; kingston [142, 146, 147]; pittsburgh [149]
+
+start-1 over start-0 excess (minus sign dropped), against ONE (the only bookkeeping for which the ratio is defined; against CURVE the start-0 excess crosses zero):
+  marrakesh   5 us 0.901   10 us 0.843   20 us 0.596
+  kingston    5 us 0.940   10 us 0.745   20 us 0.620
+  pittsburgh  5 us 0.973   10 us 0.633   20 us 0.368
+    info: the paper width 0.012 on the 10-gate prediction needs a shortfall width of 0.142 deg (fit gives 0.119 deg)
+
+where     quantity                                                          paper   recomputed  status    note
+l.229     ON left alone 10 us level (run 121)                             +0.9463    +0.946341  ok        
+l.229     ON left alone 30 us level (run 121)                             +0.8609    +0.860915  ok        
+l.229     ON left alone 90 us level (run 121)                             +0.6846    +0.684637  ok        
+l.229     ON left alone 300 us level (run 121)                            +0.3286    +0.328609  ok        
+l.229     ON 10 us minus exponential through 300 us                       -0.0141    -0.014055  ok        
+l.229     ON 30 us minus exponential through 300 us                       -0.0259    -0.025861  ok        
+l.229     ON 90 us minus exponential through 300 us                       -0.0185    -0.018500  ok        
+l.229     readable qubits in run 121 ("150 qubits")                          +150      +150.00  ok        of 156
+xtrain    pittsburgh 3 jobs, start 0, 10 gates/300 us, vs ONE             +0.0200    +0.020001  ok        
+xtrain       width                                                        +0.0016    +0.001465  ok(boot)  
+xtrain    pittsburgh 4th job (run 121), start 0, vs ONE                   +0.0126    +0.012633  ok        
+xtrain       width                                                        +0.0032    +0.003510  ok(boot)  
+xtrain    "about two widths apart" (diff / combined width)                     +2        +1.94  ok        ratio, not a level
+xtrain    marrakesh (1 job), start 0, vs ONE                              +0.0274    +0.027421  ok        
+xtrain       width                                                        +0.0028    +0.002671  ok(boot)  
+xtrain    kingston (1 job), start 0, vs ONE                               +0.0287    +0.028748  ok        
+xtrain       width                                                        +0.0028    +0.002937  ok(boot)  
+xtrain    pittsburgh start 1, vs ONE                                      +0.0005    +0.000473  ok        
+xtrain       width                                                        +0.0013    +0.001276  ok(boot)  
+xtrain    marrakesh start 1                                               -0.0016    -0.001645  ok        
+xtrain       width                                                        +0.0021    +0.002252  ok(boot)  
+xtrain    kingston start 1                                                -0.0124    -0.012354  ok        
+xtrain       width                                                        +0.0024    +0.002379  ok(boot)  
+xtrain    marrakesh minus pittsburgh excess                               +0.0074    +0.007420  ok        
+xtrain       width                                                        +0.0032    +0.003046  ok(boot)  
+xtrain    pittsburgh 2 Oct back-to-back ten gates, start 0                 +0.023     +0.02288  ok        paper: "+-0.023"
+xtrain    pittsburgh 2 Oct back-to-back ten gates, start 1                 -0.023     -0.02322  ok        paper: "+-0.023"
+xtrain    marrakesh 2 Oct back-to-back ten gates, start 1                 -0.0148    -0.014812  ok        paper "+-0.0148"; start 0 reads +0.0147
+xtrain    marrakesh start 0 excess vs ONE at 30 us                        +0.0302    +0.030189  ok        
+xtrain       width                                                        +0.0020    +0.002000  ok(boot)  
+xtrain    kingston start 0 excess vs ONE at 30 us                         +0.0325    +0.032455  ok        
+xtrain       width                                                        +0.0019    +0.001988  ok(boot)  
+xtrain    pittsburgh start 0 excess vs ONE at 30 us                       +0.0171    +0.017145  ok        
+xtrain       width                                                        +0.0028    +0.003148  ok(boot)  
+xtrain    marrakesh start 0 excess vs ONE at 5 us                         +0.0575    +0.057491  ok        
+xtrain    kingston start 0 excess vs ONE at 5 us                          +0.0576    +0.057600  ok        
+xtrain    pittsburgh start 0 excess vs ONE at 5 us                        +0.0267    +0.026680  ok        
+xtrain    marrakesh start 0 excess vs ONE at 150 us                       -0.0003    -0.000340  ok        
+xtrain    kingston start 0 excess vs ONE at 150 us                        +0.0058    +0.005757  ok        
+xtrain    pittsburgh start 0 excess vs ONE at 150 us                      +0.0050    +0.005013  ok        
+xtrain    start-1 / start-0 excess at 5,10,20 us vs ONE: min                +0.35      +0.3680  DIFFERS   paper: "35 to 100%"
+xtrain    start-1 / start-0 excess at 5,10,20 us vs ONE: max                +1.00      +0.9732  DIFFERS   paper: "35 to 100%"
+xtrain    4 Oct ten back-to-back, start 0: min %                             +1.0       +0.999  ok        paper: "+1.0 to +1.2%"
+xtrain    4 Oct ten back-to-back, start 0: max %                             +1.2       +1.151  ok        paper: "+1.0 to +1.2%"
+xtrain    4 Oct ten back-to-back, start 1: |max| %                           +1.1       +1.070  ok        paper: "-1.0 to -1.1%"
+xtrain    4 Oct ten back-to-back, start 1: |min| %                           +1.0       +0.991  ok        paper: "-1.0 to -1.1%"
+xtrain    pittsburgh 4 Oct back-to-back ten gates, start 0                 +0.010     +0.00999  ok        paper: "+-0.010"
+xtrain    pittsburgh 4 Oct back-to-back ten gates, start 1                 -0.010     -0.01070  DIFFERS   paper: "+-0.010"
+xtrain    kingston start 0 vs CURVE, 20-150 us: max |.|                    +0.007     +0.00627  ok        paper: "within +-0.007"; range -0.0063..+0.0033
+xtrain    kingston start 0 vs CURVE, 30-150 us: max |.|                    +0.007     +0.00627  ok        paper: "within +-0.007" at 30 us and longer; range -0.0063..-0.0034
+xtrain    kingston start 1 vs CURVE, 20-150 us: max |.|                    +0.007     +0.00334  ok        paper: "within +-0.007"; range -0.0033..+0.0027
+xtrain    kingston start 1 vs CURVE, 30-150 us: max |.|                    +0.007     +0.00267  ok        paper: "within +-0.007" at 30 us and longer; range -0.0020..+0.0027
+xtrain    pittsburgh start 0 vs CURVE, 20-150 us: max |.|                  +0.007     +0.00639  ok        paper: "within +-0.007"; range -0.0064..+0.0034
+xtrain    pittsburgh start 0 vs CURVE, 30-150 us: max |.|                  +0.007     +0.00639  ok        paper: "within +-0.007" at 30 us and longer; range -0.0064..+0.0034
+xtrain    pittsburgh start 1 vs CURVE, 20-150 us: max |.|                  +0.007     +0.00347  ok        paper: "within +-0.007"; range -0.0035..+0.0028
+xtrain    pittsburgh start 1 vs CURVE, 30-150 us: max |.|                  +0.007     +0.00283  ok        paper: "within +-0.007" at 30 us and longer; range -0.0019..+0.0028
+xtrain    marrakesh start 0 vs CURVE, 20-150 us: least negative            -0.012     -0.01196  ok        paper: "-0.012 to -0.018"
+xtrain    marrakesh start 0 vs CURVE, 20-150 us: most negative             -0.018     -0.01817  ok        paper: "-0.012 to -0.018"
+xtrain    marrakesh start 0 vs CURVE, 30-150 only: least negative          -0.012     -0.01376  info      info: the -0.012 end needs the 20 us (interpolated) point
+xtrain    marrakesh start 1 vs CURVE, 20-150 us: most negative             -0.016     -0.01564  ok        paper: "by up to -0.016"; max positive -0.0018
+abstract  marrakesh over-correction 20-150 us, start 0 least/most (%)            -            -  info      1.20 to 1.82 %; start 1 up to 1.56 % (paper: 1 to 2%)
+xtrain    marrakesh start 0 vs CURVE at 5 us                              +0.0191    +0.019065  ok        
+xtrain    marrakesh start 0 vs CURVE at 10 us                             +0.0040    +0.003962  ok        
+xtrain    marrakesh start 1 vs CURVE at 5, 10 us (paper: opposite sign)            -    -0.019605  ok        5 us -0.0196, 10 us -0.0104
+xtrain    kingston start 0 vs CURVE at 5 us                               +0.0337    +0.033724  ok        
+xtrain    kingston start 0 vs CURVE at 10 us                              +0.0195    +0.019494  ok        
+xtrain    kingston start 1 vs CURVE at 5, 10 us (paper: opposite sign)            -    -0.032888  ok        5 us -0.0329, 10 us -0.0129
+xtrain    pittsburgh start 0 vs CURVE at 5 us                             +0.0108    +0.010757  ok        
+xtrain    pittsburgh start 0 vs CURVE at 10 us                            +0.0073    +0.007311  ok        
+xtrain    pittsburgh start 1 vs CURVE at 5, 10 us (paper: opposite sign)            -    -0.014557  ok        5 us -0.0146, 10 us -0.0068
+gate      ten back-to-back gates, start 0 (%)                               +2.29      +2.2882  ok        
+gate      ten back-to-back gates, start 1 (%)                               -2.32      -2.3223  ok        
+gate      X shortfall (deg)                                                 +1.47      +1.4727  ok        
+gate         width (deg)                                                    +0.12      +0.1191  ok(boot)  
+gate      4b (% per gate)                                                  +0.261     +0.26080  ok        
+gate         width of 4b (%)                                               +0.104     +0.10426  ok(boot)  
+gate      upper edge 4(b + 2 se) (%)                                        +0.47      +0.4693  ok        
+gate      equator start, 2 gates, measured loss                           +0.0262    +0.026234  ok        
+gate      equator start, 10 gates, measured loss                           +0.114     +0.11375  ok        
+gate      shortfall-alone prediction, 2 gates                              +0.026     +0.02569  ok        
+gate         width from the shortfall width                                +0.002     +0.00208  ok(boot)  
+gate      shortfall-alone prediction, 10 gates                             +0.127     +0.12711  ok        
+gate         width from the shortfall width                                +0.012     +0.01006  DIFFERS   
+
+83 rows, 4 marked DIFFERS.
+
+NOTES
+ 1. Rows marked DIFFERS are listed first-hand above; none was adjusted. The bookkeeping conventions are exactly those of readclose.py / readtime.py / readnoname.py.
+ 2. "start-1 / start-0 ... 35 to 100%": recomputed range is 37 to 97% (pittsburgh 20 us and 5 us are the ends); the paper rounds outward.
+ 3. Ten-gate prediction width: 0.012 in the paper; the fitted shortfall width (0.119 deg) gives 0.0101. 0.012 needs a shortfall width of about 0.142 deg;
+    the notebook (section 149, 1.48 deg) printed 0.128 +- 0.012 and 0.0258 +- 0.0024, i.e. a width of about 0.14 deg, not the 0.12 deg now in the paper.
+ 4. Pittsburgh 4 October: runs 362 and 363 (2 more jobs, same circuits, 15:33 and 15:34 EDT) exist in the record; the paper uses run 361 only ("one on pittsburgh"), as here.
+ 5. Not numeric, not recomputed: "the population in the band where a |2> level at mid-line would read is flat across arms" and "the bookkeeping removes most of the excess".
+ 6. Widths are bootstrap values and differ from the reference scripts by their own resampling noise (up to ~12% here); values (means) are not resampled and match exactly.

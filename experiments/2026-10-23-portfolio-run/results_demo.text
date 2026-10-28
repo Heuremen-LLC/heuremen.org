@@ -1,0 +1,28 @@
+=== ibm_kingston job dbdt757sstms73fb49tg | placements IBM [5, 4, 3, 16, 23, 24, 25, 26, 27, 17] OURS [126, 125, 117, 105, 106, 107, 108, 109, 118, 129] QISKIT [89, 88, 87, 97, 107, 108, 109, 118, 129, 128]
+   IBM        success 0.6959 (copies 0.6947, 0.6970; n 8000)
+   KG_IBM     success 0.9421 (copies 0.9427, 0.9415; n 8000)
+   KG_OURS    success 0.9156 (copies 0.9203, 0.9110; n 8000)
+   KG_QISKIT  success 0.9400 (copies 0.9390, 0.9410; n 8000)
+   OURS       success 0.6771 (copies 0.6765, 0.6777; n 8000)
+   QISKIT     success 0.5517 (copies 0.5517, 0.5517; n 8000)
+   KNOWN-GOOD (readout-only success >= 0.80 on all three placements): MET
+   R1 OURS / IBM (same search, only the numbers differ): 0.973 [0.954, 0.994] -> BELOW
+   R2 OURS / QISKIT default: 1.227 [1.197, 1.258] -> ABOVE
+   R3 IBM / QISKIT: 1.261 [1.230, 1.292] -> ABOVE
+   R4 IBM    delivered 0.6959 +- 0.0101 | predicted from IBM figures 0.7944 (delivered/predicted 0.876) | from ours 0.7268 (0.957)
+   R4 OURS   delivered 0.6771 +- 0.0102 | predicted from IBM figures 0.7900 (delivered/predicted 0.857) | from ours 0.7616 (0.889)
+   R4 QISKIT delivered 0.5517 +- 0.0109 | predicted from IBM figures 0.7786 (delivered/predicted 0.709) | from ours 0.7428 (0.743)
+=== ibm_fez job dbdt77fpc3tc739kobtg | placements IBM [127, 137, 147, 146, 145, 144, 143, 142, 141, 140] OURS [127, 137, 147, 146, 145, 144, 143, 142, 141, 140] QISKIT [106, 107, 108, 109, 110, 111, 98, 91, 90, 89]
+   IBM        success 0.6654 (copies 0.6687, 0.6620; n 8000)
+   KG_IBM     success 0.9487 (copies 0.9500, 0.9475; n 8000)
+   KG_OURS    success 0.9477 (copies 0.9437, 0.9517; n 8000)
+   KG_QISKIT  success 0.9513 (copies 0.9530, 0.9495; n 8000)
+   OURS       success 0.6683 (copies 0.6685, 0.6680; n 8000)
+   QISKIT     success 0.6196 (copies 0.6165, 0.6228; n 8000)
+   KNOWN-GOOD (readout-only success >= 0.80 on all three placements): MET
+   R1 OURS / IBM (same search, only the numbers differ): 1.004 [0.983, 1.027] -> CONSISTENT
+   R2 OURS / QISKIT default: 1.078 [1.053, 1.105] -> ABOVE
+   R3 IBM / QISKIT: 1.074 [1.049, 1.098] -> ABOVE
+   R4 IBM    delivered 0.6654 +- 0.0103 | predicted from IBM figures 0.7608 (delivered/predicted 0.875) | from ours 0.7090 (0.938)
+   R4 OURS   delivered 0.6683 +- 0.0103 | predicted from IBM figures 0.7608 (delivered/predicted 0.878) | from ours 0.7090 (0.943)
+   R4 QISKIT delivered 0.6196 +- 0.0106 | predicted from IBM figures 0.7241 (delivered/predicted 0.856) | from ours 0.6726 (0.921)

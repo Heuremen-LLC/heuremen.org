@@ -1,0 +1,99 @@
+================================================================================================
+ibm_fez  job dbcm6moc77vs7386ideg
+  N=2 R1 clean-shot loss   copy 0  +0.0048 [+0.0023, +0.0088] n=86 -> ABOVE
+  N=2 R1 clean-shot loss   copy 1  +0.0053 [-0.0020, +0.0118] n=86 -> CONSISTENT
+  N=2 R1 clean-shot loss   pooled  +0.0043 [+0.0005, +0.0102] n=86 -> ABOVE
+  N=2 R1 clean-shot loss   FINAL -> CANNOT_TELL (copies disagree)
+  N=2 R2 all-shot loss     copy 0  +0.0068 [+0.0024, +0.0090] n=86 -> ABOVE
+  N=2 R2 all-shot loss     copy 1  +0.0064 [-0.0002, +0.0119] n=86 -> CONSISTENT
+  N=2 R2 all-shot loss     pooled  +0.0045 [+0.0008, +0.0111] n=86 -> ABOVE
+  N=2 R2 all-shot loss     FINAL -> CANNOT_TELL (copies disagree)
+  N=2 R4 shots kept by the selection (median over spectators, pooled): 99.0%
+  N=2 R3 mid readouts outside both clusters: 0.2218%
+  N=4 R1 clean-shot loss   copy 0  +0.0066 [-0.0009, +0.0143] n=86 -> CONSISTENT
+  N=4 R1 clean-shot loss   copy 1  +0.0026 [-0.0035, +0.0066] n=86 -> CONSISTENT
+  N=4 R1 clean-shot loss   pooled  +0.0037 [-0.0001, +0.0100] n=86 -> CONSISTENT
+  N=4 R1 clean-shot loss   FINAL -> CONSISTENT
+  N=4 R2 all-shot loss     copy 0  +0.0094 [+0.0025, +0.0170] n=86 -> ABOVE
+  N=4 R2 all-shot loss     copy 1  +0.0033 [-0.0031, +0.0092] n=86 -> CONSISTENT
+  N=4 R2 all-shot loss     pooled  +0.0059 [-0.0009, +0.0099] n=86 -> CONSISTENT
+  N=4 R2 all-shot loss     FINAL -> CANNOT_TELL (copies disagree)
+  N=4 R4 shots kept by the selection (median over spectators, pooled): 98.6%
+  N=4 R3 mid readouts outside both clusters: 0.2140%
+  N=8 R1 clean-shot loss   copy 0  +0.0055 [-0.0039, +0.0134] n=86 -> CONSISTENT
+  N=8 R1 clean-shot loss   copy 1  +0.0061 [-0.0055, +0.0178] n=86 -> CONSISTENT
+  N=8 R1 clean-shot loss   pooled  +0.0051 [-0.0018, +0.0118] n=86 -> CONSISTENT
+  N=8 R1 clean-shot loss   FINAL -> CONSISTENT
+  N=8 R2 all-shot loss     copy 0  +0.0052 [-0.0009, +0.0146] n=86 -> CONSISTENT
+  N=8 R2 all-shot loss     copy 1  +0.0078 [-0.0048, +0.0184] n=86 -> CONSISTENT
+  N=8 R2 all-shot loss     pooled  +0.0055 [-0.0003, +0.0132] n=86 -> CONSISTENT
+  N=8 R2 all-shot loss     FINAL -> CONSISTENT
+  N=8 R4 shots kept by the selection (median over spectators, pooled): 97.3%
+  N=8 R3 mid readouts outside both clusters: 0.2179%
+================================================================================================
+ibm_kingston  job dbcm5aoc77vs7386ibag
+  N=2 R1 clean-shot loss   copy 0  +0.0046 [+0.0011, +0.0096] n=86 -> ABOVE
+  N=2 R1 clean-shot loss   copy 1  +0.0054 [-0.0024, +0.0124] n=86 -> CONSISTENT
+  N=2 R1 clean-shot loss   pooled  +0.0050 [+0.0012, +0.0078] n=86 -> ABOVE
+  N=2 R1 clean-shot loss   FINAL -> CANNOT_TELL (copies disagree)
+  N=2 R2 all-shot loss     copy 0  +0.0049 [+0.0006, +0.0108] n=86 -> ABOVE
+  N=2 R2 all-shot loss     copy 1  +0.0073 [-0.0010, +0.0132] n=86 -> CONSISTENT
+  N=2 R2 all-shot loss     pooled  +0.0059 [+0.0024, +0.0084] n=86 -> ABOVE
+  N=2 R2 all-shot loss     FINAL -> CANNOT_TELL (copies disagree)
+  N=2 R4 shots kept by the selection (median over spectators, pooled): 99.0%
+  N=2 R3 mid readouts outside both clusters: 0.3954%
+  N=4 R1 clean-shot loss   copy 0  +0.0064 [-0.0018, +0.0181] n=86 -> CONSISTENT
+  N=4 R1 clean-shot loss   copy 1  +0.0077 [-0.0001, +0.0137] n=86 -> CONSISTENT
+  N=4 R1 clean-shot loss   pooled  +0.0064 [+0.0013, +0.0100] n=86 -> ABOVE
+  N=4 R1 clean-shot loss   FINAL -> ABOVE
+  N=4 R2 all-shot loss     copy 0  +0.0073 [-0.0009, +0.0164] n=86 -> CONSISTENT
+  N=4 R2 all-shot loss     copy 1  +0.0086 [+0.0006, +0.0145] n=86 -> ABOVE
+  N=4 R2 all-shot loss     pooled  +0.0062 [+0.0023, +0.0104] n=86 -> ABOVE
+  N=4 R2 all-shot loss     FINAL -> CANNOT_TELL (copies disagree)
+  N=4 R4 shots kept by the selection (median over spectators, pooled): 98.6%
+  N=4 R3 mid readouts outside both clusters: 0.4172%
+  N=8 R1 clean-shot loss   copy 0  +0.0155 [+0.0034, +0.0231] n=86 -> ABOVE
+  N=8 R1 clean-shot loss   copy 1  +0.0086 [+0.0019, +0.0198] n=86 -> ABOVE
+  N=8 R1 clean-shot loss   pooled  +0.0090 [+0.0022, +0.0190] n=86 -> ABOVE
+  N=8 R1 clean-shot loss   FINAL -> ABOVE
+  N=8 R2 all-shot loss     copy 0  +0.0177 [+0.0083, +0.0264] n=86 -> ABOVE
+  N=8 R2 all-shot loss     copy 1  +0.0081 [+0.0031, +0.0226] n=86 -> ABOVE
+  N=8 R2 all-shot loss     pooled  +0.0125 [+0.0048, +0.0227] n=86 -> ABOVE
+  N=8 R2 all-shot loss     FINAL -> ABOVE
+  N=8 R4 shots kept by the selection (median over spectators, pooled): 97.5%
+  N=8 R3 mid readouts outside both clusters: 0.4324%
+================================================================================================
+ibm_marrakesh  job dbcm4e9gv2cc73eakl5g
+  N=2 R1 clean-shot loss   copy 0  +0.0075 [+0.0011, +0.0149] n=86 -> ABOVE
+  N=2 R1 clean-shot loss   copy 1  +0.0079 [-0.0026, +0.0181] n=86 -> CONSISTENT
+  N=2 R1 clean-shot loss   pooled  +0.0064 [+0.0014, +0.0109] n=86 -> ABOVE
+  N=2 R1 clean-shot loss   FINAL -> CANNOT_TELL (copies disagree)
+  N=2 R2 all-shot loss     copy 0  +0.0105 [+0.0037, +0.0151] n=86 -> ABOVE
+  N=2 R2 all-shot loss     copy 1  +0.0102 [-0.0009, +0.0183] n=86 -> CONSISTENT
+  N=2 R2 all-shot loss     pooled  +0.0079 [+0.0038, +0.0118] n=86 -> ABOVE
+  N=2 R2 all-shot loss     FINAL -> CANNOT_TELL (copies disagree)
+  N=2 R4 shots kept by the selection (median over spectators, pooled): 98.8%
+  N=2 R3 mid readouts outside both clusters: 1.7821%
+  N=4 R1 clean-shot loss   copy 0  +0.0086 [+0.0006, +0.0170] n=86 -> ABOVE
+  N=4 R1 clean-shot loss   copy 1  +0.0124 [+0.0047, +0.0205] n=86 -> ABOVE
+  N=4 R1 clean-shot loss   pooled  +0.0085 [-0.0017, +0.0167] n=86 -> CONSISTENT
+  N=4 R1 clean-shot loss   FINAL -> CONSISTENT
+  N=4 R2 all-shot loss     copy 0  +0.0119 [+0.0001, +0.0222] n=86 -> ABOVE
+  N=4 R2 all-shot loss     copy 1  +0.0157 [+0.0049, +0.0236] n=86 -> ABOVE
+  N=4 R2 all-shot loss     pooled  +0.0118 [+0.0033, +0.0198] n=86 -> ABOVE
+  N=4 R2 all-shot loss     FINAL -> ABOVE
+  N=4 R4 shots kept by the selection (median over spectators, pooled): 98.2%
+  N=4 R3 mid readouts outside both clusters: 1.7896%
+  N=8 R1 clean-shot loss   copy 0  +0.0196 [+0.0080, +0.0286] n=86 -> ABOVE
+  N=8 R1 clean-shot loss   copy 1  +0.0273 [+0.0117, +0.0324] n=86 -> ABOVE
+  N=8 R1 clean-shot loss   pooled  +0.0224 [+0.0110, +0.0311] n=86 -> ABOVE
+  N=8 R1 clean-shot loss   FINAL -> ABOVE
+  N=8 R2 all-shot loss     copy 0  +0.0201 [+0.0084, +0.0331] n=86 -> ABOVE
+  N=8 R2 all-shot loss     copy 1  +0.0260 [+0.0192, +0.0344] n=86 -> ABOVE
+  N=8 R2 all-shot loss     pooled  +0.0259 [+0.0125, +0.0357] n=86 -> ABOVE
+  N=8 R2 all-shot loss     FINAL -> ABOVE
+  N=8 R4 shots kept by the selection (median over spectators, pooled): 97.0%
+  N=8 R3 mid readouts outside both clusters: 1.8399%
+CAL ibm_fez median e01 0.0055 e10 0.0145 (spectators, in-job)
+CAL ibm_kingston median e01 0.0053 e10 0.0140 (spectators, in-job)
+CAL ibm_marrakesh median e01 0.0077 e10 0.0192 (spectators, in-job)

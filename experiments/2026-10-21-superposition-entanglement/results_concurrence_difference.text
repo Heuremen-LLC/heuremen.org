@@ -1,0 +1,3 @@
+ibm_fez        readout minus idle concurrence (median over 48 pairs, 95%): N= 8 -0.0055 [-0.0146, +0.0048]  idle median 0.347 | N=16 +0.0000 [-0.0007, +0.0000]  idle median 0.030
+ibm_kingston   readout minus idle concurrence (median over 48 pairs, 95%): N= 8 -0.0142 [-0.0265, -0.0038]  idle median 0.511 | N=16 -0.0150 [-0.0312, -0.0026]  idle median 0.204
+ibm_marrakesh  readout minus idle concurrence (median over 48 pairs, 95%): N= 8 -0.0022 [-0.0300, +0.0000]  idle median 0.157 | N=16 +0.0000 [+0.0000, +0.0000]  idle median 0.000

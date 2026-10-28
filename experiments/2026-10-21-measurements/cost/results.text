@@ -1,0 +1,116 @@
+verify_cost.py  --  every figure below is recomputed from data/*.json
+
+A.  MEASUREMENTS vs THE SAME SPAN OF IDLE, ibm_kingston, six jobs (two days, three jobs each)
+  jobs: 2026-10-04 run 341 = db16hravog1s73fhnml0; 2026-10-04 run 342 = db16iaavog1s73fhnn9g; 2026-10-04 run 343 = db16llbid5ic73eqnp8g; 2026-10-06 run 761 = db2rk4u8v0ts73c3dbcg; 2026-10-06 run 762 = db2rp87r11fs7397b73g; 2026-10-06 run 763 = db2rug68v0ts73c3dt50
+  each job: untouched qubits split by wiring distance to the nearest measured qubit (1, 2, 3+ links); per group the median
+  fraction of coherence kept after k measurements and after laid idle of 10/20/30/60/120 us; three groups averaged.
+  length of one measurement: stated 2.18 us; measured 2.323 (4 Oct) and 2.402 (6 Oct) (stored values, not recomputed here).
+  There is NO 27-measurement point in these jobs (ladder 1,2,3,4,6,8,12,16,24,32); 27 is read between the 24 and 32 points.
+
+  idle reference: fit10-30  | measurement length: measured
+    k= 3   kept(measured)/kept(idle): 0.985 0.995 0.977 1.009 0.990 0.985   range 0.977-1.009  |  lost/lost: 1.176 1.087 1.295 0.945 1.094 1.186   range 0.945-1.295
+    k= 9   kept(measured)/kept(idle): 1.000 1.015 1.011 1.021 1.026 1.003   range 1.000-1.026  |  lost/lost: 1.000 0.961 0.972 0.954 0.947 0.994   range 0.947-1.000
+    k=27   kept(measured)/kept(idle): 0.799 0.810 0.972 0.677 0.892 0.875   range 0.677-0.972  |  lost/lost: 1.099 1.102 1.016 1.169 1.049 1.080   range 1.016-1.169
+
+  idle reference: fit10-30  | measurement length: stated
+    k= 3   kept(measured)/kept(idle): 0.979 0.989 0.971 0.998 0.979 0.975   range 0.971-0.998  |  lost/lost: 1.266 1.168 1.404 1.042 1.223 1.328   range 1.042-1.404
+    k= 9   kept(measured)/kept(idle): 0.977 0.991 0.985 0.987 0.985 0.966   range 0.966-0.991  |  lost/lost: 1.068 1.022 1.044 1.040 1.043 1.097   range 1.022-1.097
+    k=27   kept(measured)/kept(idle): 0.733 0.735 0.869 0.608 0.762 0.750   range 0.608-0.869  |  lost/lost: 1.145 1.144 1.058 1.238 1.110 1.145   range 1.058-1.238
+
+  idle reference: fit10-120 | measurement length: measured
+    k= 3   kept(measured)/kept(idle): 0.978 0.985 0.983 0.990 0.986 0.979   range 0.978-0.990  |  lost/lost: 1.291 1.176 1.202 1.108 1.140 1.252   range 1.108-1.291
+    k= 9   kept(measured)/kept(idle): 1.007 1.023 1.020 1.034 1.037 1.015   range 1.007-1.037  |  lost/lost: 0.982 0.942 0.949 0.925 0.924 0.965   range 0.924-0.982
+    k=27   kept(measured)/kept(idle): 0.945 0.946 0.937 0.915 1.008 1.006   range 0.915-1.008  |  lost/lost: 1.021 1.024 1.024 1.027 1.001 0.997   range 0.997-1.027
+
+  idle reference: fit10-120 | measurement length: stated
+    k= 3   kept(measured)/kept(idle): 0.972 0.979 0.977 0.980 0.976 0.969   range 0.969-0.980  |  lost/lost: 1.399 1.271 1.299 1.244 1.282 1.412   range 1.244-1.412
+    k= 9   kept(measured)/kept(idle): 0.982 0.996 0.994 0.992 0.992 0.974   range 0.974-0.996  |  lost/lost: 1.054 1.008 1.016 1.024 1.023 1.073   range 1.008-1.073
+    k=27   kept(measured)/kept(idle): 0.849 0.847 0.844 0.780 0.845 0.847   range 0.780-0.849  |  lost/lost: 1.063 1.063 1.065 1.088 1.057 1.057   range 1.057-1.088
+
+  idle reference: measured  | measurement length: measured
+    k= 3   kept(measured)/kept(idle): 0.995 1.008 0.991 1.011 1.000 0.992   range 0.991-1.011  |  lost/lost: 1.051 0.940 1.099 0.930 1.009 1.087   range 0.930-1.099
+    k= 9   kept(measured)/kept(idle): 0.993 0.999 1.001 1.019 1.021 1.002   range 0.993-1.021  |  lost/lost: 1.021 1.000 0.997 0.957 0.954 0.999   range 0.954-1.021
+    k=27   kept(measured)/kept(idle): 1.033 1.039 1.008 1.025 1.084 1.099   range 1.008-1.099  |  lost/lost: 0.990 0.993 0.998 0.991 0.979 0.971   range 0.971-0.998
+
+  idle reference: measured  | measurement length: stated
+    k= 3   kept(measured)/kept(idle): 0.989 1.001 0.986 1.001 0.990 0.983   range 0.983-1.001  |  lost/lost: 1.117 0.998 1.168 1.020 1.106 1.192   range 0.998-1.192
+    k= 9   kept(measured)/kept(idle): 0.969 0.974 0.974 0.985 0.977 0.963   range 0.963-0.985  |  lost/lost: 1.096 1.075 1.078 1.045 1.060 1.109   range 1.045-1.109
+    k=27   kept(measured)/kept(idle): 0.952 0.961 0.930 0.920 0.969 0.990   range 0.920-0.990  |  lost/lost: 1.018 1.017 1.025 1.024 1.009 1.001   range 1.001-1.025
+
+  Summary ratios (cost = measurement / same span of idle; idle fitted to 10-30 us, measured length):
+  k <= 9, kept/kept, low end                                               0.9767
+  k <= 9, kept/kept, high end                                              1.026
+  k <= 9, lost/lost, low end                                               0.9449   [k=3 alone is far above 1: loss is tiny at k=3, ratio unstable]
+  k <= 9, lost/lost, high end                                              1.295
+  k = 9 only, lost/lost range, low end                                     0.9466
+  k = 9 only, lost/lost range, high end                                    1
+  k = 27, lost/lost, low end                                               1.016   [six single jobs]
+  k = 27, lost/lost, high end                                              1.169
+  k = 27 lost/lost, mean of day 1 (3 jobs)                                 1.072
+  k = 27 lost/lost, mean of day 2 (3 jobs)                                 1.099
+  k = 27 kept/kept, day 1 (3 jobs)                                         0.8603
+  k = 27 kept/kept, day 2 at its own measured length (3 jobs)              0.8149
+  k = 27, 1 / (kept ratio), mean of day 1                                  1.172
+  k = 27, 1 / (kept ratio), mean of day 2                                  1.247
+  k = 27, NO fitted curve (idle read off measured windows), kept/kept, low 1.008   [model-free reading]
+  k = 27, NO fitted curve, kept/kept, high                                 1.099
+  k = 27, NO fitted curve, lost/lost, mean of six                          0.9869
+
+  Direct check with no fit: coherence kept after 60 us of laid idle vs after k = 60/L measurements (k read between measured points):
+      2026-10-04 run 341  k=25.8: measured/idle (1,2,3+ links) 1.039 1.130 1.056   mean 1.075
+      2026-10-04 run 342  k=25.8: measured/idle (1,2,3+ links) 0.984 1.143 1.157   mean 1.095
+      2026-10-04 run 343  k=25.8: measured/idle (1,2,3+ links) 1.084 1.010 1.144   mean 1.079
+      2026-10-06 run 761  k=25.0: measured/idle (1,2,3+ links) 1.151 1.154 0.976   mean 1.093
+      2026-10-06 run 762  k=25.0: measured/idle (1,2,3+ links) 1.163 1.219 1.125   mean 1.169
+      2026-10-06 run 763  k=25.0: measured/idle (1,2,3+ links) 1.209 1.239 1.095   mean 1.181
+
+B.  ibm_fez, 11 October, three jobs: run 901 = IBM job db5ukk4lf4us73c4j3gg, run 902 = IBM job db5vhnamb58s738b2n50, run 903 = IBM job db5vk14vf2bc73d0fs80
+  (curve fits are re-run here from the stored per-qubit levels; the shot-level widths are read from the file)
+
+  shape exponent b per job  (measured qubit | spectators):
+      run 901:  0.829 | 1.296     (stored fit values 0.829 | 1.296; per-fit bootstrap widths +-0.007 | +-0.080)
+      run 902:  0.809 | 1.433     (stored fit values 0.809 | 1.433; per-fit bootstrap widths +-0.009 | +-0.078)
+      run 903:  0.832 | 1.415     (stored fit values 0.832 | 1.415; per-fit bootstrap widths +-0.009 | +-0.081)
+  measured-qubit exponent, mean of 3 jobs                                  0.8232
+    its width (sample SD of 3 jobs)                                        0.01218   [n = 3, a spread of three numbers]
+  spectator exponent, mean of 3 jobs                                       1.381
+    its width (sample SD of 3 jobs)                                        0.07429   [n = 3]
+  separation of the two, in combined widths                                7.411   [divides by the spread of single jobs]
+  measured qubit below a plain exponential, widths                         14.51
+  spectators above a plain exponential, widths                             5.131
+  same separation using the uncertainty OF THE MEAN (SD/sqrt3)             12.84
+
+  chi2/dof per job: measured qubit 0.72 / 1.38 / 1.32   spectators 1.12 / 0.66 / 1.35
+  measured qubit chi2/dof (three jobs)                                     0.72 / 1.38 / 1.32
+  spectators chi2/dof (three jobs)                                         1.12 / 0.66 / 1.35
+  worst of the six chi2/dof                                                1.38
+  run-structure p, measured qubit (three jobs)                             0.88/0.97/0.30
+  run-structure p, spectators (three jobs)                                 0.93/1.00/0.15
+  (the third arm of each job, a no-measurement control with 5 points, is not one of the six fits and does not fit: stored chi2/dof 22.8 / 32.2 / 28.2)
+
+  cross-check of the single-fit widths of b by redrawing each point from its stored width (60 draws):
+      run 901 measured qubit: spread 0.011   (shot-level bootstrap 0.007)
+      run 901 spectators    : spread 0.073   (shot-level bootstrap 0.080)
+      run 902 measured qubit: spread 0.010   (shot-level bootstrap 0.009)
+      run 902 spectators    : spread 0.065   (shot-level bootstrap 0.078)
+      run 903 measured qubit: spread 0.011   (shot-level bootstrap 0.009)
+      run 903 spectators    : spread 0.061   (shot-level bootstrap 0.081)
+
+  measured-qubit levels (job 1, run 901):
+  level on the F0-F1 axis after 1 measurement                              0.9649
+  level after 128 measurements                                             0.067
+  level after 40 us of plain idle (same job, same bits)                    0.661
+  number of measurements at which level = 1/2 (job 1)                      25.45   [straight line between the 24 and 32 points]
+      the same crossing in jobs 2 and 3: 22.6 and 23.9
+      level after 1 / 128 measurements / 40 us idle, all three jobs:
+        run 901: 0.9649 / 0.0670 / 0.6610
+        run 902: 0.9551 / 0.0552 / 0.6228
+        run 903: 0.9637 / 0.0602 / 0.6467
+
+  EQUAL-TIME COMPARISON?  128 measurements x 1.66 us stated length = 212 us, not 40 us.
+  time taken by 128 measurements (stated length), us                       212.5   [the 40 us idle arm is 5x shorter]
+  equal-time pairs in the same job (measured qubit; k measurements vs an idle of k x stated length):
+      k= 6 ( 10.0 us) vs idle 10 us:  0.826 vs 0.879   0.799 vs 0.853   0.816 vs 0.874   (3 jobs: measured | idle)
+      k=12 ( 19.9 us) vs idle 20 us:  0.694 vs 0.796   0.669 vs 0.752   0.677 vs 0.781   (3 jobs: measured | idle)
+      k=24 ( 39.8 us) vs idle 40 us:  0.517 vs 0.661   0.481 vs 0.623   0.498 vs 0.647   (3 jobs: measured | idle)
+  at equal time (24 meas. ~ 40 us), idle minus measured, job 1             0.1443   [measuring costs more than idling at equal time, with the stated length]

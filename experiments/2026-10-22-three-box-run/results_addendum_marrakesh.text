@@ -1,0 +1,7 @@
+FOUR-STATE READING (addendum)
+  ibm_marrakesh: c0 +0.893 [+0.832, +0.957] ABOVE | a SIGN -0.094 [-0.188, -0.001] BELOW | b CORNER -0.058 [-0.170, +0.051] CONSISTENT | c |00> -0.000 [-0.093, +0.091] CONSISTENT
+  ibm_marrakesh STATE: SIGN  copy gaps: sign [-0.204, +0.171], corner [-0.136, +0.296]
+R4 common probe offset: mean <Xp> on kept shots of the unused box over all eps, hardware vs model
+  ibm_marrakesh V11 unused 10: hardware +0.0812 +- 0.0104 (n 9260), model +0.0049, difference +0.0763 [+0.0560, +0.0966]
+  ibm_marrakesh V10 unused 11: hardware +0.0617 +- 0.0102 (n 9594), model +0.0049, difference +0.0568 [+0.0369, +0.0768]
+  ibm_marrakesh VA unused 10: hardware +0.0485 +- 0.0103 (n 9320), model +0.0034, difference +0.0451 [+0.0248, +0.0654]

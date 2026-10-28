@@ -1,0 +1,127 @@
+PLANTED: distance ball kick -3.0 x exp(-(d-1)/2) deg (falls off: R1.3 BELOW, R1.4 ABOVE), spread -2.0 flat; count kick -2.0 deg flat (R2.2, R2.3 CONSISTENT), per-readout product loss 0.005 constant (R2.7 CONSISTENT, R2.6 ~0.005); order slot excess 0 / 0.0015 / 0.003, waiting +0.004 slot3-slot1, together 0; gates 0.0005 per extra-gate-step = 0.00025 per extra gate; neighbour 1e-4 / 1.5e-4 / 1.25e-4 (R5.4 CONSISTENT); revival: beat P=68 in +, plain decay in 0 and 1
+====================================================================================================
+count ibm_fez job SYNTH
+  R2.1 kick per readout at N=1                               -1.89 [-2.401, -1.213] deg n=117 -> BELOW   (copy gap +0.3601 [-0.273, +1.494])
+  R2.1 kick per readout at N=3                               -1.874 [-2.021, -1.679] deg n=117 -> BELOW   (copy gap -0.04575 [-0.3261, +0.3878])
+  R2.1 kick per readout at N=9                               -1.957 [-2.059, -1.888] deg n=117 -> BELOW   (copy gap -0.02971 [-0.1473, +0.05918])
+  R2.1 kick per readout at N=27                              -1.995 [-2.006, -1.97] deg n=117 -> BELOW   (copy gap -0.01976 [-0.06598, +0.01885])
+  R2.1 kick per readout at N=54                              -1.997 [-2.007, -1.984] deg n=117 -> BELOW   (copy gap -0.001231 [-0.02438, +0.01456])
+  R2.1 kick per readout at N=81                              -1.998 [-2.008, -1.992] deg n=117 -> BELOW   (copy gap -0.00389 [-0.01692, +0.02223])
+  R2.2 kick per readout, readouts 27->81 minus readouts 1->9 +0.02082 [-0.04541, +0.08635] deg n=117 -> CONSISTENT   (copy gap +0.05141 [-0.06899, +0.1925])
+  R2.3 intercept of the phase gap against N                  +0.0373 [-0.1612, +0.5563] deg n=117 -> CONSISTENT   (copy gap -0.08638 [-0.7704, +0.5979])
+  R2.4 coherence loss at N=1 (idle - readout)                +0.004538 [+0.002802, +0.008842]  n=117 -> ABOVE   (copy gap +0.004185 [-0.004373, +0.007245])
+  R2.4 coherence loss at N=3 (idle - readout)                +0.01379 [+0.009814, +0.01817]  n=117 -> ABOVE   (copy gap +0.004178 [-0.00405, +0.009019])
+  R2.4 coherence loss at N=9 (idle - readout)                +0.03915 [+0.03566, +0.04208]  n=117 -> ABOVE   (copy gap -0.0003825 [-0.01168, +0.006352])
+  R2.4 coherence loss at N=27 (idle - readout)               +0.1078 [+0.1015, +0.1119]  n=117 -> ABOVE   (copy gap -0.004746 [-0.013, +0.005469])
+  R2.4 coherence loss at N=54 (idle - readout)               +0.1911 [+0.1849, +0.1987]  n=117 -> ABOVE   (copy gap -0.002411 [-0.01425, +0.007559])
+  R2.4 coherence loss at N=81 (idle - readout)               +0.2541 [+0.2498, +0.2567]  n=117 -> ABOVE   (copy gap -0.002251 [-0.01381, +0.009562])
+  R2.5 SUM form: loss(81) - 3 x loss(27)                     -0.06341 [-0.08688, -0.04857]  n=117 -> BELOW   (copy gap +0.01706 [-0.01803, +0.04637])
+  R2.6 PRODUCT form: -ln(readout/idle)/N at N=9              +0.005014 [+0.004578, +0.005451]  n=117 -> ABOVE   (copy gap -3.64e-05 [-0.001238, +0.0007847])
+  R2.6 PRODUCT form: -ln(readout/idle)/N at N=27             +0.004981 [+0.004694, +0.005197]  n=117 -> ABOVE   (copy gap -0.0001418 [-0.0005847, +0.0002658])
+  R2.6 PRODUCT form: -ln(readout/idle)/N at N=81             +0.004964 [+0.004871, +0.00502]  n=117 -> ABOVE   (copy gap -6.214e-05 [-0.0003277, +0.0001411])
+  R2.7 PRODUCT form: per-readout loss at 81 minus at 9       -1.419e-05 [-0.0005018, +0.0005072]  n=117 -> CONSISTENT   (copy gap -5.762e-05 [-0.0008878, +0.000422])
+====================================================================================================
+distance ibm_fez job SYNTH
+ layout ball: spectators at distance <=2 / 3-4 / 5+: [10, 15, 92]
+  R1.1 kick per readout, ball layout, all spectators         copies shifted +0.09878 [+0.05018, +0.1453] | copy0 -0.09919 copy1 -0.1811 -> CANNOT TELL
+  sign of the kick (carried, never folded): -1; size = kick x sign
+  R1.2 kick size, ball layout, d<=2                          +2.388 [+1.802, +2.99] deg n=10 -> ABOVE   (copy gap -0.1192 [-0.3437, +0.1264])
+  R1.2 kick size, ball layout, d=3-4                         +0.8893 [+0.6687, +0.9392] deg n=15 -> ABOVE   (copy gap -0.05692 [-0.2456, +0.2318])
+  R1.2 kick size, ball layout, d>=5                          copies shifted -0.1001 [-0.1581, -0.04732] | copy0 +0.01671 copy1 +0.09221 -> CANNOT TELL
+  R1.3 size(d>=5) - size(d<=2) [ABOVE larger far, BELOW larger near] -2.32 [-2.935, -1.704] deg -> BELOW
+  R1.4 slope of size on sum over measured of 1/d^2           +1.122 [+0.9533, +1.503] deg per unit -> ABOVE
+  R1.5 size(d<=2) spread layout - ball layout (same job)     -0.4029 [-1.005, +0.2106] deg -> CONSISTENT
+====================================================================================================
+gates ibm_fez job SYNTH
+  R4.1 P(1) X X X train minus X train, 2 steps (4 extra gates) +0.0025 [+0.0015, +0.003]  n=156 -> ABOVE   (copy gap +0.001 [-0.001, +0.002])
+  R4.1 P(1) X X X train minus X train, 6 steps (12 extra gates) +0.00625 [+0.005, +0.007]  n=156 -> ABOVE   (copy gap +0.001 [-0.001, +0.003])
+  R4.1 P(1) X X X train minus X train, 10 steps (20 extra gates) +0.0095 [+0.009, +0.01]  n=156 -> ABOVE   (copy gap -0.0005 [-0.003, +0.0015])
+  R4.2 cost per extra X gate (slope; 20% trimmed mean)       +0.0004555 [+0.00039, +0.0005219]  n=156 -> ABOVE   (copy gap -6.649e-07 [-0.0001463, +0.000141])
+  R4.3 cost per extra X gate minus IBM stated X error (20% trimmed mean) +0.0001941 [+0.0001196, +0.0002666]  n=156 -> ABOVE   (copy gap -6.649e-07 [-0.0001363, +0.000135])
+  IBM stated X error, median over qubits: 2.29e-04
+  R4.4 reference: X then wait 30 us, P(1)                    +0.819 [+0.8175, +0.8205]  n=156 -> ABOVE   (copy gap +0.0005 [-0.002, +0.003])
+  R4.4 reference: X then wait 90 us, P(1)                    +0.5475 [+0.546, +0.55]  n=156 -> ABOVE   (copy gap -0.001 [-0.006013, +0.003])
+  R4.4 reference: X then wait 300 us, P(1)                   +0.1355 [+0.1345, +0.1378]  n=156 -> ABOVE   (copy gap -0.0005 [-0.003, +0.002])
+====================================================================================================
+neighbour ibm_fez job SYNTH
+  R5.1 error per X gate, neighbours in 0                     +9.938e-05 [+9.304e-05, +0.0001054]  n=44 -> ABOVE   (copy gap -3.75e-06 [-1.429e-05, +3.929e-06])
+  R5.1 error per X gate, neighbours in 1                     +0.000148 [+0.0001409, +0.0001513]  n=44 -> ABOVE   (copy gap +4.464e-06 [-7.321e-06, +1.5e-05])
+  R5.1 error per X gate, neighbours in +                     +0.0001231 [+0.0001188, +0.0001338]  n=44 -> ABOVE   (copy gap +1.786e-06 [-9.643e-06, +1.357e-05])
+  R5.2 neighbours in 1 minus in 0 (static neighbour state)   +4.527e-05 [+3.83e-05, +5.589e-05]  n=44 -> ABOVE   (copy gap +3.929e-06 [-7.5e-06, +2.339e-05])
+  R5.3 neighbours in + minus in 0 (the original comparison)  +2.179e-05 [+1.268e-05, +3.464e-05]  n=44 -> ABOVE   (copy gap +1.071e-05 [-7.143e-06, +1.839e-05])
+  R5.4 neighbours in + minus the mean of 0 and 1             +1.339e-07 [-7.589e-06, +9.07e-06]  n=44 -> CONSISTENT   (copy gap +2.589e-06 [-1.571e-05, +1.938e-05])
+  R5.5 ratio + / 0 (beside, the original 1.7x): 1.210 [1.115, 1.352] n=44
+====================================================================================================
+order ibm_fez job SYNTH
+  R3.1 P(1) read at slot 1 after others, minus read alone at slot 1 +8.333e-05 [-8.333e-05, +0.0004167]  n=156 -> CONSISTENT   (copy gap +0.0001667 [-0.0004167, +0.0008333])
+  R3.1 P(1) read at slot 2 after others, minus read alone at slot 2 +0.001292 [+0.001, +0.001583]  n=156 -> ABOVE   (copy gap +1.735e-18 [-0.0004167, +0.0006667])
+  R3.1 P(1) read at slot 3 after others, minus read alone at slot 3 +0.00325 [+0.002958, +0.003625]  n=156 -> ABOVE   (copy gap +0 [-0.0006667, +0.001])
+  R3.2 that excess at slot 3 minus at slot 2                 +0.002125 [+0.001583, +0.002667]  n=156 -> ABOVE   (copy gap +0.0001667 [-0.00075, +0.0008333])
+  R3.3 read alone at slot 3 minus alone at slot 1 (waiting longer) +0.003833 [+0.003583, +0.004167]  n=156 -> ABOVE   (copy gap -4.337e-19 [-0.0008375, +0.0006667])
+  R3.4 all read together at slot 1 minus alone at slot 1     -0.0001667 [-0.0005, +0.0003333]  n=156 -> CONSISTENT   (copy gap +1.735e-18 [-0.0005, +0.0006667])
+  R3.5 read last (slot 3) minus read first (slot 1), in the full orders +0.007042 [+0.006625, +0.007417]  n=156 -> ABOVE   (copy gap -0.0001667 [-0.0005, +0.0005])
+====================================================================================================
+revival ibm_fez job SYNTH
+  R6.1 come-back: mean C(58-78 us) - mean C(26-50 us), B in 0 -0.1851 [-0.1897, -0.18]  n=92 -> BELOW   (copy gap -0.003282 [-0.009058, +0.004595])
+  R6.1 come-back: mean C(58-78 us) - mean C(26-50 us), B in 1 -0.1833 [-0.188, -0.1785]  n=92 -> BELOW   (copy gap +0.005528 [-0.002122, +0.01213])
+  R6.1 come-back: mean C(58-78 us) - mean C(26-50 us), B in + +0.04945 [+0.04321, +0.05522]  n=92 -> ABOVE   (copy gap +0.0003737 [-0.01172, +0.006517])
+  R6.2 come-back, B in + minus B in 0                        +0.2347 [+0.2293, +0.2378]  n=92 -> ABOVE   (copy gap -0.009431 [-0.01905, +0.002975])
+  R6.3 come-back, B in 1 minus B in 0                        +0.002286 [-0.001581, +0.01218]  n=92 -> CONSISTENT   (copy gap +0.00225 [-0.0123, +0.01172])
+  R6.4 held-out SSE(plain decay) - SSE(damped beat), B in 0  -0.1252 [-0.1309, -0.1197]  n=92 -> BELOW   (copy gap +0.005529 [-0.01225, +0.01209])
+  R6.4 held-out SSE(plain decay) - SSE(damped beat), B in 1  -0.1271 [-0.1323, -0.1231]  n=92 -> BELOW   (copy gap -0.0009668 [-0.0169, +0.01221])
+  R6.4 held-out SSE(plain decay) - SSE(damped beat), B in +  +0.08626 [+0.08088, +0.09059]  n=92 -> ABOVE   (copy gap +0.004495 [-0.008268, +0.01151])
+====================================================================================================
+ACROSS CHIPS: for each reading, chips ABOVE / BELOW / CONSISTENT / CANNOT TELL, and the chance that a reading with no effect
+resolves in one direction on at least that many of its chips (per chip and side 0.025, measured on null synthetic data)
+  R2.1 kick per readout at N=1                                   chips 1: above 0 below 1 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R2.1 kick per readout at N=3                                   chips 1: above 0 below 1 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R2.1 kick per readout at N=9                                   chips 1: above 0 below 1 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R2.1 kick per readout at N=27                                  chips 1: above 0 below 1 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R2.1 kick per readout at N=54                                  chips 1: above 0 below 1 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R2.1 kick per readout at N=81                                  chips 1: above 0 below 1 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R2.2 kick per readout, readouts 27->81 minus readouts 1->9     chips 1: above 0 below 0 consistent 1 cannot tell 0 | chance under no effect 1
+  R2.3 intercept of the phase gap against N                      chips 1: above 0 below 0 consistent 1 cannot tell 0 | chance under no effect 1
+  R2.4 coherence loss at N=1 (idle - readout)                    chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R2.4 coherence loss at N=3 (idle - readout)                    chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R2.4 coherence loss at N=9 (idle - readout)                    chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R2.4 coherence loss at N=27 (idle - readout)                   chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R2.4 coherence loss at N=54 (idle - readout)                   chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R2.4 coherence loss at N=81 (idle - readout)                   chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R2.5 SUM form: loss(81) - 3 x loss(27)                         chips 1: above 0 below 1 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R2.6 PRODUCT form: -ln(readout/idle)/N at N=9                  chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R2.6 PRODUCT form: -ln(readout/idle)/N at N=27                 chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R2.6 PRODUCT form: -ln(readout/idle)/N at N=81                 chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R2.7 PRODUCT form: per-readout loss at 81 minus at 9           chips 1: above 0 below 0 consistent 1 cannot tell 0 | chance under no effect 1
+  R1.1 kick per readout, ball layout, all spectators             chips 1: above 0 below 0 consistent 0 cannot tell 1 | chance under no effect 1
+  R1.2 kick size, ball layout, d<=2                              chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R1.2 kick size, ball layout, d=3-4                             chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R1.2 kick size, ball layout, d>=5                              chips 1: above 0 below 0 consistent 0 cannot tell 1 | chance under no effect 1
+  R4.1 P(1) X X X train minus X train, 2 steps (4 extra gates)   chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R4.1 P(1) X X X train minus X train, 6 steps (12 extra gates)  chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R4.1 P(1) X X X train minus X train, 10 steps (20 extra gates) chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R4.2 cost per extra X gate (slope; 20% trimmed mean)           chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R4.3 cost per extra X gate minus IBM stated X error (20% trimm chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R4.4 reference: X then wait 30 us, P(1)                        chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R4.4 reference: X then wait 90 us, P(1)                        chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R4.4 reference: X then wait 300 us, P(1)                       chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R5.1 error per X gate, neighbours in 0                         chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R5.1 error per X gate, neighbours in 1                         chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R5.1 error per X gate, neighbours in +                         chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R5.2 neighbours in 1 minus in 0 (static neighbour state)       chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R5.3 neighbours in + minus in 0 (the original comparison)      chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R5.4 neighbours in + minus the mean of 0 and 1                 chips 1: above 0 below 0 consistent 1 cannot tell 0 | chance under no effect 1
+  R3.1 P(1) read at slot 1 after others, minus read alone at slo chips 1: above 0 below 0 consistent 1 cannot tell 0 | chance under no effect 1
+  R3.1 P(1) read at slot 2 after others, minus read alone at slo chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R3.1 P(1) read at slot 3 after others, minus read alone at slo chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R3.2 that excess at slot 3 minus at slot 2                     chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R3.3 read alone at slot 3 minus alone at slot 1 (waiting longe chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R3.4 all read together at slot 1 minus alone at slot 1         chips 1: above 0 below 0 consistent 1 cannot tell 0 | chance under no effect 1
+  R3.5 read last (slot 3) minus read first (slot 1), in the full chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R6.1 come-back: mean C(58-78 us) - mean C(26-50 us), B in 0    chips 1: above 0 below 1 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R6.1 come-back: mean C(58-78 us) - mean C(26-50 us), B in 1    chips 1: above 0 below 1 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R6.1 come-back: mean C(58-78 us) - mean C(26-50 us), B in +    chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R6.2 come-back, B in + minus B in 0                            chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R6.3 come-back, B in 1 minus B in 0                            chips 1: above 0 below 0 consistent 1 cannot tell 0 | chance under no effect 1
+  R6.4 held-out SSE(plain decay) - SSE(damped beat), B in 0      chips 1: above 0 below 1 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R6.4 held-out SSE(plain decay) - SSE(damped beat), B in 1      chips 1: above 0 below 1 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R6.4 held-out SSE(plain decay) - SSE(damped beat), B in +      chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05

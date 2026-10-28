@@ -1,0 +1,10 @@
+PAIR RUN (concurrence)
+  ibm_fez N=2 clean-shot concurrence loss          copy0-copy1 median +0.0032 [-0.0037, +0.0089] n=45 -> no shift resolved -> pooled reading stands
+  ibm_fez N=4 clean-shot concurrence loss          copy0-copy1 median +0.0005 [-0.0085, +0.0091] n=45 -> no shift resolved -> pooled reading stands
+  ibm_fez N=4 loss(39)-loss(1)                     copy0-copy1 median -0.0006 [-0.0071, +0.0095] n=47 -> no shift resolved -> pooled reading stands
+  ibm_kingston N=2 clean-shot concurrence loss     copy0-copy1 median -0.0029 [-0.0087, +0.0037] n=43 -> no shift resolved -> pooled reading stands
+  ibm_kingston N=4 clean-shot concurrence loss     copy0-copy1 median +0.0062 [-0.0026, +0.0108] n=43 -> no shift resolved -> pooled reading stands
+  ibm_kingston N=4 loss(39)-loss(1)                copy0-copy1 median +0.0030 [-0.0046, +0.0089] n=45 -> no shift resolved -> pooled reading stands
+  ibm_marrakesh N=2 clean-shot concurrence loss    copy0-copy1 median -0.0039 [-0.0135, +0.0021] n=44 -> no shift resolved -> pooled reading stands
+  ibm_marrakesh N=4 clean-shot concurrence loss    copy0-copy1 median +0.0007 [-0.0124, +0.0106] n=43 -> no shift resolved -> pooled reading stands
+  ibm_marrakesh N=4 loss(39)-loss(1)               copy0-copy1 median +0.0013 [-0.0105, +0.0079] n=45 -> no shift resolved -> pooled reading stands

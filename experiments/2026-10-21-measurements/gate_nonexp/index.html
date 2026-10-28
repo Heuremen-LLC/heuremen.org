@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gate Residual Simulation</title>
+<link rel="canonical" href="https://heuremen.org/experiments/2026-10-21-measurements/gate_nonexp/">
+<meta name="tdm-reservation" content="1">
+<meta name="tdm-policy" content="https://indahl.ai/terms#ai-training">
+<meta name="description" content="Simulated qubits with perfect X gates (zero gate cost), whose decay rate varies from shot to shot and persists through each circuit, with the spread.">
+<meta property="og:site_name" content="Heuremen LLC">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gate Residual Simulation">
+<meta property="og:description" content="Simulated qubits with perfect X gates (zero gate cost), whose decay rate varies from shot to shot and persists through each circuit, with the spread.">
+<meta property="og:url" content="https://heuremen.org/experiments/2026-10-21-measurements/gate_nonexp/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://heuremen.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://heuremen.org/og.png">
+<style>body{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;color:#18202B;background:#FFF;font-size:15px;line-height:1.5;max-width:860px;margin:40px auto;padding:0 16px}h1{font-size:24px;color:#0E4A4D}a{color:#0F7173}pre{white-space:pre-wrap;font-family:Menlo,monospace;font-size:12.5px;background:#F6F8F7;padding:12px}.foot{color:#6B7480;font-size:13px;margin-top:28px}</style></head><body>
+<p><a href="/">&larr; What&rsquo;s Lost with a Look</a> &middot; <a href="../">all measurements</a></p>
+<h1>Can the qubits&rsquo; own varying decay rate produce the X-gate residual?</h1>
+<p>Simulated qubits with <b>perfect</b> X gates (zero gate cost), whose decay rate varies from shot to shot and persists through each circuit, with the spread set from the independently measured share of non-exponential decay, run through the exact estimator used on the hardware, give a slope per gate of &minus;0.00177 (real: &minus;0.00136 mean over nine runs). A qubit that survives the first wait is more likely a slow one; the estimator cannot see that. So the residual does not require a gate cost. With the decay shape held equal (22 October), an extra X gate costs 0.0001643 [0.00005906, 0.0002695] combined over fez, kingston, marrakesh and phoenix, and on fez and kingston the residual is opposite in sign to that cost and at least twice its upper edge, so it is not a gate cost there; no extra-gate test exists on boston or pittsburgh (<a href="/experiments/2026-10-22-deciding-runs/">deciding runs</a>). <a href="sim_gate_nonexp.py">sim_gate_nonexp.py</a> &middot; <a href="results.text">results</a></p>
+<h2>Limits</h2><ul>
+<li>The spread in decay rate is a model, set once per run from the measured share of non-exponential decay; it is not measured directly. Slopes were not fitted.</li>
+<li>The model overshoots the mean real slope by about 30&thinsp;% and puts the populations 0.01&ndash;0.03 below the real ones.</li>
+<li>The direct test (extra X gates on the same waits, with the decay shape held equal) was run on fez, kingston, marrakesh and phoenix on 22 October; there is none for boston or pittsburgh.</li></ul>
+<p>Runs: fez 371, kingston 392/721/722/723, boston 441/711/712/713. Per-run model vs real slopes and every control are in <a href="results.text">results</a>.</p>
+<p>Data tables and recounts: <a href="https://indahl.ai/qia">QIA</a> &middot; <a href="https://indahl.ai/iris">IRIS</a></p>
+<p class="foot">Bones &middot; Wayfinder &middot; Sage &middot; Shuttle &middot; Nova<br><a href="https://indahl.ai">Heuremen LLC</a><br>&ldquo;We found it.&rdquo;</p></body></html>

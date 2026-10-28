@@ -1,0 +1,10 @@
+ibm_kingston: E excitation in M0 (mean over emitters, steps) p = 0.0306  (max emitter 0.752); spectators 117 (86 coupled to an E)
+   [all            ] n=117  X=+0.0064 [-0.0024,+0.0135]  Y=-0.0018 [-0.0086,+0.0048]  X_pred=-0.0000  X-X_pred=+0.0054 [-0.0022,+0.0137] -> CANNOT_TELL (no readout excess to explain)
+   [coupled to an E] n= 86  X=+0.0041 [-0.0031,+0.0151]  Y=-0.0018 [-0.0097,+0.0062]  X_pred=-0.0000  X-X_pred=+0.0037 [-0.0023,+0.0146] -> CANNOT_TELL (no readout excess to explain)
+   [not coupled    ] n= 31  X=+0.0088 [-0.0063,+0.0180]  Y=-0.0035 [-0.0116,+0.0009]  X_pred=-0.0001  X-X_pred=+0.0083 [-0.0062,+0.0184] -> CANNOT_TELL (no readout excess to explain)
+   (also printed) M1 readout excess over D1: +0.0077
+ibm_marrakesh: E excitation in M0 (mean over emitters, steps) p = 0.0478  (max emitter 0.373); spectators 117 (86 coupled to an E)
+   [all            ] n=117  X=+0.0178 [+0.0096,+0.0256]  Y=+0.0032 [-0.0060,+0.0163]  X_pred=+0.0000  X-X_pred=+0.0160 [+0.0097,+0.0256] -> ABOVE
+   [coupled to an E] n= 86  X=+0.0247 [+0.0119,+0.0361]  Y=+0.0040 [-0.0059,+0.0172]  X_pred=+0.0000  X-X_pred=+0.0237 [+0.0105,+0.0333] -> ABOVE
+   [not coupled    ] n= 31  X=+0.0096 [+0.0002,+0.0186]  Y=+0.0025 [-0.0125,+0.0184]  X_pred=+0.0001  X-X_pred=+0.0097 [+0.0017,+0.0177] -> ABOVE
+   (also printed) M1 readout excess over D1: +0.0166

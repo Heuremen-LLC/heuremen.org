@@ -1,0 +1,75 @@
+================================================================================================
+ibm_fez copies returned: [0, 1]
+  N=2: 45 pairs enter (wired, idle concurrence > 0); R4 shots kept (median) 98.5%
+  R1 N=2 clean-shot concurrence loss (K=39)    copy 0  +0.0065 [+0.0022, +0.0102] n=45 -> ABOVE
+  R1 N=2 clean-shot concurrence loss (K=39)    copy 1  -0.0001 [-0.0022, +0.0036] n=45 -> CONSISTENT
+  R1 N=2 clean-shot concurrence loss (K=39)    pooled  +0.0015 [-0.0022, +0.0065] n=45 -> CONSISTENT
+  R1 N=2 clean-shot concurrence loss (K=39)    FINAL -> CANNOT_TELL (copies disagree)
+  R3 N=2 all-shot concurrence loss (K=39)      copy 0  +0.0061 [+0.0031, +0.0108] n=45 -> ABOVE
+  R3 N=2 all-shot concurrence loss (K=39)      copy 1  +0.0017 [-0.0008, +0.0033] n=45 -> CONSISTENT
+  R3 N=2 all-shot concurrence loss (K=39)      pooled  +0.0046 [-0.0010, +0.0070] n=45 -> CONSISTENT
+  R3 N=2 all-shot concurrence loss (K=39)      FINAL -> CANNOT_TELL (copies disagree)
+  N=4: 44 pairs enter (wired, idle concurrence > 0); R4 shots kept (median) 97.7%
+  R1 N=4 clean-shot concurrence loss (K=39)    copy 0  +0.0110 [+0.0017, +0.0163] n=45 -> ABOVE
+  R1 N=4 clean-shot concurrence loss (K=39)    copy 1  +0.0113 [+0.0057, +0.0154] n=45 -> ABOVE
+  R1 N=4 clean-shot concurrence loss (K=39)    pooled  +0.0070 [+0.0016, +0.0152] n=44 -> ABOVE
+  R1 N=4 clean-shot concurrence loss (K=39)    FINAL -> ABOVE
+  R3 N=4 all-shot concurrence loss (K=39)      copy 0  +0.0113 [+0.0034, +0.0178] n=45 -> ABOVE
+  R3 N=4 all-shot concurrence loss (K=39)      copy 1  +0.0131 [+0.0047, +0.0201] n=45 -> ABOVE
+  R3 N=4 all-shot concurrence loss (K=39)      pooled  +0.0093 [+0.0028, +0.0157] n=44 -> ABOVE
+  R3 N=4 all-shot concurrence loss (K=39)      FINAL -> ABOVE
+  R2 N=4 loss(K=39) - loss(K=1)                copy 0  +0.0050 [-0.0000, +0.0131] n=47 -> CONSISTENT
+  R2 N=4 loss(K=39) - loss(K=1)                copy 1  +0.0109 [+0.0074, +0.0168] n=47 -> ABOVE
+  R2 N=4 loss(K=39) - loss(K=1)                pooled  +0.0065 [+0.0032, +0.0107] n=46 -> ABOVE
+  R2 N=4 loss(K=39) - loss(K=1)                FINAL -> CANNOT_TELL (copies disagree)
+  R5 mid readouts outside both clusters: 0.2091%
+================================================================================================
+ibm_kingston copies returned: [0, 1]
+  N=2: 43 pairs enter (wired, idle concurrence > 0); R4 shots kept (median) 98.4%
+  R1 N=2 clean-shot concurrence loss (K=39)    copy 0  +0.0099 [-0.0027, +0.0177] n=43 -> CONSISTENT
+  R1 N=2 clean-shot concurrence loss (K=39)    copy 1  +0.0053 [+0.0014, +0.0109] n=43 -> ABOVE
+  R1 N=2 clean-shot concurrence loss (K=39)    pooled  +0.0065 [+0.0017, +0.0116] n=43 -> ABOVE
+  R1 N=2 clean-shot concurrence loss (K=39)    FINAL -> CANNOT_TELL (copies disagree)
+  R3 N=2 all-shot concurrence loss (K=39)      copy 0  +0.0111 [-0.0008, +0.0180] n=43 -> CONSISTENT
+  R3 N=2 all-shot concurrence loss (K=39)      copy 1  +0.0070 [+0.0029, +0.0110] n=43 -> ABOVE
+  R3 N=2 all-shot concurrence loss (K=39)      pooled  +0.0063 [+0.0030, +0.0116] n=43 -> ABOVE
+  R3 N=2 all-shot concurrence loss (K=39)      FINAL -> CANNOT_TELL (copies disagree)
+  N=4: 42 pairs enter (wired, idle concurrence > 0); R4 shots kept (median) 97.4%
+  R1 N=4 clean-shot concurrence loss (K=39)    copy 0  +0.0098 [-0.0003, +0.0182] n=43 -> CONSISTENT
+  R1 N=4 clean-shot concurrence loss (K=39)    copy 1  +0.0120 [+0.0050, +0.0188] n=43 -> ABOVE
+  R1 N=4 clean-shot concurrence loss (K=39)    pooled  +0.0100 [+0.0040, +0.0138] n=42 -> ABOVE
+  R1 N=4 clean-shot concurrence loss (K=39)    FINAL -> CANNOT_TELL (copies disagree)
+  R3 N=4 all-shot concurrence loss (K=39)      copy 0  +0.0117 [+0.0005, +0.0188] n=43 -> ABOVE
+  R3 N=4 all-shot concurrence loss (K=39)      copy 1  +0.0117 [+0.0037, +0.0241] n=43 -> ABOVE
+  R3 N=4 all-shot concurrence loss (K=39)      pooled  +0.0106 [+0.0049, +0.0151] n=42 -> ABOVE
+  R3 N=4 all-shot concurrence loss (K=39)      FINAL -> ABOVE
+  R2 N=4 loss(K=39) - loss(K=1)                copy 0  +0.0146 [+0.0079, +0.0209] n=45 -> ABOVE
+  R2 N=4 loss(K=39) - loss(K=1)                copy 1  +0.0087 [+0.0005, +0.0168] n=45 -> ABOVE
+  R2 N=4 loss(K=39) - loss(K=1)                pooled  +0.0104 [+0.0053, +0.0165] n=44 -> ABOVE
+  R2 N=4 loss(K=39) - loss(K=1)                FINAL -> ABOVE
+  R5 mid readouts outside both clusters: 0.4466%
+================================================================================================
+ibm_marrakesh copies returned: [0, 1]
+  N=2: 44 pairs enter (wired, idle concurrence > 0); R4 shots kept (median) 98.2%
+  R1 N=2 clean-shot concurrence loss (K=39)    copy 0  +0.0082 [+0.0025, +0.0119] n=44 -> ABOVE
+  R1 N=2 clean-shot concurrence loss (K=39)    copy 1  +0.0068 [-0.0002, +0.0134] n=43 -> CONSISTENT
+  R1 N=2 clean-shot concurrence loss (K=39)    pooled  +0.0065 [-0.0018, +0.0102] n=44 -> CONSISTENT
+  R1 N=2 clean-shot concurrence loss (K=39)    FINAL -> CANNOT_TELL (copies disagree)
+  R3 N=2 all-shot concurrence loss (K=39)      copy 0  +0.0113 [+0.0044, +0.0167] n=44 -> ABOVE
+  R3 N=2 all-shot concurrence loss (K=39)      copy 1  +0.0101 [+0.0011, +0.0160] n=43 -> ABOVE
+  R3 N=2 all-shot concurrence loss (K=39)      pooled  +0.0089 [+0.0007, +0.0111] n=44 -> ABOVE
+  R3 N=2 all-shot concurrence loss (K=39)      FINAL -> ABOVE
+  N=4: 42 pairs enter (wired, idle concurrence > 0); R4 shots kept (median) 97.0%
+  R1 N=4 clean-shot concurrence loss (K=39)    copy 0  +0.0080 [+0.0025, +0.0135] n=42 -> ABOVE
+  R1 N=4 clean-shot concurrence loss (K=39)    copy 1  +0.0141 [+0.0059, +0.0187] n=42 -> ABOVE
+  R1 N=4 clean-shot concurrence loss (K=39)    pooled  +0.0093 [+0.0005, +0.0155] n=42 -> ABOVE
+  R1 N=4 clean-shot concurrence loss (K=39)    FINAL -> ABOVE
+  R3 N=4 all-shot concurrence loss (K=39)      copy 0  +0.0093 [+0.0032, +0.0190] n=42 -> ABOVE
+  R3 N=4 all-shot concurrence loss (K=39)      copy 1  +0.0159 [+0.0103, +0.0212] n=42 -> ABOVE
+  R3 N=4 all-shot concurrence loss (K=39)      pooled  +0.0124 [+0.0045, +0.0179] n=42 -> ABOVE
+  R3 N=4 all-shot concurrence loss (K=39)      FINAL -> ABOVE
+  R2 N=4 loss(K=39) - loss(K=1)                copy 0  +0.0112 [+0.0051, +0.0173] n=44 -> ABOVE
+  R2 N=4 loss(K=39) - loss(K=1)                copy 1  +0.0149 [+0.0073, +0.0216] n=44 -> ABOVE
+  R2 N=4 loss(K=39) - loss(K=1)                pooled  +0.0088 [+0.0038, +0.0147] n=44 -> ABOVE
+  R2 N=4 loss(K=39) - loss(K=1)                FINAL -> ABOVE
+  R5 mid readouts outside both clusters: 1.4652%

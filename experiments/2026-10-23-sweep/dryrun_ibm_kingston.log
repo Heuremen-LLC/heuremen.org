@@ -1,0 +1,1 @@
+ibm_kingston: 156 qubits, 176 CZ edges in 8 isolated batches, 138 circuits, ops 2377092 -> 2377092 after transpile (must be equal), ESTIMATED 19 s, remaining 833

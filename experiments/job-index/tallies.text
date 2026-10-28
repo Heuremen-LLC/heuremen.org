@@ -1,0 +1,91 @@
+
+====================================================================================================
+1a. "25--28 Sep: Rigetti, 563 tasks"  (US Eastern day = created UTC - 4 h, as job-index/count_jobs.py)
+   Rigetti tasks per Eastern day (all days in file): {'2026-09-25': 154, '2026-09-26': 71, '2026-09-28': 338, '2026-10-04': 1162, '2026-10-05': 1310}
+   25, 26, 28 Sep: {'2026-09-25': 154, '2026-09-26': 71, '2026-09-28': 338}
+   -> REPRODUCES   (computed: 563 | paper: 563)
+
+====================================================================================================
+1b. "1--2 Oct: kingston, phoenix, pittsburgh, boston (12)" = all 1 Oct jobs + first 9 of 2 Oct by created_et
+   1 Oct jobs: 3 {'kingston': 1, 'phoenix': 1, 'pittsburgh': 1}
+   first 9 of 2 Oct: {'boston': 3, 'kingston': 2, 'phoenix': 2, 'pittsburgh': 2}
+   10th 2 Oct job backend: ibm_marrakesh
+   the 12 together: 12 {'boston': 3, 'kingston': 3, 'phoenix': 3, 'pittsburgh': 3}
+   -> REPRODUCES   (computed: 12 ['boston', 'kingston', 'phoenix', 'pittsburgh'] | paper: 12; kingston, phoenix, pittsburgh, boston)
+
+====================================================================================================
+1c. "2--7 Oct: 7 processors (305): pittsburgh 86, kingston 75, marrakesh 55, aachen 25, boston 24, fez 20, phoenix 20; 63 on 2 Oct, 43 on 4, 26 on 5, 48 on 6, 125 on 7; three errored"
+   total: 305 | processors: {'pittsburgh': 86, 'kingston': 75, 'marrakesh': 55, 'aachen': 25, 'boston': 24, 'fez': 20, 'phoenix': 20}
+   per Eastern day: {'2026-10-02': 63, '2026-10-04': 43, '2026-10-05': 26, '2026-10-06': 48, '2026-10-07': 125}
+   status != DONE: [('2026-10-02', 'ibm_pittsburgh', 'ERROR'), ('2026-10-04', 'ibm_kingston', 'ERROR'), ('2026-10-06', 'ibm_aachen', 'ERROR')]
+   -> REPRODUCES   (computed: 305 | paper: 305)
+   -> REPRODUCES   (computed: {'pittsburgh': 86, 'kingston': 75, 'marrakesh': 55, 'aachen': 25, 'boston': 24, 'fez': 20, 'phoenix': 20} | paper: {'pittsburgh': 86, 'kingston': 75, 'marrakesh': 55, 'aachen': 25, 'boston': 24, 'fez': 20, 'phoenix': 20})
+   -> REPRODUCES   (computed: {'2026-10-02': 63, '2026-10-04': 43, '2026-10-05': 26, '2026-10-06': 48, '2026-10-07': 125} | paper: {'2026-10-02': 63, '2026-10-04': 43, '2026-10-05': 26, '2026-10-06': 48, '2026-10-07': 125})
+   -> REPRODUCES   (computed: 3 non-DONE: [('10-02', 'pittsburgh', 'ERROR'), ('10-04', 'kingston', 'ERROR'), ('10-06', 'aachen', 'ERROR')] | paper: three errored, one each on 2, 4, 6 Oct)
+   (all non-DONE jobs in the whole index, for context: [('2026-09-24', 'ibm_marrakesh', 'ERROR'), ('2026-10-02', 'ibm_pittsburgh', 'ERROR'), ('2026-10-04', 'ibm_kingston', 'ERROR'), ('2026-10-06', 'ibm_aachen', 'ERROR'), ('2026-10-21', 'ibm_boston', 'ERROR'), ('2026-10-22', 'ibm_fez', 'CANCELLED'), ('2026-10-22', 'ibm_boston', 'QUEUED')])
+
+====================================================================================================
+1d. "7 Oct (within the 305): pittsburgh 9, fez 3, aachen 2, kingston 18 (32)"  jobs named in 2026-10-07-equal-idle/results_oct07.text
+   job ids listed (with repeats across families that share jobs): 35; distinct: 32
+   not in job index: []
+   days of these jobs: {'2026-10-07': 32}
+   by backend: {'aachen': 2, 'fez': 3, 'kingston': 18, 'pittsburgh': 9}
+   -> REPRODUCES   (computed: 32 {'aachen': 2, 'fez': 3, 'kingston': 18, 'pittsburgh': 9} | paper: 32: pittsburgh 9, fez 3, aachen 2, kingston 18)
+   (README.md.text of that folder also states the same 32 / 18 / 9 / 3 / 2 in words; the count above is from the job ids.)
+   all 32 are among the 305 of 1c: True
+
+====================================================================================================
+1e. "24 Sep: fez 3, kingston 4, marrakesh 41 (48; 17 in the run log)"
+   job index 24 Sep: 48 {'fez': 3, 'kingston': 4, 'marrakesh': 41}
+   -> REPRODUCES   (computed: 48 {'fez': 3, 'kingston': 4, 'marrakesh': 41} | paper: 48: fez 3, kingston 4, marrakesh 41)
+   NO FILE IS A "RUN LOG" of 24 Sep: grep of experiments/ for run log / run_log finds none for that day.
+   Plain count of distinct 24 Sep job ids that the published 24 Sep folder names: 19 {'fez': 2, 'kingston': 3, 'marrakesh': 14}
+   -> NO DATA for "17 in the run log" (the log is not published). The 19 above is a different quantity (ids named in saved result files), not a substitute; it does not equal 17.
+
+====================================================================================================
+1f. "21 Oct: fez, kingston, marrakesh, pittsburgh (4; a boston job errored)"  jobs in 2026-10-21-readout-vs-idle/job_*.json
+   jobs: [('boston', 'ERROR', '15:15:41'), ('fez', 'DONE', '14:53:39'), ('kingston', 'DONE', '14:54:49'), ('marrakesh', 'DONE', '14:54:19'), ('pittsburgh', 'DONE', '14:58:32')]
+   -> REPRODUCES   (computed: DONE ['ibm_fez', 'ibm_kingston', 'ibm_marrakesh', 'ibm_pittsburgh']; not done ['ibm_boston'] | paper: 4 DONE (fez, kingston, marrakesh, pittsburgh); boston errored)
+
+====================================================================================================
+2. 7 Oct equal-idle arms (results_oct07.json). Arm = (processor, family, pair) with a "kick all" reading, excluding POOL lines and arms with n=1 (CANNOT TELL, no median over qubits).
+   arms in table: 25 (paper: "25 arms"; the table tab:oct07 has 25 rows)
+   kingston 25-measured arms (state-dark 3, spaced 3, gapped 3, wire paint 3, carriers 2): 14
+   -> REPRODUCES   (computed: 14 arms, kick-all BELOW in 13 | paper: 14 arms, below zero in 13)
+   medians of those BELOW arms: -0.58 to -0.26
+   -> REPRODUCES   (computed: kick d<=2 BELOW in 12 of 14 | paper: 12 of 14)
+   kick d>=5 outcomes over the 25 table arms: {'CONSISTENT': 23, 'COPIES SHIFTED': 1, 'ABOVE': 1} (paper: none BELOW; reversed-order arm the only ABOVE)
+   -> REPRODUCES   (computed: BELOW 0, ABOVE 1 | paper: no BELOW; one ABOVE)
+   "coherence slope over all untouched qubits" read as the table column "coh all" outcome (BELOW / CANNOT TELL (incl. copies shifted) / CONSISTENT): {'CONSISTENT': 17, 'BELOW': 3, 'COPIES SHIFTED': 5}
+   BELOW arms: [('fez', 'FLOOR (corner, 12 looked)', 'K vs D'), ('kingston', 'STATE-DARK FLOWERS (25 looked)', 'looked |1>: S1 vs D1'), ('kingston', 'SPACED LOOKS (25 looked)', 'looked half-way: SH vs DH')]
+   -> REPRODUCES   (computed: below 3, cannot tell 5, consistent 17 (above 0) | paper: below 3, cannot tell 5, consistent 17 of 25)
+   cohN4 (coherence difference at N=4): arms with a reading 22 (the rest: copies shifted / cannot tell: 3); median < 0 in 20
+   cohN4 BELOW arms: [('aachen', 'K vs D'), ('kingston', 'looked half-way: SH vs DH'), ('pittsburgh', 'looked |1>: S1 vs D1')]
+   -> REPRODUCES   (computed: 20 of 22 negative | paper: 20 of the 22 arms with a reading)
+   NOTE: "coherence slope ... below zero in 3 of 25" and "at N=4" are read as the table's "coh all" and the json's "cohN4" keys; the plain reading, not tuned.
+
+====================================================================================================
+3. "echo and coherence-echo analyses read 20 of 396 (5.1%) and 32 of 528 (6.1%)"
+   echo run, null_floor.text (heuremen.org): readings 396, ABOVE 10, BELOW 10 -> resolved 20 (5.1%)
+   -> REPRODUCES   (computed: 20 of 396 | paper: 20 of 396)
+   coherence-echo run (arxiv_one_readout/dd_coherence; NOT under heuremen.org/experiments):
+     null_floor.txt per-seed lines: readings 528, resolved 32 (6.1%)
+     recount from nulls/null_11..16.txt TALLY lines: readings 528, resolved 32 (6.1%)
+   -> REPRODUCES   (computed: 32 of 528 (null_floor.txt), 32 of 528 (recount) | paper: 32 of 528)
+   (counted from saved null outputs; the synthetic script was not re-run. The 528 file is in the arXiv folder, not in heuremen.org/experiments.)
+
+====================================================================================================
+4. "the interval ends reach 0.5 to 1.3 times the cost itself" (echo run, coherence), results_dd.text [all]
+   ibm_fez        N= 2  no-echo cost R4 +0.00231 | echo-minus-no-echo R6 +0.00063 [-0.00147, +0.00288] | |end|/|cost|: lo 0.64, hi 1.24
+   ibm_fez        N= 4  no-echo cost R4 +0.00434 | echo-minus-no-echo R6 +0.00050 [-0.00201, +0.00386] | |end|/|cost|: lo 0.46, hi 0.89
+   ibm_fez        N= 8  no-echo cost R4 +0.00442 | echo-minus-no-echo R6 -0.00073 [-0.00447, +0.00453] | |end|/|cost|: lo 1.01, hi 1.02
+   ibm_marrakesh  N= 2  no-echo cost R4 +0.00469 | echo-minus-no-echo R6 -0.00129 [-0.00367, +0.00425] | |end|/|cost|: lo 0.78, hi 0.90
+   ibm_marrakesh  N= 4  no-echo cost R4 +0.00642 | echo-minus-no-echo R6 +0.00200 [-0.00137, +0.00517] | |end|/|cost|: lo 0.21, hi 0.81
+   ibm_marrakesh  N= 8  no-echo cost R4 +0.01224 | echo-minus-no-echo R6 +0.00309 [-0.00159, +0.00653] | |end|/|cost|: lo 0.13, hi 0.53
+   ibm_kingston   N= 2  no-echo cost R4 +0.00329 | echo-minus-no-echo R6 +0.00038 [-0.00139, +0.00322] | |end|/|cost|: lo 0.42, hi 0.98
+   ibm_kingston   N= 4  no-echo cost R4 +0.00365 | echo-minus-no-echo R6 -0.00023 [-0.00310, +0.00477] | |end|/|cost|: lo 0.85, hi 1.31
+   plain reading: each interval end divided by the no-echo cost (R4 median, [all]), N the paper says have no resolved change (2,4,8 fez/marrakesh; 2,4 kingston).
+   range over every end: 0.13 to 1.31 ; range of the larger end per case: 0.53 to 1.31
+   AMBIGUOUS: "interval ends reach 0.5 to 1.3 times the cost" has two plain readings; both are printed, neither is tuned.
+   -> REPRODUCES   (computed: 0.53 to 1.31 (reading A: the farther end of each interval) | paper: 0.5 to 1.3)
+   -> DIFFERS   (computed: 0.13 to 1.31 (reading B: every end, near ends included) | paper: 0.5 to 1.3)

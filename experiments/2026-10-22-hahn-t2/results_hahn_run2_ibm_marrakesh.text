@@ -1,0 +1,2 @@
+=== ibm_marrakesh job dbd9cvgc77vs7387letg; IBM record 2026-10-22 18:21:43-04:00; KNOWN-GOOD median P(1) at tau 0 = 0.981 (must be >= 0.90): MET
+  delivered / stated T2, median over 153 qubits: 0.948 [0.909, 1.013] vs 1 -> CONSISTENT   (copy gap +0.000 [-0.010, +0.016]; qubits below stated 85 of 153)

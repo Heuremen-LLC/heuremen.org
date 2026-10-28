@@ -1,0 +1,1 @@
+{"chip": "ibm_kingston", "job_id": "dbdaf99gv2cc738hnmo0", "submitted_utc": "2026-10-23T00:17:41Z", "meta": [{"state": 0, "copy": 1}, {"state": 0, "copy": 0}, {"state": 1, "copy": 0}, {"state": 1, "copy": 1}], "shots": 10000, "keyfile": ".ibm_quantum_key_3", "instance": "open-instance"}

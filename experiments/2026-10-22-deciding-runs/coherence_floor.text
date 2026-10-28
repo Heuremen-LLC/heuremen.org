@@ -1,0 +1,15 @@
+ibm_fez N= 1 median coherence idle 0.914 readout 0.908 | below 5x shot noise: 1 of 117 | phase noise at median 1.4 deg
+ibm_fez N= 9 median coherence idle 0.643 readout 0.642 | below 5x shot noise: 3 of 117 | phase noise at median 2.0 deg
+ibm_fez N=27 median coherence idle 0.231 readout 0.202 | below 5x shot noise: 33 of 117 | phase noise at median 6.4 deg
+ibm_fez N=54 median coherence idle 0.110 readout 0.095 | below 5x shot noise: 67 of 117 | phase noise at median 13.5 deg
+ibm_fez N=81 median coherence idle 0.065 readout 0.058 | below 5x shot noise: 87 of 117 | phase noise at median 22.2 deg
+ibm_kingston N= 1 median coherence idle 0.927 readout 0.925 | below 5x shot noise: 1 of 117 | phase noise at median 1.4 deg
+ibm_kingston N= 9 median coherence idle 0.770 readout 0.728 | below 5x shot noise: 4 of 117 | phase noise at median 1.8 deg
+ibm_kingston N=27 median coherence idle 0.276 readout 0.251 | below 5x shot noise: 24 of 117 | phase noise at median 5.1 deg
+ibm_kingston N=54 median coherence idle 0.056 readout 0.056 | below 5x shot noise: 93 of 117 | phase noise at median 22.8 deg
+ibm_kingston N=81 median coherence idle 0.110 readout 0.084 | below 5x shot noise: 75 of 117 | phase noise at median 15.3 deg
+ibm_marrakesh N= 1 median coherence idle 0.865 readout 0.849 | below 5x shot noise: 1 of 117 | phase noise at median 1.5 deg
+ibm_marrakesh N= 9 median coherence idle 0.546 readout 0.499 | below 5x shot noise: 9 of 117 | phase noise at median 2.6 deg
+ibm_marrakesh N=27 median coherence idle 0.165 readout 0.136 | below 5x shot noise: 49 of 117 | phase noise at median 9.4 deg
+ibm_marrakesh N=54 median coherence idle 0.054 readout 0.051 | below 5x shot noise: 97 of 117 | phase noise at median 25.1 deg
+ibm_marrakesh N=81 median coherence idle 0.054 readout 0.043 | below 5x shot noise: 97 of 117 | phase noise at median 29.5 deg

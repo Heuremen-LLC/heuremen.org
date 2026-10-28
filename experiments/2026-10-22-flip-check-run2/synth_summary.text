@@ -1,0 +1,22 @@
+a    L1  medians +0.0061..+0.0078  half-width 0.0034  finals {'ABOVE': 2}
+a    L2  medians +0.0066..+0.0088  half-width 0.0030  finals {'ABOVE': 2}
+a    L3  medians +0.0001..+0.0002  half-width 0.0005  finals {'CONSISTENT': 2}
+a    F2  medians +0.4808..+0.5246  half-width 0.0942  finals {'ABOVE': 2}
+a    F2h medians -0.9606..-0.8771  half-width 0.0868  finals {'BELOW': 2}
+a    F2c medians -0.0317..+0.0517  half-width 0.0954  finals {'CONSISTENT': 2}
+b    L1  medians +0.0061..+0.0124  half-width 0.0031  finals {'ABOVE': 11, 'CANNOT_TELL': 1}
+b    L2  medians -0.0018..+0.0038  half-width 0.0029  finals {'CONSISTENT': 11, 'CANNOT_TELL': 1}
+b    L3  medians -0.0081..-0.0069  half-width 0.0007  finals {'BELOW': 12}
+b    F2  medians +1.3526..+1.5132  half-width 0.0983  finals {'ABOVE': 12}
+b    F2h medians -0.1185..+0.0534  half-width 0.0876  finals {'CONSISTENT': 6, 'BELOW': 2, 'CANNOT_TELL': 4}
+b    F2c medians +0.8131..+0.9897  half-width 0.0926  finals {'ABOVE': 12}
+null L1  medians -0.0018..+0.0016  half-width 0.0028  finals {'CONSISTENT': 12}
+null L2  medians -0.0020..+0.0017  half-width 0.0029  finals {'CONSISTENT': 12}
+null L3  medians -0.0007..+0.0003  half-width 0.0006  finals {'CONSISTENT': 9, 'CANNOT_TELL': 2, 'BELOW': 1}
+null F2  medians +0.4301..+0.5259  half-width 0.0880  finals {'ABOVE': 12}
+null F2h medians -1.0290..-0.9057  half-width 0.0844  finals {'BELOW': 12}
+null F2c medians -0.0909..+0.0324  half-width 0.0972  finals {'CONSISTENT': 7, 'CANNOT_TELL': 5}
+decisions: {('a', 'EXCL'): 2, ('b', 'MAY'): 10, ('b', 'other'): 2, ('null', 'KGFAIL+other'): 2, ('null', 'other'): 10}
+known-good: {('a', '0X', 'PASS'): 1, ('a', 'L1w', 'PASS'): 2, ('a', 'idle', 'PASS'): 3, ('b', '0X', 'PASS'): 6, ('b', 'L1w', 'FAIL'): 1, ('b', 'L1w', 'PASS'): 11, ('b', 'idle', 'PASS'): 18, ('null', '0X', 'PASS'): 6, ('null', 'L1w', 'FAIL'): 11, ('null', 'L1w', 'PASS'): 1, ('null', 'idle', 'FAIL'): 1, ('null', 'idle', 'PASS'): 17}
+instrument known-good FAILs: [('null0', 'KNOWN-GOOD idle N=4: unheralded idle flip failure minus unhe')]
+idle minus unheralded 0X floor (points): n=39 mean -0.0118 sd 0.0667 range -0.1560..+0.1342

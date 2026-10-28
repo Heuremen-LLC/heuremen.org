@@ -1,0 +1,5556 @@
+[
+{
+"job_id": "daqlf73t55cs738rtfv0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T17:02:20.655352+00:00",
+"created_et": "2026-09-24T13:02:20.655352-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqljjqkqcdc73aau0n0",
+"backend": "ibm_kingston",
+"created_utc": "2026-09-24T17:11:44.046588+00:00",
+"created_et": "2026-09-24T13:11:44.046588-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqmtobt55cs738rvdfg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T18:41:38.049073+00:00",
+"created_et": "2026-09-24T14:41:38.049073-04:00",
+"status": "ERROR",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqmvdikqcdc73aavr5g",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T18:45:10.589618+00:00",
+"created_et": "2026-09-24T14:45:10.589618-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqmvdrt55cs738rvflg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T18:45:11.180919+00:00",
+"created_et": "2026-09-24T14:45:11.180919-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqmve6ekp0c73ar0od0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T18:45:13.045550+00:00",
+"created_et": "2026-09-24T14:45:13.045550-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqmvemekp0c73ar0oe0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T18:45:15.009953+00:00",
+"created_et": "2026-09-24T14:45:15.009953-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqmvetb46qs73a1fu00",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T18:45:15.778138+00:00",
+"created_et": "2026-09-24T14:45:15.778138-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqmvfakqcdc73aavr9g",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T18:45:17.896903+00:00",
+"created_et": "2026-09-24T14:45:17.896903-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqmvfikqcdc73aavra0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T18:45:18.610022+00:00",
+"created_et": "2026-09-24T14:45:18.610022-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqmvfrt55cs738rvfo0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T18:45:19.371655+00:00",
+"created_et": "2026-09-24T14:45:19.371655-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqmvfuekp0c73ar0og0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T18:45:20.119886+00:00",
+"created_et": "2026-09-24T14:45:20.119886-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqmvg2kqcdc73aavrb0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T18:45:20.880851+00:00",
+"created_et": "2026-09-24T14:45:20.880851-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqo79akqcdc73ab1hcg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:10:13.804842+00:00",
+"created_et": "2026-09-24T16:10:13.804842-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqo79tb46qs73a1hjn0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:10:15.949079+00:00",
+"created_et": "2026-09-24T16:10:15.949079-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqo7abt55cs738s15og",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:10:17.914388+00:00",
+"created_et": "2026-09-24T16:10:17.914388-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqo7amekp0c73ar2dmg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:10:18.678037+00:00",
+"created_et": "2026-09-24T16:10:18.678037-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqo7aqkqcdc73ab1hfg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:10:19.469125+00:00",
+"created_et": "2026-09-24T16:10:19.469125-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqo7b2kqcdc73ab1hh0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:10:20.302126+00:00",
+"created_et": "2026-09-24T16:10:20.302126-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqoa1akqcdc73ab1kb0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:16:05.309950+00:00",
+"created_et": "2026-09-24T16:16:05.309950-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqoa1mekp0c73ar2gjg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:16:06.258058+00:00",
+"created_et": "2026-09-24T16:16:06.258058-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqoa1tb46qs73a1hmp0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:16:07.300559+00:00",
+"created_et": "2026-09-24T16:16:07.300559-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqoa22kqcdc73ab1kd0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:16:08.574567+00:00",
+"created_et": "2026-09-24T16:16:08.574567-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqoa2akqcdc73ab1kdg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:16:09.566957+00:00",
+"created_et": "2026-09-24T16:16:09.566957-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqoa2ikqcdc73ab1ke0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:16:10.275373+00:00",
+"created_et": "2026-09-24T16:16:10.275373-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqoa2lb46qs73a1hmr0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:16:11.032834+00:00",
+"created_et": "2026-09-24T16:16:11.032834-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqoa2tb46qs73a1hmsg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:16:11.970430+00:00",
+"created_et": "2026-09-24T16:16:11.970430-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqoa35b46qs73a1hmtg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:16:12.739738+00:00",
+"created_et": "2026-09-24T16:16:12.739738-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqoa3db46qs73a1hmug",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:16:13.469184+00:00",
+"created_et": "2026-09-24T16:16:13.469184-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqoa3jt55cs738s18jg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:16:14.355593+00:00",
+"created_et": "2026-09-24T16:16:14.355593-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqoa3tb46qs73a1hn00",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:16:15.200997+00:00",
+"created_et": "2026-09-24T16:16:15.200997-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqoa3tb46qs73a1hn10",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:16:16.323632+00:00",
+"created_et": "2026-09-24T16:16:16.323632-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqoa45b46qs73a1hn1g",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:16:17.026688+00:00",
+"created_et": "2026-09-24T16:16:17.026688-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqoa4db46qs73a1hn20",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:16:17.756040+00:00",
+"created_et": "2026-09-24T16:16:17.756040-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqohpmekp0c73ar2pn0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:32:38.684838+00:00",
+"created_et": "2026-09-24T16:32:38.684838-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqoiblb46qs73a1i0mg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:33:50.875238+00:00",
+"created_et": "2026-09-24T16:33:50.875238-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqoicbt55cs738s1ing",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:33:53.056054+00:00",
+"created_et": "2026-09-24T16:33:53.056054-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqoicbt55cs738s1io0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:33:53.674987+00:00",
+"created_et": "2026-09-24T16:33:53.674987-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqoklakqcdc73ab21cg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:38:45.753639+00:00",
+"created_et": "2026-09-24T16:38:45.753639-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqor7eekp0c73ar35gg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T20:52:45.548760+00:00",
+"created_et": "2026-09-24T16:52:45.548760-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqorouekp0c73ar365g",
+"backend": "ibm_kingston",
+"created_utc": "2026-09-24T20:53:55.730135+00:00",
+"created_et": "2026-09-24T16:53:55.730135-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqorotb46qs73a1iccg",
+"backend": "ibm_kingston",
+"created_utc": "2026-09-24T20:53:55.734692+00:00",
+"created_et": "2026-09-24T16:53:55.734692-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqp4prt55cs738s27mg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T21:13:11.371145+00:00",
+"created_et": "2026-09-24T17:13:11.371145-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqp52bt55cs738s280g",
+"backend": "ibm_kingston",
+"created_utc": "2026-09-24T21:13:45.829534+00:00",
+"created_et": "2026-09-24T17:13:45.829534-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqp5ajt55cs738s28ag",
+"backend": "ibm_fez",
+"created_utc": "2026-09-24T21:14:18.749870+00:00",
+"created_et": "2026-09-24T17:14:18.749870-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqp5ndb46qs73a1imvg",
+"backend": "ibm_fez",
+"created_utc": "2026-09-24T21:15:09.256815+00:00",
+"created_et": "2026-09-24T17:15:09.256815-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqp61eekp0c73ar3hg0",
+"backend": "ibm_fez",
+"created_utc": "2026-09-24T21:15:49.038804+00:00",
+"created_et": "2026-09-24T17:15:49.038804-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "daqpd5rt55cs738s2ipg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-24T21:31:03.201066+00:00",
+"created_et": "2026-09-24T17:31:03.201066-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat5rslvr3kc73el0klg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-28T12:30:42.572010+00:00",
+"created_et": "2026-09-28T08:30:42.572010-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat5rsqhcrkc73dtn700",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-28T12:30:43.536058+00:00",
+"created_et": "2026-09-28T08:30:43.536058-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat5rt3g95ks73egea00",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-28T12:30:44.246968+00:00",
+"created_et": "2026-09-28T08:30:44.246968-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat5rt3ojkfs738q7gf0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-28T12:30:44.895514+00:00",
+"created_et": "2026-09-28T08:30:44.895514-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9atjojkfs738qbtr0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-28T16:27:34.288686+00:00",
+"created_et": "2026-09-28T12:27:34.288686-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9atqhcrkc73dtrkdg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-28T16:27:35.172109+00:00",
+"created_et": "2026-09-28T12:27:35.172109-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9atrojkfs738qbtsg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-28T16:27:35.825787+00:00",
+"created_et": "2026-09-28T12:27:35.825787-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9au5vr3kc73el53h0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-28T16:27:36.825020+00:00",
+"created_et": "2026-09-28T12:27:36.825020-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9audvr3kc73el53hg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-28T16:27:37.608202+00:00",
+"created_et": "2026-09-28T12:27:37.608202-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9aujg95ks73egio2g",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-28T16:27:38.359242+00:00",
+"created_et": "2026-09-28T12:27:38.359242-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9autvr3kc73el53i0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-28T16:27:39.269148+00:00",
+"created_et": "2026-09-28T12:27:39.269148-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9aurojkfs738qbtug",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-28T16:27:39.903858+00:00",
+"created_et": "2026-09-28T12:27:39.903858-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9av2hcrkc73dtrkhg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-28T16:27:40.807177+00:00",
+"created_et": "2026-09-28T12:27:40.807177-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9avahcrkc73dtrki0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-28T16:27:41.430911+00:00",
+"created_et": "2026-09-28T12:27:41.430911-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9avlvr3kc73el53j0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-28T16:27:42.078636+00:00",
+"created_et": "2026-09-28T12:27:42.078636-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9avihcrkc73dtrkj0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-28T16:27:42.936491+00:00",
+"created_et": "2026-09-28T12:27:42.936491-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9avqhcrkc73dtrkk0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-28T16:27:43.631265+00:00",
+"created_et": "2026-09-28T12:27:43.631265-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9b05vr3kc73el53kg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-28T16:27:44.398224+00:00",
+"created_et": "2026-09-28T12:27:44.398224-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9ebbg95ks73egis2g",
+"backend": "ibm_kingston",
+"created_utc": "2026-09-28T16:34:53.703410+00:00",
+"created_et": "2026-09-28T12:34:53.703410-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9eblvr3kc73el57fg",
+"backend": "ibm_kingston",
+"created_utc": "2026-09-28T16:34:54.605727+00:00",
+"created_et": "2026-09-28T12:34:54.605727-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9ebtvr3kc73el57gg",
+"backend": "ibm_kingston",
+"created_utc": "2026-09-28T16:34:55.498709+00:00",
+"created_et": "2026-09-28T12:34:55.498709-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9ec3ojkfs738qc24g",
+"backend": "ibm_kingston",
+"created_utc": "2026-09-28T16:34:56.242051+00:00",
+"created_et": "2026-09-28T12:34:56.242051-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9j9tvr3kc73el5d3g",
+"backend": "ibm_kingston",
+"created_utc": "2026-09-28T16:45:27.543777+00:00",
+"created_et": "2026-09-28T12:45:27.543777-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9nnbojkfs738qcd90",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T16:54:53.680754+00:00",
+"created_et": "2026-09-28T12:54:53.680754-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9nnbojkfs738qcda0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-28T16:54:53.969069+00:00",
+"created_et": "2026-09-28T12:54:53.969069-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9nsrojkfs738qcdj0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-28T16:55:15.885695+00:00",
+"created_et": "2026-09-28T12:55:15.885695-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9nt3g95ks73egj77g",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T16:55:16.481380+00:00",
+"created_et": "2026-09-28T12:55:16.481380-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9o1qhcrkc73dts3hg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-28T16:55:35.213711+00:00",
+"created_et": "2026-09-28T12:55:35.213711-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9o23ojkfs738qcdrg",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T16:55:36.328035+00:00",
+"created_et": "2026-09-28T12:55:36.328035-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9o2ihcrkc73dts3jg",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T16:55:38.771760+00:00",
+"created_et": "2026-09-28T12:55:38.771760-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9o2tvr3kc73el5j20",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T16:55:39.361616+00:00",
+"created_et": "2026-09-28T12:55:39.361616-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9o33ojkfs738qcdu0",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T16:55:40.156607+00:00",
+"created_et": "2026-09-28T12:55:40.156607-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9o33g95ks73egj7fg",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T16:55:40.882794+00:00",
+"created_et": "2026-09-28T12:55:40.882794-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9p7dvr3kc73el5khg",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T16:58:05.880896+00:00",
+"created_et": "2026-09-28T12:58:05.880896-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9p7bojkfs738qcf9g",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-28T16:58:06.036059+00:00",
+"created_et": "2026-09-28T12:58:06.036059-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9q25vr3kc73el5lm0",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T16:59:52.543069+00:00",
+"created_et": "2026-09-28T12:59:52.543069-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9q23ojkfs738qcgcg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-09-28T16:59:52.548713+00:00",
+"created_et": "2026-09-28T12:59:52.548713-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9s7bg95ks73egjcp0",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T17:04:29.997129+00:00",
+"created_et": "2026-09-28T13:04:29.997129-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9s7rojkfs738qcjag",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T17:04:31.164197+00:00",
+"created_et": "2026-09-28T13:04:31.164197-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9sblvr3kc73el5og0",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T17:04:47.078703+00:00",
+"created_et": "2026-09-28T13:04:47.078703-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9skbg95ks73egjd9g",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T17:05:21.870135+00:00",
+"created_et": "2026-09-28T13:05:21.870135-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9sojg95ks73egjdf0",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T17:05:38.414831+00:00",
+"created_et": "2026-09-28T13:05:38.414831-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9ssrojkfs738qck70",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T17:05:55.180455+00:00",
+"created_et": "2026-09-28T13:05:55.180455-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9tulvr3kc73el5q9g",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T17:08:10.180037+00:00",
+"created_et": "2026-09-28T13:08:10.180037-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9urjojkfs738qcmgg",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T17:10:06.362691+00:00",
+"created_et": "2026-09-28T13:10:06.362691-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dat9vlrojkfs738qcnk0",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T17:11:51.145762+00:00",
+"created_et": "2026-09-28T13:11:51.145762-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "data0erojkfs738qcoe0",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T17:13:31.413554+00:00",
+"created_et": "2026-09-28T13:13:31.413554-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "data13ihcrkc73dtse70",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T17:14:55.030613+00:00",
+"created_et": "2026-09-28T13:14:55.030613-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "data3dbg95ks73egjl40",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T17:19:49.265123+00:00",
+"created_et": "2026-09-28T13:19:49.265123-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "data423ojkfs738qcse0",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T17:21:12.622497+00:00",
+"created_et": "2026-09-28T13:21:12.622497-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "data4dbg95ks73egjm8g",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T17:21:57.457808+00:00",
+"created_et": "2026-09-28T13:21:57.457808-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "data4hjojkfs738qct3g",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T17:22:14.877267+00:00",
+"created_et": "2026-09-28T13:22:14.877267-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "data4ljg95ks73egjmj0",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T17:22:30.639648+00:00",
+"created_et": "2026-09-28T13:22:30.639648-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "datb2grojkfs738qe8jg",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T18:26:11.342478+00:00",
+"created_et": "2026-09-28T14:26:11.342478-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "datb823g95ks73egl8e0",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T18:38:00.417986+00:00",
+"created_et": "2026-09-28T14:38:00.417986-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "datbagtvr3kc73el7m2g",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T18:43:15.108966+00:00",
+"created_et": "2026-09-28T14:43:15.108966-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "datbddrojkfs738qel70",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T18:49:27.673647+00:00",
+"created_et": "2026-09-28T14:49:27.673647-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "datc3qbojkfs738qfk30",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T19:37:13.840572+00:00",
+"created_et": "2026-09-28T15:37:13.840572-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "datc4n5vr3kc73el8phg",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T19:39:08.458673+00:00",
+"created_et": "2026-09-28T15:39:08.458673-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "datc545vr3kc73el8q10",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T19:40:01.470858+00:00",
+"created_et": "2026-09-28T15:40:01.470858-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "datc583g95ks73egmfrg",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T19:40:17.028626+00:00",
+"created_et": "2026-09-28T15:40:17.028626-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "datc5bjg95ks73egmg50",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T19:40:30.398258+00:00",
+"created_et": "2026-09-28T15:40:30.398258-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "datc5eqhcrkc73dtvb80",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T19:40:43.395910+00:00",
+"created_et": "2026-09-28T15:40:43.395910-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "datc5jbg95ks73egmgmg",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T19:41:02.006927+00:00",
+"created_et": "2026-09-28T15:41:02.006927-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "datc5n3g95ks73egmgvg",
+"backend": "ibm_fez",
+"created_utc": "2026-09-28T19:41:16.260853+00:00",
+"created_et": "2026-09-28T15:41:16.260853-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "davi10il7guc73cetuhg",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-02T03:09:54.162996+00:00",
+"created_et": "2026-10-01T23:09:54.162996-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1"
+]
+},
+{
+"job_id": "davi1804oijs73e7j3m0",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-02T03:10:24.874907+00:00",
+"created_et": "2026-10-01T23:10:24.874907-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_phoenix-run1"
+]
+},
+{
+"job_id": "davi5u492g1c7398uckg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T03:20:24.254393+00:00",
+"created_et": "2026-10-01T23:20:24.254393-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1"
+]
+},
+{
+"job_id": "daviv3492g1c739900ag",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-02T04:14:04.198425+00:00",
+"created_et": "2026-10-02T00:14:04.198425-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run2"
+]
+},
+{
+"job_id": "daviv7o4oijs73e7ktg0",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-02T04:14:23.788470+00:00",
+"created_et": "2026-10-02T00:14:23.788470-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_phoenix-run2"
+]
+},
+{
+"job_id": "davjhgtj371s73dn19rg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T04:53:23.297898+00:00",
+"created_et": "2026-10-02T00:53:23.297898-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run2"
+]
+},
+{
+"job_id": "davjm684oijs73e7mf70",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-02T05:03:21.854741+00:00",
+"created_et": "2026-10-02T01:03:21.854741-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run3"
+]
+},
+{
+"job_id": "davjmek92g1c73991i80",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-02T05:03:54.093194+00:00",
+"created_et": "2026-10-02T01:03:54.093194-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_phoenix-run3"
+]
+},
+{
+"job_id": "davkgslj371s73dn376g",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T06:00:18.847129+00:00",
+"created_et": "2026-10-02T02:00:18.847129-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run3"
+]
+},
+{
+"job_id": "davq2b492g1c7399bmj0",
+"backend": "ibm_boston",
+"created_utc": "2026-10-02T12:18:52.945699+00:00",
+"created_et": "2026-10-02T08:18:52.945699-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qsr-ibm_boston-run1"
+]
+},
+{
+"job_id": "davq2g5j371s73dnbnk0",
+"backend": "ibm_boston",
+"created_utc": "2026-10-02T12:19:12.400257+00:00",
+"created_et": "2026-10-02T08:19:12.400257-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qsr-ibm_boston-run2"
+]
+},
+{
+"job_id": "davq2m492g1c7399bn1g",
+"backend": "ibm_boston",
+"created_utc": "2026-10-02T12:19:36.863362+00:00",
+"created_et": "2026-10-02T08:19:36.863362-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qsr-ibm_boston-run3"
+]
+},
+{
+"job_id": "davqfsil7guc73cfbr60",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T12:47:46.334647+00:00",
+"created_et": "2026-10-02T08:47:46.334647-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run5"
+]
+},
+{
+"job_id": "davqiodj371s73dncang",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T12:53:54.025541+00:00",
+"created_et": "2026-10-02T08:53:54.025541-04:00",
+"status": "ERROR",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run6"
+]
+},
+{
+"job_id": "davqs304oijs73e81gig",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T13:13:48.329956+00:00",
+"created_et": "2026-10-02T09:13:48.329956-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run9"
+]
+},
+{
+"job_id": "davqseql7guc73cfc7ug",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-02T13:14:35.517309+00:00",
+"created_et": "2026-10-02T09:14:35.517309-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run7"
+]
+},
+{
+"job_id": "davqu5492g1c7399clc0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T13:18:12.823308+00:00",
+"created_et": "2026-10-02T09:18:12.823308-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run10"
+]
+},
+{
+"job_id": "davquks92g1c7399cls0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-02T13:19:15.323470+00:00",
+"created_et": "2026-10-02T09:19:15.323470-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run10"
+]
+},
+{
+"job_id": "davr44il7guc73cfcing",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T13:30:59.003960+00:00",
+"created_et": "2026-10-02T09:30:59.003960-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run11"
+]
+},
+{
+"job_id": "davr60il7guc73cfcmc0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T13:34:58.404622+00:00",
+"created_et": "2026-10-02T09:34:58.404622-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run12"
+]
+},
+{
+"job_id": "davr7stj371s73dnd6sg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T13:38:59.271550+00:00",
+"created_et": "2026-10-02T09:38:59.271550-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run13"
+]
+},
+{
+"job_id": "davr9ok92g1c7399d9r0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T13:42:58.677699+00:00",
+"created_et": "2026-10-02T09:42:58.677699-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run14"
+]
+},
+{
+"job_id": "davrbktj371s73dnddgg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T13:46:59.616296+00:00",
+"created_et": "2026-10-02T09:46:59.616296-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run15"
+]
+},
+{
+"job_id": "davrdgtj371s73dndfdg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T13:50:59.666832+00:00",
+"created_et": "2026-10-02T09:50:59.666832-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run16"
+]
+},
+{
+"job_id": "davrfcil7guc73cfd4pg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T13:54:59.061553+00:00",
+"created_et": "2026-10-02T09:54:59.061553-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run17"
+]
+},
+{
+"job_id": "davrh8o4oijs73e82gkg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T13:58:59.697421+00:00",
+"created_et": "2026-10-02T09:58:59.697421-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run18"
+]
+},
+{
+"job_id": "davrluil7guc73cfdfa0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T14:08:58.583408+00:00",
+"created_et": "2026-10-02T10:08:58.583408-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run21"
+]
+},
+{
+"job_id": "davrnqs92g1c7399duc0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T14:12:59.381725+00:00",
+"created_et": "2026-10-02T10:12:59.381725-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run22"
+]
+},
+{
+"job_id": "davrpmql7guc73cfdmkg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T14:16:59.823237+00:00",
+"created_et": "2026-10-02T10:16:59.823237-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run23"
+]
+},
+{
+"job_id": "davrqgtj371s73dne4v0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T14:18:43.956548+00:00",
+"created_et": "2026-10-02T10:18:43.956548-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run31"
+]
+},
+{
+"job_id": "davsf8k92g1c7399fa50",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T15:02:58.282943+00:00",
+"created_et": "2026-10-02T11:02:58.282943-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run41"
+]
+},
+{
+"job_id": "davt0f84oijs73e84t50",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T15:39:41.349638+00:00",
+"created_et": "2026-10-02T11:39:41.349638-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run42"
+]
+},
+{
+"job_id": "davt2b04oijs73e8504g",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T15:43:41.186137+00:00",
+"created_et": "2026-10-02T11:43:41.186137-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run43"
+]
+},
+{
+"job_id": "davt6tlj371s73dngc70",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T15:53:26.548417+00:00",
+"created_et": "2026-10-02T11:53:26.548417-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run51"
+]
+},
+{
+"job_id": "davtcjc92g1c7399gm70",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T16:05:33.246308+00:00",
+"created_et": "2026-10-02T12:05:33.246308-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run61"
+]
+},
+{
+"job_id": "davtdgtj371s73dngms0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T16:07:31.484328+00:00",
+"created_et": "2026-10-02T12:07:31.484328-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run71"
+]
+},
+{
+"job_id": "davtfd04oijs73e85n2g",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T16:11:32.252857+00:00",
+"created_et": "2026-10-02T12:11:32.252857-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run72"
+]
+},
+{
+"job_id": "davth95j371s73dngub0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T16:15:32.386561+00:00",
+"created_et": "2026-10-02T12:15:32.386561-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run73"
+]
+},
+{
+"job_id": "davtm5ql7guc73cfgtlg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T16:25:59.334748+00:00",
+"created_et": "2026-10-02T12:25:59.334748-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run81"
+]
+},
+{
+"job_id": "davuanc92g1c7399i8kg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T17:09:49.457699+00:00",
+"created_et": "2026-10-02T13:09:49.457699-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run91"
+]
+},
+{
+"job_id": "davucks92g1c7399iak0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T17:13:55.355454+00:00",
+"created_et": "2026-10-02T13:13:55.355454-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run101"
+]
+},
+{
+"job_id": "davve7g4oijs73e88t6g",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T18:25:34.828352+00:00",
+"created_et": "2026-10-02T14:25:34.828352-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run111"
+]
+},
+{
+"job_id": "davveh04oijs73e88tsg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T18:26:12.776064+00:00",
+"created_et": "2026-10-02T14:26:12.776064-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run92"
+]
+},
+{
+"job_id": "davveo2l7guc73cfjjtg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T18:26:40.733092+00:00",
+"created_et": "2026-10-02T14:26:40.733092-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run102"
+]
+},
+{
+"job_id": "davvevs92g1c7399k180",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T18:27:11.338187+00:00",
+"created_et": "2026-10-02T14:27:11.338187-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run112"
+]
+},
+{
+"job_id": "davvf7c92g1c7399k1h0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T18:27:41.836495+00:00",
+"created_et": "2026-10-02T14:27:41.836495-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run93"
+]
+},
+{
+"job_id": "davvfjs92g1c7399k200",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T18:28:31.908554+00:00",
+"created_et": "2026-10-02T14:28:31.908554-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run103"
+]
+},
+{
+"job_id": "davvfslj371s73dnk2q0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T18:29:06.318732+00:00",
+"created_et": "2026-10-02T14:29:06.318732-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run113"
+]
+},
+{
+"job_id": "davvgelj371s73dnk40g",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T18:30:18.463382+00:00",
+"created_et": "2026-10-02T14:30:18.463382-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run210"
+]
+},
+{
+"job_id": "davvgos92g1c7399k4c0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T18:30:59.755016+00:00",
+"created_et": "2026-10-02T14:30:59.755016-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run211"
+]
+},
+{
+"job_id": "davvgtdj371s73dnk57g",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T18:31:17.087086+00:00",
+"created_et": "2026-10-02T14:31:17.087086-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run212"
+]
+},
+{
+"job_id": "davvh22l7guc73cfjnt0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T18:31:36.291823+00:00",
+"created_et": "2026-10-02T14:31:36.291823-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run213"
+]
+},
+{
+"job_id": "davvh8492g1c7399k5gg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T18:32:00.903288+00:00",
+"created_et": "2026-10-02T14:32:00.903288-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run214"
+]
+},
+{
+"job_id": "davvhc492g1c7399k5qg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T18:32:16.907269+00:00",
+"created_et": "2026-10-02T14:32:16.907269-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run215"
+]
+},
+{
+"job_id": "davvhi04oijs73e893d0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T18:32:40.706435+00:00",
+"created_et": "2026-10-02T14:32:40.706435-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run216"
+]
+},
+{
+"job_id": "davvhn5j371s73dnk77g",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T18:33:00.185355+00:00",
+"created_et": "2026-10-02T14:33:00.185355-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run217"
+]
+},
+{
+"job_id": "davvhrql7guc73cfjq4g",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T18:33:19.833152+00:00",
+"created_et": "2026-10-02T14:33:19.833152-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run220"
+]
+},
+{
+"job_id": "davvi0c92g1c7399k7f0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T18:33:37.261694+00:00",
+"created_et": "2026-10-02T14:33:37.261694-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run221"
+]
+},
+{
+"job_id": "davvi404oijs73e8951g",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T18:33:52.953034+00:00",
+"created_et": "2026-10-02T14:33:52.953034-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run222"
+]
+},
+{
+"job_id": "davviadj371s73dnk8mg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T18:34:17.255743+00:00",
+"created_et": "2026-10-02T14:34:17.255743-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run223"
+]
+},
+{
+"job_id": "davvie5j371s73dnk8tg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T18:34:32.698320+00:00",
+"created_et": "2026-10-02T14:34:32.698320-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run224"
+]
+},
+{
+"job_id": "davviic92g1c7399k8dg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T18:34:49.385960+00:00",
+"created_et": "2026-10-02T14:34:49.385960-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run225"
+]
+},
+{
+"job_id": "davvimlj371s73dnk980",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T18:35:06.498055+00:00",
+"created_et": "2026-10-02T14:35:06.498055-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run226"
+]
+},
+{
+"job_id": "davvistj371s73dnk9i0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T18:35:31.704560+00:00",
+"created_et": "2026-10-02T14:35:31.704560-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run227"
+]
+},
+{
+"job_id": "davvj75j371s73dnk9ug",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T18:36:12.263373+00:00",
+"created_et": "2026-10-02T14:36:12.263373-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run230"
+]
+},
+{
+"job_id": "davvjdtj371s73dnka60",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T18:36:39.859300+00:00",
+"created_et": "2026-10-02T14:36:39.859300-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run231"
+]
+},
+{
+"job_id": "davvji2l7guc73cfjssg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T18:36:56.934428+00:00",
+"created_et": "2026-10-02T14:36:56.934428-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run232"
+]
+},
+{
+"job_id": "davvjmdj371s73dnkag0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T18:37:13.296483+00:00",
+"created_et": "2026-10-02T14:37:13.296483-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run233"
+]
+},
+{
+"job_id": "davvjq2l7guc73cfjt60",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T18:37:28.799016+00:00",
+"created_et": "2026-10-02T14:37:28.799016-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run234"
+]
+},
+{
+"job_id": "davvjval7guc73cfjtc0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T18:37:49.821230+00:00",
+"created_et": "2026-10-02T14:37:49.821230-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run235"
+]
+},
+{
+"job_id": "davvk3k92g1c7399kad0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T18:38:06.466869+00:00",
+"created_et": "2026-10-02T14:38:06.466869-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run236"
+]
+},
+{
+"job_id": "davvk8g4oijs73e897q0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T18:38:26.899762+00:00",
+"created_et": "2026-10-02T14:38:26.899762-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run237"
+]
+},
+{
+"job_id": "db00t8k92g1c7399m6hg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-02T20:05:54.344212+00:00",
+"created_et": "2026-10-02T16:05:54.344212-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run121"
+]
+},
+{
+"job_id": "db023hal7guc73cfnvl0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-02T21:27:33.549889+00:00",
+"created_et": "2026-10-02T17:27:33.549889-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run141"
+]
+},
+{
+"job_id": "db023m492g1c7399o9vg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-02T21:27:52.479112+00:00",
+"created_et": "2026-10-02T17:27:52.479112-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run141"
+]
+},
+{
+"job_id": "db15r4bid5ic73eqmhs0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-04T14:07:13.771746+00:00",
+"created_et": "2026-10-04T10:07:13.771746-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run301"
+]
+},
+{
+"job_id": "db15s4pb694s73drrg10",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-04T14:09:24.149628+00:00",
+"created_et": "2026-10-04T10:09:24.149628-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run302"
+]
+},
+{
+"job_id": "db15skrid5ic73eqmkvg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-04T14:10:28.079939+00:00",
+"created_et": "2026-10-04T10:10:28.079939-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run303"
+]
+},
+{
+"job_id": "db15t52vog1s73fhmo3g",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-04T14:11:32.572276+00:00",
+"created_et": "2026-10-04T10:11:32.572276-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run301"
+]
+},
+{
+"job_id": "db15u31b694s73drrjvg",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-04T14:13:32.474379+00:00",
+"created_et": "2026-10-04T10:13:32.474379-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run302"
+]
+},
+{
+"job_id": "db161j6egvvc73bh6u50",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-04T14:21:00.935381+00:00",
+"created_et": "2026-10-04T10:21:00.935381-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run303"
+]
+},
+{
+"job_id": "db1644jid5ic73eqn2g0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-04T14:26:26.099778+00:00",
+"created_et": "2026-10-04T10:26:26.099778-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run311"
+]
+},
+{
+"job_id": "db1657megvvc73bh72q0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-04T14:28:46.608458+00:00",
+"created_et": "2026-10-04T10:28:46.608458-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run312"
+]
+},
+{
+"job_id": "db1661avog1s73fhn6e0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-04T14:30:29.053103+00:00",
+"created_et": "2026-10-04T10:30:29.053103-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run313"
+]
+},
+{
+"job_id": "db167erid5ic73eqn7gg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-04T14:33:31.691919+00:00",
+"created_et": "2026-10-04T10:33:31.691919-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run321"
+]
+},
+{
+"job_id": "db168l2vog1s73fhnav0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-04T14:36:04.186558+00:00",
+"created_et": "2026-10-04T10:36:04.186558-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run322"
+]
+},
+{
+"job_id": "db169p6egvvc73bh7a20",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-04T14:38:28.648291+00:00",
+"created_et": "2026-10-04T10:38:28.648291-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run323"
+]
+},
+{
+"job_id": "db16b22vog1s73fhnefg",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-04T14:41:12.328239+00:00",
+"created_et": "2026-10-04T10:41:12.328239-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run331"
+]
+},
+{
+"job_id": "db16ctuegvvc73bh7f10",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-04T14:45:11.733168+00:00",
+"created_et": "2026-10-04T10:45:11.733168-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run332"
+]
+},
+{
+"job_id": "db16ff9b694s73drsdag",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-04T14:50:37.059620+00:00",
+"created_et": "2026-10-04T10:50:37.059620-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run333"
+]
+},
+{
+"job_id": "db16hravog1s73fhnml0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-04T14:55:41.774643+00:00",
+"created_et": "2026-10-04T10:55:41.774643-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run341"
+]
+},
+{
+"job_id": "db16iaavog1s73fhnn9g",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-04T14:56:41.301339+00:00",
+"created_et": "2026-10-04T10:56:41.301339-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run342"
+]
+},
+{
+"job_id": "db16llbid5ic73eqnp8g",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-04T15:03:49.420457+00:00",
+"created_et": "2026-10-04T11:03:49.420457-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run343"
+]
+},
+{
+"job_id": "db16oh6egvvc73bh7r90",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-04T15:09:56.595759+00:00",
+"created_et": "2026-10-04T11:09:56.595759-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run351"
+]
+},
+{
+"job_id": "db16p5hb694s73drsna0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-04T15:11:18.129426+00:00",
+"created_et": "2026-10-04T11:11:18.129426-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run361"
+]
+},
+{
+"job_id": "db18h6bid5ic73eqq2f0",
+"backend": "ibm_fez",
+"created_utc": "2026-10-04T17:10:49.447130+00:00",
+"created_et": "2026-10-04T13:10:49.447130-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_fez-run371"
+]
+},
+{
+"job_id": "db1air9b694s73ds1jcg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-04T19:30:53.364778+00:00",
+"created_et": "2026-10-04T15:30:53.364778-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run352"
+]
+},
+{
+"job_id": "db1aj93id5ic73eqsomg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-04T19:31:48.192935+00:00",
+"created_et": "2026-10-04T15:31:48.192935-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run353"
+]
+},
+{
+"job_id": "db1ajajid5ic73eqsoq0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-04T19:31:54.222642+00:00",
+"created_et": "2026-10-04T15:31:54.222642-04:00",
+"status": "ERROR",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run391"
+]
+},
+{
+"job_id": "db1ak0qvog1s73fhspdg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-04T19:33:23.485930+00:00",
+"created_et": "2026-10-04T15:33:23.485930-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run362"
+]
+},
+{
+"job_id": "db1akdeegvvc73bhcoh0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-04T19:34:13.371536+00:00",
+"created_et": "2026-10-04T15:34:13.371536-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run363"
+]
+},
+{
+"job_id": "db1al2avog1s73fhsr9g",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-04T19:35:37.711628+00:00",
+"created_et": "2026-10-04T15:35:37.711628-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run381"
+]
+},
+{
+"job_id": "db1alfuegvvc73bhcqkg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-04T19:36:31.932072+00:00",
+"created_et": "2026-10-04T15:36:31.932072-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run382"
+]
+},
+{
+"job_id": "db1altuegvvc73bhcra0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-04T19:37:27.145686+00:00",
+"created_et": "2026-10-04T15:37:27.145686-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run383"
+]
+},
+{
+"job_id": "db1b6l3id5ic73eqtmt0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-04T20:13:08.625436+00:00",
+"created_et": "2026-10-04T16:13:08.625436-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run392"
+]
+},
+{
+"job_id": "db1cs81b694s73ds4fs0",
+"backend": "ibm_fez",
+"created_utc": "2026-10-04T22:07:28.288646+00:00",
+"created_et": "2026-10-04T18:07:28.288646-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_fez-run401"
+]
+},
+{
+"job_id": "db1csj3id5ic73eqvl20",
+"backend": "ibm_fez",
+"created_utc": "2026-10-04T22:08:12.462438+00:00",
+"created_et": "2026-10-04T18:08:12.462438-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_fez-run402"
+]
+},
+{
+"job_id": "db1cstmegvvc73bhfing",
+"backend": "ibm_fez",
+"created_utc": "2026-10-04T22:08:54.755090+00:00",
+"created_et": "2026-10-04T18:08:54.755090-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_fez-run403"
+]
+},
+{
+"job_id": "db1ct8avog1s73fhvl00",
+"backend": "ibm_fez",
+"created_utc": "2026-10-04T22:09:37.462700+00:00",
+"created_et": "2026-10-04T18:09:37.462700-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_fez-run411"
+]
+},
+{
+"job_id": "db1ctkbid5ic73eqvm2g",
+"backend": "ibm_fez",
+"created_utc": "2026-10-04T22:10:25.649741+00:00",
+"created_et": "2026-10-04T18:10:25.649741-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_fez-run412"
+]
+},
+{
+"job_id": "db1ctvhb694s73ds4hi0",
+"backend": "ibm_fez",
+"created_utc": "2026-10-04T22:11:10.739412+00:00",
+"created_et": "2026-10-04T18:11:10.739412-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_fez-run413"
+]
+},
+{
+"job_id": "db1cuebid5ic73eqvmr0",
+"backend": "ibm_fez",
+"created_utc": "2026-10-04T22:12:09.139039+00:00",
+"created_et": "2026-10-04T18:12:09.139039-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_fez-run421"
+]
+},
+{
+"job_id": "db1cuqmegvvc73bhfkeg",
+"backend": "ibm_fez",
+"created_utc": "2026-10-04T22:12:58.997992+00:00",
+"created_et": "2026-10-04T18:12:58.997992-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_fez-run422"
+]
+},
+{
+"job_id": "db1cv7bid5ic73eqvnhg",
+"backend": "ibm_fez",
+"created_utc": "2026-10-04T22:13:49.879774+00:00",
+"created_et": "2026-10-04T18:13:49.879774-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_fez-run423"
+]
+},
+{
+"job_id": "db1d5bjid5ic73eqvtf0",
+"backend": "ibm_boston",
+"created_utc": "2026-10-04T22:26:54.987146+00:00",
+"created_et": "2026-10-04T18:26:54.987146-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_boston-run431"
+]
+},
+{
+"job_id": "db1gqc2vog1s73fi3tpg",
+"backend": "ibm_boston",
+"created_utc": "2026-10-05T02:36:32.766241+00:00",
+"created_et": "2026-10-04T22:36:32.766241-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_boston-run432"
+]
+},
+{
+"job_id": "db1gqnavog1s73fi3u7g",
+"backend": "ibm_boston",
+"created_utc": "2026-10-05T02:37:17.811426+00:00",
+"created_et": "2026-10-04T22:37:17.811426-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_boston-run433"
+]
+},
+{
+"job_id": "db1hgb1b694s73ds9g0g",
+"backend": "ibm_boston",
+"created_utc": "2026-10-05T03:23:24.221366+00:00",
+"created_et": "2026-10-04T23:23:24.221366-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_boston-run441"
+]
+},
+{
+"job_id": "db1icu3id5ic73er5nqg",
+"backend": "ibm_boston",
+"created_utc": "2026-10-05T04:24:24.353007+00:00",
+"created_et": "2026-10-05T00:24:24.353007-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_boston-run451"
+]
+},
+{
+"job_id": "db1iedeegvvc73bhlogg",
+"backend": "ibm_boston",
+"created_utc": "2026-10-05T04:27:33.816751+00:00",
+"created_et": "2026-10-05T00:27:33.816751-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_boston-run452"
+]
+},
+{
+"job_id": "db1j5mhb694s73dsbq90",
+"backend": "ibm_boston",
+"created_utc": "2026-10-05T05:17:14.447051+00:00",
+"created_et": "2026-10-05T01:17:14.447051-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_boston-run453"
+]
+},
+{
+"job_id": "db1jusrid5ic73er86j0",
+"backend": "ibm_boston",
+"created_utc": "2026-10-05T06:10:59.947895+00:00",
+"created_et": "2026-10-05T02:10:59.947895-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_boston-run461"
+]
+},
+{
+"job_id": "db1kp99b694s73dse5n0",
+"backend": "ibm_boston",
+"created_utc": "2026-10-05T07:07:17.895826+00:00",
+"created_et": "2026-10-05T03:07:17.895826-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_boston-run462"
+]
+},
+{
+"job_id": "db1ku0megvvc73bhpfpg",
+"backend": "ibm_boston",
+"created_utc": "2026-10-05T07:17:22.798257+00:00",
+"created_et": "2026-10-05T03:17:22.798257-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_boston-run463"
+]
+},
+{
+"job_id": "db1o5eavog1s73fie48g",
+"backend": "ibm_boston",
+"created_utc": "2026-10-05T10:58:01.832004+00:00",
+"created_et": "2026-10-05T06:58:01.832004-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_boston-run471"
+]
+},
+{
+"job_id": "db1oft1b694s73dsjf90",
+"backend": "ibm_boston",
+"created_utc": "2026-10-05T11:20:20.826865+00:00",
+"created_et": "2026-10-05T07:20:20.826865-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_boston-run472"
+]
+},
+{
+"job_id": "db1ots9b694s73dsk0k0",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-05T11:50:09.941325+00:00",
+"created_et": "2026-10-05T07:50:09.941325-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_phoenix-run541"
+]
+},
+{
+"job_id": "db1oujivog1s73fif5og",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-05T11:51:42.319876+00:00",
+"created_et": "2026-10-05T07:51:42.319876-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_phoenix-run542"
+]
+},
+{
+"job_id": "db1ouv6egvvc73bhv5q0",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-05T11:52:28.806822+00:00",
+"created_et": "2026-10-05T07:52:28.806822-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_phoenix-run543"
+]
+},
+{
+"job_id": "db1ovbhb694s73dsk380",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-05T11:53:18.831349+00:00",
+"created_et": "2026-10-05T07:53:18.831349-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_phoenix-run531"
+]
+},
+{
+"job_id": "db1p899b694s73dskfvg",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-05T12:12:21.579946+00:00",
+"created_et": "2026-10-05T08:12:21.579946-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_phoenix-run551"
+]
+},
+{
+"job_id": "db1p8mbid5ic73erfotg",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-05T12:13:13.159166+00:00",
+"created_et": "2026-10-05T08:13:13.159166-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_phoenix-run552"
+]
+},
+{
+"job_id": "db1p963id5ic73erfpfg",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-05T12:14:16.376783+00:00",
+"created_et": "2026-10-05T08:14:16.376783-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_phoenix-run553"
+]
+},
+{
+"job_id": "db1pdrbid5ic73erfu90",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-05T12:24:13.352068+00:00",
+"created_et": "2026-10-05T08:24:13.352068-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_phoenix-run561"
+]
+},
+{
+"job_id": "db1pe7ivog1s73fifq9g",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-05T12:25:02.570772+00:00",
+"created_et": "2026-10-05T08:25:02.570772-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_phoenix-run562"
+]
+},
+{
+"job_id": "db1phkavog1s73fifu5g",
+"backend": "ibm_boston",
+"created_utc": "2026-10-05T12:32:17.990103+00:00",
+"created_et": "2026-10-05T08:32:17.990103-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_boston-run481"
+]
+},
+{
+"job_id": "db1pop6egvvc73bi091g",
+"backend": "ibm_boston",
+"created_utc": "2026-10-05T12:47:33.065770+00:00",
+"created_et": "2026-10-05T08:47:33.065770-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_boston-run473"
+]
+},
+{
+"job_id": "db1pou3id5ic73ergekg",
+"backend": "ibm_boston",
+"created_utc": "2026-10-05T12:47:52.680704+00:00",
+"created_et": "2026-10-05T08:47:52.680704-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_boston-run482"
+]
+},
+{
+"job_id": "db1q7tpb694s73dslov0",
+"backend": "ibm_boston",
+"created_utc": "2026-10-05T13:19:51.698487+00:00",
+"created_et": "2026-10-05T09:19:51.698487-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_boston-run483"
+]
+},
+{
+"job_id": "db1q9gqvog1s73figu70",
+"backend": "ibm_boston",
+"created_utc": "2026-10-05T13:23:15.724217+00:00",
+"created_et": "2026-10-05T09:23:15.724217-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_boston-run484"
+]
+},
+{
+"job_id": "db1q9rrid5ic73erh3p0",
+"backend": "ibm_boston",
+"created_utc": "2026-10-05T13:23:59.860047+00:00",
+"created_et": "2026-10-05T09:23:59.860047-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_boston-run485"
+]
+},
+{
+"job_id": "db1qa8hb694s73dslrl0",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-05T13:24:50.982889+00:00",
+"created_et": "2026-10-05T09:24:50.982889-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_phoenix-run571"
+]
+},
+{
+"job_id": "db1qanjid5ic73erh4ug",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-05T13:25:50.491685+00:00",
+"created_et": "2026-10-05T09:25:50.491685-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_phoenix-run572"
+]
+},
+{
+"job_id": "db1ud3r5ptqc73c5bosg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-05T18:03:59.068628+00:00",
+"created_et": "2026-10-05T14:03:59.068628-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run511"
+]
+},
+{
+"job_id": "db2fugs2ljfc73d4dmm0",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-06T14:01:39.794078+00:00",
+"created_et": "2026-10-06T10:01:39.794078-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_phoenix-run581"
+]
+},
+{
+"job_id": "db2g35fr11fs7396mj7g",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-06T14:11:33.980085+00:00",
+"created_et": "2026-10-06T10:11:33.980085-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_phoenix-run582"
+]
+},
+{
+"job_id": "db2g9bnr11fs7396mut0",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-06T14:24:46.402607+00:00",
+"created_et": "2026-10-06T10:24:46.402607-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_phoenix-run583"
+]
+},
+{
+"job_id": "db2jes42ljfc73d4j2h0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-06T18:01:20.652778+00:00",
+"created_et": "2026-10-06T14:01:20.652778-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run521"
+]
+},
+{
+"job_id": "db2jr7nr11fs7396sai0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-06T18:27:42.233430+00:00",
+"created_et": "2026-10-06T14:27:42.233430-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run611"
+]
+},
+{
+"job_id": "db2kabk2ljfc73d4kmcg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-06T18:59:58.946489+00:00",
+"created_et": "2026-10-06T14:59:58.946489-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run612"
+]
+},
+{
+"job_id": "db2lo2s7f06c73aq2olg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-06T20:37:31.766309+00:00",
+"created_et": "2026-10-06T16:37:31.766309-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run621"
+]
+},
+{
+"job_id": "db2lt9k2ljfc73d4nb7g",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-06T20:48:38.491766+00:00",
+"created_et": "2026-10-06T16:48:38.491766-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run622"
+]
+},
+{
+"job_id": "db2m3qs7f06c73aq3bbg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-06T21:02:36.046714+00:00",
+"created_et": "2026-10-06T17:02:36.046714-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run623"
+]
+},
+{
+"job_id": "db2m9hc2ljfc73d4nvog",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-06T21:14:45.167503+00:00",
+"created_et": "2026-10-06T17:14:45.167503-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run613"
+]
+},
+{
+"job_id": "db2mvnk2ljfc73d4p96g",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-06T22:02:06.998108+00:00",
+"created_et": "2026-10-06T18:02:06.998108-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_phoenix-run651"
+]
+},
+{
+"job_id": "db2n50c7f06c73aq5b8g",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-06T22:13:21.564915+00:00",
+"created_et": "2026-10-06T18:13:21.564915-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_phoenix-run652"
+]
+},
+{
+"job_id": "db2na3k7f06c73aq5lb0",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-06T22:24:14.798183+00:00",
+"created_et": "2026-10-06T18:24:14.798183-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_phoenix-run653"
+]
+},
+{
+"job_id": "db2nb347f06c73aq5nh0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-06T22:26:20.580620+00:00",
+"created_et": "2026-10-06T18:26:20.580620-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run661"
+]
+},
+{
+"job_id": "db2neos2ljfc73d4qa90",
+"backend": "ibm_fez",
+"created_utc": "2026-10-06T22:34:11.233202+00:00",
+"created_et": "2026-10-06T18:34:11.233202-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_fez-run671"
+]
+},
+{
+"job_id": "db2nivvr11fs73973890",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-06T22:43:11.890912+00:00",
+"created_et": "2026-10-06T18:43:11.890912-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run681"
+]
+},
+{
+"job_id": "db2o34s7f06c73aq79kg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-06T23:17:39.216445+00:00",
+"created_et": "2026-10-06T19:17:39.216445-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run691"
+]
+},
+{
+"job_id": "db2o34vr11fs73974a30",
+"backend": "ibm_boston",
+"created_utc": "2026-10-06T23:17:39.223396+00:00",
+"created_et": "2026-10-06T19:17:39.223396-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_boston-run701"
+]
+},
+{
+"job_id": "db2o34u8v0ts73c36qv0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-06T23:17:39.647110+00:00",
+"created_et": "2026-10-06T19:17:39.647110-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run721"
+]
+},
+{
+"job_id": "db2o8hu8v0ts73c3788g",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-06T23:29:12.019699+00:00",
+"created_et": "2026-10-06T19:29:12.019699-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run722"
+]
+},
+{
+"job_id": "db2o8nfr11fs73974oj0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-06T23:29:33.834540+00:00",
+"created_et": "2026-10-06T19:29:33.834540-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run692"
+]
+},
+{
+"job_id": "db2odpc2ljfc73d4sg3g",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-06T23:40:21.791306+00:00",
+"created_et": "2026-10-06T19:40:21.791306-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run723"
+]
+},
+{
+"job_id": "db2oe142ljfc73d4sgqg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-06T23:40:53.101153+00:00",
+"created_et": "2026-10-06T19:40:53.101153-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run693"
+]
+},
+{
+"job_id": "db2oeps2ljfc73d4sir0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-06T23:42:31.365941+00:00",
+"created_et": "2026-10-06T19:42:31.365941-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run741"
+]
+},
+{
+"job_id": "db2ojdfr11fs73975jsg",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-06T23:52:21.125817+00:00",
+"created_et": "2026-10-06T19:52:21.125817-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_phoenix-run751"
+]
+},
+{
+"job_id": "db2ooac2ljfc73d4t8pg",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-07T00:02:49.577016+00:00",
+"created_et": "2026-10-06T20:02:49.577016-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_phoenix-run752"
+]
+},
+{
+"job_id": "db2p3947f06c73aq9iu0",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-07T00:26:12.526668+00:00",
+"created_et": "2026-10-06T20:26:12.526668-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_phoenix-run753"
+]
+},
+{
+"job_id": "db2p5kk7f06c73aq9oog",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T00:31:14.515567+00:00",
+"created_et": "2026-10-06T20:31:14.515567-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run742"
+]
+},
+{
+"job_id": "db2qfqc7f06c73aqca10",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T02:01:13.203034+00:00",
+"created_et": "2026-10-06T22:01:13.203034-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run743"
+]
+},
+{
+"job_id": "db2qqeocv0fc73e8rjm0",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T02:23:55.350777+00:00",
+"created_et": "2026-10-06T22:23:55.350777-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run841"
+]
+},
+{
+"job_id": "db2qqercqljs73cln870",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T02:23:55.583436+00:00",
+"created_et": "2026-10-06T22:23:55.583436-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run801"
+]
+},
+{
+"job_id": "db2qqeu118nc7390g050",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T02:23:55.742077+00:00",
+"created_et": "2026-10-06T22:23:55.742077-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run821"
+]
+},
+{
+"job_id": "db2qqeocv0fc73e8rjmg",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T02:23:55.853331+00:00",
+"created_et": "2026-10-06T22:23:55.853331-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run871"
+]
+},
+{
+"job_id": "db2qqf6118nc7390g060",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T02:23:56.351144+00:00",
+"created_et": "2026-10-06T22:23:56.351144-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run861"
+]
+},
+{
+"job_id": "db2qvde118nc7390g4hg",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T02:34:29.316779+00:00",
+"created_et": "2026-10-06T22:34:29.316779-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run842"
+]
+},
+{
+"job_id": "db2qvj5v86ts73dhjv3g",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T02:34:52.749861+00:00",
+"created_et": "2026-10-06T22:34:52.749861-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run802"
+]
+},
+{
+"job_id": "db2qvm8cv0fc73e8rod0",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T02:35:06.131405+00:00",
+"created_et": "2026-10-06T22:35:06.131405-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run822"
+]
+},
+{
+"job_id": "db2qvmocv0fc73e8roe0",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T02:35:07.502773+00:00",
+"created_et": "2026-10-06T22:35:07.502773-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run872"
+]
+},
+{
+"job_id": "db2qvv0cv0fc73e8rolg",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T02:35:41.241718+00:00",
+"created_et": "2026-10-06T22:35:41.241718-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run862"
+]
+},
+{
+"job_id": "db2r4adv86ts73dhk3c0",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T02:44:57.483062+00:00",
+"created_et": "2026-10-06T22:44:57.483062-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run843"
+]
+},
+{
+"job_id": "db2r4ltv86ts73dhk3mg",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T02:45:43.202964+00:00",
+"created_et": "2026-10-06T22:45:43.202964-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run803"
+]
+},
+{
+"job_id": "db2r4qm118nc7390g9c0",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T02:46:02.909138+00:00",
+"created_et": "2026-10-06T22:46:02.909138-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run823"
+]
+},
+{
+"job_id": "db2r4r0cv0fc73e8rt0g",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T02:46:05.009128+00:00",
+"created_et": "2026-10-06T22:46:05.009128-04:00",
+"status": "ERROR",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run873"
+]
+},
+{
+"job_id": "db2r563cqljs73clnhng",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T02:46:49.071333+00:00",
+"created_et": "2026-10-06T22:46:49.071333-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run863"
+]
+},
+{
+"job_id": "db2rk4u8v0ts73c3dbcg",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T03:18:43.490619+00:00",
+"created_et": "2026-10-06T23:18:43.490619-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run761"
+]
+},
+{
+"job_id": "db2rp87r11fs7397b73g",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T03:29:36.764238+00:00",
+"created_et": "2026-10-06T23:29:36.764238-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run762"
+]
+},
+{
+"job_id": "db2rug68v0ts73c3dt50",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T03:40:48.548376+00:00",
+"created_et": "2026-10-06T23:40:48.548376-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run763"
+]
+},
+{
+"job_id": "db2s5s47f06c73aqepk0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T03:56:32.506948+00:00",
+"created_et": "2026-10-06T23:56:32.506948-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run901"
+]
+},
+{
+"job_id": "db2s9rfr11fs7397c2u0",
+"backend": "ibm_fez",
+"created_utc": "2026-10-07T04:05:01.858761+00:00",
+"created_et": "2026-10-07T00:05:01.858761-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_fez-run921"
+]
+},
+{
+"job_id": "db2s9rfr11fs7397c2ug",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-07T04:05:02.039255+00:00",
+"created_et": "2026-10-07T00:05:02.039255-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run911"
+]
+},
+{
+"job_id": "db2sa23cqljs73cloiag",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T04:05:28.653933+00:00",
+"created_et": "2026-10-07T00:05:28.653933-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run878"
+]
+},
+{
+"job_id": "db2savc2ljfc73d53beg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T04:07:25.802627+00:00",
+"created_et": "2026-10-07T00:07:25.802627-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run902"
+]
+},
+{
+"job_id": "db2seuu8v0ts73c3eo40",
+"backend": "ibm_fez",
+"created_utc": "2026-10-07T04:15:55.293676+00:00",
+"created_et": "2026-10-07T00:15:55.293676-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_fez-run922"
+]
+},
+{
+"job_id": "db2sevk7f06c73aqf7ng",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-07T04:15:58.903926+00:00",
+"created_et": "2026-10-07T00:15:58.903926-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run912"
+]
+},
+{
+"job_id": "db2sg2k2ljfc73d53im0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T04:18:18.602564+00:00",
+"created_et": "2026-10-07T00:18:18.602564-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run903"
+]
+},
+{
+"job_id": "db2sgck2ljfc73d53j9g",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T04:18:58.560017+00:00",
+"created_et": "2026-10-07T00:18:58.560017-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run931"
+]
+},
+{
+"job_id": "db2sjnm8v0ts73c3evv0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T04:26:06.661065+00:00",
+"created_et": "2026-10-07T00:26:06.661065-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run941"
+]
+},
+{
+"job_id": "db2skk47f06c73aqfi40",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-07T04:28:00.853577+00:00",
+"created_et": "2026-10-07T00:28:00.853577-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run913"
+]
+},
+{
+"job_id": "db2sklc2ljfc73d53qvg",
+"backend": "ibm_fez",
+"created_utc": "2026-10-07T04:28:05.796928+00:00",
+"created_et": "2026-10-07T00:28:05.796928-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_fez-run923"
+]
+},
+{
+"job_id": "db2slifr11fs7397cmeg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T04:30:01.189171+00:00",
+"created_et": "2026-10-07T00:30:01.189171-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run932"
+]
+},
+{
+"job_id": "db2sqmk2ljfc73d548o0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T04:40:58.738139+00:00",
+"created_et": "2026-10-07T00:40:58.738139-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run933"
+]
+},
+{
+"job_id": "db2sqpnr11fs7397d2eg",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T04:41:11.043494+00:00",
+"created_et": "2026-10-07T00:41:11.043494-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run942"
+]
+},
+{
+"job_id": "db2ss0u118nc7390hr00",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T04:43:47.507691+00:00",
+"created_et": "2026-10-07T00:43:47.507691-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run961"
+]
+},
+{
+"job_id": "db2ss168v0ts73c3fi6g",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-07T04:43:48.325339+00:00",
+"created_et": "2026-10-07T00:43:48.325339-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run951"
+]
+},
+{
+"job_id": "db2suae8v0ts73c3fn6g",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T04:48:41.561551+00:00",
+"created_et": "2026-10-07T00:48:41.561551-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run971"
+]
+},
+{
+"job_id": "db2t13rcqljs73clp7d0",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T04:54:39.327012+00:00",
+"created_et": "2026-10-07T00:54:39.327012-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run962"
+]
+},
+{
+"job_id": "db2t1542ljfc73d54ld0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T04:54:45.093531+00:00",
+"created_et": "2026-10-07T00:54:45.093531-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run943"
+]
+},
+{
+"job_id": "db2t27c2ljfc73d54mpg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-07T04:57:01.466173+00:00",
+"created_et": "2026-10-07T00:57:01.466173-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run952"
+]
+},
+{
+"job_id": "db2t68ocv0fc73e8tntg",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T05:05:39.280757+00:00",
+"created_et": "2026-10-07T01:05:39.280757-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run981"
+]
+},
+{
+"job_id": "db2t6fdv86ts73dhlurg",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T05:06:05.339628+00:00",
+"created_et": "2026-10-07T01:06:05.339628-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run963"
+]
+},
+{
+"job_id": "db2t6knr11fs7397dn9g",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T05:06:26.933205+00:00",
+"created_et": "2026-10-07T01:06:26.933205-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run972"
+]
+},
+{
+"job_id": "db2t7uvr11fs7397dpng",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T05:09:15.579942+00:00",
+"created_et": "2026-10-07T01:09:15.579942-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run991"
+]
+},
+{
+"job_id": "db2t7v47f06c73aqgo4g",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-07T05:09:16.412565+00:00",
+"created_et": "2026-10-07T01:09:16.412565-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run996"
+]
+},
+{
+"job_id": "db2t9b0cv0fc73e8tqo0",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T05:12:12.904940+00:00",
+"created_et": "2026-10-07T01:12:12.904940-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run1011"
+]
+},
+{
+"job_id": "db2t9be8v0ts73c3g9fg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T05:12:13.377553+00:00",
+"created_et": "2026-10-07T01:12:13.377553-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1001"
+]
+},
+{
+"job_id": "db2t9dc7f06c73aqgrag",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-07T05:12:22.025469+00:00",
+"created_et": "2026-10-07T01:12:22.025469-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run953"
+]
+},
+{
+"job_id": "db2tbhdv86ts73dhm3fg",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T05:16:53.853735+00:00",
+"created_et": "2026-10-07T01:16:53.853735-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run982"
+]
+},
+{
+"job_id": "db2tbrs7f06c73aqgva0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T05:17:35.881121+00:00",
+"created_et": "2026-10-07T01:17:35.881121-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1021"
+]
+},
+{
+"job_id": "db2tc768v0ts73c3ge4g",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T05:18:20.527036+00:00",
+"created_et": "2026-10-07T01:18:20.527036-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run973"
+]
+},
+{
+"job_id": "db2tgqbcqljs73clpm5g",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T05:28:09.429744+00:00",
+"created_et": "2026-10-07T01:28:09.429744-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run983"
+]
+},
+{
+"job_id": "db32lic2ljfc73d5eneg",
+"backend": "ibm_boston",
+"created_utc": "2026-10-07T11:19:37.324868+00:00",
+"created_et": "2026-10-07T07:19:37.324868-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_boston-run702"
+]
+},
+{
+"job_id": "db32pe42ljfc73d5et60",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T11:27:52.290992+00:00",
+"created_et": "2026-10-07T07:27:52.290992-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1031"
+]
+},
+{
+"job_id": "db32t0u8v0ts73c3q970",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T11:35:31.338784+00:00",
+"created_et": "2026-10-07T07:35:31.338784-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1041"
+]
+},
+{
+"job_id": "db32t0vr11fs7397ns90",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T11:35:31.551559+00:00",
+"created_et": "2026-10-07T07:35:31.551559-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1051"
+]
+},
+{
+"job_id": "db32t0s2ljfc73d5f46g",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T11:35:32.083094+00:00",
+"created_et": "2026-10-07T07:35:32.083094-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1061"
+]
+},
+{
+"job_id": "db32tem8v0ts73c3qa50",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T11:36:26.390891+00:00",
+"created_et": "2026-10-07T07:36:26.390891-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1044"
+]
+},
+{
+"job_id": "db32tre8v0ts73c3qak0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T11:37:17.944683+00:00",
+"created_et": "2026-10-07T07:37:17.944683-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1047"
+]
+},
+{
+"job_id": "db32umk7f06c73aqr20g",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T11:39:06.561827+00:00",
+"created_et": "2026-10-07T07:39:06.561827-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1032"
+]
+},
+{
+"job_id": "db332d42ljfc73d5fbhg",
+"backend": "ibm_boston",
+"created_utc": "2026-10-07T11:47:00.799978+00:00",
+"created_et": "2026-10-07T07:47:00.799978-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_boston-run703"
+]
+},
+{
+"job_id": "db332n42ljfc73d5fbsg",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T11:47:41.065355+00:00",
+"created_et": "2026-10-07T07:47:41.065355-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1052"
+]
+},
+{
+"job_id": "db332qvr11fs7397o460",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T11:47:55.727351+00:00",
+"created_et": "2026-10-07T07:47:55.727351-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1062"
+]
+},
+{
+"job_id": "db333v42ljfc73d5fd7g",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T11:50:20.604929+00:00",
+"created_et": "2026-10-07T07:50:20.604929-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1033"
+]
+},
+{
+"job_id": "db336947f06c73aqrb0g",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T11:55:16.770485+00:00",
+"created_et": "2026-10-07T07:55:16.770485-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1071"
+]
+},
+{
+"job_id": "db338ju8v0ts73c3qnqg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T12:00:15.590914+00:00",
+"created_et": "2026-10-07T08:00:15.590914-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1063"
+]
+},
+{
+"job_id": "db33a147f06c73aqrfag",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T12:03:16.391826+00:00",
+"created_et": "2026-10-07T08:03:16.391826-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1053"
+]
+},
+{
+"job_id": "db33a9k7f06c73aqrfkg",
+"backend": "ibm_fez",
+"created_utc": "2026-10-07T12:03:50.584806+00:00",
+"created_et": "2026-10-07T08:03:50.584806-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_fez-run1081"
+]
+},
+{
+"job_id": "db33aa6118nc7390njhg",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T12:03:52.152556+00:00",
+"created_et": "2026-10-07T08:03:52.152556-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run1091"
+]
+},
+{
+"job_id": "db33cic2ljfc73d5fnqg",
+"backend": "ibm_boston",
+"created_utc": "2026-10-07T12:08:42.028778+00:00",
+"created_et": "2026-10-07T08:08:42.028778-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_boston-run711"
+]
+},
+{
+"job_id": "db33d1k2ljfc73d5foig",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T12:09:43.804886+00:00",
+"created_et": "2026-10-07T08:09:43.804886-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1072"
+]
+},
+{
+"job_id": "db33fj47f06c73aqrm4g",
+"backend": "ibm_fez",
+"created_utc": "2026-10-07T12:15:08.944845+00:00",
+"created_et": "2026-10-07T08:15:08.944845-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_fez-run1082"
+]
+},
+{
+"job_id": "db33fktv86ts73dhri2g",
+"backend": "ibm_aachen",
+"created_utc": "2026-10-07T12:15:15.770357+00:00",
+"created_et": "2026-10-07T08:15:15.770357-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_aachen-run1092"
+]
+},
+{
+"job_id": "db33hjc7f06c73aqroh0",
+"backend": "ibm_boston",
+"created_utc": "2026-10-07T12:19:25.663174+00:00",
+"created_et": "2026-10-07T08:19:25.663174-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_boston-run712"
+]
+},
+{
+"job_id": "db33ios7f06c73aqrptg",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T12:21:55.446134+00:00",
+"created_et": "2026-10-07T08:21:55.446134-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1073"
+]
+},
+{
+"job_id": "db33krs2ljfc73d5g20g",
+"backend": "ibm_fez",
+"created_utc": "2026-10-07T12:26:24.058485+00:00",
+"created_et": "2026-10-07T08:26:24.058485-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_fez-run1083"
+]
+},
+{
+"job_id": "db33u67r11fs7397paig",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-07T12:46:16.665636+00:00",
+"created_et": "2026-10-07T08:46:16.665636-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run1121"
+]
+},
+{
+"job_id": "db33u668v0ts73c3ro7g",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T12:46:16.950738+00:00",
+"created_et": "2026-10-07T08:46:16.950738-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1042"
+]
+},
+{
+"job_id": "db33u6e8v0ts73c3ro90",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T12:46:17.744292+00:00",
+"created_et": "2026-10-07T08:46:17.744292-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1101"
+]
+},
+{
+"job_id": "db33u6nr11fs7397pajg",
+"backend": "ibm_fez",
+"created_utc": "2026-10-07T12:46:18.243784+00:00",
+"created_et": "2026-10-07T08:46:18.243784-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_fez-run1111"
+]
+},
+{
+"job_id": "db33v147f06c73aqsfmg",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T12:48:04.397604+00:00",
+"created_et": "2026-10-07T08:48:04.397604-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1131"
+]
+},
+{
+"job_id": "db340ic2ljfc73d5gohg",
+"backend": "ibm_boston",
+"created_utc": "2026-10-07T12:51:21.794024+00:00",
+"created_et": "2026-10-07T08:51:21.794024-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_boston-run713"
+]
+},
+{
+"job_id": "db342uk2ljfc73d5guag",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T12:56:26.554511+00:00",
+"created_et": "2026-10-07T08:56:26.554511-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1022"
+]
+},
+{
+"job_id": "db344q47f06c73aqst70",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-07T13:00:24.892973+00:00",
+"created_et": "2026-10-07T09:00:24.892973-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run1122"
+]
+},
+{
+"job_id": "db3450e8v0ts73c3s7l0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:00:49.901919+00:00",
+"created_et": "2026-10-07T09:00:49.901919-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1132"
+]
+},
+{
+"job_id": "db3450s7f06c73aqstq0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:00:51.140845+00:00",
+"created_et": "2026-10-07T09:00:51.140845-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1102"
+]
+},
+{
+"job_id": "db345n47f06c73aqsveg",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:02:20.777963+00:00",
+"created_et": "2026-10-07T09:02:20.777963-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1141"
+]
+},
+{
+"job_id": "db346pk7f06c73aqt1fg",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:04:38.560886+00:00",
+"created_et": "2026-10-07T09:04:38.560886-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1151"
+]
+},
+{
+"job_id": "db347gs7f06c73aqt2h0",
+"backend": "ibm_fez",
+"created_utc": "2026-10-07T13:06:11.919014+00:00",
+"created_et": "2026-10-07T09:06:11.919014-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_fez-run1112"
+]
+},
+{
+"job_id": "db348qnr11fs7397q0s0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:08:58.220065+00:00",
+"created_et": "2026-10-07T09:08:58.220065-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1161"
+]
+},
+{
+"job_id": "db348qs7f06c73aqt48g",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:08:59.187528+00:00",
+"created_et": "2026-10-07T09:08:59.187528-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1171"
+]
+},
+{
+"job_id": "db34a77r11fs7397q3b0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:11:56.506540+00:00",
+"created_et": "2026-10-07T09:11:56.506540-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1133"
+]
+},
+{
+"job_id": "db34a8e8v0ts73c3sg80",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-07T13:12:01.288443+00:00",
+"created_et": "2026-10-07T09:12:01.288443-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run1123"
+]
+},
+{
+"job_id": "db34adk7f06c73aqt730",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:12:22.913196+00:00",
+"created_et": "2026-10-07T09:12:22.913196-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1103"
+]
+},
+{
+"job_id": "db34alc2ljfc73d5hd80",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:12:53.794230+00:00",
+"created_et": "2026-10-07T09:12:53.794230-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1181"
+]
+},
+{
+"job_id": "db34atnr11fs7397q4fg",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:13:26.074448+00:00",
+"created_et": "2026-10-07T09:13:26.074448-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1142"
+]
+},
+{
+"job_id": "db34c247f06c73aqt9kg",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:15:52.245027+00:00",
+"created_et": "2026-10-07T09:15:52.245027-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1152"
+]
+},
+{
+"job_id": "db34css2ljfc73d5hg9g",
+"backend": "ibm_fez",
+"created_utc": "2026-10-07T13:17:39.764141+00:00",
+"created_et": "2026-10-07T09:17:39.764141-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_fez-run1113"
+]
+},
+{
+"job_id": "db34d0s7f06c73aqtavg",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:17:55.172197+00:00",
+"created_et": "2026-10-07T09:17:55.172197-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1191"
+]
+},
+{
+"job_id": "db34e242ljfc73d5hhpg",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:20:08.104709+00:00",
+"created_et": "2026-10-07T09:20:08.104709-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1162"
+]
+},
+{
+"job_id": "db34ep7r11fs7397q9ug",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T13:21:41.073592+00:00",
+"created_et": "2026-10-07T09:21:41.073592-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1045"
+]
+},
+{
+"job_id": "db34eqe8v0ts73c3smog",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:21:45.522433+00:00",
+"created_et": "2026-10-07T09:21:45.522433-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1172"
+]
+},
+{
+"job_id": "db34f8vr11fs7397qahg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T13:22:43.121615+00:00",
+"created_et": "2026-10-07T09:22:43.121615-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1048"
+]
+},
+{
+"job_id": "db34fmc7f06c73aqtek0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T13:23:37.372071+00:00",
+"created_et": "2026-10-07T09:23:37.372071-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1043"
+]
+},
+{
+"job_id": "db34g47r11fs7397qbog",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T13:24:32.074169+00:00",
+"created_et": "2026-10-07T09:24:32.074169-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1046"
+]
+},
+{
+"job_id": "db34g9c2ljfc73d5hkm0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:24:53.784999+00:00",
+"created_et": "2026-10-07T09:24:53.784999-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1182"
+]
+},
+{
+"job_id": "db34ghc2ljfc73d5hl5g",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T13:25:25.160204+00:00",
+"created_et": "2026-10-07T09:25:25.160204-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1049"
+]
+},
+{
+"job_id": "db34h5e8v0ts73c3spv0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:26:45.312050+00:00",
+"created_et": "2026-10-07T09:26:45.312050-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1143"
+]
+},
+{
+"job_id": "db34hkc7f06c73aqthug",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:27:45.472038+00:00",
+"created_et": "2026-10-07T09:27:45.472038-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1153"
+]
+},
+{
+"job_id": "db34j2fr11fs7397qhf0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:30:49.282241+00:00",
+"created_et": "2026-10-07T09:30:49.282241-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1192"
+]
+},
+{
+"job_id": "db34j8e8v0ts73c3supg",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:31:13.351164+00:00",
+"created_et": "2026-10-07T09:31:13.351164-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1163"
+]
+},
+{
+"job_id": "db34k27r11fs7397qjqg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T13:32:56.850489+00:00",
+"created_et": "2026-10-07T09:32:56.850489-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1023"
+]
+},
+{
+"job_id": "db34ltvr11fs7397qobg",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:36:55.777652+00:00",
+"created_et": "2026-10-07T09:36:55.777652-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1183"
+]
+},
+{
+"job_id": "db34m9m8v0ts73c3t5tg",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:37:42.695821+00:00",
+"created_et": "2026-10-07T09:37:42.695821-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1173"
+]
+},
+{
+"job_id": "db34mpk7f06c73aqtt4g",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:38:46.947306+00:00",
+"created_et": "2026-10-07T09:38:46.947306-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1201"
+]
+},
+{
+"job_id": "db34ote8v0ts73c3tc10",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:43:17.270926+00:00",
+"created_et": "2026-10-07T09:43:17.270926-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1193"
+]
+},
+{
+"job_id": "db34s947f06c73aqu8g0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:50:29.223244+00:00",
+"created_et": "2026-10-07T09:50:29.223244-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1202"
+]
+},
+{
+"job_id": "db34tss2ljfc73d5igf0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T13:53:55.184846+00:00",
+"created_et": "2026-10-07T09:53:55.184846-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1211"
+]
+},
+{
+"job_id": "db351im8v0ts73c3tt70",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T14:01:46.203943+00:00",
+"created_et": "2026-10-07T10:01:46.203943-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1203"
+]
+},
+{
+"job_id": "db353268v0ts73c3u08g",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T14:04:56.732115+00:00",
+"created_et": "2026-10-07T10:04:56.732115-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1212"
+]
+},
+{
+"job_id": "db354a7r11fs7397rmdg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-07T14:07:36.398625+00:00",
+"created_et": "2026-10-07T10:07:36.398625-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run1231"
+]
+},
+{
+"job_id": "db3586k2ljfc73d5j3c0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T14:15:55.058639+00:00",
+"created_et": "2026-10-07T10:15:55.058639-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1213"
+]
+},
+{
+"job_id": "db35aum8v0ts73c3ubeg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T14:21:46.169720+00:00",
+"created_et": "2026-10-07T10:21:46.169720-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1221"
+]
+},
+{
+"job_id": "db35aum8v0ts73c3ubf0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T14:21:46.873894+00:00",
+"created_et": "2026-10-07T10:21:46.873894-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1241"
+]
+},
+{
+"job_id": "db35auu8v0ts73c3ubfg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-07T14:21:47.489099+00:00",
+"created_et": "2026-10-07T10:21:47.489099-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run1232"
+]
+},
+{
+"job_id": "db35bufr11fs7397s130",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T14:23:53.403718+00:00",
+"created_et": "2026-10-07T10:23:53.403718-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1251"
+]
+},
+{
+"job_id": "db35d9k2ljfc73d5ja60",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T14:26:46.482442+00:00",
+"created_et": "2026-10-07T10:26:46.482442-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1261"
+]
+},
+{
+"job_id": "db35g1c2ljfc73d5jdgg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-07T14:32:37.995449+00:00",
+"created_et": "2026-10-07T10:32:37.995449-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_marrakesh-run1233"
+]
+},
+{
+"job_id": "db35g1s7f06c73aqv890",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T14:32:39.650104+00:00",
+"created_et": "2026-10-07T10:32:39.650104-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1222"
+]
+},
+{
+"job_id": "db35g7s7f06c73aqv8i0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T14:33:03.354826+00:00",
+"created_et": "2026-10-07T10:33:03.354826-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1242"
+]
+},
+{
+"job_id": "db35h1vr11fs7397s7m0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T14:34:47.366265+00:00",
+"created_et": "2026-10-07T10:34:47.366265-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1252"
+]
+},
+{
+"job_id": "db35ifs2ljfc73d5jg4g",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T14:37:51.377728+00:00",
+"created_et": "2026-10-07T10:37:51.377728-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1262"
+]
+},
+{
+"job_id": "db35l4m8v0ts73c3unh0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T14:43:30.663105+00:00",
+"created_et": "2026-10-07T10:43:30.663105-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1223"
+]
+},
+{
+"job_id": "db35lie8v0ts73c3uo0g",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T14:44:25.894685+00:00",
+"created_et": "2026-10-07T10:44:25.894685-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1243"
+]
+},
+{
+"job_id": "db35m4s2ljfc73d5jk9g",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T14:45:39.299501+00:00",
+"created_et": "2026-10-07T10:45:39.299501-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1253"
+]
+},
+{
+"job_id": "db35nkvr11fs7397sg00",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T14:48:51.627205+00:00",
+"created_et": "2026-10-07T10:48:51.627205-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1263"
+]
+},
+{
+"job_id": "db35q3m8v0ts73c3v070",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T14:54:06.848785+00:00",
+"created_et": "2026-10-07T10:54:06.848785-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1271"
+]
+},
+{
+"job_id": "db35v3m8v0ts73c3vbcg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T15:04:46.133406+00:00",
+"created_et": "2026-10-07T11:04:46.133406-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1272"
+]
+},
+{
+"job_id": "db3643nr11fs7397t7og",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T15:15:26.242622+00:00",
+"created_et": "2026-10-07T11:15:26.242622-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1273"
+]
+},
+{
+"job_id": "db369mm8v0ts73c3vsmg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T15:27:22.688122+00:00",
+"created_et": "2026-10-07T11:27:22.688122-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1281"
+]
+},
+{
+"job_id": "db36eq42ljfc73d5l1hg",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T15:38:16.714807+00:00",
+"created_et": "2026-10-07T11:38:16.714807-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1282"
+]
+},
+{
+"job_id": "db36ju39kq9s73at8ho0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-07T15:49:12.823222+00:00",
+"created_et": "2026-10-07T11:49:12.823222-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_pittsburgh-run1283"
+]
+},
+{
+"job_id": "db38li74b7jc73anem1g",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T18:09:12.312892+00:00",
+"created_et": "2026-10-07T14:09:12.312892-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1291"
+]
+},
+{
+"job_id": "db3940j9kq9s73atcrag",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T18:40:02.477670+00:00",
+"created_et": "2026-10-07T14:40:02.477670-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1292"
+]
+},
+{
+"job_id": "db39a8aqfgmc73d0cjsg",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-07T18:53:21.090624+00:00",
+"created_et": "2026-10-07T14:53:21.090624-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_kingston-run1293"
+]
+},
+{
+"job_id": "db5tdocvf2bc73d0d8tg",
+"backend": "ibm_fez",
+"created_utc": "2026-10-11T18:35:13.695501+00:00",
+"created_et": "2026-10-11T14:35:13.695501-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "db5ti2svf2bc73d0ddug",
+"backend": "ibm_fez",
+"created_utc": "2026-10-11T18:44:27.436211+00:00",
+"created_et": "2026-10-11T14:44:27.436211-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "db5ti6g4qg6s73c3vldg",
+"backend": "ibm_fez",
+"created_utc": "2026-10-11T18:44:42.986237+00:00",
+"created_et": "2026-10-11T14:44:42.986237-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "db5tiasvf2bc73d0de8g",
+"backend": "ibm_fez",
+"created_utc": "2026-10-11T18:44:59.732318+00:00",
+"created_et": "2026-10-11T14:44:59.732318-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "db5tikklf4us73c4hp10",
+"backend": "ibm_fez",
+"created_utc": "2026-10-11T18:45:38.602203+00:00",
+"created_et": "2026-10-11T14:45:38.602203-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "db5tjfimb58s738b0d00",
+"backend": "ibm_fez",
+"created_utc": "2026-10-11T18:47:26.520315+00:00",
+"created_et": "2026-10-11T14:47:26.520315-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "db5tjjkvf2bc73d0dfog",
+"backend": "ibm_fez",
+"created_utc": "2026-10-11T18:47:42.213573+00:00",
+"created_et": "2026-10-11T14:47:42.213573-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "db5tjncvf2bc73d0dfu0",
+"backend": "ibm_fez",
+"created_utc": "2026-10-11T18:47:57.538606+00:00",
+"created_et": "2026-10-11T14:47:57.538606-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "db5tjs04qg6s73c3vn90",
+"backend": "ibm_fez",
+"created_utc": "2026-10-11T18:48:16.369236+00:00",
+"created_et": "2026-10-11T14:48:16.369236-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "db5tkfimb58s738b0e5g",
+"backend": "ibm_fez",
+"created_utc": "2026-10-11T18:49:34.166436+00:00",
+"created_et": "2026-10-11T14:49:34.166436-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "db5tknamb58s738b0edg",
+"backend": "ibm_fez",
+"created_utc": "2026-10-11T18:50:05.142771+00:00",
+"created_et": "2026-10-11T14:50:05.142771-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "db5ukk4lf4us73c4j3gg",
+"backend": "ibm_fez",
+"created_utc": "2026-10-11T19:58:08.802987+00:00",
+"created_et": "2026-10-11T15:58:08.802987-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_fez-run901"
+]
+},
+{
+"job_id": "db5vhnamb58s738b2n50",
+"backend": "ibm_fez",
+"created_utc": "2026-10-11T21:00:13.575415+00:00",
+"created_et": "2026-10-11T17:00:13.575415-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_fez-run902"
+]
+},
+{
+"job_id": "db5vk14vf2bc73d0fs80",
+"backend": "ibm_fez",
+"created_utc": "2026-10-11T21:05:08.983255+00:00",
+"created_et": "2026-10-11T17:05:08.983255-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": [
+"qtr-ibm_fez-run903"
+]
+},
+{
+"job_id": "dbcgkcs24mrc73cjk29g",
+"backend": "ibm_fez",
+"created_utc": "2026-10-21T18:53:39.563906+00:00",
+"created_et": "2026-10-21T14:53:39.563906-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcgkmk24mrc73cjk2o0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-21T18:54:19.017196+00:00",
+"created_et": "2026-10-21T14:54:19.017196-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcgkufi0auc73duu9rg",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-21T18:54:49.760489+00:00",
+"created_et": "2026-10-21T14:54:49.760489-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcgmls24mrc73cjk5j0",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-21T18:58:32.013249+00:00",
+"created_et": "2026-10-21T14:58:32.013249-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcgun8c77vs738693hg",
+"backend": "ibm_boston",
+"created_utc": "2026-10-21T19:15:41.160205+00:00",
+"created_et": "2026-10-21T15:15:41.160205-04:00",
+"status": "ERROR",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbchn7s24mrc73cjlvb0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-21T20:07:59.427371+00:00",
+"created_et": "2026-10-21T16:07:59.427371-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbchsbni0auc73dv0gt0",
+"backend": "ibm_fez",
+"created_utc": "2026-10-21T20:18:54.579261+00:00",
+"created_et": "2026-10-21T16:18:54.579261-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcht9s24mrc73cjma50",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-21T20:20:55.287502+00:00",
+"created_et": "2026-10-21T16:20:55.287502-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbchtlpgv2cc73ead6bg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-21T20:21:43.369525+00:00",
+"created_et": "2026-10-21T16:21:43.369525-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcivnpgv2cc73eaf210",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-21T21:34:23.771647+00:00",
+"created_et": "2026-10-21T17:34:23.771647-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcivv424mrc73cjo4m0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-21T21:34:52.904177+00:00",
+"created_et": "2026-10-21T17:34:52.904177-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbck8c9gv2cc73eahbc0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-21T23:01:05.801526+00:00",
+"created_et": "2026-10-21T19:01:05.801526-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbck95c24mrc73cjqgi0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-21T23:02:45.933976+00:00",
+"created_et": "2026-10-21T19:02:45.933976-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbck9v424mrc73cjqiig",
+"backend": "ibm_fez",
+"created_utc": "2026-10-21T23:04:28.425776+00:00",
+"created_et": "2026-10-21T19:04:28.425776-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcm15pgv2cc73eakgk0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-22T01:02:15.804570+00:00",
+"created_et": "2026-10-21T21:02:15.804570-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcm4e9gv2cc73eakl5g",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-22T01:09:14.011239+00:00",
+"created_et": "2026-10-21T21:09:14.011239-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcm5aoc77vs7386ibag",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-22T01:11:07.358628+00:00",
+"created_et": "2026-10-21T21:11:07.358628-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcm6moc77vs7386ideg",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T01:14:03.453677+00:00",
+"created_et": "2026-10-21T21:14:03.453677-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcm7hfi0auc73dv8680",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-22T01:15:49.408153+00:00",
+"created_et": "2026-10-21T21:15:49.408153-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcm8oni0auc73dv87q0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-22T01:18:26.900964+00:00",
+"created_et": "2026-10-21T21:18:26.900964-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcmae8c77vs7386ihu0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-22T01:22:01.418130+00:00",
+"created_et": "2026-10-21T21:22:01.418130-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcmbl0c77vs7386ikg0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-22T01:24:36.770796+00:00",
+"created_et": "2026-10-21T21:24:36.770796-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcmcv9gv2cc73eal2og",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T01:27:25.131703+00:00",
+"created_et": "2026-10-21T21:27:25.131703-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcme5hgv2cc73eal4cg",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T01:29:58.527991+00:00",
+"created_et": "2026-10-21T21:29:58.527991-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcn770c77vs7386k0g0",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T02:23:24.181527+00:00",
+"created_et": "2026-10-21T22:23:24.181527-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcn77hgv2cc73eamb8g",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-22T02:23:26.837754+00:00",
+"created_et": "2026-10-21T22:23:26.837754-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcn78k24mrc73cjvl3g",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-22T02:23:30.805025+00:00",
+"created_et": "2026-10-21T22:23:30.805025-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcn7b8c77vs7386k0r0",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T02:23:41.343209+00:00",
+"created_et": "2026-10-21T22:23:41.343209-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcn7c7i0auc7393tv40",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-22T02:23:44.622785+00:00",
+"created_et": "2026-10-21T22:23:44.622785-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcn7cvi0auc7393tv5g",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-22T02:23:47.343758+00:00",
+"created_et": "2026-10-21T22:23:47.343758-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcn7dpgv2cc73eambk0",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T02:23:51.699368+00:00",
+"created_et": "2026-10-21T22:23:51.699368-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcn7efi0auc7393tv9g",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-22T02:23:53.871079+00:00",
+"created_et": "2026-10-21T22:23:53.871079-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcn7f8c77vs7386k16g",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-22T02:23:57.426576+00:00",
+"created_et": "2026-10-21T22:23:57.426576-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcn7g424mrc73cjvlig",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-22T02:24:00.631360+00:00",
+"created_et": "2026-10-21T22:24:00.631360-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcn7gvi0auc7393tvg0",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T02:24:03.222456+00:00",
+"created_et": "2026-10-21T22:24:03.222456-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcn7h8c77vs7386k1bg",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-22T02:24:05.615370+00:00",
+"created_et": "2026-10-21T22:24:05.615370-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcn7i9gv2cc73eambug",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-22T02:24:09.943332+00:00",
+"created_et": "2026-10-21T22:24:09.943332-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcn7koc77vs7386k1kg",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-22T02:24:19.916929+00:00",
+"created_et": "2026-10-21T22:24:19.916929-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcn7mgc77vs7386k1pg",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T02:24:27.549984+00:00",
+"created_et": "2026-10-21T22:24:27.549984-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcn7s424mrc73cjvm70",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T02:24:49.004925+00:00",
+"created_et": "2026-10-21T22:24:49.004925-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcn7spgv2cc73eamcng",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-22T02:24:51.648721+00:00",
+"created_et": "2026-10-21T22:24:51.648721-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcn7u7i0auc7393u0d0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-22T02:24:57.134885+00:00",
+"created_et": "2026-10-21T22:24:57.134885-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcndrgc77vs7386kfig",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T02:37:34.588439+00:00",
+"created_et": "2026-10-21T22:37:34.588439-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcnds424mrc73ck0450",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-22T02:37:36.749788+00:00",
+"created_et": "2026-10-21T22:37:36.749788-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcndupgv2cc738gjjug",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-22T02:37:48.039142+00:00",
+"created_et": "2026-10-21T22:37:48.039142-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcnjh7i0auc7393uqq0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-22T02:49:41.218699+00:00",
+"created_et": "2026-10-21T22:49:41.218699-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcnjis24mrc73ck0i20",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-22T02:49:47.429971+00:00",
+"created_et": "2026-10-21T22:49:47.429971-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcnjj8c77vs7386kt1g",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T02:49:50.752660+00:00",
+"created_et": "2026-10-21T22:49:50.752660-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcuopni0auc7394d6e0",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-22T10:58:47.104858+00:00",
+"created_et": "2026-10-22T06:58:47.104858-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcuqa0c77vs738739g0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-22T11:02:00.325235+00:00",
+"created_et": "2026-10-22T07:02:00.325235-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcur9ni0auc7394dbmg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-22T11:04:07.039616+00:00",
+"created_et": "2026-10-22T07:04:07.039616-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcura0c77vs73873bo0",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T11:04:09.262743+00:00",
+"created_et": "2026-10-22T07:04:09.262743-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcus97i0auc7394ddkg",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T11:06:12.858581+00:00",
+"created_et": "2026-10-22T07:06:12.858581-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcvmr1gv2cc738h3qng",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-22T12:02:52.439269+00:00",
+"created_et": "2026-10-22T08:02:52.439269-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcvq18c77vs73874hm0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-22T12:09:42.147578+00:00",
+"created_et": "2026-10-22T08:09:42.147578-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcvr0pgv2cc738h409g",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T12:11:47.180988+00:00",
+"created_et": "2026-10-22T08:11:47.180988-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcvrgfi0auc7394ele0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-22T12:12:49.140103+00:00",
+"created_et": "2026-10-22T08:12:49.140103-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcvruoc77vs73874lg0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-22T12:13:48.030550+00:00",
+"created_et": "2026-10-22T08:13:48.030550-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcvu6s24mrc73ckgfcg",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-22T12:18:36.056754+00:00",
+"created_et": "2026-10-22T08:18:36.056754-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbcvvcpgv2cc738h4770",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-22T12:21:07.505489+00:00",
+"created_et": "2026-10-22T08:21:07.505489-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd00jhgv2cc738h49ng",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T12:23:42.172699+00:00",
+"created_et": "2026-10-22T08:23:42.172699-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd06gk24mrc73ckgv50",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-22T12:36:19.050753+00:00",
+"created_et": "2026-10-22T08:36:19.050753-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd07ss24mrc73ckh180",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-22T12:39:15.347541+00:00",
+"created_et": "2026-10-22T08:39:15.347541-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd097s24mrc73ckh370",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-22T12:42:07.367753+00:00",
+"created_et": "2026-10-22T08:42:07.367753-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd0afvi0auc7394ffqg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-22T12:44:47.844655+00:00",
+"created_et": "2026-10-22T08:44:47.844655-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd0bsk24mrc73ckh8ag",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T12:47:46.309650+00:00",
+"created_et": "2026-10-22T08:47:46.309650-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd0froc77vs73875nu0",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T12:56:15.847531+00:00",
+"created_et": "2026-10-22T08:56:15.847531-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd1cqfi0auc7394gq30",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-22T13:58:01.104747+00:00",
+"created_et": "2026-10-22T09:58:01.104747-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd1e7424mrc73ckiic0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-22T14:01:00.338625+00:00",
+"created_et": "2026-10-22T10:01:00.338625-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd1fcfi0auc7394gstg",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T14:03:29.635813+00:00",
+"created_et": "2026-10-22T10:03:29.635813-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd49n424mrc73cknd30",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T17:16:12.230734+00:00",
+"created_et": "2026-10-22T13:16:12.230734-04:00",
+"status": "CANCELLED",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd4aa424mrc73cknef0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-22T17:17:28.409535+00:00",
+"created_et": "2026-10-22T13:17:28.409535-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd4po1gv2cc738hc370",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-22T17:50:24.417572+00:00",
+"created_et": "2026-10-22T13:50:24.417572-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd4pqvi0auc7394mpn0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-22T17:50:35.668628+00:00",
+"created_et": "2026-10-22T13:50:35.668628-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd4pu0c77vs7387cihg",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T17:50:48.298521+00:00",
+"created_et": "2026-10-22T13:50:48.298521-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd5gl7i0auc7394o30g",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T18:39:16.284763+00:00",
+"created_et": "2026-10-22T14:39:16.284763-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd96jvi0auc7394vk40",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T22:50:55.404281+00:00",
+"created_et": "2026-10-22T18:50:55.404281-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd9789gv2cc738hl070",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-22T22:52:17.138131+00:00",
+"created_et": "2026-10-22T18:52:17.138131-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd98fni0auc7394voi0",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-22T22:54:54.980991+00:00",
+"created_et": "2026-10-22T18:54:54.980991-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd98i1gv2cc738hl3dg",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T22:55:04.444383+00:00",
+"created_et": "2026-10-22T18:55:04.444383-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd99dpgv2cc738hl5g0",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T22:56:55.210439+00:00",
+"created_et": "2026-10-22T18:56:55.210439-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd99g1gv2cc738hl5mg",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-22T22:57:04.061339+00:00",
+"created_et": "2026-10-22T18:57:04.061339-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd99ic24mrc73cl1bfg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-22T22:57:13.237667+00:00",
+"created_et": "2026-10-22T18:57:13.237667-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd9csvi0auc73950050",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-22T23:04:19.887429+00:00",
+"created_et": "2026-10-22T19:04:19.887429-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd9cvgc77vs7387letg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-22T23:04:30.400327+00:00",
+"created_et": "2026-10-22T19:04:30.400327-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd9ft424mrc73cl1l1g",
+"backend": "ibm_pittsburgh",
+"created_utc": "2026-10-22T23:10:44.518211+00:00",
+"created_et": "2026-10-22T19:10:44.518211-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd9fvk24mrc73cl1l7g",
+"backend": "ibm_boston",
+"created_utc": "2026-10-22T23:10:54.366049+00:00",
+"created_et": "2026-10-22T19:10:54.366049-04:00",
+"status": "QUEUED",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd9g20c77vs7387ljg0",
+"backend": "ibm_phoenix",
+"created_utc": "2026-10-22T23:11:04.383514+00:00",
+"created_et": "2026-10-22T19:11:04.383514-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbd9g49gv2cc738hlgag",
+"backend": "ibm_fez",
+"created_utc": "2026-10-22T23:11:13.413160+00:00",
+"created_et": "2026-10-22T19:11:13.413160-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbda90hgv2cc738hn7c0",
+"backend": "ibm_fez",
+"created_utc": "2026-10-23T00:04:18.539131+00:00",
+"created_et": "2026-10-22T20:04:18.539131-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbdaf6s24mrc73cl3phg",
+"backend": "ibm_fez",
+"created_utc": "2026-10-23T00:17:32.212620+00:00",
+"created_et": "2026-10-22T20:17:32.212620-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbdaf99gv2cc738hnmo0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-23T00:17:41.643590+00:00",
+"created_et": "2026-10-22T20:17:41.643590-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbdafboc77vs7387no5g",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-23T00:17:51.351284+00:00",
+"created_et": "2026-10-22T20:17:51.351284-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbdahc8c77vs7387nsqg",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-23T00:22:09.811947+00:00",
+"created_et": "2026-10-22T20:22:09.811947-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbdaheni0auc73952f70",
+"backend": "ibm_marrakesh",
+"created_utc": "2026-10-23T00:22:19.001815+00:00",
+"created_et": "2026-10-22T20:22:19.001815-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbdahgoc77vs7387nt70",
+"backend": "ibm_fez",
+"created_utc": "2026-10-23T00:22:27.810250+00:00",
+"created_et": "2026-10-22T20:22:27.810250-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbdahj9gv2cc738hnsag",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-23T00:22:37.512606+00:00",
+"created_et": "2026-10-22T20:22:37.512606-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbdbv9vi0auc73cqqqt0",
+"backend": "ibm_fez",
+"created_utc": "2026-10-23T02:00:07.363734+00:00",
+"created_et": "2026-10-22T22:00:07.363734-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbdc0s8c77vs73etknb0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-23T02:03:29.577353+00:00",
+"created_et": "2026-10-22T22:03:29.577353-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbdc1npgv2cc73do5350",
+"backend": "ibm_fez",
+"created_utc": "2026-10-23T02:05:19.559386+00:00",
+"created_et": "2026-10-22T22:05:19.559386-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbdc41ni0auc73cqr2c0",
+"backend": "ibm_kingston",
+"created_utc": "2026-10-23T02:10:14.120495+00:00",
+"created_et": "2026-10-22T22:10:14.120495-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+},
+{
+"job_id": "dbdc44vi0auc73cqr2gg",
+"backend": "ibm_fez",
+"created_utc": "2026-10-23T02:10:27.217398+00:00",
+"created_et": "2026-10-22T22:10:27.217398-04:00",
+"status": "DONE",
+"pubs": null,
+"tags": null
+}
+]

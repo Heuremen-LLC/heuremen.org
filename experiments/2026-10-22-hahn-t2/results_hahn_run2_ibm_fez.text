@@ -1,0 +1,2 @@
+=== ibm_fez job dbd9g49gv2cc738hlgag; IBM record 2026-10-22 18:17:23-04:00; KNOWN-GOOD median P(1) at tau 0 = 0.985 (must be >= 0.90): MET
+  delivered / stated T2, median over 154 qubits: 1.014 [0.965, 1.061] vs 1 -> CONSISTENT   (copy gap +0.000 [-0.007, +0.010]; qubits below stated 74 of 154)

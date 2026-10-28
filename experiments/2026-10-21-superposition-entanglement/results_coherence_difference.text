@@ -1,0 +1,6 @@
+ibm_fez        readout minus idle coherence (median, 95%): N= 8 -0.0110 [-0.0265, -0.0035] | N=16 +0.0064 [-0.0097, +0.0150] | N=32 -0.0099 [-0.0194, +0.0022]
+ibm_fez        idle-arm coherence at N=32: median 0.249
+ibm_kingston   readout minus idle coherence (median, 95%): N= 8 -0.0053 [-0.0208, -0.0012] | N=16 -0.0025 [-0.0282, +0.0034] | N=32 -0.0060 [-0.0326, +0.0090]
+ibm_kingston   idle-arm coherence at N=32: median 0.195
+ibm_marrakesh  readout minus idle coherence (median, 95%): N= 8 -0.0134 [-0.0234, -0.0068] | N=16 -0.0094 [-0.0196, +0.0053] | N=32 -0.0135 [-0.0204, +0.0012]
+ibm_marrakesh  idle-arm coherence at N=32: median 0.094

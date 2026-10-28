@@ -1,0 +1,1 @@
+{"chip": "ibm_kingston", "job_id": "dbdahj9gv2cc738hnsag", "submitted_utc": "2026-10-23T00:22:37Z", "qubits": [11], "meta": [{"state": 1, "copy": 0}, {"state": 0, "copy": 1}, {"state": 1, "copy": 1}, {"state": 0, "copy": 0}], "shots": 10000}

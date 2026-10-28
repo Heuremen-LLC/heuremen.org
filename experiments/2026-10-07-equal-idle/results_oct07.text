@@ -1,0 +1,1040 @@
+RE-READ OF THE 7 OCT 2026 EQUAL-IDLE RUNS WITH THE PAPER'S COMMITTED ESTIMATORS (read-only; no IBM jobs)
+Sign: paper convention, phase = atan2(<Y>,<X>); kick = (readout - idle phase)/N, so the 21-22 Oct kick is NEGATIVE; BELOW 0 = same direction as 21-22 Oct.
+
+SIGN CHECK 1: exact gate algebra, state = SX|0> precessed by alpha about z (7 Oct clock: sx, wait, hand), Qiskit gate definitions
+  Paper settings (control_run/run.py lines 23-24): XX = h then measure; YY = sdg, h then measure; phase = atan2(<Y>, <X>) = atan2(e_YY, e_XX).
+  7 Oct hands (look_floor_*.py lines 130-131): hand X = sx then measure; hand Y = rz(pi/2), sx then measure.
+     alpha |     e_hand_X     e_hand_Y |  e_XX(paper)  e_YY(paper) |    paper phase   hands->phase
+       0.0 |     -1.00000     -0.00000 |     +0.00000     -1.00000 |       -90.0000       -90.0000
+      20.0 |     -0.93969     +0.34202 |     +0.34202     -0.93969 |       -70.0000       -70.0000
+      45.0 |     -0.70711     +0.70711 |     +0.70711     -0.70711 |       -45.0000       -45.0000
+      90.0 |     -0.00000     +1.00000 |     +1.00000     -0.00000 |        -0.0000        -0.0000
+     135.0 |     +0.70711     +0.70711 |     +0.70711     +0.70711 |       +45.0000       +45.0000
+     -30.0 |     -0.86603     -0.50000 |     -0.50000     -0.86603 |      -120.0000      -120.0000
+    -100.0 |     +0.17365     -0.98481 |     -0.98481     +0.17365 |      +170.0000      +170.0000
+     170.0 |     +0.98481     +0.17365 |     +0.17365     +0.98481 |       +80.0000       +80.0000
+  max |paper phase - hands->phase| = 2.84e-14 deg.  Precession by +alpha moves the paper phase by +alpha (=-90+alpha here), and the hand mapping reproduces it exactly: SAME sign convention.
+  Consequence: the history_inventory reader used H = (2 lvX - 1) - i (2 lvY - 1) with lv ~ P(1): H = -<Y> + i<X> = i exp(i phi), so its "kick" = -arg(H_look/H_dark) = -(phi_M - phi_D) = MINUS the paper-convention gap.
+  A positive inventory kick is therefore a NEGATIVE kick in the paper convention, i.e. the same direction as the 21-22 Oct kick (all negative there).
+SIGN CHECK 2: 21 Oct control run kingston, N = 8, arm S, pooled copies, through est.py (hands mapping applied to the 21 Oct <X>,<Y> and back)
+  21 Oct kingston, recomputed through est.py: median kick = -2.8638 deg per readout, n=117
+  committed results_prereg.txt:  R1 kick                                      pooled  -2.8638 deg [-3.5519, -2.0896] n=117 -> BELOW vs 0
+  difference 3.36e-06 deg -> IDENTICAL (code path and sign agree)
+
+==============================================================================================================
+ibm_pittsburgh | FLOOR (corner, 12 looked) | runs [1031, 1032, 1033] | jobs db32pe42ljfc73d5et60, db32umk7f06c73aqr20g, db333v42ljfc73d5fd7g
+  design audit: dark/idle arms realised on the 16-dt grid; max |realised - stated| / stated over its plain-delay arms = 0.18 %
+  copies (adaptation): the 3 reads are separate jobs; copy 0 = read 1, copy 1 = reads 2+3 pooled; pooled = all. Shots 400 per read per circuit.
+--------------------------------------------------------------------------------------------------------------
+FLOOR (corner, 12 looked) | K vs D
+  looked set read from the data (mid-register columns): 12 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 80 in role file, 76 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=9 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 76, d<=2 4, d=3-4 5, d>=5 67, d>=3 72
+  K vs D kick/readout, slope vs N (N=1/2/3/4/6/9) [all]      +0.0001454 [-0.08248, +0.06143] deg n=76 -> CONSISTENT   (copy gap -0.06932 [-0.1665, +0.03752])
+  K vs D kick/readout, slope vs N (N=1/2/3/4/6/9) [d<=2]     +nan [+nan, +nan] deg n=4 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  K vs D kick/readout, slope vs N (N=1/2/3/4/6/9) [d=3-4]    +0.03613 [-1.911, +0.3799] deg n=5 -> CONSISTENT   (copy gap -0.04461 [-0.5748, +0.1497])
+  K vs D kick/readout, slope vs N (N=1/2/3/4/6/9) [d>=5]     +0.002996 [-0.08248, +0.06452] deg n=67 -> CONSISTENT   (copy gap -0.07151 [-0.1926, +0.0621])
+  K vs D kick/readout, slope vs N (N=1/2/3/4/6/9) [d>=3]     +0.003878 [-0.0795, +0.06452] deg n=72 -> CONSISTENT   (copy gap -0.06932 [-0.1752, +0.05275])
+  K vs D kick, N=4 only (R1 form) [all]                      -0.003152 [-0.118, +0.07662] deg n=76 -> CONSISTENT   (copy gap -0.2521 [-0.5356, +0.001524])
+  K vs D kick, slope with intercept (R2.3 form) [all]        -0.01665 [-0.1115, +0.08915] deg n=76 -> CONSISTENT   (copy gap +0.02583 [-0.2078, +0.1493])
+  K vs D coherence M-D, slope vs N [all]                     -0.0002908 [-0.0007924, +0.0002508]  n=76 -> CONSISTENT   (copy gap -0.000527 [-0.001267, +0.001103])
+  K vs D coherence M-D, slope vs N [d<=2]                    +nan [+nan, +nan]  n=4 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  K vs D coherence M-D, slope vs N [d>=3]                    -0.0001654 [-0.0007627, +0.0002568]  n=72 -> CONSISTENT   (copy gap -0.000398 [-0.001071, +0.00137])
+  K vs D coherence M-D at N=4 [all]                          +0.0009388 [-0.005275, +0.004535]  n=76 -> CONSISTENT   (copy gap -0.002195 [-0.02159, +0.01573])
+  context, per-read median kick (all kept clocks, not a reading): read 1 -0.015 | read 2 +0.054 | read 3 -0.049
+  K vs D kick, mean-projection variant [all]                 +0.00113 [-0.06408, +0.05256] deg n=75 -> CONSISTENT   (copy gap -0.0842 [-0.2021, +0.04851])
+  K vs D kick, mean-projection variant [d<=2]                +nan [+nan, +nan] deg n=4 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  K vs D kick, mean-projection variant [d>=3]                +0.006527 [-0.06376, +0.0825] deg n=71 -> CONSISTENT   (copy gap -0.0801 [-0.2021, +0.05639])
+==============================================================================================================
+ibm_fez | FLOOR (corner, 12 looked) | runs [1081, 1082, 1083] | jobs db33a9k7f06c73aqrfkg, db33fj47f06c73aqrm4g, db33krs2ljfc73d5g20g
+  design audit: dark/idle arms realised on the 16-dt grid; max |realised - stated| / stated over its plain-delay arms = 0.24 %
+  copies (adaptation): the 3 reads are separate jobs; copy 0 = read 1, copy 1 = reads 2+3 pooled; pooled = all. Shots 400 per read per circuit.
+--------------------------------------------------------------------------------------------------------------
+FLOOR (corner, 12 looked) | K vs D
+  looked set read from the data (mid-register columns): 12 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 80 in role file, 73 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=9 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 73, d<=2 4, d=3-4 5, d>=5 64, d>=3 69
+  K vs D kick/readout, slope vs N (N=1/2/3/4/6/9) [all]      -0.03631 [-0.0866, +0.06255] deg n=73 -> CONSISTENT   (copy gap -0.01912 [-0.2225, +0.165])
+  K vs D kick/readout, slope vs N (N=1/2/3/4/6/9) [d<=2]     +nan [+nan, +nan] deg n=4 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  K vs D kick/readout, slope vs N (N=1/2/3/4/6/9) [d=3-4]    -0.2419 [-0.4228, +0.06836] deg n=5 -> CONSISTENT   (copy gap +0.2263 [-2.525, +0.8609])
+  K vs D kick/readout, slope vs N (N=1/2/3/4/6/9) [d>=5]     -0.008734 [-0.05486, +0.08473] deg n=64 -> CONSISTENT   (copy gap -0.01116 [-0.2297, +0.165])
+  K vs D kick/readout, slope vs N (N=1/2/3/4/6/9) [d>=3]     -0.009731 [-0.06789, +0.06836] deg n=69 -> CONSISTENT   (copy gap -0.003204 [-0.2225, +0.1858])
+  K vs D kick, N=4 only (R1 form) [all]                      -0.2203 [-0.4008, +0.05366] deg n=73 -> CONSISTENT   (copy gap -0.09378 [-0.4019, +0.2887])
+  K vs D kick, slope with intercept (R2.3 form) [all]        +0.02368 [-0.1613, +0.1346] deg n=73 -> CONSISTENT   (copy gap -0.2179 [-0.4085, +0.2928])
+  K vs D coherence M-D, slope vs N [all]                     -0.000805 [-0.001569, -0.0001058]  n=73 -> BELOW   (copy gap -0.0006094 [-0.001811, +0.00155])
+  K vs D coherence M-D, slope vs N [d<=2]                    +nan [+nan, +nan]  n=4 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  K vs D coherence M-D, slope vs N [d>=3]                    -0.000805 [-0.001569, -0.0001058]  n=69 -> BELOW   (copy gap -0.0004178 [-0.001863, +0.001605])
+  K vs D coherence M-D at N=4 [all]                          copies shifted -0.01303 [-0.02216, -0.0008109] | copy0 -0.01571 copy1 +0.001295 -> CANNOT TELL
+  context, per-read median kick (all kept clocks, not a reading): read 1 -0.020 | read 2 -0.046 | read 3 +0.004
+  K vs D kick, mean-projection variant [all]                 -0.03789 [-0.09399, +0.06586] deg n=73 -> CONSISTENT   (copy gap -0.001003 [-0.1889, +0.1446])
+  K vs D kick, mean-projection variant [d<=2]                +nan [+nan, +nan] deg n=4 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  K vs D kick, mean-projection variant [d>=3]                -0.03661 [-0.08644, +0.08265] deg n=69 -> CONSISTENT   (copy gap +0.01916 [-0.1889, +0.1894])
+==============================================================================================================
+ibm_aachen | FLOOR (corner, 12 looked) | runs [1091, 1092] | jobs db33aa6118nc7390njhg, db33fktv86ts73dhri2g
+  design audit: dark/idle arms realised on the 16-dt grid; max |realised - stated| / stated over its plain-delay arms = 0.18 %
+  copies (adaptation): the 2 reads are separate jobs; copy 0 = read 1, copy 1 = read 2; pooled = all. Shots 400 per read per circuit.
+--------------------------------------------------------------------------------------------------------------
+FLOOR (corner, 12 looked) | K vs D
+  looked set read from the data (mid-register columns): 12 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 80 in role file, 75 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(800) = 0.1768 in both arms at N=9 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 75, d<=2 4, d=3-4 5, d>=5 66, d>=3 71
+  K vs D kick/readout, slope vs N (N=1/2/3/4/6/9) [all]      +0.007554 [-0.1273, +0.1499] deg n=75 -> CONSISTENT   (copy gap -0.04547 [-0.1617, +0.07965])
+  K vs D kick/readout, slope vs N (N=1/2/3/4/6/9) [d<=2]     +nan [+nan, +nan] deg n=4 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  K vs D kick/readout, slope vs N (N=1/2/3/4/6/9) [d=3-4]    -0.1708 [-1.836, +0.3395] deg n=5 -> CONSISTENT   (copy gap -0.1763 [-0.6565, +1.039])
+  K vs D kick/readout, slope vs N (N=1/2/3/4/6/9) [d>=5]     +0.02951 [-0.09404, +0.1577] deg n=66 -> CONSISTENT   (copy gap -0.0384 [-0.1443, +0.09537])
+  K vs D kick/readout, slope vs N (N=1/2/3/4/6/9) [d>=3]     +0.02701 [-0.1095, +0.1536] deg n=71 -> CONSISTENT   (copy gap -0.04547 [-0.1617, +0.07965])
+  K vs D kick, N=4 only (R1 form) [all]                      +0.1031 [-0.1528, +0.2747] deg n=75 -> CONSISTENT   (copy gap +0.007315 [-0.6417, +0.3264])
+  K vs D kick, slope with intercept (R2.3 form) [all]        -0.0199 [-0.1171, +0.1283] deg n=75 -> CONSISTENT   (copy gap -0.1274 [-0.3245, +0.3204])
+  K vs D coherence M-D, slope vs N [all]                     copies shifted -0.00137 [-0.003357, -0.0004691] | copy0 -0.001007 copy1 +0.0001776 -> CANNOT TELL
+  K vs D coherence M-D, slope vs N [d<=2]                    +nan [+nan, +nan]  n=4 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  K vs D coherence M-D, slope vs N [d>=3]                    copies shifted -0.00137 [-0.003378, -0.0004691] | copy0 -0.001007 copy1 +0.0001776 -> CANNOT TELL
+  K vs D coherence M-D at N=4 [all]                          -0.01031 [-0.01454, -0.00337]  n=75 -> BELOW   (copy gap -0.01412 [-0.01999, +0.003403])
+  context, per-read median kick (all kept clocks, not a reading): read 1 +0.017 | read 2 -0.010
+  K vs D kick, mean-projection variant [all]                 -0.04142 [-0.1513, +0.1156] deg n=75 -> CONSISTENT   (copy gap -0.06234 [-0.191, +0.08661])
+  K vs D kick, mean-projection variant [d<=2]                +nan [+nan, +nan] deg n=4 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  K vs D kick, mean-projection variant [d>=3]                +0.035 [-0.1038, +0.121] deg n=71 -> CONSISTENT   (copy gap -0.06234 [-0.2297, +0.08574])
+==============================================================================================================
+ibm_kingston | STATE-DARK FLOWERS (25 looked) | runs [1191, 1192, 1193] | jobs db34d0s7f06c73aqtavg, db34j2fr11fs7397qhf0, db34ote8v0ts73c3tc10
+  design audit: dark/idle arms realised on the 16-dt grid; max |realised - stated| / stated over its plain-delay arms = 0.18 %
+  copies (adaptation): the 3 reads are separate jobs; copy 0 = read 1, copy 1 = reads 2+3 pooled; pooled = all. Shots 400 per read per circuit.
+--------------------------------------------------------------------------------------------------------------
+STATE-DARK FLOWERS (25 looked) | looked |0>: K vs D0
+  looked set read from the data (mid-register columns): 25 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 61 in role file, 57 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=9 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 57, d<=2 25, d=3-4 17, d>=5 15, d>=3 32
+  looked |0>: K vs D0 kick/readout, slope vs N (N=1/2/3/4/6/9) [all] -0.323 [-0.6225, -0.1117] deg n=57 -> BELOW   (copy gap +0.1021 [-0.1401, +0.2474])
+  looked |0>: K vs D0 kick/readout, slope vs N (N=1/2/3/4/6/9) [d<=2] -0.7341 [-12.86, -0.2634] deg n=25 -> BELOW   (copy gap +0.03999 [-0.2201, +0.2474])
+  looked |0>: K vs D0 kick/readout, slope vs N (N=1/2/3/4/6/9) [d=3-4] -0.3842 [-1.096, -0.02492] deg n=17 -> BELOW   (copy gap -0.1259 [-0.4898, +0.3879])
+  looked |0>: K vs D0 kick/readout, slope vs N (N=1/2/3/4/6/9) [d>=5] -0.09583 [-0.2666, +0.1285] deg n=15 -> CONSISTENT   (copy gap +0.3242 [-0.2334, +0.499])
+  looked |0>: K vs D0 kick/readout, slope vs N (N=1/2/3/4/6/9) [d>=3] -0.1635 [-0.3254, -0.02492] deg n=32 -> BELOW   (copy gap +0.1438 [-0.1875, +0.3785])
+  looked |0>: K vs D0 kick, N=4 only (R1 form) [all]         -0.5122 [-0.883, -0.2409] deg n=57 -> BELOW   (copy gap -0.2461 [-0.5188, +0.251])
+  looked |0>: K vs D0 kick, slope with intercept (R2.3 form) [all] -0.3104 [-0.5178, -0.1358] deg n=57 -> BELOW   (copy gap -0.02909 [-0.3099, +0.1901])
+  looked |0>: K vs D0 coherence M-D, slope vs N [all]        -0.000162 [-0.001288, +0.0006761]  n=57 -> CONSISTENT   (copy gap -0.0001066 [-0.001639, +0.0009913])
+  looked |0>: K vs D0 coherence M-D, slope vs N [d<=2]       -0.000162 [-0.001883, +0.0005009]  n=25 -> CONSISTENT   (copy gap -0.0005283 [-0.003854, +0.002036])
+  looked |0>: K vs D0 coherence M-D, slope vs N [d>=3]       -6.165e-06 [-0.001258, +0.0008983]  n=32 -> CONSISTENT   (copy gap -6.133e-05 [-0.001542, +0.002879])
+  looked |0>: K vs D0 coherence M-D at N=4 [all]             -0.009191 [-0.0169, +0.00187]  n=57 -> CONSISTENT   (copy gap -0.001097 [-0.01047, +0.01461])
+  context, per-read median kick (all kept clocks, not a reading): read 1 -0.463 | read 2 -0.354 | read 3 -0.414
+  looked |0>: K vs D0 kick, mean-projection variant [all]    -0.2952 [-0.4789, -0.1897] deg n=57 -> BELOW   (copy gap -0.06714 [-0.1478, +0.136])
+  looked |0>: K vs D0 kick, mean-projection variant [d<=2]   -0.6777 [-12.77, -0.2279] deg n=25 -> BELOW   (copy gap -0.02453 [-0.2563, +0.2906])
+  looked |0>: K vs D0 kick, mean-projection variant [d>=3]   -0.2029 [-0.3152, -0.07852] deg n=32 -> BELOW   (copy gap -0.09171 [-0.2301, +0.2871])
+--------------------------------------------------------------------------------------------------------------
+STATE-DARK FLOWERS (25 looked) | looked |1>: S1 vs D1
+  looked set read from the data (mid-register columns): 25 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 61 in role file, 56 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=9 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 56, d<=2 25, d=3-4 16, d>=5 15, d>=3 31
+  looked |1>: S1 vs D1 kick/readout, slope vs N (N=1/2/3/4/6/9) [all] -0.257 [-0.6917, -0.1004] deg n=56 -> BELOW   (copy gap +0.07454 [-0.06764, +0.1948])
+  looked |1>: S1 vs D1 kick/readout, slope vs N (N=1/2/3/4/6/9) [d<=2] -0.6917 [-17.49, -0.251] deg n=25 -> BELOW   (copy gap +0.07049 [-0.0846, +0.3112])
+  looked |1>: S1 vs D1 kick/readout, slope vs N (N=1/2/3/4/6/9) [d=3-4] -0.6502 [-1.45, -0.09664] deg n=16 -> BELOW   (copy gap -0.08367 [-0.2527, +0.1427])
+  looked |1>: S1 vs D1 kick/readout, slope vs N (N=1/2/3/4/6/9) [d>=5] -0.06576 [-0.124, +0.1592] deg n=15 -> CONSISTENT   (copy gap +0.1941 [-0.001663, +0.623])
+  looked |1>: S1 vs D1 kick/readout, slope vs N (N=1/2/3/4/6/9) [d>=3] -0.1237 [-0.263, -0.06576] deg n=31 -> BELOW   (copy gap +0.1187 [-0.1138, +0.287])
+  looked |1>: S1 vs D1 kick, N=4 only (R1 form) [all]        -0.4083 [-0.6619, -0.156] deg n=56 -> BELOW   (copy gap +0.1514 [-0.202, +0.6593])
+  looked |1>: S1 vs D1 kick, slope with intercept (R2.3 form) [all] -0.5258 [-0.8166, -0.3133] deg n=56 -> BELOW   (copy gap -0.2022 [-0.5206, +0.1617])
+  looked |1>: S1 vs D1 coherence M-D, slope vs N [all]       -0.00107 [-0.001472, -0.0004093]  n=56 -> BELOW   (copy gap +0.001326 [-0.0001075, +0.003501])
+  looked |1>: S1 vs D1 coherence M-D, slope vs N [d<=2]      -0.001226 [-0.001686, -0.000451]  n=25 -> BELOW   (copy gap +0.000756 [-0.002948, +0.003076])
+  looked |1>: S1 vs D1 coherence M-D, slope vs N [d>=3]      copies shifted +0.002249 [+0.0002843, +0.005495] | copy0 +0.001215 copy1 -0.001602 -> CANNOT TELL
+  looked |1>: S1 vs D1 coherence M-D at N=4 [all]            -0.005951 [-0.01607, +0.003421]  n=56 -> CONSISTENT   (copy gap +0.008094 [-0.02555, +0.01662])
+  context, per-read median kick (all kept clocks, not a reading): read 1 -0.480 | read 2 -0.410 | read 3 -0.408
+  looked |1>: S1 vs D1 kick, mean-projection variant [all]   -0.2207 [-0.6782, -0.1411] deg n=57 -> BELOW   (copy gap +0.08435 [-0.02227, +0.2462])
+  looked |1>: S1 vs D1 kick, mean-projection variant [d<=2]  -0.8581 [-17.56, -0.2106] deg n=25 -> BELOW   (copy gap +0.168 [-0.2284, +0.3073])
+  looked |1>: S1 vs D1 kick, mean-projection variant [d>=3]  -0.1424 [-0.2209, -0.0154] deg n=32 -> BELOW   (copy gap +0.04132 [-0.1339, +0.2461])
+--------------------------------------------------------------------------------------------------------------
+STATE-DARK FLOWERS (25 looked) | looked half-way: SH vs DH
+  looked set read from the data (mid-register columns): 25 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 61 in role file, 56 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=9 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 56, d<=2 25, d=3-4 16, d>=5 15, d>=3 31
+  looked half-way: SH vs kick/readout, slope vs N (N=1/2/3/4/6/9) [all] -0.3019 [-0.527, -0.1091] deg n=56 -> BELOW   (copy gap +0.06095 [-0.1203, +0.1539])
+  looked half-way: SH vs kick/readout, slope vs N (N=1/2/3/4/6/9) [d<=2] -0.846 [-14.93, -0.307] deg n=25 -> BELOW   (copy gap +0.09821 [-0.0652, +0.425])
+  looked half-way: SH vs kick/readout, slope vs N (N=1/2/3/4/6/9) [d=3-4] -0.1459 [-0.7218, +0.1743] deg n=16 -> CONSISTENT   (copy gap -0.02626 [-0.2201, +0.3864])
+  looked half-way: SH vs kick/readout, slope vs N (N=1/2/3/4/6/9) [d>=5] -0.106 [-0.2874, +0.09095] deg n=15 -> CONSISTENT   (copy gap +0.06014 [-0.364, +0.1662])
+  looked half-way: SH vs kick/readout, slope vs N (N=1/2/3/4/6/9) [d>=3] -0.1122 [-0.2874, +0.03402] deg n=31 -> CONSISTENT   (copy gap +0.01984 [-0.2201, +0.1348])
+  looked half-way: SH vs kick, N=4 only (R1 form) [all]      -0.5514 [-0.8375, -0.378] deg n=56 -> BELOW   (copy gap +0.3273 [-0.4645, +0.7041])
+  looked half-way: SH vs kick, slope with intercept (R2.3 form) [all] -0.3826 [-0.7682, -0.004748] deg n=56 -> BELOW   (copy gap -0.1316 [-0.4926, +0.1641])
+  looked half-way: SH vs coherence M-D, slope vs N [all]     -0.0003893 [-0.001176, +0.0003738]  n=56 -> CONSISTENT   (copy gap -0.0003822 [-0.001419, +0.001382])
+  looked half-way: SH vs coherence M-D, slope vs N [d<=2]    -0.001149 [-0.002906, +0.0004013]  n=25 -> CONSISTENT   (copy gap -0.001016 [-0.002969, +0.001986])
+  looked half-way: SH vs coherence M-D, slope vs N [d>=3]    +6.412e-05 [-0.0009696, +0.001191]  n=31 -> CONSISTENT   (copy gap -0.0002128 [-0.001352, +0.001479])
+  looked half-way: SH vs coherence M-D at N=4 [all]          -0.00803 [-0.02128, +0.01098]  n=56 -> CONSISTENT   (copy gap -0.01587 [-0.04971, +0.01139])
+  context, per-read median kick (all kept clocks, not a reading): read 1 -0.315 | read 2 -0.432 | read 3 -0.246
+  looked half-way: SH vs kick, mean-projection variant [all] -0.2909 [-0.4889, -0.01355] deg n=57 -> BELOW   (copy gap -0.07429 [-0.1586, +0.1329])
+  looked half-way: SH vs kick, mean-projection variant [d<=2] -0.7853 [-14.98, -0.2909] deg n=25 -> BELOW   (copy gap +0.0947 [-0.1569, +0.4446])
+  looked half-way: SH vs kick, mean-projection variant [d>=3] -0.03908 [-0.3123, +0.1298] deg n=32 -> CONSISTENT   (copy gap -0.1157 [-0.2839, +0.08296])
+==============================================================================================================
+ibm_kingston | SPACED LOOKS (25 looked) | runs [1201, 1202, 1203] | jobs db34mpk7f06c73aqtt4g, db34s947f06c73aqu8g0, db351im8v0ts73c3tt70
+  design audit: dark/idle arms realised on the 16-dt grid; max |realised - stated| / stated over its plain-delay arms = 0.18 %
+  copies (adaptation): the 3 reads are separate jobs; copy 0 = read 1, copy 1 = reads 2+3 pooled; pooled = all. Shots 400 per read per circuit.
+--------------------------------------------------------------------------------------------------------------
+SPACED LOOKS (25 looked) | looked |0>: K vs D0
+  looked set read from the data (mid-register columns): 25 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 61 in role file, 58 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=4 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 58, d<=2 25, d=3-4 18, d>=5 15, d>=3 33
+  looked |0>: K vs D0 kick/readout, slope vs N (N=1/2/4) [all] -0.3377 [-0.8731, -0.05199] deg n=58 -> BELOW   (copy gap -0.08866 [-0.6008, +0.0911])
+  looked |0>: K vs D0 kick/readout, slope vs N (N=1/2/4) [d<=2] -1.024 [-12.69, -0.161] deg n=25 -> BELOW   (copy gap +0.007152 [-0.6636, +0.4792])
+  looked |0>: K vs D0 kick/readout, slope vs N (N=1/2/4) [d=3-4] -0.6818 [-1.28, +0.4454] deg n=18 -> CONSISTENT   (copy gap -0.5402 [-1.038, +0.5078])
+  looked |0>: K vs D0 kick/readout, slope vs N (N=1/2/4) [d>=5] -0.02392 [-0.1567, +0.2043] deg n=15 -> CONSISTENT   (copy gap -0.2878 [-0.7439, +0.7304])
+  looked |0>: K vs D0 kick/readout, slope vs N (N=1/2/4) [d>=3] -0.05775 [-0.4619, +0.1581] deg n=33 -> CONSISTENT   (copy gap -0.4303 [-0.7439, +0.0911])
+  looked |0>: K vs D0 kick, N=4 only (R1 form) [all]         -0.4566 [-0.8751, +0.01311] deg n=58 -> CONSISTENT   (copy gap -0.1419 [-0.8409, +0.3506])
+  looked |0>: K vs D0 kick, slope with intercept (R2.3 form) [all] -0.73 [-1.613, -0.1692] deg n=58 -> BELOW   (copy gap -0.2587 [-1.709, +0.2844])
+  looked |0>: K vs D0 coherence M-D, slope vs N [all]        -0.001587 [-0.002937, +0.0004762]  n=58 -> CONSISTENT   (copy gap -0.0002964 [-0.003377, +0.005206])
+  looked |0>: K vs D0 coherence M-D, slope vs N [d<=2]       -0.001769 [-0.006693, +0.0002912]  n=25 -> CONSISTENT   (copy gap +0.000349 [-0.002883, +0.00684])
+  looked |0>: K vs D0 coherence M-D, slope vs N [d>=3]       -0.0009695 [-0.002848, +0.001393]  n=33 -> CONSISTENT   (copy gap -0.002217 [-0.00492, +0.007162])
+  looked |0>: K vs D0 coherence M-D at N=4 [all]             -0.003029 [-0.01385, +0.008058]  n=58 -> CONSISTENT   (copy gap +0.01183 [-0.009985, +0.03828])
+  context, per-read median kick (all kept clocks, not a reading): read 1 -0.589 | read 2 -0.396 | read 3 -0.697
+  looked |0>: K vs D0 kick, mean-projection variant [all]    -0.4384 [-0.9373, -0.0208] deg n=58 -> BELOW   (copy gap -0.2034 [-0.3774, +0.1901])
+  looked |0>: K vs D0 kick, mean-projection variant [d<=2]   -1.055 [-12.67, -0.3354] deg n=25 -> BELOW   (copy gap -0.1201 [-0.585, +0.354])
+  looked |0>: K vs D0 kick, mean-projection variant [d>=3]   -0.06987 [-0.5746, +0.14] deg n=33 -> CONSISTENT   (copy gap -0.2347 [-0.7637, +0.2187])
+--------------------------------------------------------------------------------------------------------------
+SPACED LOOKS (25 looked) | looked |1>: S1 vs D1
+  looked set read from the data (mid-register columns): 25 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 61 in role file, 58 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=4 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 58, d<=2 25, d=3-4 18, d>=5 15, d>=3 33
+  looked |1>: S1 vs D1 kick/readout, slope vs N (N=1/2/4) [all] -0.4665 [-0.7115, -0.0759] deg n=58 -> BELOW   (copy gap -0.1623 [-0.5819, +0.194])
+  looked |1>: S1 vs D1 kick/readout, slope vs N (N=1/2/4) [d<=2] -1.133 [-17.22, -0.0817] deg n=25 -> BELOW   (copy gap -0.1011 [-0.6227, +0.5831])
+  looked |1>: S1 vs D1 kick/readout, slope vs N (N=1/2/4) [d=3-4] -0.3021 [-1.532, +0.4145] deg n=18 -> CONSISTENT   (copy gap +0.1818 [-0.7619, +1.047])
+  looked |1>: S1 vs D1 kick/readout, slope vs N (N=1/2/4) [d>=5] copies shifted -0.588 [-2.064, -0.03829] | copy0 -0.7872 copy1 +0.01341 -> CANNOT TELL
+  looked |1>: S1 vs D1 kick/readout, slope vs N (N=1/2/4) [d>=3] -0.1397 [-0.5832, +0.1194] deg n=33 -> CONSISTENT   (copy gap -0.4816 [-0.7049, +0.2965])
+  looked |1>: S1 vs D1 kick, N=4 only (R1 form) [all]        -0.4962 [-0.8012, -0.05928] deg n=58 -> BELOW   (copy gap -0.2507 [-0.7337, +0.5163])
+  looked |1>: S1 vs D1 kick, slope with intercept (R2.3 form) [all] -0.7889 [-1.216, -0.1766] deg n=58 -> BELOW   (copy gap -0.438 [-1.595, +0.4793])
+  looked |1>: S1 vs D1 coherence M-D, slope vs N [all]       -0.0009673 [-0.003207, +0.0002398]  n=58 -> CONSISTENT   (copy gap +0.0009185 [-0.003682, +0.005047])
+  looked |1>: S1 vs D1 coherence M-D, slope vs N [d<=2]      +0.0003009 [-0.002597, +0.001224]  n=25 -> CONSISTENT   (copy gap +0.00166 [-0.007248, +0.005047])
+  looked |1>: S1 vs D1 coherence M-D, slope vs N [d>=3]      -0.00189 [-0.004267, -0.0003895]  n=33 -> BELOW   (copy gap +0.0004977 [-0.004452, +0.007671])
+  looked |1>: S1 vs D1 coherence M-D at N=4 [all]            -0.007802 [-0.01514, +0.004886]  n=58 -> CONSISTENT   (copy gap +0.00505 [-0.0088, +0.02608])
+  context, per-read median kick (all kept clocks, not a reading): read 1 -0.791 | read 2 -0.613 | read 3 -0.559
+  looked |1>: S1 vs D1 kick, mean-projection variant [all]   -0.2876 [-0.7193, -0.09025] deg n=58 -> BELOW   (copy gap -0.3323 [-0.6862, +0.2601])
+  looked |1>: S1 vs D1 kick, mean-projection variant [d<=2]  -1.059 [-16.83, -0.08758] deg n=25 -> BELOW   (copy gap -0.3303 [-0.8371, +0.3271])
+  looked |1>: S1 vs D1 kick, mean-projection variant [d>=3]  -0.2194 [-0.5736, +0.03508] deg n=33 -> CONSISTENT   (copy gap -0.3343 [-0.82, +0.3339])
+--------------------------------------------------------------------------------------------------------------
+SPACED LOOKS (25 looked) | looked half-way: SH vs DH
+  looked set read from the data (mid-register columns): 25 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 61 in role file, 58 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=4 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 58, d<=2 25, d=3-4 18, d>=5 15, d>=3 33
+  looked half-way: SH vs kick/readout, slope vs N (N=1/2/4) [all] -0.5772 [-1.005, -0.2975] deg n=58 -> BELOW   (copy gap -0.005518 [-0.2858, +0.2651])
+  looked half-way: SH vs kick/readout, slope vs N (N=1/2/4) [d<=2] -1.378 [-13.45, -0.3463] deg n=25 -> BELOW   (copy gap +0.5789 [-0.5228, +0.9478])
+  looked half-way: SH vs kick/readout, slope vs N (N=1/2/4) [d=3-4] -0.3567 [-1.005, +0.04655] deg n=18 -> CONSISTENT   (copy gap -0.3375 [-0.722, +0.03052])
+  looked half-way: SH vs kick/readout, slope vs N (N=1/2/4) [d>=5] -0.3052 [-0.6797, +0.00133] deg n=15 -> CONSISTENT   (copy gap +0.03788 [-0.2448, +0.3863])
+  looked half-way: SH vs kick/readout, slope vs N (N=1/2/4) [d>=3] -0.3052 [-0.6969, -0.172] deg n=33 -> BELOW   (copy gap -0.2078 [-0.3893, +0.08465])
+  looked half-way: SH vs kick, N=4 only (R1 form) [all]      -0.6291 [-0.9359, -0.4863] deg n=58 -> BELOW   (copy gap +0.02035 [-0.4659, +0.3498])
+  looked half-way: SH vs kick, slope with intercept (R2.3 form) [all] -0.9627 [-1.785, -0.5611] deg n=58 -> BELOW   (copy gap +0.1576 [-1.164, +1.295])
+  looked half-way: SH vs coherence M-D, slope vs N [all]     -0.002533 [-0.003993, -0.000925]  n=58 -> BELOW   (copy gap -0.002767 [-0.007231, +0.001248])
+  looked half-way: SH vs coherence M-D, slope vs N [d<=2]    -0.002579 [-0.005491, -0.00119]  n=25 -> BELOW   (copy gap -0.0001104 [-0.007982, +0.003028])
+  looked half-way: SH vs coherence M-D, slope vs N [d>=3]    -0.001067 [-0.003914, +0.000689]  n=33 -> CONSISTENT   (copy gap -0.003441 [-0.008422, +0.002772])
+  looked half-way: SH vs coherence M-D at N=4 [all]          -0.006612 [-0.02104, -0.001594]  n=58 -> BELOW   (copy gap -0.003097 [-0.0309, +0.01284])
+  context, per-read median kick (all kept clocks, not a reading): read 1 -0.693 | read 2 -0.918 | read 3 -0.679
+  looked half-way: SH vs kick, mean-projection variant [all] -0.6246 [-0.9118, -0.2686] deg n=58 -> BELOW   (copy gap -0.02553 [-0.2026, +0.2055])
+  looked half-way: SH vs kick, mean-projection variant [d<=2] -1.387 [-14.98, -0.2653] deg n=25 -> BELOW   (copy gap -0.03266 [-0.3758, +0.9001])
+  looked half-way: SH vs kick, mean-projection variant [d>=3] -0.2893 [-0.773, -0.07358] deg n=33 -> BELOW   (copy gap -0.0184 [-0.3769, +0.1741])
+==============================================================================================================
+ibm_kingston | SPACED LOOKS, 3 us gaps (25 looked) | runs [1201, 1202, 1203] | jobs db34mpk7f06c73aqtt4g, db34s947f06c73aqu8g0, db351im8v0ts73c3tt70
+  design audit: dark/idle arms realised on the 16-dt grid; max |realised - stated| / stated over its plain-delay arms = 0.18 %
+  copies (adaptation): the 3 reads are separate jobs; copy 0 = read 1, copy 1 = reads 2+3 pooled; pooled = all. Shots 400 per read per circuit.
+--------------------------------------------------------------------------------------------------------------
+SPACED LOOKS, 3 us gaps (25 looked) | gapped |0>: G0 vs E0
+  looked set read from the data (mid-register columns): 25 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 61 in role file, 57 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=4 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 57, d<=2 25, d=3-4 17, d>=5 15, d>=3 32
+  gapped |0>: G0 vs E0 kick/readout, slope vs N (N=2/4) [all] -0.5719 [-1, -0.1145] deg n=57 -> BELOW   (copy gap -0.1827 [-0.3745, +0.3467])
+  gapped |0>: G0 vs E0 kick/readout, slope vs N (N=2/4) [d<=2] -1.27 [-12.61, -0.6018] deg n=25 -> BELOW   (copy gap +0.3467 [-0.6297, +1.353])
+  gapped |0>: G0 vs E0 kick/readout, slope vs N (N=2/4) [d=3-4] -0.1239 [-1.283, +0.2806] deg n=17 -> CONSISTENT   (copy gap -0.1032 [-0.9257, +0.5899])
+  gapped |0>: G0 vs E0 kick/readout, slope vs N (N=2/4) [d>=5] +0.3286 [-0.5719, +0.6473] deg n=15 -> CONSISTENT   (copy gap -0.1842 [-0.6489, +0.003055])
+  gapped |0>: G0 vs E0 kick/readout, slope vs N (N=2/4) [d>=3] -0.114 [-0.5719, +0.4883] deg n=32 -> CONSISTENT   (copy gap -0.1834 [-0.5118, +0.0219])
+  gapped |0>: G0 vs E0 kick, N=4 only (R1 form) [all]        -0.4714 [-1.122, -0.08768] deg n=57 -> BELOW   (copy gap -0.03583 [-0.3706, +0.4063])
+  gapped |0>: G0 vs E0 kick, slope with intercept (R2.3 form) [all] -0.9697 [-1.896, -0.1262] deg n=57 -> BELOW   (copy gap +0.07988 [-0.6357, +2.274])
+  gapped |0>: G0 vs E0 coherence M-D, slope vs N [all]       +0.0007424 [-0.0005787, +0.001723]  n=57 -> CONSISTENT   (copy gap +0.0002544 [-0.004355, +0.003984])
+  gapped |0>: G0 vs E0 coherence M-D, slope vs N [d<=2]      +0.001392 [+9.21e-05, +0.003375]  n=25 -> ABOVE   (copy gap -0.0008487 [-0.009879, +0.001844])
+  gapped |0>: G0 vs E0 coherence M-D, slope vs N [d>=3]      -0.0001151 [-0.002673, +0.001723]  n=32 -> CONSISTENT   (copy gap +0.001604 [-0.003856, +0.005809])
+  gapped |0>: G0 vs E0 coherence M-D at N=4 [all]            -0.0001677 [-0.01273, +0.008922]  n=57 -> CONSISTENT   (copy gap -0.004231 [-0.01429, +0.01034])
+  context, per-read median kick (all kept clocks, not a reading): read 1 -0.784 | read 2 -0.467 | read 3 -0.771
+  gapped |0>: G0 vs E0 kick, mean-projection variant [all]   -0.5938 [-0.9089, -0.1768] deg n=57 -> BELOW   (copy gap -0.1561 [-0.458, +0.5938])
+  gapped |0>: G0 vs E0 kick, mean-projection variant [d<=2]  -1.503 [-12.54, -0.6662] deg n=25 -> BELOW   (copy gap +0.5938 [-1.162, +1.339])
+  gapped |0>: G0 vs E0 kick, mean-projection variant [d>=3]  -0.1528 [-0.4912, +0.3459] deg n=32 -> CONSISTENT   (copy gap -0.2999 [-0.5028, +0.2647])
+--------------------------------------------------------------------------------------------------------------
+SPACED LOOKS, 3 us gaps (25 looked) | gapped |1>: G1 vs E1
+  looked set read from the data (mid-register columns): 25 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 61 in role file, 57 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=4 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 57, d<=2 25, d=3-4 17, d>=5 15, d>=3 32
+  gapped |1>: G1 vs E1 kick/readout, slope vs N (N=2/4) [all] -0.4335 [-0.7083, -0.1855] deg n=57 -> BELOW   (copy gap +0.01952 [-0.3822, +0.2228])
+  gapped |1>: G1 vs E1 kick/readout, slope vs N (N=2/4) [d<=2] -0.7217 [-12.59, -0.3512] deg n=25 -> BELOW   (copy gap -0.1123 [-1.221, +0.4161])
+  gapped |1>: G1 vs E1 kick/readout, slope vs N (N=2/4) [d=3-4] -0.51 [-1.335, -0.1171] deg n=17 -> BELOW   (copy gap +0.1211 [-0.719, +0.3135])
+  gapped |1>: G1 vs E1 kick/readout, slope vs N (N=2/4) [d>=5] +0.1518 [-0.4485, +0.4346] deg n=15 -> CONSISTENT   (copy gap +0.05229 [-1.256, +0.8669])
+  gapped |1>: G1 vs E1 kick/readout, slope vs N (N=2/4) [d>=3] -0.2248 [-0.5962, +0.01893] deg n=32 -> CONSISTENT   (copy gap +0.07962 [-0.3822, +0.2983])
+  gapped |1>: G1 vs E1 kick, N=4 only (R1 form) [all]        -0.4122 [-0.9695, -0.1908] deg n=57 -> BELOW   (copy gap +0.02746 [-0.7013, +0.3359])
+  gapped |1>: G1 vs E1 kick, slope with intercept (R2.3 form) [all] -1.151 [-1.996, -0.3644] deg n=57 -> BELOW   (copy gap -0.05522 [-1.182, +1.256])
+  gapped |1>: G1 vs E1 coherence M-D, slope vs N [all]       copies shifted +0.003504 [+4.614e-05, +0.008287] | copy0 +0.001724 copy1 -0.00219 -> CANNOT TELL
+  gapped |1>: G1 vs E1 coherence M-D, slope vs N [d<=2]      copies shifted +0.004307 [+4.614e-05, +0.009382] | copy0 +0.001373 copy1 -0.002806 -> CANNOT TELL
+  gapped |1>: G1 vs E1 coherence M-D, slope vs N [d>=3]      +0.0001346 [-0.003828, +0.002346]  n=32 -> CONSISTENT   (copy gap +0.003089 [-0.0006461, +0.008937])
+  gapped |1>: G1 vs E1 coherence M-D at N=4 [all]            copies shifted +0.02117 [+0.0006348, +0.03382] | copy0 -0.001366 copy1 -0.01365 -> CANNOT TELL
+  context, per-read median kick (all kept clocks, not a reading): read 1 -0.512 | read 2 -0.572 | read 3 -0.219
+  gapped |1>: G1 vs E1 kick, mean-projection variant [all]   -0.4182 [-0.8747, -0.1922] deg n=57 -> BELOW   (copy gap -0.01968 [-0.6669, +0.1201])
+  gapped |1>: G1 vs E1 kick, mean-projection variant [d<=2]  -0.8595 [-13.21, -0.35] deg n=25 -> BELOW   (copy gap +0.03814 [-0.9614, +0.5445])
+  gapped |1>: G1 vs E1 kick, mean-projection variant [d>=3]  -0.3081 [-0.6878, +0.1779] deg n=32 -> CONSISTENT   (copy gap -0.1946 [-0.7808, +0.1081])
+--------------------------------------------------------------------------------------------------------------
+SPACED LOOKS, 3 us gaps (25 looked) | gapped half-way: GH vs EH
+  looked set read from the data (mid-register columns): 25 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 61 in role file, 57 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=4 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 57, d<=2 25, d=3-4 17, d>=5 15, d>=3 32
+  gapped half-way: GH vs kick/readout, slope vs N (N=2/4) [all] -0.4369 [-0.7176, -0.01112] deg n=57 -> BELOW   (copy gap +0.1415 [-0.2112, +0.7367])
+  gapped half-way: GH vs kick/readout, slope vs N (N=2/4) [d<=2] -1.192 [-12.67, +0.04101] deg n=25 -> CONSISTENT   (copy gap +0.6029 [-0.2112, +1.005])
+  gapped half-way: GH vs kick/readout, slope vs N (N=2/4) [d=3-4] -0.5094 [-1.149, +0.05479] deg n=17 -> CONSISTENT   (copy gap +0.2663 [-0.5882, +0.7913])
+  gapped half-way: GH vs kick/readout, slope vs N (N=2/4) [d>=5] +0.03868 [-0.4369, +0.4486] deg n=15 -> CONSISTENT   (copy gap +0.01013 [-1.468, +0.9418])
+  gapped half-way: GH vs kick/readout, slope vs N (N=2/4) [d>=3] -0.3363 [-0.5094, +0.1005] deg n=32 -> CONSISTENT   (copy gap +0.02523 [-0.5181, +0.7367])
+  gapped half-way: GH vs kick, N=4 only (R1 form) [all]      -0.3832 [-0.6745, -0.04377] deg n=57 -> BELOW   (copy gap +0.06557 [-0.4091, +0.4079])
+  gapped half-way: GH vs kick, slope with intercept (R2.3 form) [all] -0.3958 [-0.9722, +0.2764] deg n=57 -> CONSISTENT   (copy gap +0.5322 [-1.113, +1.204])
+  gapped half-way: GH vs coherence M-D, slope vs N [all]     +0.0003823 [-0.001075, +0.001514]  n=57 -> CONSISTENT   (copy gap -0.0007354 [-0.004502, +0.00272])
+  gapped half-way: GH vs coherence M-D, slope vs N [d<=2]    +0.002644 [-0.003981, +0.006595]  n=25 -> CONSISTENT   (copy gap -0.0009807 [-0.008535, +0.01001])
+  gapped half-way: GH vs coherence M-D, slope vs N [d>=3]    -3.957e-05 [-0.001441, +0.001159]  n=32 -> CONSISTENT   (copy gap -0.0006118 [-0.0054, +0.00279])
+  gapped half-way: GH vs coherence M-D at N=4 [all]          -0.002877 [-0.008264, +0.008234]  n=57 -> CONSISTENT   (copy gap +0.007453 [-0.02041, +0.01614])
+  context, per-read median kick (all kept clocks, not a reading): read 1 -0.568 | read 2 -0.186 | read 3 -0.365
+  gapped half-way: GH vs kick, mean-projection variant [all] -0.4006 [-0.7507, -0.04811] deg n=57 -> BELOW   (copy gap +0.2231 [-0.2504, +0.4389])
+  gapped half-way: GH vs kick, mean-projection variant [d<=2] -1.199 [-12.56, -0.1666] deg n=25 -> BELOW   (copy gap +0.4389 [-0.2704, +0.9588])
+  gapped half-way: GH vs kick, mean-projection variant [d>=3] -0.1412 [-0.413, +0.152] deg n=32 -> CONSISTENT   (copy gap -0.04063 [-0.3889, +0.3645])
+==============================================================================================================
+ibm_kingston | WIRE PAINT (25 looked) | runs [1211, 1212, 1213] | jobs db34tss2ljfc73d5igf0, db353268v0ts73c3u08g, db3586k2ljfc73d5j3c0
+  design audit: dark/idle arms realised on the 16-dt grid; max |realised - stated| / stated over its plain-delay arms = 0.18 %
+  copies (adaptation): the 3 reads are separate jobs; copy 0 = read 1, copy 1 = reads 2+3 pooled; pooled = all. Shots 400 per read per circuit.
+--------------------------------------------------------------------------------------------------------------
+WIRE PAINT (25 looked) | rotation 0: P0L vs P0D
+  looked set read from the data (mid-register columns): 25 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 61 in role file, 58 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=4 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 58, d<=2 25, d=3-4 18, d>=5 15, d>=3 33
+  rotation 0: P0L vs P0D kick/readout, slope vs N (N=1/2/4) [all] -0.4281 [-0.7581, -0.2904] deg n=58 -> BELOW   (copy gap +0.004059 [-0.4611, +0.2342])
+  rotation 0: P0L vs P0D kick/readout, slope vs N (N=1/2/4) [d<=2] -1.116 [-18.26, -0.4108] deg n=25 -> BELOW   (copy gap -0.1181 [-0.6173, +0.2268])
+  rotation 0: P0L vs P0D kick/readout, slope vs N (N=1/2/4) [d=3-4] -0.4157 [-1.013, +0.1426] deg n=18 -> CONSISTENT   (copy gap +0.1862 [-0.625, +0.5423])
+  rotation 0: P0L vs P0D kick/readout, slope vs N (N=1/2/4) [d>=5] +0.004014 [-0.3602, +0.3138] deg n=15 -> CONSISTENT   (copy gap +0.01781 [-0.7462, +0.5482])
+  rotation 0: P0L vs P0D kick/readout, slope vs N (N=1/2/4) [d>=3] -0.2904 [-0.4454, +0.193] deg n=33 -> CONSISTENT   (copy gap +0.1381 [-0.5239, +0.4945])
+  rotation 0: P0L vs P0D kick, N=4 only (R1 form) [all]      -0.386 [-0.9508, -0.07817] deg n=58 -> BELOW   (copy gap -0.1533 [-0.473, +0.3345])
+  rotation 0: P0L vs P0D kick, slope with intercept (R2.3 form) [all] -0.7289 [-1.443, +0.09404] deg n=58 -> CONSISTENT   (copy gap -0.4212 [-0.9339, +0.4948])
+  rotation 0: P0L vs P0D coherence M-D, slope vs N [all]     +0.0003417 [-0.002313, +0.001741]  n=58 -> CONSISTENT   (copy gap -0.00177 [-0.005578, +0.003099])
+  rotation 0: P0L vs P0D coherence M-D, slope vs N [d<=2]    +0.0003303 [-0.003161, +0.001741]  n=25 -> CONSISTENT   (copy gap -0.001533 [-0.008294, +0.003477])
+  rotation 0: P0L vs P0D coherence M-D, slope vs N [d>=3]    +0.0005064 [-0.004568, +0.001961]  n=33 -> CONSISTENT   (copy gap -0.002659 [-0.007483, +0.006458])
+  rotation 0: P0L vs P0D coherence M-D at N=4 [all]          +0.00579 [-0.003641, +0.01216]  n=58 -> CONSISTENT   (copy gap -0.009734 [-0.02265, +0.002836])
+  context, per-read median kick (all kept clocks, not a reading): read 1 -0.662 | read 2 -0.691 | read 3 -0.599
+  rotation 0: P0L vs P0D kick, mean-projection variant [all] -0.5539 [-0.9122, -0.2748] deg n=58 -> BELOW   (copy gap -0.1163 [-0.418, +0.3658])
+  rotation 0: P0L vs P0D kick, mean-projection variant [d<=2] -0.9691 [-12.92, -0.3522] deg n=25 -> BELOW   (copy gap -0.29 [-0.5063, +0.4695])
+  rotation 0: P0L vs P0D kick, mean-projection variant [d>=3] -0.2748 [-0.581, +0.1804] deg n=33 -> CONSISTENT   (copy gap +0.02451 [-0.434, +0.4716])
+--------------------------------------------------------------------------------------------------------------
+WIRE PAINT (25 looked) | rotation 1: P1L vs P1D
+  looked set read from the data (mid-register columns): 25 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 61 in role file, 58 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=4 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 58, d<=2 25, d=3-4 18, d>=5 15, d>=3 33
+  rotation 1: P1L vs P1D kick/readout, slope vs N (N=1/2/4) [all] -0.2904 [-0.9656, -0.0746] deg n=58 -> BELOW   (copy gap -0.1046 [-0.5403, +0.4706])
+  rotation 1: P1L vs P1D kick/readout, slope vs N (N=1/2/4) [d<=2] -1.211 [-13.75, -0.03327] deg n=25 -> BELOW   (copy gap +0.2444 [-0.5294, +0.6873])
+  rotation 1: P1L vs P1D kick/readout, slope vs N (N=1/2/4) [d=3-4] -0.5633 [-1.536, -0.128] deg n=18 -> BELOW   (copy gap -0.04269 [-0.7138, +1.644])
+  rotation 1: P1L vs P1D kick/readout, slope vs N (N=1/2/4) [d>=5] +0.03907 [-0.3113, +0.2531] deg n=15 -> CONSISTENT   (copy gap -0.7315 [-1.512, +0.2383])
+  rotation 1: P1L vs P1D kick/readout, slope vs N (N=1/2/4) [d>=3] -0.1735 [-0.7782, -0.02153] deg n=33 -> BELOW   (copy gap -0.4737 [-0.7337, +0.3883])
+  rotation 1: P1L vs P1D kick, N=4 only (R1 form) [all]      -0.2253 [-0.8099, -0.0495] deg n=58 -> BELOW   (copy gap +0.08394 [-0.4499, +0.5089])
+  rotation 1: P1L vs P1D kick, slope with intercept (R2.3 form) [all] -0.6455 [-1.209, -0.01799] deg n=58 -> BELOW   (copy gap +0.2303 [-0.2067, +0.6888])
+  rotation 1: P1L vs P1D coherence M-D, slope vs N [all]     copies shifted +0.003237 [+0.0008587, +0.007652] | copy0 +0.0002174 copy1 -0.00439 -> CANNOT TELL
+  rotation 1: P1L vs P1D coherence M-D, slope vs N [d<=2]    +0.0001507 [-0.005284, +0.001988]  n=25 -> CONSISTENT   (copy gap +0.004154 [-0.0002477, +0.01137])
+  rotation 1: P1L vs P1D coherence M-D, slope vs N [d>=3]    -0.001711 [-0.004769, -0.0003714]  n=33 -> BELOW   (copy gap +0.002698 [-0.0004389, +0.008979])
+  rotation 1: P1L vs P1D coherence M-D at N=4 [all]          -0.007789 [-0.01837, +0.001468]  n=58 -> CONSISTENT   (copy gap +0.02016 [-0.002737, +0.03876])
+  context, per-read median kick (all kept clocks, not a reading): read 1 -0.607 | read 2 -0.114 | read 3 -0.563
+  rotation 1: P1L vs P1D kick, mean-projection variant [all] -0.4521 [-1.104, -0.04957] deg n=58 -> BELOW   (copy gap +0.0773 [-0.537, +0.4035])
+  rotation 1: P1L vs P1D kick, mean-projection variant [d<=2] -1.251 [-13.89, -0.02265] deg n=25 -> BELOW   (copy gap +0.1717 [-0.2917, +0.5723])
+  rotation 1: P1L vs P1D kick, mean-projection variant [d>=3] -0.1898 [-0.4952, +0.08435] deg n=33 -> CONSISTENT   (copy gap -0.4109 [-0.7903, +0.4871])
+--------------------------------------------------------------------------------------------------------------
+WIRE PAINT (25 looked) | rotation 2: P2L vs P2D
+  looked set read from the data (mid-register columns): 25 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 61 in role file, 58 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=4 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 58, d<=2 25, d=3-4 18, d>=5 15, d>=3 33
+  rotation 2: P2L vs P2D kick/readout, slope vs N (N=1/2/4) [all] -0.5178 [-0.9284, -0.3188] deg n=58 -> BELOW   (copy gap -0.0005478 [-0.1883, +0.2935])
+  rotation 2: P2L vs P2D kick/readout, slope vs N (N=1/2/4) [d<=2] -1.124 [-16.05, -0.3031] deg n=25 -> BELOW   (copy gap +0.1388 [-0.4763, +0.9756])
+  rotation 2: P2L vs P2D kick/readout, slope vs N (N=1/2/4) [d=3-4] -0.7668 [-1.229, -0.2015] deg n=18 -> BELOW   (copy gap -0.2445 [-1.024, +0.4135])
+  rotation 2: P2L vs P2D kick/readout, slope vs N (N=1/2/4) [d>=5] -0.1734 [-0.417, +0.0009846] deg n=15 -> CONSISTENT   (copy gap -0.01044 [-0.137, +0.8257])
+  rotation 2: P2L vs P2D kick/readout, slope vs N (N=1/2/4) [d>=3] -0.4105 [-0.6654, -0.09346] deg n=33 -> BELOW   (copy gap -0.1107 [-0.5031, +0.7354])
+  rotation 2: P2L vs P2D kick, N=4 only (R1 form) [all]      -0.422 [-0.8454, -0.3475] deg n=58 -> BELOW   (copy gap -0.1592 [-0.4294, +0.4139])
+  rotation 2: P2L vs P2D kick, slope with intercept (R2.3 form) [all] -0.6784 [-1.383, -0.1905] deg n=58 -> BELOW   (copy gap -0.3227 [-0.7868, +0.3644])
+  rotation 2: P2L vs P2D coherence M-D, slope vs N [all]     -0.001009 [-0.003796, +0.001354]  n=58 -> CONSISTENT   (copy gap +0.001126 [-0.002701, +0.006292])
+  rotation 2: P2L vs P2D coherence M-D, slope vs N [d<=2]    -0.001297 [-0.005287, +0.001773]  n=25 -> CONSISTENT   (copy gap -0.0008166 [-0.006018, +0.00837])
+  rotation 2: P2L vs P2D coherence M-D, slope vs N [d>=3]    -0.0007202 [-0.004555, +0.002881]  n=33 -> CONSISTENT   (copy gap +0.002111 [-0.002708, +0.006391])
+  rotation 2: P2L vs P2D coherence M-D at N=4 [all]          -0.007736 [-0.01455, +0.001389]  n=58 -> CONSISTENT   (copy gap +0.007235 [-0.006438, +0.02399])
+  context, per-read median kick (all kept clocks, not a reading): read 1 -0.513 | read 2 -0.932 | read 3 -0.675
+  rotation 2: P2L vs P2D kick, mean-projection variant [all] -0.4369 [-0.9302, -0.1805] deg n=58 -> BELOW   (copy gap +0.006808 [-0.3087, +0.3706])
+  rotation 2: P2L vs P2D kick, mean-projection variant [d<=2] -1.051 [-15.5, -0.3051] deg n=25 -> BELOW   (copy gap +0.01511 [-0.6574, +0.9694])
+  rotation 2: P2L vs P2D kick, mean-projection variant [d>=3] -0.2137 [-0.6714, -0.06908] deg n=33 -> BELOW   (copy gap -0.1204 [-0.3811, +0.4545])
+==============================================================================================================
+ibm_kingston | CARRIERS ACROSS CALIBRATIONS (25 looked) | runs [1291, 1292, 1293] | jobs db38li74b7jc73anem1g, db3940j9kq9s73atcrag, db39a8aqfgmc73d0cjsg
+  design audit: dark/idle arms realised on the 16-dt grid; max |realised - stated| / stated over its plain-delay arms = 0.18 %
+  copies (adaptation): the 3 reads are separate jobs; copy 0 = read 1, copy 1 = reads 2+3 pooled; pooled = all. Shots 400 per read per circuit.
+--------------------------------------------------------------------------------------------------------------
+CARRIERS ACROSS CALIBRATIONS (25 looked) | index order: K vs D0
+  looked set read from the data (mid-register columns): 25 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 61 in role file, 58 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=4 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 58, d<=2 25, d=3-4 18, d>=5 15, d>=3 33
+  index order: K vs D0 kick/readout, slope vs N (N=1/2/4) [all] -0.3862 [-0.8942, -0.1439] deg n=58 -> BELOW   (copy gap +0.07564 [-0.4979, +0.4317])
+  index order: K vs D0 kick/readout, slope vs N (N=1/2/4) [d<=2] -1.066 [-13.48, -0.4891] deg n=25 -> BELOW   (copy gap +0.196 [-0.5547, +1.643])
+  index order: K vs D0 kick/readout, slope vs N (N=1/2/4) [d=3-4] -0.5204 [-1.699, -0.08342] deg n=18 -> BELOW   (copy gap -0.2038 [-1.455, +0.9895])
+  index order: K vs D0 kick/readout, slope vs N (N=1/2/4) [d>=5] +0.2393 [-0.04142, +0.5237] deg n=15 -> CONSISTENT   (copy gap -0.06411 [-0.8909, +0.7037])
+  index order: K vs D0 kick/readout, slope vs N (N=1/2/4) [d>=3] -0.04142 [-0.3549, +0.2393] deg n=33 -> CONSISTENT   (copy gap -0.06411 [-0.8909, +0.3684])
+  index order: K vs D0 kick, N=4 only (R1 form) [all]        -0.246 [-0.852, +0.009166] deg n=58 -> CONSISTENT   (copy gap +0.02588 [-0.3389, +0.5524])
+  index order: K vs D0 kick, slope with intercept (R2.3 form) [all] -0.5253 [-1.311, -0.107] deg n=58 -> BELOW   (copy gap +0.3079 [-0.1799, +1.025])
+  index order: K vs D0 coherence M-D, slope vs N [all]       -0.0008172 [-0.002757, +0.001172]  n=58 -> CONSISTENT   (copy gap +0.002041 [-0.000665, +0.006369])
+  index order: K vs D0 coherence M-D, slope vs N [d<=2]      -0.0007597 [-0.003073, +0.002475]  n=25 -> CONSISTENT   (copy gap -0.0002885 [-0.007555, +0.005365])
+  index order: K vs D0 coherence M-D, slope vs N [d>=3]      -0.0008747 [-0.003556, +0.002539]  n=33 -> CONSISTENT   (copy gap +0.004202 [-0.0001041, +0.008926])
+  index order: K vs D0 coherence M-D at N=4 [all]            -0.005112 [-0.01688, +0.007035]  n=58 -> CONSISTENT   (copy gap +0.0137 [-0.009757, +0.03372])
+  context, per-read median kick (all kept clocks, not a reading): read 1 -0.684 | read 2 -0.479 | read 3 -1.079
+  index order: K vs D0 kick, mean-projection variant [all]   -0.5478 [-0.9026, -0.07881] deg n=58 -> BELOW   (copy gap +0.1343 [-0.3244, +0.4171])
+  index order: K vs D0 kick, mean-projection variant [d<=2]  copies shifted +0.3267 [+0.0843, +0.9751] | copy0 -1.653 copy1 -1.598 -> CANNOT TELL
+  index order: K vs D0 kick, mean-projection variant [d>=3]  -0.09474 [-0.4935, +0.101] deg n=33 -> CONSISTENT   (copy gap -0.3111 [-0.8529, +0.2406])
+--------------------------------------------------------------------------------------------------------------
+CARRIERS ACROSS CALIBRATIONS (25 looked) | reversed order: KR vs D0
+  looked set read from the data (mid-register columns): 25 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 61 in role file, 58 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=4 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 58, d<=2 25, d=3-4 18, d>=5 15, d>=3 33
+  reversed order: KR vs  kick/readout, slope vs N (N=1/2/4) [all] -0.4503 [-0.9446, +0.06395] deg n=58 -> CONSISTENT   (copy gap +0.2127 [-0.09399, +0.4897])
+  reversed order: KR vs  kick/readout, slope vs N (N=1/2/4) [d<=2] -1.192 [-12.99, +0.01886] deg n=25 -> CONSISTENT   (copy gap +0.2371 [-0.2349, +0.7107])
+  reversed order: KR vs  kick/readout, slope vs N (N=1/2/4) [d=3-4] -0.7024 [-1.537, +0.06783] deg n=18 -> CONSISTENT   (copy gap -0.1133 [-1.176, +1.305])
+  reversed order: KR vs  kick/readout, slope vs N (N=1/2/4) [d>=5] +0.1753 [+0.03559, +0.3109] deg n=15 -> ABOVE   (copy gap +0.4171 [-0.09399, +0.9091])
+  reversed order: KR vs  kick/readout, slope vs N (N=1/2/4) [d>=3] +0.03559 [-0.5522, +0.1753] deg n=33 -> CONSISTENT   (copy gap +0.1883 [-0.1843, +0.9031])
+  reversed order: KR vs  kick, N=4 only (R1 form) [all]      -0.3388 [-0.7062, +0.1481] deg n=58 -> CONSISTENT   (copy gap +0.2758 [-0.1514, +0.6712])
+  reversed order: KR vs  kick, slope with intercept (R2.3 form) [all] -0.6375 [-1.134, -0.1953] deg n=58 -> BELOW   (copy gap +0.6087 [-0.2148, +1.398])
+  reversed order: KR vs  coherence M-D, slope vs N [all]     -0.0003637 [-0.00276, +0.001158]  n=58 -> CONSISTENT   (copy gap +0.003444 [-0.004559, +0.008647])
+  reversed order: KR vs  coherence M-D, slope vs N [d<=2]    +0.0007832 [-0.006338, +0.004351]  n=25 -> CONSISTENT   (copy gap +0.003216 [-0.01024, +0.01064])
+  reversed order: KR vs  coherence M-D, slope vs N [d>=3]    -0.0005406 [-0.003147, +0.000773]  n=33 -> CONSISTENT   (copy gap +0.003938 [-0.004125, +0.01097])
+  reversed order: KR vs  coherence M-D at N=4 [all]          -0.002277 [-0.01491, +0.006354]  n=58 -> CONSISTENT   (copy gap +0.009344 [-0.01279, +0.04097])
+  context, per-read median kick (all kept clocks, not a reading): read 1 -0.241 | read 2 -0.299 | read 3 -0.862
+  reversed order: KR vs  kick, mean-projection variant [all] copies shifted +0.2886 [+0.01134, +0.7498] | copy0 -0.2239 copy1 -0.4993 -> CANNOT TELL
+  reversed order: KR vs  kick, mean-projection variant [d<=2] -0.971 [-13.05, -0.1548] deg n=25 -> BELOW   (copy gap +0.3486 [-0.128, +0.7334])
+  reversed order: KR vs  kick, mean-projection variant [d>=3] -0.02997 [-0.4935, +0.1672] deg n=33 -> CONSISTENT   (copy gap +0.2179 [-0.07838, +1.077])
+==============================================================================================================
+ibm_kingston | CLOCK 81 (one clock, one looked bit) | runs [1251, 1252, 1253] | jobs db35bufr11fs7397s130, db35h1vr11fs7397s7m0, db35m4s2ljfc73d5jk9g
+  design audit: dark/idle arms realised on the 16-dt grid; max |realised - stated| / stated over its plain-delay arms = 0.18 %
+  copies (adaptation): the 3 reads are separate jobs; copy 0 = read 1, copy 1 = reads 2+3 pooled; pooled = all. Shots 400 per read per circuit.
+--------------------------------------------------------------------------------------------------------------
+CLOCK 81 (one clock, one looked bit) | neighbour |1>: M1L vs M1D
+  looked set read from the data (mid-register columns): 1 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 1 in role file, 1 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=4 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 1, d<=2 1, d=3-4 0, d>=5 0, d>=3 0
+  neighbour |1>: M1L vs  kick/readout, slope vs N (N=1/2/4) [all] +nan [+nan, +nan] deg n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  neighbour |1>: M1L vs  kick/readout, slope vs N (N=1/2/4) [d<=2] +nan [+nan, +nan] deg n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  neighbour |1>: M1L vs  kick/readout, slope vs N (N=1/2/4) [d=3-4] +nan [+nan, +nan] deg n=0 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  neighbour |1>: M1L vs  kick/readout, slope vs N (N=1/2/4) [d>=5] +nan [+nan, +nan] deg n=0 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  neighbour |1>: M1L vs  kick/readout, slope vs N (N=1/2/4) [d>=3] +nan [+nan, +nan] deg n=0 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  neighbour |1>: M1L vs  kick, N=4 only (R1 form) [all]      +nan [+nan, +nan] deg n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  neighbour |1>: M1L vs  kick, slope with intercept (R2.3 form) [all] +nan [+nan, +nan] deg n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  neighbour |1>: M1L vs  coherence M-D, slope vs N [all]     +nan [+nan, +nan]  n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  neighbour |1>: M1L vs  coherence M-D, slope vs N [d<=2]    +nan [+nan, +nan]  n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  neighbour |1>: M1L vs  coherence M-D, slope vs N [d>=3]    +nan [+nan, +nan]  n=0 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  neighbour |1>: M1L vs  coherence M-D at N=4 [all]          +nan [+nan, +nan]  n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  context, per-read median kick (all kept clocks, not a reading): read 1 -11.195 | read 2 -9.189 | read 3 -8.857
+  single-clock values, read 1: clock(s) [81] kick [-11.2] deg/readout, distance [2]
+  single-clock values, read 2: clock(s) [81] kick [-9.19] deg/readout, distance [2]
+  single-clock values, read 3: clock(s) [81] kick [-8.86] deg/readout, distance [2]
+  neighbour |1>: M1L vs  kick, mean-projection variant [all] +nan [+nan, +nan] deg n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  neighbour |1>: M1L vs  kick, mean-projection variant [d<=2] +nan [+nan, +nan] deg n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  neighbour |1>: M1L vs  kick, mean-projection variant [d>=3] +nan [+nan, +nan] deg n=0 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+--------------------------------------------------------------------------------------------------------------
+CLOCK 81 (one clock, one looked bit) | neighbour |0>: M0L vs M0D
+  looked set read from the data (mid-register columns): 1 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 1 in role file, 1 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=4 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 1, d<=2 1, d=3-4 0, d>=5 0, d>=3 0
+  neighbour |0>: M0L vs  kick/readout, slope vs N (N=1/2/4) [all] +nan [+nan, +nan] deg n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  neighbour |0>: M0L vs  kick/readout, slope vs N (N=1/2/4) [d<=2] +nan [+nan, +nan] deg n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  neighbour |0>: M0L vs  kick/readout, slope vs N (N=1/2/4) [d=3-4] +nan [+nan, +nan] deg n=0 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  neighbour |0>: M0L vs  kick/readout, slope vs N (N=1/2/4) [d>=5] +nan [+nan, +nan] deg n=0 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  neighbour |0>: M0L vs  kick/readout, slope vs N (N=1/2/4) [d>=3] +nan [+nan, +nan] deg n=0 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  neighbour |0>: M0L vs  kick, N=4 only (R1 form) [all]      +nan [+nan, +nan] deg n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  neighbour |0>: M0L vs  kick, slope with intercept (R2.3 form) [all] +nan [+nan, +nan] deg n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  neighbour |0>: M0L vs  coherence M-D, slope vs N [all]     +nan [+nan, +nan]  n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  neighbour |0>: M0L vs  coherence M-D, slope vs N [d<=2]    +nan [+nan, +nan]  n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  neighbour |0>: M0L vs  coherence M-D, slope vs N [d>=3]    +nan [+nan, +nan]  n=0 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  neighbour |0>: M0L vs  coherence M-D at N=4 [all]          +nan [+nan, +nan]  n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  context, per-read median kick (all kept clocks, not a reading): read 1 -10.069 | read 2 -10.613 | read 3 -10.521
+  single-clock values, read 1: clock(s) [81] kick [-10.07] deg/readout, distance [2]
+  single-clock values, read 2: clock(s) [81] kick [-10.61] deg/readout, distance [2]
+  single-clock values, read 3: clock(s) [81] kick [-10.52] deg/readout, distance [2]
+  neighbour |0>: M0L vs  kick, mean-projection variant [all] +nan [+nan, +nan] deg n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  neighbour |0>: M0L vs  kick, mean-projection variant [d<=2] +nan [+nan, +nan] deg n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  neighbour |0>: M0L vs  kick, mean-projection variant [d>=3] +nan [+nan, +nan] deg n=0 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+==============================================================================================================
+ibm_kingston | CLOCK 81B (67 clocks, five looked sets) | runs [1261, 1262, 1263] | jobs db35d9k2ljfc73d5ja60, db35ifs2ljfc73d5jg4g, db35nkvr11fs7397sg00
+  design audit: dark/idle arms realised on the 16-dt grid; max |realised - stated| / stated over its plain-delay arms = 0.18 %
+  copies (adaptation): the 3 reads are separate jobs; copy 0 = read 1, copy 1 = reads 2+3 pooled; pooled = all. Shots 400 per read per circuit.
+--------------------------------------------------------------------------------------------------------------
+CLOCK 81B (67 clocks, five looked sets) | P:A vs PD
+  looked set read from the data (mid-register columns): 20 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 67 in role file, 64 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=4 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 64, d<=2 20, d=3-4 32, d>=5 12, d>=3 44
+  P:A vs PD kick/readout, slope vs N (N=1/2/4) [all]         -0.6885 [-1.182, -0.345] deg n=64 -> BELOW   (copy gap +0.09288 [-0.17, +0.4646])
+  P:A vs PD kick/readout, slope vs N (N=1/2/4) [d<=2]        -2.84 [-5.9, -0.5146] deg n=20 -> BELOW   (copy gap +0.2411 [-0.3434, +0.8638])
+  P:A vs PD kick/readout, slope vs N (N=1/2/4) [d=3-4]       -0.4904 [-0.7887, -0.06178] deg n=32 -> BELOW   (copy gap +0.1766 [-0.2037, +0.4363])
+  P:A vs PD kick/readout, slope vs N (N=1/2/4) [d>=5]        -0.4552 [-1.063, +0.1328] deg n=12 -> CONSISTENT   (copy gap -0.1229 [-0.5925, +1.106])
+  P:A vs PD kick/readout, slope vs N (N=1/2/4) [d>=3]        -0.4904 [-0.7824, -0.2542] deg n=44 -> BELOW   (copy gap +0.03894 [-0.1833, +0.4363])
+  P:A vs PD kick, N=4 only (R1 form) [all]                   -0.7727 [-1.019, -0.3161] deg n=64 -> BELOW   (copy gap +0.2146 [-0.1094, +0.6254])
+  P:A vs PD kick, slope with intercept (R2.3 form) [all]     -1.248 [-1.857, -0.6399] deg n=64 -> BELOW   (copy gap +0.1264 [-0.7234, +0.9988])
+  P:A vs PD coherence M-D, slope vs N [all]                  -0.0004848 [-0.003937, +0.001945]  n=64 -> CONSISTENT   (copy gap -0.002466 [-0.005654, +5.602e-05])
+  P:A vs PD coherence M-D, slope vs N [d<=2]                 +0.0001777 [-0.005075, +0.003436]  n=20 -> CONSISTENT   (copy gap -0.002466 [-0.008897, +0.003114])
+  P:A vs PD coherence M-D, slope vs N [d>=3]                 -0.0006007 [-0.003937, +0.001977]  n=44 -> CONSISTENT   (copy gap -0.002779 [-0.005541, +0.001828])
+  P:A vs PD coherence M-D at N=4 [all]                       -0.003988 [-0.01317, +0.003717]  n=64 -> CONSISTENT   (copy gap -0.006736 [-0.01879, +0.01269])
+  context, per-read median kick (all kept clocks, not a reading): read 1 -0.455 | read 2 -1.083 | read 3 -0.889
+  P:A vs PD kick, mean-projection variant [all]              copies shifted +0.2167 [+0.0614, +0.6579] | copy0 -0.4523 copy1 -0.722 -> CANNOT TELL
+  P:A vs PD kick, mean-projection variant [d<=2]             -2.589 [-6.055, -0.5395] deg n=20 -> BELOW   (copy gap +0.2132 [-0.4108, +0.742])
+  P:A vs PD kick, mean-projection variant [d>=3]             copies shifted +0.2167 [+0.0506, +0.6855] | copy0 -0.1932 copy1 -0.5538 -> CANNOT TELL
+--------------------------------------------------------------------------------------------------------------
+CLOCK 81B (67 clocks, five looked sets) | P:B vs PD
+  looked set read from the data (mid-register columns): 19 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 67 in role file, 64 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=4 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 64, d<=2 18, d=3-4 30, d>=5 16, d>=3 46
+  P:B vs PD kick/readout, slope vs N (N=1/2/4) [all]         -0.8107 [-1.128, -0.2137] deg n=64 -> BELOW   (copy gap -0.2058 [-0.5194, +0.4068])
+  P:B vs PD kick/readout, slope vs N (N=1/2/4) [d<=2]        -3.129 [-5.545, -0.4494] deg n=18 -> BELOW   (copy gap -0.3672 [-1.074, +0.5802])
+  P:B vs PD kick/readout, slope vs N (N=1/2/4) [d=3-4]       -0.7071 [-1.091, -0.2137] deg n=30 -> BELOW   (copy gap -0.1369 [-0.4765, +0.5654])
+  P:B vs PD kick/readout, slope vs N (N=1/2/4) [d>=5]        +0.02415 [-1.128, +0.2294] deg n=16 -> CONSISTENT   (copy gap -0.3886 [-0.8172, +0.9636])
+  P:B vs PD kick/readout, slope vs N (N=1/2/4) [d>=3]        -0.4666 [-1.061, -0.1058] deg n=46 -> BELOW   (copy gap -0.17 [-0.48, +0.5119])
+  P:B vs PD kick, N=4 only (R1 form) [all]                   -0.6191 [-0.9498, -0.3588] deg n=64 -> BELOW   (copy gap -0.06453 [-0.5407, +0.4061])
+  P:B vs PD kick, slope with intercept (R2.3 form) [all]     -0.9673 [-1.63, -0.4001] deg n=64 -> BELOW   (copy gap -0.02955 [-0.4561, +0.4441])
+  P:B vs PD coherence M-D, slope vs N [all]                  -0.001323 [-0.00269, +0.002154]  n=64 -> CONSISTENT   (copy gap -0.0007467 [-0.004888, +0.002454])
+  P:B vs PD coherence M-D, slope vs N [d<=2]                 -0.001045 [-0.003767, +0.003097]  n=18 -> CONSISTENT   (copy gap -0.00619 [-0.01216, +0.005074])
+  P:B vs PD coherence M-D, slope vs N [d>=3]                 -0.001323 [-0.003079, +0.002587]  n=46 -> CONSISTENT   (copy gap +4.112e-05 [-0.002929, +0.004289])
+  P:B vs PD coherence M-D at N=4 [all]                       -0.003079 [-0.01631, +0.004412]  n=64 -> CONSISTENT   (copy gap -0.005827 [-0.02069, +0.008282])
+  context, per-read median kick (all kept clocks, not a reading): read 1 -0.542 | read 2 -0.936 | read 3 -0.597
+  P:B vs PD kick, mean-projection variant [all]              -0.6632 [-1.177, -0.07176] deg n=64 -> BELOW   (copy gap -0.002496 [-0.4254, +0.423])
+  P:B vs PD kick, mean-projection variant [d<=2]             -3.192 [-5.701, -0.6262] deg n=18 -> BELOW   (copy gap -0.2807 [-1.393, +0.6212])
+  P:B vs PD kick, mean-projection variant [d>=3]             -0.4424 [-0.8368, -0.02674] deg n=46 -> BELOW   (copy gap +0.134 [-0.3326, +0.5115])
+--------------------------------------------------------------------------------------------------------------
+CLOCK 81B (67 clocks, five looked sets) | P:C vs PD
+  looked set read from the data (mid-register columns): 1 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 67 in role file, 64 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=4 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 64, d<=2 3, d=3-4 8, d>=5 53, d>=3 61
+  P:C vs PD kick/readout, slope vs N (N=1/2/4) [all]         -0.1379 [-0.309, +0.1151] deg n=64 -> CONSISTENT   (copy gap +0.06512 [-0.1827, +0.2876])
+  P:C vs PD kick/readout, slope vs N (N=1/2/4) [d<=2]        +nan [+nan, +nan] deg n=3 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  P:C vs PD kick/readout, slope vs N (N=1/2/4) [d=3-4]       -0.1342 [-0.5901, +0.4313] deg n=8 -> CONSISTENT   (copy gap +0.2608 [-0.2307, +0.7178])
+  P:C vs PD kick/readout, slope vs N (N=1/2/4) [d>=5]        -0.1453 [-0.3448, +0.1303] deg n=53 -> CONSISTENT   (copy gap -0.03561 [-0.3655, +0.1861])
+  P:C vs PD kick/readout, slope vs N (N=1/2/4) [d>=3]        -0.1453 [-0.3204, +0.1303] deg n=61 -> CONSISTENT   (copy gap +0.02878 [-0.2307, +0.2036])
+  P:C vs PD kick, N=4 only (R1 form) [all]                   -0.1045 [-0.3689, +0.1412] deg n=64 -> CONSISTENT   (copy gap +0.01867 [-0.3294, +0.3049])
+  P:C vs PD kick, slope with intercept (R2.3 form) [all]     -0.3371 [-0.575, +0.0001368] deg n=64 -> CONSISTENT   (copy gap -0.1482 [-0.8071, +0.8442])
+  P:C vs PD coherence M-D, slope vs N [all]                  +0.0001986 [-0.00152, +0.0009717]  n=64 -> CONSISTENT   (copy gap -0.002808 [-0.005182, +0.001817])
+  P:C vs PD coherence M-D, slope vs N [d<=2]                 +nan [+nan, +nan]  n=3 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  P:C vs PD coherence M-D, slope vs N [d>=3]                 +0.0004566 [-0.001498, +0.0009798]  n=61 -> CONSISTENT   (copy gap -0.002622 [-0.005324, +0.00275])
+  P:C vs PD coherence M-D at N=4 [all]                       -0.002394 [-0.008333, +0.003511]  n=64 -> CONSISTENT   (copy gap -0.006191 [-0.02399, +0.008129])
+  context, per-read median kick (all kept clocks, not a reading): read 1 +0.010 | read 2 -0.194 | read 3 -0.043
+  P:C vs PD kick, mean-projection variant [all]              -0.09685 [-0.2189, +0.1303] deg n=64 -> CONSISTENT   (copy gap +0.08002 [-0.1198, +0.3533])
+  P:C vs PD kick, mean-projection variant [d<=2]             +nan [+nan, +nan] deg n=3 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  P:C vs PD kick, mean-projection variant [d>=3]             -0.1174 [-0.2189, +0.1409] deg n=61 -> CONSISTENT   (copy gap +0.03648 [-0.1534, +0.3737])
+--------------------------------------------------------------------------------------------------------------
+CLOCK 81B (67 clocks, five looked sets) | Q:A vs QD
+  looked set read from the data (mid-register columns): 20 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 67 in role file, 1 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=4 [dead-clock guard as reach_run]; 63 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 1, d<=2 1, d=3-4 0, d>=5 0, d>=3 0
+  Q:A vs QD kick/readout, slope vs N (N=1/2/4) [all]         +nan [+nan, +nan] deg n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  Q:A vs QD kick/readout, slope vs N (N=1/2/4) [d<=2]        +nan [+nan, +nan] deg n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  Q:A vs QD kick/readout, slope vs N (N=1/2/4) [d=3-4]       +nan [+nan, +nan] deg n=0 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  Q:A vs QD kick/readout, slope vs N (N=1/2/4) [d>=5]        +nan [+nan, +nan] deg n=0 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  Q:A vs QD kick/readout, slope vs N (N=1/2/4) [d>=3]        +nan [+nan, +nan] deg n=0 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  Q:A vs QD kick, N=4 only (R1 form) [all]                   +nan [+nan, +nan] deg n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  Q:A vs QD kick, slope with intercept (R2.3 form) [all]     +nan [+nan, +nan] deg n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  Q:A vs QD coherence M-D, slope vs N [all]                  +nan [+nan, +nan]  n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  Q:A vs QD coherence M-D, slope vs N [d<=2]                 +nan [+nan, +nan]  n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  Q:A vs QD coherence M-D, slope vs N [d>=3]                 +nan [+nan, +nan]  n=0 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  Q:A vs QD coherence M-D at N=4 [all]                       +nan [+nan, +nan]  n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  context, per-read median kick (all kept clocks, not a reading): read 1 -11.034 | read 2 -9.460 | read 3 -10.804
+  single-clock values, read 1: clock(s) [81] kick [-11.03] deg/readout, distance [2]
+  single-clock values, read 2: clock(s) [81] kick [-9.46] deg/readout, distance [2]
+  single-clock values, read 3: clock(s) [81] kick [-10.8] deg/readout, distance [2]
+  Q:A vs QD kick, mean-projection variant [all]              +nan [+nan, +nan] deg n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  Q:A vs QD kick, mean-projection variant [d<=2]             +nan [+nan, +nan] deg n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  Q:A vs QD kick, mean-projection variant [d>=3]             +nan [+nan, +nan] deg n=0 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+--------------------------------------------------------------------------------------------------------------
+CLOCK 81B (67 clocks, five looked sets) | Q:C vs QD
+  looked set read from the data (mid-register columns): 1 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 67 in role file, 1 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=4 [dead-clock guard as reach_run]; 63 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 1, d<=2 1, d=3-4 0, d>=5 0, d>=3 0
+  Q:C vs QD kick/readout, slope vs N (N=1/2/4) [all]         +nan [+nan, +nan] deg n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  Q:C vs QD kick/readout, slope vs N (N=1/2/4) [d<=2]        +nan [+nan, +nan] deg n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  Q:C vs QD kick/readout, slope vs N (N=1/2/4) [d=3-4]       +nan [+nan, +nan] deg n=0 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  Q:C vs QD kick/readout, slope vs N (N=1/2/4) [d>=5]        +nan [+nan, +nan] deg n=0 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  Q:C vs QD kick/readout, slope vs N (N=1/2/4) [d>=3]        +nan [+nan, +nan] deg n=0 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  Q:C vs QD kick, N=4 only (R1 form) [all]                   +nan [+nan, +nan] deg n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  Q:C vs QD kick, slope with intercept (R2.3 form) [all]     +nan [+nan, +nan] deg n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  Q:C vs QD coherence M-D, slope vs N [all]                  +nan [+nan, +nan]  n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  Q:C vs QD coherence M-D, slope vs N [d<=2]                 +nan [+nan, +nan]  n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  Q:C vs QD coherence M-D, slope vs N [d>=3]                 +nan [+nan, +nan]  n=0 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  Q:C vs QD coherence M-D at N=4 [all]                       +nan [+nan, +nan]  n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  context, per-read median kick (all kept clocks, not a reading): read 1 -10.560 | read 2 -8.813 | read 3 -10.220
+  single-clock values, read 1: clock(s) [81] kick [-10.56] deg/readout, distance [2]
+  single-clock values, read 2: clock(s) [81] kick [-8.81] deg/readout, distance [2]
+  single-clock values, read 3: clock(s) [81] kick [-10.22] deg/readout, distance [2]
+  Q:C vs QD kick, mean-projection variant [all]              +nan [+nan, +nan] deg n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  Q:C vs QD kick, mean-projection variant [d<=2]             +nan [+nan, +nan] deg n=1 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  Q:C vs QD kick, mean-projection variant [d>=3]             +nan [+nan, +nan] deg n=0 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+==============================================================================================================
+ibm_pittsburgh | REACH MAP (two sets of 8 single sources) | runs [1271, 1272, 1273] | jobs db35q3m8v0ts73c3v070, db35v3m8v0ts73c3vbcg, db3643nr11fs7397t7og
+  design audit: dark/idle arms realised on the 16-dt grid; max |realised - stated| / stated over its plain-delay arms = 0.18 %
+  copies (adaptation): the 3 reads are separate jobs; copy 0 = read 1, copy 1 = reads 2+3 pooled; pooled = all. Shots 400 per read per circuit.
+--------------------------------------------------------------------------------------------------------------
+REACH MAP (two sets of 8 single sources) | set 0: S0L vs D
+  looked set read from the data (mid-register columns): 5 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 86 in role file, 84 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=4 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 84, d<=2 15, d=3-4 30, d>=5 39, d>=3 69
+  set 0: S0L vs D kick/readout, slope vs N (N=1/2/4) [all]   -0.1692 [-0.2878, +0.01513] deg n=84 -> CONSISTENT   (copy gap -0.01034 [-0.4105, +0.388])
+  set 0: S0L vs D kick/readout, slope vs N (N=1/2/4) [d<=2]  -0.3299 [-0.813, -0.1693] deg n=15 -> BELOW   (copy gap -0.3001 [-0.6563, +1.135])
+  set 0: S0L vs D kick/readout, slope vs N (N=1/2/4) [d=3-4] -0.08654 [-0.2669, +0.2742] deg n=30 -> CONSISTENT   (copy gap -0.1006 [-0.5225, +0.6048])
+  set 0: S0L vs D kick/readout, slope vs N (N=1/2/4) [d>=5]  -0.09943 [-0.3719, +0.1177] deg n=39 -> CONSISTENT   (copy gap +0.2449 [-0.6787, +0.5215])
+  set 0: S0L vs D kick/readout, slope vs N (N=1/2/4) [d>=3]  -0.09943 [-0.2598, +0.07065] deg n=69 -> CONSISTENT   (copy gap +0.1087 [-0.4105, +0.4848])
+  set 0: S0L vs D kick, N=4 only (R1 form) [all]             -0.2137 [-0.3867, +0.09754] deg n=84 -> CONSISTENT   (copy gap +0.1577 [-0.3287, +0.4915])
+  set 0: S0L vs D kick, slope with intercept (R2.3 form) [all] -0.08949 [-0.3831, +0.4091] deg n=84 -> CONSISTENT   (copy gap +0.04278 [-0.5809, +0.8969])
+  set 0: S0L vs D coherence M-D, slope vs N [all]            -0.000729 [-0.001607, +0.0002758]  n=84 -> CONSISTENT   (copy gap -0.0002269 [-0.002515, +0.002031])
+  set 0: S0L vs D coherence M-D, slope vs N [d<=2]           -0.001139 [-0.003808, +0.001794]  n=15 -> CONSISTENT   (copy gap -0.001077 [-0.006595, +0.001472])
+  set 0: S0L vs D coherence M-D, slope vs N [d>=3]           -0.0006474 [-0.001409, +0.0004036]  n=69 -> CONSISTENT   (copy gap -7.189e-05 [-0.002578, +0.00303])
+  set 0: S0L vs D coherence M-D at N=4 [all]                 -0.003462 [-0.01014, +0.002311]  n=84 -> CONSISTENT   (copy gap +0.001064 [-0.01236, +0.01382])
+  context, per-read median kick (all kept clocks, not a reading): read 1 -0.245 | read 2 -0.067 | read 3 -0.108
+  set 0: S0L vs D kick, mean-projection variant [all]        -0.1938 [-0.3576, +0.04873] deg n=84 -> CONSISTENT   (copy gap +0.1181 [-0.2805, +0.4301])
+  set 0: S0L vs D kick, mean-projection variant [d<=2]       -0.4147 [-0.8427, -0.1614] deg n=15 -> BELOW   (copy gap -0.3782 [-0.6131, +0.6031])
+  set 0: S0L vs D kick, mean-projection variant [d>=3]       -0.1052 [-0.2623, +0.1048] deg n=69 -> CONSISTENT   (copy gap +0.1776 [-0.2128, +0.4364])
+--------------------------------------------------------------------------------------------------------------
+REACH MAP (two sets of 8 single sources) | set 1: S1L vs D
+  looked set read from the data (mid-register columns): 7 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 86 in role file, 84 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=4 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 84, d<=2 15, d=3-4 34, d>=5 35, d>=3 69
+  set 1: S1L vs D kick/readout, slope vs N (N=1/2/4) [all]   -0.2354 [-0.3582, +0.01659] deg n=84 -> CONSISTENT   (copy gap +0.2488 [-0.2027, +0.4853])
+  set 1: S1L vs D kick/readout, slope vs N (N=1/2/4) [d<=2]  -0.4101 [-0.6232, +0.1105] deg n=15 -> CONSISTENT   (copy gap +0.1708 [-0.6025, +1.054])
+  set 1: S1L vs D kick/readout, slope vs N (N=1/2/4) [d=3-4] -0.1416 [-0.4922, +0.1468] deg n=34 -> CONSISTENT   (copy gap +0.1393 [-0.1673, +0.6212])
+  set 1: S1L vs D kick/readout, slope vs N (N=1/2/4) [d>=5]  -0.2357 [-0.373, +0.04133] deg n=35 -> CONSISTENT   (copy gap +0.2552 [-0.6302, +0.7408])
+  set 1: S1L vs D kick/readout, slope vs N (N=1/2/4) [d>=3]  -0.181 [-0.3455, +0.02858] deg n=69 -> CONSISTENT   (copy gap +0.2552 [-0.1835, +0.4968])
+  set 1: S1L vs D kick, N=4 only (R1 form) [all]             -0.2018 [-0.4338, -0.04019] deg n=84 -> BELOW   (copy gap +0.2181 [-0.4074, +0.5631])
+  set 1: S1L vs D kick, slope with intercept (R2.3 form) [all] -0.2701 [-0.6515, -0.06882] deg n=84 -> BELOW   (copy gap +0.4571 [-0.6994, +0.8378])
+  set 1: S1L vs D coherence M-D, slope vs N [all]            -0.0009729 [-0.002602, +0.0005602]  n=84 -> CONSISTENT   (copy gap -0.0006435 [-0.003392, +0.001158])
+  set 1: S1L vs D coherence M-D, slope vs N [d<=2]           -0.001112 [-0.004497, +0.002521]  n=15 -> CONSISTENT   (copy gap -0.0001057 [-0.004992, +0.006086])
+  set 1: S1L vs D coherence M-D, slope vs N [d>=3]           -0.0008919 [-0.003037, +0.0006882]  n=69 -> CONSISTENT   (copy gap -0.000988 [-0.004031, +0.001266])
+  set 1: S1L vs D coherence M-D at N=4 [all]                 -0.005515 [-0.01181, +0.001313]  n=84 -> CONSISTENT   (copy gap -0.006651 [-0.01724, +0.01444])
+  context, per-read median kick (all kept clocks, not a reading): read 1 -0.173 | read 2 -0.075 | read 3 -0.287
+  set 1: S1L vs D kick, mean-projection variant [all]        -0.2056 [-0.3402, -0.04389] deg n=84 -> BELOW   (copy gap +0.3183 [-0.2656, +0.5582])
+  set 1: S1L vs D kick, mean-projection variant [d<=2]       -0.2447 [-0.6869, -0.0626] deg n=15 -> BELOW   (copy gap +0.02354 [-0.5524, +1.123])
+  set 1: S1L vs D kick, mean-projection variant [d>=3]       -0.148 [-0.3309, -0.0244] deg n=69 -> BELOW   (copy gap +0.3657 [-0.2684, +0.6117])
+==============================================================================================================
+ibm_pittsburgh | MEILONG / STATE-DARK FLOWERS (25 looked) | runs [1281, 1282, 1283] | jobs db369mm8v0ts73c3vsmg, db36eq42ljfc73d5l1hg, db36ju39kq9s73at8ho0
+  design audit: dark/idle arms realised on the 16-dt grid; max |realised - stated| / stated over its plain-delay arms = 0.18 %
+  copies (adaptation): the 3 reads are separate jobs; copy 0 = read 1, copy 1 = reads 2+3 pooled; pooled = all. Shots 400 per read per circuit.
+--------------------------------------------------------------------------------------------------------------
+MEILONG / STATE-DARK FLOWERS (25 looked) | looked |0>: K vs D0
+  looked set read from the data (mid-register columns): 25 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 61 in role file, 58 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=4 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 58, d<=2 26, d=3-4 16, d>=5 16, d>=3 32
+  looked |0>: K vs D0 kick/readout, slope vs N (N=1/2/4) [all] -0.224 [-0.3997, -0.05127] deg n=58 -> BELOW   (copy gap +0.00936 [-0.2224, +0.2391])
+  looked |0>: K vs D0 kick/readout, slope vs N (N=1/2/4) [d<=2] -0.4326 [-2.95, -0.1659] deg n=26 -> BELOW   (copy gap +0.09028 [-0.1917, +0.3108])
+  looked |0>: K vs D0 kick/readout, slope vs N (N=1/2/4) [d=3-4] -0.2233 [-0.6084, +0.02941] deg n=16 -> CONSISTENT   (copy gap -0.1103 [-0.9311, +0.3793])
+  looked |0>: K vs D0 kick/readout, slope vs N (N=1/2/4) [d>=5] +0.2798 [-0.1341, +0.4472] deg n=16 -> CONSISTENT   (copy gap -0.1027 [-0.7104, +0.5948])
+  looked |0>: K vs D0 kick/readout, slope vs N (N=1/2/4) [d>=3] -0.05502 [-0.2745, +0.1866] deg n=32 -> CONSISTENT   (copy gap -0.1103 [-0.6145, +0.2753])
+  looked |0>: K vs D0 kick, N=4 only (R1 form) [all]         -0.343 [-0.6052, +0.004825] deg n=58 -> CONSISTENT   (copy gap +0.08283 [-0.2437, +0.3424])
+  looked |0>: K vs D0 kick, slope with intercept (R2.3 form) [all] -0.1934 [-0.7089, +0.03746] deg n=58 -> CONSISTENT   (copy gap +0.6082 [-0.3267, +1.292])
+  looked |0>: K vs D0 coherence M-D, slope vs N [all]        copies shifted -0.003887 [-0.008222, -0.001326] | copy0 -0.004254 copy1 -0.0003781 -> CANNOT TELL
+  looked |0>: K vs D0 coherence M-D, slope vs N [d<=2]       +0.0001626 [-0.002042, +0.003237]  n=26 -> CONSISTENT   (copy gap -0.003058 [-0.006958, +0.0005428])
+  looked |0>: K vs D0 coherence M-D, slope vs N [d>=3]       copies shifted -0.005635 [-0.009517, -9.668e-05] | copy0 -0.004788 copy1 -0.002261 -> CANNOT TELL
+  looked |0>: K vs D0 coherence M-D at N=4 [all]             copies shifted -0.01691 [-0.0297, -0.0004347] | copy0 -0.01149 copy1 -0.001495 -> CANNOT TELL
+  context, per-read median kick (all kept clocks, not a reading): read 1 -0.442 | read 2 -0.066 | read 3 -0.487
+  looked |0>: K vs D0 kick, mean-projection variant [all]    -0.2396 [-0.6523, -0.04432] deg n=58 -> BELOW   (copy gap -0.1014 [-0.3653, +0.2725])
+  looked |0>: K vs D0 kick, mean-projection variant [d<=2]   -0.6885 [-2.79, -0.1096] deg n=26 -> BELOW   (copy gap +0.07982 [-0.2116, +0.5526])
+  looked |0>: K vs D0 kick, mean-projection variant [d>=3]   -0.1118 [-0.4039, +0.1815] deg n=32 -> CONSISTENT   (copy gap -0.2919 [-0.7553, +0.127])
+--------------------------------------------------------------------------------------------------------------
+MEILONG / STATE-DARK FLOWERS (25 looked) | looked |1>: S1 vs D1
+  looked set read from the data (mid-register columns): 25 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 61 in role file, 58 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=4 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 58, d<=2 26, d=3-4 16, d>=5 16, d>=3 32
+  looked |1>: S1 vs D1 kick/readout, slope vs N (N=1/2/4) [all] -0.3562 [-0.751, -0.1365] deg n=58 -> BELOW   (copy gap -0.1099 [-0.6407, +0.5242])
+  looked |1>: S1 vs D1 kick/readout, slope vs N (N=1/2/4) [d<=2] -0.796 [-3.23, -0.2253] deg n=26 -> BELOW   (copy gap -0.2231 [-0.8668, +0.7568])
+  looked |1>: S1 vs D1 kick/readout, slope vs N (N=1/2/4) [d=3-4] -0.5701 [-0.9374, -0.1057] deg n=16 -> BELOW   (copy gap +0.1367 [-0.7607, +0.8589])
+  looked |1>: S1 vs D1 kick/readout, slope vs N (N=1/2/4) [d>=5] -0.09322 [-0.255, +0.2698] deg n=16 -> CONSISTENT   (copy gap +0.01721 [-1.096, +1.073])
+  looked |1>: S1 vs D1 kick/readout, slope vs N (N=1/2/4) [d>=3] -0.1958 [-0.411, -0.04922] deg n=32 -> BELOW   (copy gap +0.1367 [-0.7607, +0.8292])
+  looked |1>: S1 vs D1 kick, N=4 only (R1 form) [all]        -0.5344 [-0.8964, -0.1675] deg n=58 -> BELOW   (copy gap +0.01927 [-0.6681, +0.3311])
+  looked |1>: S1 vs D1 kick, slope with intercept (R2.3 form) [all] -0.7092 [-1.193, -0.2772] deg n=58 -> BELOW   (copy gap -0.4488 [-1.162, +0.4687])
+  looked |1>: S1 vs D1 coherence M-D, slope vs N [all]       copies shifted -0.001911 [-0.004834, -1.571e-05] | copy0 -0.003299 copy1 -0.001525 -> CANNOT TELL
+  looked |1>: S1 vs D1 coherence M-D, slope vs N [d<=2]      -0.0008861 [-0.0032, +0.003128]  n=26 -> CONSISTENT   (copy gap -0.002502 [-0.005995, +0.002113])
+  looked |1>: S1 vs D1 coherence M-D, slope vs N [d>=3]      -0.002609 [-0.004286, -0.0001508]  n=32 -> BELOW   (copy gap -0.001911 [-0.00809, +0.002973])
+  looked |1>: S1 vs D1 coherence M-D at N=4 [all]            -0.008808 [-0.01734, -0.001532]  n=58 -> BELOW   (copy gap -0.01332 [-0.02239, +0.002217])
+  context, per-read median kick (all kept clocks, not a reading): read 1 -0.481 | read 2 -0.568 | read 3 -0.563
+  looked |1>: S1 vs D1 kick, mean-projection variant [all]   -0.394 [-0.7443, -0.1409] deg n=58 -> BELOW   (copy gap -0.2105 [-0.5927, +0.565])
+  looked |1>: S1 vs D1 kick, mean-projection variant [d<=2]  -0.6813 [-3.135, -0.2098] deg n=26 -> BELOW   (copy gap -0.2197 [-0.8635, +0.6101])
+  looked |1>: S1 vs D1 kick, mean-projection variant [d>=3]  -0.2192 [-0.4461, +0.05541] deg n=32 -> CONSISTENT   (copy gap -0.09682 [-0.6287, +0.6199])
+--------------------------------------------------------------------------------------------------------------
+MEILONG / STATE-DARK FLOWERS (25 looked) | looked half-way: SH vs DH
+  looked set read from the data (mid-register columns): 25 bits, identical across N and reads: True, subset of role file far: True, overlaps a clock: False
+  clocks: 61 in role file, 59 kept (cloud separation > 3 in every read, not looked at, coherence >= 5/sqrt(1200) = 0.1443 in both arms at N=4 [dead-clock guard as reach_run]; 0 dropped as never put on the equator in this arm, coherence > 1.25)
+  clocks per distance bin (couplings to nearest looked bit): all 59, d<=2 27, d=3-4 16, d>=5 16, d>=3 32
+  looked half-way: SH vs kick/readout, slope vs N (N=1/2/4) [all] -0.3341 [-0.6472, -0.05328] deg n=59 -> BELOW   (copy gap -0.1291 [-0.3678, +0.3126])
+  looked half-way: SH vs kick/readout, slope vs N (N=1/2/4) [d<=2] -0.8258 [-2.865, -0.05364] deg n=27 -> BELOW   (copy gap -0.3678 [-0.6919, +0.4477])
+  looked half-way: SH vs kick/readout, slope vs N (N=1/2/4) [d=3-4] -0.5584 [-0.8213, +0.1112] deg n=16 -> CONSISTENT   (copy gap +0.08067 [-0.6534, +0.3298])
+  looked half-way: SH vs kick/readout, slope vs N (N=1/2/4) [d>=5] +0.009398 [-0.3685, +0.364] deg n=16 -> CONSISTENT   (copy gap +0.09243 [-0.3007, +0.6884])
+  looked half-way: SH vs kick/readout, slope vs N (N=1/2/4) [d>=3] -0.1396 [-0.4644, +0.1091] deg n=32 -> CONSISTENT   (copy gap +0.09243 [-0.1982, +0.3298])
+  looked half-way: SH vs kick, N=4 only (R1 form) [all]      -0.4999 [-0.6732, -0.08554] deg n=59 -> BELOW   (copy gap -0.05019 [-0.4729, +0.1242])
+  looked half-way: SH vs kick, slope with intercept (R2.3 form) [all] -0.6445 [-1.061, -0.2064] deg n=59 -> BELOW   (copy gap -0.663 [-1.311, +0.3365])
+  looked half-way: SH vs coherence M-D, slope vs N [all]     -0.001001 [-0.003784, +0.001287]  n=59 -> CONSISTENT   (copy gap -9.572e-05 [-0.00568, +0.002327])
+  looked half-way: SH vs coherence M-D, slope vs N [d<=2]    -0.003246 [-0.004562, +0.002493]  n=27 -> CONSISTENT   (copy gap -0.0001908 [-0.009293, +0.006274])
+  looked half-way: SH vs coherence M-D, slope vs N [d>=3]    +0.0002062 [-0.001833, +0.001934]  n=32 -> CONSISTENT   (copy gap +8.218e-05 [-0.006367, +0.00363])
+  looked half-way: SH vs coherence M-D at N=4 [all]          -0.003742 [-0.01448, +0.01058]  n=59 -> CONSISTENT   (copy gap -0.005303 [-0.02265, +0.01148])
+  context, per-read median kick (all kept clocks, not a reading): read 1 -0.442 | read 2 -0.570 | read 3 -0.238
+  looked half-way: SH vs kick, mean-projection variant [all] -0.3752 [-0.6445, -0.1357] deg n=58 -> BELOW   (copy gap -0.06836 [-0.3529, +0.1193])
+  looked half-way: SH vs kick, mean-projection variant [d<=2] -0.8626 [-3.022, -0.1302] deg n=26 -> BELOW   (copy gap -0.3108 [-0.7684, +0.231])
+  looked half-way: SH vs kick, mean-projection variant [d>=3] -0.2528 [-0.4867, +0.1076] deg n=32 -> CONSISTENT   (copy gap -0.006984 [-0.2987, +0.245])
+==============================================================================================================
+PER-CHIP POOL (units = clock x family; plain |0> back-to-back arms only: the K-type arms with the looked bits in |0>; clocks repeat across families on a chip, so the pooled n counts repeated measures)
+  Used here only to give one per-chip line by distance. Per-family readings above are the readings of record.
+--------------------------------------------------------------------------------------------------------------
+ibm_pittsburgh pool of: FLOOR (corner, 12 looked) / K vs D; REACH MAP (two sets of 8 single sources) / set 0: S0L vs D; REACH MAP (two sets of 8 single sources) / set 1: S1L vs D; MEILONG / STATE-DARK FLOWERS (25 looked) / looked |0>: K vs D0
+  pittsburgh POOL kick/readout [all]                         -0.1357 [-0.1987, -0.0626] deg n=301 -> BELOW   (copy gap +0.009146 [-0.08575, +0.1482])
+  pittsburgh POOL kick/readout [d<=2]                        -0.4238 [-0.8111, -0.2291] deg n=60 -> BELOW   (copy gap -0.1849 [-0.405, +0.1268])
+  pittsburgh POOL kick/readout [d=3-4]                       -0.1411 [-0.3916, +0.00113] deg n=85 -> CONSISTENT   (copy gap +0.2902 [-0.08157, +0.5534])
+  pittsburgh POOL kick/readout [d>=5]                        -0.09351 [-0.1467, -0.02599] deg n=156 -> BELOW   (copy gap +0.007223 [-0.1723, +0.1704])
+  pittsburgh POOL kick/readout [d>=3]                        -0.108 [-0.148, -0.02759] deg n=241 -> BELOW   (copy gap +0.04911 [-0.08157, +0.2284])
+--------------------------------------------------------------------------------------------------------------
+ibm_fez pool of: FLOOR (corner, 12 looked) / K vs D
+  fez POOL kick/readout [all]                                -0.03789 [-0.0954, +0.06586] deg n=73 -> CONSISTENT   (copy gap -0.001003 [-0.1889, +0.1446])
+  fez POOL kick/readout [d<=2]                               +nan [+nan, +nan] deg n=4 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  fez POOL kick/readout [d=3-4]                              -0.2356 [-0.4429, +0.1953] deg n=5 -> CONSISTENT   (copy gap +0.07296 [-2.295, +0.9221])
+  fez POOL kick/readout [d>=5]                               -0.01633 [-0.07186, +0.1028] deg n=64 -> CONSISTENT   (copy gap +0.01214 [-0.2094, +0.1894])
+  fez POOL kick/readout [d>=3]                               -0.03661 [-0.08644, +0.08417] deg n=69 -> CONSISTENT   (copy gap +0.01916 [-0.1889, +0.1894])
+--------------------------------------------------------------------------------------------------------------
+ibm_aachen pool of: FLOOR (corner, 12 looked) / K vs D
+  aachen POOL kick/readout [all]                             -0.04142 [-0.1513, +0.1156] deg n=75 -> CONSISTENT   (copy gap -0.06234 [-0.191, +0.08574])
+  aachen POOL kick/readout [d<=2]                            +nan [+nan, +nan] deg n=4 -> CANNOT TELL   (copy gap +nan [+nan, +nan])
+  aachen POOL kick/readout [d=3-4]                           -0.163 [-1.93, +0.1692] deg n=5 -> CONSISTENT   (copy gap -0.2786 [-0.5061, +1.104])
+  aachen POOL kick/readout [d>=5]                            +0.03667 [-0.1023, +0.1231] deg n=66 -> CONSISTENT   (copy gap -0.06231 [-0.2104, +0.1152])
+  aachen POOL kick/readout [d>=3]                            +0.035 [-0.1038, +0.121] deg n=71 -> CONSISTENT   (copy gap -0.06234 [-0.2297, +0.08574])
+--------------------------------------------------------------------------------------------------------------
+ibm_kingston pool of: STATE-DARK FLOWERS (25 looked) / looked |0>: K vs D0; SPACED LOOKS (25 looked) / looked |0>: K vs D0; CARRIERS ACROSS CALIBRATIONS (25 looked) / index order: K vs D0
+  kingston POOL kick/readout [all]                           -0.4334 [-0.6332, -0.2207] deg n=173 -> BELOW   (copy gap +0.0133 [-0.08357, +0.1592])
+  kingston POOL kick/readout [d<=2]                          -0.9074 [-11.95, -0.6332] deg n=75 -> BELOW   (copy gap +0.0947 [-0.1052, +0.4446])
+  kingston POOL kick/readout [d=3-4]                         -0.4334 [-0.8597, -0.02221] deg n=53 -> BELOW   (copy gap -0.02944 [-0.3973, +0.1578])
+  kingston POOL kick/readout [d>=5]                          -0.0646 [-0.2838, +0.08519] deg n=45 -> CONSISTENT   (copy gap +0.05755 [-0.09179, +0.2368])
+  kingston POOL kick/readout [d>=3]                          -0.1299 [-0.3464, -0.01355] deg n=98 -> BELOW   (copy gap -0.004422 [-0.1202, +0.141])
+
+==============================================================================================================
+SUMMARY TABLE (paper convention: kick negative = same direction as 21-22 Oct; deg per readout; bins = couplings to nearest looked bit)
+pittsburgh | FLOOR (corner, 12 looked) | K vs D
+    kick all    +0.000 [-0.082,+0.061] n=76 CONSISTENT
+    kick d<=2   n=4 -> CANNOT TELL
+    kick d=3-4  +0.036 [-1.911,+0.380] n=5 CONSISTENT
+    kick d>=5   +0.003 [-0.082,+0.065] n=67 CONSISTENT
+    kick d>=3   +0.004 [-0.079,+0.065] n=72 CONSISTENT
+    kickN4      -0.003 [-0.118,+0.077] n=76 CONSISTENT
+    coh all     -0.000 [-0.001,+0.000] n=76 CONSISTENT
+    coh d<=2    n=4 -> CANNOT TELL
+    coh d>=3    -0.000 [-0.001,+0.000] n=72 CONSISTENT
+    cohN4       +0.001 [-0.005,+0.005] n=76 CONSISTENT
+fez | FLOOR (corner, 12 looked) | K vs D
+    kick all    -0.036 [-0.087,+0.063] n=73 CONSISTENT
+    kick d<=2   n=4 -> CANNOT TELL
+    kick d=3-4  -0.242 [-0.423,+0.068] n=5 CONSISTENT
+    kick d>=5   -0.009 [-0.055,+0.085] n=64 CONSISTENT
+    kick d>=3   -0.010 [-0.068,+0.068] n=69 CONSISTENT
+    kickN4      -0.220 [-0.401,+0.054] n=73 CONSISTENT
+    coh all     -0.001 [-0.002,-0.000] n=73 BELOW
+    coh d<=2    n=4 -> CANNOT TELL
+    coh d>=3    -0.001 [-0.002,-0.000] n=69 BELOW
+    cohN4       copies shifted -> CANNOT TELL
+aachen | FLOOR (corner, 12 looked) | K vs D
+    kick all    +0.008 [-0.127,+0.150] n=75 CONSISTENT
+    kick d<=2   n=4 -> CANNOT TELL
+    kick d=3-4  -0.171 [-1.836,+0.340] n=5 CONSISTENT
+    kick d>=5   +0.030 [-0.094,+0.158] n=66 CONSISTENT
+    kick d>=3   +0.027 [-0.109,+0.154] n=71 CONSISTENT
+    kickN4      +0.103 [-0.153,+0.275] n=75 CONSISTENT
+    coh all     copies shifted -> CANNOT TELL
+    coh d<=2    n=4 -> CANNOT TELL
+    coh d>=3    copies shifted -> CANNOT TELL
+    cohN4       -0.010 [-0.015,-0.003] n=75 BELOW
+kingston | STATE-DARK FLOWERS (25 looked) | looked |0>: K vs D0
+    kick all    -0.323 [-0.622,-0.112] n=57 BELOW
+    kick d<=2   -0.734 [-12.857,-0.263] n=25 BELOW
+    kick d=3-4  -0.384 [-1.096,-0.025] n=17 BELOW
+    kick d>=5   -0.096 [-0.267,+0.128] n=15 CONSISTENT
+    kick d>=3   -0.164 [-0.325,-0.025] n=32 BELOW
+    kickN4      -0.512 [-0.883,-0.241] n=57 BELOW
+    coh all     -0.000 [-0.001,+0.001] n=57 CONSISTENT
+    coh d<=2    -0.000 [-0.002,+0.001] n=25 CONSISTENT
+    coh d>=3    -0.000 [-0.001,+0.001] n=32 CONSISTENT
+    cohN4       -0.009 [-0.017,+0.002] n=57 CONSISTENT
+kingston | STATE-DARK FLOWERS (25 looked) | looked |1>: S1 vs D1
+    kick all    -0.257 [-0.692,-0.100] n=56 BELOW
+    kick d<=2   -0.692 [-17.486,-0.251] n=25 BELOW
+    kick d=3-4  -0.650 [-1.450,-0.097] n=16 BELOW
+    kick d>=5   -0.066 [-0.124,+0.159] n=15 CONSISTENT
+    kick d>=3   -0.124 [-0.263,-0.066] n=31 BELOW
+    kickN4      -0.408 [-0.662,-0.156] n=56 BELOW
+    coh all     -0.001 [-0.001,-0.000] n=56 BELOW
+    coh d<=2    -0.001 [-0.002,-0.000] n=25 BELOW
+    coh d>=3    copies shifted -> CANNOT TELL
+    cohN4       -0.006 [-0.016,+0.003] n=56 CONSISTENT
+kingston | STATE-DARK FLOWERS (25 looked) | looked half-way: SH vs DH
+    kick all    -0.302 [-0.527,-0.109] n=56 BELOW
+    kick d<=2   -0.846 [-14.930,-0.307] n=25 BELOW
+    kick d=3-4  -0.146 [-0.722,+0.174] n=16 CONSISTENT
+    kick d>=5   -0.106 [-0.287,+0.091] n=15 CONSISTENT
+    kick d>=3   -0.112 [-0.287,+0.034] n=31 CONSISTENT
+    kickN4      -0.551 [-0.837,-0.378] n=56 BELOW
+    coh all     -0.000 [-0.001,+0.000] n=56 CONSISTENT
+    coh d<=2    -0.001 [-0.003,+0.000] n=25 CONSISTENT
+    coh d>=3    +0.000 [-0.001,+0.001] n=31 CONSISTENT
+    cohN4       -0.008 [-0.021,+0.011] n=56 CONSISTENT
+kingston | SPACED LOOKS (25 looked) | looked |0>: K vs D0
+    kick all    -0.338 [-0.873,-0.052] n=58 BELOW
+    kick d<=2   -1.024 [-12.692,-0.161] n=25 BELOW
+    kick d=3-4  -0.682 [-1.280,+0.445] n=18 CONSISTENT
+    kick d>=5   -0.024 [-0.157,+0.204] n=15 CONSISTENT
+    kick d>=3   -0.058 [-0.462,+0.158] n=33 CONSISTENT
+    kickN4      -0.457 [-0.875,+0.013] n=58 CONSISTENT
+    coh all     -0.002 [-0.003,+0.000] n=58 CONSISTENT
+    coh d<=2    -0.002 [-0.007,+0.000] n=25 CONSISTENT
+    coh d>=3    -0.001 [-0.003,+0.001] n=33 CONSISTENT
+    cohN4       -0.003 [-0.014,+0.008] n=58 CONSISTENT
+kingston | SPACED LOOKS (25 looked) | looked |1>: S1 vs D1
+    kick all    -0.466 [-0.712,-0.076] n=58 BELOW
+    kick d<=2   -1.133 [-17.225,-0.082] n=25 BELOW
+    kick d=3-4  -0.302 [-1.532,+0.414] n=18 CONSISTENT
+    kick d>=5   copies shifted -> CANNOT TELL
+    kick d>=3   -0.140 [-0.583,+0.119] n=33 CONSISTENT
+    kickN4      -0.496 [-0.801,-0.059] n=58 BELOW
+    coh all     -0.001 [-0.003,+0.000] n=58 CONSISTENT
+    coh d<=2    +0.000 [-0.003,+0.001] n=25 CONSISTENT
+    coh d>=3    -0.002 [-0.004,-0.000] n=33 BELOW
+    cohN4       -0.008 [-0.015,+0.005] n=58 CONSISTENT
+kingston | SPACED LOOKS (25 looked) | looked half-way: SH vs DH
+    kick all    -0.577 [-1.005,-0.298] n=58 BELOW
+    kick d<=2   -1.378 [-13.451,-0.346] n=25 BELOW
+    kick d=3-4  -0.357 [-1.005,+0.047] n=18 CONSISTENT
+    kick d>=5   -0.305 [-0.680,+0.001] n=15 CONSISTENT
+    kick d>=3   -0.305 [-0.697,-0.172] n=33 BELOW
+    kickN4      -0.629 [-0.936,-0.486] n=58 BELOW
+    coh all     -0.003 [-0.004,-0.001] n=58 BELOW
+    coh d<=2    -0.003 [-0.005,-0.001] n=25 BELOW
+    coh d>=3    -0.001 [-0.004,+0.001] n=33 CONSISTENT
+    cohN4       -0.007 [-0.021,-0.002] n=58 BELOW
+kingston | SPACED LOOKS, 3 us gaps (25 looked) | gapped |0>: G0 vs E0
+    kick all    -0.572 [-1.000,-0.114] n=57 BELOW
+    kick d<=2   -1.270 [-12.614,-0.602] n=25 BELOW
+    kick d=3-4  -0.124 [-1.283,+0.281] n=17 CONSISTENT
+    kick d>=5   +0.329 [-0.572,+0.647] n=15 CONSISTENT
+    kick d>=3   -0.114 [-0.572,+0.488] n=32 CONSISTENT
+    kickN4      -0.471 [-1.122,-0.088] n=57 BELOW
+    coh all     +0.001 [-0.001,+0.002] n=57 CONSISTENT
+    coh d<=2    +0.001 [+0.000,+0.003] n=25 ABOVE
+    coh d>=3    -0.000 [-0.003,+0.002] n=32 CONSISTENT
+    cohN4       -0.000 [-0.013,+0.009] n=57 CONSISTENT
+kingston | SPACED LOOKS, 3 us gaps (25 looked) | gapped |1>: G1 vs E1
+    kick all    -0.434 [-0.708,-0.186] n=57 BELOW
+    kick d<=2   -0.722 [-12.588,-0.351] n=25 BELOW
+    kick d=3-4  -0.510 [-1.335,-0.117] n=17 BELOW
+    kick d>=5   +0.152 [-0.448,+0.435] n=15 CONSISTENT
+    kick d>=3   -0.225 [-0.596,+0.019] n=32 CONSISTENT
+    kickN4      -0.412 [-0.970,-0.191] n=57 BELOW
+    coh all     copies shifted -> CANNOT TELL
+    coh d<=2    copies shifted -> CANNOT TELL
+    coh d>=3    +0.000 [-0.004,+0.002] n=32 CONSISTENT
+    cohN4       copies shifted -> CANNOT TELL
+kingston | SPACED LOOKS, 3 us gaps (25 looked) | gapped half-way: GH vs EH
+    kick all    -0.437 [-0.718,-0.011] n=57 BELOW
+    kick d<=2   -1.192 [-12.673,+0.041] n=25 CONSISTENT
+    kick d=3-4  -0.509 [-1.149,+0.055] n=17 CONSISTENT
+    kick d>=5   +0.039 [-0.437,+0.449] n=15 CONSISTENT
+    kick d>=3   -0.336 [-0.509,+0.101] n=32 CONSISTENT
+    kickN4      -0.383 [-0.674,-0.044] n=57 BELOW
+    coh all     +0.000 [-0.001,+0.002] n=57 CONSISTENT
+    coh d<=2    +0.003 [-0.004,+0.007] n=25 CONSISTENT
+    coh d>=3    -0.000 [-0.001,+0.001] n=32 CONSISTENT
+    cohN4       -0.003 [-0.008,+0.008] n=57 CONSISTENT
+kingston | WIRE PAINT (25 looked) | rotation 0: P0L vs P0D
+    kick all    -0.428 [-0.758,-0.290] n=58 BELOW
+    kick d<=2   -1.116 [-18.259,-0.411] n=25 BELOW
+    kick d=3-4  -0.416 [-1.013,+0.143] n=18 CONSISTENT
+    kick d>=5   +0.004 [-0.360,+0.314] n=15 CONSISTENT
+    kick d>=3   -0.290 [-0.445,+0.193] n=33 CONSISTENT
+    kickN4      -0.386 [-0.951,-0.078] n=58 BELOW
+    coh all     +0.000 [-0.002,+0.002] n=58 CONSISTENT
+    coh d<=2    +0.000 [-0.003,+0.002] n=25 CONSISTENT
+    coh d>=3    +0.001 [-0.005,+0.002] n=33 CONSISTENT
+    cohN4       +0.006 [-0.004,+0.012] n=58 CONSISTENT
+kingston | WIRE PAINT (25 looked) | rotation 1: P1L vs P1D
+    kick all    -0.290 [-0.966,-0.075] n=58 BELOW
+    kick d<=2   -1.211 [-13.749,-0.033] n=25 BELOW
+    kick d=3-4  -0.563 [-1.536,-0.128] n=18 BELOW
+    kick d>=5   +0.039 [-0.311,+0.253] n=15 CONSISTENT
+    kick d>=3   -0.173 [-0.778,-0.022] n=33 BELOW
+    kickN4      -0.225 [-0.810,-0.049] n=58 BELOW
+    coh all     copies shifted -> CANNOT TELL
+    coh d<=2    +0.000 [-0.005,+0.002] n=25 CONSISTENT
+    coh d>=3    -0.002 [-0.005,-0.000] n=33 BELOW
+    cohN4       -0.008 [-0.018,+0.001] n=58 CONSISTENT
+kingston | WIRE PAINT (25 looked) | rotation 2: P2L vs P2D
+    kick all    -0.518 [-0.928,-0.319] n=58 BELOW
+    kick d<=2   -1.124 [-16.048,-0.303] n=25 BELOW
+    kick d=3-4  -0.767 [-1.229,-0.202] n=18 BELOW
+    kick d>=5   -0.173 [-0.417,+0.001] n=15 CONSISTENT
+    kick d>=3   -0.411 [-0.665,-0.093] n=33 BELOW
+    kickN4      -0.422 [-0.845,-0.347] n=58 BELOW
+    coh all     -0.001 [-0.004,+0.001] n=58 CONSISTENT
+    coh d<=2    -0.001 [-0.005,+0.002] n=25 CONSISTENT
+    coh d>=3    -0.001 [-0.005,+0.003] n=33 CONSISTENT
+    cohN4       -0.008 [-0.015,+0.001] n=58 CONSISTENT
+kingston | CARRIERS ACROSS CALIBRATIONS (25 looked) | index order: K vs D0
+    kick all    -0.386 [-0.894,-0.144] n=58 BELOW
+    kick d<=2   -1.066 [-13.476,-0.489] n=25 BELOW
+    kick d=3-4  -0.520 [-1.699,-0.083] n=18 BELOW
+    kick d>=5   +0.239 [-0.041,+0.524] n=15 CONSISTENT
+    kick d>=3   -0.041 [-0.355,+0.239] n=33 CONSISTENT
+    kickN4      -0.246 [-0.852,+0.009] n=58 CONSISTENT
+    coh all     -0.001 [-0.003,+0.001] n=58 CONSISTENT
+    coh d<=2    -0.001 [-0.003,+0.002] n=25 CONSISTENT
+    coh d>=3    -0.001 [-0.004,+0.003] n=33 CONSISTENT
+    cohN4       -0.005 [-0.017,+0.007] n=58 CONSISTENT
+kingston | CARRIERS ACROSS CALIBRATIONS (25 looked) | reversed order: KR vs D0
+    kick all    -0.450 [-0.945,+0.064] n=58 CONSISTENT
+    kick d<=2   -1.192 [-12.986,+0.019] n=25 CONSISTENT
+    kick d=3-4  -0.702 [-1.537,+0.068] n=18 CONSISTENT
+    kick d>=5   +0.175 [+0.036,+0.311] n=15 ABOVE
+    kick d>=3   +0.036 [-0.552,+0.175] n=33 CONSISTENT
+    kickN4      -0.339 [-0.706,+0.148] n=58 CONSISTENT
+    coh all     -0.000 [-0.003,+0.001] n=58 CONSISTENT
+    coh d<=2    +0.001 [-0.006,+0.004] n=25 CONSISTENT
+    coh d>=3    -0.001 [-0.003,+0.001] n=33 CONSISTENT
+    cohN4       -0.002 [-0.015,+0.006] n=58 CONSISTENT
+kingston | CLOCK 81 (one clock, one looked bit) | neighbour |1>: M1L vs M1D
+    kick all    n=1 -> CANNOT TELL
+    kick d<=2   n=1 -> CANNOT TELL
+    kick d=3-4  n=0 -> CANNOT TELL
+    kick d>=5   n=0 -> CANNOT TELL
+    kick d>=3   n=0 -> CANNOT TELL
+    kickN4      n=1 -> CANNOT TELL
+    coh all     n=1 -> CANNOT TELL
+    coh d<=2    n=1 -> CANNOT TELL
+    coh d>=3    n=0 -> CANNOT TELL
+    cohN4       n=1 -> CANNOT TELL
+kingston | CLOCK 81 (one clock, one looked bit) | neighbour |0>: M0L vs M0D
+    kick all    n=1 -> CANNOT TELL
+    kick d<=2   n=1 -> CANNOT TELL
+    kick d=3-4  n=0 -> CANNOT TELL
+    kick d>=5   n=0 -> CANNOT TELL
+    kick d>=3   n=0 -> CANNOT TELL
+    kickN4      n=1 -> CANNOT TELL
+    coh all     n=1 -> CANNOT TELL
+    coh d<=2    n=1 -> CANNOT TELL
+    coh d>=3    n=0 -> CANNOT TELL
+    cohN4       n=1 -> CANNOT TELL
+kingston | CLOCK 81B (67 clocks, five looked sets) | P:A vs PD
+    kick all    -0.688 [-1.182,-0.345] n=64 BELOW
+    kick d<=2   -2.840 [-5.900,-0.515] n=20 BELOW
+    kick d=3-4  -0.490 [-0.789,-0.062] n=32 BELOW
+    kick d>=5   -0.455 [-1.063,+0.133] n=12 CONSISTENT
+    kick d>=3   -0.490 [-0.782,-0.254] n=44 BELOW
+    kickN4      -0.773 [-1.019,-0.316] n=64 BELOW
+    coh all     -0.000 [-0.004,+0.002] n=64 CONSISTENT
+    coh d<=2    +0.000 [-0.005,+0.003] n=20 CONSISTENT
+    coh d>=3    -0.001 [-0.004,+0.002] n=44 CONSISTENT
+    cohN4       -0.004 [-0.013,+0.004] n=64 CONSISTENT
+kingston | CLOCK 81B (67 clocks, five looked sets) | P:B vs PD
+    kick all    -0.811 [-1.128,-0.214] n=64 BELOW
+    kick d<=2   -3.129 [-5.545,-0.449] n=18 BELOW
+    kick d=3-4  -0.707 [-1.091,-0.214] n=30 BELOW
+    kick d>=5   +0.024 [-1.128,+0.229] n=16 CONSISTENT
+    kick d>=3   -0.467 [-1.061,-0.106] n=46 BELOW
+    kickN4      -0.619 [-0.950,-0.359] n=64 BELOW
+    coh all     -0.001 [-0.003,+0.002] n=64 CONSISTENT
+    coh d<=2    -0.001 [-0.004,+0.003] n=18 CONSISTENT
+    coh d>=3    -0.001 [-0.003,+0.003] n=46 CONSISTENT
+    cohN4       -0.003 [-0.016,+0.004] n=64 CONSISTENT
+kingston | CLOCK 81B (67 clocks, five looked sets) | P:C vs PD
+    kick all    -0.138 [-0.309,+0.115] n=64 CONSISTENT
+    kick d<=2   n=3 -> CANNOT TELL
+    kick d=3-4  -0.134 [-0.590,+0.431] n=8 CONSISTENT
+    kick d>=5   -0.145 [-0.345,+0.130] n=53 CONSISTENT
+    kick d>=3   -0.145 [-0.320,+0.130] n=61 CONSISTENT
+    kickN4      -0.104 [-0.369,+0.141] n=64 CONSISTENT
+    coh all     +0.000 [-0.002,+0.001] n=64 CONSISTENT
+    coh d<=2    n=3 -> CANNOT TELL
+    coh d>=3    +0.000 [-0.001,+0.001] n=61 CONSISTENT
+    cohN4       -0.002 [-0.008,+0.004] n=64 CONSISTENT
+kingston | CLOCK 81B (67 clocks, five looked sets) | Q:A vs QD
+    kick all    n=1 -> CANNOT TELL
+    kick d<=2   n=1 -> CANNOT TELL
+    kick d=3-4  n=0 -> CANNOT TELL
+    kick d>=5   n=0 -> CANNOT TELL
+    kick d>=3   n=0 -> CANNOT TELL
+    kickN4      n=1 -> CANNOT TELL
+    coh all     n=1 -> CANNOT TELL
+    coh d<=2    n=1 -> CANNOT TELL
+    coh d>=3    n=0 -> CANNOT TELL
+    cohN4       n=1 -> CANNOT TELL
+kingston | CLOCK 81B (67 clocks, five looked sets) | Q:C vs QD
+    kick all    n=1 -> CANNOT TELL
+    kick d<=2   n=1 -> CANNOT TELL
+    kick d=3-4  n=0 -> CANNOT TELL
+    kick d>=5   n=0 -> CANNOT TELL
+    kick d>=3   n=0 -> CANNOT TELL
+    kickN4      n=1 -> CANNOT TELL
+    coh all     n=1 -> CANNOT TELL
+    coh d<=2    n=1 -> CANNOT TELL
+    coh d>=3    n=0 -> CANNOT TELL
+    cohN4       n=1 -> CANNOT TELL
+pittsburgh | REACH MAP (two sets of 8 single sources) | set 0: S0L vs D
+    kick all    -0.169 [-0.288,+0.015] n=84 CONSISTENT
+    kick d<=2   -0.330 [-0.813,-0.169] n=15 BELOW
+    kick d=3-4  -0.087 [-0.267,+0.274] n=30 CONSISTENT
+    kick d>=5   -0.099 [-0.372,+0.118] n=39 CONSISTENT
+    kick d>=3   -0.099 [-0.260,+0.071] n=69 CONSISTENT
+    kickN4      -0.214 [-0.387,+0.098] n=84 CONSISTENT
+    coh all     -0.001 [-0.002,+0.000] n=84 CONSISTENT
+    coh d<=2    -0.001 [-0.004,+0.002] n=15 CONSISTENT
+    coh d>=3    -0.001 [-0.001,+0.000] n=69 CONSISTENT
+    cohN4       -0.003 [-0.010,+0.002] n=84 CONSISTENT
+pittsburgh | REACH MAP (two sets of 8 single sources) | set 1: S1L vs D
+    kick all    -0.235 [-0.358,+0.017] n=84 CONSISTENT
+    kick d<=2   -0.410 [-0.623,+0.111] n=15 CONSISTENT
+    kick d=3-4  -0.142 [-0.492,+0.147] n=34 CONSISTENT
+    kick d>=5   -0.236 [-0.373,+0.041] n=35 CONSISTENT
+    kick d>=3   -0.181 [-0.346,+0.029] n=69 CONSISTENT
+    kickN4      -0.202 [-0.434,-0.040] n=84 BELOW
+    coh all     -0.001 [-0.003,+0.001] n=84 CONSISTENT
+    coh d<=2    -0.001 [-0.004,+0.003] n=15 CONSISTENT
+    coh d>=3    -0.001 [-0.003,+0.001] n=69 CONSISTENT
+    cohN4       -0.006 [-0.012,+0.001] n=84 CONSISTENT
+pittsburgh | MEILONG / STATE-DARK FLOWERS (25 looked) | looked |0>: K vs D0
+    kick all    -0.224 [-0.400,-0.051] n=58 BELOW
+    kick d<=2   -0.433 [-2.950,-0.166] n=26 BELOW
+    kick d=3-4  -0.223 [-0.608,+0.029] n=16 CONSISTENT
+    kick d>=5   +0.280 [-0.134,+0.447] n=16 CONSISTENT
+    kick d>=3   -0.055 [-0.274,+0.187] n=32 CONSISTENT
+    kickN4      -0.343 [-0.605,+0.005] n=58 CONSISTENT
+    coh all     copies shifted -> CANNOT TELL
+    coh d<=2    +0.000 [-0.002,+0.003] n=26 CONSISTENT
+    coh d>=3    copies shifted -> CANNOT TELL
+    cohN4       copies shifted -> CANNOT TELL
+pittsburgh | MEILONG / STATE-DARK FLOWERS (25 looked) | looked |1>: S1 vs D1
+    kick all    -0.356 [-0.751,-0.137] n=58 BELOW
+    kick d<=2   -0.796 [-3.230,-0.225] n=26 BELOW
+    kick d=3-4  -0.570 [-0.937,-0.106] n=16 BELOW
+    kick d>=5   -0.093 [-0.255,+0.270] n=16 CONSISTENT
+    kick d>=3   -0.196 [-0.411,-0.049] n=32 BELOW
+    kickN4      -0.534 [-0.896,-0.168] n=58 BELOW
+    coh all     copies shifted -> CANNOT TELL
+    coh d<=2    -0.001 [-0.003,+0.003] n=26 CONSISTENT
+    coh d>=3    -0.003 [-0.004,-0.000] n=32 BELOW
+    cohN4       -0.009 [-0.017,-0.002] n=58 BELOW
+pittsburgh | MEILONG / STATE-DARK FLOWERS (25 looked) | looked half-way: SH vs DH
+    kick all    -0.334 [-0.647,-0.053] n=59 BELOW
+    kick d<=2   -0.826 [-2.865,-0.054] n=27 BELOW
+    kick d=3-4  -0.558 [-0.821,+0.111] n=16 CONSISTENT
+    kick d>=5   +0.009 [-0.368,+0.364] n=16 CONSISTENT
+    kick d>=3   -0.140 [-0.464,+0.109] n=32 CONSISTENT
+    kickN4      -0.500 [-0.673,-0.086] n=59 BELOW
+    coh all     -0.001 [-0.004,+0.001] n=59 CONSISTENT
+    coh d<=2    -0.003 [-0.005,+0.002] n=27 CONSISTENT
+    coh d>=3    +0.000 [-0.002,+0.002] n=32 CONSISTENT
+    cohN4       -0.004 [-0.014,+0.011] n=59 CONSISTENT
+pittsburgh | POOL | plain |0> arms
+    kick all    -0.136 [-0.199,-0.063] n=301 BELOW
+    kick d<=2   -0.424 [-0.811,-0.229] n=60 BELOW
+    kick d=3-4  -0.141 [-0.392,+0.001] n=85 CONSISTENT
+    kick d>=5   -0.094 [-0.147,-0.026] n=156 BELOW
+    kick d>=3   -0.108 [-0.148,-0.028] n=241 BELOW
+fez | POOL | plain |0> arms
+    kick all    -0.038 [-0.095,+0.066] n=73 CONSISTENT
+    kick d<=2   n=4 -> CANNOT TELL
+    kick d=3-4  -0.236 [-0.443,+0.195] n=5 CONSISTENT
+    kick d>=5   -0.016 [-0.072,+0.103] n=64 CONSISTENT
+    kick d>=3   -0.037 [-0.086,+0.084] n=69 CONSISTENT
+aachen | POOL | plain |0> arms
+    kick all    -0.041 [-0.151,+0.116] n=75 CONSISTENT
+    kick d<=2   n=4 -> CANNOT TELL
+    kick d=3-4  -0.163 [-1.930,+0.169] n=5 CONSISTENT
+    kick d>=5   +0.037 [-0.102,+0.123] n=66 CONSISTENT
+    kick d>=3   +0.035 [-0.104,+0.121] n=71 CONSISTENT
+kingston | POOL | plain |0> arms
+    kick all    -0.433 [-0.633,-0.221] n=173 BELOW
+    kick d<=2   -0.907 [-11.950,-0.633] n=75 BELOW
+    kick d=3-4  -0.433 [-0.860,-0.022] n=53 BELOW
+    kick d>=5   -0.065 [-0.284,+0.085] n=45 CONSISTENT
+    kick d>=3   -0.130 [-0.346,-0.014] n=98 BELOW

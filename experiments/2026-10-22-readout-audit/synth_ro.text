@@ -1,0 +1,21 @@
+=== synthetic world match (match: delivered = stated; worse: delivered 1.5 x stated; zeros_real: stated zeros are really 0.3 %)
+  KNOWN-GOOD median P(0 | |0>) = 0.9902 (must be >= 0.90): MET
+  R1 delivered / stated readout_error, median over 150 qubits: 0.995 [0.988, 1.003] vs 1 -> CONSISTENT  (above stated: 66)
+     P(1|0): delivered / stated median 0.992 [0.977, 1.007] -> CONSISTENT
+     P(0|1): delivered / stated median 1.002 [0.988, 1.010] -> CONSISTENT
+  R2 qubits whose stated readout_error differs from the mean of its two components by > 0.001: 10; delivered closer to readout_error on 0, to the mean on 10
+  R3 qubits stated prob_meas1_prep0 = 0: 15; delivered P(1|0) with 95 % lower bound above 0.00073 (0 of 4096): 0
+=== synthetic world worse (match: delivered = stated; worse: delivered 1.5 x stated; zeros_real: stated zeros are really 0.3 %)
+  KNOWN-GOOD median P(0 | |0>) = 0.9848 (must be >= 0.90): MET
+  R1 delivered / stated readout_error, median over 150 qubits: 1.486 [1.473, 1.499] vs 1 -> ABOVE  (above stated: 145)
+     P(1|0): delivered / stated median 1.488 [1.471, 1.511] -> ABOVE
+     P(0|1): delivered / stated median 1.494 [1.484, 1.505] -> ABOVE
+  R2 qubits whose stated readout_error differs from the mean of its two components by > 0.001: 10; delivered closer to readout_error on 7, to the mean on 3
+  R3 qubits stated prob_meas1_prep0 = 0: 15; delivered P(1|0) with 95 % lower bound above 0.00073 (0 of 4096): 0
+=== synthetic world zeros_real (match: delivered = stated; worse: delivered 1.5 x stated; zeros_real: stated zeros are really 0.3 %)
+  KNOWN-GOOD median P(0 | |0>) = 0.9905 (must be >= 0.90): MET
+  R1 delivered / stated readout_error, median over 150 qubits: 0.995 [0.986, 1.007] vs 1 -> CONSISTENT  (above stated: 70)
+     P(1|0): delivered / stated median 0.989 [0.970, 1.003] -> CONSISTENT
+     P(0|1): delivered / stated median 0.999 [0.984, 1.007] -> CONSISTENT
+  R2 qubits whose stated readout_error differs from the mean of its two components by > 0.001: 10; delivered closer to readout_error on 0, to the mean on 10
+  R3 qubits stated prob_meas1_prep0 = 0: 15; delivered P(1|0) with 95 % lower bound above 0.00073 (0 of 4096): 15; their delivered P(1|0) median 0.0030

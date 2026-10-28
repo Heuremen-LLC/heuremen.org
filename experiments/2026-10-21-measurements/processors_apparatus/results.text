@@ -1,0 +1,194 @@
+verify_processors_apparatus.py -- recompute the processor-sort, decay-time, idle-control, non-exponential-decay,
+gate-error and simulated-clock numbers from the compact JSON in data/.
+
+====================================================================================================
+1. PROCESSORS SORT   (ratio = measured qubit's own-clock readout length over the unmeasured spectators' readout length)
+====================================================================================================
+   chip-day              runs          ratio, all spectators   ratio, no measured neighbour   ratio, 2+ measured neighbours
+   ibm_aachen     6 Oct  801,802,803       1.207      1.259       1.156
+   ibm_boston     4 Oct  431,432,433       1.227      1.246       1.177
+   ibm_fez        4 Oct  411,412,413       1.564      1.616       1.522
+   ibm_fez        6 Oct  671               1.784      1.783       1.768
+   ibm_kingston   4 Oct  331,332,333       1.574      1.631       1.503
+   ibm_kingston   6 Oct  661               1.572      1.602       1.543
+   ibm_marrakesh  4 Oct  311,312,313       1.445      1.405       1.377
+   ibm_phoenix    5 Oct  541,542,543       1.279   n/a (layout not Heron)         n/a
+   ibm_phoenix    6 Oct  581,582,583       1.346   n/a (layout not Heron)         n/a
+   ibm_pittsburgh 4 Oct  351,352,353       1.317      1.345       1.293
+   ibm_pittsburgh 5 Oct  511               1.289      1.342       1.199
+
+   rank agreement, all spectators vs no measured neighbour (8 chip-days, 5 chips): +0.98
+   rank agreement, all spectators vs 2+ measured neighbours (8 chip-days, 5 chips): +0.93
+
+   per-chip ratio, all spectators (every chip-day listed above):
+     ibm_aachen       1.207   mean 1.207   calibration T2:T1 not available
+     ibm_boston       1.227   mean 1.227   calibration T2:T1 1.183
+     ibm_pittsburgh   1.317 1.289   mean 1.303   calibration T2:T1 1.160
+     ibm_phoenix      1.279 1.346   mean 1.313   calibration T2:T1 0.851
+     ibm_marrakesh    1.445   mean 1.445   calibration T2:T1 0.519
+     ibm_kingston     1.574 1.572   mean 1.573   calibration T2:T1 0.638
+     ibm_fez          1.564 1.784   mean 1.674   calibration T2:T1 0.683
+   lowest ratio of Boston, Pittsburgh, Phoenix: 1.227
+   highest ratio of Boston, Pittsburgh, Phoenix: 1.346
+   lowest ratio of Kingston, Fez, Marrakesh: 1.445
+   highest ratio of Kingston, Fez, Marrakesh: 1.784
+
+   two groups or a continuum?
+     all chip-day values, sorted: 1.207 1.227 1.279 1.289 1.317 1.346 1.445 1.564 1.572 1.574 1.784
+     gap between the groups (highest of Boston/Pittsburgh/Phoenix to lowest of Kingston/Fez/Marrakesh): 0.099
+     largest gap anywhere: 0.210 (between kingston and fez)
+     Fez alone moves 0.220 between its two days, 2.2 times the gap between the groups
+     spread inside the low group 0.119, inside the high group 0.339 (with Aachen in the low group: 0.139)
+     rank correlation, chip mean ratio against calibration T2:T1, six chips: -0.771
+       order by T2:T1 high->low: boston pittsburgh phoenix fez kingston marrakesh
+       order by ratio low->high: boston pittsburgh phoenix marrakesh kingston fez
+     chance that the 2 chips with T2:T1 > 1 are the 2 lowest in ratio by luck, among 6 chips: 1 in 15
+   NOTE: Aachen is the 7th chip and is computed above; its calibration T2:T1 is not available, so it cannot be placed on the T2:T1 axis.
+   NOTE: Phoenix has T2:T1 = 0.851 (below 1, like Kingston/Fez/Marrakesh) but its ratio (1.28-1.35) sits in the low group with Boston and Pittsburgh.
+   NOTE: Within the high group the order by ratio is Marrakesh < Kingston < Fez, the reverse of the T2:T1 order Fez > Kingston > Marrakesh. The data support a split at T2:T1 = 1 on heavy-hex chips, not an ordering.
+   NOTE: The two rank agreements above are between three ways of choosing spectators, over 8 chip-days of 5 chips; they are not agreement between the ratio and T2:T1. Phoenix and Aachen are not in them.
+
+====================================================================================================
+2. T1 DRIFT   (reference decay: fading time of a qubit left in |1> and read after 300 us, three copies a/b/c per job)
+====================================================================================================
+
+   ibm_marrakesh   fading time (us), median over readable qubits
+     run    started             copy a   copy b   copy c   | mean of copies   range of copies (inside one job)
+     301    2026-10-04T10:07     168.4    172.6    178.8   |    173.3          10.4
+     302    2026-10-04T10:09     177.9    182.2    180.2   |    180.1           4.3
+     303    2026-10-04T10:10     175.7    177.2    183.1   |    178.6           7.5
+     mean over the 3 jobs, copy a/b/c: 174.0 / 177.3 / 180.7      |  mean over copies, job by job: 173.3 / 180.1 / 178.6
+
+   ibm_kingston   fading time (us), median over readable qubits
+     run    started             copy a   copy b   copy c   | mean of copies   range of copies (inside one job)
+     301    2026-10-04T10:11     267.4    260.4    261.0   |    262.9           6.9
+     302    2026-10-04T10:13     265.7    260.5    269.8   |    265.3           9.3
+     303    2026-10-04T10:20     263.8    260.1    260.9   |    261.6           3.7
+     mean over the 3 jobs, copy a/b/c: 265.6 / 260.4 / 263.9      |  mean over copies, job by job: 262.9 / 265.3 / 261.6
+
+   ibm_pittsburgh   fading time (us), median over readable qubits
+     run    started             copy a   copy b   copy c   | mean of copies   range of copies (inside one job)
+     361    2026-10-04T11:11     297.1    294.2    293.8   |    295.1           3.3
+     362    2026-10-04T15:33     299.4    301.9    302.8   |    301.4           3.4
+     363    2026-10-04T15:34     305.5    304.0    293.9   |    301.1          11.5
+     mean over the 3 jobs, copy a/b/c: 300.7 / 300.0 / 296.9      |  mean over copies, job by job: 295.1 / 301.4 / 301.1
+
+   marrakesh: mean of copy a over 3 jobs: 174.0 us
+   marrakesh: mean of copy b over 3 jobs: 177.3 us
+   marrakesh: mean of copy c over 3 jobs: 180.7 us
+   marrakesh job 1, mean over its three copies: 173.3 us
+   marrakesh job 2, mean over its three copies: 180.1 us
+   marrakesh job 3, mean over its three copies: 178.6 us
+   kingston lowest copy mean: 260.4 us
+   kingston highest copy mean: 265.6 us
+   pittsburgh run 361, lowest of the three copies: 293.8 us
+   pittsburgh run 361, highest of the three copies: 297.1 us
+
+   how far each copy moves BETWEEN jobs (max - min of that copy over the jobs):
+     marrakesh   copy a/b/c: 9.5 / 9.6 / 4.4 us
+     kingston    copy a/b/c: 3.6 / 0.4 / 8.9 us
+     pittsburgh  copy a/b/c: 8.4 / 9.8 / 9.0 us
+   largest job-to-job move of any copy, 3 chips: 9.8 us
+   range of the three copies INSIDE a single job: min 3.3, max 11.5 us (marrakesh jobs: 10.4 / 4.3 / 7.5)
+   NOTE: The three copies (a, b, c) are measured inside each job. Their means are averaged over jobs for Marrakesh and Kingston; for Pittsburgh the first job alone is quoted above.
+   NOTE: The copy-to-copy difference inside one job is as large as the job-to-job movement (Marrakesh job 1: 10.4 us).
+   NOTE: Pittsburgh has three jobs (runs 361-363); their copy-means are 295.1 / 301.4 / 301.1 us.
+
+====================================================================================================
+3. IDLE CONTROL
+====================================================================================================
+   (a) alternating-state runs 71-73, ibm_pittsburgh: qubit starts in |1>, an X gate after each interval so it spends alternate intervals in |0>,
+       300 us in all; measured level minus that qubit's own decay bookkeeping (its own 300-us nothing-done level, cut into the intervals).
+     a  parked once       (2 x 150 us): reads +0.0008 +0.0021 +0.0022 (readable 145/139/139)
+        residual, three-read mean: +0.0017
+        width (analytic shot error): 0.0013
+     b  alternate quarters (4 x 75 us): reads -0.0002 +0.0040 +0.0022 (readable 145/139/139)
+        residual, three-read mean: +0.0020
+        width (analytic shot error): 0.0014
+     c  alternate tenths   (10 x 30 us): reads +0.0022 +0.0001 +0.0019 (readable 145/139/139)
+        residual, three-read mean: +0.0014
+        width (analytic shot error): 0.0014
+   NOTE: These runs prepare |1> and flip it with X gates, so the |0> time is every other interval; no run here prepares |0> and leaves it. One chip (Pittsburgh), one day, 3 jobs.
+
+   (b) idle |0> for 300 us: the "left alone 300 us" arm of run 121, ibm_pittsburgh (one job).
+     idle |0> after 300 us, gain in percent: +0.025
+     width in percent: 0.128
+     readable qubits: 150
+   the same idle-|0> arm (300 us) in the time-design jobs on all chips, mean over readable qubits (percent):
+     ibm_aachen      +0.40 +0.13 +0.58
+     ibm_boston      +0.58 +0.31 +0.58 +0.47 +0.30 +0.35 +0.25 +0.48 +0.44 +0.61 +0.70
+     ibm_fez         +0.25 +0.12 +0.41
+     ibm_kingston    +0.63 +0.37 +0.46
+     ibm_marrakesh   +0.80 +0.57 +0.66
+     ibm_pittsburgh  +0.04 +0.22 +0.32
+   NOTE: Run 121 is one Pittsburgh job. In the 26 time-design jobs above the same arm reads +0.04 to +0.80 % (positive in 26).
+
+====================================================================================================
+4. NON-EXPONENTIAL DECAY   (|1> level at 30 us below that qubit-copy's own 300 us single-exponential extrapolation)
+====================================================================================================
+   chip           run   readable qubit-copies   share below at 30 us
+   ibm_aachen     871   438                     63.9 %
+   ibm_aachen     872   435                     65.1 %
+   ibm_aachen     878   438                     65.1 %
+   ibm_boston     461   459                     69.9 %
+   ibm_boston     462   456                     63.4 %
+   ibm_boston     463   459                     71.5 %
+   ibm_boston     471   459                     64.7 %
+   ibm_boston     472   459                     63.2 %
+   ibm_boston     473   459                     70.8 %
+   ibm_boston     481   459                     68.4 %
+   ibm_boston     482   459                     68.2 %
+   ibm_boston     483   459                     68.4 %
+   ibm_boston     484   459                     63.8 %
+   ibm_boston     485   459                     69.9 %
+   ibm_fez        401   402                     84.6 %
+   ibm_fez        402   408                     85.3 %
+   ibm_fez        403   402                     83.6 %
+   ibm_kingston   301   426                     77.9 %
+   ibm_kingston   302   438                     72.4 %
+   ibm_kingston   303   441                     74.8 %
+   ibm_marrakesh  301   408                     84.1 %
+   ibm_marrakesh  302   414                     80.2 %
+   ibm_marrakesh  303   411                     83.0 %
+   ibm_pittsburgh 361   447                     62.4 %
+   ibm_pittsburgh 362   447                     64.7 %
+   ibm_pittsburgh 363   444                     63.1 %
+
+   marrakesh runs 301-303, kingston runs 301-303, pittsburgh run 361 (7 runs): lowest 62 %, highest 84 %
+   the other time-design runs on disk: lowest 63 %, highest 85 % over 19 runs
+   Pittsburgh, all three jobs: 62 / 65 / 63 %
+   NOTE: The share below the extrapolation never drops under 50 % in any run, so the sign of the effect is stable; the exact range depends on which jobs are counted.
+   NOTE: Idle |0> after 300 us (the "left alone" arm of the same jobs) is in section 3.
+
+====================================================================================================
+5. GATE ERROR GROWING WITH GATE COUNT   (push run 91-93, ibm_pittsburgh, back-to-back X gates, no wait)
+====================================================================================================
+   shift after  2 back-to-back X gates, start OFF (percent): +0.19
+   shift after  2 back-to-back X gates, start ON (percent): -0.20
+   shift after 10 back-to-back X gates, start OFF (percent): +2.29
+   shift after 10 back-to-back X gates, start ON (percent): -2.32
+   rotation shortfall per gate (degrees): 1.47
+     (+-0.12 deg)
+     count-linear term b in  shift(N) = N^2 eps^2/4 + N b :  b = 0.065 +- 0.026 %
+   b x 1 (as population error per gate), percent: 0.065
+   4 x b (percent): 0.261
+      its width (4 x width of b), percent: 0.104
+     upper edge at two widths, 4 x (b + 2 se): 0.47 %
+   NOTE: 4 x b is a measured value, not an upper bound; the upper edge at two widths is given above. It covers EVERY count-growing error per gate (leakage, fading during the pulse, pulse noise), not leakage alone.
+   NOTE: The fit assumes the |2> population after N gates is the same for an OFF and an ON start; one chip (Pittsburgh).
+
+====================================================================================================
+6. SIMULATED CLOCKS   (synthetic spectator clocks read with the same inversion as the real data)
+====================================================================================================
+   100 synthetic spectator clocks, rates uniform 2.3-5.6 deg/us, readouts of exactly 2.18 us x (1 + planted), 30 repeats per seed, 8 seeds,
+   read with the same inversion as the real data (quadratic through the origin on 10/20/30 us, roots per readout, slope over 1..9 readouts).
+   Gaussian phase noise added to every measured angle, at 0.06 rad and at 0.12 rad.
+   case                                   fit 1-9: mean over seeds [min,max] 3-and-9: mean over seeds [min,max]
+   nothing planted, no noise              1.0000  [1.0000, 1.0000]          1.0000  [1.0000, 1.0000]
+   nothing planted, phase noise 0.06 rad  0.9981  [0.9960, 1.0010]          0.9977  [0.9948, 1.0020]
+   nothing planted, phase noise 0.12 rad  0.9915  [0.9868, 0.9982]          0.9886  [0.9831, 0.9973]
+   4 % planted, no noise                  1.0400  [1.0399, 1.0400]          1.0400  [1.0399, 1.0400]
+   4 % planted, phase noise 0.06 rad      1.0381  [1.0364, 1.0408]          1.0375  [1.0346, 1.0419]
+   4 % planted, phase noise 0.12 rad      1.0312  [1.0275, 1.0370]          1.0283  [1.0228, 1.0368]
+   NOTE: With NO noise a planted 4 % reads back 1.0400 exactly; with noise it reads a few tenths of a percent low, and the unplanted case a few tenths low of 1.000. The seed-to-seed range is about +-0.003.
+   NOTE: This tests the spectator-clock readout-length estimator only. It does not test the ratio of section 1.

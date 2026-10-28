@@ -1,0 +1,15 @@
+remaining seconds: 341
+flip check in transpiled circuits: OK (one x per measured qubit, right before its final readout)
+ibm_kingston: 26 pubs, E 39, S 117, L=545 dt, circuits 2.2-19.7 us, shots/circuit 3000, total shots 78000, ESTIMATED 23.4 s, raw IQ ~132 MB (5.4 B/value as 21 Oct), queue 1
+SUBMITTED ibm_kingston dbd1cqfi0auc7394gq30
+DONE ibm_kingston: remaining now 318
+remaining seconds: 318
+flip check in transpiled circuits: OK (one x per measured qubit, right before its final readout)
+ibm_marrakesh: 26 pubs, E 39, S 117, L=671 dt, circuits 2.7-24.3 us, shots/circuit 3000, total shots 78000, ESTIMATED 23.6 s, raw IQ ~132 MB (5.4 B/value as 21 Oct), queue 0
+SUBMITTED ibm_marrakesh dbd1e7424mrc73ckiic0
+DONE ibm_marrakesh: remaining now 294
+remaining seconds: 294
+flip check in transpiled circuits: OK (one x per measured qubit, right before its final readout)
+ibm_fez: 26 pubs, E 39, S 117, L=415 dt, circuits 1.7-15.0 us, shots/circuit 3000, total shots 78000, ESTIMATED 23.2 s, raw IQ ~132 MB (5.4 B/value as 21 Oct), queue 21
+SUBMITTED ibm_fez dbd1fcfi0auc7394gstg
+DONE ibm_fez: remaining now 271

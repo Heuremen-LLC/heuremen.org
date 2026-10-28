@@ -1,0 +1,113 @@
+
+=== synth_NULL_kingston  job synthetic  L1 2.180 us  L2 1.380 us  L2/L1 0.633  shots 5000
+  R1 kick N=4 L1: +0.033 [-0.175, +0.253] deg/readout  n=104  copy gap [-0.195, +0.070] -> CONSISTENT
+  R1 kick N=4 L2: +0.094 [-0.164, +0.219] deg/readout  n=104  copy gap [-0.038, +0.181] -> CONSISTENT
+  R2 ratio k(L2)/k(L1) N=4: 2.869 [-8.329, 12.103]  (per readout 1, proportional 0.633) -> CANNOT_TELL (both 1 and L2/L1 inside)
+  R3 split N=4: per-readout part a +0.200 [-0.472, +0.727] deg, per-us part b -0.077 [-0.302, +0.208] deg/us
+  R1 kick N=8 L1: -0.065 [-0.157, +0.228] deg/readout  n=104  copy gap [-0.085, +0.051] -> CONSISTENT
+  R1 kick N=8 L2: +0.083 [-0.106, +0.227] deg/readout  n=104  copy gap [-0.125, +0.073] -> CONSISTENT
+  R2 ratio k(L2)/k(L1) N=8: -1.289 [-5.249, 6.108]  (per readout 1, proportional 0.633) -> CANNOT_TELL (both 1 and L2/L1 inside)
+  R3 split N=8: per-readout part a +0.338 [-0.237, +0.649] deg, per-us part b -0.185 [-0.264, +0.078] deg/us
+  R4 measured qubit, P(1) idle minus readout, N=4 L1: +0.0307 [+0.0277, +0.0335] n=39 (idle 0.801, readout 0.770) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=4 L2: +0.0317 [+0.0287, +0.0339] n=39 (idle 0.802, readout 0.769) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=8 L1: +0.0597 [+0.0564, +0.0635] n=39 (idle 0.800, readout 0.741) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=8 L2: +0.0597 [+0.0580, +0.0610] n=39 (idle 0.800, readout 0.740) -> ABOVE
+
+=== synth_PERREADOUT_kingston  job synthetic  L1 2.180 us  L2 1.380 us  L2/L1 0.633  shots 5000
+  R1 kick N=4 L1: -2.371 [-2.599, -2.235] deg/readout  n=105  copy gap [-0.051, +0.193] -> BELOW
+  R1 kick N=4 L2: -2.385 [-2.594, -2.206] deg/readout  n=105  copy gap [-0.077, +0.179] -> BELOW
+  R2 ratio k(L2)/k(L1) N=4: 1.006 [0.928, 1.072]  (per readout 1, proportional 0.633) -> PER-READOUT
+  R3 split N=4: per-readout part a -2.409 [-2.850, -1.906] deg, per-us part b +0.017 [-0.219, +0.183] deg/us
+  R1 kick N=8 L1: -2.436 [-2.635, -2.146] deg/readout  n=105  copy gap [-0.103, +0.048] -> BELOW
+  R1 kick N=8 L2: -2.368 [-2.630, -2.140] deg/readout  n=105  copy gap [-0.074, +0.049] -> BELOW
+  R2 ratio k(L2)/k(L1) N=8: 0.972 [0.917, 1.057]  (per readout 1, proportional 0.633) -> PER-READOUT
+  R3 split N=8: per-readout part a -2.250 [-2.815, -1.840] deg, per-us part b -0.085 [-0.261, +0.158] deg/us
+  R4 measured qubit, P(1) idle minus readout, N=4 L1: +0.0307 [+0.0282, +0.0332] n=39 (idle 0.799, readout 0.770) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=4 L2: +0.0306 [+0.0285, +0.0324] n=39 (idle 0.801, readout 0.770) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=8 L1: +0.0594 [+0.0576, +0.0619] n=39 (idle 0.799, readout 0.739) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=8 L2: +0.0602 [+0.0563, +0.0615] n=39 (idle 0.801, readout 0.740) -> ABOVE
+
+=== synth_PROP_kingston  job synthetic  L1 2.180 us  L2 1.380 us  L2/L1 0.633  shots 5000
+  R1 kick N=4 L1: -2.361 [-2.603, -2.105] deg/readout  n=103  copy gap [-0.217, +0.092] -> BELOW
+  R1 kick N=4 L2: -1.455 [-1.666, -1.269] deg/readout  n=103  copy gap [-0.061, +0.195] -> BELOW
+  R2 ratio k(L2)/k(L1) N=4: 0.616 [0.562, 0.684]  (per readout 1, proportional 0.633) -> PROPORTIONAL-TO-LENGTH
+  R3 split N=4: per-readout part a +0.107 [-0.481, +0.635] deg, per-us part b -1.132 [-1.360, -0.891] deg/us
+  R1 kick N=8 L1: -2.436 [-2.595, -2.264] deg/readout  n=103  copy gap [-0.083, +0.062] -> BELOW
+  R1 kick N=8 L2: -1.474 [-1.654, -1.328] deg/readout  n=103  copy gap [-0.054, +0.077] -> BELOW
+  R2 ratio k(L2)/k(L1) N=8: 0.605 [0.569, 0.651]  (per readout 1, proportional 0.633) -> PROPORTIONAL-TO-LENGTH
+  R3 split N=8: per-readout part a +0.187 [-0.197, +0.507] deg, per-us part b -1.203 [-1.324, -1.047] deg/us
+  R4 measured qubit, P(1) idle minus readout, N=4 L1: +0.0314 [+0.0288, +0.0325] n=39 (idle 0.801, readout 0.770) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=4 L2: +0.0295 [+0.0275, +0.0327] n=39 (idle 0.800, readout 0.769) -> CANNOT_TELL (copies disagree)
+  R4 measured qubit, P(1) idle minus readout, N=8 L1: +0.0606 [+0.0585, +0.0620] n=39 (idle 0.799, readout 0.739) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=8 L2: +0.0612 [+0.0589, +0.0629] n=39 (idle 0.799, readout 0.740) -> ABOVE
+
+=== synth_MIXED_kingston  job synthetic  L1 2.180 us  L2 1.380 us  L2/L1 0.633  shots 5000
+  R1 kick N=4 L1: -2.387 [-2.560, -2.220] deg/readout  n=108  copy gap [-0.139, +0.176] -> BELOW
+  R1 kick N=4 L2: -1.805 [-2.081, -1.713] deg/readout  n=108  copy gap [-0.072, +0.310] -> BELOW
+  R2 ratio k(L2)/k(L1) N=4: 0.756 [0.708, 0.837]  (per readout 1, proportional 0.633) -> NEITHER: between
+  R3 split N=4: per-readout part a -0.802 [-1.387, -0.436] deg, per-us part b -0.727 [-0.899, -0.488] deg/us
+  R1 kick N=8 L1: -2.388 [-2.547, -2.242] deg/readout  n=108  copy gap [-0.009, +0.122] -> BELOW
+  R1 kick N=8 L2: -1.959 [-2.180, -1.638] deg/readout  n=108  copy gap [-0.074, +0.057] -> BELOW
+  R2 ratio k(L2)/k(L1) N=8: 0.820 [0.732, 0.863]  (per readout 1, proportional 0.633) -> NEITHER: between
+  R3 split N=8: per-readout part a -1.219 [-1.531, -0.687] deg, per-us part b -0.536 [-0.775, -0.407] deg/us
+  R4 measured qubit, P(1) idle minus readout, N=4 L1: +0.0300 [+0.0284, +0.0321] n=39 (idle 0.801, readout 0.770) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=4 L2: +0.0283 [+0.0260, +0.0296] n=39 (idle 0.799, readout 0.770) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=8 L1: +0.0589 [+0.0578, +0.0627] n=39 (idle 0.800, readout 0.740) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=8 L2: +0.0603 [+0.0586, +0.0638] n=39 (idle 0.801, readout 0.739) -> CANNOT_TELL (copies disagree)
+
+=== synth_NULL_marrakesh  job synthetic  L1 2.684 us  L2 1.884 us  L2/L1 0.702  shots 5000
+  R1 kick N=4 L1: +0.299 [-0.035, +0.469] deg/readout  n=100  copy gap [-0.216, +0.113] -> CONSISTENT
+  R1 kick N=4 L2: +0.103 [-0.079, +0.444] deg/readout  n=100  copy gap [-0.196, +0.234] -> CONSISTENT
+  R2 ratio k(L2)/k(L1) N=4: 0.344 [-1.012, 2.816]  (per readout 1, proportional 0.702) -> CANNOT_TELL (both 1 and L2/L1 inside)
+  R3 split N=4: per-readout part a -0.359 [-0.910, +0.667] deg, per-us part b +0.245 [-0.132, +0.403] deg/us
+  R1 kick N=8 L1: +0.159 [+0.026, +0.327] deg/readout  n=100  copy gap [-0.097, +0.051] -> ABOVE
+  R1 kick N=8 L2: +0.159 [+0.011, +0.425] deg/readout  n=100  copy gap [-0.060, +0.098] -> ABOVE
+  R2 ratio k(L2)/k(L1) N=8: 0.997 [-0.265, 2.394]  (per readout 1, proportional 0.702) -> CANNOT_TELL (both 1 and L2/L1 inside)
+  R3 split N=8: per-readout part a +0.158 [-0.206, +0.771] deg, per-us part b +0.001 [-0.212, +0.120] deg/us
+  R4 measured qubit, P(1) idle minus readout, N=4 L1: +0.0313 [+0.0275, +0.0346] n=39 (idle 0.800, readout 0.770) -> CANNOT_TELL (copies disagree)
+  R4 measured qubit, P(1) idle minus readout, N=4 L2: +0.0297 [+0.0263, +0.0316] n=39 (idle 0.800, readout 0.771) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=8 L1: +0.0601 [+0.0582, +0.0623] n=39 (idle 0.802, readout 0.741) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=8 L2: +0.0593 [+0.0574, +0.0616] n=39 (idle 0.800, readout 0.740) -> ABOVE
+
+=== synth_PERREADOUT_marrakesh  job synthetic  L1 2.684 us  L2 1.884 us  L2/L1 0.702  shots 5000
+  R1 kick N=4 L1: -2.329 [-2.616, -2.147] deg/readout  n=109  copy gap [-0.201, +0.072] -> BELOW
+  R1 kick N=4 L2: -2.365 [-2.525, -2.171] deg/readout  n=109  copy gap [-0.192, +0.234] -> BELOW
+  R2 ratio k(L2)/k(L1) N=4: 1.016 [0.921, 1.075]  (per readout 1, proportional 0.702) -> PER-READOUT
+  R3 split N=4: per-readout part a -2.451 [-2.922, -1.649] deg, per-us part b +0.046 [-0.256, +0.192] deg/us
+  R1 kick N=8 L1: -2.389 [-2.619, -2.155] deg/readout  n=109  copy gap [-0.051, +0.068] -> BELOW
+  R1 kick N=8 L2: -2.358 [-2.572, -2.160] deg/readout  n=109  copy gap [-0.016, +0.099] -> BELOW
+  R2 ratio k(L2)/k(L1) N=8: 0.987 [0.938, 1.060]  (per readout 1, proportional 0.702) -> PER-READOUT
+  R3 split N=8: per-readout part a -2.285 [-2.925, -1.797] deg, per-us part b -0.039 [-0.211, +0.169] deg/us
+  R4 measured qubit, P(1) idle minus readout, N=4 L1: +0.0279 [+0.0271, +0.0298] n=39 (idle 0.799, readout 0.771) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=4 L2: +0.0297 [+0.0277, +0.0320] n=39 (idle 0.799, readout 0.770) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=8 L1: +0.0600 [+0.0583, +0.0636] n=39 (idle 0.800, readout 0.740) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=8 L2: +0.0607 [+0.0561, +0.0618] n=39 (idle 0.800, readout 0.741) -> ABOVE
+
+=== synth_PROP_marrakesh  job synthetic  L1 2.684 us  L2 1.884 us  L2/L1 0.702  shots 5000
+  R1 kick N=4 L1: -2.605 [-2.790, -2.316] deg/readout  n=106  copy gap [-0.115, +0.209] -> BELOW
+  R1 kick N=4 L2: -1.820 [-1.978, -1.697] deg/readout  n=106  copy gap [-0.095, +0.143] -> BELOW
+  R2 ratio k(L2)/k(L1) N=4: 0.699 [0.650, 0.757]  (per readout 1, proportional 0.702) -> PROPORTIONAL-TO-LENGTH
+  R3 split N=4: per-readout part a +0.030 [-0.725, +0.622] deg, per-us part b -0.982 [-1.183, -0.705] deg/us
+  R1 kick N=8 L1: -2.529 [-2.835, -2.353] deg/readout  n=106  copy gap [-0.121, +0.009] -> BELOW
+  R1 kick N=8 L2: -1.885 [-2.017, -1.715] deg/readout  n=106  copy gap [-0.019, +0.091] -> BELOW
+  R2 ratio k(L2)/k(L1) N=8: 0.745 [0.693, 0.767]  (per readout 1, proportional 0.702) -> PROPORTIONAL-TO-LENGTH
+  R3 split N=8: per-readout part a -0.368 [-0.737, +0.328] deg, per-us part b -0.805 [-1.061, -0.710] deg/us
+  R4 measured qubit, P(1) idle minus readout, N=4 L1: +0.0278 [+0.0251, +0.0311] n=39 (idle 0.798, readout 0.771) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=4 L2: +0.0295 [+0.0268, +0.0319] n=39 (idle 0.800, readout 0.770) -> CANNOT_TELL (copies disagree)
+  R4 measured qubit, P(1) idle minus readout, N=8 L1: +0.0583 [+0.0572, +0.0608] n=39 (idle 0.799, readout 0.741) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=8 L2: +0.0593 [+0.0577, +0.0616] n=39 (idle 0.799, readout 0.739) -> ABOVE
+
+=== synth_MIXED_marrakesh  job synthetic  L1 2.684 us  L2 1.884 us  L2/L1 0.702  shots 5000
+  R1 kick N=4 L1: -2.552 [-2.834, -2.432] deg/readout  n=106  copy gap [-0.287, +0.007] -> BELOW
+  R1 kick N=4 L2: -2.135 [-2.240, -1.983] deg/readout  n=106  copy gap [-0.056, +0.223] -> BELOW
+  R2 ratio k(L2)/k(L1) N=4: 0.837 [0.757, 0.867]  (per readout 1, proportional 0.702) -> NEITHER: between
+  R3 split N=4: per-readout part a -1.152 [-1.581, -0.267] deg, per-us part b -0.522 [-0.859, -0.414] deg/us
+  R1 kick N=8 L1: -2.632 [-2.741, -2.494] deg/readout  n=106  copy gap [-0.076, +0.062] -> BELOW
+  R1 kick N=8 L2: -2.166 [-2.277, -2.006] deg/readout  n=106  copy gap [-0.063, +0.101] -> BELOW
+  R2 ratio k(L2)/k(L1) N=8: 0.823 [0.792, 0.852]  (per readout 1, proportional 0.702) -> NEITHER: between
+  R3 split N=8: per-readout part a -1.068 [-1.330, -0.780] deg, per-us part b -0.583 [-0.675, -0.487] deg/us
+  R4 measured qubit, P(1) idle minus readout, N=4 L1: +0.0294 [+0.0271, +0.0316] n=39 (idle 0.800, readout 0.772) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=4 L2: +0.0305 [+0.0292, +0.0328] n=39 (idle 0.801, readout 0.769) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=8 L1: +0.0607 [+0.0568, +0.0633] n=39 (idle 0.800, readout 0.738) -> CANNOT_TELL (copies disagree)
+  R4 measured qubit, P(1) idle minus readout, N=8 L2: +0.0581 [+0.0551, +0.0607] n=39 (idle 0.799, readout 0.741) -> ABOVE
+

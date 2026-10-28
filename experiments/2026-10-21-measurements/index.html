@@ -1,0 +1,42 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Supporting Measurements</title>
+<link rel="canonical" href="https://heuremen.org/experiments/2026-10-21-measurements/">
+<meta name="tdm-reservation" content="1">
+<meta name="tdm-policy" content="https://indahl.ai/terms#ai-training">
+<meta name="description" content="Runs from September and October 2026, each packaged as compact data with a standard-library script that recomputes every figure on its page. The raw.">
+<meta property="og:site_name" content="Heuremen LLC">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Supporting Measurements">
+<meta property="og:description" content="Runs from September and October 2026, each packaged as compact data with a standard-library script that recomputes every figure on its page. The raw.">
+<meta property="og:url" content="https://heuremen.org/experiments/2026-10-21-measurements/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://heuremen.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://heuremen.org/og.png">
+<style>
+body{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;color:#18202B;background:#FFF;font-size:15px;line-height:1.5;max-width:760px;margin:40px auto;padding:0 20px}
+h1{font-size:26px;color:#0E4A4D;border-bottom:2px solid #0F7173;padding-bottom:6px}
+h2{font-size:16px;color:#0F7173;margin-top:28px;text-transform:uppercase;letter-spacing:.04em}
+a{color:#0F7173}code{font-family:Menlo,monospace;font-size:13px;background:#EFF3F1;padding:1px 4px}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:14px}
+th{text-align:left;color:#0E4A4D;border-bottom:1.5px solid #0F7173;padding:5px 6px}
+td{border-bottom:1px solid #E4E9E6;padding:6px;vertical-align:top}td.n{text-align:right;font-variant-numeric:tabular-nums}
+td.f{white-space:nowrap;font-family:Menlo,monospace;font-size:12.5px}
+.warn{background:#FBF4E6;border-left:4px solid #8A5E0E;padding:10px 14px;margin:14px 0}
+.foot{color:#6B7480;font-size:13px;margin-top:28px}
+</style></head><body>
+<p><a href="/">&larr; What&rsquo;s Lost with a Look</a></p>
+<h1>Supporting measurements</h1>
+<p>Runs from September and October 2026, each packaged as compact data with a standard-library script that recomputes every figure on its page. The raw results and the reduction scripts are available on request.</p>
+<table>
+<tr><th>measurement</th><th>what the data show</th></tr>
+<tr><td><a href="measured_qubit/">The measured qubit&rsquo;s own loss</a></td><td>Each readout costs the measured qubit as much contrast as 1.3&ndash;1.7&times; the stated readout duration of its own decay would (per-processor means of three reads, seven processors, 4 to 6 October). The conversion assumes a single-exponential decay curve, which is only approximate; the equal-time comparison without a decay-shape assumption is from fez (11 October) and the 22 October readout-instruction run (fez and marrakesh; kingston not decided).</td></tr>
+<tr><td><a href="cost/">Decay under repeated readout</a></td><td>On ibm_fez the measured qubit&rsquo;s population after 1&ndash;128 readouts follows a stretched exponential, exponent 0.823, crossing 1/2 after 23&ndash;26 readouts; at equal elapsed time 24 readouts leave 0.48&ndash;0.52 where idle leaves 0.62&ndash;0.66.</td></tr>
+<tr><td><a href="reach/">Distance to the measured qubits</a></td><td>An earlier exploratory reading of 4 to 6 October data: a weak rank correlation of an untouched qubit&rsquo;s excess with proximity to the measured qubits (+0.16 with &Sigma;1/r&sup2;, 1283 readings); not reproducible across layouts. The kick&rsquo;s reach is read in the 22 October <a href="/experiments/2026-10-22-reach-run/">reach run</a>: resolved at 4 couplings combined, about a tenth of the kick next to a measured qubit.</td></tr>
+<tr><td><a href="processors_apparatus/">Decay, idle and drift controls</a></td><td>Decay is not single-exponential (62&ndash;85&thinsp;% of qubit-copies below their 300&thinsp;&micro;s extrapolation at 30&thinsp;&micro;s); a qubit idle in 0 for 300&thinsp;&micro;s sits +0.04 to +0.80&thinsp;% above its own job&rsquo;s zero-wait level; decay times differ by up to 9.8&thinsp;&micro;s between jobs and 11.5&thinsp;&micro;s between copies in one job, with the range of three copies inside the simulated 95th percentile of shot noise alone in 8 of 9 jobs (the simulation cannot separate shot noise from drift between copies); the non-exponential share is read against a pure-exponential baseline of 49 to 54&thinsp;%.</td></tr>
+<tr><td><a href="gate_cost/">Residual after spaced X-gate trains</a> &middot; <a href="gate_nonexp/">simulation</a> &middot; <a href="gate_trains/">every train number recomputed</a></td><td>A negative residual per gate (&minus;0.0006 to &minus;0.0020 on fez, kingston, boston and pittsburgh; near zero on phoenix) that simulated perfect gates plus a persistent shot-to-shot spread in decay rate reproduce. With the decay shape held equal (22 October), an extra X gate costs 0.0001643 [0.00005906, 0.0002695] combined over four processors; on fez and kingston the per-gate residual is opposite in sign to that cost and at least twice its upper edge, so it is not a gate cost there. No extra-gate test exists on boston or pittsburgh (<a href="/experiments/2026-10-22-deciding-runs/">extra-gate test</a>).</td></tr>
+<tr><td><a href="rigetti_extra/">Rigetti Cepheus-1-108Q</a></td><td>A neighbour in |2&rang; shifts a directly coupled qubit&rsquo;s precession by &minus;55 &plusmn; 1&thinsp;&deg;/&micro;s (28 Sep) and &minus;39 &plusmn; 2&thinsp;&deg;/&micro;s (4 Oct), same pair (shot noise only; the dates differ by 16.3 &plusmn; 2.1; the pulse amplitude, the number of simultaneous qubits and the calibration changed between them).</td></tr>
+</table>
+<p>Data tables and recounts: <a href="https://indahl.ai/qia">QIA</a> &middot; <a href="https://indahl.ai/iris">IRIS</a></p>
+<p class="foot">Bones &middot; Wayfinder &middot; Sage &middot; Shuttle &middot; Nova<br><a href="https://indahl.ai">Heuremen LLC</a><br>&ldquo;We found it.&rdquo;</p>
+</body></html>

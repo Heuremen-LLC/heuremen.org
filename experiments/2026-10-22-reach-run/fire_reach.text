@@ -1,0 +1,30 @@
+ibm_fez: centres [69, 71, 90]; readout length L = 415 dt (all qubits: [415])
+  untouched qubits at exact distance    d=1   d=2   d=3   d=4   d=5   d=6   d=7   d8+
+  layout centre 69                       13    12    16    12    14    11    15    24
+  layout centre 71                       11    10    14    11    15    10    12    34
+  layout centre 90                        9    13    12    15    10    17    11    30
+  pooled (layout, qubit) units           33    35    42    38    39    38    38    88
+  distinct physical qubits               33    35    42    38    39    38    38    55
+reach ibm_fez: 28 pubs, 4000 shots each, circuits 1.7-15.0 us, total shots 112000, ESTIMATED 34 s, remaining 724, queue 0
+SUBMITTED reach ibm_fez dbcvr0pgv2cc738h409g
+DONE reach ibm_fez: remaining now 692
+ibm_kingston: centres [69, 71, 90]; readout length L = 545 dt (all qubits: [545])
+  untouched qubits at exact distance    d=1   d=2   d=3   d=4   d=5   d=6   d=7   d8+
+  layout centre 69                       13    12    16    12    14    11    15    24
+  layout centre 71                       11    10    14    11    15    10    12    34
+  layout centre 90                        9    13    12    15    10    17    11    30
+  pooled (layout, qubit) units           33    35    42    38    39    38    38    88
+  distinct physical qubits               33    35    42    38    39    38    38    55
+reach ibm_kingston: 28 pubs, 4000 shots each, circuits 2.2-19.7 us, total shots 112000, ESTIMATED 34 s, remaining 692, queue 3
+SUBMITTED reach ibm_kingston dbcvrgfi0auc7394ele0
+DONE reach ibm_kingston: remaining now 659
+ibm_marrakesh: centres [69, 71, 90]; readout length L = 671 dt (all qubits: [671])
+  untouched qubits at exact distance    d=1   d=2   d=3   d=4   d=5   d=6   d=7   d8+
+  layout centre 69                       13    12    16    12    14    11    15    24
+  layout centre 71                       11    10    14    11    15    10    12    34
+  layout centre 90                        9    13    12    15    10    17    11    30
+  pooled (layout, qubit) units           33    35    42    38    39    38    38    88
+  distinct physical qubits               33    35    42    38    39    38    38    55
+reach ibm_marrakesh: 28 pubs, 4000 shots each, circuits 2.8-24.2 us, total shots 112000, ESTIMATED 35 s, remaining 659, queue 1
+SUBMITTED reach ibm_marrakesh dbcvruoc77vs73874lg0
+DONE reach ibm_marrakesh: remaining now 625

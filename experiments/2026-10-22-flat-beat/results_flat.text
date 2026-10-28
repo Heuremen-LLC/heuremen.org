@@ -1,0 +1,50 @@
+====================================================================================================
+flat ibm_phoenix job dbcvmr1gv2cc738h3qng | triples 20 | pairs 40
+  pairs fitted: 37 of 40; calibrated zz (kHz): median 28.0, range 0.0-58.8
+  Q1 median fitted beat (kHz)                          +12.9 [+11.7, +14.25] n=37 -> level   (copy 0 +12.85, copy 1 +12.9; per-pair fitted-beat copy gap +0.05 kHz [-0.1, +0.15])
+  Q1 median fitted beat minus 12.5 kHz (kHz)           +0.4 [-0.8, +1.75] n=37 -> CONSISTENT   (copy 0 +0.35, copy 1 +0.4; per-pair fitted-beat copy gap +0.05 kHz [-0.1, +0.15])
+  Q2 log-log slope of fitted beat on calibrated zz     +0.1931 [+0.01201, +0.3808] n=37 -> ABOVE   (copy 0 +0.2044, copy 1 +0.2143; per-pair fitted-beat copy gap +0.05 kHz [-0.1, +0.15])
+  Q2 slope minus 1 (beat tracks the calibration)       -0.8069 [-0.9832, -0.6073] n=37 -> BELOW   (copy 0 -0.7956, copy 1 -0.7857; per-pair fitted-beat copy gap +0.05 kHz [-0.1, +0.15])
+  Q3 rank correlation, fitted beat vs calibrated zz    +0.3902 [+0.0485, +0.6646] n=37 -> ABOVE   (copy 0 +0.3938, copy 1 +0.385; per-pair fitted-beat copy gap +0.05 kHz [-0.1, +0.15])
+  Q4 median of fitted beat / calibrated zz             +0.4626 [+0.4461, +0.5129] n=37 -> level   (copy 0 +0.4687, copy 1 +0.4579; per-pair fitted-beat copy gap +0.05 kHz [-0.1, +0.15])
+  per pair (A, B, calibrated zz kHz, fitted beat kHz):
+     37  27   49.60   16.10
+     37  36   50.84   23.10
+     19  29   33.89   15.35
+     19   9   29.44   13.40
+     23  13   14.35   14.45
+     23  22   31.70   17.00
+     93  83   23.43   10.45
+     93 103   25.92   15.05
+     25  15   13.07   12.90
+     25  35   25.33   11.40
+      6   5   31.46   14.55
+      6   7   28.34    3.90
+     88  87   29.75   11.70
+     88  98   30.79   12.15
+     56  66   33.87   11.05
+     56  46   35.66    9.35
+     68  67   27.63   12.80
+     68  58   58.79   16.55
+     41  31   20.76    7.70
+     41  42   12.39   10.95
+     72  73   26.23   13.25
+     72  82   22.61   13.90
+    101 100    0.00     nan
+    101 102   11.67   11.60
+     54  64   28.25   16.05
+     54  44   23.44   11.00
+     70  60   30.83   13.95
+     70  80    0.00     nan
+    117 116   29.15   14.95
+    117 118   30.38   14.25
+      0  10   11.56   11.65
+      0   1   16.92   15.60
+    109  99   43.97   17.35
+    109 119   47.07   12.45
+    105 104   20.20   10.70
+    105 115   34.41   11.10
+     96  97   23.47   12.60
+     96  86    0.00     nan
+     75  74   29.85   12.50
+     75  76   27.66   13.95

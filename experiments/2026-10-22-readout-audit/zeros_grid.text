@@ -1,0 +1,5 @@
+marrakesh record 2026-10-22 19:23:28-04:00: 312 prob values; multiples of 1/1024: 312; of 1/4096: 312
+95 % bound of a zero count: 0 of 1024 -> 0.292 %, 0 of 4096 -> 0.073 %
+all-qubit run 1: of 14 stated zeros, 95 % lower bound above 0 of 1024 (0.29 %): 11; above 0 of 4096 (0.073 %): 14; median delivered 0.73 %
+all-qubit repeat: of 14 stated zeros, 95 % lower bound above 0 of 1024 (0.29 %): 11; above 0 of 4096 (0.073 %): 13; median delivered 0.66 %
+isolated: of 14 stated zeros, 95 % lower bound above 0 of 1024 (0.29 %): 9; above 0 of 4096 (0.073 %): 11; median delivered 0.56 %

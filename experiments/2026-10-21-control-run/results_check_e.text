@@ -1,0 +1,12 @@
+ibm_fez
+   N=2  implied extra time per readout: wired 0.264 us (n=85), unwired -0.412 us (n=30); difference +0.677 [+0.309, +1.273] us -> ABOVE -> extra time / chip-wide cause EXCLUDED as the explanation of the wired excess (dropped 2)
+   N=4  implied extra time per readout: wired 0.090 us (n=85), unwired -0.152 us (n=30); difference +0.242 [-0.259, +0.579] us -> CONSISTENT -> cannot tell (dropped 2)
+   N=8  implied extra time per readout: wired 0.201 us (n=86), unwired -0.122 us (n=30); difference +0.322 [+0.048, +0.548] us -> ABOVE -> extra time / chip-wide cause EXCLUDED as the explanation of the wired excess (dropped 1)
+ibm_kingston
+   N=2  implied extra time per readout: wired 0.599 us (n=84), unwired 0.431 us (n=31); difference +0.167 [-0.422, +1.174] us -> CONSISTENT -> cannot tell (dropped 2)
+   N=4  implied extra time per readout: wired 0.291 us (n=84), unwired 0.083 us (n=31); difference +0.208 [-0.287, +0.921] us -> CONSISTENT -> cannot tell (dropped 2)
+   N=8  implied extra time per readout: wired 0.164 us (n=83), unwired -0.070 us (n=31); difference +0.234 [-0.190, +0.664] us -> CONSISTENT -> cannot tell (dropped 3)
+ibm_marrakesh
+   N=2  implied extra time per readout: wired 0.475 us (n=84), unwired 0.131 us (n=30); difference +0.344 [-0.490, +0.706] us -> CONSISTENT -> cannot tell (dropped 3)
+   N=4  implied extra time per readout: wired 0.480 us (n=84), unwired 0.105 us (n=30); difference +0.374 [-0.028, +0.753] us -> CONSISTENT -> cannot tell (dropped 3)
+   N=8  implied extra time per readout: wired 0.272 us (n=81), unwired 0.206 us (n=30); difference +0.066 [-0.446, +0.393] us -> CONSISTENT -> cannot tell (dropped 6)

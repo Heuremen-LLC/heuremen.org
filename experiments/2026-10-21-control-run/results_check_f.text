@@ -1,0 +1,15 @@
+ibm_fez
+   loss with  1 read out: -0.0001 [-0.0060, +0.0035] CONSISTENT
+   loss with 10 read out: +0.0085 [+0.0041, +0.0124] ABOVE
+   loss with 39 read out: +0.0061 [+0.0019, +0.0131] ABOVE
+   loss(39) - loss(1): +0.0099 [+0.0031, +0.0171] ABOVE -> extra time per step EXCLUDED
+ibm_kingston
+   loss with  1 read out: +0.0002 [-0.0045, +0.0070] CONSISTENT
+   loss with 10 read out: -0.0002 [-0.0039, +0.0067] CONSISTENT
+   loss with 39 read out: +0.0067 [-0.0015, +0.0144] CONSISTENT
+   loss(39) - loss(1): +0.0092 [-0.0003, +0.0239] CONSISTENT -> cannot tell
+ibm_marrakesh
+   loss with  1 read out: +0.0001 [-0.0075, +0.0087] CONSISTENT
+   loss with 10 read out: +0.0026 [-0.0051, +0.0062] CONSISTENT
+   loss with 39 read out: +0.0164 [+0.0089, +0.0236] ABOVE
+   loss(39) - loss(1): +0.0124 [+0.0015, +0.0236] ABOVE -> extra time per step EXCLUDED

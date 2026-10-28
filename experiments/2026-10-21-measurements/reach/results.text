@@ -1,0 +1,101 @@
+
+  REACH OF A READOUT -- 10 chip-days of layout A, 2 of layout B, 4 four-cluster chips, 3 floor chips
+
+  1. Fall-off with distance.  Ratio of reported/stated (measured arm) to reported/laid (idle arm), by spacing band.
+     data: ibm_pittsburgh, 7 Oct 2026, runs [1031, 1032, 1033]; 73 spectators 3 or more spacings from every measured qubit.
+     Three arms in one job per read: idle (identical idle time, nothing measured), measure (the chip's own 2.18 us readout), measure_2 (a 1.38 us readout).
+     ratio = (reported/stated on the measured arm) / (reported/laid on the idle arm); reads 1 and 2 of the job in the first table.
+
+     measure / idle, reads 1+2             value
+       3-5 spacings (n=14)                 1.031
+       6-8 spacings (n=18)                 1.025
+       9+ spacings (n=41)                  1.009
+       idle control, all 73                0.991   <- idle arm, absolute (reported/laid)
+
+     The same quantity as more of the data is admitted (measure / idle):
+                                               3-5      6-8       9+
+       Pittsburgh, read 1 only               1.062    1.021    1.024
+       Pittsburgh, reads 1+2                 1.031    1.025    1.009
+       Pittsburgh, all 3 reads               1.014    1.027    0.999
+                                             1.034    0.985    1.000   (measure_2 arm, all 3 reads)
+       read-to-read, measure/idle:                                  
+         read 1 (run 1031)                     1.062    1.021    1.024
+         read 2 (run 1032)                     1.001    1.028    0.995
+         read 3 (run 1033)                     0.981    1.033    0.980
+       ibm_fez, all reads                    1.017    1.017    0.987   (runs [1081, 1082, 1083]; read 1 alone: 1.038 1.023 0.991)
+       ibm_aachen, all reads                 0.998    1.011    1.001   (runs [1091, 1092]; read 1 alone: 0.999 1.048 1.009)
+     -> Over all three reads of the Pittsburgh job the near-band excess is +0.014 and the 6-8 band is
+        larger than the 3-5 band; the read-to-read spread of the 3-5 band is 0.035, as large as the effect. The two other chips run the same design show no near-band excess.
+     NOTE the idle-control value is an absolute reported/laid value (idle arm), while the band ratios already divide by it; the two are not on one scale.
+
+  2. Three predictors ranked against each spectator's reading (Spearman rank correlation with reported/stated).
+     Predictors: intensity (sum of 1/r^2 over all measured qubits), count of measured qubits within two spacings, nearest measured-qubit distance.
+
+                                                            n |    count  intens.  nearest
+     layout A pool (5 chips, 8 chip-days, no Phoenix)    1283 |   +0.120   +0.157   -0.085
+        best by |rho|: intensity.  bootstrap 95% interval (resampling spectator-reads, 1000 draws) of rho_intensity - rho_count: [+0.004, +0.070];  of rho_intensity - |rho_nearest|: [+0.046, +0.100]
+     four-cluster chip (Fez), read 1 only                  52 |   +0.486   +0.501   -0.496
+        best by |rho|: intensity.  bootstrap 95% interval (resampling spectator-reads, 1000 draws) of rho_intensity - rho_count: [-0.145, +0.187];  of rho_intensity - |rho_nearest|: [-0.093, +0.101]
+     four-cluster chip (Fez), all 3 reads                 155 |   +0.327   +0.348   -0.311
+        best by |rho|: intensity.  bootstrap 95% interval (resampling spectator-reads, 1000 draws) of rho_intensity - rho_count: [-0.076, +0.109];  of rho_intensity - |rho_nearest|: [-0.022, +0.096]
+     -> intensity has the largest |rho| in each set. In the pool all three correlations are weak (|rho| <= 0.16, i.e. under 3% of rank variance)
+        and the intervals above show whether the margin over the other two predictors is distinguishable from zero.
+
+  3. Dose-response: spectators binned by number of measured qubits within two spacings (0, 1, 2, >=3).
+
+     Layout A pools 6 processors (10 chip-days, 24 reads): the mean over processors of each processor's mean of per-read medians.
+                                              0       1       2     >=3
+     layout A (mean over 6 processors)    1.039   1.045   1.083   1.181
+       boston                             1.070   1.078   1.113   1.216   (10-04 x3)
+       fez                                1.019   1.032   1.040   1.349   (10-04 x3, 10-06 x1)
+       kingston                           1.055   1.111   1.122   1.127   (10-04 x3, 10-06 x1)
+       marrakesh                          1.074   0.976   1.096   1.197   (10-04 x3)
+       phoenix                            1.005   1.023   1.051   1.100   (10-05 x3, 10-06 x3)
+       pittsburgh                         1.010   1.051   1.077   1.098   (10-04 x3, 10-05 x1)
+       processors where >=3 exceeds 0: 6 of 6.  Monotone 0<1<2<3+ on: boston, fez, kingston, phoenix, pittsburgh
+     same, rate cut applied               1.026   1.032   1.049   1.066   (only spectators with |rate| > 4 deg/us, the cut the duration table uses; spectator-reads kept 244/380/315/155 of 430/633/520/218)
+
+     Layout B (an independent second random draw of which qubits are measured), 7 Oct:
+       ibm_pittsburgh layout B runs [901, 902, 903]: 1.032 1.083 1.131 1.176
+         0 measured in range:  1.032
+         >=3 measured in range: 1.176
+       ibm_pittsburgh is also one of the six processors pooled in layout A (layout A there, 4 Oct and 5 Oct: 1.011 1.047 1.056 1.040; 1.010 1.055 1.098 1.156).
+         On that same processor, layout A on 4 Oct gives >=3 -> 1.040 (0 -> 1.011); layout B three days later gives 1.032 -> 1.176.
+       ibm_marrakesh layout B runs [911, 912, 913]: 0.979 1.114 1.196 0.688   (layout A, same processor, 4 Oct: 1.074 0.976 1.096 1.197)
+         -> layout B on ibm_marrakesh gives >=3 -> 0.688, below its zero bin 0.979.
+         Marrakesh layout B has 7 spectators with >=3 measured qubits in range; read-to-read: 0.696 / 0.685 / 0.684
+
+     Change in reading per additional measured qubit in range:
+       table, (>=3 bin - 0 bin) / 3 rungs (layout A)                      +0.047
+       table, layout B Pittsburgh, (>=3 - 0) / 3                          +0.048
+       least-squares slope, every spectator-read in layout A, 0..4 in range  +0.042   (n=1283)
+       least-squares slope, every spectator-read in layout B Pittsburgh      +0.083   (n=203)
+       pittsburgh: 44 spectators present in both layouts: least-squares change in reading per extra measured qubit in range +0.044;  median change of the 12 that gained exactly one: +0.214
+       marrakesh: 39 spectators present in both layouts: least-squares change in reading per extra measured qubit in range +0.218;  median change of the 10 that gained exactly one: +0.027
+       Pittsburgh median change for spectators that gained exactly one measured qubit: +0.214 (12 spectators); this is a subgroup median, not a slope.
+
+  4. Four clusters of measured qubits around four central spectators.
+     data: ibm_fez, 7 Oct 2026, runs [921, 922, 923] (same layout, three consecutive jobs); stated readout 1.660 us; centres (spectator qubit numbers) [43, 131, 102, 69]; 25 measured qubits.
+
+     reported/stated at each centre (nan = the spectator's phase signal was too weak to fit):
+       centre     read 1 (921)  read 2 (922)  read 3 (923)
+       43              2.066         nan       0.513
+       131               nan         nan       1.429
+       102             2.285         nan      -0.424
+       69                nan       3.252       1.463
+       readable: 7 of 12 (centre, read) cells; values -0.424, 0.513, 1.429, 1.463, 2.066, 2.285, 3.252; median of readable 1.463
+       The 4th centre (131) was unreadable on reads 1-2 and read 1.429 on read 3.
+       read 3 of the same job: 43: 0.513, 131: 1.429, 102: -0.424, 69: 1.463.  Per-read mean of the readable centres: 2.175 / 3.252 / 0.745
+       2 of the readable centre-values are below 1 or negative: 0.513, -0.424 (a negative elapsed time is not a duration; this is the estimator failing near its limit).
+
+     Open field: the same job's spectators with no measured qubit within two spacings (median of reported/stated):
+       read 1 (run 921): fit estimator 1.003 (n=33) | 3-and-9 estimator 1.044
+       read 2 (run 922): fit estimator 0.978 (n=29) | 3-and-9 estimator 0.973
+       read 3 (run 923): fit estimator 0.983 (n=31) | 3-and-9 estimator 1.002
+       three reads pooled (fit estimator): 0.983
+
+     The same four-cluster layout, same day, three other processors (reported/stated at the centres, reads 1/2/3):
+       ibm_pittsburgh   runs [931, 932, 933]  43: 1.51/nan/nan | 131: -0.37/-0.37/-0.41 | 102: 0.21/0.23/0.18 | 69: 0.78/0.79/0.68
+       ibm_marrakesh    runs [951, 952, 953]  43: 0.04/0.04/0.06 | 131: nan/nan/nan | 102: 0.72/2.26/2.50 | 69: nan/nan/nan
+       ibm_aachen       runs [961, 962, 963]  43: 1.38/1.39/1.52 | 131: nan/nan/nan | 102: nan/nan/nan | 69: 2.16/2.75/1.76
+

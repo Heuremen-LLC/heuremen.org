@@ -1,0 +1,14 @@
+
+=== ibm_marrakesh  job dbd4pqvi0auc7394mpn0  L1 2.684 us  L2 1.884 us  L2/L1 0.702  shots 5000
+  R1 kick N=4 L1: -2.222 [-3.245, -1.832] deg/readout  n=115  copy gap [-0.058, +0.243] -> BELOW
+  R1 kick N=4 L2: -1.281 [-1.610, -1.054] deg/readout  n=115  copy gap [-0.092, +0.086] -> BELOW
+  R2 ratio k(L2)/k(L1) N=4: 0.576 [0.433, 0.732]  (per readout 1, proportional 0.702) -> PROPORTIONAL-TO-LENGTH
+  R3 split N=4: per-readout part a +0.936 [-0.888, +3.839] deg, per-us part b -1.177 [-2.263, -0.626] deg/us
+  R1 kick N=8 L1: -2.263 [-3.185, -1.714] deg/readout  n=110  copy gap [-0.062, +0.056] -> BELOW
+  R1 kick N=8 L2: -1.150 [-1.412, -0.772] deg/readout  n=110  copy gap [-0.075, +0.066] -> BELOW
+  R2 ratio k(L2)/k(L1) N=8: 0.508 [0.363, 0.650]  (per readout 1, proportional 0.702) -> NEITHER: outside both
+  R3 split N=8: per-readout part a +1.470 [-0.372, +4.473] deg, per-us part b -1.391 [-2.444, -0.818] deg/us
+  R4 measured qubit, P(1) idle minus readout, N=4 L1: +0.0243 [+0.0153, +0.0452] n=39 (idle 0.913, readout 0.865) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=4 L2: +0.0158 [+0.0105, +0.0226] n=39 (idle 0.932, readout 0.910) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=8 L1: +0.0511 [+0.0310, +0.0757] n=39 (idle 0.847, readout 0.768) -> ABOVE
+  R4 measured qubit, P(1) idle minus readout, N=8 L2: +0.0381 [+0.0198, +0.0472] n=39 (idle 0.889, readout 0.842) -> ABOVE

@@ -1,0 +1,13 @@
+====================================================================================================
+ibm_fez  job dbdbv9vi0auc73cqqqt0  S 117
+  R1 kick                                      copy 0  -1.4713 deg [-2.0497, -1.1420] n=117 -> BELOW vs 0
+  R1 kick                                      copy 1  -1.5684 deg [-2.0846, -1.0703] n=117 -> BELOW vs 0
+  R1 kick                                      pooled  -1.4723 deg [-1.9901, -1.2381] n=117 -> BELOW vs 0
+  R2 kick with K=1 measured                    copy 0  -0.0757 deg [-0.1304, +0.0023] n=117 -> CONSISTENT vs 0
+  R2 kick with K=1 measured                    copy 1  -0.0163 deg [-0.1482, +0.1056] n=117 -> CONSISTENT vs 0
+  R2 kick with K=1 measured                    pooled  -0.0124 deg [-0.1197, +0.0536] n=117 -> CONSISTENT vs 0
+  R2 K=1 copy gap (copy 0 - copy 1, per qubit): -0.0379 [-0.1504, +0.1391] -> no shift
+  R2 kick with K=10 measured                   copy 0  -0.1621 deg [-0.3267, -0.0314] n=117 -> BELOW vs 0
+  R2 kick with K=10 measured                   copy 1  -0.1910 deg [-0.3169, -0.0394] n=117 -> BELOW vs 0
+  R2 kick with K=10 measured                   pooled  -0.1668 deg [-0.3228, -0.0677] n=117 -> BELOW vs 0
+  R2 K=10 copy gap (copy 0 - copy 1, per qubit): +0.0092 [-0.1291, +0.1296] -> no shift

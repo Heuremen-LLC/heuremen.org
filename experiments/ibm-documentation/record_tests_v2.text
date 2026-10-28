@@ -1,0 +1,6 @@
+66 distinct IBM records, 6 processors, stamped 2026-09-16 to 2026-10-22 (outside window skipped: 0 files)
+STALE FLAG error=1: gate_error entries 2101 (211 distinct gates, repeated across restamped records); readout_error 0; init_error 0
+AGE T1: 3579 distinct measurements; shown more than 7 days after measurement (against the record stamp): 6; oldest 41.8 days (ibm_boston qubit 10)
+AGE T2: 3620 distinct measurements; shown more than 7 days after measurement (against the record stamp): 7; oldest 158.4 days (ibm_pittsburgh qubit 117)
+AGE init_error: 4943 distinct measurements; shown more than 7 days after measurement (against the record stamp): 145; oldest 84.3 days (ibm_marrakesh qubit 94)
+READOUT_ERROR vs average: 153 of 5120 distinct measurements differ by >0.001, same date; >0.01: 18; largest 0.157; 43 qubits on 5 processors; on index 16 mod 17: 141 (defined after the data)

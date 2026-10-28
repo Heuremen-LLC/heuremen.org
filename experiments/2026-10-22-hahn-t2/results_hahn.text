@@ -1,0 +1,24 @@
+=== ibm_kingston job dbd99g1gv2cc738hl5mg; IBM record 2026-10-22 18:45:38-04:00; KNOWN-GOOD median P(1) at tau 0 = 0.986 (must be >= 0.90): MET
+  delivered / stated T2, median over 153 qubits: 0.910 [0.871, 0.962] vs 1 -> BELOW   (copy gap +0.000 [-0.007, +0.004]; qubits below stated 100 of 153)
+=== ibm_marrakesh job dbd99ic24mrc73cl1bfg; IBM record 2026-10-22 18:21:43-04:00; KNOWN-GOOD median P(1) at tau 0 = 0.981 (must be >= 0.90): MET
+  delivered / stated T2, median over 153 qubits: 0.907 [0.873, 1.012] vs 1 -> CONSISTENT   (copy gap +0.007 [+0.000, +0.017]; qubits below stated 87 of 153)
+=== ibm_fez job dbd99dpgv2cc738hl5g0; IBM record 2026-10-22 18:17:23-04:00; KNOWN-GOOD median P(1) at tau 0 = 0.985 (must be >= 0.90): MET
+  delivered / stated T2, median over 154 qubits: 1.051 [1.003, 1.085] vs 1 -> ABOVE   (copy gap +0.000 [-0.012, +0.008]; qubits below stated 65 of 154)
+
+/q CHECKS, defined after the data (22 Oct night)
+A1 IBM: "T2 is reported from a Hahn echo sequence" (quantum.cloud.ibm.com/docs/en/guides/qpu-information). Same quantity.
+Fit window: kingston 0.910 full, 0.907 on 0-220 us; marrakesh 0.907 / 0.907; fez 1.051 / 1.044.
+Shape (mean residual of the single exponential, x1000, tau 0..400): kingston within +-2.3; fez within +-7.8; marrakesh +21 at tau 0 and structured (decay not single-exponential; short-T2 half 1.053, long-T2 half 0.850).
+Stated T2 age at the record stamp: kingston median 13.7 h (max 39.8), marrakesh 2.6 h, fez 0.0 h (max 49.1).
+Drift: IBM's own consecutive kingston T2 measurements in the saved records (21-22 Oct, 153 pairs): median ratio 0.970, quartiles 0.833-1.105.
+
+REPEAT (PLAN_HAHN_REPEAT.md), same IBM records as run 1
+ibm_kingston: run 1 0.910 [0.871, 0.962], run 2 0.946 [0.882, 1.012] CONSISTENT; chi2/dof 0.79; combined 0.922 [0.885, 0.959] BELOW
+ibm_marrakesh: run 1 0.907 [0.873, 1.012], run 2 0.948 [0.909, 1.013] CONSISTENT; chi2/dof 0.86; combined 0.933 [0.892, 0.975] BELOW
+Rule set before firing: the kingston bill line stands as a deviation only if run 2 alone reads BELOW. It does not; no deviation line.
+
+CORRECTION (after the outside referee, 22 Oct night): the two "combined" readings above (kingston 0.922 [0.885, 0.959], marrakesh
+0.933 [0.892, 0.975]) treated two runs on the same qubits as independent and are WITHDRAWN. Pooled by qubit (hahn_pool.py, pool_runs12.text):
+kingston 0.942 [0.885, 0.987] BELOW fixed, 0.941 [0.898, 0.975] BELOW free asymptote; marrakesh 0.925 [0.889, 1.012] CONSISTENT fixed,
+0.887 [0.835, 0.925] BELOW free; fez (one run) 1.051 [1.003, 1.085] ABOVE fixed, 0.979 [0.941, 1.014] CONSISTENT free. The free-asymptote
+fit is defined after the data (it is the model of IBM's open-source T2HahnAnalysis). See ADDENDUM_HAHN_POOL.md.

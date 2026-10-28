@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Excitation Test</title>
+<link rel="canonical" href="https://heuremen.org/experiments/2026-10-21-excitation-test/">
+<meta name="tdm-reservation" content="1">
+<meta name="tdm-policy" content="https://indahl.ai/terms#ai-training">
+<meta name="description" content="21 October 2026, plan hashed locally before the jobs, not externally timestamped (plan SHA-256 9c985e3c… , plan ). The superposition run found that.">
+<meta property="og:site_name" content="Heuremen LLC">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Excitation Test">
+<meta property="og:description" content="21 October 2026, plan hashed locally before the jobs, not externally timestamped (plan SHA-256 9c985e3c… , plan ). The superposition run found that.">
+<meta property="og:url" content="https://heuremen.org/experiments/2026-10-21-excitation-test/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://heuremen.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://heuremen.org/og.png">
+<style>
+body{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;color:#18202B;background:#FFF;font-size:15px;line-height:1.5;max-width:760px;margin:40px auto;padding:0 20px}
+h1{font-size:26px;color:#0E4A4D;border-bottom:2px solid #0F7173;padding-bottom:6px}
+h2{font-size:16px;color:#0F7173;margin-top:28px;text-transform:uppercase;letter-spacing:.04em}
+a{color:#0F7173}code{font-family:Menlo,monospace;font-size:13px;background:#EFF3F1;padding:1px 4px}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:14px}
+th{text-align:left;color:#0E4A4D;border-bottom:1.5px solid #0F7173;padding:5px 6px}
+td{border-bottom:1px solid #E4E9E6;padding:6px;vertical-align:top}td.n{text-align:right;font-variant-numeric:tabular-nums}
+td.f{white-space:nowrap;font-family:Menlo,monospace;font-size:12.5px}
+.warn{background:#FBF4E6;border-left:4px solid #8A5E0E;padding:10px 14px;margin:14px 0}
+.foot{color:#6B7480;font-size:13px;margin-top:28px}
+</style></head><body>
+<p><a href="/">&larr; What&rsquo;s Lost with a Look</a></p>
+<h1>Is the extra loss caused by measured qubits accidentally left in 1?</h1>
+<p>21 October 2026, plan hashed locally before the jobs, not externally timestamped (plan SHA-256 <code>9c985e3c&hellip;</code>, <a href="PREREG.md.text">plan</a>). The <a href="/experiments/2026-10-21-superposition-entanglement/">superposition run</a> found that untouched qubits lose a little more coherence during the first readouts than during an equal idle. An ordinary explanation: the measured qubits, held in 0, are occasionally left in 1, and an excited neighbour dephases its partners through ZZ coupling. This run tests that explanation directly.</p>
+<h2>Design</h2>
+<p>Same 39 measured and 117 untouched qubits; all untouched qubits on the equator; 0, 4 or 8 steps of four kinds: idle with the measured qubits in 0 (D0), readout with them in 0 (M0), idle with them deliberately in 1 (D1), readout with them in 1 (M1). Every mid-circuit readout is recorded, so the accidental-excitation rate is measured directly. Readout excess X = extra coherence loss after 8 readouts versus 8 idles; excitation cost Y = extra loss with a neighbour held fully in 1 for the same time; the ordinary explanation predicts X = (excitation rate) &times; Y.</p>
+<h2>Result</h2>
+<p><b>The planned test could not do its job.</b> It predicted the readout excess as (excitation rate) &times; Y, where Y is the coherence cost of a neighbour held fully in 1. But a neighbour held in 1 applies a fixed phase, and coherence |&lang;X&rang; + i&lang;Y&rang;| ignores a fixed phase, so Y &asymp; 0 and the prediction is zero by construction. The declared output (<a href="results_prereg.text">here</a>) is kept as it came out.</p>
+<p><b>Corrected after the data.</b> A neighbour that is excited only in some shots applies its phase in those shots only, which does cost coherence: about p&thinsp;(1 &minus; cos&thinsp;&theta;), with p the excitation rate measured from the recorded mid-circuit readouts and &theta; the phase measured in the idle-in-1 arm. <a href="reanalysis_random_phase.py">reanalysis_random_phase.py</a> &middot; <a href="results_random_phase.text">output</a></p>
+<table><tr><th>chip</th><th class="n">excitation rate</th><th>untouched qubits</th><th class="n">coherence excess after 8 readouts</th><th class="n">from random excitation</th></tr>
+<tr><td>ibm_marrakesh</td><td class="n">4.8&thinsp;%</td><td>next to a measured qubit (86)</td><td class="n">+0.025 [0.012, 0.036]</td><td class="n">+0.0008</td></tr>
+<tr><td>ibm_marrakesh</td><td class="n"></td><td>no measured neighbour (31)</td><td class="n">+0.010 [0.000, 0.019]</td><td class="n">0</td></tr>
+<tr><td>ibm_kingston</td><td class="n">3.1&thinsp;%</td><td>next to a measured qubit (86)</td><td class="n">+0.004 [&minus;0.003, 0.014]</td><td class="n">+0.0005</td></tr>
+<tr><td>ibm_kingston</td><td class="n"></td><td>no measured neighbour (31)</td><td class="n">+0.009 [&minus;0.006, 0.018]</td><td class="n">0</td></tr></table>
+<p>On ibm_marrakesh the excess next to a measured qubit is far above what random excitation of the measured qubits can produce (+0.025 against +0.0008), and on qubits with no measured neighbour, where that model predicts zero, it is +0.010. On ibm_kingston the excess is +0.004 [&minus;0.003, 0.014] against +0.0005, an interval that contains both 0 and the raw-readout run&rsquo;s kingston cost. Neither reading of the planned prediction (zero by construction) tests excitation. Caveats: the excitation rate includes readout misassignment (which makes the prediction larger, not smaller); one kingston measured qubit read 1 in 75&thinsp;% of shots. Kick in 1 minus kick in 0 from this run, re-read after the data (<a href="check_j_gap.py">check_j_gap.py</a>, <a href="results_check_j.text">output</a>): +0.204 [&minus;0.092, +0.320] on kingston (larger in 1 by at most 0.32&deg;; consistent with zero) and &minus;0.673 [&minus;0.982, &minus;0.403] on marrakesh (smaller in 1). Holding the measured qubits in 1 without any readout shifts the untouched qubits&rsquo; phase by 3.10&deg; (kingston) and 3.12&deg; (marrakesh) per step (2.5 to 3.4&deg; on three processors in the 22 October deciding runs; <a href="phase_by_arm.py">phase_by_arm.py</a>, <a href="results_phase_by_arm.text">output</a>).</p>
+<p>Files: <a href="PREREG.md.text">plan</a> (SHA-256 <code>9c985e3c&hellip;</code>, local, not externally timestamped) &middot; <a href="run.py">run.py</a> &middot; <a href="analyze.py">analyze.py</a> &middot; <a href="job_ibm_kingston.json">job kingston</a> &middot; <a href="job_ibm_marrakesh.json">job marrakesh</a> &middot; raw: <a href="raw_ibm_marrakesh.npz">marrakesh</a>, <a href="raw_ibm_kingston.npz">kingston</a> &middot; <a href="fire.log.text">submission log</a>. analyze.py reads the qubit roles from <a href="/experiments/2026-10-04-three-positions/data/reads/countwide_roles_ibm_kingston.json">countwide_roles_&lt;chip&gt;.json</a>.</p>
+<p>Data tables and recounts: <a href="https://indahl.ai/qia">QIA</a> &middot; <a href="https://indahl.ai/iris">IRIS</a></p>
+<p class="foot">Bones &middot; Wayfinder &middot; Sage &middot; Shuttle &middot; Nova<br><a href="https://indahl.ai">Heuremen LLC</a><br>&ldquo;We found it.&rdquo;</p>
+</body></html>

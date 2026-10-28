@@ -1,0 +1,70 @@
+# null G planted 0.0 seed 1 shots 4900
+  RJ.1 kick, measured qubits in 0 (M0 - D0)                  +2.018 [+1.984, +2.052] deg/step n=117 -> ABOVE   (copy gap -0.03396 [-0.06985, +0.01529])
+  RJ.2 kick, measured qubits in 1 (M1 - D1)                  +1.99 [+1.962, +2.036] deg/step n=117 -> ABOVE   (copy gap +0.04783 [-0.01514, +0.07583])
+  RJ.3 G = kick in 1 minus kick in 0                         -0.03025 [-0.06098, -0.001972] deg/step n=117 -> BELOW   (copy gap +0.05347 [-0.03219, +0.1238])
+  RJ.4 measured qubits in 1, no readout (D1 - D0)            +3.009 [+2.982, +3.031] deg/step n=117 -> ABOVE   (copy gap -0.03092 [-0.09119, +0.05159])
+# planted G planted 0.5 seed 1 shots 4900
+  RJ.1 kick, measured qubits in 0 (M0 - D0)                  +2.018 [+1.984, +2.049] deg/step n=117 -> ABOVE   (copy gap -0.03396 [-0.06266, +0.0222])
+  RJ.2 kick, measured qubits in 1 (M1 - D1)                  +2.484 [+2.444, +2.531] deg/step n=117 -> ABOVE   (copy gap +0.04386 [-0.0272, +0.08203])
+  RJ.3 G = kick in 1 minus kick in 0                         +0.4661 [+0.4368, +0.5119] deg/step n=117 -> ABOVE   (copy gap +0.07456 [-0.007729, +0.1319])
+  RJ.4 measured qubits in 1, no readout (D1 - D0)            +3.009 [+2.974, +3.028] deg/step n=117 -> ABOVE   (copy gap -0.03092 [-0.09119, +0.05159])
+# null G planted 0.0 seed 2 shots 4900
+  RJ.1 kick, measured qubits in 0 (M0 - D0)                  +2.008 [+1.975, +2.031] deg/step n=117 -> ABOVE   (copy gap -0.02736 [-0.1123, +0.01434])
+  RJ.2 kick, measured qubits in 1 (M1 - D1)                  +2 [+1.982, +2.027] deg/step n=117 -> ABOVE   (copy gap +0.01788 [-0.03762, +0.05738])
+  RJ.3 G = kick in 1 minus kick in 0                         +0.003019 [-0.02495, +0.05585] deg/step n=117 -> CONSISTENT   (copy gap +0.01031 [-0.02969, +0.1119])
+  RJ.4 measured qubits in 1, no readout (D1 - D0)            +2.994 [+2.957, +3.034] deg/step n=117 -> ABOVE   (copy gap -0.03091 [-0.1335, +0.05852])
+# planted G planted 0.5 seed 2 shots 4900
+  RJ.1 kick, measured qubits in 0 (M0 - D0)                  +2.008 [+1.97, +2.031] deg/step n=117 -> ABOVE   (copy gap -0.02736 [-0.1123, +0.01582])
+  RJ.2 kick, measured qubits in 1 (M1 - D1)                  +2.504 [+2.482, +2.526] deg/step n=117 -> ABOVE   (copy gap +0.02094 [-0.03511, +0.07251])
+  RJ.3 G = kick in 1 minus kick in 0                         +0.4986 [+0.4723, +0.5329] deg/step n=117 -> ABOVE   (copy gap +0.03513 [-0.02762, +0.1051])
+  RJ.4 measured qubits in 1, no readout (D1 - D0)            +2.994 [+2.956, +3.031] deg/step n=117 -> ABOVE   (copy gap -0.03091 [-0.1322, +0.05805])
+# null G planted 0.0 seed 3 shots 4900
+  RJ.1 kick, measured qubits in 0 (M0 - D0)                  +1.974 [+1.948, +2.006] deg/step n=117 -> ABOVE   (copy gap -0.004179 [-0.04134, +0.05283])
+  RJ.2 kick, measured qubits in 1 (M1 - D1)                  copies shifted -0.04417 [-0.1098, -0.008096] | copy0 +1.944 copy1 +1.999 -> CANNOT TELL
+  RJ.3 G = kick in 1 minus kick in 0                         -0.007772 [-0.03368, +0.01669] deg/step n=117 -> CONSISTENT   (copy gap -0.02757 [-0.1186, +0.01889])
+  RJ.4 measured qubits in 1, no readout (D1 - D0)            +3.035 [+2.983, +3.056] deg/step n=117 -> ABOVE   (copy gap +0.05649 [-0.05728, +0.09535])
+# planted G planted 0.5 seed 3 shots 4900
+  RJ.1 kick, measured qubits in 0 (M0 - D0)                  +1.974 [+1.948, +2.007] deg/step n=117 -> ABOVE   (copy gap -0.004179 [-0.03959, +0.04494])
+  RJ.2 kick, measured qubits in 1 (M1 - D1)                  copies shifted -0.05789 [-0.09333, -0.01009] | copy0 +2.457 copy1 +2.481 -> CANNOT TELL
+  RJ.3 G = kick in 1 minus kick in 0                         +0.4825 [+0.4603, +0.509] deg/step n=117 -> ABOVE   (copy gap -0.005399 [-0.1019, +0.03565])
+  RJ.4 measured qubits in 1, no readout (D1 - D0)            +3.035 [+2.983, +3.055] deg/step n=117 -> ABOVE   (copy gap +0.05649 [-0.04563, +0.09989])
+# null G planted 0.0 seed 4 shots 4900
+  RJ.1 kick, measured qubits in 0 (M0 - D0)                  +2.006 [+1.969, +2.033] deg/step n=117 -> ABOVE   (copy gap -0.0108 [-0.04791, +0.06268])
+  RJ.2 kick, measured qubits in 1 (M1 - D1)                  +2.005 [+1.983, +2.027] deg/step n=117 -> ABOVE   (copy gap +0.01931 [-0.03251, +0.06383])
+  RJ.3 G = kick in 1 minus kick in 0                         +0.007444 [-0.03129, +0.04136] deg/step n=117 -> CONSISTENT   (copy gap -0.004714 [-0.07168, +0.05473])
+  RJ.4 measured qubits in 1, no readout (D1 - D0)            +3 [+2.959, +3.04] deg/step n=117 -> ABOVE   (copy gap +0.05793 [-0.05096, +0.1403])
+# planted G planted 0.5 seed 4 shots 4900
+  RJ.1 kick, measured qubits in 0 (M0 - D0)                  +2.006 [+1.973, +2.033] deg/step n=117 -> ABOVE   (copy gap -0.0108 [-0.03107, +0.06268])
+  RJ.2 kick, measured qubits in 1 (M1 - D1)                  +2.504 [+2.481, +2.531] deg/step n=117 -> ABOVE   (copy gap +0.01354 [-0.0399, +0.05383])
+  RJ.3 G = kick in 1 minus kick in 0                         +0.4981 [+0.4689, +0.5374] deg/step n=117 -> ABOVE   (copy gap +0.0006056 [-0.07697, +0.07058])
+  RJ.4 measured qubits in 1, no readout (D1 - D0)            +3 [+2.959, +3.044] deg/step n=117 -> ABOVE   (copy gap +0.05793 [-0.03295, +0.1217])
+# null G planted 0.0 seed 5 shots 4900
+  RJ.1 kick, measured qubits in 0 (M0 - D0)                  +1.992 [+1.969, +2.017] deg/step n=117 -> ABOVE   (copy gap -0.001745 [-0.06835, +0.04899])
+  RJ.2 kick, measured qubits in 1 (M1 - D1)                  +2.03 [+1.972, +2.054] deg/step n=117 -> ABOVE   (copy gap +0.0006962 [-0.05019, +0.05095])
+  RJ.3 G = kick in 1 minus kick in 0                         +0.01167 [-0.02222, +0.05251] deg/step n=117 -> CONSISTENT   (copy gap +0.03027 [-0.1124, +0.07281])
+  RJ.4 measured qubits in 1, no readout (D1 - D0)            +2.961 [+2.94, +2.999] deg/step n=117 -> ABOVE   (copy gap +0.009052 [-0.0335, +0.06179])
+# planted G planted 0.5 seed 5 shots 4900
+  RJ.1 kick, measured qubits in 0 (M0 - D0)                  +1.992 [+1.965, +2.017] deg/step n=117 -> ABOVE   (copy gap -0.001745 [-0.06835, +0.04899])
+  RJ.2 kick, measured qubits in 1 (M1 - D1)                  +2.528 [+2.49, +2.556] deg/step n=117 -> ABOVE   (copy gap +0.004057 [-0.05095, +0.04028])
+  RJ.3 G = kick in 1 minus kick in 0                         +0.5046 [+0.4773, +0.5496] deg/step n=117 -> ABOVE   (copy gap -0.0141 [-0.08214, +0.05405])
+  RJ.4 measured qubits in 1, no readout (D1 - D0)            +2.961 [+2.94, +2.999] deg/step n=117 -> ABOVE   (copy gap +0.009052 [-0.0265, +0.06179])
+# null G planted 0.0 seed 6 shots 4900
+  RJ.1 kick, measured qubits in 0 (M0 - D0)                  +2.002 [+1.964, +2.041] deg/step n=117 -> ABOVE   (copy gap -0.01479 [-0.06826, +0.04808])
+  RJ.2 kick, measured qubits in 1 (M1 - D1)                  +2.026 [+1.996, +2.048] deg/step n=117 -> ABOVE   (copy gap -0.04211 [-0.1265, +0.01031])
+  RJ.3 G = kick in 1 minus kick in 0                         +0.04144 [-0.01771, +0.06794] deg/step n=117 -> CONSISTENT   (copy gap -0.05613 [-0.1425, +0.03022])
+  RJ.4 measured qubits in 1, no readout (D1 - D0)            +3.004 [+2.969, +3.035] deg/step n=117 -> ABOVE   (copy gap -0.05221 [-0.1139, +0.1053])
+# planted G planted 0.5 seed 6 shots 4900
+  RJ.1 kick, measured qubits in 0 (M0 - D0)                  +2.002 [+1.964, +2.053] deg/step n=117 -> ABOVE   (copy gap -0.01479 [-0.06826, +0.04808])
+  RJ.2 kick, measured qubits in 1 (M1 - D1)                  +2.514 [+2.493, +2.544] deg/step n=117 -> ABOVE   (copy gap -0.0521 [-0.1079, +0.009025])
+  RJ.3 G = kick in 1 minus kick in 0                         +0.5333 [+0.4853, +0.5611] deg/step n=117 -> ABOVE   (copy gap -0.05222 [-0.1443, +0.02323])
+  RJ.4 measured qubits in 1, no readout (D1 - D0)            +3.004 [+2.969, +3.035] deg/step n=117 -> ABOVE   (copy gap -0.05221 [-0.1139, +0.1053])
+====================================================================================================
+SUMMARY, 4900 shots, seeds [1, 2, 3, 4, 5, 6]
+  null     RJ.1 kick, measured qubits in 0 (M0 - D0)          value mean +2.0003 (min +1.9741 max +2.0182) | width mean 0.0619 (min 0.0475 max 0.0776) | outcomes {'ABOVE': 6} | copy flags 0/6
+  null     RJ.2 kick, measured qubits in 1 (M1 - D1)          value mean +2.0100 (min +1.9901 max +2.0297) | width mean 0.0594 (min 0.0440 max 0.0815) | outcomes {'ABOVE': 5} | copy flags 1/6
+  null     RJ.3 G = kick in 1 minus kick in 0                 value mean +0.0043 (min -0.0302 max +0.0414) | width mean 0.0705 (min 0.0504 max 0.0856) | outcomes {'BELOW': 1, 'CONSISTENT': 5} | copy flags 0/6
+  null     RJ.4 measured qubits in 1, no readout (D1 - D0)    value mean +3.0005 (min +2.9605 max +3.0347) | width mean 0.0676 (min 0.0491 max 0.0814) | outcomes {'ABOVE': 6} | copy flags 0/6
+  planted  RJ.1 kick, measured qubits in 0 (M0 - D0)          value mean +2.0003 (min +1.9741 max +2.0182) | width mean 0.0644 (min 0.0521 max 0.0888) | outcomes {'ABOVE': 6} | copy flags 0/6
+  planted  RJ.2 kick, measured qubits in 1 (M1 - D1)          value mean +2.5065 (min +2.4837 max +2.5283) | width mean 0.0598 (min 0.0439 max 0.0870) | outcomes {'ABOVE': 5} | copy flags 1/6
+  planted  RJ.3 G = kick in 1 minus kick in 0                 value mean +0.4972 (min +0.4661 max +0.5333) | width mean 0.0668 (min 0.0487 max 0.0758) | outcomes {'ABOVE': 6} | copy flags 0/6
+  planted  RJ.4 measured qubits in 1, no readout (D1 - D0)    value mean +3.0005 (min +2.9605 max +3.0347) | width mean 0.0685 (min 0.0542 max 0.0857) | outcomes {'ABOVE': 6} | copy flags 0/6

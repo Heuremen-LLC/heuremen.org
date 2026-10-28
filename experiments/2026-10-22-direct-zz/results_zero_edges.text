@@ -1,0 +1,2 @@
+edge 13-14: stated zz 0.00 kHz; shift copy 0 8.33, copy 1 8.25, pooled 8.28 kHz; IBM record gates on this edge: cz error 0.0019, rzz error 0.0031
+edge 39-53: stated zz 0.00 kHz; shift copy 0 2.64, copy 1 3.05, pooled 2.85 kHz; IBM record gates on this edge: cz error 0.0031, rzz error 0.0047

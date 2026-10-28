@@ -1,0 +1,7 @@
+6170 distinct readout_error measurements in the 16 Sep - 22 Oct records
+ALL THREE DATES EQUAL: 3766; readout_error differs from the average of the two published components: 0
+PUBLISHED prob_meas0_prep1 OLDER than readout_error: 1229 measurements (by 0.0 to 97.5 h); of these, readout_error differs from the published average by >0.001: 153 (>0.01: 18; largest 0.157; 43 qubits on 5 processors)
+  all off-average measurements: 153, of which on a stale prob_meas0_prep1: 153; on qubit index 16 mod 17: 141 of 153
+LIVE ibm_fez record 2026-10-22 19:55:50-04:00: transpiler Target measure error equals readout_error on 156 of 156 qubits; on the 6 qubits off the published average: 6 of 6
+LIVE ibm_kingston record 2026-10-22 20:35:35-04:00: transpiler Target measure error equals readout_error on 156 of 156 qubits; on the 6 qubits off the published average: 6 of 6
+LIVE ibm_marrakesh record 2026-10-22 20:27:10-04:00: transpiler Target measure error equals readout_error on 156 of 156 qubits; on the 0 qubits off the published average: 0 of 0

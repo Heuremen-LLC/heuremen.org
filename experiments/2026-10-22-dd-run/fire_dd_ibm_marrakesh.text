@@ -1,0 +1,15 @@
+ibm_marrakesh timing: dt 4e-09 s, L 671 dt, X 9 dt, granularity 1, pulse_alignment 1, acquire_alignment 1 -> echo d1 163, X, d2 327, X, d3 163 dt
+VERIFIED: X per spectator = 2N (DD on) / 0 (DD off), none on measured qubits; every step exactly L = 671 dt; step block (N x L) and total scheduled duration identical DD on vs off for every (mode, N, setting, copy)
+  DD off N= 0 circuit durations (us): [np.float64(2.756)]
+  DD off N= 2 circuit durations (us): [np.float64(8.124)]
+  DD off N= 4 circuit durations (us): [np.float64(13.492)]
+  DD off N= 8 circuit durations (us): [np.float64(24.228)]
+  DD off N=16 circuit durations (us): [np.float64(45.7)]
+  DD on  N= 0 circuit durations (us): [np.float64(2.756)]
+  DD on  N= 2 circuit durations (us): [np.float64(8.124)]
+  DD on  N= 4 circuit durations (us): [np.float64(13.492)]
+  DD on  N= 8 circuit durations (us): [np.float64(24.228)]
+  DD on  N=16 circuit durations (us): [np.float64(45.7)]
+dd ibm_marrakesh: 72 pubs, 4000 shots each, E 39, S 117, circuits 2.8-45.7 us, total shots 288000, ESTIMATED 89 s, remaining 1516, queue 1
+SUBMITTED dd ibm_marrakesh dbcur9ni0auc7394dbmg
+DONE dd ibm_marrakesh: remaining now 1431

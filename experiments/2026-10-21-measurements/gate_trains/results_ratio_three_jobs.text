@@ -1,0 +1,10 @@
+ibm_marrakesh     5 us  start0 +0.0575  start1 -0.0518  ratio 90 %
+ibm_marrakesh    10 us  start0 +0.0538  start1 -0.0454  ratio 84 %
+ibm_marrakesh    20 us  start0 +0.0394  start1 -0.0235  ratio 60 %
+ibm_kingston      5 us  start0 +0.0576  start1 -0.0542  ratio 94 %
+ibm_kingston     10 us  start0 +0.0529  start1 -0.0394  ratio 75 %
+ibm_kingston     20 us  start0 +0.0414  start1 -0.0257  ratio 62 %
+ibm_pittsburgh    5 us  start0 +0.0337  start1 -0.0308  ratio 92 %
+ibm_pittsburgh   10 us  start0 +0.0314  start1 -0.0207  ratio 66 %
+ibm_pittsburgh   20 us  start0 +0.0244  start1 -0.0075  ratio 31 %
+range 31 to 94 %

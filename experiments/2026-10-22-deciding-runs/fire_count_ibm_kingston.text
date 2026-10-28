@@ -1,0 +1,3 @@
+count ibm_kingston: 52 pubs, 1000 shots each, circuits 2.2-178.8 us, total shots 52000, ESTIMATED 18 s, remaining 2293, queue 1
+SUBMITTED count ibm_kingston dbcn7spgv2cc73eamcng
+DONE count ibm_kingston: remaining now 2025

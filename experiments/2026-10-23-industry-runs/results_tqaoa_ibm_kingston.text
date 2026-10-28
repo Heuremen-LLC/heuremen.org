@@ -1,0 +1,26 @@
+=== ibm_kingston: IBM QAOA tutorial as written, started 2026-10-23T22:06:03Z, remaining 624 s
+   eval 1: cost -0.0420
+   eval 2: cost -0.0593
+   eval 3: cost +0.0310
+   eval 4: cost -0.4968
+   eval 5: cost -0.4291
+   eval 6: cost +0.8839
+   eval 7: cost -0.9242
+   eval 8: cost -0.0723
+   eval 9: cost -0.8568
+   eval 10: cost -0.6136
+   eval 11: cost -0.8454
+   eval 12: cost -0.8751
+   eval 13: cost -0.8764
+   eval 14: cost -0.8528
+   eval 15: cost -0.8824
+   eval 16: cost -0.9263
+   eval 17: cost -0.8671
+   eval 18: cost -0.9722
+   eval 19: cost -0.9166
+   eval 20: cost -0.9132
+   eval 21: cost -0.8961
+   eval 22: cost -0.9590
+HARDWARE: most likely 00101 -> cut 4 (optimum 5) | P(optimal cut) 0.286 | mean cut 3.881
+FORECAST (Aer from IBM record, same params): most likely 00101 -> cut 4 (optimum 5) | P(optimal cut) 0.330 | mean cut 4.026
+nfev 22, layout [109, 110, 108, 129, 118], ops {'rz': 77, 'sx': 71, 'cz': 39, 'measure': 5, 'x': 3, 'barrier': 1}, remaining 377 s

@@ -1,0 +1,69 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>What We Measured</title>
+<link rel="canonical" href="https://heuremen.org/what-we-measured.html">
+<meta name="tdm-reservation" content="1">
+<meta name="tdm-policy" content="https://indahl.ai/terms#ai-training">
+<meta name="description" content="This page restates results through 22 October 2026. Later runs, such as the Hahn T2 line, are on the front page and their experiment pages.">
+<meta property="og:site_name" content="Heuremen LLC">
+<meta property="og:type" content="website">
+<meta property="og:title" content="What We Measured">
+<meta property="og:description" content="This page restates results through 22 October 2026. Later runs, such as the Hahn T2 line, are on the front page and their experiment pages.">
+<meta property="og:url" content="https://heuremen.org/what-we-measured.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://heuremen.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://heuremen.org/og.png">
+<meta name="viewport" content="width=device-width, initial-scale=1"><style>
+body{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;color:#15181c;background:#fff;font-size:16.5px;line-height:1.6;max-width:820px;margin:36px auto;padding:0 24px}
+h1{font-size:31px;color:#0E4A4D;margin:0 0 2px;font-weight:600;letter-spacing:-.01em}
+.sub{color:#5a6068;font-size:14px;margin:0 0 30px}
+h2{font-size:13px;color:#8A5E0E;margin:54px 0 6px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+h3{font-size:21px;color:#0E4A4D;margin:28px 0 4px;font-weight:600}
+p{margin:9px 0}
+.lede{font-size:18.5px;line-height:1.55}
+.eq{background:#f4f7f6;border-left:3px solid #0F7173;padding:12px 18px;margin:14px 0;font-family:Menlo,monospace;font-size:14.5px;line-height:1.7}
+table{border-collapse:collapse;font-size:14.5px;margin:12px 0}
+th{text-align:left;font-weight:600;border-bottom:1px solid #333;padding:5px 20px 5px 0}
+td{padding:4px 20px 4px 0;border-bottom:1px solid #eceff1;font-variant-numeric:tabular-nums}
+td.n{text-align:right}
+.big{font-size:32px;color:#0E4A4D;font-weight:600;font-variant-numeric:tabular-nums;margin:6px 0}
+.said{color:#5a6068;font-size:14.5px;border-left:2px solid #d8dde0;padding-left:14px;margin:12px 0}
+.foot{color:#5a6068;font-size:13.5px;margin-top:50px;border-top:1px solid #e0e4e6;padding-top:14px}
+a{color:#0E4A4D}
+
+h2 ~ p:not(.foot):not(.dom){margin:6px 0}.foot{margin-top:26px}.foot+.foot{border-top:0;margin-top:8px;padding-top:0}
+</style></head><body>
+<p><a href="/">&larr; What&rsquo;s Lost with a Look</a></p>
+<h1>What we measured, in plain words</h1>
+<p class="scope"><i>This page restates results through 22 October 2026. Later runs, such as the Hahn T2 line, are on the <a href="/">front page</a> and their experiment pages.</i></p>
+<p class="sub">No background assumed.</p>
+
+<h2>The setup</h2>
+<p>The processors we used hold 108 to 156 qubits. A qubit can sit in a mix of 0 and 1 at once (a <b>superposition</b>), and two qubits can share one state between them (<b>entanglement</b>). Both are fragile: left alone, they fade. On every run we <b>measured</b> some qubits in the middle of the calculation and left the rest completely untouched. Then we asked the untouched ones what happened to them.</p>
+<p>The fair comparison is not &ldquo;measuring versus nothing&rdquo;. A measurement takes time (about two millionths of a second here), and time alone wears qubits down. So every measurement was paired with a plain wait of exactly the same length, on the same qubits, in the same run.</p>
+
+<h2>What a measurement does to qubits it never touches</h2>
+<p><b>Each measurement shifts their phase.</b> A qubit in superposition carries a phase, an angle that advances as time passes. Every time other qubits were measured, the phase of the untouched qubits jumped by 1.7 to 2.4&deg; per measurement (with the default measure instruction) on four processors in the 21 October run, and by 1.6 to 2.9&deg; on three in a second run, compared with an equal wait, in a layout where every untouched qubit is within two couplings of a measured one. It is not bigger when the measured qubits are in 1: it is smaller on two processors and on the third a repeat bounds any increase to about 0.1&deg; (about 0.3&deg; in an earlier run). It is not simply extra time either: even qubits whose phase turns backwards jump the same way. A symmetric echo on the untouched qubits removes most of it. Runs two weeks earlier, with 5 to 25 measured qubits, resolve a kick of 0.3 to 3.1&deg; per measurement within two couplings. We measured how big it is against an exact wait; what causes it is not known. On ibm_marrakesh the kick depends on which readout instruction is used (shorter instruction: 0.58 [0.43, 0.73] and 0.51 [0.36, 0.65] of the longer one&rsquo;s kick at 4 and 8 readouts); kingston not decided; fez cannot tell. <a href="/experiments/2026-10-21-readout-vs-idle/">data</a> &middot; <a href="/experiments/2026-10-22-length-run/">readout instructions</a></p>
+<p><b>A little extra loss of superposition.</b> After 8 measurements, untouched qubits kept a little less of their superposition than after the same wait: 0.011, 0.005 and 0.013 less (fez, kingston, marrakesh) in the first run. Keeping only shots in which every measured neighbour was checked to be in 0, the loss is 0.006 to 0.021 after 4 and 8 measurements on kingston and marrakesh. In the control run the loss after 8 minus the loss after 2 is above zero on fez and marrakesh (not resolved on kingston). Whether it keeps growing past 8 measurements cannot be read with these qubits (at 32 the intervals reach 0). Our planned main test (plan hashed locally) used a ratio, and a ratio cannot see a fixed gap like this once the wait itself has worn most of the superposition away; it read &ldquo;same as the wait&rdquo; because of the ruler, not the qubits. <a href="/experiments/2026-10-21-superposition-entanglement/">data</a></p>
+<p><b>Why the two differ.</b> A fixed shift of phase leaves the superposition intact, so the two are read separately; these runs cannot separate real loss of superposition from a phase shift that varies from shot to shot. We checked whether measured qubits accidentally left in 1 could be the cause. The test planned in advance could not detect it, because its prediction was zero by construction. A second model, defined after the data, gives +0.0008 from random excitation on marrakesh against a measured excess of +0.025; on kingston the excess is +0.004, consistent with zero and with the loss seen in other runs. Qubits stuck in 1 (0.4 to 1.1&thinsp;% of shots) are not excluded as the whole cost. For a neighbour hidden in a level that reads as 0, the X-flip check excludes it on marrakesh, to the extent the flip catches it, cannot tell on fez, and on kingston its own known-good condition was not met. <a href="/experiments/2026-10-21-excitation-test/">test</a></p>
+<p><b>Checked again, with the ordinary explanations tested.</b> A second run, planned and published before the jobs, repeated the phase jump on three processors (1.6 to 2.9&deg;). Reading out 1 of the 39 qubits leaves at most 0.15&deg; on fez and 0.09&deg; on kingston (and at most 0.15&deg; on marrakesh by a copy-gap check defined after the data); reading all 39 produced the full jump, so it comes from the measurements themselves and not from something that happens whatever number is read. Whether it is a physical shift of the qubit&rsquo;s frequency during the measurement or an update of the control system&rsquo;s phase reference is not separated. Over 72 measurements no wear-out is resolved against equal waits. Entangled pairs lost a little more of their entanglement during 4 measurements than during the same wait (0.005 to 0.009 in two runs each): resolved on fez and marrakesh, and on kingston the clean-shot reading cannot tell. <a href="/experiments/2026-10-21-control-run/">data</a> &middot; <a href="/experiments/2026-10-21-pairs-run/">pairs</a></p>
+<p><b>Does distance matter?</b> Yes, but the size depends on the layout. With the measured qubits packed in one region, untouched qubits 3 to 4 couplings from the nearest one are kicked by 0.8 to 1.8&deg; per measurement; in the reach run the size at 4 couplings is about a tenth of the kick next to a measured qubit; and at five or more couplings the kick is consistent with zero. A second run built to find where it stops resolves it at 4 couplings (+0.21&deg;, three processors combined), at 5 couplings combined by a small margin (+0.055&deg;) and by no processor alone, and finds 6 couplings and beyond consistent with zero combined (upper ends 0.03 to 0.06&deg;; ibm_marrakesh alone reads 6 couplings above zero, +0.050). The size differs several-fold between layouts at the same distance. <a href="/experiments/2026-10-21-measurements/reach/">data</a> &middot; <a href="/experiments/2026-10-22-reach-run/">reach run</a></p>
+
+<h2>What a measurement does to the qubit it measures</h2>
+<p>Measured over and over, a qubit wears down faster than one left waiting for the same time (on ibm_fez, 0.48&ndash;0.52 of its start after 40 millionths of a second of measurements, against 0.62&ndash;0.66 after the same wait). Measured again and again, a qubit prepared in 1 reads 1 only half the time after 22.6 to 25.5 measurements. The equal-time measured-qubit comparison without a decay-shape assumption is from fez (11 October) and the 22 October readout-instruction run (fez and marrakesh; kingston not decided); on all seven processors the loss also follows under an approximate conversion to idle time (a measurement costs what waiting 1.3 to 1.7 measurement lengths would). <a href="/experiments/2026-10-21-measurements/cost/">data</a> &middot; <a href="/experiments/2026-10-21-measurements/measured_qubit/">data</a></p>
+
+<h2>Gates</h2>
+<p>Flipping a qubit again and again leaves a small negative residual (&minus;0.0006 to &minus;0.0020 per flip on four processors). Qubits whose decay is faster than a single exponential right after preparation reproduce the same pattern in simulation with perfect gates. A test with the decay shape held equal (extra flips on the same waits, 22 October) puts the cost of one extra flip at 0.0001643 [0.00005906, 0.0002695] on average over four processors. On fez and kingston the residual is opposite in sign to that cost and at least twice its upper edge, so it is not a gate cost there. We ran no such test on boston or pittsburgh. This is not a claim that the gates are better than their stated error. <a href="/experiments/2026-10-21-measurements/gate_nonexp/">simulation</a> &middot; <a href="/experiments/2026-10-22-deciding-runs/">extra-flip test</a></p>
+
+<h2>Checks on ourselves</h2>
+<ul>
+<li>Qubits do not fade along a single clean curve (62&ndash;85&thinsp;% fall below it early, where an exact exponential gives 49&ndash;54&thinsp;%), a test that cannot separate this from a per-qubit systematic common to the three copies. Their fading time, measured repeatedly, differs by up to 9.8 millionths of a second between runs and 11.5 between copies in one run; shot noise alone (simulated scatter 2.9 to 4.2) is not claimed to account for it. We measured both rather than assume them.</li>
+<li>A qubit left alone in 0 sits a little above its starting level after 300 millionths of a second (+0.04 to +0.80&thinsp;% in 26 runs, above in all of them; at 600 millionths three runs are at or below zero, so the offset does not grow but is not constant).</li>
+<li>On a second company&rsquo;s processor (Rigetti), a neighbour in its third level |2&rang; shifted a coupled qubit&rsquo;s precession rate by &minus;54.93 and &minus;38.64&deg; per millionth of a second on two dates, 16.3 &plusmn; 2.1 apart (shot noise only). The pulse amplitude, the number of simultaneous qubits and the calibration all changed between the dates, so the difference is not assigned to the coupling. On this processor sign and size are properties of the pair.</li>
+<li>Correlations across time match correlations across space (24 September data, not used in the paper); the three-box weak measurement gives a negative value for the negative box (see the <a href="/experiments/2026-10-22-three-box-run/">three-box page</a>).</li>
+</ul>
+
+<p>Data tables and recounts: <a href="https://indahl.ai/qia">QIA</a> &middot; <a href="https://indahl.ai/iris">IRIS</a></p>
+<p class="foot">Bones &middot; Wayfinder &middot; Sage &middot; Shuttle &middot; Nova<br><a href="https://indahl.ai">Heuremen LLC</a><br>&ldquo;We found it.&rdquo;</p>
+<p class="foot">Heuremen LLC reserves all rights in the pages of this site. Text and data mining and use as AI training data are not permitted, except for the paper and the run data and code, which may be used with attribution. <a href="https://indahl.ai/terms#ai-training">Details</a> &middot; Reference HLC-42855606</p>
+</body></html>

@@ -1,0 +1,72 @@
+NULL: no effect planted anywhere, seed 12
+====================================================================================================
+count ibm_fez job SYNTH
+  R2.1 kick per readout at N=1                               -0.1915 [-0.7033, +0.1951] deg n=117 -> CONSISTENT   (copy gap -0.5455 [-1.734, +0.5578])
+  R2.1 kick per readout at N=3                               -0.04377 [-0.1912, +0.1509] deg n=117 -> CONSISTENT   (copy gap +0.1025 [-0.2816, +0.4072])
+  R2.1 kick per readout at N=9                               +0.01432 [-0.09871, +0.05828] deg n=117 -> CONSISTENT   (copy gap -0.03511 [-0.1251, +0.02533])
+  R2.1 kick per readout at N=27                              +0.002361 [-0.01668, +0.01739] deg n=117 -> CONSISTENT   (copy gap -0.01516 [-0.06638, +0.006697])
+  R2.1 kick per readout at N=54                              +0.00961 [+0.001297, +0.01838] deg n=117 -> ABOVE   (copy gap +0.006568 [-0.009709, +0.01402])
+  R2.1 kick per readout at N=81                              +0.00463 [+0.001721, +0.01034] deg n=117 -> ABOVE   (copy gap +0.004699 [-0.009969, +0.0137])
+  R2.2 kick per readout, readouts 27->81 minus readouts 1->9 -0.002874 [-0.06866, +0.09489] deg n=117 -> CONSISTENT   (copy gap -0.1347 [-0.2195, +0.132])
+  R2.3 intercept of the phase gap against N                  -0.1444 [-0.4624, +0.2925] deg n=117 -> CONSISTENT   (copy gap -0.4019 [-1.096, +0.02548])
+  R2.4 coherence loss at N=1 (idle - readout)                +0.003061 [-9.972e-05, +0.004842]  n=117 -> CONSISTENT   (copy gap +0.003461 [-0.002156, +0.01048])
+  R2.4 coherence loss at N=3 (idle - readout)                +5.515e-05 [-0.004407, +0.002485]  n=117 -> CONSISTENT   (copy gap -0.002371 [-0.009981, +0.004325])
+  R2.4 coherence loss at N=9 (idle - readout)                -0.001984 [-0.005727, +0.0009439]  n=117 -> CONSISTENT   (copy gap -0.003894 [-0.0112, +0.002068])
+  R2.4 coherence loss at N=27 (idle - readout)               -0.002037 [-0.004062, +0.002673]  n=117 -> CONSISTENT   (copy gap -0.001418 [-0.007711, +0.001593])
+  R2.4 coherence loss at N=54 (idle - readout)               -0.001718 [-0.004073, +0.002933]  n=117 -> CONSISTENT   (copy gap -0.004785 [-0.0159, +0.006019])
+  R2.4 coherence loss at N=81 (idle - readout)               -0.001949 [-0.008225, +0.003977]  n=117 -> CONSISTENT   (copy gap -0.001158 [-0.009089, +0.005804])
+  R2.5 SUM form: loss(81) - 3 x loss(27)                     -0.004501 [-0.01062, +0.001572]  n=117 -> CONSISTENT   (copy gap +0.01029 [-0.009999, +0.03329])
+  R2.6 PRODUCT form: -ln(readout/idle)/N at N=9              -0.0002516 [-0.0005995, +0.0001285]  n=117 -> CONSISTENT   (copy gap -0.0004724 [-0.00133, +0.0002972])
+  R2.6 PRODUCT form: -ln(readout/idle)/N at N=27             -8.844e-05 [-0.0001754, +0.0001155]  n=117 -> CONSISTENT   (copy gap -6.857e-05 [-0.0003228, +0.0001003])
+  R2.6 PRODUCT form: -ln(readout/idle)/N at N=81             -3.174e-05 [-0.0001166, +6.594e-05]  n=117 -> CONSISTENT   (copy gap -9.709e-06 [-0.0001472, +7.942e-05])
+  R2.7 PRODUCT form: per-readout loss at 81 minus at 9       +0.0002489 [-0.0003891, +0.0006855]  n=117 -> CONSISTENT   (copy gap +0.0005332 [-0.0002758, +0.001439])
+====================================================================================================
+distance ibm_fez job SYNTH
+ layout ball: spectators at distance <=2 / 3-4 / 5+: [10, 15, 92]
+  R1.1 kick per readout, ball layout, all spectators         -0.03819 [-0.06221, +0.002092] deg n=117 -> CONSISTENT   (copy gap +0.009052 [-0.06652, +0.0444])
+  sign of the kick (carried, never folded): -1; size = kick x sign
+  R1.2 kick size, ball layout, d<=2                          +0.0408 [-0.06094, +0.0877] deg n=10 -> CONSISTENT   (copy gap -0.00323 [-0.2423, +0.1639])
+  R1.2 kick size, ball layout, d=3-4                         +0.1426 [+0.018, +0.21] deg n=15 -> ABOVE   (copy gap -0.0398 [-0.3183, +0.2219])
+  R1.2 kick size, ball layout, d>=5                          +0.01102 [-0.02466, +0.05127] deg n=92 -> CONSISTENT   (copy gap -0.004458 [-0.0444, +0.075])
+  R1.3 size(d>=5) - size(d<=2) [ABOVE larger far, BELOW larger near] -0.02978 [-0.08736, +0.06732] deg -> CONSISTENT
+  R1.4 slope of size on sum over measured of 1/d^2           +0.006715 [-0.02866, +0.03342] deg per unit -> CONSISTENT
+  R1.5 size(d<=2) spread layout - ball layout (same job)     -0.03792 [-0.09432, +0.07234] deg -> CONSISTENT
+====================================================================================================
+gates ibm_fez job SYNTH
+  R4.1 P(1) X X X train minus X train, 2 steps (4 extra gates) +0 [-0.0005, +0.001]  n=156 -> CONSISTENT   (copy gap +0.002 [-0.001, +0.004])
+  R4.1 P(1) X X X train minus X train, 6 steps (12 extra gates) +0.00025 [-0.0005, +0.0005]  n=156 -> CONSISTENT   (copy gap +0.001 [-0.001, +0.003])
+  R4.1 P(1) X X X train minus X train, 10 steps (20 extra gates) +0.00075 [-0.00025, +0.0015]  n=156 -> CONSISTENT   (copy gap +0.001 [-0.002, +0.002])
+  R4.2 cost per extra X gate (slope, identical timing)       -1.436e-20 [-7.812e-05, +6.25e-05]  n=156 -> CONSISTENT   (copy gap -9.375e-05 [-0.00025, +6.25e-05])
+  R4.3 cost per extra X gate minus IBM stated X error        -0.0002695 [-0.0003664, -0.0002]  n=156 -> BELOW   (copy gap -9.375e-05 [-0.00025, +9.375e-05])
+  IBM stated X error, median over qubits: 2.29e-04
+  R4.4 reference: X then wait 30 us, P(1)                    copies shifted -0.003 [-0.0065, -0.001] | copy0 +0.818 copy1 +0.821 -> CANNOT TELL
+  R4.4 reference: X then wait 90 us, P(1)                    +0.5505 [+0.548, +0.5513]  n=156 -> ABOVE   (copy gap -0.0035 [-0.0075, +0.001])
+  R4.4 reference: X then wait 300 us, P(1)                   +0.134 [+0.133, +0.1355]  n=156 -> ABOVE   (copy gap +0.0005 [-0.004, +0.005])
+====================================================================================================
+neighbour ibm_fez job SYNTH
+  R5.1 error per X gate, neighbours in 0                     +0.0001007 [+9.116e-05, +0.0001053]  n=44 -> ABOVE   (copy gap +4.107e-06 [-1.143e-05, +1.107e-05])
+  R5.1 error per X gate, neighbours in 1                     +9.821e-05 [+9.107e-05, +0.0001052]  n=44 -> ABOVE   (copy gap +3.571e-06 [-5.714e-06, +1.321e-05])
+  R5.1 error per X gate, neighbours in +                     +0.0001031 [+9.527e-05, +0.0001082]  n=44 -> ABOVE   (copy gap -5.714e-06 [-1.964e-05, +1.161e-05])
+  R5.2 neighbours in 1 minus in 0 (static neighbour state)   -1.339e-06 [-8.393e-06, +9.643e-06]  n=44 -> CONSISTENT   (copy gap +6.607e-06 [-1.464e-05, +1.732e-05])
+  R5.3 neighbours in + minus in 0 (the original comparison)  +3.75e-06 [-6.607e-06, +6.071e-06]  n=44 -> CONSISTENT   (copy gap -2.5e-06 [-1.946e-05, +1.732e-05])
+  R5.4 neighbours in + minus the mean of 0 and 1             +3.661e-06 [-2.679e-06, +1.071e-05]  n=44 -> CONSISTENT   (copy gap +1.696e-06 [-2.527e-05, +1.143e-05])
+  R5.5 ratio + / 0 (beside, the original 1.7x): 1.044 [0.934, 1.056] n=44
+====================================================================================================
+order ibm_fez job SYNTH
+  R3.1 P(1) read at slot 1 after others, minus read alone at slot 1 -0.0001667 [-0.0003333, +0.0002083]  n=156 -> CONSISTENT   (copy gap +0.0001667 [-0.0009167, +0.0006667])
+  R3.1 P(1) read at slot 2 after others, minus read alone at slot 2 +8.333e-05 [-0.0003333, +0.0002917]  n=156 -> CONSISTENT   (copy gap -0.0003333 [-0.0008333, +0.0005833])
+  R3.1 P(1) read at slot 3 after others, minus read alone at slot 3 -4.167e-05 [-0.0005, +0.00025]  n=156 -> CONSISTENT   (copy gap -0.0004167 [-0.001, +0.0001667])
+  R3.2 that excess at slot 3 minus at slot 2                 -0.0003333 [-0.0005833, +0.0003333]  n=156 -> CONSISTENT   (copy gap -0.0005 [-0.00125, +0.0006667])
+  R3.3 read alone at slot 3 minus alone at slot 1 (waiting longer) -8.333e-05 [-0.0005, +0.00025]  n=156 -> CONSISTENT   (copy gap +0.0003333 [-0.0003333, +0.0006667])
+  R3.4 all read together at slot 1 minus alone at slot 1     -8.333e-05 [-0.0003333, +0.0003333]  n=156 -> CONSISTENT   (copy gap +0.0003333 [-0.0006667, +0.001])
+  R3.5 read last (slot 3) minus read first (slot 1), in the full orders -8.333e-05 [-0.0002917, +0.0003333]  n=156 -> CONSISTENT   (copy gap +4.337e-19 [-0.0006667, +0.0005])
+====================================================================================================
+revival ibm_fez job SYNTH
+  R6.1 come-back: mean C(58-78 us) - mean C(26-50 us), B in 0 -0.1861 [-0.1891, -0.1829]  n=92 -> BELOW   (copy gap -0.002475 [-0.009579, +0.005653])
+  R6.1 come-back: mean C(58-78 us) - mean C(26-50 us), B in 1 -0.1847 [-0.1884, -0.1793]  n=92 -> BELOW   (copy gap -0.001645 [-0.01111, +0.006059])
+  R6.1 come-back: mean C(58-78 us) - mean C(26-50 us), B in + -0.1859 [-0.1907, -0.1823]  n=92 -> BELOW   (copy gap +0.008114 [-0.001291, +0.01271])
+  R6.2 come-back, B in + minus B in 0                        +0.0009671 [-0.007551, +0.005658]  n=92 -> CONSISTENT   (copy gap +0.006538 [-0.003983, +0.01845])
+  R6.3 come-back, B in 1 minus B in 0                        +0.004171 [-0.005762, +0.008657]  n=92 -> CONSISTENT   (copy gap -0.004194 [-0.01115, +0.008896])
+  R6.4 held-out SSE(plain decay) - SSE(damped beat), B in 0  -0.1279 [-0.1328, -0.1239]  n=92 -> BELOW   (copy gap -0.004401 [-0.01849, +0.007565])
+  R6.4 held-out SSE(plain decay) - SSE(damped beat), B in 1  -0.1229 [-0.1281, -0.1169]  n=92 -> BELOW   (copy gap +0.0005544 [-0.01162, +0.01022])
+  R6.4 held-out SSE(plain decay) - SSE(damped beat), B in +  -0.1201 [-0.1257, -0.1159]  n=92 -> BELOW   (copy gap -0.007404 [-0.01456, +0.0005063])

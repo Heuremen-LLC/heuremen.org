@@ -1,0 +1,6 @@
+Heuremen LLC
+Source: https://heuremen.org (run data and code)
+
+These physics uploads are free to use with attribution (Heuremen LLC, with a link to the page they came from), including text and data mining and use to train AI models.
+The pages around them are reserved. Policy: https://indahl.ai/terms#ai-training
+Reference HLC-72B2B391

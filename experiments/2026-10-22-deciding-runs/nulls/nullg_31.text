@@ -1,0 +1,23 @@
+NULL: no effect planted anywhere, seed 31
+====================================================================================================
+gates ibm_fez job SYNTH
+  R4.1 P(1) X X X train minus X train, 2 steps (4 extra gates) +0 [-0.001, +0.001]  n=156 -> CONSISTENT   (copy gap -0.001 [-0.0025, +0.001])
+  R4.1 P(1) X X X train minus X train, 6 steps (12 extra gates) -0.0005 [-0.0015, +0.00025]  n=156 -> CONSISTENT   (copy gap +0 [-0.002, +0.001])
+  R4.1 P(1) X X X train minus X train, 10 steps (20 extra gates) +0.00025 [-0.001, +0.001]  n=156 -> CONSISTENT   (copy gap +0.0005 [-0.002, +0.003])
+  R4.2 cost per extra X gate (slope; 20% trimmed mean)       -1.729e-05 [-7.78e-05, +5.056e-05]  n=156 -> CONSISTENT   (copy gap +4.122e-05 [-7.846e-05, +0.000165])
+  R4.3 cost per extra X gate minus IBM stated X error (20% trimmed mean) -0.0002911 [-0.0003562, -0.0002209]  n=156 -> BELOW   (copy gap +4.122e-05 [-7.517e-05, +0.0001583])
+  IBM stated X error, median over qubits: 2.29e-04
+  R4.4 reference: X then wait 30 us, P(1)                    +0.818 [+0.816, +0.8195]  n=156 -> ABOVE   (copy gap +0.0005 [-0.005, +0.004])
+  R4.4 reference: X then wait 90 us, P(1)                    +0.5495 [+0.548, +0.551]  n=156 -> ABOVE   (copy gap +0.001 [-0.002, +0.0065])
+  R4.4 reference: X then wait 300 us, P(1)                   +0.1353 [+0.1325, +0.1365]  n=156 -> ABOVE   (copy gap -0.001 [-0.006, +0.002])
+====================================================================================================
+ACROSS CHIPS: for each reading, chips ABOVE / BELOW / CONSISTENT / CANNOT TELL, and the chance that a reading with no effect
+resolves in one direction on at least that many of its chips (per chip and side 0.025, measured on null synthetic data)
+  R4.1 P(1) X X X train minus X train, 2 steps (4 extra gates)   chips 1: above 0 below 0 consistent 1 cannot tell 0 | chance under no effect 1
+  R4.1 P(1) X X X train minus X train, 6 steps (12 extra gates)  chips 1: above 0 below 0 consistent 1 cannot tell 0 | chance under no effect 1
+  R4.1 P(1) X X X train minus X train, 10 steps (20 extra gates) chips 1: above 0 below 0 consistent 1 cannot tell 0 | chance under no effect 1
+  R4.2 cost per extra X gate (slope; 20% trimmed mean)           chips 1: above 0 below 0 consistent 1 cannot tell 0 | chance under no effect 1
+  R4.3 cost per extra X gate minus IBM stated X error (20% trimm chips 1: above 0 below 1 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R4.4 reference: X then wait 30 us, P(1)                        chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R4.4 reference: X then wait 90 us, P(1)                        chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05
+  R4.4 reference: X then wait 300 us, P(1)                       chips 1: above 1 below 0 consistent 0 cannot tell 0 | chance under no effect 0.05

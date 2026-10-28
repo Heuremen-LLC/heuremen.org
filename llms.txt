@@ -1,0 +1,20 @@
+# Heuremen
+
+> Measurements of what a qubit readout does to the qubits left untouched, on IBM 156-qubit processors, with every run, calibration record and analysis released. Published by Heuremen LLC.
+
+## Paper and data
+- [A Readout Is Not an Idle (PDF)](https://heuremen.org/a-readout-is-not-an-idle.pdf)
+- [Zenodo record](https://doi.org/10.5281/zenodo.23662284)
+- [What We Measured](https://heuremen.org/what-we-measured)
+- [Technical Summary](https://heuremen.org/technical-summary)
+- [Experiments, one page per run](https://heuremen.org/experiments/job-index/)
+- [Calibration records](https://heuremen.org/experiments/calibration-records/)
+
+## Method notes
+- [Faults (PDF)](https://heuremen.org/faults.pdf) and [Guards (PDF)](https://heuremen.org/guards.pdf)
+
+## Heuremen LLC
+- [QIA, IRIS and OY: data tables and recounts](https://indahl.ai/)
+
+## Usage
+- Free to read and cite with attribution. The paper and the run data and code may be used, including for AI training, with attribution. Everything else on this site is reserved: text and data mining and use as AI training data are not permitted: https://indahl.ai/terms#ai-training

@@ -1,0 +1,6 @@
+=== synthetic world match (match: true = stated; short: true = 0.7 x stated; mixed: half 0.7)
+  delivered / stated T2, median over 60 qubits: 0.999 [0.992, 1.007] vs 1 -> CONSISTENT   (copy gap +0.000 [-0.012, +0.013]; qubits below stated 32 of 60)
+=== synthetic world short (match: true = stated; short: true = 0.7 x stated; mixed: half 0.7)
+  delivered / stated T2, median over 60 qubits: 0.700 [0.695, 0.703] vs 1 -> BELOW   (copy gap +0.000 [-0.005, +0.013]; qubits below stated 60 of 60)
+=== synthetic world mixed (match: true = stated; short: true = 0.7 x stated; mixed: half 0.7)
+  delivered / stated T2, median over 60 qubits: 0.845 [0.713, 0.985] vs 1 -> BELOW   (copy gap +0.000 [-0.012, +0.013]; qubits below stated 45 of 60)

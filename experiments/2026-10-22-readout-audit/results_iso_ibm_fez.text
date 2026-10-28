@@ -1,0 +1,6 @@
+=== ibm_fez job dbdahgoc77vs7387nt70; qubits stated P(1|0)=0 at firing: [5, 115]; 20000 isolated shots vs 20000 all-qubit shots (run 1)
+    q5: isolated 0.0008  all-qubit 0.0008
+    q115: isolated 0.0035  all-qubit 0.0037
+  KNOWN-GOOD mean P(1 | |1>) over listed qubits 0.9892 (must be >= 0.80): MET
+  R1 isolated - simultaneous P(1|0), median over 2 qubits: -0.0000 [-0.0001, +0.0001] -> CONSISTENT
+  R3 isolated: stated-zero qubits with delivered P(1|0) 95 % lower bound above 0.00073: 1 of 2; delivered median 0.0022

@@ -1,0 +1,11 @@
+Readout-mitigation check (22 Oct 2026, night), outside referee, defined after the data.
+Vendor rebuttal tested: "the effects on untouched qubits are readout (assignment) error; apply TREX, M3 or calibration-matrix inversion and they go away."
+Each committed analysis re-run unchanged except for a per-qubit assignment correction p_true = (p_meas - e01) / (1 - e01 - e10), at three settings:
+uncorrected (*0*), in-job calibration or IBM's stated values (*1*), twice those (*2*). The uncorrected re-run reproduces the published numbers.
+ctl/  phase kick (control run): fez -1.618 / -1.558 / -1.527, kingston -2.864 / -2.645 / -2.612, marrakesh -2.393 / -2.243 / -2.225 deg per readout, BELOW at every setting.
+iq/   coherence lost (iq-run): kingston and marrakesh stay above zero; fez at 2 readouts +0.0043 [+0.0005, +0.0102] above zero; fez at 4 readouts
+      +0.0037 [-0.0001, +0.0100], consistent with zero after correction (it was +0.0057 by the copy-gap reading).
+pairs/ concurrence lost (pairs-run, pairs-repeat): kingston and marrakesh stay above zero, the loss grows or holds under correction.
+Probe offset (three-box, marrakesh): readout bias at most 0.012 against offsets +0.049 to +0.081; corrected offsets stay above zero.
+Idle decay: the committed normalisation (job's own |0> and |1> levels) is already an affine readout correction.
+Both arms of every comparison share the same final readout in the same job, so assignment error cannot create the difference or the phase.

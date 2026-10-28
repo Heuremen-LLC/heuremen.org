@@ -1,0 +1,5 @@
+=== ibm_kingston job dbdahj9gv2cc738hnsag; qubits stated P(1|0)=0 at firing: [11]; 20000 isolated shots vs 20000 all-qubit shots (run 1)
+    q11: isolated 0.0003  all-qubit 0.0026
+  KNOWN-GOOD mean P(1 | |1>) over listed qubits 0.9910 (must be >= 0.80): MET
+  R1 isolated - simultaneous P(1|0), median over 1 qubits: -0.0022 [-0.0022, -0.0022] -> BELOW
+  R3 isolated: stated-zero qubits with delivered P(1|0) 95 % lower bound above 0.00073: 0 of 1; delivered median 0.0003

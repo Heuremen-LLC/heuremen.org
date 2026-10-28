@@ -1,0 +1,27 @@
+RE-RUN 22 Oct 2026 of the ORIGINAL 21 Oct synthetic test: control_run/analyze_pairs_iq.py (unchanged, sha256 74e846a9...) on the files make.py wrote 21 Oct 21:15:16-18 EDT (before the 21:15:29 plan commit). The 21 Oct output was never saved; this is the re-run.
+make.py plants: fake 156-qubit chip, 800 shots, idle concurrence 0.8-0.1N, loss 0.03 in K=39 readout at N>0, measured-neighbour leak 3%*N/4 per readout (leaked IQ off-cluster, pair concurrence 0 in that shot); K=1 no loss.
+================================================================================================
+synthetic copies returned: [0, 1]
+  N=2: 41 pairs enter (wired, idle concurrence > 0); R4 shots kept (median) 96.6%
+  R1 N=2 clean-shot concurrence loss (K=39)    copy 0  +0.0300 [+0.0207, +0.0458] n=41 -> ABOVE
+  R1 N=2 clean-shot concurrence loss (K=39)    copy 1  +0.0278 [+0.0143, +0.0329] n=41 -> ABOVE
+  R1 N=2 clean-shot concurrence loss (K=39)    pooled  +0.0278 [+0.0197, +0.0315] n=41 -> ABOVE
+  R1 N=2 clean-shot concurrence loss (K=39)    FINAL -> ABOVE
+  R3 N=2 all-shot concurrence loss (K=39)      copy 0  +0.0511 [+0.0323, +0.0559] n=41 -> ABOVE
+  R3 N=2 all-shot concurrence loss (K=39)      copy 1  +0.0375 [+0.0237, +0.0502] n=41 -> ABOVE
+  R3 N=2 all-shot concurrence loss (K=39)      pooled  +0.0433 [+0.0357, +0.0471] n=41 -> ABOVE
+  R3 N=2 all-shot concurrence loss (K=39)      FINAL -> ABOVE
+  N=4: 41 pairs enter (wired, idle concurrence > 0); R4 shots kept (median) 93.0%
+  R1 N=4 clean-shot concurrence loss (K=39)    copy 0  +0.0278 [+0.0216, +0.0407] n=41 -> ABOVE
+  R1 N=4 clean-shot concurrence loss (K=39)    copy 1  +0.0274 [+0.0097, +0.0386] n=41 -> ABOVE
+  R1 N=4 clean-shot concurrence loss (K=39)    pooled  +0.0260 [+0.0196, +0.0311] n=41 -> ABOVE
+  R1 N=4 clean-shot concurrence loss (K=39)    FINAL -> ABOVE
+  R3 N=4 all-shot concurrence loss (K=39)      copy 0  +0.0524 [+0.0421, +0.0573] n=41 -> ABOVE
+  R3 N=4 all-shot concurrence loss (K=39)      copy 1  +0.0476 [+0.0286, +0.0638] n=41 -> ABOVE
+  R3 N=4 all-shot concurrence loss (K=39)      pooled  +0.0446 [+0.0365, +0.0562] n=41 -> ABOVE
+  R3 N=4 all-shot concurrence loss (K=39)      FINAL -> ABOVE
+  R2 N=4 loss(K=39) - loss(K=1)                copy 0  +0.0449 [+0.0368, +0.0630] n=48 -> ABOVE
+  R2 N=4 loss(K=39) - loss(K=1)                copy 1  +0.0503 [+0.0391, +0.0586] n=48 -> ABOVE
+  R2 N=4 loss(K=39) - loss(K=1)                pooled  +0.0448 [+0.0386, +0.0530] n=48 -> ABOVE
+  R2 N=4 loss(K=39) - loss(K=1)                FINAL -> ABOVE
+  R5 mid readouts outside both clusters: 2.5960%

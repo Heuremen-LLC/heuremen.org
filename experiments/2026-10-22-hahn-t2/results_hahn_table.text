@@ -1,0 +1,30 @@
+ibm_kingston run 1 job dbd99g1gv2cc738hl5mg ran 2026-10-22 22:57 UTC; record 2026-10-22 18:45:38-04:00; stated T2 median age at run 13.9 h; queued 0.0 h
+  FIXED 0.910 [0.871, 0.962] -> BELOW (100 of 153 below stated) | FREE 0.916 [0.861, 0.946] -> BELOW (104 of 152 below stated)
+ibm_kingston run 2 job dbd9csvi0auc73950050 ran 2026-10-22 23:04 UTC; record 2026-10-22 18:45:38-04:00; stated T2 median age at run 14.0 h; queued 0.0 h
+  FIXED 0.946 [0.882, 1.012] -> CONSISTENT (87 of 153 below stated) | FREE 0.949 [0.896, 1.011] -> CONSISTENT (85 of 152 below stated)
+ibm_marrakesh run 1 job dbd99ic24mrc73cl1bfg ran 2026-10-22 22:57 UTC; record 2026-10-22 18:21:43-04:00; stated T2 median age at run 3.1 h; queued 0.0 h
+  FIXED 0.907 [0.873, 1.012] -> CONSISTENT (87 of 153 below stated) | FREE 0.892 [0.808, 0.948] -> BELOW (98 of 153 below stated)
+ibm_marrakesh run 2 job dbd9cvgc77vs7387letg ran 2026-10-22 23:04 UTC; record 2026-10-22 18:21:43-04:00; stated T2 median age at run 3.3 h; queued 0.0 h
+  FIXED 0.948 [0.909, 1.013] -> CONSISTENT (85 of 153 below stated) | FREE 0.897 [0.826, 0.944] -> BELOW (97 of 152 below stated)
+ibm_fez run 1 job dbd99dpgv2cc738hl5g0 ran 2026-10-22 22:57 UTC; record 2026-10-22 18:17:23-04:00; stated T2 median age at run 0.7 h; queued 0.0 h
+  FIXED 1.051 [1.003, 1.085] -> ABOVE (65 of 154 below stated) | FREE 0.979 [0.941, 1.014] -> CONSISTENT (85 of 154 below stated)
+ibm_fez run 2 job dbd9g49gv2cc738hlgag ran 2026-10-22 23:17 UTC; record 2026-10-22 18:17:23-04:00; stated T2 median age at run 1.0 h; queued 0.1 h
+  FIXED 1.014 [0.965, 1.061] -> CONSISTENT (74 of 154 below stated) | FREE 1.006 [0.937, 1.051] -> CONSISTENT (76 of 153 below stated)
+ibm_fez clock 1 job dbda90hgv2cc738hn7c0 ran 2026-10-23 00:04 UTC; record 2026-10-22 19:55:50-04:00; stated T2 median age at run 1.8 h; queued 0.0 h
+  FIXED 1.000 [0.970, 1.039] -> CONSISTENT (77 of 154 below stated) | FREE 0.977 [0.938, 1.005] -> CONSISTENT (88 of 154 below stated)
+ibm_fez clock 2 job dbdc1npgv2cc73do5350 ran 2026-10-23 02:05 UTC; record 2026-10-22 21:49:50-04:00; stated T2 median age at run 3.8 h; queued 0.0 h
+  FIXED 1.019 [0.972, 1.066] -> CONSISTENT (73 of 154 below stated) | FREE 1.005 [0.945, 1.044] -> CONSISTENT (76 of 153 below stated)
+ibm_pittsburgh run 1 job dbd9ft424mrc73cl1l1g ran 2026-10-23 00:59 UTC; record 2026-10-22 17:30:21-04:00; stated T2 median age at run 8.7 h; queued 1.8 h
+  FIXED 1.146 [1.095, 1.191] -> ABOVE (49 of 156 below stated) | FREE 1.040 [0.987, 1.068] -> CONSISTENT (68 of 156 below stated)
+ibm_phoenix run 1 job dbd9g20c77vs7387ljg0 ran 2026-10-23 05:34 UTC; record 2026-10-22 18:59:39-04:00; stated T2 median age at run 27.7 h; queued 6.4 h
+  FIXED 0.911 [0.888, 0.923] -> BELOW (92 of 119 below stated) | FREE 0.989 [0.948, 1.023] -> CONSISTENT (63 of 119 below stated)
+ibm_kingston fresh record job dbdjrhpgv2cc73dojivg ran 2026-10-23 10:58 UTC; record 2026-10-23 06:25:49-04:00; stated T2 median age at run 0.6 h; queued 0.0 h
+  FIXED 0.957 [0.912, 0.999] -> BELOW (90 of 153 below stated) | FREE 0.984 [0.958, 1.006] -> CONSISTENT (85 of 153 below stated)
+ibm_boston run 1 job dbd9fvk24mrc73cl1l7g ran 2026-10-23 13:49 UTC; record 2026-10-22 09:16:26-04:00; stated T2 median age at run 34.3 h; queued 14.6 h
+  FIXED 1.019 [0.960, 1.076] -> CONSISTENT (70 of 155 below stated) | FREE 0.899 [0.828, 1.026] -> CONSISTENT (88 of 155 below stated)
+
+CLOCK (ibm_fez, stated T2 values and dates identical in all four records, 155 of 155):
+  FIXED: 1.051 -> 1.014 -> 1.000 -> 1.019 at 0.7 / 1.0 / 1.8 / 3.8 h; decline first to last +0.032; floor 2 x 0.041 = 0.082 -> CONSISTENT
+  FREE: 0.979 -> 1.006 -> 0.977 -> 1.005 at 0.7 / 1.0 / 1.8 / 3.8 h; decline first to last -0.026; floor 2 x 0.033 = 0.066 -> CONSISTENT
+  Points at 8 and 16 h were not run.
+FIT MODEL: largest |planned - free| over the twelve runs 0.120 (boston)

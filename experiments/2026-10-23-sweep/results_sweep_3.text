@@ -1,0 +1,36 @@
+=== ibm_fez job dbdsnpom94ac738qs3sg; IBM record 2026-10-23 16:07:42-04:00; submitted 2026-10-23T21:04:39Z
+-- ibm_fez
+   INIT per qubit, delivered |1> after a |1>-ending shot, bounds [-0.0002, 0.0067] (chip medians) vs stated init_error median nan: {'ABOVE': 0, 'BELOW': 12, 'CONSISTENT': 104, 'CANNOT_TELL': 40}
+   prob_meas1_prep0: stated outside the delivered bracket, median +0.0000 [+0.0000, +0.0003] n 156 -> CONSISTENT   (qubits stated below bracket 40, above 72; bracket chip medians 0.0044..0.0086)
+   prob_meas0_prep1: stated outside the delivered bracket, median +0.0000 [+0.0000, +0.0000] n 156 -> CONSISTENT   (qubits stated below bracket 38, above 33; bracket chip medians 0.0121..0.0186)
+   readout_error: stated outside the delivered bracket, median +0.0000 [+0.0000, +0.0000] n 156 -> CONSISTENT   (qubits stated below bracket 31, above 46; bracket chip medians 0.0084..0.0139)
+   copy gap median |a1 copy0 - copy1| 0.0013
+   RB1 sx error per pulse delivered/stated, median 1.450 [1.367, 1.534] n 156 -> ABOVE   (delivered chip median 4.26e-04; mean pulses per Clifford 1.000; m=1 survival 0.990)
+   RB2 CZ layer error delivered/stated, median 1.244 [1.191, 1.303] n 172 of 176 edges -> ABOVE   (delivered chip median 3.24e-03)
+   edges stated cz error = 0: 0, delivered 
+   edges stated cz error = 1 (IBM: undefined): 3, delivered 32-33 3.18e-01, 71-72 no fit, 72-73 1.59e-01
+   far from stated (x3 either way): sx 8 of 156 qubits, cz 10 of 174 edges
+=== ibm_kingston job dbdso0ngdj9s73fkqneg; IBM record 2026-10-23 16:02:14-04:00; submitted 2026-10-23T21:05:07Z
+-- ibm_kingston
+   INIT per qubit, delivered |1> after a |1>-ending shot, bounds [0.0000, 0.0053] (chip medians) vs stated init_error median nan: {'ABOVE': 1, 'BELOW': 7, 'CONSISTENT': 117, 'CANNOT_TELL': 31}
+   prob_meas1_prep0: stated outside the delivered bracket, median +0.0000 [+0.0000, +0.0000] n 156 -> CONSISTENT   (qubits stated below bracket 45, above 36; bracket chip medians 0.0033..0.0072)
+   prob_meas0_prep1: stated outside the delivered bracket, median +0.0000 [+0.0000, +0.0000] n 156 -> CONSISTENT   (qubits stated below bracket 28, above 33; bracket chip medians 0.0101..0.0164)
+   readout_error: stated outside the delivered bracket, median +0.0000 [+0.0000, +0.0000] n 156 -> CONSISTENT   (qubits stated below bracket 25, above 23; bracket chip medians 0.0072..0.0126)
+   copy gap median |a1 copy0 - copy1| 0.0012
+   RB1 sx error per pulse delivered/stated, median 1.306 [1.234, 1.381] n 153 -> ABOVE   (delivered chip median 3.14e-04; mean pulses per Clifford 1.000; m=1 survival 0.992)
+   RB2 CZ layer error delivered/stated, median 1.302 [1.209, 1.379] n 170 of 176 edges -> ABOVE   (delivered chip median 2.34e-03)
+   edges stated cz error = 0: 0, delivered 
+   edges stated cz error = 1 (IBM: undefined): 4, delivered 145-146 no fit, 146-147 no fit, 112-113 no fit, 130-131 1.22e-01
+   far from stated (x3 either way): sx 11 of 153 qubits, cz 10 of 171 edges
+=== ibm_marrakesh job dbdso8fsstms73fb3o3g; IBM record 2026-10-23 16:33:48-04:00; submitted 2026-10-23T21:05:38Z
+-- ibm_marrakesh
+   INIT per qubit, delivered |1> after a |1>-ending shot, bounds [-0.0003, 0.0169] (chip medians) vs stated init_error median nan: {'ABOVE': 0, 'BELOW': 30, 'CONSISTENT': 117, 'CANNOT_TELL': 9}
+   prob_meas1_prep0: stated outside the delivered bracket, median -0.0003 [-0.0029, +0.0000] n 156 -> CONSISTENT   (qubits stated below bracket 79, above 56; bracket chip medians 0.0119..0.0196)
+   prob_meas0_prep1: stated outside the delivered bracket, median +0.0000 [+0.0000, +0.0000] n 156 -> CONSISTENT   (qubits stated below bracket 64, above 54; bracket chip medians 0.0161..0.0245)
+   readout_error: stated outside the delivered bracket, median +0.0000 [-0.0016, +0.0000] n 156 -> CONSISTENT   (qubits stated below bracket 75, above 50; bracket chip medians 0.0144..0.0220)
+   copy gap median |a1 copy0 - copy1| 0.0021
+   RB1 sx error per pulse delivered/stated, median 1.344 [1.205, 1.519] n 147 -> ABOVE   (delivered chip median 5.16e-04; mean pulses per Clifford 1.000; m=1 survival 0.979)
+   RB2 CZ layer error delivered/stated, median 1.616 [1.541, 1.750] n 170 of 176 edges -> ABOVE   (delivered chip median 4.22e-03)
+   edges stated cz error = 0: 0, delivered 
+   edges stated cz error = 1 (IBM: undefined): 4, delivered 82-83 1.48e-01, 113-119 no fit, 129-130 1.37e-01, 81-82 1.35e-01
+   far from stated (x3 either way): sx 18 of 147 qubits, cz 15 of 173 edges

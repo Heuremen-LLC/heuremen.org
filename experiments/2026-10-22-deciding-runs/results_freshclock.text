@@ -1,0 +1,65 @@
+====================================================================================================
+freshclock ibm_fez job dbcnjj8c77vs7386kt1g
+  instrument: window idle coherence after preload M0, median 0.638
+  instrument: window idle coherence after preload M27, median 0.643
+  instrument: window idle coherence after preload M72, median 0.656
+  instrument: window idle coherence after preload D72, median 0.649
+  sign of the kick after no preload: -1; size = kick x sign (carried, never folded)
+  RF.1 kick size per readout, fresh clock, no preload        +1.464 [+0.9964, +2.022] deg n=117 -> ABOVE   (copy gap +0.006949 [-0.02233, +0.1077])
+  RF.1 kick size per readout, fresh clock, after 27 readouts +1.602 [+1.045, +2.125] deg n=117 -> ABOVE   (copy gap -0.06325 [-0.1578, +0.075])
+  RF.1 kick size per readout, fresh clock, after 72 readouts +1.716 [+1.023, +2.065] deg n=117 -> ABOVE   (copy gap -0.05772 [-0.1114, +0.02823])
+  RF.1 kick size per readout, fresh clock, after 72 idles    copies shifted +0.09968 [+0.006538, +0.1704] | copy0 +1.548 copy1 +1.396 -> CANNOT TELL
+  RF.2 size after 72 readouts minus after none (BELOW: fades) +0.01532 [-0.07602, +0.1185] deg n=117 -> CONSISTENT   (copy gap -0.05064 [-0.137, +0.08834])
+  RF.3 size after 27 readouts minus after none               -0.02481 [-0.1193, +0.08389] deg n=117 -> CONSISTENT   (copy gap -0.05253 [-0.1755, +0.09518])
+  RF.4 size after 72 readouts minus after 72 idles (readouts, not time) +0.02776 [-0.0377, +0.08501] deg n=117 -> CONSISTENT   (copy gap -0.05311 [-0.237, +0.05911])
+====================================================================================================
+freshclock ibm_kingston job dbcnjh7i0auc7393uqq0
+  instrument: window idle coherence after preload M0, median 0.751
+  instrument: window idle coherence after preload M27, median 0.752
+  instrument: window idle coherence after preload M72, median 0.750
+  instrument: window idle coherence after preload D72, median 0.756
+  sign of the kick after no preload: -1; size = kick x sign (carried, never folded)
+  RF.1 kick size per readout, fresh clock, no preload        copies shifted +0.06031 [+0.008139, +0.1819] | copy0 +2.586 copy1 +2.517 -> CANNOT TELL
+  RF.1 kick size per readout, fresh clock, after 27 readouts +2.717 [+1.937, +3.217] deg n=117 -> ABOVE   (copy gap -0.04959 [-0.163, +0.01686])
+  RF.1 kick size per readout, fresh clock, after 72 readouts +2.498 [+2.029, +3.481] deg n=117 -> ABOVE   (copy gap +0.01023 [-0.1074, +0.1177])
+  RF.1 kick size per readout, fresh clock, after 72 idles    +2.626 [+1.91, +3.527] deg n=117 -> ABOVE   (copy gap -0.02526 [-0.1402, +0.1025])
+  RF.2 size after 72 readouts minus after none (BELOW: fades) +0.02869 [-0.01897, +0.07381] deg n=117 -> CONSISTENT   (copy gap -0.08674 [-0.2651, +0.06436])
+  RF.3 size after 27 readouts minus after none               +0.01872 [-0.02822, +0.09285] deg n=117 -> CONSISTENT   (copy gap -0.1553 [-0.2857, +0.02276])
+  RF.4 size after 72 readouts minus after 72 idles (readouts, not time) +0.005744 [-0.03408, +0.05893] deg n=117 -> CONSISTENT   (copy gap -0.01308 [-0.1081, +0.09541])
+====================================================================================================
+freshclock ibm_marrakesh job dbcnjis24mrc73ck0i20
+  instrument: window idle coherence after preload M0, median 0.528
+  instrument: window idle coherence after preload M27, median 0.605
+  instrument: window idle coherence after preload M72, median 0.602
+  instrument: window idle coherence after preload D72, median 0.637
+  sign of the kick after no preload: -1; size = kick x sign (carried, never folded)
+  RF.1 kick size per readout, fresh clock, no preload        +2.569 [+2.078, +3.27] deg n=117 -> ABOVE   (copy gap +0.06209 [-0.06725, +0.1921])
+  RF.1 kick size per readout, fresh clock, after 27 readouts +2.595 [+1.931, +3.481] deg n=117 -> ABOVE   (copy gap -0.07001 [-0.1607, +0.01664])
+  RF.1 kick size per readout, fresh clock, after 72 readouts +2.447 [+1.781, +3.455] deg n=117 -> ABOVE   (copy gap +0.01001 [-0.07207, +0.1265])
+  RF.1 kick size per readout, fresh clock, after 72 idles    +2.554 [+2.019, +3.353] deg n=117 -> ABOVE   (copy gap -0.02983 [-0.1048, +0.07519])
+  RF.2 size after 72 readouts minus after none (BELOW: fades) -0.1306 [-0.2059, -0.03681] deg n=117 -> BELOW   (copy gap +0.01712 [-0.192, +0.2609])
+  RF.3 size after 27 readouts minus after none               -0.05261 [-0.1356, +0.03878] deg n=117 -> CONSISTENT   (copy gap -0.07468 [-0.3483, +0.1085])
+  RF.4 size after 72 readouts minus after 72 idles (readouts, not time) -0.03605 [-0.1184, +0.1038] deg n=117 -> CONSISTENT   (copy gap +0.09228 [-0.04767, +0.176])
+====================================================================================================
+ACROSS CHIPS (values and widths; a chip whose copies shifted is listed and left out of the combination)
+  RF.1 kick size per readout, fresh clock, no preload
+      fez +1.464 [+0.9964, +2.022] | kingston copies shifted | marrakesh +2.569 [+2.078, +3.27]
+      combined +1.935 [+1.546, +2.323] -> ABOVE | chip-to-chip spread chi2/dof 7.59 (dof 1)
+  RF.1 kick size per readout, fresh clock, after 27 readouts
+      fez +1.602 [+1.045, +2.125] | kingston +2.717 [+1.937, +3.217] | marrakesh +2.595 [+1.931, +3.481]
+      combined +2.183 [+1.819, +2.547] -> ABOVE | chip-to-chip spread chi2/dof 4.10 (dof 2)
+  RF.1 kick size per readout, fresh clock, after 72 readouts
+      fez +1.716 [+1.023, +2.065] | kingston +2.498 [+2.029, +3.481] | marrakesh +2.447 [+1.781, +3.455]
+      combined +2.076 [+1.699, +2.454] -> ABOVE | chip-to-chip spread chi2/dof 1.94 (dof 2)
+  RF.1 kick size per readout, fresh clock, after 72 idles
+      fez copies shifted | kingston +2.626 [+1.91, +3.527] | marrakesh +2.554 [+2.019, +3.353]
+      combined +2.583 [+2.069, +3.098] -> ABOVE | chip-to-chip spread chi2/dof 0.02 (dof 1)
+  RF.2 size after 72 readouts minus after none (BELOW: fades)
+      fez +0.01532 [-0.07602, +0.1185] | kingston +0.02869 [-0.01897, +0.07381] | marrakesh -0.1306 [-0.2059, -0.03681]
+      combined -0.004662 [-0.04219, +0.03286] -> CONSISTENT | chip-to-chip spread chi2/dof 5.33 (dof 2)
+  RF.3 size after 27 readouts minus after none
+      fez -0.02481 [-0.1193, +0.08389] | kingston +0.01872 [-0.02822, +0.09285] | marrakesh -0.05261 [-0.1356, +0.03878]
+      combined -0.008414 [-0.05308, +0.03625] -> CONSISTENT | chip-to-chip spread chi2/dof 0.93 (dof 2)
+  RF.4 size after 72 readouts minus after 72 idles (readouts, not time)
+      fez +0.02776 [-0.0377, +0.08501] | kingston +0.005744 [-0.03408, +0.05893] | marrakesh -0.03605 [-0.1184, +0.1038]
+      combined +0.008787 [-0.02637, +0.04394] -> CONSISTENT | chip-to-chip spread chi2/dof 0.50 (dof 2)

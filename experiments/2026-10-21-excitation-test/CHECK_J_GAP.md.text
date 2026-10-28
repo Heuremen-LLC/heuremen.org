@@ -1,0 +1,6 @@
+# Check J: is the readout kick bigger when the measured qubits are in 1? Read as a gap, not as two intervals side by side.
+Defined 22 Oct 2026 after this run's data and phase_by_arm.py output were seen, before this was computed. Heuremen LLC. Script check_j_gap.py.
+Per untouched qubit, the phase slope per step over N = 0, 4, 8 exactly as phase_by_arm.py; then per qubit
+  G = (M1 - D1) - (M0 - D0)   (kick with the measured qubits in 1 minus kick with them in 0, each against its own idle)
+median over qubits, 95 % bootstrap (2000). ABOVE -> bigger in 1; BELOW -> smaller in 1; CONSISTENT -> no difference resolved, interval printed
+as the bound. Also G as a fraction of the kick in 0 (median of M0 - D0). Chips combined by inverse-variance (sigma = interval width / 3.92).

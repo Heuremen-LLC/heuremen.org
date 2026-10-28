@@ -1,0 +1,9 @@
+69 distinct IBM records, 6 processors
+TEST error=1 sentinel: 2431 of 143268 gate/readout error entries equal 1
+TEST T1: 4046 distinct measurements; carried in a record more than 24 h after measurement: 781 (19.3 %); more than 7 days: 32; oldest 60.5 days
+TEST T2: 4087 distinct measurements; carried in a record more than 24 h after measurement: 621 (15.2 %); more than 7 days: 16; oldest 158.4 days
+TEST readout_error: 6638 distinct measurements; carried in a record more than 24 h after measurement: 468 (7.1 %); more than 7 days: 0; oldest 2.3 days
+TEST init_error: 4943 distinct measurements; carried in a record more than 24 h after measurement: 381 (7.7 %); more than 7 days: 145; oldest 84.3 days
+TEST key prob_meas0_prep0 (as printed in IBM's guide): present in 0 qubit entries across all records; prob_meas1_prep0 present in 10512
+TEST readout_error vs "the average of these two errors": 160 of 5543 distinct measurements differ by more than 0.001 on the same measurement date; by more than 0.01: 18; largest 0.157; 50 qubits on 5 processors
+     on qubit indices 16 mod 17: 141 of 160 (all qubits with that index: 318 measurements)

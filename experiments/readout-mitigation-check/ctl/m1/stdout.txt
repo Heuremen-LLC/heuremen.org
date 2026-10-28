@@ -1,0 +1,195 @@
+/private/tmp/claude-501/-Users-heuremen/80087010-0cb3-4ae5-9e13-362e6d5086ad/scratchpad/referee_mitig/ctl/analyze_corr.py:37: RuntimeWarning: invalid value encountered in sqrt
+  return 2 * max(0.0, r03 - np.sqrt(p[1] * p[2]), r12 - np.sqrt(p[0] * p[3]))
+====================================================================================================
+ibm_fez  job dbck9v424mrc73cjqiig  E 39  S 117  pairs 48  L=415 dt
+R1 KICK (deg per readout, arm S, N = 8)
+  R1 kick                                      copy 0  -1.4641 deg [-1.9603, -1.1132] n=117 -> BELOW vs 0
+  R1 kick                                      copy 1  -1.7000 deg [-2.1091, -1.2628] n=117 -> BELOW vs 0
+  R1 kick                                      pooled  -1.5578 deg [-2.0308, -1.0643] n=117 -> BELOW vs 0
+R2 DOSE (arm C, N = 8): kick with K measured vs the 39-measured kick
+  R2 kick with K=1 measured                    copy 0  -0.1026 deg [-0.2409, +0.0454] n=117 -> CONSISTENT vs 0
+  R2 kick with K=1 measured                    copy 1  +0.0169 deg [-0.1537, +0.1251] n=117 -> CONSISTENT vs 0
+  R2 kick with K=1 measured                    pooled  -0.0836 deg [-0.1487, +0.0307] n=117 -> CONSISTENT vs 0
+  R2 K=1: interval [-0.149, +0.031]; GLOBAL predicts -1.558, PER-QUBIT predicts -0.040 -> PER-QUBIT
+  R2 kick with K=10 measured                   copy 0  -0.1681 deg [-0.2847, -0.0491] n=117 -> BELOW vs 0
+  R2 kick with K=10 measured                   copy 1  -0.1440 deg [-0.2930, +0.0346] n=117 -> CONSISTENT vs 0
+  R2 kick with K=10 measured                   pooled  -0.1263 deg [-0.2120, -0.0278] n=117 -> BELOW vs 0
+  R2 kick with K=10 measured                   copies disagree -> CANNOT_TELL
+  R2 K=10: interval [-0.212, -0.028]; GLOBAL predicts -1.558, PER-QUBIT predicts -0.399 -> NEITHER
+R3 STRETCH: slope of kick on rate, rate and kick from different copies
+  rate from copy 0, kick from copy 1: slope a = -0.0302 [-0.1184, +0.0284] -> CONSISTENT vs 0; BELOW vs 0.0909; distance to 0 0.8 widths, to 0.0909 3.2 widths
+  rate from copy 1, kick from copy 0: slope a = -0.0014 [-0.0868, +0.0724] -> CONSISTENT vs 0; BELOW vs 0.0909; distance to 0 0.0 widths, to 0.0909 2.3 widths
+  R3 kick on backward-precessing spectators    copy 0  -1.4641 deg [-2.2270, -1.1257] n=95 -> BELOW vs 0
+  R3 kick on backward-precessing spectators    copy 1  -1.7082 deg [-2.3027, -1.1857] n=95 -> BELOW vs 0
+  R3 kick on backward-precessing spectators    pooled  -1.5667 deg [-2.0341, -1.1809] n=95 -> BELOW vs 0
+R4 SUPERPOSITION COST: coherence after readouts minus after equal idle (arm S)
+  R4 coherence M-D at N=2                      copy 0  -0.0026 [-0.0123, +0.0067] n=117 -> CONSISTENT vs 0
+  R4 coherence M-D at N=2                      copy 1  -0.0022 [-0.0086, +0.0071] n=117 -> CONSISTENT vs 0
+  R4 coherence M-D at N=2                      pooled  -0.0028 [-0.0063, +0.0068] n=117 -> CONSISTENT vs 0
+  R4 coherence M-D at N=4                      copy 0  -0.0056 [-0.0121, +0.0042] n=117 -> CONSISTENT vs 0
+  R4 coherence M-D at N=4                      copy 1  -0.0049 [-0.0135, +0.0094] n=117 -> CONSISTENT vs 0
+  R4 coherence M-D at N=4                      pooled  +0.0009 [-0.0082, +0.0060] n=117 -> CONSISTENT vs 0
+  R4 coherence M-D at N=8                      copy 0  -0.0051 [-0.0141, +0.0036] n=117 -> CONSISTENT vs 0
+  R4 coherence M-D at N=8                      copy 1  -0.0106 [-0.0177, +0.0000] n=117 -> CONSISTENT vs 0
+  R4 coherence M-D at N=8                      pooled  -0.0063 [-0.0146, -0.0016] n=117 -> BELOW vs 0
+  R4 growth: slope of M-D against N            copy 0  -0.0008 [-0.0040, +0.0007] n=117 -> CONSISTENT vs 0
+  R4 growth: slope of M-D against N            copy 1  -0.0016 [-0.0033, -0.0005] n=117 -> BELOW vs 0
+  R4 growth: slope of M-D against N            pooled  -0.0011 [-0.0032, -0.0001] n=117 -> BELOW vs 0
+  R4 growth: slope of M-D against N            copies disagree -> CANNOT_TELL
+R5 ENTANGLEMENT COST: concurrence after readouts minus after equal idle (arm P)
+  N=2: 7 of 48 pairs excluded (idle concurrence 0); idle median 0.770
+  R5 concurrence M-D at N=2                    copy 0  -0.0078 [-0.0113, +0.0028] n=42 -> CONSISTENT vs 0
+  R5 concurrence M-D at N=2                    copy 1  -0.0018 [-0.0095, +0.0024] n=41 -> CONSISTENT vs 0
+  R5 concurrence M-D at N=2                    pooled  -0.0037 [-0.0075, +0.0017] n=41 -> CONSISTENT vs 0
+  N=4: 4 of 48 pairs excluded (idle concurrence 0); idle median 0.643
+  R5 concurrence M-D at N=4                    copy 0  -0.0056 [-0.0124, -0.0026] n=44 -> BELOW vs 0
+  R5 concurrence M-D at N=4                    copy 1  -0.0075 [-0.0141, -0.0016] n=44 -> BELOW vs 0
+  R5 concurrence M-D at N=4                    pooled  -0.0055 [-0.0091, -0.0040] n=44 -> BELOW vs 0
+R6 LEAKAGE: P(final=1 | last readout=1), leak arm minus reference, per measured qubit
+  R6 leakage                                   copy 0  +0.5290 [+0.4412, +0.5700] n=22 -> ABOVE vs 0
+  R6 leakage                                   copy 1  +0.5538 [+0.4857, +0.6320] n=24 -> ABOVE vs 0
+  R6 leakage                                   pooled  +0.5296 [+0.4782, +0.5727] n=32 -> ABOVE vs 0
+R7 EXCITATION: fraction of 1 outcomes in the mid readouts (arm S, N = 8): 0.0159
+====================================================================================================
+ibm_kingston  job dbck8c9gv2cc73eahbc0  E 39  S 117  pairs 48  L=545 dt
+R1 KICK (deg per readout, arm S, N = 8)
+  R1 kick                                      copy 0  -2.7708 deg [-3.5777, -2.1560] n=117 -> BELOW vs 0
+  R1 kick                                      copy 1  -2.7028 deg [-3.2639, -2.2515] n=117 -> BELOW vs 0
+  R1 kick                                      pooled  -2.6454 deg [-3.3595, -2.0742] n=117 -> BELOW vs 0
+R2 DOSE (arm C, N = 8): kick with K measured vs the 39-measured kick
+  R2 kick with K=1 measured                    copy 0  -0.0220 deg [-0.1130, +0.0509] n=117 -> CONSISTENT vs 0
+  R2 kick with K=1 measured                    copy 1  -0.0223 deg [-0.1754, +0.0770] n=117 -> CONSISTENT vs 0
+  R2 kick with K=1 measured                    pooled  -0.0064 deg [-0.1013, +0.0711] n=117 -> CONSISTENT vs 0
+  R2 K=1: interval [-0.101, +0.071]; GLOBAL predicts -2.645, PER-QUBIT predicts -0.068 -> PER-QUBIT
+  R2 kick with K=10 measured                   copy 0  -0.3989 deg [-0.5625, -0.1999] n=117 -> BELOW vs 0
+  R2 kick with K=10 measured                   copy 1  -0.2896 deg [-0.4993, -0.1646] n=117 -> BELOW vs 0
+  R2 kick with K=10 measured                   pooled  -0.2934 deg [-0.5535, -0.1569] n=117 -> BELOW vs 0
+  R2 K=10: interval [-0.553, -0.157]; GLOBAL predicts -2.645, PER-QUBIT predicts -0.678 -> NEITHER
+R3 STRETCH: slope of kick on rate, rate and kick from different copies
+  rate from copy 0, kick from copy 1: slope a = -0.1658 [-0.3186, -0.0492] -> BELOW vs 0; BELOW vs 0.0909; distance to 0 2.4 widths, to 0.0909 3.7 widths
+  rate from copy 1, kick from copy 0: slope a = -0.1041 [-0.2574, +0.0337] -> CONSISTENT vs 0; BELOW vs 0.0909; distance to 0 1.4 widths, to 0.0909 2.6 widths
+  R3 kick on backward-precessing spectators    copy 0  -2.5113 deg [-3.5777, -1.8996] n=87 -> BELOW vs 0
+  R3 kick on backward-precessing spectators    copy 1  -2.4542 deg [-3.0524, -1.7883] n=87 -> BELOW vs 0
+  R3 kick on backward-precessing spectators    pooled  -2.4609 deg [-3.3595, -1.8253] n=87 -> BELOW vs 0
+R4 SUPERPOSITION COST: coherence after readouts minus after equal idle (arm S)
+  R4 coherence M-D at N=2                      copy 0  -0.0076 [-0.0159, -0.0003] n=117 -> BELOW vs 0
+  R4 coherence M-D at N=2                      copy 1  -0.0103 [-0.0153, -0.0044] n=117 -> BELOW vs 0
+  R4 coherence M-D at N=2                      pooled  -0.0073 [-0.0113, -0.0024] n=117 -> BELOW vs 0
+  R4 coherence M-D at N=4                      copy 0  -0.0053 [-0.0121, +0.0044] n=117 -> CONSISTENT vs 0
+  R4 coherence M-D at N=4                      copy 1  -0.0115 [-0.0185, +0.0000] n=117 -> CONSISTENT vs 0
+  R4 coherence M-D at N=4                      pooled  -0.0077 [-0.0103, +0.0026] n=117 -> CONSISTENT vs 0
+  R4 coherence M-D at N=8                      copy 0  -0.0129 [-0.0241, -0.0039] n=117 -> BELOW vs 0
+  R4 coherence M-D at N=8                      copy 1  -0.0130 [-0.0223, -0.0058] n=117 -> BELOW vs 0
+  R4 coherence M-D at N=8                      pooled  -0.0100 [-0.0221, +0.0004] n=117 -> CONSISTENT vs 0
+  R4 growth: slope of M-D against N            copy 0  +0.0001 [-0.0034, +0.0016] n=117 -> CONSISTENT vs 0
+  R4 growth: slope of M-D against N            copy 1  -0.0002 [-0.0025, +0.0020] n=117 -> CONSISTENT vs 0
+  R4 growth: slope of M-D against N            pooled  -0.0006 [-0.0024, +0.0006] n=117 -> CONSISTENT vs 0
+R5 ENTANGLEMENT COST: concurrence after readouts minus after equal idle (arm P)
+  N=2: 7 of 48 pairs excluded (idle concurrence 0); idle median 0.838
+  R5 concurrence M-D at N=2                    copy 0  -0.0077 [-0.0216, -0.0031] n=40 -> BELOW vs 0
+  R5 concurrence M-D at N=2                    copy 1  -0.0125 [-0.0263, -0.0055] n=39 -> BELOW vs 0
+  R5 concurrence M-D at N=2                    pooled  -0.0098 [-0.0175, -0.0066] n=41 -> BELOW vs 0
+  N=4: 9 of 48 pairs excluded (idle concurrence 0); idle median 0.712
+  R5 concurrence M-D at N=4                    copy 0  -0.0101 [-0.0165, -0.0027] n=40 -> BELOW vs 0
+  R5 concurrence M-D at N=4                    copy 1  -0.0065 [-0.0138, +0.0025] n=39 -> CONSISTENT vs 0
+  R5 concurrence M-D at N=4                    pooled  -0.0086 [-0.0154, -0.0014] n=39 -> BELOW vs 0
+  R5 concurrence M-D at N=4                    copies disagree -> CANNOT_TELL
+R6 LEAKAGE: P(final=1 | last readout=1), leak arm minus reference, per measured qubit
+  R6 leakage                                   copy 0  +0.5637 [+0.4665, +0.6389] n=24 -> ABOVE vs 0
+  R6 leakage                                   copy 1  +0.5030 [+0.4388, +0.5891] n=25 -> ABOVE vs 0
+  R6 leakage                                   pooled  +0.5143 [+0.4081, +0.5535] n=31 -> ABOVE vs 0
+R7 EXCITATION: fraction of 1 outcomes in the mid readouts (arm S, N = 8): 0.0317
+====================================================================================================
+ibm_marrakesh  job dbck95c24mrc73cjqgi0  E 39  S 117  pairs 48  L=671 dt
+R1 KICK (deg per readout, arm S, N = 8)
+  R1 kick                                      copy 0  -2.4256 deg [-2.8906, -1.7151] n=117 -> BELOW vs 0
+  R1 kick                                      copy 1  -2.4684 deg [-3.2896, -1.5880] n=117 -> BELOW vs 0
+  R1 kick                                      pooled  -2.2432 deg [-3.1932, -1.7008] n=117 -> BELOW vs 0
+R2 DOSE (arm C, N = 8): kick with K measured vs the 39-measured kick
+  R2 kick with K=1 measured                    copy 0  -0.0201 deg [-0.1454, +0.1522] n=117 -> CONSISTENT vs 0
+  R2 kick with K=1 measured                    copy 1  -0.0805 deg [-0.1958, -0.0084] n=117 -> BELOW vs 0
+  R2 kick with K=1 measured                    pooled  -0.0275 deg [-0.1425, +0.1497] n=117 -> CONSISTENT vs 0
+  R2 kick with K=1 measured                    copies disagree -> CANNOT_TELL
+  R2 K=1: interval [-0.143, +0.150]; GLOBAL predicts -2.243, PER-QUBIT predicts -0.058 -> PER-QUBIT
+  R2 kick with K=10 measured                   copy 0  -0.3427 deg [-0.4485, -0.0868] n=117 -> BELOW vs 0
+  R2 kick with K=10 measured                   copy 1  -0.4574 deg [-0.7221, -0.1432] n=117 -> BELOW vs 0
+  R2 kick with K=10 measured                   pooled  -0.2291 deg [-0.3779, -0.0841] n=117 -> BELOW vs 0
+  R2 K=10: interval [-0.378, -0.084]; GLOBAL predicts -2.243, PER-QUBIT predicts -0.575 -> NEITHER
+R3 STRETCH: slope of kick on rate, rate and kick from different copies
+  rate from copy 0, kick from copy 1: slope a = +0.0592 [-0.0497, +0.1718] -> CONSISTENT vs 0; CONSISTENT vs 0.0909; distance to 0 1.0 widths, to 0.0909 0.6 widths
+  rate from copy 1, kick from copy 0: slope a = +0.0321 [-0.0804, +0.1423] -> CONSISTENT vs 0; CONSISTENT vs 0.0909; distance to 0 0.6 widths, to 0.0909 1.0 widths
+  R3 kick on backward-precessing spectators    copy 0  -1.9850 deg [-2.8216, -1.4364] n=75 -> BELOW vs 0
+  R3 kick on backward-precessing spectators    copy 1  -2.0883 deg [-2.7994, -1.2519] n=75 -> BELOW vs 0
+  R3 kick on backward-precessing spectators    pooled  -2.0524 deg [-2.9520, -1.1266] n=75 -> BELOW vs 0
+R4 SUPERPOSITION COST: coherence after readouts minus after equal idle (arm S)
+  R4 coherence M-D at N=2                      copy 0  -0.0117 [-0.0220, -0.0041] n=117 -> BELOW vs 0
+  R4 coherence M-D at N=2                      copy 1  -0.0135 [-0.0187, -0.0073] n=117 -> BELOW vs 0
+  R4 coherence M-D at N=2                      pooled  -0.0137 [-0.0183, -0.0081] n=117 -> BELOW vs 0
+  R4 coherence M-D at N=4                      copy 0  -0.0180 [-0.0319, -0.0018] n=117 -> BELOW vs 0
+  R4 coherence M-D at N=4                      copy 1  -0.0102 [-0.0201, -0.0025] n=117 -> BELOW vs 0
+  R4 coherence M-D at N=4                      pooled  -0.0120 [-0.0210, -0.0072] n=117 -> BELOW vs 0
+  R4 coherence M-D at N=8                      copy 0  -0.0209 [-0.0303, -0.0108] n=117 -> BELOW vs 0
+  R4 coherence M-D at N=8                      copy 1  -0.0171 [-0.0238, -0.0003] n=117 -> BELOW vs 0
+  R4 coherence M-D at N=8                      pooled  -0.0195 [-0.0232, -0.0063] n=117 -> BELOW vs 0
+  R4 growth: slope of M-D against N            copy 0  -0.0016 [-0.0040, +0.0008] n=117 -> CONSISTENT vs 0
+  R4 growth: slope of M-D against N            copy 1  -0.0007 [-0.0030, +0.0035] n=117 -> CONSISTENT vs 0
+  R4 growth: slope of M-D against N            pooled  -0.0013 [-0.0033, +0.0007] n=117 -> CONSISTENT vs 0
+R5 ENTANGLEMENT COST: concurrence after readouts minus after equal idle (arm P)
+  N=2: 15 of 48 pairs excluded (idle concurrence 0); idle median 0.441
+  R5 concurrence M-D at N=2                    copy 0  -0.0077 [-0.0266, -0.0027] n=31 -> BELOW vs 0
+  R5 concurrence M-D at N=2                    copy 1  -0.0136 [-0.0244, -0.0035] n=33 -> BELOW vs 0
+  R5 concurrence M-D at N=2                    pooled  -0.0090 [-0.0246, -0.0022] n=33 -> BELOW vs 0
+  N=4: 14 of 48 pairs excluded (idle concurrence 0); idle median 0.298
+  R5 concurrence M-D at N=4                    copy 0  -0.0265 [-0.0425, +0.0051] n=33 -> CONSISTENT vs 0
+  R5 concurrence M-D at N=4                    copy 1  -0.0140 [-0.0353, -0.0084] n=34 -> BELOW vs 0
+  R5 concurrence M-D at N=4                    pooled  -0.0198 [-0.0332, -0.0071] n=34 -> BELOW vs 0
+  R5 concurrence M-D at N=4                    copies disagree -> CANNOT_TELL
+R6 LEAKAGE: P(final=1 | last readout=1), leak arm minus reference, per measured qubit
+  R6 leakage                                   copy 0  +0.5198 [+0.4804, +0.5832] n=30 -> ABOVE vs 0
+  R6 leakage                                   copy 1  +0.5892 [+0.5122, +0.6257] n=33 -> ABOVE vs 0
+  R6 leakage                                   pooled  +0.5553 [+0.5112, +0.5983] n=37 -> ABOVE vs 0
+R7 EXCITATION: fraction of 1 outcomes in the mid readouts (arm S, N = 8): 0.0349
+
+SUMMARY (pooled outcome; CANNOT_TELL where copies disagree)
+  ibm_fez        R1 kick                                        BELOW
+  ibm_fez        R2 kick with K=1 measured                      CONSISTENT
+  ibm_fez        R2 dose K=1                                    PER-QUBIT
+  ibm_fez        R2 kick with K=10 measured                     CANNOT_TELL
+  ibm_fez        R2 dose K=10                                   NEITHER
+  ibm_fez        R3 kick on backward-precessing spectators      BELOW
+  ibm_fez        R4 coherence M-D at N=2                        CONSISTENT
+  ibm_fez        R4 coherence M-D at N=4                        CONSISTENT
+  ibm_fez        R4 coherence M-D at N=8                        BELOW
+  ibm_fez        R4 growth: slope of M-D against N              CANNOT_TELL
+  ibm_fez        R5 concurrence M-D at N=2                      CONSISTENT
+  ibm_fez        R5 concurrence M-D at N=4                      BELOW
+  ibm_fez        R6 leakage                                     ABOVE
+  ibm_fez        R7 excitation p                                printed
+  ibm_kingston   R1 kick                                        BELOW
+  ibm_kingston   R2 kick with K=1 measured                      CONSISTENT
+  ibm_kingston   R2 dose K=1                                    PER-QUBIT
+  ibm_kingston   R2 kick with K=10 measured                     BELOW
+  ibm_kingston   R2 dose K=10                                   NEITHER
+  ibm_kingston   R3 kick on backward-precessing spectators      BELOW
+  ibm_kingston   R4 coherence M-D at N=2                        BELOW
+  ibm_kingston   R4 coherence M-D at N=4                        CONSISTENT
+  ibm_kingston   R4 coherence M-D at N=8                        CONSISTENT
+  ibm_kingston   R4 growth: slope of M-D against N              CONSISTENT
+  ibm_kingston   R5 concurrence M-D at N=2                      BELOW
+  ibm_kingston   R5 concurrence M-D at N=4                      CANNOT_TELL
+  ibm_kingston   R6 leakage                                     ABOVE
+  ibm_kingston   R7 excitation p                                printed
+  ibm_marrakesh  R1 kick                                        BELOW
+  ibm_marrakesh  R2 kick with K=1 measured                      CANNOT_TELL
+  ibm_marrakesh  R2 dose K=1                                    PER-QUBIT
+  ibm_marrakesh  R2 kick with K=10 measured                     BELOW
+  ibm_marrakesh  R2 dose K=10                                   NEITHER
+  ibm_marrakesh  R3 kick on backward-precessing spectators      BELOW
+  ibm_marrakesh  R4 coherence M-D at N=2                        BELOW
+  ibm_marrakesh  R4 coherence M-D at N=4                        BELOW
+  ibm_marrakesh  R4 coherence M-D at N=8                        BELOW
+  ibm_marrakesh  R4 growth: slope of M-D against N              CONSISTENT
+  ibm_marrakesh  R5 concurrence M-D at N=2                      BELOW
+  ibm_marrakesh  R5 concurrence M-D at N=4                      CANNOT_TELL
+  ibm_marrakesh  R6 leakage                                     ABOVE
+  ibm_marrakesh  R7 excitation p                                printed

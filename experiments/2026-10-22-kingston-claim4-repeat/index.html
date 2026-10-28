@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kingston Claim-4 Repeat</title>
+<link rel="canonical" href="https://heuremen.org/experiments/2026-10-22-kingston-claim4-repeat/">
+<meta name="tdm-reservation" content="1">
+<meta name="tdm-policy" content="https://indahl.ai/terms#ai-training">
+<meta name="description" content="Claim 4 (the kick is not bigger with the measured qubits in 1) rested on ibm_kingston on a reading in 0 whose two copies disagreed. This is the same.">
+<meta property="og:site_name" content="Heuremen LLC">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kingston Claim-4 Repeat">
+<meta property="og:description" content="Claim 4 (the kick is not bigger with the measured qubits in 1) rested on ibm_kingston on a reading in 0 whose two copies disagreed. This is the same.">
+<meta property="og:url" content="https://heuremen.org/experiments/2026-10-22-kingston-claim4-repeat/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://heuremen.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://heuremen.org/og.png">
+
+<style>body{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;color:#18202B;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.5}a{color:#0F7173}</style></head><body>
+<p><a href="/">&larr; What&rsquo;s Lost with a Look</a></p>
+<h1>Claim 4 repeat on ibm_kingston, 22 October 2026</h1>
+<p>Claim 4 (the kick is not bigger with the measured qubits in 1) rested on ibm_kingston on a reading in 0 whose two copies disagreed. This is the same design as the 21 October excitation test, whose plan was hashed locally (<a href="/experiments/2026-10-22-deciding-runs/excitation.py">excitation.py</a> imported unchanged), kingston only, 4900 shots, an independent job with a fresh copy check. Plan, wrapper and synthetic test pushed before the job; results are read below by the unchanged <a href="/experiments/2026-10-22-deciding-runs/analyze_excitation.py">analyze_excitation.py</a>.</p>
+<p><a href="PLAN_EXK.md.text">plan</a> &middot; <a href="excitation_k.py">excitation_k.py</a> &middot; <a href="synth_exk.py">synth_exk.py</a> &middot; synthetic: <a href="results_synth_exk_4900.text">4900 shots</a>, <a href="results_synth_exk_2000.text">2000 shots</a> &middot; <a href="PLAN_EXK.sha256.text">plan SHA-256</a> &middot; <a href="CODE_EXK.sha256.text">code SHA-256</a></p>
+<h2>Results, read by the committed analysis (<a href="results_exk.text">full output</a>)</h2>
+<p>Job dbcvq18c77vs73874hm0 (<a href="fire_exk_ibm_kingston.text">fire log</a>, <a href="job_excitation_ibm_kingston.json">job record</a>). Per readout, in degrees:</p>
+<ul>
+<li>Kick with the measured qubits in 0: &minus;3.17 [&minus;4.02, &minus;2.27], below zero (copy gap &minus;0.046 [&minus;0.086, +0.020]).</li>
+<li>Kick with the measured qubits in 1: &minus;3.27 [&minus;4.10, &minus;2.08], below zero (copy gap &minus;0.012 [&minus;0.054, +0.046]).</li>
+<li><b>Kick in 1 minus kick in 0: +0.049 [&minus;0.098, +0.132], consistent with zero; the copies agree (copy gap +0.002 [&minus;0.130, +0.058]).</b> The kick is negative here, so a positive value would mean a smaller kick in 1. Any increase is bounded by about 0.1 degrees.</li>
+</ul>
+<p>The first 22 October job on this processor read +0.066 [&minus;0.005, +0.229] with its kick-in-0 copies shifted, which is why this repeat was run (<a href="/experiments/2026-10-22-deciding-runs/">deciding runs</a>). The 21 October run, read after the data, allowed an increase of up to 0.32 (<a href="/experiments/2026-10-21-excitation-test/results_check_j.text">check J</a>; there the kick is printed positive). The repeat is kept beside the first job and not combined with it.</p>
+
+<p>Data tables and recounts: <a href="https://indahl.ai/qia">QIA</a> &middot; <a href="https://indahl.ai/iris">IRIS</a></p>
+<p class="foot">Bones &middot; Wayfinder &middot; Sage &middot; Shuttle &middot; Nova<br><a href="https://indahl.ai">Heuremen LLC</a><br>&ldquo;We found it.&rdquo;</p>
+</body></html>

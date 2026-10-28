@@ -1,0 +1,69 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Readout vs Equal Idle</title>
+<link rel="canonical" href="https://heuremen.org/experiments/2026-10-21-readout-vs-idle/">
+<meta name="tdm-reservation" content="1">
+<meta name="tdm-policy" content="https://indahl.ai/terms#ai-training">
+<meta name="description" content="Does a mid-circuit readout advance an untouched neighbouring qubit’s phase more than an idle of exactly the same length? IBM 156-qubit processors, 21.">
+<meta property="og:site_name" content="Heuremen LLC">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Readout vs Equal Idle">
+<meta property="og:description" content="Does a mid-circuit readout advance an untouched neighbouring qubit’s phase more than an idle of exactly the same length? IBM 156-qubit processors, 21.">
+<meta property="og:url" content="https://heuremen.org/experiments/2026-10-21-readout-vs-idle/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://heuremen.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://heuremen.org/og.png">
+<style>
+body{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;color:#18202B;background:#FFF;font-size:15px;line-height:1.5;max-width:760px;margin:40px auto;padding:0 20px}
+h1{font-size:26px;color:#0E4A4D;border-bottom:2px solid #0F7173;padding-bottom:6px}
+h2{font-size:16px;color:#0F7173;margin-top:28px;text-transform:uppercase;letter-spacing:.04em}
+a{color:#0F7173}code{font-family:Menlo,monospace;font-size:13px;background:#EFF3F1;padding:1px 4px}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:14px}
+th{text-align:left;color:#0E4A4D;border-bottom:1.5px solid #0F7173;padding:5px 6px}
+td{border-bottom:1px solid #E4E9E6;padding:6px;vertical-align:top}td.n{text-align:right;font-variant-numeric:tabular-nums}
+td.f{white-space:nowrap;font-family:Menlo,monospace;font-size:12.5px}
+.warn{background:#FBF4E6;border-left:4px solid #8A5E0E;padding:10px 14px;margin:14px 0}
+.foot{color:#6B7480;font-size:13px;margin-top:28px}
+</style></head><body>
+<p><a href="/">&larr; What&rsquo;s Lost with a Look</a></p>
+<h1>Readout vs equal idle</h1>
+<p>Does a mid-circuit readout advance an untouched neighbouring qubit&rsquo;s phase more than an idle of exactly the same length? IBM 156-qubit processors, 21 October 2026.</p>
+
+<h2>Design</h2>
+<p>Per chip: 39 measured qubits, 117 untouched qubits prepared on the equator. Each step is one of three modes &mdash; <b>D</b>: measured qubits idle for exactly the published readout length; <b>M0</b>: measured qubits read out, held in 0; <b>M1</b>: prepared in 1, then read out. Barriers on all qubits after every step so untouched qubits see identical scheduling in every mode. 0, 2, 4, 8, 16 steps; X and Y quadratures; 2000 shots; one job per chip. Ratio R0 = phase per step in M0 &divide; phase per step in D. Untouched qubits kept if their D slope is at least 1&deg;/step (declared in advance; results without the cut are printed too).</p>
+<p>The plan and analysis were written and hashed before any job was submitted (plan file 14:52:48, first job submitted 51 s later, local time): <a href="PREREG.md.text">PREREG.md</a> (served as .text so the bytes match the hash), SHA-256 <code>0a8bc2b627a737f8&hellip;</code> (<a href="PREREG.sha256">full hash</a>). Fez, Marrakesh and Kingston were the declared chips. Pittsburgh was added afterwards with the same hashed design and analysis; Boston was submitted and errored.</p>
+
+<h2>Result (declared analysis)</h2>
+<table><tr><th>chip</th><th class="n">readout</th><th class="n">R0</th><th class="n">95&thinsp;% interval</th><th class="n">R1 &minus; R0</th></tr>
+<tr><td>ibm_fez</td><td class="n">1.660&thinsp;&micro;s</td><td class="n">1.186</td><td class="n">1.087&ndash;1.257</td><td class="n">+0.105 (above 0)</td></tr>
+<tr><td>ibm_kingston</td><td class="n">2.180&thinsp;&micro;s</td><td class="n">1.204</td><td class="n">1.106&ndash;1.343</td><td class="n">+0.153 (above 0)</td></tr>
+<tr><td>ibm_marrakesh</td><td class="n">2.684&thinsp;&micro;s</td><td class="n">1.166</td><td class="n">1.020&ndash;1.257</td><td class="n">&minus;0.003 (consistent with 0)</td></tr>
+<tr><td>ibm_pittsburgh <small>(added)</small></td><td class="n">2.180&thinsp;&micro;s</td><td class="n">1.202</td><td class="n">1.135&ndash;1.275</td><td class="n">+0.236 (above 0)</td></tr></table>
+<p>Medians over untouched qubits, intervals from 2000 bootstrap resamples of untouched qubits within one job. Chips are the independent units.</p>
+
+<h2>What it says (analysis added after outside review)</h2>
+<p>The ratio above divides a phase excess by each untouched qubit&rsquo;s own idle phase, so its value depends on which slowly precessing untouched qubits are kept. The excess itself is a phase per readout:</p>
+<table><tr><th>chip</th><th class="n">extra phase per readout, measured qubits in 0 (median, 95&thinsp;%)</th><th class="n">on untouched qubits precessing backwards</th></tr>
+<tr><td>ibm_fez</td><td class="n">+1.73&deg; [1.29, 2.21]</td><td class="n">+1.49&deg;</td></tr>
+<tr><td>ibm_kingston</td><td class="n">+2.41&deg; [1.96, 3.58]</td><td class="n">+3.28&deg;</td></tr>
+<tr><td>ibm_marrakesh</td><td class="n">+2.13&deg; [1.44, 2.79]</td><td class="n">+3.01&deg;</td></tr>
+<tr><td>ibm_pittsburgh</td><td class="n">+1.79&deg; [1.16, 2.66]</td><td class="n">+2.75&deg;</td></tr></table>
+<p>Extra elapsed time would make the excess negative for untouched qubits precessing backwards; it is positive. The M1 arm here is compared with an idle whose measured qubits are in 0, so M1 &minus; D includes a phase that appears without any readout when the measured qubits are in 1; the <a href="/experiments/2026-10-21-excitation-test/">excitation test</a> has the matching idle-in-1 arm and shows the kick is not larger with the measured qubits in 1 (kick in 1 minus kick in 0: +0.204 [&minus;0.092, +0.320] on kingston, larger in 1 by at most 0.32&deg;, consistent with zero; &minus;0.673 [&minus;0.982, &minus;0.403] on marrakesh, smaller in 1). A regression of the excess on the idle phase (in <a href="kick_analysis.py">kick_analysis.py</a>) is biased by noise in the idle phase and is not interpreted. The planned reading 3 (constant ratio versus constant delay across readout lengths; plan hashed locally) cannot tell with three distinct lengths. <a href="results_kick.text">kick analysis output</a> &middot; <a href="results_exploratory.text">exploratory neighbour/far split</a></p>
+<p>The plan&rsquo;s SHA-256 was computed locally before submission and not externally timestamped. Job records: <a href="job_ibm_fez.json">fez</a> &middot; <a href="job_ibm_kingston.json">kingston</a> &middot; <a href="job_ibm_marrakesh.json">marrakesh</a> &middot; <a href="job_ibm_pittsburgh.json">pittsburgh</a> &middot; <a href="job_ibm_boston.json">boston (submitted and errored)</a></p>
+
+<h2>Files</h2>
+<table>
+<tr><td class="f"><a href="PREREG.md.text">PREREG.md</a></td><td>design and analysis, hashed before submission</td></tr>
+<tr><td class="f"><a href="run.py">run.py</a></td><td>builds and submits the circuits (Qiskit 2.5.2, qiskit-ibm-runtime 0.49.0, SamplerV2)</td></tr>
+<tr><td class="f"><a href="analyze.py">analyze.py</a></td><td>the declared analysis; reads the raw files only</td></tr>
+<tr><td class="f"><a href="results_prereg.text">results_prereg.text</a></td><td>its output, with and without the cut</td></tr>
+<tr><td class="f"><a href="exploratory_neighbour_far.py">exploratory_neighbour_far.py</a></td><td>the neighbour / far split (exploratory)</td></tr>
+<tr><td class="f">raw_&lt;chip&gt;.npz</td><td><a href="raw_ibm_fez.npz">fez</a> &middot; <a href="raw_ibm_kingston.npz">kingston</a> &middot; <a href="raw_ibm_marrakesh.npz">marrakesh</a> &middot; <a href="raw_ibm_pittsburgh.npz">pittsburgh</a> &mdash; counts per circuit</td></tr>
+<tr><td class="f">roles_&lt;chip&gt;.json</td><td>which qubits were measured and which were untouched</td></tr>
+<tr><td class="f">job_&lt;chip&gt;.json</td><td>IBM job IDs and backend metadata</td></tr>
+<tr><td class="f"><a href="fire.log.text">fire.log.text</a></td><td>submission log</td></tr>
+</table>
+
+<p>Data tables and recounts: <a href="https://indahl.ai/qia">QIA</a> &middot; <a href="https://indahl.ai/iris">IRIS</a></p>
+<p class="foot">Bones &middot; Wayfinder &middot; Sage &middot; Shuttle &middot; Nova<br><a href="https://indahl.ai">Heuremen LLC</a><br>&ldquo;We found it.&rdquo;</p>
+</body></html>

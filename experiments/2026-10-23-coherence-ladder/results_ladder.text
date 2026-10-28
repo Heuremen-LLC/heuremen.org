@@ -1,0 +1,100 @@
+=== ibm_kingston job dbdsb6vsstms73fb3a5g; IBM record 2026-10-23 16:02:14-04:00; submitted 2026-10-23T20:37:47Z
+KNOWN-GOOD (1) median Hahn P(1) at t = 0: 0.988 (>= 0.90): MET | (1b) median Ramsey coherence at t = 0: 0.987 (>= 0.85): MET
+-- ibm_kingston | FIXED fit (T1 always free-base; Ramsey on the two-quadrature magnitude)
+   copy gap T1      T(copy0)/T(copy1) median 1.006 [0.981, 1.026]
+   copy gap RAMSEY  T(copy0)/T(copy1) median 1.000 [0.975, 1.019]
+   copy gap HAHN    T(copy0)/T(copy1) median 0.994 [0.978, 1.010]
+   copy gap CPMG4   T(copy0)/T(copy1) median 0.994 [0.975, 1.013]
+   copy gap CPMG16  T(copy0)/T(copy1) median 1.006 [0.994, 1.019]
+   chip median times (us): T1 232, RAMSEY 102, HAHN 142, CPMG4 164, CPMG16 175
+   R1 delivered/stated T1  median 0.957 [0.904, 1.049] n 91 -> CONSISTENT
+   R2 delivered/stated T2  median 0.928 [0.873, 1.003] n 90 -> CONSISTENT
+   R3 T2(RAMSEY)/T2(HAHN) per qubit median 0.798 [0.754, 0.856] n 90 -> BELOW
+   R3 T2(CPMG4)/T2(HAHN) per qubit median 1.093 [1.059, 1.114] n 90 -> ABOVE
+   R3 T2(CPMG16)/T2(HAHN) per qubit median 1.213 [1.168, 1.256] n 90 -> ABOVE
+   R4 T2(HAHN)/(2 T1) per qubit median 0.382 [0.308, 0.443] n 90 -> BELOW
+   R4 T2(CPMG4)/(2 T1) per qubit median 0.402 [0.333, 0.493] n 90 -> BELOW
+   R4 T2(CPMG16)/(2 T1) per qubit median 0.440 [0.364, 0.550] n 90 -> BELOW
+   NOISE class: SLOW NOISE (decoupling lengthens T2, still below 2 T1)
+-- ibm_kingston | FREE  fit (T1 always free-base; Ramsey on the two-quadrature magnitude)
+   copy gap T1      T(copy0)/T(copy1) median 1.006 [0.987, 1.026]
+   copy gap RAMSEY  T(copy0)/T(copy1) median 1.000 [0.975, 1.019]
+   copy gap HAHN    T(copy0)/T(copy1) median 0.987 [0.951, 1.019]
+   copy gap CPMG4   T(copy0)/T(copy1) median 0.997 [0.975, 1.016]
+   copy gap CPMG16  T(copy0)/T(copy1) median 0.987 [0.969, 1.013]
+   chip median times (us): T1 232, RAMSEY 102, HAHN 141, CPMG4 165, CPMG16 163
+   R1 delivered/stated T1  median 0.957 [0.904, 1.049] n 91 -> CONSISTENT
+   R2 delivered/stated T2  median 0.957 [0.901, 1.009] n 90 -> CONSISTENT
+   R3 T2(RAMSEY)/T2(HAHN) per qubit median 0.822 [0.759, 0.848] n 90 -> BELOW
+   R3 T2(CPMG4)/T2(HAHN) per qubit median 1.079 [1.039, 1.124] n 90 -> ABOVE
+   R3 T2(CPMG16)/T2(HAHN) per qubit median 1.164 [1.117, 1.221] n 90 -> ABOVE
+   R4 T2(HAHN)/(2 T1) per qubit median 0.399 [0.319, 0.445] n 90 -> BELOW
+   R4 T2(CPMG4)/(2 T1) per qubit median 0.412 [0.345, 0.487] n 90 -> BELOW
+   R4 T2(CPMG16)/(2 T1) per qubit median 0.460 [0.364, 0.514] n 90 -> BELOW
+   NOISE class: SLOW NOISE (decoupling lengthens T2, still below 2 T1)
+KNOWN-GOOD (2) FIXED: T2(HAHN)/(2 T1) upper bound 0.443 must be <= 1.05 (no qubit population may beat the T1 limit): MET
+KNOWN-GOOD (2) FREE : T2(HAHN)/(2 T1) upper bound 0.445 must be <= 1.05 (no qubit population may beat the T1 limit): MET
+=== ADDENDUM ibm_kingston | X5 qubits whose IBM value changed between submission and the post-job record: T1 0, T2 0
+   X1 FIXED T2(CPMG16)/T2(CPMG4) median 1.110 [1.086, 1.146] n 90 -> ABOVE
+   X2 FIXED Ramsey (waits >= 5x floor) / HAHN median 0.806 [0.752, 0.864] n 90 -> BELOW
+   X3 FIXED dropped/capped per rung: T1 1, RAMSEY 1, HAHN 2, CPMG4 2, CPMG16 2
+   X5 FIXED delivered/stated T1 against the POST-job record: 0.957 [0.904, 1.049] n 91 -> CONSISTENT
+   X5 FIXED delivered/stated T2 against the POST-job record: 0.928 [0.873, 1.006] n 90 -> CONSISTENT
+   X1 FREE  T2(CPMG16)/T2(CPMG4) median 1.086 [1.045, 1.146] n 90 -> ABOVE
+   X2 FREE  Ramsey (waits >= 5x floor) / HAHN median 0.822 [0.747, 0.848] n 90 -> BELOW
+   X3 FREE  dropped/capped per rung: T1 1, RAMSEY 1, HAHN 2, CPMG4 2, CPMG16 2
+   X5 FREE  delivered/stated T1 against the POST-job record: 0.957 [0.904, 1.049] n 91 -> CONSISTENT
+   X5 FREE  delivered/stated T2 against the POST-job record: 0.957 [0.896, 1.009] n 90 -> CONSISTENT
+   X3 known-good CPMG4 median 1-P(1) at wait 0: 0.994 (>= 0.90): MET
+   X3 known-good CPMG16 median 1-P(1) at wait 0: 0.991 (>= 0.90): MET
+   X4 T1 shape: 1/e crossing / fitted T1 median 0.999 [0.993, 1.007] n 91 -> CONSISTENT (1 = one time constant)
+=== ibm_marrakesh job dbdsbafpc3tc739knct0; IBM record 2026-10-23 16:08:27-04:00; submitted 2026-10-23T20:38:01Z
+KNOWN-GOOD (1) median Hahn P(1) at t = 0: 0.982 (>= 0.90): MET | (1b) median Ramsey coherence at t = 0: 0.971 (>= 0.85): MET
+-- ibm_marrakesh | FIXED fit (T1 always free-base; Ramsey on the two-quadrature magnitude)
+   copy gap T1      T(copy0)/T(copy1) median 1.006 [0.994, 1.013]
+   copy gap RAMSEY  T(copy0)/T(copy1) median 0.978 [0.960, 1.000]
+   copy gap HAHN    T(copy0)/T(copy1) median 1.006 [0.994, 1.032]
+   copy gap CPMG4   T(copy0)/T(copy1) median 1.000 [0.969, 1.026]
+   copy gap CPMG16  T(copy0)/T(copy1) median 1.000 [0.981, 1.019]
+   chip median times (us): T1 153, RAMSEY 54, HAHN 77, CPMG4 77, CPMG16 85
+   R1 delivered/stated T1  median 0.892 [0.840, 0.985] n 89 -> BELOW
+   R2 delivered/stated T2  median 1.047 [0.978, 1.134] n 89 -> CONSISTENT
+   R3 T2(RAMSEY)/T2(HAHN) per qubit median 0.783 [0.738, 0.832] n 88 -> BELOW
+   R3 T2(CPMG4)/T2(HAHN) per qubit median 1.079 [1.059, 1.121] n 89 -> ABOVE
+   R3 T2(CPMG16)/T2(HAHN) per qubit median 1.194 [1.142, 1.256] n 89 -> ABOVE
+   R4 T2(HAHN)/(2 T1) per qubit median 0.286 [0.219, 0.335] n 89 -> BELOW
+   R4 T2(CPMG4)/(2 T1) per qubit median 0.297 [0.232, 0.364] n 89 -> BELOW
+   R4 T2(CPMG16)/(2 T1) per qubit median 0.311 [0.265, 0.401] n 89 -> BELOW
+   NOISE class: SLOW NOISE (decoupling lengthens T2, still below 2 T1)
+-- ibm_marrakesh | FREE  fit (T1 always free-base; Ramsey on the two-quadrature magnitude)
+   copy gap T1      T(copy0)/T(copy1) median 1.006 [0.994, 1.013]
+   copy gap RAMSEY  T(copy0)/T(copy1) median 0.978 [0.960, 1.000]
+   copy gap HAHN    T(copy0)/T(copy1) median 1.019 [0.975, 1.052]
+   copy gap CPMG4   T(copy0)/T(copy1) median 0.981 [0.945, 1.013]
+   copy gap CPMG16  T(copy0)/T(copy1) median 0.987 [0.957, 1.032]
+   chip median times (us): T1 153, RAMSEY 54, HAHN 66, CPMG4 74, CPMG16 80
+   R1 delivered/stated T1  median 0.892 [0.840, 0.985] n 89 -> BELOW
+   R2 delivered/stated T2  median 0.958 [0.858, 1.004] n 89 -> CONSISTENT
+   R3 T2(RAMSEY)/T2(HAHN) per qubit median 0.878 [0.843, 0.933] n 88 -> BELOW
+   R3 T2(CPMG4)/T2(HAHN) per qubit median 1.164 [1.114, 1.217] n 89 -> ABOVE
+   R3 T2(CPMG16)/T2(HAHN) per qubit median 1.313 [1.233, 1.339] n 89 -> ABOVE
+   R4 T2(HAHN)/(2 T1) per qubit median 0.226 [0.197, 0.288] n 89 -> BELOW
+   R4 T2(CPMG4)/(2 T1) per qubit median 0.274 [0.221, 0.353] n 89 -> BELOW
+   R4 T2(CPMG16)/(2 T1) per qubit median 0.294 [0.246, 0.378] n 89 -> BELOW
+   NOISE class: SLOW NOISE (decoupling lengthens T2, still below 2 T1)
+KNOWN-GOOD (2) FIXED: T2(HAHN)/(2 T1) upper bound 0.335 must be <= 1.05 (no qubit population may beat the T1 limit): MET
+KNOWN-GOOD (2) FREE : T2(HAHN)/(2 T1) upper bound 0.288 must be <= 1.05 (no qubit population may beat the T1 limit): MET
+=== ADDENDUM ibm_marrakesh | X5 qubits whose IBM value changed between submission and the post-job record: T1 0, T2 0
+   X1 FIXED T2(CPMG16)/T2(CPMG4) median 1.107 [1.059, 1.135] n 89 -> ABOVE
+   X2 FIXED Ramsey (waits >= 5x floor) / HAHN median 0.774 [0.738, 0.827] n 84 -> BELOW
+   X3 FIXED dropped/capped per rung: T1 3, RAMSEY 4, HAHN 3, CPMG4 3, CPMG16 3
+   X5 FIXED delivered/stated T1 against the POST-job record: 0.892 [0.840, 0.985] n 89 -> BELOW
+   X5 FIXED delivered/stated T2 against the POST-job record: 1.047 [0.978, 1.134] n 89 -> CONSISTENT
+   X1 FREE  T2(CPMG16)/T2(CPMG4) median 1.093 [1.059, 1.128] n 89 -> ABOVE
+   X2 FREE  Ramsey (waits >= 5x floor) / HAHN median 0.892 [0.843, 0.951] n 84 -> BELOW
+   X3 FREE  dropped/capped per rung: T1 3, RAMSEY 4, HAHN 3, CPMG4 3, CPMG16 3
+   X5 FREE  delivered/stated T1 against the POST-job record: 0.892 [0.840, 0.985] n 89 -> BELOW
+   X5 FREE  delivered/stated T2 against the POST-job record: 0.958 [0.858, 1.004] n 89 -> CONSISTENT
+   X3 known-good CPMG4 median 1-P(1) at wait 0: 0.982 (>= 0.90): MET
+   X3 known-good CPMG16 median 1-P(1) at wait 0: 0.978 (>= 0.90): MET
+   X4 T1 shape: 1/e crossing / fitted T1 median 0.999 [0.989, 1.006] n 89 -> CONSISTENT (1 = one time constant)

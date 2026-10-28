@@ -1,0 +1,34 @@
+ibm_fez stamps 2026-10-22 18:17:23-04:00 -> 2026-10-22 19:55:50-04:00  T1/T2 entries 311: identical value and date 311 (T1 156 of 156, T2 155 of 155), same value new date 0, new value 0; newest T1/T2 date in the later record 2026-10-22 18:16:45-04:00
+ibm_fez stamps 2026-10-22 19:55:50-04:00 -> 2026-10-22 21:49:50-04:00  T1/T2 entries 311: identical value and date 311 (T1 156 of 156, T2 155 of 155), same value new date 0, new value 0; newest T1/T2 date in the later record 2026-10-22 18:16:45-04:00
+ibm_fez stamps 2026-10-22 21:49:50-04:00 -> 2026-10-23 04:38:57-04:00  T1/T2 entries 311: identical value and date 311 (T1 156 of 156, T2 155 of 155), same value new date 0, new value 0; newest T1/T2 date in the later record 2026-10-22 18:16:45-04:00
+ibm_kingston stamps 2026-10-22 18:45:38-04:00 -> 2026-10-23 04:55:32-04:00  T1/T2 entries 309: identical value and date 309 (T1 155 of 155, T2 154 of 154), same value new date 0, new value 0; newest T1/T2 date in the later record 2026-10-22 05:02:59-04:00
+ibm_marrakesh stamps 2026-10-22 18:21:43-04:00 -> 2026-10-23 04:15:18-04:00  T1/T2 entries 307: identical value and date 307 (T1 154 of 154, T2 153 of 153), same value new date 0, new value 0; newest T1/T2 date in the later record 2026-10-22 15:48:41-04:00
+TOTAL: earlier pairs 2655 of 2655 (results_restamp.text), these pairs 1549 of 1549; all 4,204 of 4,204 entries identical in value and date across 14 record pairs
+
+EVERY CONSECUTIVE PAIR IN THIS FOLDER (by record stamp, per chip), counted or not:
+  ibm_boston 2026-09-18 11:13:35-04:00 -> 2026-09-18 11:55:25-04:00  gap 0.7 h  identical 312 of 312
+  ibm_boston 2026-09-18 11:55:25-04:00 -> 2026-09-21 11:02:49-04:00  gap 71.1 h  identical 2 of 312
+  ibm_boston 2026-09-21 11:02:49-04:00 -> 2026-09-22 10:11:27-04:00  gap 23.1 h  identical 312 of 312
+  ibm_boston 2026-09-22 10:11:27-04:00 -> 2026-09-23 12:58:19-04:00  gap 26.8 h  identical 312 of 312
+  ibm_boston 2026-09-23 12:58:19-04:00 -> 2026-09-25 14:39:30-04:00  gap 49.7 h  identical 312 of 312
+  ibm_boston 2026-09-25 14:39:30-04:00 -> 2026-10-02 10:35:52-04:00  gap 163.9 h  identical 2 of 312
+  ibm_boston 2026-10-02 10:35:52-04:00 -> 2026-10-02 12:03:40-04:00  gap 1.5 h  identical 312 of 312
+  ibm_fez 2026-10-22 18:17:23-04:00 -> 2026-10-22 19:55:50-04:00  gap 1.6 h  identical 311 of 311
+  ibm_fez 2026-10-22 19:55:50-04:00 -> 2026-10-22 21:49:50-04:00  gap 1.9 h  identical 311 of 311
+  ibm_fez 2026-10-22 21:49:50-04:00 -> 2026-10-23 04:38:57-04:00  gap 6.8 h  identical 311 of 311
+  ibm_kingston 2026-10-22 18:45:38-04:00 -> 2026-10-23 04:55:32-04:00  gap 10.2 h  identical 309 of 309
+  ibm_marrakesh 2026-09-20 11:29:57-04:00 -> 2026-09-20 21:28:56-04:00  gap 10.0 h  identical 307 of 307
+  ibm_marrakesh 2026-09-20 21:28:56-04:00 -> 2026-10-22 18:21:43-04:00  gap 764.9 h  identical 1 of 306
+  ibm_marrakesh 2026-10-22 18:21:43-04:00 -> 2026-10-23 04:15:18-04:00  gap 9.9 h  identical 307 of 307
+  ibm_phoenix 2026-10-05 09:44:35-04:00 -> 2026-10-06 10:45:37-04:00  gap 25.0 h  identical 238 of 238
+  ibm_phoenix 2026-10-06 10:45:37-04:00 -> 2026-10-06 12:25:05-04:00  gap 1.7 h  identical 238 of 238
+  ibm_pittsburgh 2026-09-16 11:02:24-04:00 -> 2026-09-17 11:34:25-04:00  gap 24.5 h  identical 312 of 312
+
+WHAT ELSE CHANGED UNDER THE SAME STAMPS (gate_error per gate and qubits, readout_error per qubit):
+  ibm_fez 2026-10-22_1817 -> 2026-10-22_1955: gate_error changed id on 148, rx on 148, sx on 148, x on 148, xslow on 148; readout_error changed on 0 qubits
+  ibm_fez 2026-10-22_1955 -> 2026-10-22_2149: gate_error changed cz on 340; readout_error changed on 0 qubits
+  ibm_fez 2026-10-22_2149 -> 2026-10-23_0438: gate_error changed measure on 155, rzz on 330; readout_error changed on 155 qubits
+  ibm_kingston 2026-10-22_1845 -> 2026-10-23_0455: gate_error changed measure on 155, measure_2 on 152; readout_error changed on 155 qubits
+  ibm_marrakesh 2026-10-22_1821 -> 2026-10-23_0415: gate_error changed none; readout_error changed on 0 qubits
+  ibm_phoenix 2026-10-05 -> 2026-10-06: gate_error changed measure on 119, rzz on 426; readout_error changed on 119 qubits
+  ibm_phoenix 2026-10-06 -> 2026-10-06_1225: gate_error changed measure on 116; readout_error changed on 116 qubits

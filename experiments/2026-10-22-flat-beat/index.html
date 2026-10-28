@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Flat Beat Test</title>
+<link rel="canonical" href="https://heuremen.org/experiments/2026-10-22-flat-beat/">
+<meta name="tdm-reservation" content="1">
+<meta name="tdm-policy" content="https://indahl.ai/terms#ai-training">
+<meta name="description" content="The one-neighbour run found, after the data, that on ibm_phoenix an untouched qubit beats against a neighbour in superposition at about 12.5 kHz.">
+<meta property="og:site_name" content="Heuremen LLC">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Flat Beat Test">
+<meta property="og:description" content="The one-neighbour run found, after the data, that on ibm_phoenix an untouched qubit beats against a neighbour in superposition at about 12.5 kHz.">
+<meta property="og:url" content="https://heuremen.org/experiments/2026-10-22-flat-beat/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://heuremen.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://heuremen.org/og.png">
+
+<style>body{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;color:#18202B;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.5}a{color:#0F7173}</style></head><body>
+<p><a href="/">&larr; What&rsquo;s Lost with a Look</a></p>
+<h1>Flat beat on ibm_phoenix, 22 October 2026</h1>
+<p>The <a href="/experiments/2026-10-22-one-neighbour-revival/">one-neighbour run</a> found, after the data, that on ibm_phoenix an untouched qubit beats against a neighbour in superposition at about 12.5&thinsp;kHz whatever IBM&rsquo;s calibrated coupling for that pair. This run states that prediction first and tests it on fresh pairs, beside the alternative that the beat tracks the calibration. Plan, circuits and analysis pushed before any job; the committed output is below.</p>
+<p><a href="PLAN_FLAT.md.text">plan</a> &middot; <a href="flat.py">flat.py</a> &middot; <a href="analyze_flat.py">analyze_flat.py</a> &middot; <a href="synth_flat.py">synth_flat.py</a> &middot; synthetic: track <a href="synth_track_1.text">1</a> <a href="synth_track_2.text">2</a>, flat <a href="synth_flat_1.text">1</a> <a href="synth_flat_2.text">2</a>, none <a href="synth_none_1.text">1</a> <a href="synth_none_2.text">2</a> &middot; <a href="PLAN_FLAT.sha256.text">plan SHA-256</a> &middot; <a href="CODE_FLAT.sha256.text">code SHA-256</a></p>
+<h2>Result</h2>
+<p>On 37 fresh pairs (fit and analysis fixed before the job; known-good on ibm_fez passed, slope 1.00 [0.89, 1.14]), the beat does not scale with IBM&rsquo;s calibrated zz: log-log slope 0.19 [0.01, 0.38] by pair, [0.00, 0.37] by triple (outside referee&rsquo;s recomputation). Beats run 4&ndash;23&thinsp;kHz (median 12.9) for calibrated values of 11.6&ndash;58.8&thinsp;kHz (median 28.3 over the 37 fitted pairs; three further edges calibrated as 0.00 were not fitted); the committed fit applied to those three edges after the data gives 13.9, 15.2 and 10.1&thinsp;kHz, copies agree (<a href="zero_edges_postdata.py">script</a>, <a href="results_zero_edges.text">output</a>), where IBM&rsquo;s records of 5 and 6 October gave them 17.5, 14.1 and 13.7&thinsp;kHz (<a href="/experiments/calibration-records/results_zz_history.text">record history</a>). Neither prediction holds cleanly: not tracking (slope 1); not clearly flat (slope 0 is excluded by pair, reached by triple). A simulation on this exact time grid returns slope 1.00&ndash;1.02 for beats at the calibrated values and 1.05 for a factor-2 convention (outside referee&rsquo;s simulation), so neither a fit artefact nor a convention factor gives 0.19. The two copies agree.</p>
+<p><a href="results_flat.text">committed output</a> &middot; <a href="results_knowngood.text">known-good output</a> &middot; <a href="REFEREE.md.text">outside referee</a></p>
+<p>Data tables and recounts: <a href="https://indahl.ai/qia">QIA</a> &middot; <a href="https://indahl.ai/iris">IRIS</a></p>
+<p class="foot">Bones &middot; Wayfinder &middot; Sage &middot; Shuttle &middot; Nova<br><a href="https://indahl.ai">Heuremen LLC</a><br>&ldquo;We found it.&rdquo;</p>
+</body></html>

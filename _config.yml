@@ -1,0 +1,18 @@
+# The site is the HTML pages, scripts and data under experiments/. Working notes are not served.
+exclude:
+  - "*.md"
+  - "**/*.md"
+  - "*.txt"
+  - "**/*.txt"
+  - "*.log"
+  - "**/*.log"
+  - "CLAUDE.md"
+  - "__pycache__"
+include:
+  - .well-known
+  - TERMS.txt
+  - "**/TERMS.txt"
+  - robots.txt
+  - llms.txt
+  - sitemap.xml
+  - 7b56a9a7df0179bc520502cd2021efb4.txt

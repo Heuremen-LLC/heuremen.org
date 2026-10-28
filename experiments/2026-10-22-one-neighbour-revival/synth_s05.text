@@ -1,0 +1,15 @@
+====================================================================================================
+zz ibm_phoenix job SYNTH-0.5-1 | triples 21
+  props ZZ (kHz) B1 edge: median 30.47, range 11.58-48.47 | revival inside grid for 20 triples, dip for 21
+  R1 fitted scale s (P1, B1 alone in +)                                          +0.4875 [+0.4825, +0.4925] n=21 -> ABOVE   (copy gap +0.0025 [+0, +0.005])
+  R1 fitted scale s (P2, B2 alone in +)                                          +0.495 [+0.4825, +0.495] n=21 -> ABOVE   (copy gap -0.0025 [-0.0075, +0])
+  R1 fitted scale s minus 1.0 (P1)                                               -0.5125 [-0.5175, -0.5075] n=21 -> BELOW   (copy gap +0.0025 [+0, +0.005])
+  R1 fitted scale s minus 0.5 (P1)                                               -0.0125 [-0.0175, -0.0075] n=21 -> BELOW   (copy gap +0.0025 [+0, +0.005])
+  R2 return height at revival / Z, minus ZZ+T1 prediction (1+exp(-t*/T1_B1))/2   -0.00405 [-0.02589, +0.01065] n=20 -> CONSISTENT   (copy gap +0.002058 [-0.02899, +0.0323])
+  R2 return height at revival / Z (as measured)                                  +0.7936 [+0.7497, +0.8506] n=20 -> ABOVE   (copy gap +0.002795 [-0.03863, +0.03389])
+  R3a unconditional coherence at the dip / Z                                     +0.1607 [+0.1174, +0.2029] n=21 -> ABOVE   (copy gap -0.01895 [-0.03753, +0.02757])
+  R3b coherence split by B1 final bit at the dip / same statistic on Z           +0.8522 [+0.8374, +0.8884] n=21 -> ABOVE   (copy gap +0.009 [-0.03977, +0.05701])
+  R3c R3b - R3a (coherence held in the correlation with B1)                      +0.7038 [+0.6632, +0.7677] n=21 -> ABOVE   (copy gap +0.02103 [-0.03273, +0.05997])
+  R4 echo: EP1/EZ - 1 at the dip (static ZZ predicts 0)                          copies shifted +0.03714 [+0.0292, +0.06398] | copy0 -0.005086 copy1 -0.03623 -> CANNOT TELL
+  R5 SSE(product) - SSE(sum) for both in + (BELOW -> product)                    -2.645 [-2.892, -2.457] n=21 -> BELOW   (copy gap +0.204 [-0.1648, +0.5086])
+  R6 B1 in 1: mean C(O1)/C(Z) over live taus (reference)                         +0.6243 [+0.5148, +0.6611] n=21 -> ABOVE   (copy gap +0.004276 [-0.01024, +0.00927])

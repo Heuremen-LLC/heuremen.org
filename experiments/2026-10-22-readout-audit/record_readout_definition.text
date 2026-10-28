@@ -1,0 +1,12 @@
+distinct qubit measurements (chip, qubit, measurement date), readout_error vs IBM-documented mean of its two components:
+  ibm_boston: 624 measurements; differ by >0.001: 21, >0.005: 4, >0.01: 3; largest 0.0441
+  ibm_fez: 888 measurements; differ by >0.001: 31, >0.005: 5, >0.01: 0; largest 0.0093
+  ibm_kingston: 1365 measurements; differ by >0.001: 40, >0.005: 9, >0.01: 2; largest 0.0413
+  ibm_marrakesh: 1754 measurements; differ by >0.001: 50, >0.005: 27, >0.01: 13; largest 0.1571
+  ibm_phoenix: 600 measurements; differ by >0.001: 12, >0.005: 0, >0.01: 0; largest 0.0046
+  ibm_pittsburgh: 156 measurements; differ by >0.001: 0, >0.005: 0, >0.01: 0; largest 0.0000
+  ALL: 5387 measurements; >0.001: 154 ; >0.01: 18
+
+PATTERN (added 22 Oct night, defined after reading): qubit index mod 17 of the 154 off-definition measurements: {16: 141, 5: 12, 10: 7}
+  off-definition share among qubits with index = 16 mod 17: 141 of 318 | among all other qubits: 19 of 5225
+  Live 22 Oct ~20:15 EDT: on fez and kingston, IBM's transpiler Target "measure" error equals the stated readout_error (not the documented mean) on 12 of 12 off-definition qubits.

@@ -1,0 +1,1 @@
+{"timestamps": {"created": "2026-10-23T20:38:01.60274Z", "finished": "2026-10-23T20:39:40.243641Z", "running": "2026-10-23T20:38:02.716687Z"}, "usage": {"qpu_charge_time_seconds": 53, "value": 0.881584, "unit": "resource_units", "status": "complete", "details": [{"value": 0.881584, "unit": "resource_units", "metric": {"id": "caffe3ca-729c-5750-8777-df63bbf8bfd9", "value": 53}}]}}

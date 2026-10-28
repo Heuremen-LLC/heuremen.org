@@ -1,0 +1,10 @@
+=== ibm_fez job dbd98i1gv2cc738hl3dg  probe q144, stated prob_meas1_prep0 0.0029
+KNOWN-GOOD  K <X> +0.9963 [+0.9950, +0.9974] against 1 - 2 x stated prob_meas1_prep0 +0.9941: MET
+  P2_V11  <X> -0.0153 [-0.0561, +0.0247] n=2352  vs 0: CONSISTENT  (copies agree, gap +0.0804 [-0.0004, +0.1612])
+  P0      <X> +0.0016 [-0.0117, +0.0159] n=20000  vs 0: CONSISTENT  (copies agree, gap +0.0188 [-0.0089, +0.0465])
+  K       <X> +0.9963 [+0.9950, +0.9974] n=20000  vs 0: ABOVE  (copies agree, gap -0.0014 [-0.0038, +0.0010])
+  P2_V10  <X> -0.0242 [-0.0640, +0.0157] n=2359  vs 0: CONSISTENT  (copies agree, gap -0.0757 [-0.1564, +0.0049])
+  P2_VA   <X> +0.0106 [-0.0300, +0.0521] n=2363  vs 0: CONSISTENT  (copies agree, gap +0.0412 [-0.0395, +0.1218])
+  V11 unused box 10: offset S +0.0232 = probe readout P0 +0.0016 + system ops (P2 - P0) -0.0169 [-0.0596, +0.0258] CONSISTENT + coupling gate (S - P2) +0.0385 [-0.0060, +0.0830] CONSISTENT
+  V10 unused box 11: offset S +0.0641 = probe readout P0 +0.0016 + system ops (P2 - P0) -0.0258 [-0.0679, +0.0164] CONSISTENT + coupling gate (S - P2) +0.0883 [+0.0443, +0.1322] ABOVE
+  VA unused box 10: offset S +0.0457 = probe readout P0 +0.0016 + system ops (P2 - P0) +0.0090 [-0.0343, +0.0523] CONSISTENT + coupling gate (S - P2) +0.0351 [-0.0102, +0.0804] CONSISTENT

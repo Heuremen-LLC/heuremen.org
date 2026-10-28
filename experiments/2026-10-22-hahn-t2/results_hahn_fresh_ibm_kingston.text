@@ -1,0 +1,7 @@
+=== ibm_kingston job dbdjrhpgv2cc73dojivg; IBM record 2026-10-23 06:25:49-04:00; KNOWN-GOOD median P(1) at tau 0 = 0.986 (must be >= 0.90): MET
+  delivered / stated T2, median over 153 qubits: 0.957 [0.912, 0.999] vs 1 -> BELOW   (copy gap +0.006 [+0.000, +0.016]; qubits below stated 90 of 153)
+ibm_kingston 1 run(s) pooled by qubit, FIXED 1/2   : median 0.957 [0.912, 0.999] over 153 qubits -> BELOW  (below stated 90)
+ibm_kingston 1 run(s) pooled by qubit, FREE asymptote: median 0.984 [0.958, 1.006] over 153 qubits -> CONSISTENT  (below stated 85)
+=== POOLED run1 run2 fresh
+ibm_kingston 3 run(s) pooled by qubit, FIXED 1/2   : median 0.953 [0.910, 0.993] over 153 qubits -> BELOW  (below stated 92)
+ibm_kingston 3 run(s) pooled by qubit, FREE asymptote: median 0.933 [0.902, 0.956] over 153 qubits -> BELOW  (below stated 98)

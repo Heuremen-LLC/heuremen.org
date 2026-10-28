@@ -1,0 +1,10 @@
+=== ibm_marrakesh job dbd98fni0auc7394voi0  probe q8, stated prob_meas1_prep0 0.0000
+KNOWN-GOOD  K <X> +0.9851 [+0.9827, +0.9875] against 1 - 2 x stated prob_meas1_prep0 +1.0000: MET
+  P2_V11  <X> -0.0201 [-0.0586, +0.0185] n=2490  vs 0: CONSISTENT  (copies agree, gap -0.0091 [-0.0877, +0.0695])
+  P0      <X> +0.0048 [-0.0089, +0.0181] n=20000  vs 0: CONSISTENT  (copies agree, gap -0.0208 [-0.0485, +0.0069])
+  K       <X> +0.9851 [+0.9827, +0.9875] n=20000  vs 0: ABOVE  (copies agree, gap -0.0002 [-0.0050, +0.0046])
+  P2_V10  <X> +0.0186 [-0.0219, +0.0583] n=2419  vs 0: CONSISTENT  (copies agree, gap -0.0625 [-0.1422, +0.0172])
+  P2_VA   <X> +0.0161 [-0.0238, +0.0560] n=2358  vs 0: CONSISTENT  (copies agree, gap +0.0142 [-0.0665, +0.0950])
+  V11 unused box 10: offset S +0.0812 = probe readout P0 +0.0048 + system ops (P2 - P0) -0.0249 [-0.0657, +0.0160] CONSISTENT + coupling gate (S - P2) +0.1013 [+0.0577, +0.1449] ABOVE
+  V10 unused box 11: offset S +0.0617 = probe readout P0 +0.0048 + system ops (P2 - P0) +0.0138 [-0.0285, +0.0561] CONSISTENT + coupling gate (S - P2) +0.0431 [-0.0017, +0.0879] CONSISTENT
+  VA unused box 10: offset S +0.0485 = probe readout P0 +0.0048 + system ops (P2 - P0) +0.0113 [-0.0308, +0.0534] CONSISTENT + coupling gate (S - P2) +0.0324 [-0.0123, +0.0771] CONSISTENT

@@ -1,0 +1,126 @@
+
+=== 1 Space and time (space_time_same_real.json; time curve = partner_twist_..._162216.json ENT arm) ===
+    pairs in file: ['(1, 2)', '(133, 134)']; time_from: partner_twist_real_ibm_marrakesh_20260924_162216.json; backend of time file: ibm_marrakesh
+[OK              ] 'ibm_marrakesh, pairs 1-2 and 133-134' | file pairs ['(1, 2)', '(133, 134)'], time file backend ibm_marrakesh
+[OK              ] table theta column (0.000) | page 0.000 | recomputed +0.000000 (tol 0.0005)
+[OK              ] table textbook cos at theta=0.000 | page +1.000 | recomputed +1.000000 (tol 0.0005)
+[OK              ] table SPACE at theta=0.000 | page +0.929 | recomputed +0.929199 (tol 0.0005)
+[OK              ] table TIME  at theta=0.000 | page +0.930 | recomputed +0.929688 (tol 0.0005)
+[OK              ] table theta column (0.785) | page 0.785 | recomputed +0.785398 (tol 0.0005)
+[OK              ] table textbook cos at theta=0.785 | page +0.707 | recomputed +0.707107 (tol 0.0005)
+[OK              ] table SPACE at theta=0.785 | page +0.666 | recomputed +0.665527 (tol 0.0005)
+[OK              ] table TIME  at theta=0.785 | page +0.664 | recomputed +0.663818 (tol 0.0005)
+[OK              ] table theta column (1.571) | page 1.571 | recomputed +1.570796 (tol 0.0005)
+[OK              ] table textbook cos at theta=1.571 | page +0.000 | recomputed +0.000000 (tol 0.0005)
+[OK              ] table SPACE at theta=1.571 | page -0.008 | recomputed -0.008301 (tol 0.0005)
+[OK              ] table TIME  at theta=1.571 | page +0.016 | recomputed +0.016113 (tol 0.0005)
+[OK              ] table theta column (2.356) | page 2.356 | recomputed +2.356194 (tol 0.0005)
+[OK              ] table textbook cos at theta=2.356 | page -0.707 | recomputed -0.707107 (tol 0.0005)
+[OK              ] table SPACE at theta=2.356 | page -0.672 | recomputed -0.671875 (tol 0.0005)
+[OK              ] table TIME  at theta=2.356 | page -0.664 | recomputed -0.664062 (tol 0.0005)
+[OK              ] table theta column (3.142) | page 3.142 | recomputed +3.141593 (tol 0.0005)
+[OK              ] table textbook cos at theta=3.142 | page -1.000 | recomputed -1.000000 (tol 0.0005)
+[OK              ] table SPACE at theta=3.142 | page -0.937 | recomputed -0.936523 (tol 0.0005)
+[OK              ] table TIME  at theta=3.142 | page -0.936 | recomputed -0.936279 (tol 0.0005)
+[OK              ] table theta column (3.927) | page 3.927 | recomputed +3.926991 (tol 0.0005)
+[OK              ] table textbook cos at theta=3.927 | page -0.707 | recomputed -0.707107 (tol 0.0005)
+[OK              ] table SPACE at theta=3.927 | page -0.680 | recomputed -0.680176 (tol 0.0005)
+[OK              ] table TIME  at theta=3.927 | page -0.657 | recomputed -0.656738 (tol 0.0005)
+[OK              ] table theta column (4.712) | page 4.712 | recomputed +4.712389 (tol 0.0005)
+[OK              ] table textbook cos at theta=4.712 | page +0.000 | recomputed -0.000000 (tol 0.0005)
+[OK              ] table SPACE at theta=4.712 | page -0.003 | recomputed -0.002930 (tol 0.0005)
+[OK              ] table TIME  at theta=4.712 | page -0.004 | recomputed -0.003662 (tol 0.0005)
+[OK              ] table theta column (5.498) | page 5.498 | recomputed +5.497787 (tol 0.0005)
+[OK              ] table textbook cos at theta=5.498 | page +0.707 | recomputed +0.707107 (tol 0.0005)
+[OK              ] table SPACE at theta=5.498 | page +0.683 | recomputed +0.683105 (tol 0.0005)
+[OK              ] table TIME  at theta=5.498 | page +0.653 | recomputed +0.653320 (tol 0.0005)
+
+=== 1 Replications at pi (space_time_same_real_ibm_kingston / _fez; arrow_panel kingston) ===
+[OK              ] kingston space at pi (pair 144-145) | page -0.813 | recomputed -0.813477 (tol 0.0005) | page uses ONLY pair 144-145; the other kingston pair 16-23 is excluded in the lab log (dead readout, space at pi = -0.159); mean of both pairs would be -0.486
+[OK              ] fez space at pi (mean of pairs 22-23, 81-82) | page -0.891 | recomputed -0.891113 (tol 0.0005) | pair values -0.9502, -0.8320
+[OK              ] kingston 'time' at pi = one-qubit two-measurement link (arrow_panel kingston LINK+ at pi, mean of qubits 1,2,133) | page -0.840 | recomputed -0.840495 (tol 0.0005) | source is arrow_panel_real_ibm_kingston.json, NOT the partner_twist file named in space_time_same 'time_from' (no kingston partner_twist run is in data/); not pair-specific to 144-145
+
+=== 2 The arrow (arrow_panel_real_ibm_marrakesh.json, qubits 1,2,133, 2048 shots) ===
+[OK              ] coherence: start | page 0.98 | recomputed +0.98340 (tol 0.005) | mean <X> over qubits 1,2,133
+[OK              ] coherence: twist and untwist | page 0.98 | recomputed +0.98234 (tol 0.005) | mean over 3 qubits x 4 angles (pi/4..pi)
+[OK              ] coherence: after one mid-circuit measurement | page +0.02 | recomputed +0.02279 (tol 0.005) | mean over 3 qubits
+[OK              ] fez link forward at pi | page -0.925 | recomputed -0.925456 (tol 0.0005) | mean qubits 1,2,133
+[OK              ] fez link backward at pi | page -0.919 | recomputed -0.918620 (tol 0.0005) | mean qubits 1,2,133
+    shots field arrow_panel marrakesh = 2048; backend ibm_marrakesh; qubits [1, 2, 133]
+    (marrakesh link fwd/bwd at pi for reference: -0.9557 / -0.9505; the page does not quote these)
+
+=== 3 One qubit of an entangled pair, read alone (space_time_same bloch: length = sqrt(X^2+Y^2+Z^2) of qubit a) ===
+    marrakesh pair (1, 2): alone 0.9934  entangled 0.0556
+    marrakesh pair (133, 134): alone 0.9877  entangled 0.0465
+[OK              ] marrakesh alone length (mean of 2 pairs) | page 0.99 | recomputed +0.99057 (tol 0.005)
+[OK              ] marrakesh entangled length, pair (1,2) | page 0.06 | recomputed +0.05560 (tol 0.005)
+[OK              ] marrakesh entangled length, pair (133,134) | page 0.05 | recomputed +0.04648 (tol 0.005)
+[OK              ] kingston entangled (pair 144-145) | page 0.061 | recomputed +0.061360 (tol 0.0005) | pair 16-23 excluded as dead readout (alone length 1.355, impossible >1)
+[OK              ] fez alone (pair 22-23) | page 0.995 | recomputed +0.995242 (tol 0.0005)
+[OK              ] fez entangled (pair 22-23) | page 0.064 | recomputed +0.064253 (tol 0.0005)
+    fez other pair (81-82): alone 0.9739 entangled 0.0586 (not quoted on page)
+
+=== 4 Three-box weak values (three_box_real_*.json; weak = Xp/(2 eps); SE from kept + Xp as in three_box.py) ===
+[OK              ] marrakesh: eps | page 0.25 | recomputed +0.25000 (tol 0.005)
+[OK              ] marrakesh: shots (8192) | page 8192 | recomputed 8192.0000 (integer rounding)
+[OK              ] marrakesh A weak value | page +0.58 | recomputed +0.57858 (tol 0.005) | kept 999, stored weak +0.5786
+[OK              ] marrakesh A +/- | page 0.06 | recomputed +0.06060 (tol 0.005) | stored se 0.0606
+[OK              ] marrakesh B weak value | page +0.58 | recomputed +0.57906 (tol 0.005) | kept 974, stored weak +0.5791
+[OK              ] marrakesh B +/- | page 0.06 | recomputed +0.06137 (tol 0.005) | stored se 0.0614
+[OK              ] marrakesh C weak value | page -0.69 | recomputed -0.68901 (tol 0.005) | kept 1074, stored weak -0.6890
+[OK              ] marrakesh C +/- | page 0.06 | recomputed +0.05732 (tol 0.005) | stored se 0.0573
+[OK              ] marrakesh corner_11 weak value | page +0.05 | recomputed +0.05097 (tol 0.005) | kept 981, stored weak +0.0510
+[OK              ] marrakesh corner_11 +/- | page 0.06 | recomputed +0.06387 (tol 0.005) | stored se 0.0639
+[OK              ] kingston: eps | page 0.25 | recomputed +0.25000 (tol 0.005)
+[OK              ] kingston: shots (8192) | page 8192 | recomputed 8192.0000 (integer rounding)
+[OK              ] kingston A weak value | page +0.80 | recomputed +0.79814 (tol 0.005) | kept 1075, stored weak +0.7981
+[OK              ] kingston A +/- | page 0.06 | recomputed +0.05596 (tol 0.005) | stored se 0.0560
+[OK              ] kingston B weak value | page +0.84 | recomputed +0.84337 (tol 0.005) | kept 1328, stored weak +0.8434
+[OK              ] kingston B +/- | page 0.05 | recomputed +0.04978 (tol 0.005) | stored se 0.0498
+[OK              ] kingston C weak value | page -0.59 | recomputed -0.58678 (tol 0.005) | kept 1135, stored weak -0.5868
+[OK              ] kingston C +/- | page 0.06 | recomputed +0.05678 (tol 0.005) | stored se 0.0568
+[OK              ] kingston corner_11 weak value | page +0.17 | recomputed +0.17374 (tol 0.005) | kept 990, stored weak +0.1737
+[OK              ] kingston corner_11 +/- | page 0.06 | recomputed +0.06336 (tol 0.005) | stored se 0.0634
+[OK              ] fez: eps | page 0.25 | recomputed +0.25000 (tol 0.005)
+[OK              ] fez: shots (8192) | page 8192 | recomputed 8192.0000 (integer rounding)
+[OK              ] fez A weak value | page +0.75 | recomputed +0.75315 (tol 0.005) | kept 1033, stored weak +0.7531
+[OK              ] fez A +/- | page 0.06 | recomputed +0.05767 (tol 0.005) | stored se 0.0577
+[OK              ] fez B weak value | page +0.91 | recomputed +0.90943 (tol 0.005) | kept 1071, stored weak +0.9094
+[OK              ] fez B +/- | page 0.05 | recomputed +0.05446 (tol 0.005) | stored se 0.0545
+[OK              ] fez C weak value | page -0.50 | recomputed -0.49832 (tol 0.005) | kept 1188, stored weak -0.4983
+[OK              ] fez C +/- | page 0.06 | recomputed +0.05622 (tol 0.005) | stored se 0.0562
+[OK              ] fez corner_11 weak value | page +0.09 | recomputed +0.08679 (tol 0.005) | kept 1037, stored weak +0.0868
+[OK              ] fez corner_11 +/- | page 0.06 | recomputed +0.06208 (tol 0.005) | stored se 0.0621
+    C-box significance (|weak|/se): marrakesh 12.0, kingston 10.3, fez 8.9
+[OK              ] intro: 'nine error bars below zero' (weakest chip C-box, fez) | page 9 | recomputed 8.8638 (integer rounding) | marrakesh 12.0, kingston 10.3 are larger
+
+=== 4 Second encoding: corner 11 (three_box_11_real_ibm_marrakesh.json) ===
+[OK              ] corner 11 weak value | page -0.51 | recomputed -0.50565 (tol 0.005)
+[OK              ] corner 11 +/- | page 0.06 | recomputed +0.05706 (tol 0.005)
+[OK              ] box 00 weak value | page +0.77 | recomputed +0.77273 (tol 0.005)
+[OK              ] box 01 weak value | page +0.76 | recomputed +0.76285 (tol 0.005)
+[OK              ] sum of 00 + 01 + 11 | page 1.03 | recomputed +1.02993 (tol 0.005)
+[OK              ] unused slot 10 weak value | page +0.17 | recomputed +0.16899 (tol 0.005)
+[OK              ] unused slot 10 +/- | page 0.06 | recomputed +0.06075 (tol 0.005)
+[OK              ] 'nine standard errors below zero' (corner 11 |weak|/se) | page 9 | recomputed 8.8616 (integer rounding)
+[OK              ] 11-corner run shots | page 8192 | recomputed 8192.0000 (integer rounding)
+
+=== The five that came back textbook ===
+[OK              ] row 1: floor D at t=0 (marrakesh, 8 pairs) | page +0.0012 | recomputed +0.0012099 (tol 5e-05)
+[OK              ] row 1: floor D at t=0 +/- | page 0.0024 | recomputed +0.0024424 (tol 5e-05)
+    t=30us marrakesh +0.00539 +/- 0.00502 (n=8); kingston +0.00832 +/- 0.00291 (n=8)
+[OK              ] row 2: combined D at 30us (inverse-variance, 2 chips) | page +0.0076 | recomputed +0.0075799 (tol 5e-05)
+[OK              ] row 2: combined D at 30us +/- | page 0.0025 | recomputed +0.0025203 (tol 5e-05)
+[OK              ] row 2: '(3 sigma)' | page 3 | recomputed 3.0076 (integer rounding) | z = 3.01
+[OK              ] row 3: D_forward (bell first) | page +0.0124 | recomputed +0.0124303 (tol 5e-05)
+[OK              ] row 3: D_forward +/- | page 0.0046 | recomputed +0.0045886 (tol 5e-05)
+[OK              ] row 3: D_reversed (bell last) | page -0.0013 | recomputed -0.0012517 (tol 5e-05)
+[OK              ] row 3: D_reversed +/- | page 0.0154 | recomputed +0.0154343 (tol 5e-05)
+[OK              ] row 4: chi2 of A1 (phase sweep) | page 19.4 | recomputed +19.4380 (tol 0.05) | dof = 2 x 10 pairs = 20
+[OK              ] row 4: dof | page 20 | recomputed 20.0000 (integer rounding)
+[OK              ] row 5: first run ENT-PROD (unbalanced), 6 pairs | page -0.0076 | recomputed -0.0076396 (tol 5e-05)
+[OK              ] row 5: first run +/- | page 0.0036 | recomputed +0.0035840 (tol 5e-05)
+[OK              ] row 5: balanced rerun ENT-PROD, 10 pairs | page -0.0014 | recomputed -0.0014221 (tol 5e-05)
+[OK              ] row 5: balanced rerun +/- | page 0.0026 | recomputed +0.0026081 (tol 5e-05)
+
+SUMMARY: OK 102, DIFFERS 0, NOT REPRODUCIBLE 0

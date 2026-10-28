@@ -1,0 +1,2 @@
+ibm_fez 1 run(s) pooled by qubit, FIXED 1/2   : median 1.000 [0.970, 1.039] over 154 qubits -> CONSISTENT  (below stated 77)
+ibm_fez 1 run(s) pooled by qubit, FREE asymptote: median 0.977 [0.938, 1.005] over 154 qubits -> CONSISTENT  (below stated 88)

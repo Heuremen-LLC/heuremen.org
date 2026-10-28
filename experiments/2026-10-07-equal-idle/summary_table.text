@@ -1,0 +1,344 @@
+SUMMARY TABLE (paper convention: kick negative = same direction as 21-22 Oct; deg per readout; bins = couplings to nearest looked bit)
+pittsburgh | FLOOR (corner, 12 looked) | K vs D
+    kick all    +0.000 [-0.082,+0.061] n=76 CONSISTENT
+    kick d<=2   n=4 -> CANNOT TELL
+    kick d=3-4  +0.036 [-1.911,+0.380] n=5 CONSISTENT
+    kick d>=5   +0.003 [-0.082,+0.065] n=67 CONSISTENT
+    kick d>=3   +0.004 [-0.079,+0.065] n=72 CONSISTENT
+    kickN4      -0.003 [-0.118,+0.077] n=76 CONSISTENT
+    coh all     -0.000 [-0.001,+0.000] n=76 CONSISTENT
+    coh d<=2    n=4 -> CANNOT TELL
+    coh d>=3    -0.000 [-0.001,+0.000] n=72 CONSISTENT
+    cohN4       +0.001 [-0.005,+0.005] n=76 CONSISTENT
+fez | FLOOR (corner, 12 looked) | K vs D
+    kick all    -0.036 [-0.087,+0.063] n=73 CONSISTENT
+    kick d<=2   n=4 -> CANNOT TELL
+    kick d=3-4  -0.242 [-0.423,+0.068] n=5 CONSISTENT
+    kick d>=5   -0.009 [-0.055,+0.085] n=64 CONSISTENT
+    kick d>=3   -0.010 [-0.068,+0.068] n=69 CONSISTENT
+    kickN4      -0.220 [-0.401,+0.054] n=73 CONSISTENT
+    coh all     -0.001 [-0.002,-0.000] n=73 BELOW
+    coh d<=2    n=4 -> CANNOT TELL
+    coh d>=3    -0.001 [-0.002,-0.000] n=69 BELOW
+    cohN4       copies shifted -> CANNOT TELL
+aachen | FLOOR (corner, 12 looked) | K vs D
+    kick all    +0.008 [-0.127,+0.150] n=75 CONSISTENT
+    kick d<=2   n=4 -> CANNOT TELL
+    kick d=3-4  -0.171 [-1.836,+0.340] n=5 CONSISTENT
+    kick d>=5   +0.030 [-0.094,+0.158] n=66 CONSISTENT
+    kick d>=3   +0.027 [-0.109,+0.154] n=71 CONSISTENT
+    kickN4      +0.103 [-0.153,+0.275] n=75 CONSISTENT
+    coh all     copies shifted -> CANNOT TELL
+    coh d<=2    n=4 -> CANNOT TELL
+    coh d>=3    copies shifted -> CANNOT TELL
+    cohN4       -0.010 [-0.015,-0.003] n=75 BELOW
+kingston | STATE-DARK FLOWERS (25 looked) | looked |0>: K vs D0
+    kick all    -0.323 [-0.622,-0.112] n=57 BELOW
+    kick d<=2   -0.734 [-12.857,-0.263] n=25 BELOW
+    kick d=3-4  -0.384 [-1.096,-0.025] n=17 BELOW
+    kick d>=5   -0.096 [-0.267,+0.128] n=15 CONSISTENT
+    kick d>=3   -0.164 [-0.325,-0.025] n=32 BELOW
+    kickN4      -0.512 [-0.883,-0.241] n=57 BELOW
+    coh all     -0.000 [-0.001,+0.001] n=57 CONSISTENT
+    coh d<=2    -0.000 [-0.002,+0.001] n=25 CONSISTENT
+    coh d>=3    -0.000 [-0.001,+0.001] n=32 CONSISTENT
+    cohN4       -0.009 [-0.017,+0.002] n=57 CONSISTENT
+kingston | STATE-DARK FLOWERS (25 looked) | looked |1>: S1 vs D1
+    kick all    -0.257 [-0.692,-0.100] n=56 BELOW
+    kick d<=2   -0.692 [-17.486,-0.251] n=25 BELOW
+    kick d=3-4  -0.650 [-1.450,-0.097] n=16 BELOW
+    kick d>=5   -0.066 [-0.124,+0.159] n=15 CONSISTENT
+    kick d>=3   -0.124 [-0.263,-0.066] n=31 BELOW
+    kickN4      -0.408 [-0.662,-0.156] n=56 BELOW
+    coh all     -0.001 [-0.001,-0.000] n=56 BELOW
+    coh d<=2    -0.001 [-0.002,-0.000] n=25 BELOW
+    coh d>=3    copies shifted -> CANNOT TELL
+    cohN4       -0.006 [-0.016,+0.003] n=56 CONSISTENT
+kingston | STATE-DARK FLOWERS (25 looked) | looked half-way: SH vs DH
+    kick all    -0.302 [-0.527,-0.109] n=56 BELOW
+    kick d<=2   -0.846 [-14.930,-0.307] n=25 BELOW
+    kick d=3-4  -0.146 [-0.722,+0.174] n=16 CONSISTENT
+    kick d>=5   -0.106 [-0.287,+0.091] n=15 CONSISTENT
+    kick d>=3   -0.112 [-0.287,+0.034] n=31 CONSISTENT
+    kickN4      -0.551 [-0.837,-0.378] n=56 BELOW
+    coh all     -0.000 [-0.001,+0.000] n=56 CONSISTENT
+    coh d<=2    -0.001 [-0.003,+0.000] n=25 CONSISTENT
+    coh d>=3    +0.000 [-0.001,+0.001] n=31 CONSISTENT
+    cohN4       -0.008 [-0.021,+0.011] n=56 CONSISTENT
+kingston | SPACED LOOKS (25 looked) | looked |0>: K vs D0
+    kick all    -0.338 [-0.873,-0.052] n=58 BELOW
+    kick d<=2   -1.024 [-12.692,-0.161] n=25 BELOW
+    kick d=3-4  -0.682 [-1.280,+0.445] n=18 CONSISTENT
+    kick d>=5   -0.024 [-0.157,+0.204] n=15 CONSISTENT
+    kick d>=3   -0.058 [-0.462,+0.158] n=33 CONSISTENT
+    kickN4      -0.457 [-0.875,+0.013] n=58 CONSISTENT
+    coh all     -0.002 [-0.003,+0.000] n=58 CONSISTENT
+    coh d<=2    -0.002 [-0.007,+0.000] n=25 CONSISTENT
+    coh d>=3    -0.001 [-0.003,+0.001] n=33 CONSISTENT
+    cohN4       -0.003 [-0.014,+0.008] n=58 CONSISTENT
+kingston | SPACED LOOKS (25 looked) | looked |1>: S1 vs D1
+    kick all    -0.466 [-0.712,-0.076] n=58 BELOW
+    kick d<=2   -1.133 [-17.225,-0.082] n=25 BELOW
+    kick d=3-4  -0.302 [-1.532,+0.414] n=18 CONSISTENT
+    kick d>=5   copies shifted -> CANNOT TELL
+    kick d>=3   -0.140 [-0.583,+0.119] n=33 CONSISTENT
+    kickN4      -0.496 [-0.801,-0.059] n=58 BELOW
+    coh all     -0.001 [-0.003,+0.000] n=58 CONSISTENT
+    coh d<=2    +0.000 [-0.003,+0.001] n=25 CONSISTENT
+    coh d>=3    -0.002 [-0.004,-0.000] n=33 BELOW
+    cohN4       -0.008 [-0.015,+0.005] n=58 CONSISTENT
+kingston | SPACED LOOKS (25 looked) | looked half-way: SH vs DH
+    kick all    -0.577 [-1.005,-0.298] n=58 BELOW
+    kick d<=2   -1.378 [-13.451,-0.346] n=25 BELOW
+    kick d=3-4  -0.357 [-1.005,+0.047] n=18 CONSISTENT
+    kick d>=5   -0.305 [-0.680,+0.001] n=15 CONSISTENT
+    kick d>=3   -0.305 [-0.697,-0.172] n=33 BELOW
+    kickN4      -0.629 [-0.936,-0.486] n=58 BELOW
+    coh all     -0.003 [-0.004,-0.001] n=58 BELOW
+    coh d<=2    -0.003 [-0.005,-0.001] n=25 BELOW
+    coh d>=3    -0.001 [-0.004,+0.001] n=33 CONSISTENT
+    cohN4       -0.007 [-0.021,-0.002] n=58 BELOW
+kingston | SPACED LOOKS, 3 us gaps (25 looked) | gapped |0>: G0 vs E0
+    kick all    -0.572 [-1.000,-0.114] n=57 BELOW
+    kick d<=2   -1.270 [-12.614,-0.602] n=25 BELOW
+    kick d=3-4  -0.124 [-1.283,+0.281] n=17 CONSISTENT
+    kick d>=5   +0.329 [-0.572,+0.647] n=15 CONSISTENT
+    kick d>=3   -0.114 [-0.572,+0.488] n=32 CONSISTENT
+    kickN4      -0.471 [-1.122,-0.088] n=57 BELOW
+    coh all     +0.001 [-0.001,+0.002] n=57 CONSISTENT
+    coh d<=2    +0.001 [+0.000,+0.003] n=25 ABOVE
+    coh d>=3    -0.000 [-0.003,+0.002] n=32 CONSISTENT
+    cohN4       -0.000 [-0.013,+0.009] n=57 CONSISTENT
+kingston | SPACED LOOKS, 3 us gaps (25 looked) | gapped |1>: G1 vs E1
+    kick all    -0.434 [-0.708,-0.186] n=57 BELOW
+    kick d<=2   -0.722 [-12.588,-0.351] n=25 BELOW
+    kick d=3-4  -0.510 [-1.335,-0.117] n=17 BELOW
+    kick d>=5   +0.152 [-0.448,+0.435] n=15 CONSISTENT
+    kick d>=3   -0.225 [-0.596,+0.019] n=32 CONSISTENT
+    kickN4      -0.412 [-0.970,-0.191] n=57 BELOW
+    coh all     copies shifted -> CANNOT TELL
+    coh d<=2    copies shifted -> CANNOT TELL
+    coh d>=3    +0.000 [-0.004,+0.002] n=32 CONSISTENT
+    cohN4       copies shifted -> CANNOT TELL
+kingston | SPACED LOOKS, 3 us gaps (25 looked) | gapped half-way: GH vs EH
+    kick all    -0.437 [-0.718,-0.011] n=57 BELOW
+    kick d<=2   -1.192 [-12.673,+0.041] n=25 CONSISTENT
+    kick d=3-4  -0.509 [-1.149,+0.055] n=17 CONSISTENT
+    kick d>=5   +0.039 [-0.437,+0.449] n=15 CONSISTENT
+    kick d>=3   -0.336 [-0.509,+0.101] n=32 CONSISTENT
+    kickN4      -0.383 [-0.674,-0.044] n=57 BELOW
+    coh all     +0.000 [-0.001,+0.002] n=57 CONSISTENT
+    coh d<=2    +0.003 [-0.004,+0.007] n=25 CONSISTENT
+    coh d>=3    -0.000 [-0.001,+0.001] n=32 CONSISTENT
+    cohN4       -0.003 [-0.008,+0.008] n=57 CONSISTENT
+kingston | WIRE PAINT (25 looked) | rotation 0: P0L vs P0D
+    kick all    -0.428 [-0.758,-0.290] n=58 BELOW
+    kick d<=2   -1.116 [-18.259,-0.411] n=25 BELOW
+    kick d=3-4  -0.416 [-1.013,+0.143] n=18 CONSISTENT
+    kick d>=5   +0.004 [-0.360,+0.314] n=15 CONSISTENT
+    kick d>=3   -0.290 [-0.445,+0.193] n=33 CONSISTENT
+    kickN4      -0.386 [-0.951,-0.078] n=58 BELOW
+    coh all     +0.000 [-0.002,+0.002] n=58 CONSISTENT
+    coh d<=2    +0.000 [-0.003,+0.002] n=25 CONSISTENT
+    coh d>=3    +0.001 [-0.005,+0.002] n=33 CONSISTENT
+    cohN4       +0.006 [-0.004,+0.012] n=58 CONSISTENT
+kingston | WIRE PAINT (25 looked) | rotation 1: P1L vs P1D
+    kick all    -0.290 [-0.966,-0.075] n=58 BELOW
+    kick d<=2   -1.211 [-13.749,-0.033] n=25 BELOW
+    kick d=3-4  -0.563 [-1.536,-0.128] n=18 BELOW
+    kick d>=5   +0.039 [-0.311,+0.253] n=15 CONSISTENT
+    kick d>=3   -0.173 [-0.778,-0.022] n=33 BELOW
+    kickN4      -0.225 [-0.810,-0.049] n=58 BELOW
+    coh all     copies shifted -> CANNOT TELL
+    coh d<=2    +0.000 [-0.005,+0.002] n=25 CONSISTENT
+    coh d>=3    -0.002 [-0.005,-0.000] n=33 BELOW
+    cohN4       -0.008 [-0.018,+0.001] n=58 CONSISTENT
+kingston | WIRE PAINT (25 looked) | rotation 2: P2L vs P2D
+    kick all    -0.518 [-0.928,-0.319] n=58 BELOW
+    kick d<=2   -1.124 [-16.048,-0.303] n=25 BELOW
+    kick d=3-4  -0.767 [-1.229,-0.202] n=18 BELOW
+    kick d>=5   -0.173 [-0.417,+0.001] n=15 CONSISTENT
+    kick d>=3   -0.411 [-0.665,-0.093] n=33 BELOW
+    kickN4      -0.422 [-0.845,-0.347] n=58 BELOW
+    coh all     -0.001 [-0.004,+0.001] n=58 CONSISTENT
+    coh d<=2    -0.001 [-0.005,+0.002] n=25 CONSISTENT
+    coh d>=3    -0.001 [-0.005,+0.003] n=33 CONSISTENT
+    cohN4       -0.008 [-0.015,+0.001] n=58 CONSISTENT
+kingston | CARRIERS ACROSS CALIBRATIONS (25 looked) | index order: K vs D0
+    kick all    -0.386 [-0.894,-0.144] n=58 BELOW
+    kick d<=2   -1.066 [-13.476,-0.489] n=25 BELOW
+    kick d=3-4  -0.520 [-1.699,-0.083] n=18 BELOW
+    kick d>=5   +0.239 [-0.041,+0.524] n=15 CONSISTENT
+    kick d>=3   -0.041 [-0.355,+0.239] n=33 CONSISTENT
+    kickN4      -0.246 [-0.852,+0.009] n=58 CONSISTENT
+    coh all     -0.001 [-0.003,+0.001] n=58 CONSISTENT
+    coh d<=2    -0.001 [-0.003,+0.002] n=25 CONSISTENT
+    coh d>=3    -0.001 [-0.004,+0.003] n=33 CONSISTENT
+    cohN4       -0.005 [-0.017,+0.007] n=58 CONSISTENT
+kingston | CARRIERS ACROSS CALIBRATIONS (25 looked) | reversed order: KR vs D0
+    kick all    -0.450 [-0.945,+0.064] n=58 CONSISTENT
+    kick d<=2   -1.192 [-12.986,+0.019] n=25 CONSISTENT
+    kick d=3-4  -0.702 [-1.537,+0.068] n=18 CONSISTENT
+    kick d>=5   +0.175 [+0.036,+0.311] n=15 ABOVE
+    kick d>=3   +0.036 [-0.552,+0.175] n=33 CONSISTENT
+    kickN4      -0.339 [-0.706,+0.148] n=58 CONSISTENT
+    coh all     -0.000 [-0.003,+0.001] n=58 CONSISTENT
+    coh d<=2    +0.001 [-0.006,+0.004] n=25 CONSISTENT
+    coh d>=3    -0.001 [-0.003,+0.001] n=33 CONSISTENT
+    cohN4       -0.002 [-0.015,+0.006] n=58 CONSISTENT
+kingston | CLOCK 81 (one clock, one looked bit) | neighbour |1>: M1L vs M1D
+    kick all    n=1 -> CANNOT TELL
+    kick d<=2   n=1 -> CANNOT TELL
+    kick d=3-4  n=0 -> CANNOT TELL
+    kick d>=5   n=0 -> CANNOT TELL
+    kick d>=3   n=0 -> CANNOT TELL
+    kickN4      n=1 -> CANNOT TELL
+    coh all     n=1 -> CANNOT TELL
+    coh d<=2    n=1 -> CANNOT TELL
+    coh d>=3    n=0 -> CANNOT TELL
+    cohN4       n=1 -> CANNOT TELL
+kingston | CLOCK 81 (one clock, one looked bit) | neighbour |0>: M0L vs M0D
+    kick all    n=1 -> CANNOT TELL
+    kick d<=2   n=1 -> CANNOT TELL
+    kick d=3-4  n=0 -> CANNOT TELL
+    kick d>=5   n=0 -> CANNOT TELL
+    kick d>=3   n=0 -> CANNOT TELL
+    kickN4      n=1 -> CANNOT TELL
+    coh all     n=1 -> CANNOT TELL
+    coh d<=2    n=1 -> CANNOT TELL
+    coh d>=3    n=0 -> CANNOT TELL
+    cohN4       n=1 -> CANNOT TELL
+kingston | CLOCK 81B (67 clocks, five looked sets) | P:A vs PD
+    kick all    -0.688 [-1.182,-0.345] n=64 BELOW
+    kick d<=2   -2.840 [-5.900,-0.515] n=20 BELOW
+    kick d=3-4  -0.490 [-0.789,-0.062] n=32 BELOW
+    kick d>=5   -0.455 [-1.063,+0.133] n=12 CONSISTENT
+    kick d>=3   -0.490 [-0.782,-0.254] n=44 BELOW
+    kickN4      -0.773 [-1.019,-0.316] n=64 BELOW
+    coh all     -0.000 [-0.004,+0.002] n=64 CONSISTENT
+    coh d<=2    +0.000 [-0.005,+0.003] n=20 CONSISTENT
+    coh d>=3    -0.001 [-0.004,+0.002] n=44 CONSISTENT
+    cohN4       -0.004 [-0.013,+0.004] n=64 CONSISTENT
+kingston | CLOCK 81B (67 clocks, five looked sets) | P:B vs PD
+    kick all    -0.811 [-1.128,-0.214] n=64 BELOW
+    kick d<=2   -3.129 [-5.545,-0.449] n=18 BELOW
+    kick d=3-4  -0.707 [-1.091,-0.214] n=30 BELOW
+    kick d>=5   +0.024 [-1.128,+0.229] n=16 CONSISTENT
+    kick d>=3   -0.467 [-1.061,-0.106] n=46 BELOW
+    kickN4      -0.619 [-0.950,-0.359] n=64 BELOW
+    coh all     -0.001 [-0.003,+0.002] n=64 CONSISTENT
+    coh d<=2    -0.001 [-0.004,+0.003] n=18 CONSISTENT
+    coh d>=3    -0.001 [-0.003,+0.003] n=46 CONSISTENT
+    cohN4       -0.003 [-0.016,+0.004] n=64 CONSISTENT
+kingston | CLOCK 81B (67 clocks, five looked sets) | P:C vs PD
+    kick all    -0.138 [-0.309,+0.115] n=64 CONSISTENT
+    kick d<=2   n=3 -> CANNOT TELL
+    kick d=3-4  -0.134 [-0.590,+0.431] n=8 CONSISTENT
+    kick d>=5   -0.145 [-0.345,+0.130] n=53 CONSISTENT
+    kick d>=3   -0.145 [-0.320,+0.130] n=61 CONSISTENT
+    kickN4      -0.104 [-0.369,+0.141] n=64 CONSISTENT
+    coh all     +0.000 [-0.002,+0.001] n=64 CONSISTENT
+    coh d<=2    n=3 -> CANNOT TELL
+    coh d>=3    +0.000 [-0.001,+0.001] n=61 CONSISTENT
+    cohN4       -0.002 [-0.008,+0.004] n=64 CONSISTENT
+kingston | CLOCK 81B (67 clocks, five looked sets) | Q:A vs QD
+    kick all    n=1 -> CANNOT TELL
+    kick d<=2   n=1 -> CANNOT TELL
+    kick d=3-4  n=0 -> CANNOT TELL
+    kick d>=5   n=0 -> CANNOT TELL
+    kick d>=3   n=0 -> CANNOT TELL
+    kickN4      n=1 -> CANNOT TELL
+    coh all     n=1 -> CANNOT TELL
+    coh d<=2    n=1 -> CANNOT TELL
+    coh d>=3    n=0 -> CANNOT TELL
+    cohN4       n=1 -> CANNOT TELL
+kingston | CLOCK 81B (67 clocks, five looked sets) | Q:C vs QD
+    kick all    n=1 -> CANNOT TELL
+    kick d<=2   n=1 -> CANNOT TELL
+    kick d=3-4  n=0 -> CANNOT TELL
+    kick d>=5   n=0 -> CANNOT TELL
+    kick d>=3   n=0 -> CANNOT TELL
+    kickN4      n=1 -> CANNOT TELL
+    coh all     n=1 -> CANNOT TELL
+    coh d<=2    n=1 -> CANNOT TELL
+    coh d>=3    n=0 -> CANNOT TELL
+    cohN4       n=1 -> CANNOT TELL
+pittsburgh | REACH MAP (two sets of 8 single sources) | set 0: S0L vs D
+    kick all    -0.169 [-0.288,+0.015] n=84 CONSISTENT
+    kick d<=2   -0.330 [-0.813,-0.169] n=15 BELOW
+    kick d=3-4  -0.087 [-0.267,+0.274] n=30 CONSISTENT
+    kick d>=5   -0.099 [-0.372,+0.118] n=39 CONSISTENT
+    kick d>=3   -0.099 [-0.260,+0.071] n=69 CONSISTENT
+    kickN4      -0.214 [-0.387,+0.098] n=84 CONSISTENT
+    coh all     -0.001 [-0.002,+0.000] n=84 CONSISTENT
+    coh d<=2    -0.001 [-0.004,+0.002] n=15 CONSISTENT
+    coh d>=3    -0.001 [-0.001,+0.000] n=69 CONSISTENT
+    cohN4       -0.003 [-0.010,+0.002] n=84 CONSISTENT
+pittsburgh | REACH MAP (two sets of 8 single sources) | set 1: S1L vs D
+    kick all    -0.235 [-0.358,+0.017] n=84 CONSISTENT
+    kick d<=2   -0.410 [-0.623,+0.111] n=15 CONSISTENT
+    kick d=3-4  -0.142 [-0.492,+0.147] n=34 CONSISTENT
+    kick d>=5   -0.236 [-0.373,+0.041] n=35 CONSISTENT
+    kick d>=3   -0.181 [-0.346,+0.029] n=69 CONSISTENT
+    kickN4      -0.202 [-0.434,-0.040] n=84 BELOW
+    coh all     -0.001 [-0.003,+0.001] n=84 CONSISTENT
+    coh d<=2    -0.001 [-0.004,+0.003] n=15 CONSISTENT
+    coh d>=3    -0.001 [-0.003,+0.001] n=69 CONSISTENT
+    cohN4       -0.006 [-0.012,+0.001] n=84 CONSISTENT
+pittsburgh | MEILONG / STATE-DARK FLOWERS (25 looked) | looked |0>: K vs D0
+    kick all    -0.224 [-0.400,-0.051] n=58 BELOW
+    kick d<=2   -0.433 [-2.950,-0.166] n=26 BELOW
+    kick d=3-4  -0.223 [-0.608,+0.029] n=16 CONSISTENT
+    kick d>=5   +0.280 [-0.134,+0.447] n=16 CONSISTENT
+    kick d>=3   -0.055 [-0.274,+0.187] n=32 CONSISTENT
+    kickN4      -0.343 [-0.605,+0.005] n=58 CONSISTENT
+    coh all     copies shifted -> CANNOT TELL
+    coh d<=2    +0.000 [-0.002,+0.003] n=26 CONSISTENT
+    coh d>=3    copies shifted -> CANNOT TELL
+    cohN4       copies shifted -> CANNOT TELL
+pittsburgh | MEILONG / STATE-DARK FLOWERS (25 looked) | looked |1>: S1 vs D1
+    kick all    -0.356 [-0.751,-0.137] n=58 BELOW
+    kick d<=2   -0.796 [-3.230,-0.225] n=26 BELOW
+    kick d=3-4  -0.570 [-0.937,-0.106] n=16 BELOW
+    kick d>=5   -0.093 [-0.255,+0.270] n=16 CONSISTENT
+    kick d>=3   -0.196 [-0.411,-0.049] n=32 BELOW
+    kickN4      -0.534 [-0.896,-0.168] n=58 BELOW
+    coh all     copies shifted -> CANNOT TELL
+    coh d<=2    -0.001 [-0.003,+0.003] n=26 CONSISTENT
+    coh d>=3    -0.003 [-0.004,-0.000] n=32 BELOW
+    cohN4       -0.009 [-0.017,-0.002] n=58 BELOW
+pittsburgh | MEILONG / STATE-DARK FLOWERS (25 looked) | looked half-way: SH vs DH
+    kick all    -0.334 [-0.647,-0.053] n=59 BELOW
+    kick d<=2   -0.826 [-2.865,-0.054] n=27 BELOW
+    kick d=3-4  -0.558 [-0.821,+0.111] n=16 CONSISTENT
+    kick d>=5   +0.009 [-0.368,+0.364] n=16 CONSISTENT
+    kick d>=3   -0.140 [-0.464,+0.109] n=32 CONSISTENT
+    kickN4      -0.500 [-0.673,-0.086] n=59 BELOW
+    coh all     -0.001 [-0.004,+0.001] n=59 CONSISTENT
+    coh d<=2    -0.003 [-0.005,+0.002] n=27 CONSISTENT
+    coh d>=3    +0.000 [-0.002,+0.002] n=32 CONSISTENT
+    cohN4       -0.004 [-0.014,+0.011] n=59 CONSISTENT
+pittsburgh | POOL | plain |0> arms
+    kick all    -0.136 [-0.199,-0.063] n=301 BELOW
+    kick d<=2   -0.424 [-0.811,-0.229] n=60 BELOW
+    kick d=3-4  -0.141 [-0.392,+0.001] n=85 CONSISTENT
+    kick d>=5   -0.094 [-0.147,-0.026] n=156 BELOW
+    kick d>=3   -0.108 [-0.148,-0.028] n=241 BELOW
+fez | POOL | plain |0> arms
+    kick all    -0.038 [-0.095,+0.066] n=73 CONSISTENT
+    kick d<=2   n=4 -> CANNOT TELL
+    kick d=3-4  -0.236 [-0.443,+0.195] n=5 CONSISTENT
+    kick d>=5   -0.016 [-0.072,+0.103] n=64 CONSISTENT
+    kick d>=3   -0.037 [-0.086,+0.084] n=69 CONSISTENT
+aachen | POOL | plain |0> arms
+    kick all    -0.041 [-0.151,+0.116] n=75 CONSISTENT
+    kick d<=2   n=4 -> CANNOT TELL
+    kick d=3-4  -0.163 [-1.930,+0.169] n=5 CONSISTENT
+    kick d>=5   +0.037 [-0.102,+0.123] n=66 CONSISTENT
+    kick d>=3   +0.035 [-0.104,+0.121] n=71 CONSISTENT
+kingston | POOL | plain |0> arms
+    kick all    -0.433 [-0.633,-0.221] n=173 BELOW
+    kick d<=2   -0.907 [-11.950,-0.633] n=75 BELOW
+    kick d=3-4  -0.433 [-0.860,-0.022] n=53 BELOW
+    kick d>=5   -0.065 [-0.284,+0.085] n=45 CONSISTENT
+    kick d>=3   -0.130 [-0.346,-0.014] n=98 BELOW

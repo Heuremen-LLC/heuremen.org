@@ -1,0 +1,12 @@
+153 off-average measurements. Implied P(0|1) = 2 x readout_error - P(1|0):
+  on IBM's 1/4096 shot grid: 153 of 153
+  equal to a P(0|1) IBM publishes LATER for the same qubit: 3 of 153; equal to any published P(0|1) for that qubit: 9
+   e.g. ('ibm_phoenix', 5, '2026-10-22 05:54:38', 0.00977, 0.00732, '2026-10-21 21:14:28', [])
+   e.g. ('ibm_phoenix', 22, '2026-10-22 05:54:38', 0.01196, 0.01758, '2026-10-21 21:14:28', [])
+   e.g. ('ibm_phoenix', 39, '2026-10-22 05:54:38', 0.01587, 0.01172, '2026-10-21 21:14:29', [])
+   e.g. ('ibm_phoenix', 56, '2026-10-22 05:54:38', 0.00757, 0.00391, '2026-10-21 21:14:29', [])
+   e.g. ('ibm_phoenix', 73, '2026-10-22 05:54:38', 0.03101, 0.0249, '2026-10-21 21:14:29', [])
+   e.g. ('ibm_phoenix', 90, '2026-10-22 05:54:38', 0.01123, 0.00879, '2026-10-21 21:14:30', [])
+
+SCHEDULE TEST (defined after the data): per record, age of published prob_meas0_prep1 relative to prob_meas1_prep0 on the same qubit
+qubits at index 16 mod 17 (5 mod 17 on the 120-qubit phoenix): published P(0|1) older than P(1|0) in 458 of 580 qubit-records (79 %); all other qubits: 1235 of 9464 (13 %)

@@ -1,0 +1,8 @@
+=== ibm_fez job dbdaf6s24mrc73cl3phg; IBM record 2026-10-22 19:55:50-04:00; 20000 shots per state per qubit
+  KNOWN-GOOD median P(0 | |0>) = 0.9929 (must be >= 0.90): MET
+  R1 delivered / stated readout_error, median over 156 qubits: 0.923 [0.889, 0.951] vs 1 -> BELOW  (above stated: 58)
+     P(1|0): delivered / stated median 0.915 [0.761, 1.024] -> CONSISTENT
+     P(0|1): delivered / stated median 0.961 [0.911, 1.002] -> CONSISTENT
+  R2 qubits whose stated readout_error differs from the mean of its two components by > 0.001: 6; delivered closer to readout_error on 4, to the mean on 2
+  R3 qubits stated prob_meas1_prep0 = 0: 2; delivered P(1|0) with 95 % lower bound above 0.00073 (0 of 4096): 1; their delivered P(1|0) median 0.0037
+  copy gap in readout error (median per qubit, copy 0 - copy 1): -0.0002 [-0.0004, +0.0001] -> copies agree
