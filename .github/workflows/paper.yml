@@ -1,0 +1,18 @@
+name: paper
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  paper:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pypdf
+      - name: install tectonic
+        run: |
+          curl --proto '=https' --tlsv1.2 -fsSL https://drop-sh.fullyjustified.net | sh
+          sudo mv tectonic /usr/local/bin/
+      - run: ./paper/build.sh
+      - run: python3 paper/verify_paper.py paper/main.pdf
+      - uses: actions/upload-artifact@v4
+        with: { name: paper, path: paper/main.pdf }
