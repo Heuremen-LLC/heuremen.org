@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use the paper, the data or the code, please cite the paper and the Zenodo record."
+title: "A Readout Is Not an Idle: paper, run data and code"
+authors:
+  - family-names: Indahl
+    given-names: K.
+    affiliation: "Heuremen LLC"
+doi: 10.5281/zenodo.23169755
+url: "https://heuremen.org/a-readout-is-not-an-idle.pdf"
+repository-code: "https://github.com/Heuremen-LLC/heuremen.org"
+date-released: 2026-10-25
+keywords: [quantum computing, IBM Quantum, mid-circuit readout, reproducible research]
