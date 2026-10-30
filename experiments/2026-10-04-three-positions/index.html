@@ -1,12 +1,12 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>October Campaign</title>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>October Campaign</title>
 <link rel="canonical" href="https://heuremen.org/experiments/2026-10-04-three-positions/">
 <meta name="tdm-reservation" content="1">
 <meta name="tdm-policy" content="https://indahl.ai/terms#ai-training">
-<meta name="description" content="Jobs created 2–7 October 2026 (US Eastern), seven IBM processors: 305 jobs, 63 on 2 October, 43 on 4, 26 on 5, 48 on 6 and 125 on 7; three errored. The.">
+<meta name="description" content="The October 2026 campaign on IBM processors: every run with its job id and the hashes of its frozen scripts, the per-qubit data, and verify.py, which recomputes the published comparison.">
 <meta property="og:site_name" content="Heuremen LLC">
 <meta property="og:type" content="website">
 <meta property="og:title" content="October Campaign">
-<meta property="og:description" content="Jobs created 2–7 October 2026 (US Eastern), seven IBM processors: 305 jobs, 63 on 2 October, 43 on 4, 26 on 5, 48 on 6 and 125 on 7; three errored. The.">
+<meta property="og:description" content="The October 2026 campaign on IBM processors: every run with its job id and the hashes of its frozen scripts, the per-qubit data, and verify.py, which recomputes the published comparison.">
 <meta property="og:url" content="https://heuremen.org/experiments/2026-10-04-three-positions/">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="https://heuremen.org/og.png">
@@ -27,15 +27,17 @@ td.f{white-space:nowrap;font-family:Menlo,monospace;font-size:12.5px}
 </style></head><body>
 <p><a href="/">&larr; What&rsquo;s Lost with a Look</a></p>
 <h1>October campaign &mdash; runs, code, data</h1>
-<p>Jobs created 2&ndash;7 October 2026 (US Eastern), seven IBM processors: 305 jobs, 63 on 2 October, 43 on 4, 26 on 5, 48 on 6 and 125 on 7; three errored. The 32 equal-idle jobs of 7 October are among them (<a href="/experiments/2026-10-07-equal-idle/">7 October</a>). On 11 October ibm_fez ran 14 jobs: 3 of the measured qubit after 1 to 128 readouts (used in the paper) and 11 of a three-box probe-strength sweep. The 305 jobs measured untouched qubits left to precess while other qubits were read out, the measured qubits&rsquo; own decay, and each qubit&rsquo;s decay during idle time. The findings that rest on these runs are on the <a href="/experiments/2026-10-21-measurements/">supporting measurements</a> pages, each with its own script and data.</p>
+<p>Jobs created 2&ndash;7 October 2026 (US Eastern) on IBM processors: the run list, the per-qubit data and the script that recomputes the published comparison.</p>
+<p>In all, 305 jobs ran on seven IBM processors: 63 on 2 October, 43 on 4, 26 on 5, 48 on 6 and 125 on 7, and three errored. The 32 equal-idle jobs of 7 October are among them (<a href="/experiments/2026-10-07-equal-idle/">7 October</a>). On 11 October ibm_fez ran 14 jobs: 3 of the measured qubit after 1 to 128 readouts (used in the paper) and 11 of a three-box probe-strength sweep. The 305 jobs measured untouched qubits left to precess while other qubits were read out, the measured qubits&rsquo; own decay, and each qubit&rsquo;s decay during idle time. The findings that rest on these runs are on the <a href="/experiments/2026-10-21-measurements/">supporting measurements</a> pages, each with its own script and data.</p>
 
 <h2>Files</h2>
+<p>On this page, &plusmn; is one standard error of the pooled value: each processor&rsquo;s width is the spread of a 400-draw bootstrap over its untouched qubits, and the processors are combined by inverse variance (verify.py).</p>
 <table>
 <tr><th>File</th><th>What it is</th></tr>
 <tr><td class="f"><a href="runs.json">runs.json</a></td><td>every run: 305 across seven processors, created 2 to 7 October (three errored) (pittsburgh 86, kingston 75, marrakesh 55, aachen 25, boston 24, fez 20, phoenix 20), each with its IBM job id, submission time and the sha256 of every script frozen before it fired.</td></tr>
 <tr><td class="f">data/</td><td>per-qubit readings used by verify.py, and the qubit roles (measured or untouched) that the 21 October runs reuse.</td></tr>
-<tr><td class="f"><a href="verify.py">verify.py</a></td><td>recomputes the comparison against the stated duration from the published per-qubit readings: 1.0207&nbsp;&plusmn;&nbsp;0.0092 pooled over seven processors, 2.2 standard errors from 1: cannot tell; this fitted-rate reading is superseded by the equal-idle design. The ratio mixes the readout kick with each untouched qubit&rsquo;s spin rate, so it does not measure a duration either way. The comparison against an equal idle in the same job: <a href="/experiments/2026-10-21-readout-vs-idle/">readout vs idle</a>.</td></tr>
-<tr><td class="f">run and reader scripts</td><td>on request, with the raw result arrays; runs.json carries each script&rsquo;s sha256.</td></tr>
+<tr><td class="f"><a href="verify.py">verify.py</a></td><td>recomputes the comparison against the stated duration from the published per-qubit readings (<a href="verify_output.text">output</a>). It keeps only untouched qubits whose fitted precession rate is above 4&nbsp;deg/&micro;s, 284 of the 524 readings, and gives 1.0207&nbsp;&plusmn;&nbsp;0.0092 pooled over seven processors, 2.2 standard errors from 1: cannot tell. Without that cut, all 524 readings give 1.0405 pooled, and one constant does not fit the seven processors (&chi;&sup2;/dof 2.22, p = 0.038). verify.py also prints a reading defined after the data, which drops only the 30 readings that report a negative elapsed time, and that reading is not reported. This fitted-rate reading is superseded by the equal-idle design. The ratio mixes the readout kick with each untouched qubit&rsquo;s spin rate, so it does not measure a duration either way. The comparison against an equal idle in the same job: <a href="/experiments/2026-10-21-readout-vs-idle/">readout vs idle</a>.</td></tr>
+<tr><td class="f">run and reader scripts</td><td>on request, with the raw result arrays. runs.json carries each script&rsquo;s sha256.</td></tr>
 </table>
 <p>Data tables and recounts: <a href="https://indahl.ai/qia">QIA</a> &middot; <a href="https://indahl.ai/iris">IRIS</a></p>
 <p class="foot">Bones &middot; Wayfinder &middot; Sage &middot; Shuttle &middot; Nova<br><a href="https://indahl.ai">Heuremen LLC</a><br>&ldquo;We found it.&rdquo;</p>

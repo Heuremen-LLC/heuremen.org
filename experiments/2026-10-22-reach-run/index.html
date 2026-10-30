@@ -2,11 +2,11 @@
 <link rel="canonical" href="https://heuremen.org/experiments/2026-10-22-reach-run/">
 <meta name="tdm-reservation" content="1">
 <meta name="tdm-policy" content="https://indahl.ai/terms#ai-training">
-<meta name="description" content="The deciding runs found the readout kick on untouched qubits 3 to 4 couplings from the nearest measured qubit, with too few qubits further out to say.">
+<meta name="description" content="The deciding runs found the readout kick on untouched qubits 3 to 4 couplings from the nearest measured qubit. This run asks where it stops, using untouched qubits at each exact distance further out.">
 <meta property="og:site_name" content="Heuremen LLC">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Reach Run">
-<meta property="og:description" content="The deciding runs found the readout kick on untouched qubits 3 to 4 couplings from the nearest measured qubit, with too few qubits further out to say.">
+<meta property="og:description" content="The deciding runs found the readout kick on untouched qubits 3 to 4 couplings from the nearest measured qubit. This run asks where it stops, using untouched qubits at each exact distance further out.">
 <meta property="og:url" content="https://heuremen.org/experiments/2026-10-22-reach-run/">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="https://heuremen.org/og.png">
@@ -17,17 +17,19 @@
 <style>body{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;color:#18202B;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.5}a{color:#0F7173}</style></head><body>
 <p><a href="/">&larr; What&rsquo;s Lost with a Look</a></p>
 <h1>Where the kick stops, 22 October 2026</h1>
-<p>The deciding runs found the readout kick on untouched qubits 3 to 4 couplings from the nearest measured qubit, with too few qubits further out to say where it stops. This run packs the 39 measured qubits in three central layouts so that 38 to 42 untouched qubits sit at each exact distance 3, 4, 5, 6 and 7, and 88 at 8 or more, on ibm_fez, ibm_kingston and ibm_marrakesh. Plan, circuits and analysis pushed before any job; results are read below by the committed analysis.</p>
+<p>The deciding runs found the readout kick on untouched qubits 3 to 4 couplings from the nearest measured qubit, with too few qubits further out to say where it stops. This run places the measured qubits in central layouts so that untouched qubits sit at each exact distance from them, on ibm_fez, ibm_kingston and ibm_marrakesh. Plan, circuits and analysis were pushed before any job. Results are read below by the committed analysis.</p>
 <p><a href="PLAN_REACH.md.text">plan</a> &middot; <a href="reach.py">reach.py</a> &middot; <a href="analyze_reach.py">analyze_reach.py</a> &middot; <a href="synth_reach.py">synth_reach.py</a> &middot; <a href="synth_results.text">synthetic test</a> &middot; <a href="PLAN_REACH.sha256.text">plan SHA-256</a> &middot; <a href="CODE_REACH.sha256.text">code SHA-256</a></p>
 <h2>Results, read by the committed analysis (<a href="results_reach.text">full output</a>)</h2>
-<p>Jobs: fez dbcvr0pgv2cc738h409g, kingston dbcvrgfi0auc7394ele0, marrakesh dbcvruoc77vs73874lg0 (<a href="fire_reach.text">fire log</a>; job records job_reach_ibm_*.json in this folder). Kick size is the size of the readout kick (negative values of the kick count as positive size), in degrees per readout, by exact coupling distance from the nearest measured qubit. Combined means the three processors together, with their spread printed beside it in the full output.</p>
+<p>In detail, the run packs the 39 measured qubits in three central layouts so that 38 to 42 untouched qubits sit at each exact distance 3, 4, 5, 6 and 7, and 88 at 8 or more, on ibm_fez, ibm_kingston and ibm_marrakesh.</p>
+<p>On this page, per-processor brackets are 95&thinsp;% intervals from a 2000-draw bootstrap over units (an untouched qubit in one layout), and combined brackets are 95&thinsp;% intervals from an inverse-variance combination of the per-processor intervals.</p>
+<p>Jobs: fez dbcvr0pgv2cc738h409g, kingston dbcvrgfi0auc7394ele0, marrakesh dbcvruoc77vs73874lg0 (<a href="fire_reach.text">fire log</a>). The job records, job_reach_ibm_*.json, are in this folder. Kick size is the size of the readout kick (negative values of the kick count as positive size), in degrees per readout, by exact coupling distance from the nearest measured qubit. Combined means the three processors together, with their spread printed beside it in the full output.</p>
 <ul>
 <li><b>Combined, 4 couplings: +0.21 [+0.09, +0.32], above zero.</b> Per processor: fez +0.19 [+0.10, +0.36], kingston +0.13 [+0.04, +0.69], marrakesh +0.40 [+0.07, +0.77], all above zero.</li>
-<li><b>3 couplings:</b> resolved on ibm_fez (+0.11 [+0.001, +0.57]) and ibm_marrakesh (+0.52 [+0.15, +1.71]) singly; ibm_kingston cannot resolve it (+0.51 [&minus;0.005, +1.30]), and the three combined read +0.21 [&minus;0.04, +0.45], consistent with zero.</li>
-<li><b>5 couplings:</b> combined +0.055 [+0.002, +0.108], just above zero; no processor resolves it alone.</li>
-<li><b>6 couplings and beyond:</b> combined consistent with zero at 6 (+0.016 [&minus;0.026, +0.057]), 7 (+0.014 [&minus;0.012, +0.039]) and 8 or more (+0.003 [&minus;0.019, +0.026]); the upper ends are 0.03 to 0.06 degrees. Singly, ibm_marrakesh reads above zero at 6 (+0.050 [+0.002, +0.155]).</li>
-<li><b>The size depends on the layout.</b> The per-layout medians printed in the full output differ several-fold at the same distance; the layout centred on qubit 90 is smaller than the other two at 3 and 4 couplings on ibm_fez and ibm_marrakesh (on ibm_kingston it is smaller than the one centred on 71 only).</li>
-<li>The committed edge rule names no combined edge (3 couplings is consistent with zero combined); by processor, the unbroken edge from 3 couplings is at 4 on fez and marrakesh, and none on kingston.</li>
+<li><b>3 couplings:</b> resolved on ibm_fez (+0.11 [+0.001, +0.57]) and ibm_marrakesh (+0.52 [+0.15, +1.71]) singly, while ibm_kingston cannot resolve it (+0.51 [&minus;0.005, +1.30]), and the three combined read +0.21 [&minus;0.04, +0.45], consistent with zero.</li>
+<li><b>5 couplings:</b> combined +0.055 [+0.002, +0.108], just above zero. No processor resolves it alone.</li>
+<li><b>6 couplings and beyond:</b> combined consistent with zero at 6 (+0.016 [&minus;0.026, +0.057]), 7 (+0.014 [&minus;0.012, +0.039]) and 8 or more (+0.003 [&minus;0.019, +0.026]). The upper ends are 0.03 to 0.06 degrees. Singly, ibm_marrakesh reads above zero at 6 (+0.050 [+0.002, +0.155]).</li>
+<li><b>The size depends on the layout.</b> The per-layout medians printed in the full output differ several-fold at the same distance. The layout centred on qubit 90 is smaller than the other two at 3 and 4 couplings on ibm_fez and ibm_marrakesh (on ibm_kingston it is smaller than the one centred on 71 only).</li>
+<li>The committed edge rule names no combined edge (3 couplings is consistent with zero combined). By processor, the unbroken edge from 3 couplings is at 4 on fez and marrakesh, and none on kingston.</li>
 </ul>
 <p>The size at 4 couplings is about a tenth of the kick next to a measured qubit. Readings were not corrected for multiplicity: synthetic runs with no kick resolve 6.0&thinsp;% of single-processor readings and 5.6&thinsp;% of combined ones, so the resolutions at 5 couplings combined and at 6 couplings on marrakesh, whose lower ends are 0.002, are not distinguished from that floor. Consistent with zero is a bound, not a proof of none: the intervals above are the bounds.</p>
 

@@ -22,9 +22,11 @@ ibm_kingston fresh record job dbdjrhpgv2cc73dojivg ran 2026-10-23 10:58 UTC; rec
   FIXED 0.957 [0.912, 0.999] -> BELOW (90 of 153 below stated) | FREE 0.984 [0.958, 1.006] -> CONSISTENT (85 of 153 below stated)
 ibm_boston run 1 job dbd9fvk24mrc73cl1l7g ran 2026-10-23 13:49 UTC; record 2026-10-22 09:16:26-04:00; stated T2 median age at run 34.3 h; queued 14.6 h
   FIXED 1.019 [0.960, 1.076] -> CONSISTENT (70 of 155 below stated) | FREE 0.899 [0.828, 1.026] -> CONSISTENT (88 of 155 below stated)
+ibm_marrakesh fresh record job dbdri2npc3tc739kmgag ran 2026-10-23 19:44 UTC; record 2026-10-23 15:17:54-04:00; stated T2 median age at run 0.5 h; queued 0.0 h
+  FIXED 1.015 [0.937, 1.130] -> CONSISTENT (73 of 153 below stated) | FREE 0.958 [0.902, 1.016] -> CONSISTENT (83 of 150 below stated)
 
 CLOCK (ibm_fez, stated T2 values and dates identical in all four records, 155 of 155):
   FIXED: 1.051 -> 1.014 -> 1.000 -> 1.019 at 0.7 / 1.0 / 1.8 / 3.8 h; decline first to last +0.032; floor 2 x 0.041 = 0.082 -> CONSISTENT
   FREE: 0.979 -> 1.006 -> 0.977 -> 1.005 at 0.7 / 1.0 / 1.8 / 3.8 h; decline first to last -0.026; floor 2 x 0.033 = 0.066 -> CONSISTENT
   Points at 8 and 16 h were not run.
-FIT MODEL: largest |planned - free| over the twelve runs 0.120 (boston)
+FIT MODEL: largest |planned - free| over the thirteen runs 0.120 (boston)

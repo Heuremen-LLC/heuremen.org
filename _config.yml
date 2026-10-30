@@ -8,6 +8,10 @@ exclude:
   - "**/*.log"
   - "CLAUDE.md"
   - "__pycache__"
+  - "*.pre-*"
+  - "**/*.pre-*"
+  - "*.bak"
+  - "**/*.bak"
 include:
   - .well-known
   - TERMS.txt

@@ -1,5 +1,5 @@
 Readout-mitigation check (22 Oct 2026, night), outside referee, defined after the data.
-Vendor rebuttal tested: "the effects on untouched qubits are readout (assignment) error; apply TREX, M3 or calibration-matrix inversion and they go away."
+Rebuttal tested (our own statement of the strongest vendor rebuttal, not a quotation): the effects on untouched qubits are readout (assignment) error, and applying TREX, M3 or calibration-matrix inversion makes them go away.
 Each committed analysis re-run unchanged except for a per-qubit assignment correction p_true = (p_meas - e01) / (1 - e01 - e10), at three settings:
 uncorrected (*0*), in-job calibration or IBM's stated values (*1*), twice those (*2*). The uncorrected re-run reproduces the published numbers.
 ctl/  phase kick (control run): fez -1.618 / -1.558 / -1.527, kingston -2.864 / -2.645 / -2.612, marrakesh -2.393 / -2.243 / -2.225 deg per readout, BELOW at every setting.

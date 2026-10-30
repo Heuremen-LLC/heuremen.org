@@ -2,11 +2,11 @@
 <link rel="canonical" href="https://heuremen.org/experiments/2026-09-24-temporal-spatial-correlations/">
 <meta name="tdm-reservation" content="1">
 <meta name="tdm-policy" content="https://indahl.ai/terms#ai-training">
-<meta name="description" content="24 September 2026, IBM ibm_marrakesh, replicated on ibm_kingston and ibm_fez (48 jobs that day: fez 3, kingston 4, marrakesh 41; 17 in the run log).">
+<meta name="description" content="Code and data for the 24 September 2026 runs on ibm_marrakesh, replicated on ibm_kingston and ibm_fez. They measure temporal and spatial correlations and a three-box weak measurement.">
 <meta property="og:site_name" content="Heuremen LLC">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Temporal and Spatial Correlations">
-<meta property="og:description" content="24 September 2026, IBM ibm_marrakesh, replicated on ibm_kingston and ibm_fez (48 jobs that day: fez 3, kingston 4, marrakesh 41; 17 in the run log).">
+<meta property="og:description" content="Code and data for the 24 September 2026 runs on ibm_marrakesh, replicated on ibm_kingston and ibm_fez. They measure temporal and spatial correlations and a three-box weak measurement.">
 <meta property="og:url" content="https://heuremen.org/experiments/2026-09-24-temporal-spatial-correlations/">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="https://heuremen.org/og.png">
@@ -17,7 +17,8 @@
 <style>body{font-family:Georgia,serif;background:#f7f0e0;color:#2a1f0e;max-width:760px;margin:0 auto;padding:30px 20px;line-height:1.6}a{color:#2a5a8a}code{background:#ede0c4;padding:1px 4px}</style></head><body>
 <p><a href="/">← What&rsquo;s Lost with a Look</a> · <a href="../../correlations.html">the results page</a></p>
 <h1>Temporal and spatial correlations, and a three-box weak measurement &mdash; code and data</h1>
-<p>24 September 2026, IBM ibm_marrakesh, replicated on ibm_kingston and ibm_fez (48 jobs that day: fez 3, kingston 4, marrakesh 41; 17 in the run log). These runs have no equal-idle arm on untouched qubits and are not used for the readout claims of the paper. Two-qubit (spatial) and one-qubit sequential (temporal) correlations against a rotation angle, and a three-box weak measurement (third-box weak value &minus;0.506 &plusmn; 0.057). The temporal and spatial curves follow the same cos&thinsp;&theta;, as standard quantum mechanics predicts.</p>
+<p>24 September 2026, IBM ibm_marrakesh, replicated on ibm_kingston and ibm_fez. These runs have no equal-idle arm on untouched qubits and are not used for the readout claims of the paper. Two-qubit (spatial) and one-qubit sequential (temporal) correlations against a rotation angle, and a three-box weak measurement (third-box weak value &minus;0.506 &plusmn; 0.057). The temporal and spatial curves follow the same cos&thinsp;&theta;, as standard quantum mechanics predicts.</p>
+<p>On this page, &plusmn; is one standard error of the weak value, computed from the spread of the probe readings over the shots kept after post-selection.</p>
 <p>Everything behind the page. Python 3.12 with <code>qiskit</code>, <code>qiskit-ibm-runtime</code>, <code>qiskit-aer</code>. Put your own IBM Quantum API key in a file and point the scripts at it. Every script has a free <code>sim</code> mode: rehearse there first, then write your prediction down, then spend real minutes.</p>
 <h2>The page's four panels</h2>
 <ul>
@@ -29,9 +30,10 @@
 </ul>
 <h2>Entangled pair against an unentangled control</h2>
 <ul>
-<li><a href="entanglement_cost.py">entanglement_cost.py</a>, <a href="entanglement_cost_v2.py">entanglement_cost_v2.py</a>: entangled pair against an unentangled control, and the circuit-order artifact</li>
+<li><a href="entanglement_cost.py">entanglement_cost.py</a>, <a href="entanglement_cost_v2.py">entanglement_cost_v2.py</a>: entangled pair against an unentangled control, and the reversed-order test</li>
 </ul>
 <h2>The record</h2>
+<p>That day had 48 jobs (fez 3, kingston 4, marrakesh 41), and 17 are in the run log.</p>
 <ul>
 <li><a href="data/">data/</a>: every real-hardware result file (JSON)</li>
 <li><a href="verify_september.py">verify_september.py</a>: recomputes every number on the results page from data/ (<a href="verify_september_output.text">output</a>)</li>

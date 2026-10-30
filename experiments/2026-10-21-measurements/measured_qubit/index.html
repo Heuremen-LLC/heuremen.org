@@ -2,11 +2,11 @@
 <link rel="canonical" href="https://heuremen.org/experiments/2026-10-21-measurements/measured_qubit/">
 <meta name="tdm-reservation" content="1">
 <meta name="tdm-policy" content="https://indahl.ai/terms#ai-training">
-<meta name="description" content="Runs. Seven IBM processors, 4–6 October 2026, three reads each (job IDs in the data file). A measured qubit is read out 1, 2, 3, 4, 6 or 9 times; its.">
+<meta name="description" content="How much contrast a measured qubit loses per readout on IBM processors, 4 to 6 October 2026, converted into the time its own decay curve would need to lose as much.">
 <meta property="og:site_name" content="Heuremen LLC">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Measured Qubit Loss">
-<meta property="og:description" content="Runs. Seven IBM processors, 4–6 October 2026, three reads each (job IDs in the data file). A measured qubit is read out 1, 2, 3, 4, 6 or 9 times; its.">
+<meta property="og:description" content="How much contrast a measured qubit loses per readout on IBM processors, 4 to 6 October 2026, converted into the time its own decay curve would need to lose as much.">
 <meta property="og:url" content="https://heuremen.org/experiments/2026-10-21-measurements/measured_qubit/">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="https://heuremen.org/og.png">
@@ -16,12 +16,13 @@
 <style>body{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;color:#18202B;background:#FFF;font-size:15px;line-height:1.55;max-width:820px;margin:40px auto;padding:0 16px}h1{font-size:24px;color:#0E4A4D;border-bottom:2px solid #0F7173;padding-bottom:6px}h2{font-size:16px;color:#0F7173;margin-top:24px}a{color:#0F7173}code{font-family:Menlo,monospace;font-size:13px;background:#EFF3F1;padding:1px 4px}.foot{color:#6B7480;font-size:13px;margin-top:28px}li{margin:4px 0}</style></head><body>
 <p><a href="/">&larr; What&rsquo;s Lost with a Look</a> &middot; <a href="../">all measurements</a></p>
 <h1>The measured qubit&rsquo;s own loss per readout</h1>
-<p><b>Runs.</b> Seven IBM processors, 4&ndash;6 October 2026, three reads each (job IDs in the data file). A measured qubit is read out 1, 2, 3, 4, 6 or 9 times; its remaining contrast is converted to the time its own decay curve would need to lose as much.</p>
+<p><b>Runs.</b> IBM processors, 4&ndash;6 October 2026 (job IDs in the data file). A measured qubit is read out 1, 2, 3, 4, 6 or 9 times. Its remaining contrast is converted to the time its own decay curve would need to lose as much.</p>
+<p>The runs cover seven IBM processors with three reads each.</p>
 <h2>What holds</h2><ul>
-<li>Time-equivalent loss per readout, in units of the stated readout duration (two estimators; means of three reads): kingston 1.661 / 1.677, marrakesh 1.516 / 1.509, fez 1.540 / 1.600, pittsburgh 1.340 / 1.360, boston 1.348 / 1.333, phoenix 1.351 / 1.323, aachen 1.371 / 1.351.</li>
-<li>The conversion assumes a single-exponential decay curve. Measured in the same campaign, 62.4&ndash;85.3&thinsp;% of qubit-copies sit below their own 300&nbsp;&micro;s single-exponential extrapolation at 30&nbsp;&micro;s (26 jobs on six processors, 4 to 7 October, see <a href="../processors_apparatus/">controls</a>; this page&rsquo;s data cover 12 of those jobs, on marrakesh, kingston, pittsburgh and fez), so the conversion is approximate.</li>
-<li>At equal elapsed time, with no assumption about the decay curve, the comparison is from ibm_fez (11 October, <a href="../cost/">decay under repeated readout</a>) and the 22 October readout-instruction run (fez and marrakesh; kingston not decided; <a href="../../2026-10-22-length-run/">page</a>).</li></ul>
-<h2>Run it</h2><p>Download the script and the files in <code>data/</code> into one folder (data in <code>data/</code>), then <code>python3 verify_measured_qubit.py</code>. Standard library only; it prints each figure beside the recomputed value. The compact data were cut from the raw results; the raw files and the reduction scripts are available on request.</p>
+<li>Time-equivalent loss per readout, in units of the stated readout duration (two estimators, means of three reads): kingston 1.661 / 1.677, marrakesh 1.516 / 1.509, fez 1.540 / 1.600, pittsburgh 1.340 / 1.360, boston 1.348 / 1.333, phoenix 1.351 / 1.323, aachen 1.371 / 1.351.</li>
+<li>The conversion assumes a single-exponential decay curve. Measured in the same campaign, 62.4&ndash;85.3&thinsp;% of qubit-copies sit below their own 300&nbsp;&micro;s single-exponential extrapolation at 30&nbsp;&micro;s (26 jobs on six processors, 4 to 7 October, see <a href="../processors_apparatus/">controls</a>), so the conversion is approximate. This page&rsquo;s data cover 12 of those jobs, on marrakesh, kingston, pittsburgh and fez.</li>
+<li>At equal elapsed time, with no assumption about the decay curve, the comparison is from ibm_fez (11 October, <a href="../cost/">decay under repeated readout</a>) and the 22 October readout-instruction run (fez and marrakesh, and kingston in a repeat, <a href="../../2026-10-22-length-run/">page</a>).</li></ul>
+<h2>Run it</h2><p>Download the script and the files in <code>data/</code> into one folder (data in <code>data/</code>), then <code>python3 verify_measured_qubit.py</code>. Standard library only. It prints each figure beside the recomputed value. The compact data were cut from the raw results. The raw files and the reduction scripts are available on request.</p>
 <p>Files: <a href="verify_measured_qubit.py">verify_measured_qubit.py</a> &middot; <a href="data/measured_qubit.json">data/measured_qubit.json</a> &middot; <a href="data/ruler_check.json">data/ruler_check.json</a></p>
 <p>Data tables and recounts: <a href="https://indahl.ai/qia">QIA</a> &middot; <a href="https://indahl.ai/iris">IRIS</a></p>
 <p class="foot">Bones &middot; Wayfinder &middot; Sage &middot; Shuttle &middot; Nova<br><a href="https://indahl.ai">Heuremen LLC</a><br>&ldquo;We found it.&rdquo;</p></body></html>

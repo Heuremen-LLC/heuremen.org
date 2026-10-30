@@ -2,11 +2,11 @@
 <link rel="canonical" href="https://heuremen.org/experiments/2026-10-21-measurements/rigetti_extra/">
 <meta name="tdm-reservation" content="1">
 <meta name="tdm-policy" content="https://indahl.ai/terms#ai-training">
-<meta name="description" content="Runs. AWS Braket, Rigetti Cepheus-1-108Q, 28 September and 4 October 2026 (task IDs in the data file).">
+<meta name="description" content="Data from the Rigetti Cepheus-1-108Q on AWS Braket, 28 September and 4 October 2026, on how a neighbour prepared in |2⟩ shifts the precession rate of a directly coupled qubit.">
 <meta property="og:site_name" content="Heuremen LLC">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Rigetti Neighbour Data">
-<meta property="og:description" content="Runs. AWS Braket, Rigetti Cepheus-1-108Q, 28 September and 4 October 2026 (task IDs in the data file).">
+<meta property="og:description" content="Data from the Rigetti Cepheus-1-108Q on AWS Braket, 28 September and 4 October 2026, on how a neighbour prepared in |2⟩ shifts the precession rate of a directly coupled qubit.">
 <meta property="og:url" content="https://heuremen.org/experiments/2026-10-21-measurements/rigetti_extra/">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="https://heuremen.org/og.png">
@@ -17,10 +17,11 @@
 <p><a href="/">&larr; What&rsquo;s Lost with a Look</a> &middot; <a href="../">all measurements</a></p>
 <h1>Rigetti Cepheus-1-108Q: neighbour effects</h1>
 <p><b>Runs.</b> AWS Braket, Rigetti Cepheus-1-108Q, 28 September and 4 October 2026 (task IDs in the data file).</p>
+<p>On this page, &plusmn; is one standard error from shot noise alone, taken on the inverse-variance mean of the per-window rates, and the &plusmn; on the difference between the dates adds the two in quadrature.</p>
 <h2>What holds</h2><ul>
-<li>With a directly coupled neighbour (q0) prepared in |2&rang;, Ramsey qubit q9&rsquo;s precession rate shifts by &minus;54.93 &plusmn; 1.28&nbsp;&deg;/&micro;s on 28 September and &minus;38.64 &plusmn; 1.62&nbsp;&deg;/&micro;s on 4 October (windows 0.5&ndash;2&nbsp;&micro;s; shot noise only; the dates differ by 16.3 &plusmn; 2.1&nbsp;&deg;/&micro;s). The pair is the same on both dates; between them the pulse amplitude was retuned, the number of simultaneous Ramsey qubits changed from 1 to 106 and the processor was recalibrated, so the difference is not assigned to the coupling.</li>
-<li>Over 22 other pairs of a qubit in |2&rang; and a coupled neighbour (4 October, 1&nbsp;&micro;s window; seven emitters and their 22 neighbours) the shift spans &minus;72.8 to +30.9&nbsp;&deg;/&micro;s (median &minus;6.4): on this processor sign and size are properties of the pair. There is no readout-against-idle design on this processor.</li></ul>
-<h2>Run it</h2><p>Download the script and the files in <code>data/</code> into one folder (data in <code>data/</code>), then <code>python3 verify_rigetti_extra.py</code>. Standard library only; it prints each figure beside the recomputed value. The compact data were cut from the raw results; the raw files and the reduction scripts are available on request.</p>
+<li>With a directly coupled neighbour (q0) prepared in |2&rang;, Ramsey qubit q9&rsquo;s precession rate shifts by &minus;54.93 &plusmn; 1.28&nbsp;&deg;/&micro;s on 28 September and &minus;38.64 &plusmn; 1.62&nbsp;&deg;/&micro;s on 4 October (windows 0.5&ndash;2&nbsp;&micro;s, shot noise only). The dates differ by 16.3 &plusmn; 2.1&nbsp;&deg;/&micro;s. The pair is the same on both dates. Between them the pulse amplitude was retuned, the number of simultaneous Ramsey qubits changed from 1 to 106 and the processor was recalibrated, so the difference is not assigned to the coupling.</li>
+<li>Over 22 other pairs of a qubit in |2&rang; and a coupled neighbour (4 October, 1&nbsp;&micro;s window, seven emitters and their 22 neighbours) the shift spans &minus;72.8 to +30.9&nbsp;&deg;/&micro;s (median &minus;6.4): on this processor sign and size are properties of the pair. There is no readout-against-idle design on this processor.</li></ul>
+<h2>Run it</h2><p>Download the script and the files in <code>data/</code> into one folder (data in <code>data/</code>), then <code>python3 verify_rigetti_extra.py</code>. Standard library only. It prints each figure beside the recomputed value. The compact data were cut from the raw results. The raw files and the reduction scripts are available on request.</p>
 <p>Files: <a href="verify_rigetti_extra.py">verify_rigetti_extra.py</a> &middot; <a href="data/rigetti_extra.json">data/rigetti_extra.json</a></p>
 <p>Data tables and recounts: <a href="https://indahl.ai/qia">QIA</a> &middot; <a href="https://indahl.ai/iris">IRIS</a></p>
 <p class="foot">Bones &middot; Wayfinder &middot; Sage &middot; Shuttle &middot; Nova<br><a href="https://indahl.ai">Heuremen LLC</a><br>&ldquo;We found it.&rdquo;</p></body></html>

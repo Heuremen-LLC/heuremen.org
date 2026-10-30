@@ -1,0 +1,44 @@
+
+  VERIFYING FROM PUBLISHED DATA -- 7 processors, 524 spectator readings
+
+  1. Weakly-detuned spectators report a LONGER look (published: -0.17 to -0.56, all seven)
+     aachen           spearman -0.333   in range
+     boston           spearman -0.192   in range
+     fez              spearman -0.201   in range
+     kingston         spearman -0.302   in range
+     marrakesh        spearman -0.170   in range
+     phoenix          spearman -0.558   in range
+     pittsburgh       spearman -0.338   in range
+
+  2. Reported / stated, spectators above 4 deg/us
+     chip          recomputed published       n   
+     aachen            1.0172    1.0172      23   OK  
+     boston            1.0256    1.0256      27   OK  
+     fez               1.0022    1.0022      54   OK  
+     kingston          1.0457    1.0457      43   OK  
+     marrakesh         1.0282    1.0282      31   OK  
+     phoenix           1.0166    1.0166      63   OK  
+     pittsburgh        1.0266    1.0266      43   OK  
+
+  3. One constant across all seven
+     pooled           1.0207 +- 0.0092   published 1.0207 +- 0.0092   OK  
+     chi2/dof         0.52                 published 0.52           OK  
+     p(one constant)  0.79                 published 0.79           OK  
+
+  4. Against no effect (ratio 1): 2.2 sigma -- not established
+
+  5. Without the cut, the same arithmetic
+     pooled 1.0405   chi2/dof 2.22   p = 0.0384
+     -> one constant does NOT fit until the ill-conditioned spectators are removed.
+        The cut is stated in advance and applied to every processor equally.
+
+  6. The 30 spectators that report a NEGATIVE elapsed time
+     30 of 284 above the cut  OK   / OK  
+     These come from a noisy estimator near its conditioning limit. The cut below was
+     chosen AFTER the data were seen, so it is shown for transparency only. Dropping ONLY these:
+     pooled           1.0331 +- 0.0083   published 1.0331 +- 0.0083   OK  
+     chi2/dof         0.88                 published 0.88           OK  
+     vs 1 (no effect) 4.0 sigma   (it is 2.2 sigma with the negatives left in)
+     -> post-hoc, so not reported.
+        The pre-specified reading (2.2 sigma) is the one reported.
+
