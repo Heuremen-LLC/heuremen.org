@@ -6,34 +6,8 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-# Public layout: this folder is paper/figures in the heuremen.org repository. The scripts were written against short run names (control_run, deciding_runs, ...).
-# A folder of links maps each short name to the dated folder under experiments/ (2026-10-21-control-run -> control_run). Files are looked up in this repository first
-# and then in READOUT_EXPERIMENTS, the experiments/ folder of the unpacked raw bundle (Zenodo concept DOI 10.5281/zenodo.23169755), which holds the large .npz arrays.
-SITE = os.path.dirname(os.path.dirname(HERE))
-def _farm():
-    farm = os.path.join(HERE, '_runs'); os.makedirs(farm, exist_ok=True)
-    roots = [os.environ.get('READOUT_EXPERIMENTS'), os.path.join(SITE, 'experiments')]
-    for root in [r for r in roots if r and os.path.isdir(r)]:
-        for d in sorted(os.listdir(root)):
-            m = re.match(r'\d{4}-\d{2}-\d{2}-(.+)', d)
-            if not m or not os.path.isdir(os.path.join(root, d)): continue
-            short = m.group(1).replace('-', '_'); dst = os.path.join(farm, short); os.makedirs(dst, exist_ok=True)
-            for f in os.listdir(os.path.join(root, d)):
-                for name in ([f, f[:-5] + '.txt'] if f.endswith('.text') else [f]):      # the site stores text results with a .text suffix, the scripts ask for .txt
-                    link = os.path.join(dst, name)
-                    if not os.path.lexists(link): os.symlink(os.path.join(root, d, f), link)
-    # in the original working folder some results were kept together; here they sit in their own dated folders
-    for short, extras in (('control_run', ['iq_run', 'pairs_run']), ('excitation_kingston', ['kingston_claim4_repeat'])):
-        dst = os.path.join(farm, short); os.makedirs(dst, exist_ok=True)
-        for e in extras:
-            src = os.path.join(farm, e)
-            if not os.path.isdir(src): continue
-            for f in os.listdir(src):
-                link = os.path.join(dst, f)
-                if not os.path.lexists(link): os.symlink(os.path.realpath(os.path.join(src, f)), link)
-    return farm
-import re
-ROOT = _farm(); FORGE = SITE
+ROOT = os.path.dirname(HERE)                      # .../arxiv_one_readout
+FORGE = os.path.dirname(ROOT)                     # .../bones-forge
 COL1, COL2 = 3.4, 7.0                             # single / double column width, inches
 
 # Okabe-Ito

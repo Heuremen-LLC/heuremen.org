@@ -13,7 +13,7 @@ import figstyle as fs
 fs.setup()
 CR = os.path.join(fs.ROOT, 'control_run')
 props = json.load(open(os.path.join(CR, 'backend_properties_ibm_fez.json')))
-roles = json.load(open(os.path.join(fs.SITE, 'experiments/2026-10-04-three-positions/data/reads/countwide_roles_ibm_fez.json')))
+roles = json.load(open(os.path.join(fs.FORGE, 'heuremen.org/experiments/2026-10-04-three-positions/data/reads/countwide_roles_ibm_fez.json')))
 job = json.load(open(os.path.join(CR, 'job_ibm_fez.json')))
 E = sorted(roles['emitters']); n = roles['n']
 assert sorted(job['E']) == E and len(E) == 39 and len(job['S']) == 117 and n == 156
