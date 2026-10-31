@@ -1,6 +1,5 @@
 \documentclass[reprint,amsmath,amssymb,aps,superscriptaddress,nofootinbib]{revtex4-2}
 \usepackage{graphicx}
-\usepackage{booktabs}
 \usepackage{array}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -73,9 +72,9 @@ Dates are US Eastern unless marked UTC. Table~\ref{tab:runs} lists every period 
 \label{tab:runs}
 \footnotesize
 \begin{tabular}{p{2.3cm}p{3.6cm}p{6.3cm}p{4.9cm}}
-\toprule
+\hline\hline
 Date (2026) & Processors, jobs & Design & Status for this paper \\
-\midrule
+\hline
 24 Sep & fez 3, kingston 4, marrakesh 41 (48) & Single qubits and Bell pairs with and without a mid-circuit readout; correlations; three-box weak measurement & No equal-idle arm on untouched qubits; not used \\
 28 Sep & fez 37, kingston 5, marrakesh 23 (65) & Raw IQ of every even qubit after one or two readouts; entangled-pair rounds & Not used \\
 25--28 Sep & Rigetti, 563 tasks & Neighbour in $|2\rangle$, Ramsey neighbours & Second-vendor shift (Sec.~\ref{sec:rigetti}) \\
@@ -97,7 +96,7 @@ Date (2026) & Processors, jobs & Design & Status for this paper \\
 22 Oct & marrakesh (1; a fez job cancelled while queued) & Three-box weak measurement & Plan, analysis and known-good pushed before the job; not used \\
 22 Oct & fez (1; ibm\_phoenix not run) & Direct ZZ phase shift per edge & Plan pushed before the job; not read at submission; not used \\
 23 Oct & fez, phoenix (2) & Direct ZZ phase shift per edge, second run on the same pairs & Plan, analysis and known-good pushed before the jobs \\
-\bottomrule
+\hline\hline
 \end{tabular}
 \end{table*}
 
@@ -123,9 +122,9 @@ Date (2026) & Processors, jobs & Design & Status for this paper \\
 \label{tab:oct07}
 \scriptsize
 \begin{tabular}{p{3.6cm}p{1.6cm}p{2.15cm}p{2.15cm}p{2.15cm}p{2.15cm}p{2.15cm}}
-\toprule
+\hline\hline
 Layout, arm & $n$ & kick, all & kick, $d\le2$ & kick, $d=3$--4 & kick, $d\ge5$ & coherence, all \\
-\midrule
+\hline
 P corner, 12 measured & 76/4/5/67 & $+0.000$ C [$-0.082$,$+0.061$] & CT & $+0.036$ C [$-1.911$,$+0.380$] & $+0.003$ C [$-0.082$,$+0.065$] & $-0.000$ C [$-0.001$,$+0.000$] \\
 F corner, 12 measured & 73/4/5/64 & $-0.036$ C [$-0.087$,$+0.063$] & CT & $-0.242$ C [$-0.423$,$+0.068$] & $-0.009$ C [$-0.055$,$+0.085$] & $-0.001$ B [$-0.002$,$-0.000$] \\
 Aa corner, 12 measured & 75/4/5/66 & $+0.008$ C [$-0.127$,$+0.150$] & CT & $-0.171$ C [$-1.836$,$+0.340$] & $+0.030$ C [$-0.094$,$+0.158$] & CT \\
@@ -151,7 +150,7 @@ P sparse set 1 (7) & 84/15/34/35 & $-0.235$ C [$-0.358$,$+0.017$] & $-0.410$ C [
 P 25, measured in $|0\rangle$ & 58/26/16/16 & $-0.224$ B [$-0.400$,$-0.051$] & $-0.433$ B [$-2.950$,$-0.166$] & $-0.223$ C [$-0.608$,$+0.029$] & $+0.280$ C [$-0.134$,$+0.447$] & CT \\
 P 25, in $|1\rangle$ & 58/26/16/16 & $-0.356$ B [$-0.751$,$-0.137$] & $-0.796$ B [$-3.230$,$-0.225$] & $-0.570$ B [$-0.937$,$-0.106$] & $-0.093$ C [$-0.255$,$+0.270$] & CT \\
 P 25, on the equator & 59/27/16/16 & $-0.334$ B [$-0.647$,$-0.053$] & $-0.826$ B [$-2.865$,$-0.054$] & $-0.558$ C [$-0.821$,$+0.111$] & $+0.009$ C [$-0.368$,$+0.364$] & $-0.001$ C [$-0.004$,$+0.001$] \\
-\bottomrule
+\hline\hline
 \end{tabular}
 \end{table*}
 
@@ -183,9 +182,9 @@ A symmetric echo (X, X) on the untouched qubits in every step of both arms remov
 \label{tab:causes}
 \footnotesize
 \begin{tabular}{p{3.6cm}p{6.4cm}p{6.6cm}}
-\toprule
+\hline\hline
 Candidate cause & Test & Outcome \\
-\midrule
+\hline
 Extra elapsed time (a readout longer than stated) & Qubits whose idle phase turns opposite to the majority; slope bound on extra time & Kicked the same way (1.0 to 3.4); extra time at most 4, 1 and 12\% (fez, kingston, marrakesh; bound defined after the data) \\
 State of the measured qubits & Measured qubits in $|1\rangle$, each arm against an idle in $|1\rangle$ & Not larger in $|1\rangle$: 0.18 and 0.92 smaller (fez, marrakesh); kingston: first job cannot tell, repeat job larger by at most about 0.1, 21 October test at most 0.32 \\
 A dose proportional to the number read & 1, 10 and 39 of the 39 read on the same schedule & 1 read: at most 0.15 (fez, and marrakesh by copy gap after the data), 0.09 (kingston); a fixed offset of the full kick excluded on all three; 10 read: 8 to 10\% of the full kick pooled (11\% in a fez repeat; upper interval ends 14 to 21\%) against 26\% proportional (fez copies disagree by the committed rule, no shift by copy gap) \\
@@ -193,7 +192,7 @@ Direct wiring to a measured qubit & Measured qubits packed in one region & 0.81 
 Accumulation (wear-out) & 72 readouts against 72 equal idles & Consistent with zero on all three processors (fez 72-idle arm had shifted copies) \\
 A phase that a refocusing pulse cannot undo & Symmetric echo (X, X) in both arms & Mostly removed: $-1.50 \to -0.09$, $-3.24 \to +0.45$, $-2.50 \to -0.27$; residual resolved on all three \\
 The readout instruction (length and pulse) & \texttt{measure} against \texttt{measure\_2}, each with its own equal idle, same job & Depends on the instruction on ibm\_marrakesh: the shorter instruction (1.884 against 2.684\us) gives 0.58 [0.43, 0.73] and 0.51 [0.36, 0.65] of the longer one's kick at 4 and 8 readouts, so a kick fixed per readout is excluded there. Kingston (1.380 against 2.180\us): 0.92 [0.77, 1.17] at 4 readouts, not decided by its known-good rule (copy gap [+0.003, +0.091] at 8); repeats read 1.01 [0.80, 1.37] at 8, then 0.95 [0.75, 1.17] and 0.98 [0.77, 1.28] at 4 and 8, fixed per readout. Fez (1.340 against 1.660\us): 0.85 and 0.84, cannot tell, also at 4000 shots (0.94, 0.88). The instructions also differ in the discriminator threshold (all three) and the stated readout error (marrakesh, fez) \\
-\bottomrule
+\hline\hline
 \end{tabular}
 \end{table*}
 
